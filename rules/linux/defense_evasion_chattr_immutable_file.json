@@ -15,7 +15,7 @@
         "max_signals": 33,
         "name": "File made Immutable by Chattr",
         "note": "",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and user.name == \"root\" and\n  process.executable : \"/usr/bin/chattr\" and process.args : (\"-*i*\", \"+*i*\") and\n  not process.parent.executable: \"/lib/systemd/systemd\"\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and user.name == \"root\" and\n  process.executable : \"/usr/bin/chattr\" and process.args : (\"-*i*\", \"+*i*\") and\n  not process.parent.executable: (\"/lib/systemd/systemd\", \"/usr/local/uems_agent/bin/*\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -92,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "968ccab9-da51-4a87-9ce2-d3c9782fd759_103",
+    "id": "968ccab9-da51-4a87-9ce2-d3c9782fd759_104",
     "type": "security-rule"
 }

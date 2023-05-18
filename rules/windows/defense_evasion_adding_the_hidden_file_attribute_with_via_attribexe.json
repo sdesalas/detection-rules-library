@@ -15,7 +15,7 @@
         "license": "Elastic License v2",
         "name": "Adding Hidden File Attribute via Attrib",
         "note": "",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name : \"attrib.exe\" and process.args : \"+h\"\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  (process.name : \"attrib.exe\" or process.pe.original_file_name == \"ATTRIB.EXE\") and process.args : \"+h\" and\n  not\n  (process.parent.name: \"cmd.exe\" and\n    process.command_line: \"attrib  +R +H +S +A *.cui\" and\n    process.parent.command_line: \"?:\\\\WINDOWS\\\\system32\\\\cmd.exe /c \\\"?:\\\\WINDOWS\\\\system32\\\\*.bat\\\"\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -44,7 +44,27 @@
             },
             {
                 "ecs": true,
+                "name": "process.command_line",
+                "type": "wildcard"
+            },
+            {
+                "ecs": true,
                 "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.command_line",
+                "type": "wildcard"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.pe.original_file_name",
                 "type": "keyword"
             }
         ],
@@ -97,8 +117,8 @@
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "4630d948-40d4-4cef-ac69-4002e29bc3db_104",
+    "id": "4630d948-40d4-4cef-ac69-4002e29bc3db_105",
     "type": "security-rule"
 }
