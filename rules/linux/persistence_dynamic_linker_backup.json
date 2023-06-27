@@ -62,12 +62,11 @@
         "rule_id": "df6f62d9-caab-4b88-affa-044f4395a1e0",
         "severity": "high",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Persistence",
-            "Orbit"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Persistence",
+            "Threat: Orbit"
         ],
         "threat": [
             {
@@ -94,8 +93,8 @@
             }
         ],
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "df6f62d9-caab-4b88-affa-044f4395a1e0_102",
+    "id": "df6f62d9-caab-4b88-affa-044f4395a1e0_103",
     "type": "security-rule"
 }

@@ -54,11 +54,10 @@
         "rule_id": "28738f9f-7427-4d23-bc69-756708b5f624",
         "severity": "high",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Impact"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Impact"
         ],
         "threat": [
             {
@@ -78,8 +77,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "28738f9f-7427-4d23-bc69-756708b5f624_1",
+    "id": "28738f9f-7427-4d23-bc69-756708b5f624_2",
     "type": "security-rule"
 }

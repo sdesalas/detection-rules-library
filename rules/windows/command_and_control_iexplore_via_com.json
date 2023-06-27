@@ -83,11 +83,10 @@
         "rule_id": "acd611f3-2b93-47b3-a0a3-7723bcc46f6d",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Command and Control"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Command and Control"
         ],
         "threat": [
             {
@@ -129,8 +128,8 @@
             }
         ],
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "acd611f3-2b93-47b3-a0a3-7723bcc46f6d_102",
+    "id": "acd611f3-2b93-47b3-a0a3-7723bcc46f6d_103",
     "type": "security-rule"
 }

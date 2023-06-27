@@ -63,13 +63,13 @@
         "rule_id": "62a70f6f-3c37-43df-a556-f64fa475fba2",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Persistence",
-            "Active Directory",
-            "Investigation Guide"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Persistence",
+            "Data Source: Active Directory",
+            "Resources: Investigation Guide",
+            "Use Case: Active Directory Monitoring"
         ],
         "threat": [
             {
@@ -90,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 107
     },
-    "id": "62a70f6f-3c37-43df-a556-f64fa475fba2_106",
+    "id": "62a70f6f-3c37-43df-a556-f64fa475fba2_107",
     "type": "security-rule"
 }

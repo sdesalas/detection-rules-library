@@ -21,12 +21,12 @@
         "rule_id": "745b0119-0560-43ba-860a-7235dd8cee8d",
         "severity": "low",
         "tags": [
-            "Elastic",
-            "Authentication",
-            "Threat Detection",
-            "ML",
-            "Machine Learning",
-            "Initial Access"
+            "Use Case: Identity and Access Audit",
+            "Use Case: Threat Detection",
+            "Rule Type: ML",
+            "Rule Type: Machine Learning",
+            "Tactic: Initial Access",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -46,8 +46,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 102
+        "version": 103
     },
-    "id": "745b0119-0560-43ba-860a-7235dd8cee8d_102",
+    "id": "745b0119-0560-43ba-860a-7235dd8cee8d_103",
     "type": "security-rule"
 }

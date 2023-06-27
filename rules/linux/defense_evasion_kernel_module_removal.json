@@ -9,14 +9,13 @@
         ],
         "from": "now-9m",
         "index": [
-            "auditbeat-*",
             "logs-endpoint.events.*",
             "endgame-*"
         ],
-        "language": "kuery",
+        "language": "eql",
         "license": "Elastic License v2",
         "name": "Kernel Module Removal",
-        "query": "event.category:process and host.os.type:linux and event.type:(start or process_started) and\n  process.args:((rmmod and sudo) or (modprobe and sudo and (\"--remove\" or \"-r\")))\n",
+        "query": "process where host.os.type == \"linux\" and event.action == \"exec\" and process.name == \"rmmod\" or\n(process.name == \"modprobe\" and process.args in (\"--remove\", \"-r\"))\n",
         "references": [
             "http://man7.org/linux/man-pages/man8/modprobe.8.html"
         ],
@@ -29,12 +28,7 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.category",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "event.type",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
@@ -46,18 +40,22 @@
                 "ecs": true,
                 "name": "process.args",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.name",
+                "type": "keyword"
             }
         ],
         "risk_score": 73,
         "rule_id": "cd66a5af-e34b-4bb0-8931-57d0a043f2ef",
         "severity": "high",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Defense Evasion",
-            "Elastic Endgame"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Defense Evasion",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -106,9 +104,9 @@
             }
         ],
         "timestamp_override": "event.ingested",
-        "type": "query",
-        "version": 103
+        "type": "eql",
+        "version": 104
     },
-    "id": "cd66a5af-e34b-4bb0-8931-57d0a043f2ef_103",
+    "id": "cd66a5af-e34b-4bb0-8931-57d0a043f2ef_104",
     "type": "security-rule"
 }

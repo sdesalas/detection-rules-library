@@ -54,14 +54,13 @@
         "rule_id": "1c84dd64-7e6c-4bad-ac73-a5014ee37042",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Persistence",
-            "Orbit",
-            "Lightning Framework",
-            "Elastic Endgame"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Persistence",
+            "Threat: Orbit",
+            "Threat: Lightning Framework",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -157,8 +156,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "1c84dd64-7e6c-4bad-ac73-a5014ee37042_105",
+    "id": "1c84dd64-7e6c-4bad-ac73-a5014ee37042_106",
     "type": "security-rule"
 }

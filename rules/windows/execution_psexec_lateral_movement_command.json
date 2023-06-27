@@ -69,12 +69,11 @@
         "rule_id": "55d551c6-333b-4665-ab7e-5d14a59715ce",
         "severity": "low",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Execution",
-            "Investigation Guide"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Execution",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -110,8 +109,8 @@
             }
         ],
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "55d551c6-333b-4665-ab7e-5d14a59715ce_104",
+    "id": "55d551c6-333b-4665-ab7e-5d14a59715ce_105",
     "type": "security-rule"
 }

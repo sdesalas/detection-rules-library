@@ -53,13 +53,12 @@
         "setup": "If enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2, events will not define `event.ingested` and default fallback for EQL rules was not added until 8.2, so you will need to add a custom pipeline to populate `event.ingested` to @timestamp for this rule to work.",
         "severity": "high",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Privilege Escalation",
-            "Investigation Guide",
-            "Elastic Endgame"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Privilege Escalation",
+            "Resources: Investigation Guide",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -87,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "31b4c719-f2b4-41f6-a9bd-fce93c2eaf62_105",
+    "id": "31b4c719-f2b4-41f6-a9bd-fce93c2eaf62_106",
     "type": "security-rule"
 }

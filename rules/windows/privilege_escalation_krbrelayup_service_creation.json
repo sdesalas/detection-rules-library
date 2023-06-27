@@ -81,13 +81,13 @@
         "rule_id": "e4e31051-ee01-4307-a6ee-b21b186958f4",
         "severity": "high",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Privilege Escalation",
-            "Credential Access",
-            "Active Directory"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Privilege Escalation",
+            "Tactic: Credential Access",
+            "Use Case: Active Directory Monitoring",
+            "Data Source: Active Directory"
         ],
         "threat": [
             {
@@ -129,8 +129,8 @@
             }
         ],
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "e4e31051-ee01-4307-a6ee-b21b186958f4_104",
+    "id": "e4e31051-ee01-4307-a6ee-b21b186958f4_105",
     "type": "security-rule"
 }

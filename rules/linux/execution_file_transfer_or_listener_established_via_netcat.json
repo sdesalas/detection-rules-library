@@ -62,12 +62,11 @@
         "rule_id": "adb961e0-cb74-42a0-af9e-29fc41f88f5f",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Execution",
-            "Investigation Guide"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Execution",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -94,8 +93,8 @@
             }
         ],
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "adb961e0-cb74-42a0-af9e-29fc41f88f5f_105",
+    "id": "adb961e0-cb74-42a0-af9e-29fc41f88f5f_106",
     "type": "security-rule"
 }

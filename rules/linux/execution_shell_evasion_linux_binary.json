@@ -89,13 +89,11 @@
         "setup": "The session view analysis for the command alerted is avalible in versions 8.2 and above.",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Execution",
-            "GTFOBins",
-            "Elastic Endgame"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Execution",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -123,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "52376a86-ee86-4967-97ae-1a05f55816f0_104",
+    "id": "52376a86-ee86-4967-97ae-1a05f55816f0_105",
     "type": "security-rule"
 }

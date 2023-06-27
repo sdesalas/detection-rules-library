@@ -52,12 +52,11 @@
         "rule_id": "90169566-2260-4824-b8e4-8615c3b4ed52",
         "severity": "high",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Discovery",
-            "Elastic Endgame"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Discovery",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -78,8 +77,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 103
+        "version": 104
     },
-    "id": "90169566-2260-4824-b8e4-8615c3b4ed52_103",
+    "id": "90169566-2260-4824-b8e4-8615c3b4ed52_104",
     "type": "security-rule"
 }

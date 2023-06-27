@@ -51,12 +51,11 @@
         "rule_id": "2f8a1226-5720-437d-9c20-e0029deb6194",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Defense Evasion",
-            "Elastic Endgame"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Defense Evasion",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -84,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 103
+        "version": 104
     },
-    "id": "2f8a1226-5720-437d-9c20-e0029deb6194_103",
+    "id": "2f8a1226-5720-437d-9c20-e0029deb6194_104",
     "type": "security-rule"
 }

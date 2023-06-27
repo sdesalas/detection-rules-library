@@ -35,13 +35,12 @@
         "rule_id": "d49cc73f-7a16-4def-89ce-9fc7127d7820",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "APM"
+            "Data Source: APM"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 101
+        "version": 102
     },
-    "id": "d49cc73f-7a16-4def-89ce-9fc7127d7820_101",
+    "id": "d49cc73f-7a16-4def-89ce-9fc7127d7820_102",
     "type": "security-rule"
 }

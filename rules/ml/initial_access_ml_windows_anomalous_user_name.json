@@ -23,13 +23,12 @@
         "rule_id": "1781d055-5c66-4adf-9c59-fc0fa58336a5",
         "severity": "low",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "ML",
-            "Machine Learning",
-            "Initial Access"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Rule Type: ML",
+            "Rule Type: Machine Learning",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
@@ -61,8 +60,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 102
+        "version": 103
     },
-    "id": "1781d055-5c66-4adf-9c59-fc0fa58336a5_102",
+    "id": "1781d055-5c66-4adf-9c59-fc0fa58336a5_103",
     "type": "security-rule"
 }

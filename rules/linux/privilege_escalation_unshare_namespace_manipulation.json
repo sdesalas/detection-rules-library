@@ -60,12 +60,11 @@
         "rule_id": "d00f33e7-b57d-4023-9952-2db91b1767c4",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Privilege Escalation",
-            "Elastic Endgame"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Privilege Escalation",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -86,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "d00f33e7-b57d-4023-9952-2db91b1767c4_4",
+    "id": "d00f33e7-b57d-4023-9952-2db91b1767c4_5",
     "type": "security-rule"
 }

@@ -52,11 +52,10 @@
         "setup": "The 'Audit Security System Extension' logging policy must be configured for (Success)\nSteps to implement the logging policy with with Advanced Audit Configuration:\n\n```\nComputer Configuration \u003e\nPolicies \u003e\nWindows Settings \u003e\nSecurity Settings \u003e\nAdvanced Audit Policies Configuration \u003e\nAudit Policies \u003e\nSystem \u003e\nAudit Security System Extension (Success)\n```",
         "severity": "high",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Privilege Escalation"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -84,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 104
+        "version": 105
     },
-    "id": "55c2bf58-2a39-4c58-a384-c8b1978153c2_104",
+    "id": "55c2bf58-2a39-4c58-a384-c8b1978153c2_105",
     "type": "security-rule"
 }

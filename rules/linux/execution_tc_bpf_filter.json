@@ -54,13 +54,12 @@
         "rule_id": "ef04a476-07ec-48fc-8f3d-5e1742de76d3",
         "severity": "high",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Execution",
-            "TripleCross",
-            "Elastic Endgame"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Execution",
+            "Threat: TripleCross",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -88,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "ef04a476-07ec-48fc-8f3d-5e1742de76d3_103",
+    "id": "ef04a476-07ec-48fc-8f3d-5e1742de76d3_104",
     "type": "security-rule"
 }

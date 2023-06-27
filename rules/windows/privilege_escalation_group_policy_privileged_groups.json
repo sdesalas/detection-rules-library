@@ -50,13 +50,13 @@
         "setup": "The 'Audit Directory Service Changes' audit policy must be configured (Success Failure).\nSteps to implement the logging policy with with Advanced Audit Configuration:\n\n```\nComputer Configuration \u003e\nPolicies \u003e\nWindows Settings \u003e\nSecurity Settings \u003e\nAdvanced Audit Policies Configuration \u003e\nAudit Policies \u003e\nDS Access \u003e\nAudit Directory Service Changes (Success,Failure)\n```",
         "severity": "high",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Privilege Escalation",
-            "Active Directory",
-            "Investigation Guide"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Privilege Escalation",
+            "Data Source: Active Directory",
+            "Resources: Investigation Guide",
+            "Use Case: Active Directory Monitoring"
         ],
         "threat": [
             {
@@ -84,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 107
     },
-    "id": "b9554892-5e0e-424b-83a0-5aef95aa43bf_106",
+    "id": "b9554892-5e0e-424b-83a0-5aef95aa43bf_107",
     "type": "security-rule"
 }

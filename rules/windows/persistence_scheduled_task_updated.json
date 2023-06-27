@@ -51,11 +51,10 @@
         "rule_id": "a02cb68e-7c93-48d1-93b2-2c39023308eb",
         "severity": "low",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Persistence"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -83,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "a02cb68e-7c93-48d1-93b2-2c39023308eb_6",
+    "id": "a02cb68e-7c93-48d1-93b2-2c39023308eb_7",
     "type": "security-rule"
 }

@@ -53,12 +53,11 @@
         "rule_id": "b00bcd89-000c-4425-b94c-716ef67762f6",
         "severity": "high",
         "tags": [
-            "Elastic",
-            "Host",
-            "macOS",
-            "Threat Detection",
-            "Defense Evasion",
-            "CVE_2020_9771"
+            "Domain: Endpoint",
+            "OS: macOS",
+            "Use Case: Threat Detection",
+            "Tactic: Defense Evasion",
+            "Use Case: Vulnerability"
         ],
         "threat": [
             {
@@ -79,8 +78,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 103
     },
-    "id": "b00bcd89-000c-4425-b94c-716ef67762f6_102",
+    "id": "b00bcd89-000c-4425-b94c-716ef67762f6_103",
     "type": "security-rule"
 }

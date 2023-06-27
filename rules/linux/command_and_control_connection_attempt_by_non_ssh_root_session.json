@@ -63,11 +63,10 @@
         "rule_id": "eb6a3790-d52d-11ec-8ce9-f661ea17fbce",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Command and Control"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Command and Control"
         ],
         "threat": [
             {
@@ -109,8 +108,8 @@
             }
         ],
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "eb6a3790-d52d-11ec-8ce9-f661ea17fbce_102",
+    "id": "eb6a3790-d52d-11ec-8ce9-f661ea17fbce_103",
     "type": "security-rule"
 }

@@ -45,12 +45,11 @@
         "rule_id": "8cb4f625-7743-4dfb-ae1b-ad92be9df7bd",
         "severity": "critical",
         "tags": [
-            "Elastic",
-            "Elastic Endgame"
+            "Data Source: Elastic Endgame"
         ],
         "type": "query",
-        "version": 100
+        "version": 101
     },
-    "id": "8cb4f625-7743-4dfb-ae1b-ad92be9df7bd_100",
+    "id": "8cb4f625-7743-4dfb-ae1b-ad92be9df7bd_101",
     "type": "security-rule"
 }

@@ -93,11 +93,10 @@
         "rule_id": "8f919d4b-a5af-47ca-a594-6be59cd924a4",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Lateral Movement"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Lateral Movement"
         ],
         "threat": [
             {
@@ -124,8 +123,8 @@
             }
         ],
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "8f919d4b-a5af-47ca-a594-6be59cd924a4_103",
+    "id": "8f919d4b-a5af-47ca-a594-6be59cd924a4_104",
     "type": "security-rule"
 }

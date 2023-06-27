@@ -47,11 +47,10 @@
         "rule_id": "dc71c186-9fe4-4437-a4d0-85ebb32b8204",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Defense Evasion"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Defense Evasion"
         ],
         "threat": [
             {
@@ -72,8 +71,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "dc71c186-9fe4-4437-a4d0-85ebb32b8204_1",
+    "id": "dc71c186-9fe4-4437-a4d0-85ebb32b8204_2",
     "type": "security-rule"
 }

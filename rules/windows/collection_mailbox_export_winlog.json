@@ -49,13 +49,12 @@
         "rule_id": "54a81f68-5f2a-421e-8eed-f888278bb712",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Collection",
-            "Investigation Guide",
-            "PowerShell"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Collection",
+            "Resources: Investigation Guide",
+            "Data Source: PowerShell Logs"
         ],
         "threat": [
             {
@@ -88,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "54a81f68-5f2a-421e-8eed-f888278bb712_2",
+    "id": "54a81f68-5f2a-421e-8eed-f888278bb712_3",
     "type": "security-rule"
 }

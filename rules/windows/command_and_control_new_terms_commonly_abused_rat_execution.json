@@ -68,11 +68,10 @@
         "rule_id": "6e1a2cc4-d260-11ed-8829-f661ea17fbcc",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Command and Control"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Command and Control"
         ],
         "threat": [
             {
@@ -93,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "6e1a2cc4-d260-11ed-8829-f661ea17fbcc_1",
+    "id": "6e1a2cc4-d260-11ed-8829-f661ea17fbcc_2",
     "type": "security-rule"
 }

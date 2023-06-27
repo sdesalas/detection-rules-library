@@ -70,13 +70,12 @@
         "rule_id": "52aaab7b-b51c-441a-89ce-4387b3aea886",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Defense Evasion",
-            "Command and Control",
-            "Investigation Guide"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Defense Evasion",
+            "Tactic: Command and Control",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -125,8 +124,8 @@
             }
         ],
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "52aaab7b-b51c-441a-89ce-4387b3aea886_105",
+    "id": "52aaab7b-b51c-441a-89ce-4387b3aea886_106",
     "type": "security-rule"
 }

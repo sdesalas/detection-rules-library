@@ -19,13 +19,12 @@
         "rule_id": "59756272-1998-4b8c-be14-e287035c4d10",
         "severity": "low",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "ML",
-            "Machine Learning",
-            "Discovery"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Rule Type: ML",
+            "Rule Type: Machine Learning",
+            "Tactic: Discovery"
         ],
         "threat": [
             {
@@ -45,8 +44,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 102
+        "version": 103
     },
-    "id": "59756272-1998-4b8c-be14-e287035c4d10_102",
+    "id": "59756272-1998-4b8c-be14-e287035c4d10_103",
     "type": "security-rule"
 }

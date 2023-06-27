@@ -87,11 +87,10 @@
         "rule_id": "afcce5ad-65de-4ed2-8516-5e093d3ac99a",
         "severity": "low",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Persistence"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -118,8 +117,8 @@
             }
         ],
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "afcce5ad-65de-4ed2-8516-5e093d3ac99a_103",
+    "id": "afcce5ad-65de-4ed2-8516-5e093d3ac99a_104",
     "type": "security-rule"
 }

@@ -55,13 +55,12 @@
         "rule_id": "fa488440-04cc-41d7-9279-539387bf2a17",
         "severity": "high",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Defense Evasion",
-            "Elastic Endgame",
-            "Investigation Guide"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Defense Evasion",
+            "Data Source: Elastic Endgame",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -101,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "fa488440-04cc-41d7-9279-539387bf2a17_3",
+    "id": "fa488440-04cc-41d7-9279-539387bf2a17_4",
     "type": "security-rule"
 }

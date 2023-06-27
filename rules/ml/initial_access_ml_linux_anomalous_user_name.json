@@ -23,13 +23,12 @@
         "rule_id": "b347b919-665f-4aac-b9e8-68369bf2340c",
         "severity": "low",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "ML",
-            "Machine Learning",
-            "Initial Access"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Rule Type: ML",
+            "Rule Type: Machine Learning",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
@@ -49,8 +48,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 101
+        "version": 102
     },
-    "id": "b347b919-665f-4aac-b9e8-68369bf2340c_101",
+    "id": "b347b919-665f-4aac-b9e8-68369bf2340c_102",
     "type": "security-rule"
 }

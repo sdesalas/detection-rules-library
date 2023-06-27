@@ -63,12 +63,11 @@
         "rule_id": "c292fa52-4115-408a-b897-e14f684b3cb7",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "macOS",
-            "Threat Detection",
-            "Execution",
-            "Persistence"
+            "Domain: Endpoint",
+            "OS: macOS",
+            "Use Case: Threat Detection",
+            "Tactic: Execution",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -103,8 +102,8 @@
             }
         ],
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "c292fa52-4115-408a-b897-e14f684b3cb7_102",
+    "id": "c292fa52-4115-408a-b897-e14f684b3cb7_103",
     "type": "security-rule"
 }

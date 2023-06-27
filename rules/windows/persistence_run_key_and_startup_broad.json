@@ -70,13 +70,12 @@
         "rule_id": "97fc44d3-8dae-4019-ae83-298c3015600f",
         "severity": "low",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Persistence",
-            "Investigation Guide",
-            "Elastic Endgame"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Persistence",
+            "Resources: Investigation Guide",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -106,8 +105,8 @@
         "timeline_title": "Comprehensive Registry Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "97fc44d3-8dae-4019-ae83-298c3015600f_106",
+    "id": "97fc44d3-8dae-4019-ae83-298c3015600f_107",
     "type": "security-rule"
 }

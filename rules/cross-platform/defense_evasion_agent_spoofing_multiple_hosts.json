@@ -28,9 +28,8 @@
         "rule_id": "493834ca-f861-414c-8602-150d5505b777",
         "severity": "high",
         "tags": [
-            "Elastic",
-            "Threat Detection",
-            "Defense Evasion"
+            "Use Case: Threat Detection",
+            "Tactic: Defense Evasion"
         ],
         "threat": [
             {
@@ -63,8 +62,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 100
+        "version": 101
     },
-    "id": "493834ca-f861-414c-8602-150d5505b777_100",
+    "id": "493834ca-f861-414c-8602-150d5505b777_101",
     "type": "security-rule"
 }

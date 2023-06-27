@@ -70,12 +70,11 @@
         "rule_id": "d33ea3bf-9a11-463e-bd46-f648f2a0f4b1",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Lateral Movement",
-            "Persistence"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Lateral Movement",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -117,8 +116,8 @@
             }
         ],
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "d33ea3bf-9a11-463e-bd46-f648f2a0f4b1_5",
+    "id": "d33ea3bf-9a11-463e-bd46-f648f2a0f4b1_6",
     "type": "security-rule"
 }

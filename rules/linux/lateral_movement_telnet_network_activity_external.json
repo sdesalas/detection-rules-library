@@ -56,11 +56,10 @@
         "rule_id": "e19e64ee-130e-4c07-961f-8a339f0b8362",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Lateral Movement"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Lateral Movement"
         ],
         "threat": [
             {
@@ -80,8 +79,8 @@
             }
         ],
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "e19e64ee-130e-4c07-961f-8a339f0b8362_102",
+    "id": "e19e64ee-130e-4c07-961f-8a339f0b8362_103",
     "type": "security-rule"
 }

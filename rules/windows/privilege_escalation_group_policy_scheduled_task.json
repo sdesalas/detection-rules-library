@@ -73,13 +73,13 @@
         "setup": "The 'Audit Detailed File Share' audit policy must be configured (Success Failure).\nSteps to implement the logging policy with with Advanced Audit Configuration:\n\n```\nComputer Configuration \u003e\nPolicies \u003e\nWindows Settings \u003e\nSecurity Settings \u003e\nAdvanced Audit Policies Configuration \u003e\nAudit Policies \u003e\nObject Access \u003e\nAudit Detailed File Share (Success,Failure)\n```\n\nThe 'Audit Directory Service Changes' audit policy must be configured (Success Failure).\nSteps to implement the logging policy with with Advanced Audit Configuration:\n\n```\nComputer Configuration \u003e\nPolicies \u003e\nWindows Settings \u003e\nSecurity Settings \u003e\nAdvanced Audit Policies Configuration \u003e\nAudit Policies \u003e\nDS Access \u003e\nAudit Directory Service Changes (Success,Failure)\n```",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Privilege Escalation",
-            "Active Directory",
-            "Investigation Guide"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Privilege Escalation",
+            "Data Source: Active Directory",
+            "Resources: Investigation Guide",
+            "Use Case: Active Directory Monitoring"
         ],
         "threat": [
             {
@@ -119,8 +119,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 107
     },
-    "id": "15a8ba77-1c13-4274-88fe-6bd14133861e_106",
+    "id": "15a8ba77-1c13-4274-88fe-6bd14133861e_107",
     "type": "security-rule"
 }

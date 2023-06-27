@@ -52,11 +52,10 @@
         "rule_id": "66da12b1-ac83-40eb-814c-07ed1d82b7b9",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "macOS",
-            "Threat Detection",
-            "Initial Access"
+            "Domain: Endpoint",
+            "OS: macOS",
+            "Use Case: Threat Detection",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
@@ -84,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "66da12b1-ac83-40eb-814c-07ed1d82b7b9_102",
+    "id": "66da12b1-ac83-40eb-814c-07ed1d82b7b9_103",
     "type": "security-rule"
 }

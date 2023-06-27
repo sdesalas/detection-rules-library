@@ -59,12 +59,11 @@
         "rule_id": "47f76567-d58a-4fed-b32b-21f571e28910",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "macOS",
-            "Threat Detection",
-            "Command and Control",
-            "Execution"
+            "Domain: Endpoint",
+            "OS: macOS",
+            "Use Case: Threat Detection",
+            "Tactic: Command and Control",
+            "Tactic: Execution"
         ],
         "threat": [
             {
@@ -106,8 +105,8 @@
             }
         ],
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "47f76567-d58a-4fed-b32b-21f571e28910_102",
+    "id": "47f76567-d58a-4fed-b32b-21f571e28910_103",
     "type": "security-rule"
 }

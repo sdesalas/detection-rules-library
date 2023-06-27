@@ -23,13 +23,13 @@
         "rule_id": "647fc812-7996-4795-8869-9c4ea595fe88",
         "severity": "low",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "ML",
-            "Machine Learning",
-            "Persistence"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Rule Type: ML",
+            "Rule Type: Machine Learning",
+            "Tactic: Persistence",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -56,8 +56,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 102
+        "version": 103
     },
-    "id": "647fc812-7996-4795-8869-9c4ea595fe88_102",
+    "id": "647fc812-7996-4795-8869-9c4ea595fe88_103",
     "type": "security-rule"
 }

@@ -23,16 +23,15 @@
         "rule_id": "ba342eb2-583c-439f-b04d-1fdd7c1417cc",
         "severity": "low",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "ML",
-            "Machine Learning"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Rule Type: ML",
+            "Rule Type: Machine Learning"
         ],
         "type": "machine_learning",
-        "version": 101
+        "version": 102
     },
-    "id": "ba342eb2-583c-439f-b04d-1fdd7c1417cc_101",
+    "id": "ba342eb2-583c-439f-b04d-1fdd7c1417cc_102",
     "type": "security-rule"
 }

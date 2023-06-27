@@ -68,17 +68,15 @@
             }
         ],
         "tags": [
-            "Elastic",
-            "Network",
-            "Windows",
-            "APM",
-            "macOS",
-            "Linux"
+            "OS: Windows",
+            "Data Source: APM",
+            "OS: macOS",
+            "OS: Linux"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 101
+        "version": 102
     },
-    "id": "eb079c62-4481-4d6e-9643-3ca499df7aaa_101",
+    "id": "eb079c62-4481-4d6e-9643-3ca499df7aaa_102",
     "type": "security-rule"
 }

@@ -71,12 +71,11 @@
         "rule_id": "e7125cea-9fe1-42a5-9a05-b0792cf86f5a",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Persistence",
-            "Elastic Endgame"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Persistence",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -103,8 +102,8 @@
             }
         ],
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "e7125cea-9fe1-42a5-9a05-b0792cf86f5a_103",
+    "id": "e7125cea-9fe1-42a5-9a05-b0792cf86f5a_104",
     "type": "security-rule"
 }

@@ -48,13 +48,12 @@
         "rule_id": "2339f03c-f53f-40fa-834b-40c5983fc41f",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Persistence",
-            "Rootkit",
-            "Elastic Endgame"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Persistence",
+            "Threat: Rootkit",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -82,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "2339f03c-f53f-40fa-834b-40c5983fc41f_103",
+    "id": "2339f03c-f53f-40fa-834b-40c5983fc41f_104",
     "type": "security-rule"
 }

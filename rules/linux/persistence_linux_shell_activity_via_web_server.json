@@ -62,13 +62,13 @@
         "rule_id": "f16fca20-4d6c-43f9-aec1-20b6de3b0aeb",
         "severity": "high",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Persistence",
-            "Initial Access",
-            "Elastic Endgame"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Persistence",
+            "Tactic: Initial Access",
+            "Data Source: Elastic Endgame",
+            "Use Case: Vulnerability"
         ],
         "threat": [
             {
@@ -111,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "f16fca20-4d6c-43f9-aec1-20b6de3b0aeb_1",
+    "id": "f16fca20-4d6c-43f9-aec1-20b6de3b0aeb_2",
     "type": "security-rule"
 }

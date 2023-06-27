@@ -56,13 +56,10 @@
         "setup": "The AWS Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
         "severity": "low",
         "tags": [
-            "Elastic",
-            "Cloud",
-            "AWS",
-            "Amazon Web Services",
-            "Continuous Monitoring",
-            "SecOps",
-            "Monitoring"
+            "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
+            "Tactic: Impact"
         ],
         "threat": [
             {
@@ -83,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 103
     },
-    "id": "863cdf31-7fd3-41cf-a185-681237ea277b_102",
+    "id": "863cdf31-7fd3-41cf-a185-681237ea277b_103",
     "type": "security-rule"
 }

@@ -23,14 +23,13 @@
         "rule_id": "6d448b96-c922-4adb-b51c-b767f1ea5b76",
         "severity": "low",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "ML",
-            "Machine Learning",
-            "Persistence",
-            "Investigation Guide"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Rule Type: ML",
+            "Rule Type: Machine Learning",
+            "Tactic: Persistence",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -57,8 +56,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 105
+        "version": 106
     },
-    "id": "6d448b96-c922-4adb-b51c-b767f1ea5b76_105",
+    "id": "6d448b96-c922-4adb-b51c-b767f1ea5b76_106",
     "type": "security-rule"
 }

@@ -27,10 +27,6 @@
             {
                 "package": "google_workspace",
                 "version": "^2.0.0"
-            },
-            {
-                "package": "google_workspace",
-                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -75,12 +71,10 @@
         "setup": "The Google Workspace Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Cloud",
-            "Google Workspace",
-            "Continuous Monitoring",
-            "SecOps",
-            "Initial Access"
+            "Domain: Cloud",
+            "Data Source: Google Workspace",
+            "Tactic: Initial Access",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -107,8 +101,8 @@
             }
         ],
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "f33e68a4-bd19-11ed-b02f-f661ea17fbcc_2",
+    "id": "f33e68a4-bd19-11ed-b02f-f661ea17fbcc_3",
     "type": "security-rule"
 }

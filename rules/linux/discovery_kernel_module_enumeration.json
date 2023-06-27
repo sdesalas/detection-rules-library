@@ -9,14 +9,12 @@
         ],
         "from": "now-9m",
         "index": [
-            "auditbeat-*",
-            "logs-endpoint.events.*",
-            "endgame-*"
+            "logs-endpoint.events.*"
         ],
-        "language": "kuery",
+        "language": "eql",
         "license": "Elastic License v2",
         "name": "Enumeration of Kernel Modules",
-        "query": "event.category:process and host.os.type:linux and event.type:(start or process_started) and\n  process.args:(kmod and list and sudo or sudo and (depmod or lsmod or modinfo))\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and \n((process.name == \"kmod\" and process.args == \"list\") or (process.name == \"modinfo\" and process.parent.user.id != \"0\") or \n(process.name == \"depmod\" and process.args in (\"--all\", \"-a\") and process.parent.user.id != \"0\") \nor process.name == \"lsmod\") and not process.parent.name : (\"vboxmanage\", \"virtualbox\", \"prime-offload\", \"vboxdrv.sh\") and not \nprocess.group_leader.name : \"qualys-cloud-agent\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -24,11 +22,6 @@
             }
         ],
         "required_fields": [
-            {
-                "ecs": true,
-                "name": "event.category",
-                "type": "keyword"
-            },
             {
                 "ecs": true,
                 "name": "event.type",
@@ -43,18 +36,36 @@
                 "ecs": true,
                 "name": "process.args",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.group_leader.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.user.id",
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
         "rule_id": "2d8043ed-5bda-4caf-801c-c1feb7410504",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Discovery",
-            "Elastic Endgame"
+            "Domain: Endpoint",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Discovery"
         ],
         "threat": [
             {
@@ -74,9 +85,9 @@
             }
         ],
         "timestamp_override": "event.ingested",
-        "type": "query",
-        "version": 103
+        "type": "eql",
+        "version": 104
     },
-    "id": "2d8043ed-5bda-4caf-801c-c1feb7410504_103",
+    "id": "2d8043ed-5bda-4caf-801c-c1feb7410504_104",
     "type": "security-rule"
 }

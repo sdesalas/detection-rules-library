@@ -64,11 +64,10 @@
         "rule_id": "d461fac0-43e8-49e2-85ea-3a58fe120b4f",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "macOS",
-            "Threat Detection",
-            "Execution"
+            "Domain: Endpoint",
+            "OS: macOS",
+            "Use Case: Threat Detection",
+            "Tactic: Execution"
         ],
         "threat": [
             {
@@ -88,8 +87,8 @@
             }
         ],
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "d461fac0-43e8-49e2-85ea-3a58fe120b4f_102",
+    "id": "d461fac0-43e8-49e2-85ea-3a58fe120b4f_103",
     "type": "security-rule"
 }

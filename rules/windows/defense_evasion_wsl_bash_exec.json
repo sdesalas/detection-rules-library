@@ -86,13 +86,12 @@
         "rule_id": "3e0eeb75-16e8-4f2f-9826-62461ca128b7",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Execution",
-            "Defense Evasion",
-            "Elastic Endgame"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Execution",
+            "Tactic: Defense Evasion",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -135,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "3e0eeb75-16e8-4f2f-9826-62461ca128b7_2",
+    "id": "3e0eeb75-16e8-4f2f-9826-62461ca128b7_3",
     "type": "security-rule"
 }

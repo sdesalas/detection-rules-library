@@ -52,11 +52,10 @@
         "rule_id": "54902e45-3467-49a4-8abc-529f2c8cfb80",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Persistence"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -101,8 +100,8 @@
         "timeline_title": "Comprehensive Registry Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "54902e45-3467-49a4-8abc-529f2c8cfb80_102",
+    "id": "54902e45-3467-49a4-8abc-529f2c8cfb80_103",
     "type": "security-rule"
 }

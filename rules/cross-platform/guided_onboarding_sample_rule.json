@@ -26,7 +26,7 @@
         "max_signals": 1,
         "name": "My First Rule",
         "note": "This is a test alert.\n\nThis alert does not show threat activity. Elastic created this alert to help you understand how alerts work.\n\nFor normal rules, the Investigation Guide will help analysts investigate alerts.\n\nThis alert will show once every 24 hours for each host. It is safe to disable this rule.\n",
-        "query": "event.kind:\"event\"\n",
+        "query": "event.kind:event\n",
         "references": [
             "https://www.elastic.co/guide/en/security/current/prebuilt-rules.html"
         ],
@@ -41,13 +41,10 @@
         "rule_id": "a198fbbd-9413-45ec-a269-47ae4ccf59ce",
         "severity": "low",
         "tags": [
-            "Elastic",
-            "Example",
-            "Guided Onboarding",
-            "Network",
-            "APM",
-            "Windows",
-            "Elastic Endgame"
+            "Use Case: Guided Onboarding",
+            "Data Source: APM",
+            "OS: Windows",
+            "Data Source: Elastic Endgame"
         ],
         "threshold": {
             "field": [
@@ -57,8 +54,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 1
+        "version": 2
     },
-    "id": "a198fbbd-9413-45ec-a269-47ae4ccf59ce_1",
+    "id": "a198fbbd-9413-45ec-a269-47ae4ccf59ce_2",
     "type": "security-rule"
 }

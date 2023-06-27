@@ -65,11 +65,10 @@
         "rule_id": "c2d90150-0133-451c-a783-533e736c12d7",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Windows",
-            "Threat Detection",
-            "Defense Evasion"
+            "Domain: Endpoint",
+            "OS: Windows",
+            "Use Case: Threat Detection",
+            "Tactic: Defense Evasion"
         ],
         "threat": [
             {
@@ -96,8 +95,8 @@
             }
         ],
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "c2d90150-0133-451c-a783-533e736c12d7_103",
+    "id": "c2d90150-0133-451c-a783-533e736c12d7_104",
     "type": "security-rule"
 }

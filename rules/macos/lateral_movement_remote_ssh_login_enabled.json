@@ -60,11 +60,10 @@
         "rule_id": "5ae4e6f8-d1bf-40fa-96ba-e29645e1e4dc",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "macOS",
-            "Threat Detection",
-            "Lateral Movement"
+            "Domain: Endpoint",
+            "OS: macOS",
+            "Use Case: Threat Detection",
+            "Tactic: Lateral Movement"
         ],
         "threat": [
             {
@@ -92,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 103
     },
-    "id": "5ae4e6f8-d1bf-40fa-96ba-e29645e1e4dc_102",
+    "id": "5ae4e6f8-d1bf-40fa-96ba-e29645e1e4dc_103",
     "type": "security-rule"
 }
