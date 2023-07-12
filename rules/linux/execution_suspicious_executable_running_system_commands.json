@@ -3,25 +3,20 @@
         "author": [
             "Elastic"
         ],
-        "description": "Identifies a reverse shell via the abuse of named pipes on Linux with the help of OpenSSL or Netcat. First in, first out (FIFO) files are special files for reading and writing to by Linux processes. For this to work, a named pipe is created and passed to a Linux shell where the use of a network connection tool such as Netcat or OpenSSL has been established. The stdout and stderr are captured in the named pipe from the network connection and passed back to the shell for execution.",
-        "false_positives": [
-            "Netcat and OpenSSL are common tools used for establishing network connections and creating encryption keys. While they are popular, capturing the stdout and stderr in a named pipe pointed to a shell is anomalous."
-        ],
+        "description": "This rule monitors for the execution of several commonly used system commands executed by a previously unknown executable located in commonly abused directories. An alert from this rule can indicate the presence of potentially malicious activity, such as the execution of unauthorized or suspicious processes attempting to run malicious code. Detecting and investigating such behavior can help identify and mitigate potential security threats, protecting the system and its data from potential compromise.",
         "from": "now-9m",
+        "history_window_start": "now-14d",
         "index": [
-            "auditbeat-*",
             "logs-endpoint.events.*",
             "endgame-*"
         ],
-        "language": "eql",
+        "language": "kuery",
         "license": "Elastic License v2",
-        "name": "Reverse Shell Created via Named Pipe",
-        "query": "sequence by host.id with maxspan = 5s\n    [process where host.os.type == \"linux\" and event.type == \"start\" and process.executable : (\"/usr/bin/mkfifo\",\"/usr/bin/mknod\") and process.args:(\"/tmp/*\",\"$*\")]\n    [process where host.os.type == \"linux\" and process.executable : (\"/bin/sh\",\"/bin/bash\") and process.args:(\"-i\") or\n        (process.executable: (\"/usr/bin/openssl\") and process.args: (\"-connect\"))]\n    [process where host.os.type == \"linux\" and (process.name:(\"nc\",\"ncat\",\"netcat\",\"netcat.openbsd\",\"netcat.traditional\") or\n                    (process.name: \"openssl\" and process.executable: \"/usr/bin/openssl\"))]\n",
-        "references": [
-            "https://int0x33.medium.com/day-43-reverse-shell-with-openssl-1ee2574aa998",
-            "https://blog.gregscharf.com/2021/03/22/tar-in-cronjob-to-privilege-escalation/",
-            "https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#openssl"
+        "name": "Suspicious System Commands Executed by Previously Unknown Executable",
+        "new_terms_fields": [
+            "process.executable"
         ],
+        "query": "host.os.type : \"linux\" and event.category : \"process\" and \nevent.action : (\"exec\" or \"exec_event\" or \"fork\" or \"fork_event\") and \nprocess.executable : (\n  /bin/* or /usr/bin/* or /usr/share/* or /tmp/* or /var/tmp/* or /dev/shm/* or\n  /etc/init.d/* or /etc/rc*.d/* or /etc/crontab or /etc/cron.*/* or /etc/update-motd.d/* or \n  /usr/lib/update-notifier/* or /home/*/.* or /boot/* or /srv/* or /run/*\n  ) and process.args : (\n  \"whoami\" or \"id\" or \"hostname\" or \"uptime\" or \"top\" or \"ifconfig\" or \"netstat\" or \"route\" or \n  \"ps\" or \"pwd\" or \"ls\"\n  ) and not process.name : (\n  \"sudo\" or \"which\" or \"whoami\" or \"id\" or \"hostname\" or \"uptime\" or \"top\" or \"netstat\" or \"ps\" or \n  \"pwd\" or \"ls\" or \"apt\" or \"dpkg\" or \"yum\" or \"rpm\" or \"dnf\" or \"dockerd\" or \"snapd\" or \"snap\"\n  )\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -31,12 +26,12 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.type",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
                 "ecs": true,
-                "name": "host.id",
+                "name": "event.category",
                 "type": "keyword"
             },
             {
@@ -60,9 +55,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
-        "rule_id": "dd7f1524-643e-11ed-9e35-f661ea17fbcd",
-        "severity": "medium",
+        "risk_score": 21,
+        "rule_id": "e9001ee6-2d00-4d2f-849e-b8b1fb05234c",
+        "severity": "low",
         "tags": [
             "Domain: Endpoint",
             "OS: Linux",
@@ -94,9 +89,10 @@
                 ]
             }
         ],
-        "type": "eql",
-        "version": 6
+        "timestamp_override": "event.ingested",
+        "type": "new_terms",
+        "version": 1
     },
-    "id": "dd7f1524-643e-11ed-9e35-f661ea17fbcd_6",
+    "id": "e9001ee6-2d00-4d2f-849e-b8b1fb05234c_1",
     "type": "security-rule"
 }

@@ -5,14 +5,18 @@
         ],
         "description": "Identifies access to the /etc/shadow file via the commandline using standard system utilities. After elevating privileges to root, threat actors may attempt to read or dump this file in order to gain valid credentials. They may utilize these to move laterally undetected and access additional resources.",
         "from": "now-9m",
+        "history_window_start": "now-7d",
         "index": [
-            "auditbeat-*",
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.*",
+            "endgame-*"
         ],
-        "language": "eql",
+        "language": "kuery",
         "license": "Elastic License v2",
         "name": "Potential Shadow File Read via Command Line Utilities",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and user.name == \"root\"\n  and (process.args : \"/etc/shadow\" or (process.working_directory: \"/etc\" and process.args: \"shadow\"))\n  and not process.executable:\n    (\"/usr/bin/tar\",\n    \"/bin/tar\",\n    \"/usr/bin/gzip\",\n    \"/bin/gzip\",\n    \"/usr/bin/zip\",\n    \"/bin/zip\",\n    \"/usr/bin/stat\",\n    \"/bin/stat\",\n    \"/usr/bin/cmp\",\n    \"/bin/cmp\",\n    \"/usr/bin/sudo\",\n    \"/bin/sudo\",\n    \"/usr/bin/find\",\n    \"/bin/find\",\n    \"/usr/bin/ls\",\n    \"/bin/ls\",\n    \"/usr/bin/uniq\",\n    \"/bin/uniq\",\n    \"/usr/bin/unzip\",\n    \"/bin/unzip\",\n    \"/usr/sbin/restorecon\",\n    \"/sbin/restorecon\")\n  and not process.parent.executable: \"/bin/dracut\" and\n  not (process.executable : (\"/bin/chown\", \"/usr/bin/chown\") and process.args : \"root:shadow\") and\n  not (process.executable : (\"/bin/chmod\", \"/usr/bin/chmod\") and process.args : \"640\")\n",
+        "new_terms_fields": [
+            "process.command_line"
+        ],
+        "query": "host.os.type : \"linux\" and event.category : \"process\" and event.action : (\"exec\" or \"exec_event\") and\n(process.args : \"/etc/shadow\" or (process.working_directory: \"/etc\" and process.args: \"shadow\")) and not \n(process.executable : (\"/bin/chown\" or \"/usr/bin/chown\") and process.args : \"root:shadow\") and not \n(process.executable : (\"/bin/chmod\" or \"/usr/bin/chmod\") and process.args : \"640\")\n",
         "references": [
             "https://www.cyberciti.biz/faq/unix-linux-password-cracking-john-the-ripper/"
         ],
@@ -30,7 +34,7 @@
             },
             {
                 "ecs": true,
-                "name": "event.type",
+                "name": "event.category",
                 "type": "keyword"
             },
             {
@@ -50,17 +54,7 @@
             },
             {
                 "ecs": true,
-                "name": "process.parent.executable",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
                 "name": "process.working_directory",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "user.name",
                 "type": "keyword"
             }
         ],
@@ -72,7 +66,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Tactic: Credential Access"
+            "Tactic: Credential Access",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -114,9 +109,9 @@
             }
         ],
         "timestamp_override": "event.ingested",
-        "type": "eql",
-        "version": 5
+        "type": "new_terms",
+        "version": 105
     },
-    "id": "9a3a3689-8ed1-4cdb-83fb-9506db54c61f_5",
+    "id": "9a3a3689-8ed1-4cdb-83fb-9506db54c61f_105",
     "type": "security-rule"
 }

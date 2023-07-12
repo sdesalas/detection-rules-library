@@ -3,31 +3,23 @@
         "author": [
             "Elastic"
         ],
-        "description": "This rule detects when an interactive shell is spawned inside a running container. This could indicate a potential container breakout attempt or an attacker's attempt to gain unauthorized access to the underlying host.",
-        "false_positives": [
-            "Legitimate users and processes, such as system administration tools, may utilize shell utilities inside a container resulting in false positives."
-        ],
-        "from": "now-6m",
+        "description": "This rule monitors for suspicious activities that may indicate an attacker attempting to execute arbitrary code within a PostgreSQL environment. Attackers can execute code via PostgreSQL as a result of gaining unauthorized access to a public facing PostgreSQL database or exploiting vulnerabilities, such as remote command execution and SQL injection attacks, which can result in unauthorized access and malicious actions, and facilitate post-exploitation activities for unauthorized access and malicious actions.",
+        "from": "now-9m",
         "index": [
-            "logs-cloud_defend*"
+            "logs-endpoint.events.*",
+            "endgame-*"
         ],
-        "interval": "5m",
         "language": "eql",
         "license": "Elastic License v2",
-        "name": "Suspicious Interactive Shell Spawned From Inside A Container",
-        "query": "process where container.id: \"*\" and\nevent.type== \"start\" and \n\n/*D4C consolidates closely spawned event.actions, this excludes end actions to only capture ongoing processes*/\nevent.action in (\"fork\", \"exec\") and event.action != \"end\"\n and process.entry_leader.same_as_process== false and\n(\n(process.executable: \"*/*sh\" and process.args: (\"-i\", \"-it\")) or\nprocess.args: \"*/*sh\"\n)\n",
+        "name": "Potential Code Execution via Postgresql",
+        "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\", \"fork\", \"fork_event\") and \nevent.type == \"start\" and user.name == \"postgres\" and (process.parent.args : \"*sh\" or process.args : \"*sh\")\n",
         "related_integrations": [
             {
-                "package": "cloud_defend",
-                "version": "^1.0.5"
+                "package": "endpoint",
+                "version": "^8.2.0"
             }
         ],
         "required_fields": [
-            {
-                "ecs": true,
-                "name": "container.id",
-                "type": "keyword"
-            },
             {
                 "ecs": true,
                 "name": "event.action",
@@ -40,29 +32,34 @@
             },
             {
                 "ecs": true,
+                "name": "host.os.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "process.args",
                 "type": "keyword"
             },
             {
                 "ecs": true,
-                "name": "process.entry_leader.same_as_process",
-                "type": "boolean"
+                "name": "process.parent.args",
+                "type": "keyword"
             },
             {
                 "ecs": true,
-                "name": "process.executable",
+                "name": "user.name",
                 "type": "keyword"
             }
         ],
         "risk_score": 73,
-        "rule_id": "8d3d0794-c776-476b-8674-ee2e685f6470",
+        "rule_id": "2a692072-d78d-42f3-a48a-775677d79c4e",
         "severity": "high",
         "tags": [
-            "Data Source: Elastic Defend for Containers",
-            "Domain: Container",
+            "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Execution"
+            "Tactic: Execution",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -88,10 +85,9 @@
                 ]
             }
         ],
-        "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 1
     },
-    "id": "8d3d0794-c776-476b-8674-ee2e685f6470_2",
+    "id": "2a692072-d78d-42f3-a48a-775677d79c4e_1",
     "type": "security-rule"
 }

@@ -3,7 +3,7 @@
         "author": [
             "Elastic"
         ],
-        "description": "Ransomware is a type of malware that encrypts a victim's files or systems and demands payment (usually in cryptocurrency) in exchange for the decryption key. One important indicator of a ransomware attack is the mass encryption of the file system, after which a new file extension is added to the file. Generally, a ransomware note with contact details is dropped onto the file system which can be used by the victim to contact the attacker. This rule identifies a sequence of a mass file encryption event in conjunction with the creation of a .txt file with a file name containing ransomware keywords executed by the same process in a 1 second timespan.",
+        "description": "This rule identifies a sequence of a mass file encryption event in conjunction with the creation of a .txt file with a file name containing ransomware keywords executed by the same process in a 1 second timespan. Ransomware is a type of malware that encrypts a victim's files or systems and demands payment (usually in cryptocurrency) in exchange for the decryption key. One important indicator of a ransomware attack is the mass encryption of the file system, after which a new file extension is added to the file.",
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.*"
@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Linux Ransomware Note Creation Detected",
-        "query": "sequence by host.id, process.entity_id with maxspan=1s \n  [ file where host.os.type == \"linux\" and event.type == \"change\" and \n  event.action == \"rename\" and file.extension != \"\" ] with runs=50\n  [ file where host.os.type == \"linux\" and event.action == \"creation\" and \n  file.extension == \"txt\" and file.name : (\n    \"*crypt*\", \n    \"*restore*\", \n    \"*lock*\", \n    \"*recovery*\", \n    \"*data*\",\n    \"*read*\", \n    \"*instruction*\", \n    \"*how_to*\", \n    \"*ransom*\"\n    ) ] | tail 1\n",
+        "query": "sequence by host.id, process.entity_id with maxspan=1s \n  [ file where host.os.type == \"linux\" and event.type == \"change\" and\n    event.action == \"rename\" and file.extension != \"\" and \n    file.path : (\n      \"/home/*\", \"/etc/*\", \"/root/*\", \"/opt/*\", \"/var/backups/*\", \"/var/lib/log/*\"\n      ) and not \n    file.extension : (\n      \"xml\", \"json\", \"conf\", \"dat\", \"gz\", \"info\", \"mod\", \"final\",\n      \"php\", \"pyc\", \"log\", \"bak\", \"bin\", \"csv\", \"pdf\", \"cfg\", \"*old\"\n      ) and not \n    process.name : (\n      \"dpkg\",  \"yum\", \"dnf\", \"rpm\", \"dockerd\"\n      ) ] with runs=100\n  [ file where host.os.type == \"linux\" and event.action == \"creation\" and file.extension == \"txt\" and \n    file.name : (\n      \"*crypt*\", \"*restore*\", \"*lock*\", \"*recovery*\", \"*data*\", \n      \"*read*\", \"*instruction*\", \"*how_to*\", \"*ransom*\"\n      ) ] | tail 1\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -41,6 +41,11 @@
             },
             {
                 "ecs": true,
+                "name": "file.path",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "host.id",
                 "type": "keyword"
             },
@@ -52,6 +57,11 @@
             {
                 "ecs": true,
                 "name": "process.entity_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.name",
                 "type": "keyword"
             }
         ],
@@ -82,8 +92,8 @@
             }
         ],
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "c8935a8b-634a-4449-98f7-bb24d3b2c0af_2",
+    "id": "c8935a8b-634a-4449-98f7-bb24d3b2c0af_3",
     "type": "security-rule"
 }

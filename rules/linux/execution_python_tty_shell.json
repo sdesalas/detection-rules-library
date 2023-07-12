@@ -6,12 +6,13 @@
         "description": "Identifies when a terminal (tty) is spawned via Python. Attackers may upgrade a simple reverse shell to a fully interactive tty after obtaining initial access to a host.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.*",
+            "endgame-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Interactive Terminal Spawned via Python",
-        "query": "sequence with maxspan=1m\n  [process where host.os.type == \"linux\" and event.type == \"start\" and process.name : \"python*\"] by process.entity_id\n  [process where host.os.type == \"linux\" and event.type == \"start\" and \n   process.executable : \"/bin/*sh\"\n  ] by process.parent.entity_id\n",
+        "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\") and\n(\n  (process.parent.name : \"python*\" and process.name : \"*sh\" and process.parent.args_count \u003e= 3 and\n   process.parent.args : \"*pty.spawn*\" and process.parent.args : \"-c\") or\n  (process.parent.name : \"python*\" and process.name : \"*sh\" and process.args : \"*sh\" and process.args_count == 1\n   and process.parent.args_count == 1)\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -21,7 +22,7 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.type",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
@@ -31,13 +32,13 @@
             },
             {
                 "ecs": true,
-                "name": "process.entity_id",
+                "name": "process.args",
                 "type": "keyword"
             },
             {
                 "ecs": true,
-                "name": "process.executable",
-                "type": "keyword"
+                "name": "process.args_count",
+                "type": "long"
             },
             {
                 "ecs": true,
@@ -46,7 +47,17 @@
             },
             {
                 "ecs": true,
-                "name": "process.parent.entity_id",
+                "name": "process.parent.args",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.args_count",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
                 "type": "keyword"
             }
         ],
@@ -84,11 +95,10 @@
                 ]
             }
         ],
-        "timeline_id": "e70679c2-6cde-4510-9764-4823df18f7db",
-        "timeline_title": "Comprehensive Process Timeline",
+        "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "d76b02ef-fc95-4001-9297-01cb7412232f_105",
+    "id": "d76b02ef-fc95-4001-9297-01cb7412232f_106",
     "type": "security-rule"
 }
