@@ -17,7 +17,7 @@
             "file.path",
             "process.name"
         ],
-        "query": "host.os.type:linux and event.action:(creation or file_create_event or file_rename_event or rename) and \nfile.path:(/dev/shm/* or /usr/lib/*) and file.extension:so and \nprocess.name:(* and not (5 or dockerd or dpkg or rpm or snapd))\n",
+        "query": "host.os.type:linux and event.action:(creation or file_create_event or file_rename_event or rename) and \nfile.path:(/dev/shm/* or /usr/lib/*) and file.extension:so and \nprocess.name: ( * and not (\"5\" or \"dockerd\" or \"dpkg\" or \"rpm\" or \"snapd\" or \"exe\" or \"yum\" or \"vmis-launcher\"))\n",
         "references": [
             "https://threatpost.com/sneaky-malware-backdoors-linux/180158/"
         ],
@@ -90,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "aebaa51f-2a91-4f6a-850b-b601db2293f4_1",
+    "id": "aebaa51f-2a91-4f6a-850b-b601db2293f4_2",
     "type": "security-rule"
 }

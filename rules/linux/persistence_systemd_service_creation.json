@@ -17,7 +17,7 @@
             "file.path",
             "process.name"
         ],
-        "query": "host.os.type : \"linux\" and event.action : (\"creation\" or \"file_create_event\") and\nfile.path : (/etc/systemd/system/* or /usr/local/lib/systemd/system/* or /lib/systemd/system/* or \n/usr/lib/systemd/system/* or /home/*/.config/systemd/user/*) and not \n(process.name : (\"dpkg\" or \"dockerd\" or \"rpm\" or \"snapd\") or file.extension : \"swp\")\n",
+        "query": "host.os.type : \"linux\" and event.action : (\"creation\" or \"file_create_event\") and\nfile.path : (/etc/systemd/system/* or /usr/local/lib/systemd/system/* or /lib/systemd/system/* or \n/usr/lib/systemd/system/* or /home/*/.config/systemd/user/*) and not \n(process.name : (\"dpkg\" or \"dockerd\" or \"rpm\" or \"snapd\" or \"yum\" or \"exe\" or \"dnf\" or \"dnf-automatic\" or python* or \n \"elastic-agent\" or \"cinc-client\") or file.extension : (\"swp\" or \"swx\"))\n",
         "references": [
             "https://opensource.com/article/20/7/systemd-timers",
             "https://pberba.github.io/security/2022/01/30/linux-threat-hunting-for-persistence-systemd-timers-cron/"
@@ -114,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "17b0a495-4d9f-414c-8ad0-92f018b8e001_2",
+    "id": "17b0a495-4d9f-414c-8ad0-92f018b8e001_3",
     "type": "security-rule"
 }

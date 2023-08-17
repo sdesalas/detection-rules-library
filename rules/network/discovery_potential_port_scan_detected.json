@@ -13,7 +13,7 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Potential Network Scan Detected",
-        "query": "destination.port :* and event.action: (\"network_flow\" or \"connection_accepted\" or \"connection_attempted\" )\n",
+        "query": "destination.port : * and event.action : \"network_flow\" and source.ip : (10.0.0.0/8 or 172.16.0.0/12 or 192.168.0.0/16)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -34,11 +34,16 @@
                 "ecs": true,
                 "name": "event.action",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.ip",
+                "type": "ip"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 21,
         "rule_id": "0171f283-ade7-4f87-9521-ac346c68cc9b",
-        "severity": "medium",
+        "severity": "low",
         "tags": [
             "Domain: Network",
             "Tactic: Discovery",
@@ -88,7 +93,7 @@
             "cardinality": [
                 {
                     "field": "destination.port",
-                    "value": 20
+                    "value": 250
                 }
             ],
             "field": [
@@ -98,8 +103,8 @@
             "value": 1
         },
         "type": "threshold",
-        "version": 1
+        "version": 2
     },
-    "id": "0171f283-ade7-4f87-9521-ac346c68cc9b_1",
+    "id": "0171f283-ade7-4f87-9521-ac346c68cc9b_2",
     "type": "security-rule"
 }

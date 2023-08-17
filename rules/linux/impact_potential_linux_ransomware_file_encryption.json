@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Suspicious File Changes Activity Detected",
-        "query": "sequence by host.id, process.entity_id with maxspan=1s \n  [ file where host.os.type == \"linux\" and event.type == \"change\" and\n    event.action == \"rename\" and file.extension != \"\" and \n    file.path : (\n      \"/home/*\", \"/etc/*\", \"/root/*\", \"/opt/*\", \"/var/backups/*\", \"/var/lib/log/*\"\n      ) and not \n    file.extension : (\n      \"xml\", \"json\", \"conf\", \"dat\", \"gz\", \"info\", \"mod\", \"final\",\n      \"php\", \"pyc\", \"log\", \"bak\", \"bin\", \"csv\", \"pdf\", \"cfg\", \"*old\"\n      ) and not \n    process.name : (\n      \"dpkg\",  \"yum\", \"dnf\", \"rpm\", \"dockerd\"\n    ) ] with runs=100 | tail 1\n",
+        "query": "sequence by host.id, process.entity_id with maxspan=1s \n  [ file where host.os.type == \"linux\" and event.type == \"change\" and\n    event.action == \"rename\" and file.extension != \"\" and \n    file.path : (\n      \"/home/*\", \"/etc/*\", \"/root/*\", \"/opt/*\", \"/var/backups/*\", \"/var/lib/log/*\"\n      ) and not \n    file.extension : (\n      \"xml\", \"json\", \"conf\", \"dat\", \"gz\", \"info\", \"mod\", \"final\",\n      \"php\", \"pyc\", \"log\", \"bak\", \"bin\", \"csv\", \"pdf\", \"cfg\", \"*old\"\n      ) and not \n    process.name : (\n      \"dpkg\", \"yum\", \"dnf\", \"rpm\", \"dockerd\", \"go\", \"java\", \"pip*\", \"python*\", \"node\", \"containerd\", \"php\", \"p4d\", \n      \"conda\", \"chrome\", \"imap\", \"cmake\", \"firefox\", \"semanage\", \"semodule\", \"ansible-galaxy\"\n    ) ] with runs=100 | tail 1\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -60,9 +60,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 73,
+        "risk_score": 47,
         "rule_id": "28738f9f-7427-4d23-bc69-756708b5f624",
-        "severity": "high",
+        "severity": "medium",
         "tags": [
             "Domain: Endpoint",
             "OS: Linux",
@@ -87,8 +87,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "28738f9f-7427-4d23-bc69-756708b5f624_3",
+    "id": "28738f9f-7427-4d23-bc69-756708b5f624_4",
     "type": "security-rule"
 }

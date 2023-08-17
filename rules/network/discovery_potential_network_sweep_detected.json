@@ -13,7 +13,7 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Potential Network Sweep Detected",
-        "query": "destination.port : (21 or 22 or 23 or 25 or 139 or 445 or 3389 or 5985 or 5986)\n",
+        "query": "destination.port : (21 or 22 or 23 or 25 or 139 or 445 or 3389 or 5985 or 5986) and \nsource.ip : (10.0.0.0/8 or 172.16.0.0/12 or 192.168.0.0/16)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -29,11 +29,16 @@
                 "ecs": true,
                 "name": "destination.port",
                 "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "source.ip",
+                "type": "ip"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 21,
         "rule_id": "781f8746-2180-4691-890c-4c96d11ca91d",
-        "severity": "medium",
+        "severity": "low",
         "tags": [
             "Domain: Network",
             "Tactic: Discovery",
@@ -83,7 +88,7 @@
             "cardinality": [
                 {
                     "field": "destination.ip",
-                    "value": 10
+                    "value": 100
                 }
             ],
             "field": [
@@ -92,8 +97,8 @@
             "value": 1
         },
         "type": "threshold",
-        "version": 1
+        "version": 2
     },
-    "id": "781f8746-2180-4691-890c-4c96d11ca91d_1",
+    "id": "781f8746-2180-4691-890c-4c96d11ca91d_2",
     "type": "security-rule"
 }
