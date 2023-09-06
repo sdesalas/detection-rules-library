@@ -61,7 +61,8 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: Elastic Endgame",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -111,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "e3343ab9-4245-4715-b344-e11c56b0a47f_106",
+    "id": "e3343ab9-4245-4715-b344-e11c56b0a47f_107",
     "type": "security-rule"
 }

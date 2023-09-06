@@ -71,7 +71,8 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Tactic: Credential Access",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -119,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "9ccf3ce0-0057-440a-91f5-870c6ad39093_105",
+    "id": "9ccf3ce0-0057-440a-91f5-870c6ad39093_106",
     "type": "security-rule"
 }

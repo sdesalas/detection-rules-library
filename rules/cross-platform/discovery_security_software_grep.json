@@ -60,7 +60,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -88,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "870aecc0-cea4-4110-af3f-e02e9b373655_104",
+    "id": "870aecc0-cea4-4110-af3f-e02e9b373655_105",
     "type": "security-rule"
 }

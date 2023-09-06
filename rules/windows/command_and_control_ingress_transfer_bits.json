@@ -71,7 +71,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Tactic: Command and Control"
+            "Tactic: Command and Control",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -107,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "f95972d3-c23b-463b-89a8-796b3f369b49_3",
+    "id": "f95972d3-c23b-463b-89a8-796b3f369b49_4",
     "type": "security-rule"
 }

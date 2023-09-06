@@ -67,7 +67,8 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Endgame",
-            "Use Case: Vulnerability"
+            "Use Case: Vulnerability",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -88,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "5bb4a95d-5a08-48eb-80db-4c3a63ec78a8_103",
+    "id": "5bb4a95d-5a08-48eb-80db-4c3a63ec78a8_104",
     "type": "security-rule"
 }

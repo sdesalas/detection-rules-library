@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Hidden Process via Mount Hidepid",
-        "query": "process where process.name==\"mount\" and event.action ==\"exec\" and\n    process.args: ( \"/proc\") and process.args: (\"-o\") and process.args:(\"*hidepid=2*\") and\n    host.os.type == \"linux\"\n",
+        "query": "process where host.os.type == \"linux\" and process.name == \"mount\" and event.action == \"exec\" and\nprocess.args == \"/proc\" and process.args == \"-o\" and process.args : \"*hidepid=2*\"\n",
         "references": [
             "https://www.cyberciti.biz/faq/linux-hide-processes-from-other-users/"
         ],
@@ -50,7 +50,8 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion"
+            "Tactic: Defense Evasion",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -71,8 +72,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "dc71c186-9fe4-4437-a4d0-85ebb32b8204_2",
+    "id": "dc71c186-9fe4-4437-a4d0-85ebb32b8204_3",
     "type": "security-rule"
 }

@@ -17,6 +17,20 @@
         "references": [
             "https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html"
         ],
+        "related_integrations": [
+            {
+                "package": "auditd_manager",
+                "version": "^1.0.0"
+            },
+            {
+                "package": "endpoint",
+                "version": "^8.2.0"
+            },
+            {
+                "package": "system",
+                "version": "^1.6.4"
+            }
+        ],
         "risk_score": 21,
         "rule_id": "138c5dd5-838b-446e-b1ac-c995c7f8108a",
         "severity": "low",
@@ -58,8 +72,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 103
+        "version": 104
     },
-    "id": "138c5dd5-838b-446e-b1ac-c995c7f8108a_103",
+    "id": "138c5dd5-838b-446e-b1ac-c995c7f8108a_104",
     "type": "security-rule"
 }

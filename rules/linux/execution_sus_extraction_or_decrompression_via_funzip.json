@@ -62,7 +62,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -110,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "dc0b7782-0df0-47ff-8337-db0d678bdb66_1",
+    "id": "dc0b7782-0df0-47ff-8337-db0d678bdb66_2",
     "type": "security-rule"
 }

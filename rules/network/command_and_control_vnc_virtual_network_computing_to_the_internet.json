@@ -56,10 +56,9 @@
         "rule_id": "3ad49c61-7adc-42c1-b788-732eda2f5abf",
         "severity": "medium",
         "tags": [
-            "Domain: Endpoint",
-            "Use Case: Threat Detection",
             "Tactic: Command and Control",
-            "Domain: Endpoint"
+            "Domain: Endpoint",
+            "Use Case: Threat Detection"
         ],
         "threat": [
             {
@@ -80,8 +79,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 103
     },
-    "id": "3ad49c61-7adc-42c1-b788-732eda2f5abf_102",
+    "id": "3ad49c61-7adc-42c1-b788-732eda2f5abf_103",
     "type": "security-rule"
 }

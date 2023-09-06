@@ -48,7 +48,8 @@
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Endgame",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -122,8 +123,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "3728c08d-9b70-456b-b6b8-007c7d246128_1",
+    "id": "3728c08d-9b70-456b-b6b8-007c7d246128_2",
     "type": "security-rule"
 }

@@ -49,7 +49,8 @@
             "Domain: Endpoint",
             "OS: macOS",
             "Use Case: Threat Detection",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -77,8 +78,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "48d7f54d-c29e-4430-93a9-9db6b5892270_103",
+    "id": "48d7f54d-c29e-4430-93a9-9db6b5892270_104",
     "type": "security-rule"
 }

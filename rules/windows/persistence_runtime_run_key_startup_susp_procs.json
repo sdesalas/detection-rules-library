@@ -75,7 +75,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -102,8 +103,8 @@
             }
         ],
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "e7125cea-9fe1-42a5-9a05-b0792cf86f5a_104",
+    "id": "e7125cea-9fe1-42a5-9a05-b0792cf86f5a_105",
     "type": "security-rule"
 }

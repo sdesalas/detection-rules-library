@@ -13,10 +13,10 @@
             "logs-endpoint.events.*",
             "endgame-*"
         ],
-        "language": "kuery",
+        "language": "eql",
         "license": "Elastic License v2",
         "name": "Hping Process Activity",
-        "query": "event.category:process and host.os.type:linux and event.type:(start or process_started) and process.name:(hping or hping2 or hping3)\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\"\nand process.name in (\"hping\", \"hping2\", \"hping3\")\n",
         "references": [
             "https://en.wikipedia.org/wiki/Hping"
         ],
@@ -27,11 +27,6 @@
             }
         ],
         "required_fields": [
-            {
-                "ecs": true,
-                "name": "event.category",
-                "type": "keyword"
-            },
             {
                 "ecs": true,
                 "name": "event.type",
@@ -48,15 +43,16 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 73,
+        "risk_score": 47,
         "rule_id": "90169566-2260-4824-b8e4-8615c3b4ed52",
-        "severity": "high",
+        "severity": "medium",
         "tags": [
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -76,9 +72,9 @@
             }
         ],
         "timestamp_override": "event.ingested",
-        "type": "query",
-        "version": 104
+        "type": "eql",
+        "version": 105
     },
-    "id": "90169566-2260-4824-b8e4-8615c3b4ed52_104",
+    "id": "90169566-2260-4824-b8e4-8615c3b4ed52_105",
     "type": "security-rule"
 }

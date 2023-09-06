@@ -19,7 +19,7 @@
             "process.parent.name",
             "host.id"
         ],
-        "query": "event.category:process and host.os.type:linux and event.type:start and (\n (process.name:(lsmod or modinfo)) or \n (process.name:kmod and process.args:list) or \n (process.name:depmod and process.args:(--all or -a))\n) and not process.parent.user.id:0\n",
+        "query": "event.category:process and host.os.type:linux and event.type:start and (\n (process.name:(lsmod or modinfo)) or \n (process.name:kmod and process.args:list) or \n (process.name:depmod and process.args:(--all or -a))\n) and process.parent.name:(sudo or bash or dash or ash or sh or tcsh or csh or zsh or ksh or fish) and \nnot process.parent.user.id:0\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -54,6 +54,11 @@
             },
             {
                 "ecs": true,
+                "name": "process.parent.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "process.parent.user.id",
                 "type": "keyword"
             }
@@ -65,7 +70,8 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Discovery"
+            "Tactic: Discovery",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -86,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 204
+        "version": 205
     },
-    "id": "2d8043ed-5bda-4caf-801c-c1feb7410504_204",
+    "id": "2d8043ed-5bda-4caf-801c-c1feb7410504_205",
     "type": "security-rule"
 }

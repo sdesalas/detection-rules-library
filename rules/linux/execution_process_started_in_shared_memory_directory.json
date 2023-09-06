@@ -15,7 +15,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Binary Executed from Shared Memory Directory",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\n    event.action : (\"exec\", \"exec_event\") and user.name == \"root\" and\n    process.executable : (\n        \"/dev/shm/*\",\n        \"/run/shm/*\",\n        \"/var/run/*\",\n        \"/var/lock/*\"\n    ) and\n    not process.executable : ( \"/var/run/docker/*\")\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and\nprocess.executable : (\"/dev/shm/*\", \"/run/shm/*\", \"/var/run/*\", \"/var/lock/*\") and\nnot process.executable : (\"/var/run/docker/*\", \"/var/run/utsns/*\", \"/var/run/s6/*\", \"/var/run/cloudera-scm-agent/*\") and\nuser.id == \"0\"\n",
         "references": [
             "https://linuxsecurity.com/features/fileless-malware-on-linux",
             "https://twitter.com/GossiTheDog/status/1522964028284411907",
@@ -50,7 +50,7 @@
             },
             {
                 "ecs": true,
-                "name": "user.name",
+                "name": "user.id",
                 "type": "keyword"
             }
         ],
@@ -63,7 +63,8 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Threat: BPFDoor",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -84,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "3f3f9fe2-d095-11ec-95dc-f661ea17fbce_105",
+    "id": "3f3f9fe2-d095-11ec-95dc-f661ea17fbce_106",
     "type": "security-rule"
 }

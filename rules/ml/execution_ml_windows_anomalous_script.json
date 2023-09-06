@@ -19,6 +19,16 @@
             "https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html",
             "https://www.elastic.co/security-labs/detecting-living-off-the-land-attacks-with-new-elastic-integration"
         ],
+        "related_integrations": [
+            {
+                "package": "endpoint",
+                "version": "^8.2.0"
+            },
+            {
+                "package": "windows",
+                "version": "^1.5.0"
+            }
+        ],
         "risk_score": 21,
         "rule_id": "1781d055-5c66-4adf-9d60-fc0fa58337b6",
         "severity": "low",
@@ -55,8 +65,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 103
+        "version": 104
     },
-    "id": "1781d055-5c66-4adf-9d60-fc0fa58337b6_103",
+    "id": "1781d055-5c66-4adf-9d60-fc0fa58337b6_104",
     "type": "security-rule"
 }

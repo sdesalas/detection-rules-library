@@ -17,7 +17,7 @@
         "note": "",
         "query": "file where host.os.type == \"windows\" and event.type != \"deletion\" and\n file.extension : (\"wll\",\"xll\",\"ppa\",\"ppam\",\"xla\",\"xlam\") and\n file.path :\n    (\n    \"C:\\\\Users\\\\*\\\\AppData\\\\Roaming\\\\Microsoft\\\\Word\\\\Startup\\\\*\",\n    \"C:\\\\Users\\\\*\\\\AppData\\\\Roaming\\\\Microsoft\\\\AddIns\\\\*\",\n    \"C:\\\\Users\\\\*\\\\AppData\\\\Roaming\\\\Microsoft\\\\Excel\\\\XLSTART\\\\*\"\n    )\n",
         "references": [
-            "https://labs.mwrinfosecurity.com/blog/add-in-opportunities-for-office-persistence/"
+            "https://labs.withsecure.com/publications/add-in-opportunities-for-office-persistence"
         ],
         "related_integrations": [
             {
@@ -60,7 +60,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -81,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "f44fa4b6-524c-4e87-8d9e-a32599e4fb7c_103",
+    "id": "f44fa4b6-524c-4e87-8d9e-a32599e4fb7c_104",
     "type": "security-rule"
 }

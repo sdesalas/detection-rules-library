@@ -14,7 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "System Service Discovery through built-in Windows Utilities",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  (\n  ((process.name: \"net.exe\" or process.pe.original_file_name == \"net.exe\" or (process.name : \"net1.exe\" and not process.parent.name : \"net.exe\")) and process.args : (\"start\", \"use\") and process.args_count == 2) or\n  ((process.name: \"sc.exe\" or process.pe.original_file_name == \"sc.exe\") and process.args: (\"query\", \"q*\")) or\n  ((process.name: \"tasklist.exe\" or process.pe.original_file_name == \"tasklist.exe\") and process.args: \"/svc\")\n  ) and not user.id : \"S-1-5-18\"\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  (\n  ((process.name: \"net.exe\" or process.pe.original_file_name == \"net.exe\" or (process.name : \"net1.exe\" and not process.parent.name : \"net.exe\")) and process.args : (\"start\", \"use\") and process.args_count == 2) or\n  ((process.name: \"sc.exe\" or process.pe.original_file_name == \"sc.exe\") and process.args: (\"query\", \"q*\")) or\n  ((process.name: \"tasklist.exe\" or process.pe.original_file_name == \"tasklist.exe\") and process.args: \"/svc\") or\n  (process.name : \"psservice.exe\" or process.pe.original_file_name == \"psservice.exe\")\n  ) and not user.id : \"S-1-5-18\"\n",
         "related_integrations": [
             {
                 "package": "windows",
@@ -75,7 +75,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -96,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "e0881d20-54ac-457f-8733-fe0bc5d44c55_3",
+    "id": "e0881d20-54ac-457f-8733-fe0bc5d44c55_4",
     "type": "security-rule"
 }

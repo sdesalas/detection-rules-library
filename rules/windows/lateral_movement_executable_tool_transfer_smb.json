@@ -85,7 +85,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -117,8 +118,8 @@
             }
         ],
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "58bc134c-e8d2-4291-a552-b4b3e537c60b_105",
+    "id": "58bc134c-e8d2-4291-a552-b4b3e537c60b_106",
     "type": "security-rule"
 }

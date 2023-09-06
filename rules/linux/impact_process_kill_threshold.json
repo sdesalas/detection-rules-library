@@ -56,7 +56,8 @@
             "Use Case: Threat Detection",
             "Tactic: Impact",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -84,8 +85,8 @@
             "value": 10
         },
         "type": "threshold",
-        "version": 107
+        "version": 108
     },
-    "id": "67f8443a-4ff3-4a70-916d-3cfa3ae9f02b_107",
+    "id": "67f8443a-4ff3-4a70-916d-3cfa3ae9f02b_108",
     "type": "security-rule"
 }

@@ -62,7 +62,8 @@
             "OS: macOS",
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
-            "Tactic: Execution"
+            "Tactic: Execution",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -98,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "080bc66a-5d56-4d1f-8071-817671716db9_103",
+    "id": "080bc66a-5d56-4d1f-8071-817671716db9_104",
     "type": "security-rule"
 }

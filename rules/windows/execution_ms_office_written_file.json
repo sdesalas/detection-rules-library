@@ -73,7 +73,8 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -114,8 +115,8 @@
             }
         ],
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "0d8ad79f-9025-45d8-80c1-4f0cd3c5e8e5_105",
+    "id": "0d8ad79f-9025-45d8-80c1-4f0cd3c5e8e5_106",
     "type": "security-rule"
 }

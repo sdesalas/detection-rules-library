@@ -53,10 +53,9 @@
         "rule_id": "32923416-763a-4531-bb35-f33b9232ecdb",
         "severity": "high",
         "tags": [
-            "Domain: Endpoint",
-            "Use Case: Threat Detection",
             "Tactic: Initial Access",
-            "Domain: Endpoint"
+            "Domain: Endpoint",
+            "Use Case: Threat Detection"
         ],
         "threat": [
             {
@@ -77,8 +76,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 101
+        "version": 102
     },
-    "id": "32923416-763a-4531-bb35-f33b9232ecdb_101",
+    "id": "32923416-763a-4531-bb35-f33b9232ecdb_102",
     "type": "security-rule"
 }

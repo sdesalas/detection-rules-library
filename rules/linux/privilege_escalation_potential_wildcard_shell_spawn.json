@@ -76,7 +76,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Tactic: Execution"
+            "Tactic: Execution",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -111,8 +112,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "0b803267-74c5-444d-ae29-32b5db2d562a_1",
+    "id": "0b803267-74c5-444d-ae29-32b5db2d562a_2",
     "type": "security-rule"
 }

@@ -64,7 +64,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
-            "OS: macOS"
+            "OS: macOS",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -84,8 +85,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "bc8ca7e0-92fd-4b7c-b11e-ee0266b8d9c9_3",
+    "id": "bc8ca7e0-92fd-4b7c-b11e-ee0266b8d9c9_4",
     "type": "security-rule"
 }

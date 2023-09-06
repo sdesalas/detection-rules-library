@@ -50,7 +50,8 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion"
+            "Tactic: Defense Evasion",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -78,8 +79,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "97db8b42-69d8-4bf3-9fd4-c69a1d895d68_2",
+    "id": "97db8b42-69d8-4bf3-9fd4-c69a1d895d68_3",
     "type": "security-rule"
 }

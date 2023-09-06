@@ -55,7 +55,8 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Resources: Investigation Guide",
-            "Use Case: Vulnerability"
+            "Use Case: Vulnerability",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -83,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "8acb7614-1d92-4359-bfcf-478b6d9de150_104",
+    "id": "8acb7614-1d92-4359-bfcf-478b6d9de150_105",
     "type": "security-rule"
 }

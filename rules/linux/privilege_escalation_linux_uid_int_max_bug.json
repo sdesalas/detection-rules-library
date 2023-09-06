@@ -67,7 +67,8 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Privilege Escalation"
+            "Tactic: Privilege Escalation",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -88,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "d55436a8-719c-445f-92c4-c113ff2f9ba5_1",
+    "id": "d55436a8-719c-445f-92c4-c113ff2f9ba5_2",
     "type": "security-rule"
 }

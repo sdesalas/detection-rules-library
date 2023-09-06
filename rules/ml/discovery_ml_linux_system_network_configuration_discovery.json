@@ -15,6 +15,16 @@
             "v3_linux_network_configuration_discovery"
         ],
         "name": "Unusual Linux Network Configuration Discovery",
+        "related_integrations": [
+            {
+                "package": "auditd_manager",
+                "version": "^1.0.0"
+            },
+            {
+                "package": "endpoint",
+                "version": "^8.2.0"
+            }
+        ],
         "risk_score": 21,
         "rule_id": "f9590f47-6bd5-4a49-bd49-a2f886476fb9",
         "severity": "low",
@@ -44,8 +54,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 103
+        "version": 104
     },
-    "id": "f9590f47-6bd5-4a49-bd49-a2f886476fb9_103",
+    "id": "f9590f47-6bd5-4a49-bd49-a2f886476fb9_104",
     "type": "security-rule"
 }

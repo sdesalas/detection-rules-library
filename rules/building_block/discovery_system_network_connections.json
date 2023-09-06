@@ -41,7 +41,8 @@
             "OS: macOS",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -62,8 +63,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "e2dc8f8c-5f16-42fa-b49e-0eb8057f7444_1",
+    "id": "e2dc8f8c-5f16-42fa-b49e-0eb8057f7444_2",
     "type": "security-rule"
 }

@@ -69,7 +69,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -117,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "66883649-f908-4a5b-a1e0-54090a1d3a32_106",
+    "id": "66883649-f908-4a5b-a1e0-54090a1d3a32_107",
     "type": "security-rule"
 }

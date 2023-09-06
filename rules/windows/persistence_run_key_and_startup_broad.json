@@ -75,7 +75,8 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -105,8 +106,8 @@
         "timeline_title": "Comprehensive Registry Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "97fc44d3-8dae-4019-ae83-298c3015600f_108",
+    "id": "97fc44d3-8dae-4019-ae83-298c3015600f_109",
     "type": "security-rule"
 }

@@ -15,7 +15,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Kernel Module Removal",
-        "query": "process where host.os.type == \"linux\" and event.action == \"exec\" and process.name == \"rmmod\" or\n(process.name == \"modprobe\" and process.args in (\"--remove\", \"-r\"))\n",
+        "query": "process where host.os.type == \"linux\" and event.action == \"exec\" and process.name == \"rmmod\" or\n(process.name == \"modprobe\" and process.args in (\"--remove\", \"-r\")) and \nprocess.parent.name in (\"sudo\", \"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")\n",
         "references": [
             "http://man7.org/linux/man-pages/man8/modprobe.8.html"
         ],
@@ -45,17 +45,23 @@
                 "ecs": true,
                 "name": "process.name",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
+                "type": "keyword"
             }
         ],
-        "risk_score": 73,
+        "risk_score": 47,
         "rule_id": "cd66a5af-e34b-4bb0-8931-57d0a043f2ef",
-        "severity": "high",
+        "severity": "medium",
         "tags": [
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -105,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "cd66a5af-e34b-4bb0-8931-57d0a043f2ef_104",
+    "id": "cd66a5af-e34b-4bb0-8931-57d0a043f2ef_105",
     "type": "security-rule"
 }

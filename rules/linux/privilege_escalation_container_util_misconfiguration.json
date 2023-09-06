@@ -78,7 +78,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Domain: Container"
+            "Domain: Container",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -99,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "afe6b0eb-dd9d-4922-b08a-1910124d524d_1",
+    "id": "afe6b0eb-dd9d-4922-b08a-1910124d524d_2",
     "type": "security-rule"
 }

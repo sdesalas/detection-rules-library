@@ -69,7 +69,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -96,8 +97,8 @@
             }
         ],
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "2fba96c0-ade5-4bce-b92f-a5df2509da3f_106",
+    "id": "2fba96c0-ade5-4bce-b92f-a5df2509da3f_107",
     "type": "security-rule"
 }

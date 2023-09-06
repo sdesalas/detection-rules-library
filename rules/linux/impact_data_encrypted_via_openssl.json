@@ -46,7 +46,8 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Impact"
+            "Tactic: Impact",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -66,8 +67,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "f530ca17-153b-4a7a-8cd3-98dd4b4ddf73_1",
+    "id": "f530ca17-153b-4a7a-8cd3-98dd4b4ddf73_2",
     "type": "security-rule"
 }

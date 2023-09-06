@@ -60,7 +60,8 @@
             "Domain: Endpoint",
             "OS: macOS",
             "Use Case: Threat Detection",
-            "Tactic: Lateral Movement"
+            "Tactic: Lateral Movement",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -81,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "15dacaa0-5b90-466b-acab-63435a59701a_103",
+    "id": "15dacaa0-5b90-466b-acab-63435a59701a_104",
     "type": "security-rule"
 }

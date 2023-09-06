@@ -60,7 +60,8 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Threat: BPFDoor",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -81,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "3688577a-d196-11ec-90b0-f661ea17fbce_105",
+    "id": "3688577a-d196-11ec-90b0-f661ea17fbce_106",
     "type": "security-rule"
 }

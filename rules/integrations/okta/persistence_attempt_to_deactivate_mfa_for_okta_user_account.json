@@ -44,10 +44,9 @@
         "setup": "The Okta Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
         "severity": "low",
         "tags": [
+            "Tactic: Persistence",
             "Use Case: Identity and Access Audit",
-            "Data Source: Okta",
-            "Use Case: Identity and Access Audit",
-            "Tactic: Persistence"
+            "Data Source: Okta"
         ],
         "threat": [
             {
@@ -68,8 +67,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 103
+        "version": 104
     },
-    "id": "cd89602e-9db0-48e3-9391-ae3bf241acd8_103",
+    "id": "cd89602e-9db0-48e3-9391-ae3bf241acd8_104",
     "type": "security-rule"
 }

@@ -64,7 +64,8 @@
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
             "Tactic: Execution",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -136,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "ff10d4d8-fea7-422d-afb1-e5a2702369a9_3",
+    "id": "ff10d4d8-fea7-422d-afb1-e5a2702369a9_4",
     "type": "security-rule"
 }

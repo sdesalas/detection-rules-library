@@ -17,7 +17,7 @@
         "max_signals": 33,
         "name": "Creation of Hidden Files and Directories via CommandLine",
         "note": "",
-        "query": "process where host.os.type == \"linux\" and event.type in (\"start\", \"process_started\") and\n  process.working_directory in (\"/tmp\", \"/var/tmp\", \"/dev/shm\") and\n  process.args regex~ \"\"\"\\.[a-z0-9_\\-][a-z0-9_\\-\\.]{1,254}\"\"\" and\n  not process.name in (\"ls\", \"find\", \"grep\")\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\nprocess.working_directory in (\"/tmp\", \"/var/tmp\", \"/dev/shm\") and\nprocess.args regex~ \"\"\"\\.[a-z0-9_\\-][a-z0-9_\\-\\.]{1,254}\"\"\" and\nnot process.name in (\"ls\", \"find\", \"grep\", \"git\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -59,7 +59,8 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion"
+            "Tactic: Defense Evasion",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -96,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "b9666521-4742-49ce-9ddc-b8e84c35acae_103",
+    "id": "b9666521-4742-49ce-9ddc-b8e84c35acae_104",
     "type": "security-rule"
 }

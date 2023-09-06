@@ -63,7 +63,8 @@
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -91,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "58aa72ca-d968-4f34-b9f7-bea51d75eb50_106",
+    "id": "58aa72ca-d968-4f34-b9f7-bea51d75eb50_107",
     "type": "security-rule"
 }

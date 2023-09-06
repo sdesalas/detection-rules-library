@@ -83,7 +83,8 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Lateral Movement"
+            "Tactic: Lateral Movement",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -112,8 +113,8 @@
             }
         ],
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "f3475224-b179-4f78-8877-c2bd64c26b88_106",
+    "id": "f3475224-b179-4f78-8877-c2bd64c26b88_107",
     "type": "security-rule"
 }

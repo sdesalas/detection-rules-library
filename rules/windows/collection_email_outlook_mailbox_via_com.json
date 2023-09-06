@@ -55,7 +55,8 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Collection"
+            "Tactic: Collection",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -105,8 +106,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "1dee0500-4aeb-44ca-b24b-4a285d7b6ba1_3",
+    "id": "1dee0500-4aeb-44ca-b24b-4a285d7b6ba1_4",
     "type": "security-rule"
 }

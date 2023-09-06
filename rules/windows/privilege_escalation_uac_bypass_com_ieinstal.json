@@ -65,7 +65,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -93,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "fc7c0fa4-8f03-4b3e-8336-c5feab0be022_104",
+    "id": "fc7c0fa4-8f03-4b3e-8336-c5feab0be022_105",
     "type": "security-rule"
 }

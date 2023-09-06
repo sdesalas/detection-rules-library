@@ -77,7 +77,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Use Case: Vulnerability"
+            "Use Case: Vulnerability",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -98,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "ee5300a7-7e31-4a72-a258-250abb8b3aa1_103",
+    "id": "ee5300a7-7e31-4a72-a258-250abb8b3aa1_104",
     "type": "security-rule"
 }

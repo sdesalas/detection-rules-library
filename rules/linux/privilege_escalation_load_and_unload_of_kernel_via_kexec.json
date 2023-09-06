@@ -54,7 +54,8 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
-            "Tactic: Defense Evasion"
+            "Tactic: Defense Evasion",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -119,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "4d4c35f4-414e-4d0c-bb7e-6db7c80a6957_2",
+    "id": "4d4c35f4-414e-4d0c-bb7e-6db7c80a6957_3",
     "type": "security-rule"
 }

@@ -70,7 +70,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -91,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "71c5cb27-eca5-4151-bb47-64bc3f883270_103",
+    "id": "71c5cb27-eca5-4151-bb47-64bc3f883270_104",
     "type": "security-rule"
 }

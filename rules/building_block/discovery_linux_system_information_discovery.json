@@ -46,7 +46,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -67,8 +68,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "b81bd314-db5b-4d97-82e8-88e3e5fc9de5_1",
+    "id": "b81bd314-db5b-4d97-82e8-88e3e5fc9de5_2",
     "type": "security-rule"
 }

@@ -15,6 +15,16 @@
             "v3_linux_system_information_discovery"
         ],
         "name": "Unusual Linux System Information Discovery Activity",
+        "related_integrations": [
+            {
+                "package": "auditd_manager",
+                "version": "^1.0.0"
+            },
+            {
+                "package": "endpoint",
+                "version": "^8.2.0"
+            }
+        ],
         "risk_score": 21,
         "rule_id": "d4af3a06-1e0a-48ec-b96a-faf2309fae46",
         "severity": "low",
@@ -44,8 +54,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 102
+        "version": 103
     },
-    "id": "d4af3a06-1e0a-48ec-b96a-faf2309fae46_102",
+    "id": "d4af3a06-1e0a-48ec-b96a-faf2309fae46_103",
     "type": "security-rule"
 }

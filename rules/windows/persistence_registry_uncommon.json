@@ -55,7 +55,8 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -100,8 +101,8 @@
         "timeline_title": "Comprehensive Registry Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "54902e45-3467-49a4-8abc-529f2c8cfb80_103",
+    "id": "54902e45-3467-49a4-8abc-529f2c8cfb80_104",
     "type": "security-rule"
 }

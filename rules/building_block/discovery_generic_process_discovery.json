@@ -13,7 +13,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Process Discovery Using Built-in Tools",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  (\n   process.name == \"reg.exe\" and process.args : \"query\" or\n   (process.name: (\"powershell.exe\", \"pwsh.exe\", \"powershell_ise.exe\") and\n    (process.args: (\"*Get-ChildItem*\", \"*Get-Item*\", \"*Get-ItemProperty*\") and\n     process.args : (\n      \"*HKLM*\", \"*HKCU*\", \"*HKEY_LOCAL_MACHINE*\", \"*HKEY_CURRENT_USER*\", \"Registry::\"\n   )))\n  )\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  (\n    process.name :(\"PsList.exe\", \"qprocess.exe\") or \n   (process.name : \"powershell.exe\" and process.args : (\"*get-process*\", \"*Win32_Process*\")) or \n   (process.name : \"wmic.exe\" and process.args : (\"process\", \"*Win32_Process*\")) or\n   (process.name : \"tasklist.exe\" and not process.args : (\"pid eq*\")) or\n   (process.name : \"query.exe\" and process.args : \"process\")\n  ) and not user.id : \"S-1-5-18\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -40,6 +40,11 @@
                 "ecs": true,
                 "name": "process.name",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "user.id",
+                "type": "keyword"
             }
         ],
         "risk_score": 21,
@@ -50,7 +55,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -71,8 +77,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "4982ac3e-d0ee-4818-b95d-d9522d689259_1",
+    "id": "4982ac3e-d0ee-4818-b95d-d9522d689259_2",
     "type": "security-rule"
 }

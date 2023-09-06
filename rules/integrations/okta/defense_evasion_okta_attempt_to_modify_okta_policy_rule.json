@@ -46,9 +46,8 @@
         "severity": "low",
         "tags": [
             "Use Case: Identity and Access Audit",
-            "Data Source: Okta",
-            "Use Case: Identity and Access Audit",
-            "Tactic: Defense Evasion"
+            "Tactic: Defense Evasion",
+            "Data Source: Okta"
         ],
         "threat": [
             {
@@ -76,8 +75,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 104
+        "version": 105
     },
-    "id": "000047bb-b27a-47ec-8b62-ef1a5d2c9e19_104",
+    "id": "000047bb-b27a-47ec-8b62-ef1a5d2c9e19_105",
     "type": "security-rule"
 }

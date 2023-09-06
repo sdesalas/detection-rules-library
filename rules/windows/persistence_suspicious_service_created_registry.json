@@ -44,7 +44,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -72,8 +73,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "36a8e048-d888-4f61-a8b9-0f9e2e40f317_103",
+    "id": "36a8e048-d888-4f61-a8b9-0f9e2e40f317_104",
     "type": "security-rule"
 }

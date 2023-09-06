@@ -15,7 +15,7 @@
         "license": "Elastic License v2",
         "name": "PowerShell Script with Archive Compression Capabilities",
         "note": "",
-        "query": "event.category:process and host.os.type:windows and\n(\n  powershell.file.script_block_text : (\n    \"IO.Compression.ZipFile\" or\n    \"IO.Compression.ZipArchive\" or\n    \"ZipFile.CreateFromDirectory\" or\n    \"IO.Compression.BrotliStream\" or\n    \"IO.Compression.DeflateStream\" or\n    \"IO.Compression.GZipStream\" or\n    \"IO.Compression.ZLibStream\"\n  ) and \n  powershell.file.script_block_text : (\n    \"CompressionLevel\" or\n    \"CompressionMode\" or\n    \"ZipArchiveMode\"\n  ) or\n  powershell.file.script_block_text : \"Compress-Archive\"\n)\n",
+        "query": "event.category:process and host.os.type:windows and\n(\n  powershell.file.script_block_text : (\n    \"IO.Compression.ZipFile\" or\n    \"IO.Compression.ZipArchive\" or\n    \"ZipFile.CreateFromDirectory\" or\n    \"IO.Compression.BrotliStream\" or\n    \"IO.Compression.DeflateStream\" or\n    \"IO.Compression.GZipStream\" or\n    \"IO.Compression.ZLibStream\"\n  ) and \n  powershell.file.script_block_text : (\n    \"CompressionLevel\" or\n    \"CompressionMode\" or\n    \"ZipArchiveMode\"\n  ) or\n  powershell.file.script_block_text : \"Compress-Archive\"\n) and not file.path : *ProgramData*Microsoft*Windows*Defender*Advanced*Threat*Protection*DataCollection*\n",
         "related_integrations": [
             {
                 "package": "windows",
@@ -26,6 +26,11 @@
             {
                 "ecs": true,
                 "name": "event.category",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "file.path",
                 "type": "keyword"
             },
             {
@@ -92,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "27071ea3-e806-4697-8abc-e22c92aa4293_1",
+    "id": "27071ea3-e806-4697-8abc-e22c92aa4293_2",
     "type": "security-rule"
 }

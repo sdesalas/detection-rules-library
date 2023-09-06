@@ -65,7 +65,8 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -93,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "203ab79b-239b-4aa5-8e54-fc50623ee8e4_105",
+    "id": "203ab79b-239b-4aa5-8e54-fc50623ee8e4_106",
     "type": "security-rule"
 }

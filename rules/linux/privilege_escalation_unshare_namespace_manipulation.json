@@ -64,7 +64,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -85,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "d00f33e7-b57d-4023-9952-2db91b1767c4_5",
+    "id": "d00f33e7-b57d-4023-9952-2db91b1767c4_6",
     "type": "security-rule"
 }

@@ -60,7 +60,8 @@
             "OS: macOS",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -88,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 103
     },
-    "id": "e6c1a552-7776-44ad-ae0f-8746cc07773c_102",
+    "id": "e6c1a552-7776-44ad-ae0f-8746cc07773c_103",
     "type": "security-rule"
 }

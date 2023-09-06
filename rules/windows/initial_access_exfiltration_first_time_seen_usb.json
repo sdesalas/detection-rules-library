@@ -64,7 +64,8 @@
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
             "Tactic: Exfiltration",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -107,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "0859355c-0f08-4b43-8ff5-7d2a4789fc08_1",
+    "id": "0859355c-0f08-4b43-8ff5-7d2a4789fc08_2",
     "type": "security-rule"
 }

@@ -54,7 +54,8 @@
             "OS: macOS",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Tactic: Execution"
+            "Tactic: Execution",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -90,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 103
+        "version": 104
     },
-    "id": "35330ba2-c859-4c98-8b7f-c19159ea0e58_103",
+    "id": "35330ba2-c859-4c98-8b7f-c19159ea0e58_104",
     "type": "security-rule"
 }

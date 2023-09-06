@@ -19,6 +19,16 @@
         "references": [
             "https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html"
         ],
+        "related_integrations": [
+            {
+                "package": "endpoint",
+                "version": "^8.2.0"
+            },
+            {
+                "package": "windows",
+                "version": "^1.5.0"
+            }
+        ],
         "risk_score": 21,
         "rule_id": "1781d055-5c66-4adf-9e93-fc0fa69550c9",
         "severity": "low",
@@ -48,8 +58,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 102
+        "version": 103
     },
-    "id": "1781d055-5c66-4adf-9e93-fc0fa69550c9_102",
+    "id": "1781d055-5c66-4adf-9e93-fc0fa69550c9_103",
     "type": "security-rule"
 }

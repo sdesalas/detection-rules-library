@@ -64,7 +64,8 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Data Source: Elastic Endgame",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -84,8 +85,8 @@
             }
         ],
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "96d11d31-9a79-480f-8401-da28b194608f_4",
+    "id": "96d11d31-9a79-480f-8401-da28b194608f_5",
     "type": "security-rule"
 }

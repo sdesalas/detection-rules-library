@@ -61,7 +61,8 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion"
+            "Tactic: Defense Evasion",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -81,8 +82,8 @@
             }
         ],
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "b86afe07-0d98-4738-b15d-8d7465f95ff5_103",
+    "id": "b86afe07-0d98-4738-b15d-8d7465f95ff5_104",
     "type": "security-rule"
 }

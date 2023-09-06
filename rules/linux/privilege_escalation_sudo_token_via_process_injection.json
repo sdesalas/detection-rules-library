@@ -70,7 +70,8 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Privilege Escalation"
+            "Tactic: Privilege Escalation",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -109,8 +110,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "ff9bc8b9-f03b-4283-be58-ee0a16f5a11b_1",
+    "id": "ff9bc8b9-f03b-4283-be58-ee0a16f5a11b_2",
     "type": "security-rule"
 }

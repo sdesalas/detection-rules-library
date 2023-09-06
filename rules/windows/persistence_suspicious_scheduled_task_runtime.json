@@ -83,7 +83,8 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -111,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "5d1d6907-0747-4d5d-9b24-e4a18853dc0a_103",
+    "id": "5d1d6907-0747-4d5d-9b24-e4a18853dc0a_104",
     "type": "security-rule"
 }

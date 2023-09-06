@@ -75,7 +75,8 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
-            "Use Case: Vulnerability"
+            "Use Case: Vulnerability",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -96,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "58c6d58b-a0d3-412d-b3b8-0981a9400607_106",
+    "id": "58c6d58b-a0d3-412d-b3b8-0981a9400607_107",
     "type": "security-rule"
 }

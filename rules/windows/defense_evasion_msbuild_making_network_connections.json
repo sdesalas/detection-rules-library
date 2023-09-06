@@ -60,7 +60,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -87,8 +88,8 @@
             }
         ],
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "0e79980b-4250-4a50-a509-69294c14e84b_104",
+    "id": "0e79980b-4250-4a50-a509-69294c14e84b_105",
     "type": "security-rule"
 }

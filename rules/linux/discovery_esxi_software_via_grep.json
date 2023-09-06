@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "ESXI Discovery via Grep",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\nprocess.name : (\"grep\", \"egrep\", \"pgrep\") and\nprocess.args : (\"vmdk\", \"vmx\", \"vmxf\", \"vmsd\", \"vmsn\", \"vswp\", \"vmss\", \"nvram\", \"vmem\")\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\nprocess.name in (\"grep\", \"egrep\", \"pgrep\") and\nprocess.args in (\"vmdk\", \"vmx\", \"vmxf\", \"vmsd\", \"vmsn\", \"vswp\", \"vmss\", \"nvram\", \"vmem\")\n",
         "references": [
             "https://www.bleepingcomputer.com/news/security/massive-esxiargs-ransomware-attack-targets-vmware-esxi-servers-worldwide/"
         ],
@@ -55,7 +55,8 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Discovery"
+            "Tactic: Discovery",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -76,8 +77,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "2b662e21-dc6e-461e-b5cf-a6eb9b235ec4_2",
+    "id": "2b662e21-dc6e-461e-b5cf-a6eb9b235ec4_3",
     "type": "security-rule"
 }

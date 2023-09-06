@@ -57,7 +57,8 @@
             "Domain: Endpoint",
             "OS: macOS",
             "Use Case: Threat Detection",
-            "Tactic: Privilege Escalation"
+            "Tactic: Privilege Escalation",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -85,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 103
+        "version": 104
     },
-    "id": "0ff84c42-873d-41a2-a4ed-08d74d352d01_103",
+    "id": "0ff84c42-873d-41a2-a4ed-08d74d352d01_104",
     "type": "security-rule"
 }

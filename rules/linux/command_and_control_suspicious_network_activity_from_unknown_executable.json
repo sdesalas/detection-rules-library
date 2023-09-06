@@ -67,7 +67,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -88,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "53617418-17b4-4e9c-8a2c-8deb8086ca4b_2",
+    "id": "53617418-17b4-4e9c-8a2c-8deb8086ca4b_3",
     "type": "security-rule"
 }

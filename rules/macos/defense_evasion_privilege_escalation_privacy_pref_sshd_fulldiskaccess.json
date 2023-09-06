@@ -59,7 +59,8 @@
             "OS: macOS",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Tactic: Defense Evasion"
+            "Tactic: Defense Evasion",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -95,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "c02c8b9f-5e1d-463c-a1b0-04edcdfe1a3d_103",
+    "id": "c02c8b9f-5e1d-463c-a1b0-04edcdfe1a3d_104",
     "type": "security-rule"
 }

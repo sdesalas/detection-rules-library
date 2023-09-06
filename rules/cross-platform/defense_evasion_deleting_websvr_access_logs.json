@@ -48,7 +48,8 @@
             "OS: Windows",
             "OS: macOS",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion"
+            "Tactic: Defense Evasion",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -69,8 +70,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "665e7a4f-c58e-4fc6-bc83-87a7572670ac_102",
+    "id": "665e7a4f-c58e-4fc6-bc83-87a7572670ac_103",
     "type": "security-rule"
 }

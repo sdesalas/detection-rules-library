@@ -64,7 +64,8 @@
             "Domain: Endpoint",
             "OS: macOS",
             "Use Case: Threat Detection",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -91,8 +92,8 @@
             }
         ],
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "082e3f8c-6f80-485c-91eb-5b112cb79b28_103",
+    "id": "082e3f8c-6f80-485c-91eb-5b112cb79b28_104",
     "type": "security-rule"
 }

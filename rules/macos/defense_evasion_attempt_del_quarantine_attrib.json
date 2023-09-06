@@ -64,7 +64,8 @@
             "Domain: Endpoint",
             "OS: macOS",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion"
+            "Tactic: Defense Evasion",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -92,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "f0b48bbc-549e-4bcf-8ee0-a7a72586c6a7_103",
+    "id": "f0b48bbc-549e-4bcf-8ee0-a7a72586c6a7_104",
     "type": "security-rule"
 }

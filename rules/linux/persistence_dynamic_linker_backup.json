@@ -66,7 +66,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Threat: Orbit"
+            "Threat: Orbit",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -93,8 +94,8 @@
             }
         ],
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "df6f62d9-caab-4b88-affa-044f4395a1e0_103",
+    "id": "df6f62d9-caab-4b88-affa-044f4395a1e0_104",
     "type": "security-rule"
 }

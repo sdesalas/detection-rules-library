@@ -13,10 +13,10 @@
             "logs-endpoint.events.*",
             "endgame-*"
         ],
-        "language": "kuery",
+        "language": "eql",
         "license": "Elastic License v2",
         "name": "Nping Process Activity",
-        "query": "event.category:process and host.os.type:linux and event.type:(start or process_started) and process.name:nping\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and process.name == \"nping\"\n",
         "references": [
             "https://en.wikipedia.org/wiki/Nmap"
         ],
@@ -27,11 +27,6 @@
             }
         ],
         "required_fields": [
-            {
-                "ecs": true,
-                "name": "event.category",
-                "type": "keyword"
-            },
             {
                 "ecs": true,
                 "name": "event.type",
@@ -56,7 +51,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -76,9 +72,9 @@
             }
         ],
         "timestamp_override": "event.ingested",
-        "type": "query",
-        "version": 104
+        "type": "eql",
+        "version": 105
     },
-    "id": "0d69150b-96f8-467c-a86d-a67a3378ce77_104",
+    "id": "0d69150b-96f8-467c-a86d-a67a3378ce77_105",
     "type": "security-rule"
 }

@@ -62,7 +62,8 @@
             "OS: macOS",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Discovery"
+            "Tactic: Discovery",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -83,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "c85eb82c-d2c8-485c-a36f-534f914b7663_102",
+    "id": "c85eb82c-d2c8-485c-a36f-534f914b7663_103",
     "type": "security-rule"
 }

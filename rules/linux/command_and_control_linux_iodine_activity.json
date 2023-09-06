@@ -15,7 +15,8 @@
         ],
         "language": "kuery",
         "license": "Elastic License v2",
-        "name": "Potential DNS Tunneling via Iodine",
+        "name": "Deprecated - Potential DNS Tunneling via Iodine",
+        "note": "This rule was deprecated due to its addition to the umbrella `Potential Linux Tunneling and/or Port Forwarding` (6ee947e9-de7e-4281-a55d-09289bdf947e) rule.",
         "query": "event.category:process and host.os.type:linux and event.type:(start or process_started) and process.name:(iodine or iodined)\n",
         "references": [
             "https://code.kryo.se/iodine/"
@@ -56,7 +57,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -77,8 +79,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 104
+        "version": 105
     },
-    "id": "041d4d41-9589-43e2-ba13-5680af75ebc2_104",
+    "id": "041d4d41-9589-43e2-ba13-5680af75ebc2_105",
     "type": "security-rule"
 }

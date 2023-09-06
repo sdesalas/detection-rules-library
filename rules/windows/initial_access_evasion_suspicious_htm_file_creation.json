@@ -79,7 +79,8 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Initial Access"
+            "Tactic: Initial Access",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -133,8 +134,8 @@
             }
         ],
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "f0493cb4-9b15-43a9-9359-68c23a7f2cf3_103",
+    "id": "f0493cb4-9b15-43a9-9359-68c23a7f2cf3_104",
     "type": "security-rule"
 }

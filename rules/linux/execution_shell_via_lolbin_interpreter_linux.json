@@ -80,7 +80,8 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Execution"
+            "Tactic: Execution",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -122,8 +123,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "76e4d92b-61c1-4a95-ab61-5fd94179a1ee_3",
+    "id": "76e4d92b-61c1-4a95-ab61-5fd94179a1ee_4",
     "type": "security-rule"
 }

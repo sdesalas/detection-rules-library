@@ -16,6 +16,16 @@
         "references": [
             "https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html"
         ],
+        "related_integrations": [
+            {
+                "package": "endpoint",
+                "version": "^8.2.0"
+            },
+            {
+                "package": "network_traffic",
+                "version": "^1.1.0"
+            }
+        ],
         "risk_score": 21,
         "rule_id": "b240bfb8-26b7-4e5e-924e-218144a3fa71",
         "severity": "low",
@@ -25,8 +35,8 @@
             "Rule Type: Machine Learning"
         ],
         "type": "machine_learning",
-        "version": 102
+        "version": 103
     },
-    "id": "b240bfb8-26b7-4e5e-924e-218144a3fa71_102",
+    "id": "b240bfb8-26b7-4e5e-924e-218144a3fa71_103",
     "type": "security-rule"
 }

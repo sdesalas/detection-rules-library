@@ -17,7 +17,12 @@
         "references": [
             "https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html"
         ],
-        "related_integrations": [],
+        "related_integrations": [
+            {
+                "package": "aws",
+                "version": "^1.5.0"
+            }
+        ],
         "risk_score": 21,
         "rule_id": "ac706eae-d5ec-4b14-b4fd-e8ba8086f0e1",
         "setup": "The AWS Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
@@ -31,8 +36,8 @@
             "Resources: Investigation Guide"
         ],
         "type": "machine_learning",
-        "version": 105
+        "version": 106
     },
-    "id": "ac706eae-d5ec-4b14-b4fd-e8ba8086f0e1_105",
+    "id": "ac706eae-d5ec-4b14-b4fd-e8ba8086f0e1_106",
     "type": "security-rule"
 }

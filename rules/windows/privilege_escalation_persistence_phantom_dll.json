@@ -97,7 +97,8 @@
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -147,8 +148,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "bfeaf89b-a2a7-48a3-817f-e41829dc61ee_106",
+    "id": "bfeaf89b-a2a7-48a3-817f-e41829dc61ee_107",
     "type": "security-rule"
 }

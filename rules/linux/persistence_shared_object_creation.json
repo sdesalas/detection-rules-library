@@ -62,7 +62,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -90,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "aebaa51f-2a91-4f6a-850b-b601db2293f4_2",
+    "id": "aebaa51f-2a91-4f6a-850b-b601db2293f4_3",
     "type": "security-rule"
 }
