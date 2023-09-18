@@ -78,6 +78,18 @@
                                 "reference": "https://attack.mitre.org/techniques/T1547/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/",
+                        "subtechnique": [
+                            {
+                                "id": "T1546.002",
+                                "name": "Screensaver",
+                                "reference": "https://attack.mitre.org/techniques/T1546/002/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -101,8 +113,8 @@
         "timeline_title": "Comprehensive Registry Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "54902e45-3467-49a4-8abc-529f2c8cfb80_104",
+    "id": "54902e45-3467-49a4-8abc-529f2c8cfb80_105",
     "type": "security-rule"
 }

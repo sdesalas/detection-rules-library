@@ -84,6 +84,11 @@
                                 "id": "T1547.001",
                                 "name": "Registry Run Keys / Startup Folder",
                                 "reference": "https://attack.mitre.org/techniques/T1547/001/"
+                            },
+                            {
+                                "id": "T1547.009",
+                                "name": "Shortcut Modification",
+                                "reference": "https://attack.mitre.org/techniques/T1547/009/"
                             }
                         ]
                     }
@@ -92,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "f7c4dc5a-a58d-491d-9f14-9b66507121c0_107",
+    "id": "f7c4dc5a-a58d-491d-9f14-9b66507121c0_108",
     "type": "security-rule"
 }
