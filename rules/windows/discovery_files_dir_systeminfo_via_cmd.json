@@ -3,6 +3,7 @@
         "author": [
             "Elastic"
         ],
+        "building_block_type": "default",
         "description": "Identifies the execution of discovery commands to enumerate system information, files, and folders using the Windows Command Shell.",
         "from": "now-9m",
         "index": [
@@ -63,7 +64,8 @@
             "Tactic: Discovery",
             "Tactic: Execution",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Rule Type: BBR"
         ],
         "threat": [
             {
@@ -111,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "d68e95ad-1c82-4074-a12a-125fe10ac8ba_6",
+    "id": "d68e95ad-1c82-4074-a12a-125fe10ac8ba_7",
     "type": "security-rule"
 }

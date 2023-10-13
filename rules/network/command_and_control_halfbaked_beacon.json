@@ -10,13 +10,15 @@
         "from": "now-9m",
         "index": [
             "packetbeat-*",
+            "auditbeat-*",
+            "filebeat-*",
             "logs-network_traffic.*"
         ],
         "language": "lucene",
         "license": "Elastic License v2",
         "name": "Halfbaked Command and Control Beacon",
         "note": "## Threat intel\n\nThis activity has been observed in FIN7 campaigns.",
-        "query": "event.dataset: (network_traffic.tls or network_traffic.http) AND\n  network.transport:tcp AND url.full:/http:\\/\\/[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}\\/cd/ AND\n  destination.port:(53 OR 80 OR 8080 OR 443)\n",
+        "query": "(event.dataset: (network_traffic.tls or network_traffic.http) or\n  (event.category: (network or network_traffic) and network.protocol: http)) and\n  network.transport:tcp and url.full:/http:\\/\\/[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}\\/cd/ and\n  destination.port:(53 or 80 or 8080 or 443)\n",
         "references": [
             "https://www.fireeye.com/blog/threat-research/2017/04/fin7-phishing-lnk.html",
             "https://attack.mitre.org/software/S0151/"
@@ -61,8 +63,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 103
     },
-    "id": "2e580225-2a58-48ef-938b-572933be06fe_102",
+    "id": "2e580225-2a58-48ef-938b-572933be06fe_103",
     "type": "security-rule"
 }

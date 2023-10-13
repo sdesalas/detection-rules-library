@@ -8,17 +8,21 @@
             "The Build Engine is commonly used by Windows developers but use by non-engineers is unusual."
         ],
         "from": "now-9m",
+        "history_window_start": "now-14d",
         "index": [
             "winlogbeat-*",
             "logs-endpoint.events.*",
-            "logs-windows.*",
-            "endgame-*"
+            "logs-windows.*"
         ],
-        "language": "eql",
+        "language": "kuery",
         "license": "Elastic License v2",
         "name": "Microsoft Build Engine Started by a Script Process",
-        "note": "",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  (process.name : \"MSBuild.exe\" or process.pe.original_file_name == \"MSBuild.exe\") and\n  process.parent.name : (\"cmd.exe\", \"powershell.exe\", \"pwsh.exe\", \"powershell_ise.exe\", \"cscript.exe\", \"wscript.exe\", \"mshta.exe\")\n",
+        "new_terms_fields": [
+            "host.id",
+            "user.name",
+            "process.command_line"
+        ],
+        "query": "host.os.type:windows and event.category:process and event.type:start and (\n  process.name.caseless:\"msbuild.exe\" or process.pe.original_file_name:\"MSBuild.exe\") and \n  process.parent.name:(\"cmd.exe\" or \"powershell.exe\" or \"pwsh.exe\" or \"powershell_ise.exe\" or \"cscript.exe\" or\n    \"wscript.exe\" or \"mshta.exe\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -32,6 +36,11 @@
         "required_fields": [
             {
                 "ecs": true,
+                "name": "event.category",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "event.type",
                 "type": "keyword"
             },
@@ -41,9 +50,9 @@
                 "type": "keyword"
             },
             {
-                "ecs": true,
-                "name": "process.name",
-                "type": "keyword"
+                "ecs": false,
+                "name": "process.name.caseless",
+                "type": "unknown"
             },
             {
                 "ecs": true,
@@ -58,14 +67,13 @@
         ],
         "risk_score": 21,
         "rule_id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae2",
-        "setup": "If enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2, events will not define `event.ingested` and default fallback for EQL rules was not added until 8.2, so you will need to add a custom pipeline to populate `event.ingested` to @timestamp for this rule to work.",
         "severity": "low",
         "tags": [
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Data Source: Elastic Endgame",
+            "Tactic: Execution",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -102,9 +110,9 @@
             }
         ],
         "timestamp_override": "event.ingested",
-        "type": "eql",
-        "version": 105
+        "type": "new_terms",
+        "version": 205
     },
-    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae2_105",
+    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae2_205",
     "type": "security-rule"
 }

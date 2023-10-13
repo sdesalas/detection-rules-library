@@ -15,7 +15,7 @@
         "license": "Elastic License v2",
         "name": "PowerShell Script with Log Clear Capabilities",
         "note": "",
-        "query": "event.category:process and host.os.type:windows and\n  powershell.file.script_block_text : (\n    \"Clear-EventLog\" or\n    \"Remove-EventLog\" or\n    (\"Eventing.Reader.EventLogSession\" and \".ClearLog\") or\n    (\"Diagnostics.EventLog\" and \".Clear\")\n  )\n",
+        "query": "event.category:process and host.os.type:windows and\n  powershell.file.script_block_text : (\n    \"Clear-EventLog\" or\n    \"Remove-EventLog\" or\n    (\"Eventing.Reader.EventLogSession\" and \".ClearLog\") or\n    (\"Diagnostics.EventLog\" and \".Clear\")\n  ) and\n  not file.path : (\n    ?\\:\\\\\\\\*\\\\\\\\system32\\\\\\\\WindowsPowerShell\\\\\\\\v1.0\\\\\\\\Modules\\\\\\\\Microsoft.PowerShell.Management\\\\\\\\*.psd1\n  )\n",
         "references": [
             "https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.eventlog.clear",
             "https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.eventing.reader.eventlogsession.clearlog"
@@ -30,6 +30,11 @@
             {
                 "ecs": true,
                 "name": "event.category",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "file.path",
                 "type": "keyword"
             },
             {
@@ -103,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "3d3aa8f9-12af-441f-9344-9f31053e316d_1",
+    "id": "3d3aa8f9-12af-441f-9344-9f31053e316d_2",
     "type": "security-rule"
 }

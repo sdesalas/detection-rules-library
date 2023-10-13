@@ -5,11 +5,10 @@
         ],
         "building_block_type": "default",
         "description": "This rule identifies the execution of commands that can be used to enumerate network connections. Adversaries may attempt to get a listing of network connections to or from a compromised system to identify targets within an environment.",
-        "from": "now-119m",
+        "from": "now-9m",
         "index": [
             "logs-endpoint.events.*"
         ],
-        "interval": "60m",
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Windows System Network Connections Discovery",
@@ -87,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "c4e9ed3e-55a2-4309-a012-bc3c78dad10a_2",
+    "id": "c4e9ed3e-55a2-4309-a012-bc3c78dad10a_3",
     "type": "security-rule"
 }

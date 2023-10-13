@@ -5,15 +5,19 @@
         ],
         "building_block_type": "default",
         "description": "This rule identifies the execution of commands that can be used to query the Windows Registry. Adversaries may query the registry to gain situational awareness about the host, like installed security software, programs and settings.",
-        "from": "now-119m",
+        "from": "now-9m",
+        "history_window_start": "now-14d",
         "index": [
             "logs-endpoint.events.*"
         ],
-        "interval": "60m",
-        "language": "eql",
+        "language": "kuery",
         "license": "Elastic License v2",
         "name": "Query Registry using Built-in Tools",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n(\n  (\n    process.name == \"reg.exe\" and process.args : \"query\" and\n    not process.parent.executable : (\"?:\\\\Program Files\\\\*\", \"?:\\\\Program Files (x86)\\\\*\")\n  ) or\n  (\n    process.name: (\"powershell.exe\", \"pwsh.exe\", \"powershell_ise.exe\") and\n     (process.args: (\"*Get-ChildItem*\", \"*Get-Item*\", \"*Get-ItemProperty*\") and\n      process.args : (\"*HKLM*\", \"*HKCU*\", \"*HKEY_LOCAL_MACHINE*\", \"*HKEY_CURRENT_USER*\", \"*Registry::*\"))\n  )\n) and not user.id : \"S-1-5-18\"\n",
+        "new_terms_fields": [
+            "host.id",
+            "user.id"
+        ],
+        "query": "host.os.type:windows and event.category:process and event.type:start and (\n  (process.name.caseless:\"reg.exe\" and process.args:\"query\") or \n  (process.name.caseless:(\"powershell.exe\" or \"powershell_ise.exe\" or \"pwsh.exe\") and \n   process.command_line.caseless:((*Get-ChildItem* or *Get-Item* or *Get-ItemProperty*) and \n   (*HKCU* or *HKEY_CURRENT_USER* or *HKEY_LOCAL_MACHINE* or *HKLM* or *Registry\\:\\:*))))\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -21,6 +25,11 @@
             }
         ],
         "required_fields": [
+            {
+                "ecs": true,
+                "name": "event.category",
+                "type": "keyword"
+            },
             {
                 "ecs": true,
                 "name": "event.type",
@@ -37,19 +46,14 @@
                 "type": "keyword"
             },
             {
-                "ecs": true,
-                "name": "process.name",
-                "type": "keyword"
+                "ecs": false,
+                "name": "process.command_line.caseless",
+                "type": "unknown"
             },
             {
-                "ecs": true,
-                "name": "process.parent.executable",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "user.id",
-                "type": "keyword"
+                "ecs": false,
+                "name": "process.name.caseless",
+                "type": "unknown"
             }
         ],
         "risk_score": 21,
@@ -81,9 +85,9 @@
             }
         ],
         "timestamp_override": "event.ingested",
-        "type": "eql",
-        "version": 2
+        "type": "new_terms",
+        "version": 102
     },
-    "id": "ded09d02-0137-4ccc-8005-c45e617e8d4c_2",
+    "id": "ded09d02-0137-4ccc-8005-c45e617e8d4c_102",
     "type": "security-rule"
 }

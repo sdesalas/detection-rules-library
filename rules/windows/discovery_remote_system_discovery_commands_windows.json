@@ -3,6 +3,7 @@
         "author": [
             "Elastic"
         ],
+        "building_block_type": "default",
         "description": "Discovery of remote system information using built-in commands, which may be used to move laterally.",
         "from": "now-9m",
         "index": [
@@ -68,8 +69,9 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Resources: Investigation Guide",
+            "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Rule Type: BBR"
         ],
         "threat": [
             {
@@ -95,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "0635c542-1b96-4335-9b47-126582d2c19a_108",
+    "id": "0635c542-1b96-4335-9b47-126582d2c19a_109",
     "type": "security-rule"
 }

@@ -8,17 +8,22 @@
             "The Build Engine is commonly used by Windows developers but use by non-engineers is unusual. If a build system triggers this rule it can be exempted by process, user or host name."
         ],
         "from": "now-9m",
+        "history_window_start": "now-14d",
         "index": [
             "winlogbeat-*",
             "logs-endpoint.events.*",
-            "logs-windows.*",
-            "endgame-*"
+            "logs-windows.*"
         ],
-        "language": "eql",
+        "language": "kuery",
         "license": "Elastic License v2",
         "name": "Microsoft Build Engine Started an Unusual Process",
+        "new_terms_fields": [
+            "host.id",
+            "user.name",
+            "process.parent.command_line"
+        ],
         "note": "",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.parent.name : \"MSBuild.exe\" and\n  process.name : (\"csc.exe\", \"iexplore.exe\", \"powershell.exe\")\n",
+        "query": "host.os.type:windows and event.category:process and event.type:start and process.parent.name:\"MSBuild.exe\" and\nprocess.name.caseless:(\"csc.exe\" or \"iexplore.exe\" or \"powershell.exe\")\n",
         "references": [
             "https://blog.talosintelligence.com/2020/02/building-bypass-with-msbuild.html"
         ],
@@ -35,6 +40,11 @@
         "required_fields": [
             {
                 "ecs": true,
+                "name": "event.category",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "event.type",
                 "type": "keyword"
             },
@@ -44,9 +54,9 @@
                 "type": "keyword"
             },
             {
-                "ecs": true,
-                "name": "process.name",
-                "type": "keyword"
+                "ecs": false,
+                "name": "process.name.caseless",
+                "type": "unknown"
             },
             {
                 "ecs": true,
@@ -63,7 +73,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Data Source: Elastic Endgame",
+            "Tactic: Execution",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -91,9 +101,9 @@
             }
         ],
         "timestamp_override": "event.ingested",
-        "type": "eql",
-        "version": 106
+        "type": "new_terms",
+        "version": 206
     },
-    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae6_106",
+    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae6_206",
     "type": "security-rule"
 }

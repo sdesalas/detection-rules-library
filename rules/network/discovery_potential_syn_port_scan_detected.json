@@ -8,7 +8,9 @@
         "index": [
             "logs-endpoint.events.network-*",
             "logs-network_traffic.*",
-            "packetbeat-*"
+            "packetbeat-*",
+            "auditbeat-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -103,8 +105,8 @@
             "value": 1
         },
         "type": "threshold",
-        "version": 2
+        "version": 3
     },
-    "id": "bbaa96b9-f36c-4898-ace2-581acb00a409_2",
+    "id": "bbaa96b9-f36c-4898-ace2-581acb00a409_3",
     "type": "security-rule"
 }

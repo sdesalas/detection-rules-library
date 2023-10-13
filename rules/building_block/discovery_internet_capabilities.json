@@ -5,15 +5,20 @@
         ],
         "building_block_type": "default",
         "description": "Identifies the use of built-in tools attackers can use to check for Internet connectivity on compromised systems. These results may be used to determine communication capabilities with C2 servers, or to identify routes, redirectors, and proxy servers.",
-        "from": "now-119m",
+        "from": "now-9m",
+        "history_window_start": "now-14d",
         "index": [
             "logs-endpoint.events.*"
         ],
-        "interval": "60m",
-        "language": "eql",
+        "language": "kuery",
         "license": "Elastic License v2",
         "name": "Discovery of Internet Capabilities via Built-in Tools",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name : (\"ping.exe\", \"tracert.exe\", \"pathping.exe\") and\n  not process.args : (\"127.0.0.1\", \"::1\", \"0.0.0.0\", \"192.168.*\")\n",
+        "new_terms_fields": [
+            "host.id",
+            "user.id",
+            "process.command_line"
+        ],
+        "query": "host.os.type:windows and event.category:process and event.type:start and \nprocess.name.caseless:(\"ping.exe\" or \"tracert.exe\" or \"pathping.exe\") and\nnot process.args:(\"127.0.0.1\" or \"0.0.0.0\" or \"localhost\" or \"1.1.1.1\" or \"1.2.3.4\" or \"::1\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -21,6 +26,11 @@
             }
         ],
         "required_fields": [
+            {
+                "ecs": true,
+                "name": "event.category",
+                "type": "keyword"
+            },
             {
                 "ecs": true,
                 "name": "event.type",
@@ -37,9 +47,9 @@
                 "type": "keyword"
             },
             {
-                "ecs": true,
-                "name": "process.name",
-                "type": "keyword"
+                "ecs": false,
+                "name": "process.name.caseless",
+                "type": "unknown"
             }
         ],
         "risk_score": 21,
@@ -50,7 +60,6 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Data Source: Elastic Endgame",
             "Rule Type: BBR",
             "Data Source: Elastic Defend"
         ],
@@ -79,9 +88,9 @@
             }
         ],
         "timestamp_override": "event.ingested",
-        "type": "eql",
-        "version": 1
+        "type": "new_terms",
+        "version": 101
     },
-    "id": "7f89afef-9fc5-4e7b-bf16-75ffdf27f8db_1",
+    "id": "7f89afef-9fc5-4e7b-bf16-75ffdf27f8db_101",
     "type": "security-rule"
 }

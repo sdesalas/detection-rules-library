@@ -5,14 +5,13 @@
         ],
         "building_block_type": "default",
         "description": "Detects the execution of commands used to discover information about the system, which attackers may use after compromising a system to gain situational awareness.",
-        "from": "now-119m",
+        "from": "now-9m",
         "index": [
             "winlogbeat-*",
             "logs-endpoint.events.*",
             "logs-windows.*",
             "endgame-*"
         ],
-        "interval": "60m",
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Windows System Information Discovery",
@@ -67,9 +66,9 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Data Source: Elastic Endgame",
             "Rule Type: BBR",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -90,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "51176ed2-2d90-49f2-9f3d-17196428b169_2",
+    "id": "51176ed2-2d90-49f2-9f3d-17196428b169_3",
     "type": "security-rule"
 }

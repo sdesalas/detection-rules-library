@@ -10,12 +10,14 @@
         "from": "now-9m",
         "index": [
             "packetbeat-*",
+            "auditbeat-*",
+            "filebeat-*",
             "logs-network_traffic.*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Accepted Default Telnet Port Connection",
-        "query": "event.dataset: network_traffic.flow and event.type: connection\n  and not event.action:(\n      flow_dropped or denied or deny or\n      flow_terminated or timeout or Reject or network_flow)\n",
+        "query": "(event.dataset:network_traffic.flow or event.category:(network or network_traffic))\n    and event.type:connection and not event.action:(\n        flow_dropped or denied or deny or\n        flow_terminated or timeout or Reject or network_flow)\n    and destination.port:23\n",
         "related_integrations": [
             {
                 "package": "network_traffic",
@@ -25,7 +27,17 @@
         "required_fields": [
             {
                 "ecs": true,
+                "name": "destination.port",
+                "type": "long"
+            },
+            {
+                "ecs": true,
                 "name": "event.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.category",
                 "type": "keyword"
             },
             {
@@ -94,8 +106,8 @@
         "timeline_title": "Comprehensive Network Timeline",
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 103
+        "version": 104
     },
-    "id": "34fde489-94b0-4500-a76f-b8a157cf9269_103",
+    "id": "34fde489-94b0-4500-a76f-b8a157cf9269_104",
     "type": "security-rule"
 }

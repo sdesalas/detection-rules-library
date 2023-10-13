@@ -10,13 +10,15 @@
         "from": "now-9m",
         "index": [
             "packetbeat-*",
+            "auditbeat-*",
+            "filebeat-*",
             "logs-network_traffic.*"
         ],
         "language": "lucene",
         "license": "Elastic License v2",
         "name": "Possible FIN7 DGA Command and Control Behavior",
         "note": "## Triage and analysis\n\nIn the event this rule identifies benign domains in your environment, the `destination.domain` field in the rule can be modified to include those domains. Example: `...AND NOT destination.domain:(zoom.us OR benign.domain1 OR benign.domain2)`.",
-        "query": "event.dataset: (network_traffic.tls or network_traffic.http) AND\ndestination.domain:/[a-zA-Z]{4,5}\\.(pw|us|club|info|site|top)/ AND NOT destination.domain:zoom.us\n",
+        "query": "(event.dataset: (network_traffic.tls or network_traffic.http) or\n    (event.category: (network or network_traffic) and type: (tls or http) and network.transport: tcp)) and\ndestination.domain:/[a-zA-Z]{4,5}\\.(pw|us|club|info|site|top)/ AND NOT destination.domain:zoom.us\n",
         "references": [
             "https://www.fireeye.com/blog/threat-research/2018/08/fin7-pursuing-an-enigmatic-and-evasive-global-criminal-operation.html"
         ],
@@ -60,8 +62,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 103
     },
-    "id": "4a4e23cf-78a2-449c-bac3-701924c269d3_102",
+    "id": "4a4e23cf-78a2-449c-bac3-701924c269d3_103",
     "type": "security-rule"
 }

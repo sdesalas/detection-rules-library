@@ -5,11 +5,10 @@
         ],
         "building_block_type": "default",
         "description": "This rule identifies the execution of commands that can be used to enumerate running processes. Adversaries may enumerate processes to identify installed applications and security solutions.",
-        "from": "now-119m",
+        "from": "now-9m",
         "index": [
             "logs-endpoint.events.*"
         ],
-        "interval": "60m",
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Process Discovery Using Built-in Tools",
@@ -77,8 +76,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "4982ac3e-d0ee-4818-b95d-d9522d689259_2",
+    "id": "4982ac3e-d0ee-4818-b95d-d9522d689259_3",
     "type": "security-rule"
 }

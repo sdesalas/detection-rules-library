@@ -6,9 +6,11 @@
         "description": "This rule identifies a potential network sweep.  A network sweep is a method used by attackers to scan a target network, identifying active hosts, open ports, and available services to gather information on vulnerabilities and weaknesses. This reconnaissance helps them plan subsequent attacks and exploit potential entry points for unauthorized access, data theft, or other malicious activities. This rule proposes threshold logic to check for connection attempts from one source host to 10 or more destination hosts on commonly used network services.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.network-*",
+            "packetbeat-*",
+            "auditbeat-*",
+            "filebeat-*",
             "logs-network_traffic.*",
-            "packetbeat-*"
+            "logs-endpoint.events.network-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -97,8 +99,8 @@
             "value": 1
         },
         "type": "threshold",
-        "version": 2
+        "version": 3
     },
-    "id": "781f8746-2180-4691-890c-4c96d11ca91d_2",
+    "id": "781f8746-2180-4691-890c-4c96d11ca91d_3",
     "type": "security-rule"
 }

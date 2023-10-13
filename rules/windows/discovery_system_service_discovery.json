@@ -3,6 +3,7 @@
         "author": [
             "Elastic"
         ],
+        "building_block_type": "default",
         "description": "Detects the usage of commonly used system service discovery techniques, which attackers may use during the reconnaissance phase after compromising a system in order to gain a better understanding of the environment and/or escalate privileges.",
         "from": "now-9m",
         "index": [
@@ -14,7 +15,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "System Service Discovery through built-in Windows Utilities",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  (\n  ((process.name: \"net.exe\" or process.pe.original_file_name == \"net.exe\" or (process.name : \"net1.exe\" and not process.parent.name : \"net.exe\")) and process.args : (\"start\", \"use\") and process.args_count == 2) or\n  ((process.name: \"sc.exe\" or process.pe.original_file_name == \"sc.exe\") and process.args: (\"query\", \"q*\")) or\n  ((process.name: \"tasklist.exe\" or process.pe.original_file_name == \"tasklist.exe\") and process.args: \"/svc\") or\n  (process.name : \"psservice.exe\" or process.pe.original_file_name == \"psservice.exe\")\n  ) and not user.id : \"S-1-5-18\"\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  (\n  ((process.name: \"net.exe\" or process.pe.original_file_name == \"net.exe\" or (process.name : \"net1.exe\" and \n    not process.parent.name : \"net.exe\")) and process.args : (\"start\", \"use\") and process.args_count == 2) or\n  ((process.name: \"sc.exe\" or process.pe.original_file_name == \"sc.exe\") and process.args: (\"query\", \"q*\")) or\n  ((process.name: \"tasklist.exe\" or process.pe.original_file_name == \"tasklist.exe\") and process.args: \"/svc\") or\n  (process.name : \"psservice.exe\" or process.pe.original_file_name == \"psservice.exe\")\n  ) and not user.id : \"S-1-5-18\"\n",
         "related_integrations": [
             {
                 "package": "windows",
@@ -75,8 +76,9 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
+            "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Rule Type: BBR"
         ],
         "threat": [
             {
@@ -97,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "e0881d20-54ac-457f-8733-fe0bc5d44c55_4",
+    "id": "e0881d20-54ac-457f-8733-fe0bc5d44c55_5",
     "type": "security-rule"
 }

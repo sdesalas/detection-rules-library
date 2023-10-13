@@ -65,6 +65,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
+            "Tactic: Execution",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
         ],
@@ -89,8 +90,8 @@
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "edf8ee23-5ea7-4123-ba19-56b41e424ae3_106",
+    "id": "edf8ee23-5ea7-4123-ba19-56b41e424ae3_107",
     "type": "security-rule"
 }
