@@ -48,6 +48,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
+            "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
             "Rule Type: BBR"
         ],
@@ -73,12 +74,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1112",
+                        "name": "Modify Registry",
+                        "reference": "https://attack.mitre.org/techniques/T1112/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "14dab405-5dd9-450c-8106-72951af2391f_1",
+    "id": "14dab405-5dd9-450c-8106-72951af2391f_2",
     "type": "security-rule"
 }

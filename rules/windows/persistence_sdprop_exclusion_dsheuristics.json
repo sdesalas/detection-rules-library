@@ -72,13 +72,31 @@
                     "name": "Persistence",
                     "reference": "https://attack.mitre.org/tactics/TA0003/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1078",
+                        "name": "Valid Accounts",
+                        "reference": "https://attack.mitre.org/techniques/T1078/",
+                        "subtechnique": [
+                            {
+                                "id": "T1078.002",
+                                "name": "Domain Accounts",
+                                "reference": "https://attack.mitre.org/techniques/T1078/002/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "61d29caf-6c15-4d1e-9ccb-7ad12ccc0bc7_107",
+    "id": "61d29caf-6c15-4d1e-9ccb-7ad12ccc0bc7_108",
     "type": "security-rule"
 }

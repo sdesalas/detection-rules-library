@@ -64,6 +64,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
+            "Tactic: Defense Evasion",
+            "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
@@ -90,12 +92,49 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/",
+                        "subtechnique": [
+                            {
+                                "id": "T1546.015",
+                                "name": "Component Object Model Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1546/015/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1112",
+                        "name": "Modify Registry",
+                        "reference": "https://attack.mitre.org/techniques/T1112/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "16a52c14-7883-47af-8745-9357803f0d4c_107",
+    "id": "16a52c14-7883-47af-8745-9357803f0d4c_108",
     "type": "security-rule"
 }

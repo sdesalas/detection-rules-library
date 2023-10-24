@@ -66,14 +66,14 @@
                 },
                 "technique": [
                     {
-                        "id": "T1553",
-                        "name": "Subvert Trust Controls",
-                        "reference": "https://attack.mitre.org/techniques/T1553/",
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
                         "subtechnique": [
                             {
-                                "id": "T1553.006",
-                                "name": "Code Signing Policy Modification",
-                                "reference": "https://attack.mitre.org/techniques/T1553/006/"
+                                "id": "T1036.001",
+                                "name": "Invalid Code Signature",
+                                "reference": "https://attack.mitre.org/techniques/T1036/001/"
                             }
                         ]
                     }
@@ -82,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "d8ab1ec1-feeb-48b9-89e7-c12e189448aa_5",
+    "id": "d8ab1ec1-feeb-48b9-89e7-c12e189448aa_6",
     "type": "security-rule"
 }

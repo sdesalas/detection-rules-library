@@ -54,6 +54,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
+            "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
         ],
@@ -79,12 +80,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1112",
+                        "name": "Modify Registry",
+                        "reference": "https://attack.mitre.org/techniques/T1112/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "403ef0d3-8259-40c9-a5b6-d48354712e49_104",
+    "id": "403ef0d3-8259-40c9-a5b6-d48354712e49_105",
     "type": "security-rule"
 }

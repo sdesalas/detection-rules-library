@@ -57,6 +57,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Execution",
+            "Tactic: Initial Access",
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
@@ -71,17 +72,39 @@
                 },
                 "technique": [
                     {
-                        "id": "T1204",
-                        "name": "User Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1204/"
+                        "id": "T1203",
+                        "name": "Exploitation for Client Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1203/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0001",
+                    "name": "Initial Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                },
+                "technique": [
+                    {
+                        "id": "T1566",
+                        "name": "Phishing",
+                        "reference": "https://attack.mitre.org/techniques/T1566/",
+                        "subtechnique": [
+                            {
+                                "id": "T1566.001",
+                                "name": "Spearphishing Attachment",
+                                "reference": "https://attack.mitre.org/techniques/T1566/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "53a26770-9cbd-40c5-8b57-61d01a325e14_106",
+    "id": "53a26770-9cbd-40c5-8b57-61d01a325e14_107",
     "type": "security-rule"
 }

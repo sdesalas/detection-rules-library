@@ -116,14 +116,19 @@
                         "id": "T1482",
                         "name": "Domain Trust Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1482/"
+                    },
+                    {
+                        "id": "T1016",
+                        "name": "System Network Configuration Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1016/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "eda499b8-a073-4e35-9733-22ec71f57f3a_106",
+    "id": "eda499b8-a073-4e35-9733-22ec71f57f3a_107",
     "type": "security-rule"
 }

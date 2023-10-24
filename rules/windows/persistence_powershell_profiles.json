@@ -59,6 +59,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
+            "Tactic: Privilege Escalation",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
         ],
@@ -84,12 +85,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/",
+                        "subtechnique": [
+                            {
+                                "id": "T1546.013",
+                                "name": "PowerShell Profile",
+                                "reference": "https://attack.mitre.org/techniques/T1546/013/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "5cf6397e-eb91-4f31-8951-9f0eaa755a31_5",
+    "id": "5cf6397e-eb91-4f31-8951-9f0eaa755a31_6",
     "type": "security-rule"
 }

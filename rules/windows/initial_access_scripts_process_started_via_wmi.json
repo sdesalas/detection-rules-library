@@ -131,6 +131,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.005",
+                                "name": "Visual Basic",
+                                "reference": "https://attack.mitre.org/techniques/T1059/005/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1047",
                         "name": "Windows Management Instrumentation",
                         "reference": "https://attack.mitre.org/techniques/T1047/"
@@ -139,8 +151,8 @@
             }
         ],
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "b64b183e-1a76-422d-9179-7b389513e74d_106",
+    "id": "b64b183e-1a76-422d-9179-7b389513e74d_107",
     "type": "security-rule"
 }

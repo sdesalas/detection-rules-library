@@ -65,7 +65,14 @@
                     {
                         "id": "T1021",
                         "name": "Remote Services",
-                        "reference": "https://attack.mitre.org/techniques/T1021/"
+                        "reference": "https://attack.mitre.org/techniques/T1021/",
+                        "subtechnique": [
+                            {
+                                "id": "T1021.006",
+                                "name": "Windows Remote Management",
+                                "reference": "https://attack.mitre.org/techniques/T1021/006/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -87,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "f59668de-caa0-4b84-94c1-3a1549e1e798_1",
+    "id": "f59668de-caa0-4b84-94c1-3a1549e1e798_2",
     "type": "security-rule"
 }

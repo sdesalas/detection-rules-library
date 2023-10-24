@@ -85,6 +85,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
+            "Tactic: Execution",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -109,11 +110,33 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.001",
+                                "name": "PowerShell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "2772264c-6fb9-4d9d-9014-b416eed21254_106",
+    "id": "2772264c-6fb9-4d9d-9014-b416eed21254_107",
     "type": "security-rule"
 }

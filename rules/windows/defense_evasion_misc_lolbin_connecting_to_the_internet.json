@@ -81,20 +81,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1218/"
                     }
                 ]
-            },
-            {
-                "framework": "MITRE ATT\u0026CK",
-                "tactic": {
-                    "id": "TA0002",
-                    "name": "Execution",
-                    "reference": "https://attack.mitre.org/tactics/TA0002/"
-                },
-                "technique": []
             }
         ],
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "63e65ec3-43b1-45b0-8f2d-45b34291dc44_105",
+    "id": "63e65ec3-43b1-45b0-8f2d-45b34291dc44_106",
     "type": "security-rule"
 }

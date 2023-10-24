@@ -65,6 +65,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Execution",
+            "Tactic: Defense Evasion",
             "Rule Type: BBR",
             "Data Source: Elastic Defend"
         ],
@@ -90,12 +91,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.001",
+                                "name": "Invalid Code Signature",
+                                "reference": "https://attack.mitre.org/techniques/T1036/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 102
+        "version": 103
     },
-    "id": "56fdfcf1-ca7c-4fd9-951d-e215ee26e404_102",
+    "id": "56fdfcf1-ca7c-4fd9-951d-e215ee26e404_103",
     "type": "security-rule"
 }

@@ -83,14 +83,19 @@
                                 "reference": "https://attack.mitre.org/techniques/T1562/002/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1112",
+                        "name": "Modify Registry",
+                        "reference": "https://attack.mitre.org/techniques/T1112/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "818e23e6-2094-4f0e-8c01-22d30f3506c6_106",
+    "id": "818e23e6-2094-4f0e-8c01-22d30f3506c6_107",
     "type": "security-rule"
 }

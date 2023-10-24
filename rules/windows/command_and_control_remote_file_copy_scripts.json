@@ -85,6 +85,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
+            "Tactic: Execution",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend"
         ],
@@ -103,11 +104,33 @@
                         "reference": "https://attack.mitre.org/techniques/T1105/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.005",
+                                "name": "Visual Basic",
+                                "reference": "https://attack.mitre.org/techniques/T1059/005/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "1d276579-3380-4095-ad38-e596a01bc64f_107",
+    "id": "1d276579-3380-4095-ad38-e596a01bc64f_108",
     "type": "security-rule"
 }

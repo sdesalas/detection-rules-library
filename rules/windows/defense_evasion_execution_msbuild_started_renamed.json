@@ -85,14 +85,26 @@
                                 "reference": "https://attack.mitre.org/techniques/T1036/003/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1127",
+                        "name": "Trusted Developer Utilities Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1127/",
+                        "subtechnique": [
+                            {
+                                "id": "T1127.001",
+                                "name": "MSBuild",
+                                "reference": "https://attack.mitre.org/techniques/T1127/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae4_108",
+    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae4_109",
     "type": "security-rule"
 }

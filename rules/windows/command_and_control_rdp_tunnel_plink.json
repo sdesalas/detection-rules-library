@@ -55,6 +55,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
+            "Tactic: Lateral Movement",
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
@@ -74,12 +75,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1572/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
+                },
+                "technique": [
+                    {
+                        "id": "T1021",
+                        "name": "Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1021/",
+                        "subtechnique": [
+                            {
+                                "id": "T1021.004",
+                                "name": "SSH",
+                                "reference": "https://attack.mitre.org/techniques/T1021/004/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "76fd43b7-3480-4dd9-8ad7-8bd36bfad92f_106",
+    "id": "76fd43b7-3480-4dd9-8ad7-8bd36bfad92f_107",
     "type": "security-rule"
 }

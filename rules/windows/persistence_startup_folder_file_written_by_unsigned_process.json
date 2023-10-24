@@ -69,6 +69,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
+            "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend"
         ],
@@ -94,11 +95,33 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.001",
+                                "name": "Invalid Code Signature",
+                                "reference": "https://attack.mitre.org/techniques/T1036/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "2fba96c0-ade5-4bce-b92f-a5df2509da3f_107",
+    "id": "2fba96c0-ade5-4bce-b92f-a5df2509da3f_108",
     "type": "security-rule"
 }

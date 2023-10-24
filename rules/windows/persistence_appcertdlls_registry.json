@@ -47,6 +47,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
+            "Tactic: Privilege Escalation",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
         ],
@@ -72,12 +73,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/",
+                        "subtechnique": [
+                            {
+                                "id": "T1546.009",
+                                "name": "AppCert DLLs",
+                                "reference": "https://attack.mitre.org/techniques/T1546/009/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "513f0ffd-b317-4b9c-9494-92ce861f22c7_104",
+    "id": "513f0ffd-b317-4b9c-9494-92ce861f22c7_105",
     "type": "security-rule"
 }

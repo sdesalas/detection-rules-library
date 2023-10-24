@@ -74,6 +74,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
+            "Tactic: Persistence",
             "Rule Type: BBR",
             "Data Source: Elastic Defend"
         ],
@@ -89,7 +90,19 @@
                     {
                         "id": "T1036",
                         "name": "Masquerading",
-                        "reference": "https://attack.mitre.org/techniques/T1036/"
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.001",
+                                "name": "Invalid Code Signature",
+                                "reference": "https://attack.mitre.org/techniques/T1036/001/"
+                            },
+                            {
+                                "id": "T1036.005",
+                                "name": "Match Legitimate Name or Location",
+                                "reference": "https://attack.mitre.org/techniques/T1036/005/"
+                            }
+                        ]
                     },
                     {
                         "id": "T1055",
@@ -97,12 +110,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1055/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1554",
+                        "name": "Compromise Client Software Binary",
+                        "reference": "https://attack.mitre.org/techniques/T1554/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "adbfa3ee-777e-4747-b6b0-7bd645f30880_1",
+    "id": "adbfa3ee-777e-4747-b6b0-7bd645f30880_2",
     "type": "security-rule"
 }

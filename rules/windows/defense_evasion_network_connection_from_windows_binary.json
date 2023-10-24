@@ -75,14 +75,38 @@
                     {
                         "id": "T1127",
                         "name": "Trusted Developer Utilities Proxy Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1127/"
+                        "reference": "https://attack.mitre.org/techniques/T1127/",
+                        "subtechnique": [
+                            {
+                                "id": "T1127.001",
+                                "name": "MSBuild",
+                                "reference": "https://attack.mitre.org/techniques/T1127/001/"
+                            },
+                            {
+                                "id": "T1218.005",
+                                "name": "Mshta",
+                                "reference": "https://attack.mitre.org/techniques/T1218/005/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.005",
+                                "name": "Match Legitimate Name or Location",
+                                "reference": "https://attack.mitre.org/techniques/T1036/005/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "1fe3b299-fbb5-4657-a937-1d746f2c711a_107",
+    "id": "1fe3b299-fbb5-4657-a937-1d746f2c711a_108",
     "type": "security-rule"
 }

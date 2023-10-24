@@ -99,6 +99,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1562/",
                         "subtechnique": [
                             {
+                                "id": "T1562.002",
+                                "name": "Disable Windows Event Logging",
+                                "reference": "https://attack.mitre.org/techniques/T1562/002/"
+                            },
+                            {
                                 "id": "T1562.006",
                                 "name": "Indicator Blocking",
                                 "reference": "https://attack.mitre.org/techniques/T1562/006/"
@@ -110,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "4de76544-f0e5-486a-8f84-eae0b6063cdc_107",
+    "id": "4de76544-f0e5-486a-8f84-eae0b6063cdc_108",
     "type": "security-rule"
 }

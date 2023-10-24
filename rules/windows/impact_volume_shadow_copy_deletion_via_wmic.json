@@ -62,6 +62,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Impact",
+            "Tactic: Execution",
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
@@ -81,12 +82,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1490/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1047",
+                        "name": "Windows Management Instrumentation",
+                        "reference": "https://attack.mitre.org/techniques/T1047/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "dc9c1f74-dac3-48e3-b47f-eb79db358f57_106",
+    "id": "dc9c1f74-dac3-48e3-b47f-eb79db358f57_107",
     "type": "security-rule"
 }

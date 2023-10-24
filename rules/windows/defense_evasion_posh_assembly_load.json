@@ -59,6 +59,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
+            "Tactic: Execution",
             "Resources: Investigation Guide",
             "Data Source: PowerShell Logs"
         ],
@@ -71,6 +72,11 @@
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
+                    {
+                        "id": "T1620",
+                        "name": "Reflective Code Loading",
+                        "reference": "https://attack.mitre.org/techniques/T1620/"
+                    },
                     {
                         "id": "T1055",
                         "name": "Process Injection",
@@ -115,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 108
+        "version": 109
     },
-    "id": "e26f042e-c590-4e82-8e05-41e81bd822ad_108",
+    "id": "e26f042e-c590-4e82-8e05-41e81bd822ad_109",
     "type": "security-rule"
 }

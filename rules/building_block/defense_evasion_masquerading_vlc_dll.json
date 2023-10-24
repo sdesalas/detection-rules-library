@@ -55,6 +55,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
+            "Tactic: Persistence",
             "Rule Type: BBR"
         ],
         "threat": [
@@ -69,15 +70,42 @@
                     {
                         "id": "T1036",
                         "name": "Masquerading",
-                        "reference": "https://attack.mitre.org/techniques/T1036/"
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.001",
+                                "name": "Invalid Code Signature",
+                                "reference": "https://attack.mitre.org/techniques/T1036/001/"
+                            },
+                            {
+                                "id": "T1036.005",
+                                "name": "Match Legitimate Name or Location",
+                                "reference": "https://attack.mitre.org/techniques/T1036/005/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1554",
+                        "name": "Compromise Client Software Binary",
+                        "reference": "https://attack.mitre.org/techniques/T1554/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "4494c14f-5ff8-4ed2-8e99-bf816a1642fc_1",
+    "id": "4494c14f-5ff8-4ed2-8e99-bf816a1642fc_2",
     "type": "security-rule"
 }

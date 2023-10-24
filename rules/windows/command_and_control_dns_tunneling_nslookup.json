@@ -88,6 +88,11 @@
                                 "reference": "https://attack.mitre.org/techniques/T1071/004/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1572",
+                        "name": "Protocol Tunneling",
+                        "reference": "https://attack.mitre.org/techniques/T1572/"
                     }
                 ]
             }
@@ -99,8 +104,8 @@
             "value": 15
         },
         "type": "threshold",
-        "version": 106
+        "version": 107
     },
-    "id": "3a59fc81-99d3-47ea-8cd6-d48d561fca20_106",
+    "id": "3a59fc81-99d3-47ea-8cd6-d48d561fca20_107",
     "type": "security-rule"
 }

@@ -66,6 +66,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
+            "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend"
         ],
@@ -84,12 +85,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1033/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1078",
+                        "name": "Valid Accounts",
+                        "reference": "https://attack.mitre.org/techniques/T1078/",
+                        "subtechnique": [
+                            {
+                                "id": "T1078.003",
+                                "name": "Local Accounts",
+                                "reference": "https://attack.mitre.org/techniques/T1078/003/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "2856446a-34e6-435b-9fb5-f8f040bfa7ed_106",
+    "id": "2856446a-34e6-435b-9fb5-f8f040bfa7ed_107",
     "type": "security-rule"
 }

@@ -112,13 +112,25 @@
                                 "reference": "https://attack.mitre.org/techniques/T1053/005/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.001",
+                                "name": "PowerShell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "5cd55388-a19c-47c7-8ec4-f41656c2fded_104",
+    "id": "5cd55388-a19c-47c7-8ec4-f41656c2fded_105",
     "type": "security-rule"
 }

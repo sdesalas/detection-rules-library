@@ -3,7 +3,7 @@
         "author": [
             "Elastic"
         ],
-        "description": "Identifies Certreq making an HTTP Post request. Adversaries could abuse Certreq to exfiltrate data to a remote URL.",
+        "description": "Identifies Certreq making an HTTP Post request. Adversaries could abuse Certreq to download files or upload data to a remote URL.",
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
@@ -13,7 +13,7 @@
         ],
         "language": "eql",
         "license": "Elastic License v2",
-        "name": "Potential Exfiltration via Certreq",
+        "name": "Potential File Transfer via Certreq",
         "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n (process.name : \"CertReq.exe\" or process.pe.original_file_name == \"CertReq.exe\") and process.args : \"-Post\"\n",
         "references": [
             "https://lolbas-project.github.io/lolbas/Binaries/Certreq/"
@@ -64,6 +64,7 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Tactic: Command and Control",
+            "Tactic: Exfiltration",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
         ],
@@ -97,12 +98,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1218/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0010",
+                    "name": "Exfiltration",
+                    "reference": "https://attack.mitre.org/tactics/TA0010/"
+                },
+                "technique": [
+                    {
+                        "id": "T1567",
+                        "name": "Exfiltration Over Web Service",
+                        "reference": "https://attack.mitre.org/techniques/T1567/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "79f0a1f7-ed6b-471c-8eb1-23abd6470b1c_4",
+    "id": "79f0a1f7-ed6b-471c-8eb1-23abd6470b1c_5",
     "type": "security-rule"
 }

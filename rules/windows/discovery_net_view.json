@@ -68,6 +68,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
+            "Tactic: Collection",
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
@@ -93,12 +94,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1135/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0009",
+                    "name": "Collection",
+                    "reference": "https://attack.mitre.org/tactics/TA0009/"
+                },
+                "technique": [
+                    {
+                        "id": "T1039",
+                        "name": "Data from Network Shared Drive",
+                        "reference": "https://attack.mitre.org/techniques/T1039/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "7b8bfc26-81d2-435e-965c-d722ee397ef1_107",
+    "id": "7b8bfc26-81d2-435e-965c-d722ee397ef1_108",
     "type": "security-rule"
 }

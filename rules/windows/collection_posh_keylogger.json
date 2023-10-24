@@ -100,14 +100,19 @@
                                 "reference": "https://attack.mitre.org/techniques/T1059/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1106",
+                        "name": "Native API",
+                        "reference": "https://attack.mitre.org/techniques/T1106/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "bd2c86a0-8b61-4457-ab38-96943984e889_109",
+    "id": "bd2c86a0-8b61-4457-ab38-96943984e889_110",
     "type": "security-rule"
 }

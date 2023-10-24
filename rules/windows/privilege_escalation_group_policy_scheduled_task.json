@@ -77,6 +77,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
+            "Tactic: Lateral Movement",
             "Data Source: Active Directory",
             "Resources: Investigation Guide",
             "Use Case: Active Directory Monitoring"
@@ -115,12 +116,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
+                },
+                "technique": [
+                    {
+                        "id": "T1570",
+                        "name": "Lateral Tool Transfer",
+                        "reference": "https://attack.mitre.org/techniques/T1570/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "15a8ba77-1c13-4274-88fe-6bd14133861e_107",
+    "id": "15a8ba77-1c13-4274-88fe-6bd14133861e_108",
     "type": "security-rule"
 }

@@ -79,6 +79,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.001",
+                                "name": "Invalid Code Signature",
+                                "reference": "https://attack.mitre.org/techniques/T1036/001/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1070",
                         "name": "Indicator Removal",
                         "reference": "https://attack.mitre.org/techniques/T1070/",
@@ -94,8 +106,8 @@
             }
         ],
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "09443c92-46b3-45a4-8f25-383b028b258d_106",
+    "id": "09443c92-46b3-45a4-8f25-383b028b258d_107",
     "type": "security-rule"
 }

@@ -50,6 +50,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
+            "Tactic: Execution",
             "Data Source: Elastic Defend",
             "Rule Type: BBR"
         ],
@@ -68,12 +69,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1140/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.003",
+                                "name": "Windows Command Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/003/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "53dedd83-1be7-430f-8026-363256395c8b_1",
+    "id": "53dedd83-1be7-430f-8026-363256395c8b_2",
     "type": "security-rule"
 }

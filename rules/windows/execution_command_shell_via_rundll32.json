@@ -71,6 +71,7 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Tactic: Credential Access",
+            "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
         ],
@@ -116,12 +117,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1552/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1218",
+                        "name": "System Binary Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1218/",
+                        "subtechnique": [
+                            {
+                                "id": "T1218.011",
+                                "name": "Rundll32",
+                                "reference": "https://attack.mitre.org/techniques/T1218/011/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "9ccf3ce0-0057-440a-91f5-870c6ad39093_106",
+    "id": "9ccf3ce0-0057-440a-91f5-870c6ad39093_107",
     "type": "security-rule"
 }

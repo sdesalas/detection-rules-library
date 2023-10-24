@@ -91,6 +91,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Execution",
+            "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend"
         ],
@@ -118,6 +119,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1218/",
                         "subtechnique": [
                             {
+                                "id": "T1218.009",
+                                "name": "Regsvcs/Regasm",
+                                "reference": "https://attack.mitre.org/techniques/T1218/009/"
+                            },
+                            {
                                 "id": "T1218.010",
                                 "name": "Regsvr32",
                                 "reference": "https://attack.mitre.org/techniques/T1218/010/"
@@ -128,8 +134,8 @@
             }
         ],
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "fb02b8d3-71ee-4af1-bacd-215d23f17efa_105",
+    "id": "fb02b8d3-71ee-4af1-bacd-215d23f17efa_106",
     "type": "security-rule"
 }

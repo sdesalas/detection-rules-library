@@ -77,14 +77,21 @@
                     {
                         "id": "T1218",
                         "name": "System Binary Proxy Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1218/"
+                        "reference": "https://attack.mitre.org/techniques/T1218/",
+                        "subtechnique": [
+                            {
+                                "id": "T1218.010",
+                                "name": "Regsvr32",
+                                "reference": "https://attack.mitre.org/techniques/T1218/010/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "4ed678a9-3a4f-41fb-9fea-f85a6e0a0dff_104",
+    "id": "4ed678a9-3a4f-41fb-9fea-f85a6e0a0dff_105",
     "type": "security-rule"
 }

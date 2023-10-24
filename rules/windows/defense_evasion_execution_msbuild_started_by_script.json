@@ -106,13 +106,36 @@
                     "name": "Execution",
                     "reference": "https://attack.mitre.org/tactics/TA0002/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.001",
+                                "name": "PowerShell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/001/"
+                            },
+                            {
+                                "id": "T1059.003",
+                                "name": "Windows Command Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/003/"
+                            },
+                            {
+                                "id": "T1059.005",
+                                "name": "Visual Basic",
+                                "reference": "https://attack.mitre.org/techniques/T1059/005/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 205
+        "version": 206
     },
-    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae2_205",
+    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae2_206",
     "type": "security-rule"
 }

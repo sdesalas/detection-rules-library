@@ -97,6 +97,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
+            "Tactic: Defense Evasion",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -121,11 +122,33 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1218",
+                        "name": "System Binary Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1218/",
+                        "subtechnique": [
+                            {
+                                "id": "T1218.014",
+                                "name": "MMC",
+                                "reference": "https://attack.mitre.org/techniques/T1218/014/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "51ce96fb-9e52-4dad-b0ba-99b54440fc9a_105",
+    "id": "51ce96fb-9e52-4dad-b0ba-99b54440fc9a_106",
     "type": "security-rule"
 }

@@ -70,15 +70,22 @@
                     {
                         "id": "T1036",
                         "name": "Masquerading",
-                        "reference": "https://attack.mitre.org/techniques/T1036/"
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.008",
+                                "name": "Masquerade File Type",
+                                "reference": "https://attack.mitre.org/techniques/T1036/008/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "800e01be-a7a4-46d0-8de9-69f3c9582b44_1",
+    "id": "800e01be-a7a4-46d0-8de9-69f3c9582b44_2",
     "type": "security-rule"
 }

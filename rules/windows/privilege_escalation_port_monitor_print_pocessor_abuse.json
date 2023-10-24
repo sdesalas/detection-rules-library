@@ -78,6 +78,11 @@
                                 "id": "T1547.010",
                                 "name": "Port Monitors",
                                 "reference": "https://attack.mitre.org/techniques/T1547/010/"
+                            },
+                            {
+                                "id": "T1547.012",
+                                "name": "Print Processors",
+                                "reference": "https://attack.mitre.org/techniques/T1547/012/"
                             }
                         ]
                     }
@@ -100,6 +105,11 @@
                                 "id": "T1547.010",
                                 "name": "Port Monitors",
                                 "reference": "https://attack.mitre.org/techniques/T1547/010/"
+                            },
+                            {
+                                "id": "T1547.012",
+                                "name": "Print Processors",
+                                "reference": "https://attack.mitre.org/techniques/T1547/012/"
                             }
                         ]
                     }
@@ -108,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "8f3e91c7-d791-4704-80a1-42c160d7aa27_104",
+    "id": "8f3e91c7-d791-4704-80a1-42c160d7aa27_105",
     "type": "security-rule"
 }

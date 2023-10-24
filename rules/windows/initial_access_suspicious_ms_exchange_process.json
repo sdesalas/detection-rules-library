@@ -65,6 +65,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
+            "Tactic: Lateral Movement",
             "Data Source: Elastic Endgame",
             "Use Case: Vulnerability",
             "Data Source: Elastic Defend"
@@ -84,12 +85,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1190/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
+                },
+                "technique": [
+                    {
+                        "id": "T1210",
+                        "name": "Exploitation of Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1210/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "483c4daf-b0c6-49e0-adf3-0bfa93231d6b_104",
+    "id": "483c4daf-b0c6-49e0-adf3-0bfa93231d6b_105",
     "type": "security-rule"
 }

@@ -65,15 +65,22 @@
                     {
                         "id": "T1074",
                         "name": "Data Staged",
-                        "reference": "https://attack.mitre.org/techniques/T1074/"
+                        "reference": "https://attack.mitre.org/techniques/T1074/",
+                        "subtechnique": [
+                            {
+                                "id": "T1074.001",
+                                "name": "Local Data Staging",
+                                "reference": "https://attack.mitre.org/techniques/T1074/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "57bccf1d-daf5-4e1a-9049-ff79b5254704_1",
+    "id": "57bccf1d-daf5-4e1a-9049-ff79b5254704_2",
     "type": "security-rule"
 }

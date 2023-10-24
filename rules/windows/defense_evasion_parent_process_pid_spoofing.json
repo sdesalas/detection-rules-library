@@ -96,6 +96,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
+            "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -120,11 +121,33 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1134",
+                        "name": "Access Token Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1134/",
+                        "subtechnique": [
+                            {
+                                "id": "T1134.004",
+                                "name": "Parent PID Spoofing",
+                                "reference": "https://attack.mitre.org/techniques/T1134/004/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "c88d4bd0-5649-4c52-87ea-9be59dbfbcf2_104",
+    "id": "c88d4bd0-5649-4c52-87ea-9be59dbfbcf2_105",
     "type": "security-rule"
 }

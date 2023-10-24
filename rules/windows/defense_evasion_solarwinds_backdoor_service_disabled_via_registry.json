@@ -60,6 +60,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
+            "Tactic: Initial Access",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
         ],
@@ -83,6 +84,11 @@
                                 "reference": "https://attack.mitre.org/techniques/T1562/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1112",
+                        "name": "Modify Registry",
+                        "reference": "https://attack.mitre.org/techniques/T1112/"
                     }
                 ]
             },
@@ -111,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "b9960fef-82c6-4816-befa-44745030e917_105",
+    "id": "b9960fef-82c6-4816-befa-44745030e917_106",
     "type": "security-rule"
 }

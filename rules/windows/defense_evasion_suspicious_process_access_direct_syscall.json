@@ -60,6 +60,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
+            "Tactic: Execution",
             "Resources: Investigation Guide",
             "Data Source: Sysmon Only"
         ],
@@ -78,12 +79,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1055/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1106",
+                        "name": "Native API",
+                        "reference": "https://attack.mitre.org/techniques/T1106/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 208
+        "version": 209
     },
-    "id": "2dd480be-1263-4d9c-8672-172928f6789a_208",
+    "id": "2dd480be-1263-4d9c-8672-172928f6789a_209",
     "type": "security-rule"
 }

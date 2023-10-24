@@ -75,15 +75,22 @@
                     {
                         "id": "T1137",
                         "name": "Office Application Startup",
-                        "reference": "https://attack.mitre.org/techniques/T1137/"
+                        "reference": "https://attack.mitre.org/techniques/T1137/",
+                        "subtechnique": [
+                            {
+                                "id": "T1137.006",
+                                "name": "Add-ins",
+                                "reference": "https://attack.mitre.org/techniques/T1137/006/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "f44fa4b6-524c-4e87-8d9e-a32599e4fb7c_104",
+    "id": "f44fa4b6-524c-4e87-8d9e-a32599e4fb7c_105",
     "type": "security-rule"
 }

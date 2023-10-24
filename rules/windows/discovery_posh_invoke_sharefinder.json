@@ -56,6 +56,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
+            "Tactic: Collection",
+            "Tactic: Execution",
             "Resources: Investigation Guide",
             "Data Source: PowerShell Logs"
         ],
@@ -101,12 +103,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1106/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0009",
+                    "name": "Collection",
+                    "reference": "https://attack.mitre.org/tactics/TA0009/"
+                },
+                "technique": [
+                    {
+                        "id": "T1039",
+                        "name": "Data from Network Shared Drive",
+                        "reference": "https://attack.mitre.org/techniques/T1039/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 6
+        "version": 7
     },
-    "id": "4c59cff1-b78a-41b8-a9f1-4231984d1fb6_6",
+    "id": "4c59cff1-b78a-41b8-a9f1-4231984d1fb6_7",
     "type": "security-rule"
 }

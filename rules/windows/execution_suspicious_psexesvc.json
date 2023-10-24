@@ -57,6 +57,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Execution",
+            "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend"
@@ -83,12 +84,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.003",
+                                "name": "Rename System Utilities",
+                                "reference": "https://attack.mitre.org/techniques/T1036/003/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "e2f9fdf5-8076-45ad-9427-41e0e03dc9c2_107",
+    "id": "e2f9fdf5-8076-45ad-9427-41e0e03dc9c2_108",
     "type": "security-rule"
 }

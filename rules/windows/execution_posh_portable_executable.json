@@ -54,6 +54,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Execution",
+            "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
             "Data Source: PowerShell Logs"
         ],
@@ -79,12 +80,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1055",
+                        "name": "Process Injection",
+                        "reference": "https://attack.mitre.org/techniques/T1055/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "ad84d445-b1ce-4377-82d9-7c633f28bf9a_107",
+    "id": "ad84d445-b1ce-4377-82d9-7c633f28bf9a_108",
     "type": "security-rule"
 }

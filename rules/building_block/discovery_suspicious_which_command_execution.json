@@ -52,7 +52,7 @@
         "severity": "low",
         "tags": [
             "Domain: Endpoint",
-            "OS: Windows",
+            "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Data Source: Elastic Defend",
@@ -77,8 +77,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "5b18eef4-842c-4b47-970f-f08d24004bde_1",
+    "id": "5b18eef4-842c-4b47-970f-f08d24004bde_2",
     "type": "security-rule"
 }

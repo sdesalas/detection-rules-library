@@ -3,7 +3,6 @@
         "author": [
             "Elastic"
         ],
-        "building_block_type": "default",
         "description": "Identifies suspicious instances of communications apps, both unsigned and renamed ones, that can indicate an attempt to conceal malicious activity, bypass security features such as allowlists, or trick users into executing malware.",
         "from": "now-9m",
         "index": [
@@ -46,15 +45,14 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 21,
+        "risk_score": 47,
         "rule_id": "c9482bfa-a553-4226-8ea2-4959bd4f7923",
-        "severity": "low",
+        "severity": "medium",
         "tags": [
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Rule Type: BBR",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -69,15 +67,42 @@
                     {
                         "id": "T1036",
                         "name": "Masquerading",
-                        "reference": "https://attack.mitre.org/techniques/T1036/"
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.001",
+                                "name": "Invalid Code Signature",
+                                "reference": "https://attack.mitre.org/techniques/T1036/001/"
+                            },
+                            {
+                                "id": "T1036.005",
+                                "name": "Match Legitimate Name or Location",
+                                "reference": "https://attack.mitre.org/techniques/T1036/005/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1554",
+                        "name": "Compromise Client Software Binary",
+                        "reference": "https://attack.mitre.org/techniques/T1554/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "c9482bfa-a553-4226-8ea2-4959bd4f7923_3",
+    "id": "c9482bfa-a553-4226-8ea2-4959bd4f7923_4",
     "type": "security-rule"
 }

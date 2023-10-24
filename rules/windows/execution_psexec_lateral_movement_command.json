@@ -73,6 +73,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Execution",
+            "Tactic: Lateral Movement",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend"
         ],
@@ -106,12 +107,30 @@
                     "name": "Lateral Movement",
                     "reference": "https://attack.mitre.org/tactics/TA0008/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1021",
+                        "name": "Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1021/",
+                        "subtechnique": [
+                            {
+                                "id": "T1021.002",
+                                "name": "SMB/Windows Admin Shares",
+                                "reference": "https://attack.mitre.org/techniques/T1021/002/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1570",
+                        "name": "Lateral Tool Transfer",
+                        "reference": "https://attack.mitre.org/techniques/T1570/"
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "55d551c6-333b-4665-ab7e-5d14a59715ce_106",
+    "id": "55d551c6-333b-4665-ab7e-5d14a59715ce_107",
     "type": "security-rule"
 }

@@ -94,14 +94,19 @@
                                 "reference": "https://attack.mitre.org/techniques/T1560/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1005",
+                        "name": "Data from Local System",
+                        "reference": "https://attack.mitre.org/techniques/T1005/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "45d273fb-1dca-457d-9855-bcb302180c21_107",
+    "id": "45d273fb-1dca-457d-9855-bcb302180c21_108",
     "type": "security-rule"
 }

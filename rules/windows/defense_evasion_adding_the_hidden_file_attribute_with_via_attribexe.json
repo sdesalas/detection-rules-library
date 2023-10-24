@@ -76,6 +76,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
+            "Tactic: Persistence",
             "Data Source: Elastic Endgame",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend"
@@ -100,6 +101,18 @@
                                 "reference": "https://attack.mitre.org/techniques/T1564/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1222",
+                        "name": "File and Directory Permissions Modification",
+                        "reference": "https://attack.mitre.org/techniques/T1222/",
+                        "subtechnique": [
+                            {
+                                "id": "T1222.001",
+                                "name": "Windows File and Directory Permissions Modification",
+                                "reference": "https://attack.mitre.org/techniques/T1222/001/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -117,8 +130,8 @@
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "4630d948-40d4-4cef-ac69-4002e29bc3db_108",
+    "id": "4630d948-40d4-4cef-ac69-4002e29bc3db_109",
     "type": "security-rule"
 }

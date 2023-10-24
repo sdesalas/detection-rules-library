@@ -56,11 +56,34 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
+            "Tactic: Privilege Escalation",
             "Tactic: Persistence",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
         ],
         "threat": [
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1484",
+                        "name": "Domain Policy Modification",
+                        "reference": "https://attack.mitre.org/techniques/T1484/",
+                        "subtechnique": [
+                            {
+                                "id": "T1484.001",
+                                "name": "Group Policy Modification",
+                                "reference": "https://attack.mitre.org/techniques/T1484/001/"
+                            }
+                        ]
+                    }
+                ]
+            },
             {
                 "framework": "MITRE ATT\u0026CK",
                 "tactic": {
@@ -86,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "c0429aa8-9974-42da-bfb6-53a0a515a145_105",
+    "id": "c0429aa8-9974-42da-bfb6-53a0a515a145_106",
     "type": "security-rule"
 }

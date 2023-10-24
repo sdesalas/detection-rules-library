@@ -85,6 +85,18 @@
                         "id": "T1102",
                         "name": "Web Service",
                         "reference": "https://attack.mitre.org/techniques/T1102/"
+                    },
+                    {
+                        "id": "T1568",
+                        "name": "Dynamic Resolution",
+                        "reference": "https://attack.mitre.org/techniques/T1568/",
+                        "subtechnique": [
+                            {
+                                "id": "T1568.002",
+                                "name": "Domain Generation Algorithms",
+                                "reference": "https://attack.mitre.org/techniques/T1568/002/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -118,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "66883649-f908-4a5b-a1e0-54090a1d3a32_107",
+    "id": "66883649-f908-4a5b-a1e0-54090a1d3a32_108",
     "type": "security-rule"
 }

@@ -73,6 +73,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1068",
+                        "name": "Exploitation for Privilege Escalation",
+                        "reference": "https://attack.mitre.org/techniques/T1068/"
+                    },
+                    {
                         "id": "T1078",
                         "name": "Valid Accounts",
                         "reference": "https://attack.mitre.org/techniques/T1078/",
@@ -104,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "bdcf646b-08d4-492c-870a-6c04e3700034_105",
+    "id": "bdcf646b-08d4-492c-870a-6c04e3700034_106",
     "type": "security-rule"
 }

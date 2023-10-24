@@ -13,8 +13,9 @@
         "interval": "60m",
         "language": "eql",
         "license": "Elastic License v2",
+        "max_signals": 1,
         "name": "Potential Suspicious File Edit",
-        "query": "file where event.action in (\"creation\", \"file_create_event\") and file.extension == \"swp\" and \nfile.path : (\n  /* common interesting files and locations */\n  \"/etc/.shadow.swp\", \"/etc/.shadow-.swp\", \"/etc/.shadow~.swp\", \"/etc/.gshadow.swp\", \"/etc/.gshadow-.swp\",\n  \"/etc/.passwd.swp\", \"/etc/.pwd.db.swp\", \"/etc/.master.passwd.swp\", \"/etc/.spwd.db.swp\", \"/etc/security/.opasswd.swp\",\n  \"/etc/.hosts.swp\", \"/etc/.environment.swp\", \"/etc/.profile.swp\", \"/etc/sudoers.d/.*.swp\",\n  \"/etc/ld.so.conf.d/.*.swp\", \"/etc/init.d/.*.swp\", \"/etc/.rc.local.swp\", \"/etc/rc*.d/.*.swp\",\n  \"/dev/shm/.*.swp\", \"/etc/update-motd.d/.*.swp\", \"/usr/lib/update-notifier/.*.swp\",\n\n  /* service, timer, want, socket and lock files */\n  \"/etc/systemd/system/.*.swp\", \"/usr/local/lib/systemd/system/.*.swp\", \"/lib/systemd/system/.*.swp\",\n  \"/usr/lib/systemd/system/.*.swp\",\"/home/*/.config/systemd/user/.*.swp\", \"/run/.*.swp\", \"/var/run/.*.swp/\",\n\n  /* profile and shell configuration files */  \n  \"/home/*.profile.swp\", \"/home/*.bash_profile.swp\", \"/home/*.bash_login.swp\", \"/home/*.bashrc.swp\", \"/home/*.bash_logout.swp\",\n  \"/home/*.zshrc.swp\", \"/home/*.zlogin.swp\", \"/home/*.tcshrc.swp\", \"/home/*.kshrc.swp\", \"/home/*.config.fish.swp\",\n  \"/root/*.profile.swp\", \"/root/*.bash_profile.swp\", \"/root/*.bash_login.swp\", \"/root/*.bashrc.swp\", \"/root/*.bash_logout.swp\",\n  \"/root/*.zshrc.swp\", \"/root/*.zlogin.swp\", \"/root/*.tcshrc.swp\", \"/root/*.kshrc.swp\", \"/root/*.config.fish.swp\"\n)\n",
+        "query": "file where event.action in (\"creation\", \"file_create_event\") and file.extension == \"swp\" and \nfile.path : (\n  /* common interesting files and locations */\n  \"/etc/.shadow.swp\", \"/etc/.shadow-.swp\", \"/etc/.shadow~.swp\", \"/etc/.gshadow.swp\", \"/etc/.gshadow-.swp\",\n  \"/etc/.passwd.swp\", \"/etc/.pwd.db.swp\", \"/etc/.master.passwd.swp\", \"/etc/.spwd.db.swp\", \"/etc/security/.opasswd.swp\",\n  \"/etc/.environment.swp\", \"/etc/.profile.swp\", \"/etc/sudoers.d/.*.swp\", \"/etc/ld.so.conf.d/.*.swp\",\n  \"/etc/init.d/.*.swp\", \"/etc/.rc.local.swp\", \"/etc/rc*.d/.*.swp\", \"/dev/shm/.*.swp\", \"/etc/update-motd.d/.*.swp\",\n  \"/usr/lib/update-notifier/.*.swp\",\n\n  /* service, timer, want, socket and lock files */\n  \"/etc/systemd/system/.*.swp\", \"/usr/local/lib/systemd/system/.*.swp\", \"/lib/systemd/system/.*.swp\",\n  \"/usr/lib/systemd/system/.*.swp\",\"/home/*/.config/systemd/user/.*.swp\", \"/run/.*.swp\", \"/var/run/.*.swp/\",\n\n  /* profile and shell configuration files */  \n  \"/home/*.profile.swp\", \"/home/*.bash_profile.swp\", \"/home/*.bash_login.swp\", \"/home/*.bashrc.swp\", \"/home/*.bash_logout.swp\",\n  \"/home/*.zshrc.swp\", \"/home/*.zlogin.swp\", \"/home/*.tcshrc.swp\", \"/home/*.kshrc.swp\", \"/home/*.config.fish.swp\",\n  \"/root/*.profile.swp\", \"/root/*.bash_profile.swp\", \"/root/*.bash_login.swp\", \"/root/*.bashrc.swp\", \"/root/*.bash_logout.swp\",\n  \"/root/*.zshrc.swp\", \"/root/*.zlogin.swp\", \"/root/*.tcshrc.swp\", \"/root/*.kshrc.swp\", \"/root/*.config.fish.swp\"\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -123,8 +124,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "3728c08d-9b70-456b-b6b8-007c7d246128_2",
+    "id": "3728c08d-9b70-456b-b6b8-007c7d246128_3",
     "type": "security-rule"
 }

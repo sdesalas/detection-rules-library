@@ -60,8 +60,9 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide",
+            "Tactic: Defense Evasion",
             "Tactic: Execution",
+            "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
         ],
@@ -102,6 +103,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1059/",
                         "subtechnique": [
                             {
+                                "id": "T1059.001",
+                                "name": "PowerShell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/001/"
+                            },
+                            {
                                 "id": "T1059.003",
                                 "name": "Windows Command Shell",
                                 "reference": "https://attack.mitre.org/techniques/T1059/003/"
@@ -109,12 +115,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1218",
+                        "name": "System Binary Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1218/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "a624863f-a70d-417f-a7d2-7a404638d47f_107",
+    "id": "a624863f-a70d-417f-a7d2-7a404638d47f_108",
     "type": "security-rule"
 }

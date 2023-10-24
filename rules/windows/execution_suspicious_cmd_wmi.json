@@ -78,14 +78,26 @@
                         "id": "T1047",
                         "name": "Windows Management Instrumentation",
                         "reference": "https://attack.mitre.org/techniques/T1047/"
+                    },
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.003",
+                                "name": "Windows Command Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/003/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "12f07955-1674-44f7-86b5-c35da0a6f41a_106",
+    "id": "12f07955-1674-44f7-86b5-c35da0a6f41a_107",
     "type": "security-rule"
 }

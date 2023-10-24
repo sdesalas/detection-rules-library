@@ -14,6 +14,7 @@
         ],
         "language": "kuery",
         "license": "Elastic License v2",
+        "max_signals": 5,
         "name": "Potential SYN-Based Network Scan Detected",
         "query": "destination.port : * and network.packets \u003c= 2 and source.ip : (10.0.0.0/8 or 172.16.0.0/12 or 192.168.0.0/16)\n",
         "related_integrations": [
@@ -105,8 +106,8 @@
             "value": 1
         },
         "type": "threshold",
-        "version": 3
+        "version": 4
     },
-    "id": "bbaa96b9-f36c-4898-ace2-581acb00a409_3",
+    "id": "bbaa96b9-f36c-4898-ace2-581acb00a409_4",
     "type": "security-rule"
 }

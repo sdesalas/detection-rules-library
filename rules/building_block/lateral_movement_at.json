@@ -83,6 +83,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1053/",
                         "subtechnique": [
                             {
+                                "id": "T1053.002",
+                                "name": "At",
+                                "reference": "https://attack.mitre.org/techniques/T1053/002/"
+                            },
+                            {
                                 "id": "T1053.005",
                                 "name": "Scheduled Task",
                                 "reference": "https://attack.mitre.org/techniques/T1053/005/"
@@ -94,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "b483365c-98a8-40c0-92d8-0458ca25058a_1",
+    "id": "b483365c-98a8-40c0-92d8-0458ca25058a_2",
     "type": "security-rule"
 }

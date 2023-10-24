@@ -70,14 +70,19 @@
                         "id": "T1112",
                         "name": "Modify Registry",
                         "reference": "https://attack.mitre.org/techniques/T1112/"
+                    },
+                    {
+                        "id": "T1562",
+                        "name": "Impair Defenses",
+                        "reference": "https://attack.mitre.org/techniques/T1562/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "db65f5ba-d1ef-4944-b9e8-7e51060c2b42_1",
+    "id": "db65f5ba-d1ef-4944-b9e8-7e51060c2b42_2",
     "type": "security-rule"
 }

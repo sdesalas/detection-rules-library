@@ -3,7 +3,7 @@
         "author": [
             "Elastic"
         ],
-        "description": "Identifies suspicious .NET code execution. connections.",
+        "description": "Identifies executions of .NET compilers with suspicious parent processes, which can indicate an attacker's attempt to compile code after delivery in order to bypass security mechanisms.",
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
@@ -57,6 +57,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
+            "Tactic: Execution",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
         ],
@@ -82,12 +83,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.005",
+                                "name": "Visual Basic",
+                                "reference": "https://attack.mitre.org/techniques/T1059/005/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "201200f1-a99b-43fb-88ed-f65a45c4972c_106",
+    "id": "201200f1-a99b-43fb-88ed-f65a45c4972c_107",
     "type": "security-rule"
 }

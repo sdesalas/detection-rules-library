@@ -89,6 +89,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
+            "Tactic: Execution",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -106,11 +107,26 @@
                         "reference": "https://attack.mitre.org/techniques/T1220/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1047",
+                        "name": "Windows Management Instrumentation",
+                        "reference": "https://attack.mitre.org/techniques/T1047/"
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "7f370d54-c0eb-4270-ac5a-9a6020585dc6_105",
+    "id": "7f370d54-c0eb-4270-ac5a-9a6020585dc6_106",
     "type": "security-rule"
 }

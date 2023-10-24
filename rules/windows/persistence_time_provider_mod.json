@@ -52,6 +52,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
+            "Tactic: Privilege Escalation",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
         ],
@@ -77,12 +78,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT\u0026CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1547",
+                        "name": "Boot or Logon Autostart Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1547/",
+                        "subtechnique": [
+                            {
+                                "id": "T1547.003",
+                                "name": "Time Providers",
+                                "reference": "https://attack.mitre.org/techniques/T1547/003/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "14ed1aa9-ebfd-4cf9-a463-0ac59ec55204_104",
+    "id": "14ed1aa9-ebfd-4cf9-a463-0ac59ec55204_105",
     "type": "security-rule"
 }

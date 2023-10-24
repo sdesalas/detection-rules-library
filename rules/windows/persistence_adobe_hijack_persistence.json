@@ -84,14 +84,19 @@
                                 "reference": "https://attack.mitre.org/techniques/T1574/010/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1554",
+                        "name": "Compromise Client Software Binary",
+                        "reference": "https://attack.mitre.org/techniques/T1554/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "2bf78aa2-9c56-48de-b139-f169bf99cf86_107",
+    "id": "2bf78aa2-9c56-48de-b139-f169bf99cf86_108",
     "type": "security-rule"
 }

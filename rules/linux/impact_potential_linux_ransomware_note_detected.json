@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Linux Ransomware Note Creation Detected",
-        "query": "sequence by host.id, process.entity_id with maxspan=1s \n  [file where host.os.type == \"linux\" and event.type == \"change\" and event.action == \"rename\" and file.extension : \"?*\" \n   and ((process.name in (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\", \"ash\", \"openssl\")) or\n   (process.executable : (\"./*\", \"/tmp/*\", \"/var/tmp/*\", \"/dev/shm/*\", \"/var/run/*\", \"/boot/*\", \"/srv/*\", \"/run/*\"))) and\n   file.path : (\n   \"/home/*/Downloads/*\", \"/home/*/Documents/*\", \"/root/*\", \"/bin/*\", \"/usr/bin/*\",\n   \"/opt/*\", \"/etc/*\", \"/var/log/*\", \"/var/lib/log/*\", \"/var/backup/*\", \"/var/www/*\") and not ((\n   process.name : (\n   \"dpkg\", \"yum\", \"dnf\", \"rpm\", \"dockerd\", \"go\", \"java\", \"pip*\", \"python*\", \"node\", \"containerd\", \"php\", \"p4d\",\n   \"conda\", \"chrome\", \"imap\", \"cmake\", \"firefox\", \"semanage\", \"semodule\", \"ansible-galaxy\", \"fc-cache\", \"jammy\", \"git\",\n   \"systemsettings\", \"vmis-launcher\")) or (file.path : \"/etc/selinux/*\") or (file.extension in (\"qmlc\", \"txt\")\n   ))] with runs=25\n  [file where host.os.type == \"linux\" and event.action == \"creation\" and file.name : (\n   \"*crypt*\", \"*restore*\", \"*lock*\", \"*recovery*\", \"*data*\", \"*read*\", \"*instruction*\", \"*how_to*\", \"*ransom*\"\n  )]\n",
+        "query": "sequence by process.entity_id, host.id with maxspan=1s \n  [file where host.os.type == \"linux\" and event.type == \"change\" and event.action == \"rename\" and file.extension : \"?*\" \n   and process.executable : (\"./*\", \"/tmp/*\", \"/var/tmp/*\", \"/dev/shm/*\", \"/var/run/*\", \"/boot/*\", \"/srv/*\", \"/run/*\") and\n   file.path : (\n   \"/home/*/Downloads/*\", \"/home/*/Documents/*\", \"/root/*\", \"/bin/*\", \"/usr/bin/*\",\n   \"/opt/*\", \"/etc/*\", \"/var/log/*\", \"/var/lib/log/*\", \"/var/backup/*\", \"/var/www/*\")] with runs=25\n  [file where host.os.type == \"linux\" and event.action == \"creation\" and file.name : (\n   \"*crypt*\", \"*restore*\", \"*lock*\", \"*recovery*\", \"*data*\", \"*read*\", \"*instruction*\", \"*how_to*\", \"*ransom*\"\n  )]\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -63,15 +63,11 @@
                 "ecs": true,
                 "name": "process.executable",
                 "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "process.name",
-                "type": "keyword"
             }
         ],
         "risk_score": 47,
         "rule_id": "c8935a8b-634a-4449-98f7-bb24d3b2c0af",
+        "setup": "\nThis rule requires data coming in from Elastic Defend.\n\n### Elastic Defend Integration Setup\nElastic Defend is integrated into the Elastic Agent using Fleet. Upon configuration, the integration allows\nthe Elastic Agent to monitor events on your host and send data to the Elastic Security app.\n\n#### Prerequisite Requirements:\n- Fleet is required for Elastic Defend.\n- To configure Fleet Server refer to the [documentation](https://www.elastic.co/guide/en/fleet/current/fleet-server.html).\n\n#### The following steps should be executed in order to add the Elastic Defend integration on a Linux System:\n- Go to the Kibana home page and click Add integrations.\n- In the query bar, search for Elastic Defend and select the integration to see more details about it.\n- Click Add Elastic Defend.\n- Configure the integration name and optionally add a description.\n- Select the type of environment you want to protect, either Traditional Endpoints or Cloud Workloads.\n- Select a configuration preset. Each preset comes with different default settings for Elastic Agent, you can further customize these later by configuring the Elastic Defend integration policy. [Helper guide](https://www.elastic.co/guide/en/security/current/configure-endpoint-integration-policy.html).\n- We suggest to select \"Complete EDR (Endpoint Detection and Response)\" as a configuration setting, that provides \"All events; all preventions\"\n- Enter a name for the agent policy in New agent policy name. If other agent policies already exist, you can click the Existing hosts tab and select an existing policy instead.\nFor more details on Elastic Agent configuration settings, refer to the [helper guide](https://www.elastic.co/guide/en/fleet/8.10/agent-policy.html).\n- Click Save and Continue.\n- To complete the integration, select Add Elastic Agent to your hosts and continue to the next section to install the Elastic Agent on your hosts.\nFor more details on Elastic Defend refer to the [helper guide](https://www.elastic.co/guide/en/security/current/install-endpoint.html).\n\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -98,8 +94,8 @@
             }
         ],
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "c8935a8b-634a-4449-98f7-bb24d3b2c0af_5",
+    "id": "c8935a8b-634a-4449-98f7-bb24d3b2c0af_6",
     "type": "security-rule"
 }
