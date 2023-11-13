@@ -13,7 +13,6 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Modification of the msPKIAccountCredentials",
-        "note": "",
         "query": "event.action:\"Directory Service Changes\" and event.code:\"5136\" and\n  winlog.event_data.AttributeLDAPDisplayName:\"msPKIAccountCredentials\" and winlog.event_data.OperationType:\"%%14674\" and\n  not winlog.event_data.SubjectUserSid : \"S-1-5-18\"\n",
         "references": [
             "https://www.mandiant.com/resources/blog/apt29-windows-credential-roaming",
@@ -59,7 +58,7 @@
         ],
         "risk_score": 47,
         "rule_id": "670b3b5a-35e5-42db-bd36-6c5b9b4b7313",
-        "setup": "The 'Audit Directory Service Changes' logging policy must be configured for (Success, Failure).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration \u003e\nPolicies \u003e\nWindows Settings \u003e\nSecurity Settings \u003e\nAdvanced Audit Policies Configuration \u003e\nAudit Policies \u003e\nDS Access \u003e\nAudit Directory Service Changes (Success,Failure)\n```",
+        "setup": "\nThe 'Audit Directory Service Changes' logging policy must be configured for (Success, Failure).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration \u003e\nPolicies \u003e\nWindows Settings \u003e\nSecurity Settings \u003e\nAdvanced Audit Policies Configuration \u003e\nAudit Policies \u003e\nDS Access \u003e\nAudit Directory Service Changes (Success,Failure)\n```\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -88,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 7
+        "version": 8
     },
-    "id": "670b3b5a-35e5-42db-bd36-6c5b9b4b7313_7",
+    "id": "670b3b5a-35e5-42db-bd36-6c5b9b4b7313_8",
     "type": "security-rule"
 }

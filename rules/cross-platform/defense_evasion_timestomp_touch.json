@@ -13,7 +13,6 @@
         "license": "Elastic License v2",
         "max_signals": 33,
         "name": "Timestomping using Touch Command",
-        "note": "",
         "query": "process where event.type == \"start\" and\n process.name : \"touch\" and user.id != \"0\" and\n process.args : (\"-r\", \"-t\", \"-a*\",\"-m*\") and\n not process.args : (\"/usr/lib/go-*/bin/go\", \"/usr/lib/dracut/dracut-functions.sh\", \"/tmp/KSInstallAction.*/m/.patch/*\")\n",
         "related_integrations": [
             {
@@ -45,7 +44,7 @@
         ],
         "risk_score": 47,
         "rule_id": "b0046934-486e-462f-9487-0d4cf9e429c6",
-        "setup": "If enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2, events will not define `event.ingested` and default fallback for EQL rules was not added until 8.2, so you will need to add a custom pipeline to populate `event.ingested` to @timestamp for this rule to work.",
+        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -81,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "b0046934-486e-462f-9487-0d4cf9e429c6_103",
+    "id": "b0046934-486e-462f-9487-0d4cf9e429c6_104",
     "type": "security-rule"
 }

@@ -14,7 +14,6 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Control Panel Process with Unusual Arguments",
-        "note": "",
         "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n process.executable : (\"?:\\\\Windows\\\\SysWOW64\\\\control.exe\", \"?:\\\\Windows\\\\System32\\\\control.exe\") and\n process.command_line :\n          (\"*.jpg*\",\n           \"*.png*\",\n           \"*.gif*\",\n           \"*.bmp*\",\n           \"*.jpeg*\",\n           \"*.TIFF*\",\n           \"*.inf*\",\n           \"*.cpl:*/*\",\n           \"*../../..*\",\n           \"*/AppData/Local/*\",\n           \"*:\\\\Users\\\\Public\\\\*\",\n           \"*\\\\AppData\\\\Local\\\\*\")\n",
         "references": [
             "https://www.joesandbox.com/analysis/476188/1/html"
@@ -53,7 +52,7 @@
         ],
         "risk_score": 73,
         "rule_id": "416697ae-e468-4093-a93d-59661fa619ec",
-        "setup": "If enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2, events will not define `event.ingested` and default fallback for EQL rules was not added until 8.2, so you will need to add a custom pipeline to populate `event.ingested` to @timestamp for this rule to work.",
+        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "high",
         "tags": [
             "Domain: Endpoint",
@@ -90,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "416697ae-e468-4093-a93d-59661fa619ec_107",
+    "id": "416697ae-e468-4093-a93d-59661fa619ec_108",
     "type": "security-rule"
 }

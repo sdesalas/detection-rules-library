@@ -14,7 +14,6 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Unusual Parent Process for cmd.exe",
-        "note": "",
         "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name : \"cmd.exe\" and\n  process.parent.name : (\"lsass.exe\",\n                         \"csrss.exe\",\n                         \"epad.exe\",\n                         \"regsvr32.exe\",\n                         \"dllhost.exe\",\n                         \"LogonUI.exe\",\n                         \"wermgr.exe\",\n                         \"spoolsv.exe\",\n                         \"jucheck.exe\",\n                         \"jusched.exe\",\n                         \"ctfmon.exe\",\n                         \"taskhostw.exe\",\n                         \"GoogleUpdate.exe\",\n                         \"sppsvc.exe\",\n                         \"sihost.exe\",\n                         \"slui.exe\",\n                         \"SIHClient.exe\",\n                         \"SearchIndexer.exe\",\n                         \"SearchProtocolHost.exe\",\n                         \"FlashPlayerUpdateService.exe\",\n                         \"WerFault.exe\",\n                         \"WUDFHost.exe\",\n                         \"unsecapp.exe\",\n                         \"wlanext.exe\" ) and\n  not (process.parent.name : \"dllhost.exe\" and process.parent.args : \"/Processid:{CA8C87C1-929D-45BA-94DB-EF8E6CB346AD}\")\n",
         "related_integrations": [
             {
@@ -55,7 +54,7 @@
         ],
         "risk_score": 47,
         "rule_id": "3b47900d-e793-49e8-968f-c90dc3526aa1",
-        "setup": "If enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2, events will not define `event.ingested` and default fallback for EQL rules was not added until 8.2, so you will need to add a custom pipeline to populate `event.ingested` to @timestamp for this rule to work.",
+        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -84,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "3b47900d-e793-49e8-968f-c90dc3526aa1_107",
+    "id": "3b47900d-e793-49e8-968f-c90dc3526aa1_108",
     "type": "security-rule"
 }

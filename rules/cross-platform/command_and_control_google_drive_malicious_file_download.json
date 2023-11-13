@@ -16,7 +16,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Malicious File Downloaded from Google Drive",
-        "query": "sequence by host.id, process.entity_id with maxspan=30s\n[any where\n\n    /* Look for processes started or libraries loaded from untrusted or unsigned Windows, Linux or macOS binaries */\n    (event.action in (\"exec\", \"fork\", \"start\", \"load\")) or\n\n    /* Look for Google Drive download URL with AV flag skipping */\n    (process.args : \"*drive.google.com*\" and process.args : \"*export=download*\" and process.args : \"*confirm=no_antivirus*\")\n]\n\n[network where\n    /* Look for DNS requests for Google Drive */\n    (dns.question.name : \"drive.google.com\" and dns.question.type : \"A\") or\n\n    /* Look for connection attempts to address that resolves to Google */\n    (destination.as.organization.name : \"GOOGLE\" and event.action == \"connection_attempted\")\n\n    /* NOTE: Add LoLBins if tuning is required\n    process.name : (\n        \"cmd.exe\", \"bitsadmin.exe\", \"certutil.exe\", \"esentutl.exe\", \"wmic.exe\", \"PowerShell.exe\",\n        \"homedrive.exe\",\"regsvr32.exe\", \"mshta.exe\", \"rundll32.exe\", \"cscript.exe\", \"wscript.exe\",\n        \"curl\", \"wget\", \"scp\", \"ftp\", \"python\", \"perl\", \"ruby\"))] */\n]\n\n/* Identify the creation of files following Google Drive connection with extensions commonly used for executables or libraries */\n[file where event.action == \"creation\" and file.extension : (\n    \"exe\", \"dll\", \"scr\", \"jar\", \"pif\", \"app\", \"dmg\", \"pkg\", \"elf\", \"so\", \"bin\", \"deb\", \"rpm\",\"sh\",\"hta\",\"lnk\"\n    )\n]\n",
+        "query": "sequence by host.id, process.entity_id with maxspan=30s\n[any where\n\n    /* Look for processes started or libraries loaded from untrusted or unsigned Windows, Linux or macOS binaries */\n    (event.action in (\"exec\", \"fork\", \"start\", \"load\")) or\n\n    /* Look for Google Drive download URL with AV flag skipping */\n    (process.args : \"*drive.google.com*\" and process.args : \"*export=download*\" and process.args : \"*confirm=no_antivirus*\")\n\n    /* ignore trusted processes */\n    and not (\n        process.code_signature.trusted == true and\n        process.code_signature.subject_name:\n            (\"Mozilla Corporation\",\n            \"Google LLC\",\n            \"Google Inc\",\n            \"Bitdefender SRL\",\n            \"Microsoft Corporation\",\n            \"Netskope, Inc.\",\n            \"Avast Software s.r.o.\",\n            \"Microsoft Windows\",\n            \"AVG Technologies USA, LLC\",\n            \"Symantec Corporation\",\n            \"Trend Micro, Inc.\",\n            \"Palo Alto Networks (Netherlands) B.V.\",\n            \"Docker Inc\"))\n\n    /* ignore common benign processes */\n    and not process.executable:\n        (\"/bin/terraform\",\n        \"*/bin/dockerd\",\n        \"/usr/local/bin/docker-init\",\n        \"*/bin/go\",\n        \"?:\\\\Program Files*\\\\Mozilla Firefox\\firefox.exe\",\n        \"?:\\\\Program Files*\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\")\n\n    /* ignore shellscripts + go install from legitimate repository*/\n    and not (process.executable == \"/bin/sh\" and process.args : \"go install google.golang.org*\")]\n\n[network where\n    /* Look for DNS requests for Google Drive */\n    (dns.question.name : \"drive.google.com\" and dns.question.type : \"A\") or\n\n    /* Look for connection attempts to address that resolves to Google */\n    (destination.as.organization.name : \"GOOGLE\" and event.action == \"connection_attempted\")]\n\n/* Identify the creation of files following Google Drive connection with extensions commonly used for executables or libraries */\n[file where event.action == \"creation\" and\n    file.extension :\n        (\"exe\", \"dll\", \"scr\", \"jar\", \"pif\", \"app\", \"dmg\",\n        \"pkg\", \"elf\", \"so\", \"bin\", \"deb\", \"rpm\",\"sh\",\"hta\",\"lnk\")]\n",
         "references": [
             "https://intelligence.abnormalsecurity.com/blog/google-drive-matanbuchus-malware"
         ],
@@ -64,7 +64,22 @@
             },
             {
                 "ecs": true,
+                "name": "process.code_signature.subject_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.code_signature.trusted",
+                "type": "boolean"
+            },
+            {
+                "ecs": true,
                 "name": "process.entity_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.executable",
                 "type": "keyword"
             }
         ],
@@ -97,8 +112,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "a8afdce2-0ec1-11ee-b843-f661ea17fbcd_1",
+    "id": "a8afdce2-0ec1-11ee-b843-f661ea17fbcd_2",
     "type": "security-rule"
 }

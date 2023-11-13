@@ -14,7 +14,6 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Lateral Movement via Startup Folder",
-        "note": "",
         "query": "file where host.os.type == \"windows\" and event.type in (\"creation\", \"change\") and\n\n /* via RDP TSClient mounted share or SMB */\n  (process.name : \"mstsc.exe\" or process.pid == 4) and\n\n   file.path : (\"?:\\\\Users\\\\*\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\*\",\n                \"?:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\*\")\n",
         "references": [
             "https://www.mdsec.co.uk/2017/06/rdpinception/"
@@ -58,7 +57,7 @@
         ],
         "risk_score": 73,
         "rule_id": "25224a80-5a4a-4b8a-991e-6ab390465c4f",
-        "setup": "If enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2, events will not define `event.ingested` and default fallback for EQL rules was not added until 8.2, so you will need to add a custom pipeline to populate `event.ingested` to @timestamp for this rule to work.",
+        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "high",
         "tags": [
             "Domain: Endpoint",
@@ -116,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "25224a80-5a4a-4b8a-991e-6ab390465c4f_105",
+    "id": "25224a80-5a4a-4b8a-991e-6ab390465c4f_106",
     "type": "security-rule"
 }

@@ -14,7 +14,6 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Suspicious .NET Code Compilation",
-        "note": "",
         "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name : (\"csc.exe\", \"vbc.exe\") and\n  process.parent.name : (\"wscript.exe\", \"mshta.exe\", \"cscript.exe\", \"wmic.exe\", \"svchost.exe\", \"rundll32.exe\", \"cmstp.exe\", \"regsvr32.exe\")\n",
         "related_integrations": [
             {
@@ -50,7 +49,7 @@
         ],
         "risk_score": 47,
         "rule_id": "201200f1-a99b-43fb-88ed-f65a45c4972c",
-        "setup": "If enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2, events will not define `event.ingested` and default fallback for EQL rules was not added until 8.2, so you will need to add a custom pipeline to populate `event.ingested` to @timestamp for this rule to work.",
+        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -109,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "201200f1-a99b-43fb-88ed-f65a45c4972c_107",
+    "id": "201200f1-a99b-43fb-88ed-f65a45c4972c_108",
     "type": "security-rule"
 }

@@ -12,7 +12,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Unexpected Child Process of macOS Screensaver Engine",
-        "note": "## Triage and analysis\n\n- Analyze the descendant processes of the ScreenSaverEngine process for malicious code and suspicious behavior such\nas a download of a payload from a server.\n- Review the installed and activated screensaver on the host. Triage the screensaver (.saver) file that was triggered to\nidentify whether the file is malicious or not.",
+        "note": "## Triage and analysis\n\n- Analyze the descendant processes of the ScreenSaverEngine process for malicious code and suspicious behavior such\nas a download of a payload from a server.\n- Review the installed and activated screensaver on the host. Triage the screensaver (.saver) file that was triggered to\nidentify whether the file is malicious or not.\n\n",
         "query": "process where host.os.type == \"macos\" and event.type == \"start\" and process.parent.name == \"ScreenSaverEngine\"\n",
         "references": [
             "https://posts.specterops.io/saving-your-access-d562bf5bf90b",
@@ -43,7 +43,7 @@
         ],
         "risk_score": 47,
         "rule_id": "48d7f54d-c29e-4430-93a9-9db6b5892270",
-        "setup": "If enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2, events will not define `event.ingested` and default fallback for EQL rules was not added until 8.2, so you will need to add a custom pipeline to populate `event.ingested` to @timestamp for this rule to work.",
+        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -78,8 +78,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "48d7f54d-c29e-4430-93a9-9db6b5892270_104",
+    "id": "48d7f54d-c29e-4430-93a9-9db6b5892270_105",
     "type": "security-rule"
 }

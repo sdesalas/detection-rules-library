@@ -12,7 +12,6 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Attempt to Mount SMB Share via Command Line",
-        "note": "",
         "query": "process where host.os.type == \"macos\" and event.type in (\"start\", \"process_started\") and\n  (\n    process.name : \"mount_smbfs\" or\n    (process.name : \"open\" and process.args : \"smb://*\") or\n    (process.name : \"mount\" and process.args : \"smbfs\") or\n    (process.name : \"osascript\" and process.command_line : \"osascript*mount volume*smb://*\")\n  ) and\n  not process.parent.executable : \"/Applications/Google Drive.app/Contents/MacOS/Google Drive\"\n",
         "references": [
             "https://www.freebsd.org/cgi/man.cgi?mount_smbfs",
@@ -58,7 +57,7 @@
         ],
         "risk_score": 21,
         "rule_id": "661545b4-1a90-4f45-85ce-2ebd7c6a15d0",
-        "setup": "If enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2, events will not define `event.ingested` and default fallback for EQL rules was not added until 8.2, so you will need to add a custom pipeline to populate `event.ingested` to @timestamp for this rule to work.",
+        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "low",
         "tags": [
             "Domain: Endpoint",
@@ -93,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "661545b4-1a90-4f45-85ce-2ebd7c6a15d0_104",
+    "id": "661545b4-1a90-4f45-85ce-2ebd7c6a15d0_105",
     "type": "security-rule"
 }

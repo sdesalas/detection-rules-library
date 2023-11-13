@@ -22,7 +22,6 @@
             "user.name",
             "process.parent.command_line"
         ],
-        "note": "",
         "query": "host.os.type:windows and event.category:process and event.type:start and process.parent.name:\"MSBuild.exe\" and\nprocess.name.caseless:(\"csc.exe\" or \"iexplore.exe\" or \"powershell.exe\")\n",
         "references": [
             "https://blog.talosintelligence.com/2020/02/building-bypass-with-msbuild.html"
@@ -66,7 +65,7 @@
         ],
         "risk_score": 21,
         "rule_id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae6",
-        "setup": "If enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2, events will not define `event.ingested` and default fallback for EQL rules was not added until 8.2, so you will need to add a custom pipeline to populate `event.ingested` to @timestamp for this rule to work.",
+        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "low",
         "tags": [
             "Domain: Endpoint",
@@ -114,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 207
+        "version": 208
     },
-    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae6_207",
+    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae6_208",
     "type": "security-rule"
 }

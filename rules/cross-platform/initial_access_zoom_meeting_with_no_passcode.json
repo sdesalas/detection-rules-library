@@ -10,7 +10,6 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Zoom Meeting with no Passcode",
-        "note": "",
         "query": "event.type:creation and event.module:zoom and event.dataset:zoom.webhook and\n  event.action:meeting.created and not zoom.meeting.password:*\n",
         "references": [
             "https://blog.zoom.us/a-message-to-our-users/",
@@ -45,7 +44,7 @@
         ],
         "risk_score": 47,
         "rule_id": "58ac2aa5-6718-427c-a845-5f3ac5af00ba",
-        "setup": "The Zoom Filebeat module or similarly structured data is required to be compatible with this rule.",
+        "setup": "\nThe Zoom Filebeat module or similarly structured data is required to be compatible with this rule.",
         "severity": "medium",
         "tags": [
             "Data Source: Zoom",
@@ -71,8 +70,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 101
+        "version": 102
     },
-    "id": "58ac2aa5-6718-427c-a845-5f3ac5af00ba_101",
+    "id": "58ac2aa5-6718-427c-a845-5f3ac5af00ba_102",
     "type": "security-rule"
 }

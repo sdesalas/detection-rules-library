@@ -14,7 +14,6 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Execution via TSClient Mountpoint",
-        "note": "",
         "query": "process where host.os.type == \"windows\" and event.type == \"start\" and process.executable : \"\\\\Device\\\\Mup\\\\tsclient\\\\*.exe\"\n",
         "references": [
             "https://posts.specterops.io/revisiting-remote-desktop-lateral-movement-8fb905cb46c3"
@@ -48,7 +47,7 @@
         ],
         "risk_score": 73,
         "rule_id": "4fe9d835-40e1-452d-8230-17c147cafad8",
-        "setup": "If enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2, events will not define `event.ingested` and default fallback for EQL rules was not added until 8.2, so you will need to add a custom pipeline to populate `event.ingested` to @timestamp for this rule to work.",
+        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "high",
         "tags": [
             "Domain: Endpoint",
@@ -84,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "4fe9d835-40e1-452d-8230-17c147cafad8_106",
+    "id": "4fe9d835-40e1-452d-8230-17c147cafad8_107",
     "type": "security-rule"
 }
