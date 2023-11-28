@@ -22,7 +22,7 @@
             "https://www.hexacorn.com/blog/2019/09/19/silentprocessexit-quick-look-under-the-hood/",
             "https://www.hexacorn.com/blog/2019/09/20/werfault-command-line-switches-v0-1/",
             "https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES/blob/master/Persistence/persistence_SilentProcessExit_ImageHijack_sysmon_13_1.evtx",
-            "https://blog.menasec.net/2021/01/"
+            "http://web.archive.org/web/20230530011556/https://blog.menasec.net/2021/01/"
         ],
         "related_integrations": [
             {
@@ -138,8 +138,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "ac5012b8-8da8-440b-aaaf-aedafdea2dff_109",
+    "id": "ac5012b8-8da8-440b-aaaf-aedafdea2dff_110",
     "type": "security-rule"
 }

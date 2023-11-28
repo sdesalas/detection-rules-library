@@ -15,7 +15,7 @@
         "name": "Suspicious Managed Code Hosting Process",
         "query": "sequence by process.entity_id with maxspan=5m\n [process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name : (\"wscript.exe\", \"cscript.exe\", \"mshta.exe\", \"wmic.exe\", \"regsvr32.exe\", \"svchost.exe\", \"dllhost.exe\", \"cmstp.exe\")]\n [file where host.os.type == \"windows\" and event.type != \"deletion\" and\n  file.name : (\"wscript.exe.log\",\n               \"cscript.exe.log\",\n               \"mshta.exe.log\",\n               \"wmic.exe.log\",\n               \"svchost.exe.log\",\n               \"dllhost.exe.log\",\n               \"cmstp.exe.log\",\n               \"regsvr32.exe.log\")]\n",
         "references": [
-            "https://blog.menasec.net/2019/07/interesting-difr-traces-of-net-clr.html"
+            "http://web.archive.org/web/20230329154538/https://blog.menasec.net/2019/07/interesting-difr-traces-of-net-clr.html"
         ],
         "related_integrations": [
             {
@@ -82,8 +82,8 @@
             }
         ],
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "acf738b5-b5b2-4acc-bad9-1e18ee234f40_105",
+    "id": "acf738b5-b5b2-4acc-bad9-1e18ee234f40_106",
     "type": "security-rule"
 }
