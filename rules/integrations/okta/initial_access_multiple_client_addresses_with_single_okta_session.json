@@ -3,22 +3,18 @@
         "author": [
             "Elastic"
         ],
-        "description": "Detects when Okta user or system events are reported for multiple users with the same device token hash.",
-        "false_positives": [
-            "An Okta admnistrator may be logged into multiple accounts from the same host for legitimate reasons.",
-            "Users may share an endpoint related to work or personal use in which separate Okta accounts are used.",
-            "Shared systems such as Kiosks and conference room computers may be used by multiple users."
-        ],
-        "from": "now-9m",
+        "description": "Detects when a user has started multiple Okta sessions with the same user account and different session IDs. This may indicate an attacker has compromised a user's Okta account and is using it to access the organization's resources.",
+        "from": "now-30m",
         "index": [
             "filebeat-*",
             "logs-okta*"
         ],
+        "interval": "60m",
         "language": "kuery",
         "license": "Elastic License v2",
-        "name": "Multiple Okta Users with the Same Device Token Hash",
-        "note": "## Setup",
-        "query": "event.dataset:okta.system and not okta.actor.id:okta* and okta.debug_context.debug_data.dt_hash:* and okta.event_type:(system* or user*)\n",
+        "name": "Multiple Okta Client Addresses for a Single User Session",
+        "note": "",
+        "query": "event.dataset:okta.system\n    and okta.authentication_context.external_session_id:* and okta.debug_context.debug_data.dt_hash:*\n    and not (okta.actor.id: okta* or okta.actor.display_name: okta*)\n",
         "references": [
             "https://developer.okta.com/docs/reference/api/system-log/",
             "https://developer.okta.com/docs/reference/api/event-types/",
@@ -39,22 +35,27 @@
             },
             {
                 "ecs": false,
+                "name": "okta.actor.display_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
                 "name": "okta.actor.id",
                 "type": "keyword"
             },
             {
                 "ecs": false,
-                "name": "okta.debug_context.debug_data.dt_hash",
-                "type": "unknown"
+                "name": "okta.authentication_context.external_session_id",
+                "type": "keyword"
             },
             {
                 "ecs": false,
-                "name": "okta.event_type",
+                "name": "okta.debug_context.debug_data.dt_hash",
                 "type": "keyword"
             }
         ],
         "risk_score": 47,
-        "rule_id": "50887ba8-7ff7-11ee-a038-f661ea17fbcd",
+        "rule_id": "cc382a2e-7e52-11ee-9aac-f661ea17fbcd",
         "setup": "The Okta Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
         "severity": "medium",
         "tags": [
@@ -64,7 +65,7 @@
         ],
         "threat": [
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0001",
                     "name": "Initial Access",
@@ -89,19 +90,20 @@
         "threshold": {
             "cardinality": [
                 {
-                    "field": "okta.actor.id",
+                    "field": "okta.debug_context.debug_data.dt_hash",
                     "value": 2
                 }
             ],
             "field": [
-                "okta.debug_context.debug_data.dt_hash"
+                "okta.actor.id",
+                "okta.authentication_context.external_session_id"
             ],
             "value": 1
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 1
+        "version": 2
     },
-    "id": "50887ba8-7ff7-11ee-a038-f661ea17fbcd_1",
+    "id": "cc382a2e-7e52-11ee-9aac-f661ea17fbcd_2",
     "type": "security-rule"
 }

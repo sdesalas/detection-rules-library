@@ -36,27 +36,27 @@
             {
                 "ecs": false,
                 "name": "kubernetes.audit.annotations.authorization_k8s_io/decision",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": false,
                 "name": "kubernetes.audit.objectRef.resource",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": false,
                 "name": "kubernetes.audit.requestObject.spec.containers.image",
-                "type": "unknown"
+                "type": "text"
             },
             {
                 "ecs": false,
                 "name": "kubernetes.audit.requestObject.spec.containers.securityContext.capabilities.add",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": false,
                 "name": "kubernetes.audit.verb",
-                "type": "unknown"
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -70,7 +70,7 @@
         ],
         "threat": [
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0004",
                     "name": "Privilege Escalation",
@@ -85,7 +85,7 @@
                 ]
             },
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0002",
                     "name": "Execution",
@@ -102,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "7164081a-3930-11ed-a261-0242ac120002_3",
+    "id": "7164081a-3930-11ed-a261-0242ac120002_4",
     "type": "security-rule"
 }

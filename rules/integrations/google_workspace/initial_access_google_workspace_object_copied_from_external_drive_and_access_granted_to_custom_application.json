@@ -48,7 +48,7 @@
             {
                 "ecs": false,
                 "name": "google_workspace.drive.file.type",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": false,
@@ -58,7 +58,7 @@
             {
                 "ecs": false,
                 "name": "google_workspace.token.client.id",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": true,
@@ -78,7 +78,7 @@
         ],
         "threat": [
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0001",
                     "name": "Initial Access",
@@ -101,8 +101,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "f33e68a4-bd19-11ed-b02f-f661ea17fbcc_3",
+    "id": "f33e68a4-bd19-11ed-b02f-f661ea17fbcc_4",
     "type": "security-rule"
 }

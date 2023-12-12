@@ -14,7 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Program Files Directory Masquerading",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n process.executable : \"C:\\\\*Program*Files*\\\\*.exe\" and\n not process.executable : (\"C:\\\\Program Files\\\\*.exe\", \"C:\\\\Program Files (x86)\\\\*.exe\", \"C:\\\\Users\\\\*.exe\", \"C:\\\\ProgramData\\\\*.exe\")\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.executable : \"C:\\\\*Program*Files*\\\\*.exe\" and\n  not process.executable : (\n        \"?:\\\\Program Files\\\\*.exe\",\n        \"?:\\\\Program Files (x86)\\\\*.exe\",\n        \"?:\\\\Users\\\\*.exe\",\n        \"?:\\\\ProgramData\\\\*.exe\",\n        \"?:\\\\Windows\\\\Downloaded Program Files\\\\*.exe\",\n        \"?:\\\\Windows\\\\Temp\\\\.opera\\\\????????????\\\\CProgram?FilesOpera*\\\\*.exe\",\n        \"?:\\\\Windows\\\\Temp\\\\.opera\\\\????????????\\\\CProgram?Files?(x86)Opera*\\\\*.exe\"\n  )\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -44,7 +44,7 @@
         ],
         "risk_score": 47,
         "rule_id": "32c5cf9c-2ef8-4e87-819e-5ccb7cd18b14",
-        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
+        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -56,7 +56,7 @@
         ],
         "threat": [
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
                     "name": "Defense Evasion",
@@ -80,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "32c5cf9c-2ef8-4e87-819e-5ccb7cd18b14_106",
+    "id": "32c5cf9c-2ef8-4e87-819e-5ccb7cd18b14_107",
     "type": "security-rule"
 }

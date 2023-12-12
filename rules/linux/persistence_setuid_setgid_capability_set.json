@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Setcap setuid/setgid Capability Set",
-        "query": "process where host.os.type == \"linux\" and event.action == \"exec\" and event.type == \"start\" and \nprocess.name == \"setcap\" and process.args : \"cap_set?id+ep\"\n",
+        "query": "process where host.os.type == \"linux\" and event.action == \"exec\" and event.type == \"start\" and \nprocess.name == \"setcap\" and process.args : \"cap_set?id+ep\" and not process.parent.name : \"jem\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -43,6 +43,11 @@
                 "ecs": true,
                 "name": "process.name",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -58,7 +63,7 @@
         ],
         "threat": [
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0003",
                     "name": "Persistence",
@@ -67,7 +72,7 @@
                 "technique": []
             },
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0004",
                     "name": "Privilege Escalation",
@@ -91,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "f5c005d3-4e17-48b0-9cd7-444d48857f97_2",
+    "id": "f5c005d3-4e17-48b0-9cd7-444d48857f97_3",
     "type": "security-rule"
 }

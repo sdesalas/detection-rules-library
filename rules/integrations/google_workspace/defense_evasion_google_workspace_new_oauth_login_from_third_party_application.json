@@ -47,7 +47,7 @@
             {
                 "ecs": false,
                 "name": "google_workspace.token.client.id",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": false,
@@ -67,7 +67,7 @@
         ],
         "threat": [
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
                     "name": "Defense Evasion",
@@ -89,7 +89,7 @@
                 ]
             },
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0001",
                     "name": "Initial Access",
@@ -113,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "21bafdf0-cf17-11ed-bd57-f661ea17fbcc_2",
+    "id": "21bafdf0-cf17-11ed-bd57-f661ea17fbcc_3",
     "type": "security-rule"
 }

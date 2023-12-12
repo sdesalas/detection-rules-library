@@ -32,7 +32,7 @@
             {
                 "ecs": false,
                 "name": "github.permission",
-                "type": "unknown"
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -46,7 +46,7 @@
         ],
         "threat": [
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0003",
                     "name": "Persistence",
@@ -70,8 +70,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "9b343b62-d173-4cfd-bd8b-e6379f964ca4_1",
+    "id": "9b343b62-d173-4cfd-bd8b-e6379f964ca4_2",
     "type": "security-rule"
 }

@@ -14,7 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Suspicious Endpoint Security Parent Process",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n process.name : (\"esensor.exe\", \"elastic-endpoint.exe\") and\n process.parent.executable != null and\n  /* add FPs here */\n not process.parent.executable : (\"C:\\\\Program Files\\\\Elastic\\\\*\",\n                                  \"C:\\\\Windows\\\\System32\\\\services.exe\",\n                                  \"C:\\\\Windows\\\\System32\\\\WerFault*.exe\",\n                                  \"C:\\\\Windows\\\\System32\\\\wermgr.exe\")\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name : (\"esensor.exe\", \"elastic-endpoint.exe\") and\n  process.parent.executable != null and\n  /* add FPs here */\n  not process.parent.executable : (\n        \"?:\\\\Program Files\\\\Elastic\\\\*\",\n        \"?:\\\\Windows\\\\System32\\\\services.exe\",\n        \"?:\\\\Windows\\\\System32\\\\WerFault*.exe\",\n        \"?:\\\\Windows\\\\System32\\\\wermgr.exe\",\n        \"?:\\\\Windows\\\\explorer.exe\"\n  ) and\n  not (\n    process.parent.executable : (\n        \"?:\\\\Windows\\\\System32\\\\cmd.exe\",\n        \"?:\\\\Windows\\\\System32\\\\SecurityHealthHost.exe\",\n        \"?:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\"\n    ) and\n    process.args : (\n        \"test\", \"version\",\n        \"top\", \"run\",\n        \"*help\", \"status\",\n        \"upgrade\", \"/launch\",\n        \"/enable\"\n    )\n  )\n  \n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -38,6 +38,11 @@
             },
             {
                 "ecs": true,
+                "name": "process.args",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "process.name",
                 "type": "keyword"
             },
@@ -49,7 +54,7 @@
         ],
         "risk_score": 47,
         "rule_id": "b41a13c6-ba45-4bab-a534-df53d0cfed6a",
-        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions \u003c8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
+        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -61,7 +66,7 @@
         ],
         "threat": [
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
                     "name": "Defense Evasion",
@@ -85,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "b41a13c6-ba45-4bab-a534-df53d0cfed6a_108",
+    "id": "b41a13c6-ba45-4bab-a534-df53d0cfed6a_109",
     "type": "security-rule"
 }

@@ -35,27 +35,27 @@
             {
                 "ecs": false,
                 "name": "kubernetes.audit.annotations.authorization_k8s_io/decision",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": false,
                 "name": "kubernetes.audit.impersonatedUser.username",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": false,
                 "name": "kubernetes.audit.objectRef.resource",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": false,
                 "name": "kubernetes.audit.user.username",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": false,
                 "name": "kubernetes.audit.verb",
-                "type": "unknown"
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -68,7 +68,7 @@
         ],
         "threat": [
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0007",
                     "name": "Discovery",
@@ -85,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 202
+        "version": 203
     },
-    "id": "12a2f15d-597e-4334-88ff-38a02cb1330b_202",
+    "id": "12a2f15d-597e-4334-88ff-38a02cb1330b_203",
     "type": "security-rule"
 }

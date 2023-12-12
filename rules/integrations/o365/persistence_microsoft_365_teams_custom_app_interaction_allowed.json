@@ -60,7 +60,7 @@
             {
                 "ecs": false,
                 "name": "o365.audit.NewValue",
-                "type": "unknown"
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -75,7 +75,7 @@
         ],
         "threat": [
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0003",
                     "name": "Persistence",
@@ -86,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 103
     },
-    "id": "bbd1a775-8267-41fa-9232-20e5582596ac_102",
+    "id": "bbd1a775-8267-41fa-9232-20e5582596ac_103",
     "type": "security-rule"
 }

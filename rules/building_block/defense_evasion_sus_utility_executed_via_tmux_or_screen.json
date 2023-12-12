@@ -12,7 +12,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potentially Suspicious Process Started via tmux or screen",
-        "query": "process where host.os.type == \"linux\" and event.action == \"exec\" and event.type == \"start\" and \nprocess.parent.name in (\"screen\", \"tmux\") and process.name : (\n  \"nmap\", \"nc\", \"ncat\", \"netcat\", \"socat\", \"nc.openbsd\", \"ngrok\", \"ping\", \"java\", \"python*\", \"php*\", \"perl\", \"ruby\",\n  \"lua*\", \"openssl\", \"telnet\", \"awk\", \"wget\", \"curl\", \"whoami\", \"id\"\n  )\n",
+        "query": "process where host.os.type == \"linux\" and event.action == \"exec\" and event.type == \"start\" and \nprocess.parent.name in (\"screen\", \"tmux\") and process.name : (\n  \"nmap\", \"nc\", \"ncat\", \"netcat\", \"socat\", \"nc.openbsd\", \"ngrok\", \"ping\", \"java\", \"python*\", \"php*\", \"perl\", \"ruby\",\n  \"lua*\", \"openssl\", \"telnet\", \"awk\", \"wget\", \"curl\", \"id\"\n  )\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -59,7 +59,7 @@
         ],
         "threat": [
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
                     "name": "Defense Evasion",
@@ -76,8 +76,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "e0cc3807-e108-483c-bf66-5a4fbe0d7e89_1",
+    "id": "e0cc3807-e108-483c-bf66-5a4fbe0d7e89_2",
     "type": "security-rule"
 }

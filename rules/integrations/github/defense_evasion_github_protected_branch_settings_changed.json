@@ -32,7 +32,7 @@
             {
                 "ecs": false,
                 "name": "github.category",
-                "type": "unknown"
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -46,7 +46,7 @@
         ],
         "threat": [
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
                     "name": "Defense Evasion",
@@ -70,8 +70,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "07639887-da3a-4fbf-9532-8ce748ff8c50_1",
+    "id": "07639887-da3a-4fbf-9532-8ce748ff8c50_2",
     "type": "security-rule"
 }

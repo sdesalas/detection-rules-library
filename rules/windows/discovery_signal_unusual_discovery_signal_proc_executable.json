@@ -3,7 +3,7 @@
         "author": [
             "Elastic"
         ],
-        "description": "This rule leverages alert data from various Discovery building block rules to alert on signals with unusual unique host.id, user.id and process.executable entries.",
+        "description": "This rule leverages Discovery building block rule alert data to alert on signals with unusual unique host.id, user.id and process.executable entries.",
         "from": "now-9m",
         "history_window_start": "now-14d",
         "index": [
@@ -47,7 +47,7 @@
         ],
         "threat": [
             {
-                "framework": "MITRE ATT\u0026CK",
+                "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0007",
                     "name": "Discovery",
@@ -58,8 +58,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "72ed9140-fe9d-4a34-a026-75b50e484b17_1",
+    "id": "72ed9140-fe9d-4a34-a026-75b50e484b17_2",
     "type": "security-rule"
 }
