@@ -20,7 +20,7 @@
             "process.executable",
             "file.path"
         ],
-        "query": "host.os.type:linux and event.category:file and event.action:\"opened-file\" and\nfile.path : (\"/etc/modprobe.conf\" or \"/etc/modprobe.d\" or /etc/modprobe.d/*)\n",
+        "query": "host.os.type:linux and event.category:file and event.action:\"opened-file\" and\nfile.path : (\"/etc/modprobe.conf\" or \"/etc/modprobe.d\" or /etc/modprobe.d/*) and \nnot process.name:(cp or dpkg or dockerd or lynis or mkinitramfs or snapd)\n",
         "required_fields": [
             {
                 "ecs": true,
@@ -40,6 +40,11 @@
             {
                 "ecs": true,
                 "name": "host.os.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.name",
                 "type": "keyword"
             }
         ],
@@ -72,8 +77,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 104
+        "version": 105
     },
-    "id": "40ddbcc8-6561-44d9-afc8-eefdbfe0cccd_104",
+    "id": "40ddbcc8-6561-44d9-afc8-eefdbfe0cccd_105",
     "type": "security-rule"
 }

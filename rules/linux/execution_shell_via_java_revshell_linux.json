@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Reverse Shell via Java",
-        "query": "sequence by host.id with maxspan=5s\n  [network where host.os.type == \"linux\" and event.action in (\"connection_accepted\", \"connection_attempted\") and \n   process.executable : (\"/usr/bin/java\", \"/bin/java\", \"/usr/lib/jvm/*\", \"/usr/java/*\") and\n   destination.ip != null and destination.ip != \"127.0.0.1\" and destination.ip != \"::1\"\n  ] by process.entity_id\n  [process where host.os.type == \"linux\" and event.action == \"exec\" and \n   process.parent.executable : (\"/usr/bin/java\", \"/bin/java\", \"/usr/lib/jvm/*\", \"/usr/java/*\") and\n   process.parent.args : \"-jar\" and process.name in (\"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")\n  ] by process.parent.entity_id\n",
+        "query": "sequence by host.id with maxspan=5s\n  [network where host.os.type == \"linux\" and event.action in (\"connection_accepted\", \"connection_attempted\") and \n   process.executable : (\"/usr/bin/java\", \"/bin/java\", \"/usr/lib/jvm/*\", \"/usr/java/*\") and\n   destination.ip != null and destination.ip != \"127.0.0.1\" and destination.ip != \"::1\"\n  ] by process.entity_id\n  [process where host.os.type == \"linux\" and event.action == \"exec\" and process.parent.executable : (\n    \"/usr/bin/java\", \"/bin/java\", \"/usr/lib/jvm/*\", \"/usr/java/*\"\n  ) and process.parent.args : \"-jar\" and process.name in (\n    \"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\"\n  ) and not process.args : (\n    \"-xe\", \"/tmp/jenkins*.sh\", \"*/var/lib/jenkins/workspace/*\", \"vmstat*\", \"asterisk*\", \"mpstat*\", \"/usr/bin/ps*\", \"umask\", \"*yum*\", \"uptime -s\",\n    \"df -h . | awk '{print $2}'\", \"free | awk \\\"/Mem:/\\\" | awk '{print $2}'\"\n  )\n  ] by process.parent.entity_id\n",
         "references": [
             "https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md"
         ],
@@ -40,6 +40,11 @@
             {
                 "ecs": true,
                 "name": "host.os.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.args",
                 "type": "keyword"
             },
             {
@@ -124,8 +129,8 @@
             }
         ],
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "5a3d5447-31c9-409a-aed1-72f9921594fd_5",
+    "id": "5a3d5447-31c9-409a-aed1-72f9921594fd_6",
     "type": "security-rule"
 }

@@ -14,7 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Creation of Kernel Module",
-        "query": "file where event.type in (\"change\", \"creation\") and host.os.type == \"linux\" and\nfile.path : \"/lib/modules/*\" and file.name : \"*.ko\"\n",
+        "query": "file where event.type in (\"change\", \"creation\") and host.os.type == \"linux\" and\nfile.path : \"/lib/modules/*\" and file.name : \"*.ko\" and \nnot process.name : (\"dpkg\", \"systemd\", \"falcon-sensor*\", \"dnf\", \"yum\", \"rpm\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -40,6 +40,11 @@
             {
                 "ecs": true,
                 "name": "host.os.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.name",
                 "type": "keyword"
             }
         ],
@@ -80,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "947827c6-9ed6-4dec-903e-c856c86e72f3_1",
+    "id": "947827c6-9ed6-4dec-903e-c856c86e72f3_2",
     "type": "security-rule"
 }

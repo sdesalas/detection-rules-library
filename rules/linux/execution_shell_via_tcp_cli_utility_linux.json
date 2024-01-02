@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Reverse Shell",
-        "query": "sequence by host.id with maxspan=1s\n  [network where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"connection_attempted\", \"connection_accepted\") and \n   process.name : (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\", \"socat\") and \n   destination.ip != null and destination.ip != \"127.0.0.1\" and destination.ip != \"::1\"] by process.entity_id\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"fork\") and \n   process.name in (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\") and \n   process.parent.name in (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\", \"socat\") and not \n   process.args : \"*imunify360-agent*\"] by process.parent.entity_id\n",
+        "query": "sequence by host.id with maxspan=5s\n  [network where event.type == \"start\" and event.action in (\"connection_attempted\", \"connection_accepted\") and \n   process.name : (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\", \"socat\") and destination.ip != null and \n   not cidrmatch(destination.ip, \"127.0.0.0/8\", \"169.254.0.0/16\", \"224.0.0.0/4\", \"::1\")] by process.entity_id\n  [process where event.type == \"start\" and event.action in (\"exec\", \"fork\") and \n   process.name in (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\") and (\n     (process.args : (\"-i\", \"-l\")) or (process.parent.name == \"socat\" and process.parent.args : \"*exec*\")\n   )] by process.parent.entity_id\n",
         "references": [
             "https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md"
         ],
@@ -44,11 +44,6 @@
             },
             {
                 "ecs": true,
-                "name": "host.os.type",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
                 "name": "process.args",
                 "type": "keyword"
             },
@@ -60,6 +55,11 @@
             {
                 "ecs": true,
                 "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.args",
                 "type": "keyword"
             },
             {
@@ -124,8 +124,8 @@
             }
         ],
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "48b3d2e3-f4e8-41e6-95e6-9b2091228db3_6",
+    "id": "48b3d2e3-f4e8-41e6-95e6-9b2091228db3_7",
     "type": "security-rule"
 }

@@ -5,11 +5,12 @@
         ],
         "building_block_type": "default",
         "description": "This rule identifies the execution of commands that can be used to query the Windows Registry. Adversaries may query the registry to gain situational awareness about the host, like installed security software, programs and settings.",
-        "from": "now-9m",
-        "history_window_start": "now-14d",
+        "from": "now-24h",
+        "history_window_start": "now-7d",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
+        "interval": "24h",
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Query Registry using Built-in Tools",
@@ -17,7 +18,7 @@
             "host.id",
             "user.id"
         ],
-        "query": "host.os.type:windows and event.category:process and event.type:start and (\n  (process.name.caseless:\"reg.exe\" and process.args:\"query\") or \n  (process.name.caseless:(\"powershell.exe\" or \"powershell_ise.exe\" or \"pwsh.exe\") and \n   process.command_line.caseless:((*Get-ChildItem* or *Get-Item* or *Get-ItemProperty*) and \n   (*HKCU* or *HKEY_CURRENT_USER* or *HKEY_LOCAL_MACHINE* or *HKLM* or *Registry\\:\\:*))))\n",
+        "query": "host.os.type:windows and event.category:process and event.type:start and\n  (\n    (process.name.caseless:\"reg.exe\" and process.args:\"query\") or\n    (process.name.caseless:(\"powershell.exe\" or \"powershell_ise.exe\" or \"pwsh.exe\") and\n     process.args:(\n       (\"get-childitem\" or \"Get-ChildItem\" or \"gci\" or \"dir\" or \"ls\" or\n        \"get-item\" or \"Get-Item\" or \"gi\" or\n        \"get-itemproperty\" or \"Get-ItemProperty\" or \"gp\") and\n       (\"hkcu\" or \"HKCU\" or \"hkey_current_user\" or \"HKEY_CURRENT_USER\" or\n        \"hkey_local_machine\" or \"HKEY_LOCAL_MACHINE\" or\n        \"hklm\" or \"HKLM\" or registry\\:\\:*)\n      )\n    )\n  )\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -44,11 +45,6 @@
                 "ecs": true,
                 "name": "process.args",
                 "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "process.command_line.caseless",
-                "type": "unknown"
             },
             {
                 "ecs": false,
@@ -86,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 102
+        "version": 103
     },
-    "id": "ded09d02-0137-4ccc-8005-c45e617e8d4c_102",
+    "id": "ded09d02-0137-4ccc-8005-c45e617e8d4c_103",
     "type": "security-rule"
 }
