@@ -9,7 +9,7 @@
         "index": [
             "winlogbeat-*",
             "logs-windows.*",
-            "logs-system.*"
+            "logs-system.security*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -103,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "daafdf96-e7b1-4f14-b494-27e0d24b11f6_2",
+    "id": "daafdf96-e7b1-4f14-b494-27e0d24b11f6_3",
     "type": "security-rule"
 }

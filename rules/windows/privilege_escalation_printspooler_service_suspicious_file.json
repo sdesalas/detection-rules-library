@@ -14,7 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Suspicious PrintSpooler Service Executable File Creation",
-        "query": "file where host.os.type == \"windows\" and event.type == \"creation\" and\n  process.name : \"spoolsv.exe\" and file.extension : \"dll\" and\n  file.path : (\"?:\\\\Windows\\\\System32\\\\*\", \"?:\\\\Windows\\\\SysWOW64\\\\*\") and\n  not file.path :\n          (\"?:\\\\WINDOWS\\\\SysWOW64\\\\PrintConfig.dll\",\n           \"?:\\\\WINDOWS\\\\system32\\\\x5lrs.dll\",\n           \"?:\\\\WINDOWS\\\\sysWOW64\\\\x5lrs.dll\",\n           \"?:\\\\WINDOWS\\\\system32\\\\PrintConfig.dll\")\n",
+        "query": "file where host.os.type == \"windows\" and event.type == \"creation\" and\n  process.name : \"spoolsv.exe\" and file.extension : \"dll\" and\n  file.path : (\"?:\\\\Windows\\\\System32\\\\*\", \"?:\\\\Windows\\\\SysWOW64\\\\*\") and\n  not file.path : (\n    \"?:\\\\WINDOWS\\\\SysWOW64\\\\PrintConfig.dll\",\n    \"?:\\\\WINDOWS\\\\system32\\\\x5lrs.dll\",\n    \"?:\\\\WINDOWS\\\\sysWOW64\\\\x5lrs.dll\",\n    \"?:\\\\WINDOWS\\\\system32\\\\PrintConfig.dll\",\n    \"?:\\\\WINDOWS\\\\system32\\\\spool\\\\DRIVERS\\\\x64\\\\*.dll\",\n    \"?:\\\\WINDOWS\\\\system32\\\\spool\\\\DRIVERS\\\\W32X86\\\\*.dll\",\n    \"?:\\\\WINDOWS\\\\system32\\\\spool\\\\PRTPROCS\\\\x64\\\\*.dll\",\n    \"?:\\\\WINDOWS\\\\system32\\\\spool\\\\{????????-????-????-????-????????????}\\\\*.dll\"\n  )\n",
         "references": [
             "https://voidsec.com/cve-2020-1337-printdemon-is-dead-long-live-printdemon/",
             "https://www.thezdi.com/blog/2020/7/8/cve-2020-1300-remote-code-execution-through-microsoft-windows-cab-files"
@@ -88,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "5bb4a95d-5a08-48eb-80db-4c3a63ec78a8_105",
+    "id": "5bb4a95d-5a08-48eb-80db-4c3a63ec78a8_106",
     "type": "security-rule"
 }

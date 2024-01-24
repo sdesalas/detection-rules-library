@@ -9,7 +9,8 @@
             "winlogbeat-*",
             "logs-endpoint.events.*",
             "logs-windows.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-system.security*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -26,6 +27,10 @@
             {
                 "package": "windows",
                 "version": "^1.5.0"
+            },
+            {
+                "package": "system",
+                "version": "^1.6.4"
             }
         ],
         "required_fields": [
@@ -126,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "68921d85-d0dc-48b3-865f-43291ca2c4f2_107",
+    "id": "68921d85-d0dc-48b3-865f-43291ca2c4f2_108",
     "type": "security-rule"
 }

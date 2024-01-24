@@ -21,7 +21,7 @@
             "process.parent.executable",
             "process.command_line"
         ],
-        "query": "host.os.type:linux and event.category:process and event.type:start and\nprocess.name:(chmod or chown or chattr or chgrp) and \nprocess.working_directory:(\"/tmp\" or \"/var/tmp\" or \"/dev/shm\")\n",
+        "query": "host.os.type:linux and event.category:process and event.type:start and\nprocess.name:((chattr or chgrp or chmod or chown) and\nnot (apt-key or update-motd-updates-available)) and\nprocess.working_directory:(/dev/shm or /tmp or /var/tmp)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -85,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 207
+        "version": 208
     },
-    "id": "9f9a2a82-93a8-4b1a-8778-1780895626d4_207",
+    "id": "9f9a2a82-93a8-4b1a-8778-1780895626d4_208",
     "type": "security-rule"
 }

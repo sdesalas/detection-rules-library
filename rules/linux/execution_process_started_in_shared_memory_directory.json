@@ -15,7 +15,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Binary Executed from Shared Memory Directory",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and\nprocess.executable : (\"/dev/shm/*\", \"/run/shm/*\", \"/var/run/*\", \"/var/lock/*\") and\nnot process.executable : (\"/var/run/docker/*\", \"/var/run/utsns/*\", \"/var/run/s6/*\", \"/var/run/cloudera-scm-agent/*\") and\nuser.id == \"0\"\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and\nuser.id == \"0\" and process.executable : (\"/dev/shm/*\", \"/run/shm/*\", \"/var/run/*\", \"/var/lock/*\") and\nnot process.executable : (\"/var/run/docker/*\", \"/var/run/utsns/*\", \"/var/run/s6/*\", \"/var/run/cloudera-scm-agent/*\", \n\"/var/run/argo/argoexec\") and not process.parent.command_line : \"/usr/bin/runc init\"\n",
         "references": [
             "https://linuxsecurity.com/features/fileless-malware-on-linux",
             "https://twitter.com/GossiTheDog/status/1522964028284411907",
@@ -47,6 +47,11 @@
                 "ecs": true,
                 "name": "process.executable",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.command_line",
+                "type": "wildcard"
             },
             {
                 "ecs": true,
@@ -86,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "3f3f9fe2-d095-11ec-95dc-f661ea17fbce_108",
+    "id": "3f3f9fe2-d095-11ec-95dc-f661ea17fbce_109",
     "type": "security-rule"
 }

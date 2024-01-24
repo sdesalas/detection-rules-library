@@ -9,12 +9,13 @@
             "logs-endpoint.events.*",
             "winlogbeat-*",
             "logs-windows.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-system.security*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Persistence via WMI Event Subscription",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  (process.name : \"wmic.exe\" or process.pe.original_file_name == \"wmic.exe\") and\n  process.args : \"create\" and\n  process.args : (\"ActiveScriptEventConsumer\", \"CommandLineEventConsumer\")\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  (process.name : \"wmic.exe\" or ?process.pe.original_file_name == \"wmic.exe\") and\n  process.args : \"create\" and\n  process.args : (\"ActiveScriptEventConsumer\", \"CommandLineEventConsumer\")\n",
         "references": [
             "https://www.elastic.co/security-labs/hunting-for-persistence-using-elastic-security-part-1"
         ],
@@ -26,6 +27,10 @@
             {
                 "package": "windows",
                 "version": "^1.5.0"
+            },
+            {
+                "package": "system",
+                "version": "^1.6.4"
             }
         ],
         "required_fields": [
@@ -109,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "9b6813a1-daf1-457e-b0e6-0bb4e55b8a4c_108",
+    "id": "9b6813a1-daf1-457e-b0e6-0bb4e55b8a4c_109",
     "type": "security-rule"
 }

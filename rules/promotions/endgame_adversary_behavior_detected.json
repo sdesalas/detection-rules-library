@@ -42,9 +42,10 @@
         "tags": [
             "Data Source: Elastic Endgame"
         ],
+        "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 103
     },
-    "id": "77a3c3df-8ec4-4da4-b758-878f551dee69_102",
+    "id": "77a3c3df-8ec4-4da4-b758-878f551dee69_103",
     "type": "security-rule"
 }

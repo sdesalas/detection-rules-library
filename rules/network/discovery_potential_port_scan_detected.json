@@ -105,9 +105,10 @@
             ],
             "value": 1
         },
+        "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 4
+        "version": 5
     },
-    "id": "0171f283-ade7-4f87-9521-ac346c68cc9b_4",
+    "id": "0171f283-ade7-4f87-9521-ac346c68cc9b_5",
     "type": "security-rule"
 }

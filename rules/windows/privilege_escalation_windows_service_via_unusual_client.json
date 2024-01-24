@@ -13,7 +13,7 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Windows Service Installed via an Unusual Client",
-        "query": "event.action:\"service-installed\" and\n  (winlog.event_data.ClientProcessId:\"0\" or winlog.event_data.ParentProcessId:\"0\")\n",
+        "query": "event.action:\"service-installed\" and\n  (winlog.event_data.ClientProcessId:\"0\" or winlog.event_data.ParentProcessId:\"0\") and\n  not winlog.event_data.ServiceFileName : (\n    \"C:\\\\Windows\\\\VeeamVssSupport\\\\VeeamGuestHelper.exe\" or\n    \"%SystemRoot%\\\\system32\\\\Drivers\\\\Crowdstrike\\\\17706-CsInstallerService.exe\"\n  )\n",
         "references": [
             "https://www.x86matthew.com/view_post?id=create_svc_rpc",
             "https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4697",
@@ -43,6 +43,11 @@
             {
                 "ecs": false,
                 "name": "winlog.event_data.ParentProcessId",
+                "type": "unknown"
+            },
+            {
+                "ecs": false,
+                "name": "winlog.event_data.ServiceFileName",
                 "type": "unknown"
             }
         ],
@@ -82,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 107
     },
-    "id": "55c2bf58-2a39-4c58-a384-c8b1978153c2_106",
+    "id": "55c2bf58-2a39-4c58-a384-c8b1978153c2_107",
     "type": "security-rule"
 }

@@ -18,7 +18,7 @@
             "host.id",
             "process.group_leader.executable"
         ],
-        "query": "event.category:process and host.os.type:\"linux\" and event.action:\"exec\" and event.type:\"start\" and \nprocess.name:(\"xclip\" or \"xsel\" or \"wl-clipboard\" or \"clipman\" or \"copyq\")\n",
+        "query": "event.category:process and host.os.type:\"linux\" and event.action:\"exec\" and event.type:\"start\" and\nprocess.name:(\"xclip\" or \"xsel\" or \"wl-clipboard\" or \"clipman\" or \"copyq\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -80,9 +80,10 @@
                 ]
             }
         ],
+        "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "884e87cc-c67b-4c90-a4ed-e1e24a940c82_2",
+    "id": "884e87cc-c67b-4c90-a4ed-e1e24a940c82_3",
     "type": "security-rule"
 }

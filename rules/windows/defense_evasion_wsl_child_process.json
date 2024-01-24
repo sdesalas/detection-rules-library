@@ -9,12 +9,13 @@
             "winlogbeat-*",
             "logs-endpoint.events.*",
             "logs-windows.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-system.security*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Execution via Windows Subsystem for Linux",
-        "query": "process where host.os.type == \"windows\" and event.type : \"start\" and\n process.parent.executable : \n    (\"?:\\\\Windows\\\\System32\\\\wsl.exe\", \n     \"?:\\\\Program Files*\\\\WindowsApps\\\\MicrosoftCorporationII.WindowsSubsystemForLinux_*\\\\wsl.exe\", \n     \"?:\\\\Windows\\\\System32\\\\wslhost.exe\", \n     \"?:\\\\Program Files*\\\\WindowsApps\\\\MicrosoftCorporationII.WindowsSubsystemForLinux_*\\\\wslhost.exe\") and \n  not process.executable : \n           (\"?:\\\\Windows\\\\System32\\\\conhost.exe\", \n            \"?:\\\\Windows\\\\System32\\\\lxss\\\\wslhost.exe\", \n            \"?:\\\\Windows\\\\Sys*\\\\wslconfig.exe\", \n            \"?:\\\\Program Files*\\\\WindowsApps\\\\MicrosoftCorporationII.WindowsSubsystemForLinux_*\\\\wsl*.exe\", \n            \"?:\\\\Windows\\\\System32\\\\WerFault.exe\", \n            \"?:\\\\Program Files\\\\*\", \n            \"?:\\\\Program Files (x86)\\\\*\")\n",
+        "query": "process where host.os.type == \"windows\" and event.type : \"start\" and\n  process.parent.name : (\"wsl.exe\", \"wslhost.exe\") and\n  not process.executable : (\n        \"?:\\\\Program Files (x86)\\\\*\",\n        \"?:\\\\Program Files\\\\*\",\n        \"?:\\\\Program Files*\\\\WindowsApps\\\\MicrosoftCorporationII.WindowsSubsystemForLinux_*\\\\wsl*.exe\",\n        \"?:\\\\Windows\\\\System32\\\\conhost.exe\",\n        \"?:\\\\Windows\\\\System32\\\\lxss\\\\wslhost.exe\",\n        \"?:\\\\Windows\\\\System32\\\\WerFault.exe\",\n        \"?:\\\\Windows\\\\Sys*\\\\wslconfig.exe\"\n  )\n",
         "references": [
             "https://learn.microsoft.com/en-us/windows/wsl/wsl-config"
         ],
@@ -26,6 +27,10 @@
             {
                 "package": "windows",
                 "version": "^1.5.0"
+            },
+            {
+                "package": "system",
+                "version": "^1.6.4"
             }
         ],
         "required_fields": [
@@ -46,7 +51,7 @@
             },
             {
                 "ecs": true,
-                "name": "process.parent.executable",
+                "name": "process.parent.name",
                 "type": "keyword"
             }
         ],
@@ -80,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "db7dbad5-08d2-4d25-b9b1-d3a1e4a15efd_4",
+    "id": "db7dbad5-08d2-4d25-b9b1-d3a1e4a15efd_5",
     "type": "security-rule"
 }

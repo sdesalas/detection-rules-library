@@ -66,9 +66,10 @@
                 ]
             }
         ],
+        "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 101
+        "version": 102
     },
-    "id": "c0be5f31-e180-48ed-aa08-96b36899d48f_101",
+    "id": "c0be5f31-e180-48ed-aa08-96b36899d48f_102",
     "type": "security-rule"
 }

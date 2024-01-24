@@ -16,7 +16,7 @@
         "license": "Elastic License v2",
         "max_signals": 5,
         "name": "Potential Network Sweep Detected",
-        "query": "destination.port : (21 or 22 or 23 or 25 or 139 or 445 or 3389 or 5985 or 5986) and \nsource.ip : (10.0.0.0/8 or 172.16.0.0/12 or 192.168.0.0/16)\n",
+        "query": "destination.port : (21 or 22 or 23 or 25 or 139 or 445 or 3389 or 5985 or 5986) and\nsource.ip : (10.0.0.0/8 or 172.16.0.0/12 or 192.168.0.0/16)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -99,9 +99,10 @@
             ],
             "value": 1
         },
+        "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 4
+        "version": 5
     },
-    "id": "781f8746-2180-4691-890c-4c96d11ca91d_4",
+    "id": "781f8746-2180-4691-890c-4c96d11ca91d_5",
     "type": "security-rule"
 }

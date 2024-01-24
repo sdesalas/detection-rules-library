@@ -14,7 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Microsoft Exchange Worker Spawning Suspicious Processes",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.parent.name : \"w3wp.exe\" and process.parent.args : \"MSExchange*AppPool\" and\n  (process.name : (\"cmd.exe\", \"powershell.exe\", \"pwsh.exe\", \"powershell_ise.exe\") or\n  process.pe.original_file_name in (\"cmd.exe\", \"powershell.exe\", \"pwsh.dll\", \"powershell_ise.exe\"))\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.parent.name : \"w3wp.exe\" and process.parent.args : \"MSExchange*AppPool\" and\n  (process.name : (\"cmd.exe\", \"powershell.exe\", \"pwsh.exe\", \"powershell_ise.exe\") or\n  ?process.pe.original_file_name in (\"cmd.exe\", \"powershell.exe\", \"pwsh.dll\", \"powershell_ise.exe\"))\n",
         "references": [
             "https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers",
             "https://www.volexity.com/blog/2021/03/02/active-exploitation-of-microsoft-exchange-zero-day-vulnerabilities",
@@ -121,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "f81ee52c-297e-46d9-9205-07e66931df26_106",
+    "id": "f81ee52c-297e-46d9-9205-07e66931df26_107",
     "type": "security-rule"
 }

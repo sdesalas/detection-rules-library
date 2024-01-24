@@ -14,7 +14,7 @@
         "license": "Elastic License v2",
         "max_signals": 33,
         "name": "File made Immutable by Chattr",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and user.name == \"root\" and\n  process.executable : \"/usr/bin/chattr\" and process.args : (\"-*i*\", \"+*i*\") and\n  not process.parent.executable: (\"/lib/systemd/systemd\", \"/usr/local/uems_agent/bin/*\", \"/usr/lib/systemd/systemd\")\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and user.id == \"0\" and\n  process.executable : \"/usr/bin/chattr\" and process.args : (\"-*i*\", \"+*i*\") and\n  not process.parent.executable: (\"/lib/systemd/systemd\", \"/usr/local/uems_agent/bin/*\", \"/usr/lib/systemd/systemd\") and\n  not process.parent.name in (\"systemd\", \"cf-agent\", \"ntpdate\", \"xargs\", \"px\", \"preinst\", \"auth\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -49,7 +49,12 @@
             },
             {
                 "ecs": true,
-                "name": "user.name",
+                "name": "process.parent.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "user.id",
                 "type": "keyword"
             }
         ],
@@ -91,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "968ccab9-da51-4a87-9ce2-d3c9782fd759_109",
+    "id": "968ccab9-da51-4a87-9ce2-d3c9782fd759_110",
     "type": "security-rule"
 }

@@ -13,12 +13,13 @@
             "logs-endpoint.events.*",
             "winlogbeat-*",
             "logs-windows.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-system.security*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Microsoft Exchange Server UM Spawning Suspicious Processes",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.parent.name : (\"UMService.exe\", \"UMWorkerProcess.exe\") and\n    not process.executable :\n              (\"?:\\\\Windows\\\\System32\\\\werfault.exe\",\n               \"?:\\\\Windows\\\\System32\\\\wermgr.exe\",\n               \"?:\\\\Program Files\\\\Microsoft\\\\Exchange Server\\\\V??\\\\Bin\\\\UMWorkerProcess.exe\",\n               \"D:\\\\Exchange 2016\\\\Bin\\\\UMWorkerProcess.exe\",\n               \"E:\\\\ExchangeServer\\\\Bin\\\\UMWorkerProcess.exe\")\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.parent.name : (\"UMService.exe\", \"UMWorkerProcess.exe\") and\n    not process.executable :\n              (\"?:\\\\Windows\\\\System32\\\\werfault.exe\",\n               \"?:\\\\Windows\\\\System32\\\\wermgr.exe\",\n               \"?:\\\\Program Files\\\\Microsoft\\\\Exchange Server\\\\V??\\\\Bin\\\\UMWorkerProcess.exe\",\n               \"?:\\\\Program Files\\\\Microsoft\\\\Exchange Server\\\\Bin\\\\UMWorkerProcess.exe\",\n               \"D:\\\\Exchange 2016\\\\Bin\\\\UMWorkerProcess.exe\",\n               \"E:\\\\ExchangeServer\\\\Bin\\\\UMWorkerProcess.exe\",\n               \"D:\\\\Exchange\\\\Bin\\\\UMWorkerProcess.exe\",\n               \"D:\\\\Exchange Server\\\\Bin\\\\UMWorkerProcess.exe\",\n               \"E:\\\\Exchange Server\\\\V15\\\\Bin\\\\UMWorkerProcess.exe\")\n",
         "references": [
             "https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers",
             "https://www.volexity.com/blog/2021/03/02/active-exploitation-of-microsoft-exchange-zero-day-vulnerabilities"
@@ -31,6 +32,10 @@
             {
                 "package": "windows",
                 "version": "^1.5.0"
+            },
+            {
+                "package": "system",
+                "version": "^1.6.4"
             }
         ],
         "required_fields": [
@@ -103,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "483c4daf-b0c6-49e0-adf3-0bfa93231d6b_106",
+    "id": "483c4daf-b0c6-49e0-adf3-0bfa93231d6b_107",
     "type": "security-rule"
 }

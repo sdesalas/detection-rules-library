@@ -19,7 +19,7 @@
             "process.executable",
             "file.path"
         ],
-        "query": "host.os.type:\"linux\" and event.category:\"file\" and \nevent.type:(\"change\" or \"file_modify_event\" or \"creation\" or \"file_create_event\") and \nfile.path:/lib/udev/* and process.executable:* and not (\n   process.name:(\"dockerd\" or \"docker\" or \"dpkg\" or \"dnf\" or \"dnf-automatic\" or \"yum\" or \"rpm\" or \"systemd-hwdb\" or\n     \"podman\" or \"buildah\") or file.extension : (\"swp\" or \"swpx\")\n)\n",
+        "query": "host.os.type:\"linux\" and event.category:\"file\" and\nevent.type:(\"change\" or \"file_modify_event\" or \"creation\" or \"file_create_event\") and\nfile.path:/lib/udev/* and process.executable:* and not (\n   process.name:(\"dockerd\" or \"docker\" or \"dpkg\" or \"dnf\" or \"dnf-automatic\" or \"yum\" or \"rpm\" or \"systemd-hwdb\" or\n     \"podman\" or \"buildah\") or file.extension : (\"swp\" or \"swpx\")\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -93,9 +93,10 @@
                 ]
             }
         ],
+        "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "054db96b-fd34-43b3-9af2-587b3bd33964_1",
+    "id": "054db96b-fd34-43b3-9af2-587b3bd33964_2",
     "type": "security-rule"
 }

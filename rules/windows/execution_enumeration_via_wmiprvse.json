@@ -9,12 +9,13 @@
             "winlogbeat-*",
             "logs-endpoint.events.*",
             "logs-windows.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-system.security*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Enumeration Command Spawned via WMIPrvSE",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name:\n  (\n    \"arp.exe\",\n    \"dsquery.exe\",\n    \"dsget.exe\",\n    \"gpresult.exe\",\n    \"hostname.exe\",\n    \"ipconfig.exe\",\n    \"nbtstat.exe\",\n    \"net.exe\",\n    \"net1.exe\",\n    \"netsh.exe\",\n    \"netstat.exe\",\n    \"nltest.exe\",\n    \"ping.exe\",\n    \"qprocess.exe\",\n    \"quser.exe\",\n    \"qwinsta.exe\",\n    \"reg.exe\",\n    \"sc.exe\",\n    \"systeminfo.exe\",\n    \"tasklist.exe\",\n    \"tracert.exe\",\n    \"whoami.exe\"\n  ) and\n  process.parent.name:\"wmiprvse.exe\" and \n  not (\n    process.name : \"sc.exe\" and process.args : \"RemoteRegistry\" and process.args : \"start=\" and \n    process.args : (\"demand\", \"disabled\")\n  ) and\n  not process.args : \"tenable_mw_scan\"\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and process.command_line != null and \n  process.name:\n  (\n    \"arp.exe\",\n    \"dsquery.exe\",\n    \"dsget.exe\",\n    \"gpresult.exe\",\n    \"hostname.exe\",\n    \"ipconfig.exe\",\n    \"nbtstat.exe\",\n    \"net.exe\",\n    \"net1.exe\",\n    \"netsh.exe\",\n    \"netstat.exe\",\n    \"nltest.exe\",\n    \"ping.exe\",\n    \"qprocess.exe\",\n    \"quser.exe\",\n    \"qwinsta.exe\",\n    \"reg.exe\",\n    \"sc.exe\",\n    \"systeminfo.exe\",\n    \"tasklist.exe\",\n    \"tracert.exe\",\n    \"whoami.exe\"\n  ) and\n  process.parent.name:\"wmiprvse.exe\" and \n  not (\n    process.name : \"sc.exe\" and process.args : \"RemoteRegistry\" and process.args : \"start=\" and \n    process.args : (\"demand\", \"disabled\")\n  ) and\n  not process.args : \"tenable_mw_scan\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -23,6 +24,10 @@
             {
                 "package": "windows",
                 "version": "^1.5.0"
+            },
+            {
+                "package": "system",
+                "version": "^1.6.4"
             }
         ],
         "required_fields": [
@@ -40,6 +45,11 @@
                 "ecs": true,
                 "name": "process.args",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.command_line",
+                "type": "wildcard"
             },
             {
                 "ecs": true,
@@ -125,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "770e0c4d-b998-41e5-a62e-c7901fd7f470_108",
+    "id": "770e0c4d-b998-41e5-a62e-c7901fd7f470_109",
     "type": "security-rule"
 }

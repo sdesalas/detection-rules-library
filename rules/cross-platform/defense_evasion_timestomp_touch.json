@@ -13,7 +13,7 @@
         "license": "Elastic License v2",
         "max_signals": 33,
         "name": "Timestomping using Touch Command",
-        "query": "process where event.type == \"start\" and\n process.name : \"touch\" and user.id != \"0\" and\n process.args : (\"-r\", \"-t\", \"-a*\",\"-m*\") and\n not process.args : (\"/usr/lib/go-*/bin/go\", \"/usr/lib/dracut/dracut-functions.sh\", \"/tmp/KSInstallAction.*/m/.patch/*\")\n",
+        "query": "process where event.type == \"start\" and\n process.name : \"touch\" and user.id != \"0\" and\n process.args : (\"-r\", \"-t\", \"-a*\",\"-m*\") and\n not process.args : (\n   \"/usr/lib/go-*/bin/go\", \"/usr/lib/dracut/dracut-functions.sh\", \"/tmp/KSInstallAction.*/m/.patch/*\"\n) and not process.parent.name in (\"pmlogger_daily\", \"pmlogger_janitor\", \"systemd\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -34,6 +34,11 @@
             {
                 "ecs": true,
                 "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
                 "type": "keyword"
             },
             {
@@ -80,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "b0046934-486e-462f-9487-0d4cf9e429c6_104",
+    "id": "b0046934-486e-462f-9487-0d4cf9e429c6_105",
     "type": "security-rule"
 }

@@ -13,11 +13,11 @@
         "license": "Elastic License v2",
         "name": "Network Activity Detected via Kworker",
         "new_terms_fields": [
-            "destination.ip",
+            "host.id",
             "process.name",
-            "host.id"
+            "destination.ip"
         ],
-        "query": "host.os.type:linux and event.category:network and event.action:(connection_attempted or connection_accepted) and \nprocess.name:kworker*\n",
+        "query": "host.os.type:linux and event.category:network and event.action:(connection_attempted or connection_accepted) and \nprocess.name:kworker* and not destination.ip:(\n  10.0.0.0/8 or\n  127.0.0.0/8 or\n  169.254.0.0/16 or\n  172.16.0.0/12 or\n  192.168.0.0/16 or\n  224.0.0.0/4 or\n  \"::1\" or\n  \"FE80::/10\" or\n  \"FF00::/8\"\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -25,6 +25,11 @@
             }
         ],
         "required_fields": [
+            {
+                "ecs": true,
+                "name": "destination.ip",
+                "type": "ip"
+            },
             {
                 "ecs": true,
                 "name": "event.action",
@@ -105,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "25d917c4-aa3c-4111-974c-286c0312ff95_1",
+    "id": "25d917c4-aa3c-4111-974c-286c0312ff95_2",
     "type": "security-rule"
 }

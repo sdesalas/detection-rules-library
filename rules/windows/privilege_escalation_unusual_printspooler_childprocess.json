@@ -11,12 +11,13 @@
         "index": [
             "winlogbeat-*",
             "logs-endpoint.events.*",
-            "logs-windows.*"
+            "logs-windows.*",
+            "logs-system.security*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Unusual Print Spooler Child Process",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n process.parent.name : \"spoolsv.exe\" and\n (?process.Ext.token.integrity_level_name : \"System\" or\n ?winlog.event_data.IntegrityLevel : \"System\") and\n\n /* exclusions for FP control below */\n not process.name : (\"splwow64.exe\", \"PDFCreator.exe\", \"acrodist.exe\", \"spoolsv.exe\", \"msiexec.exe\", \"route.exe\", \"WerFault.exe\") and\n not process.command_line : \"*\\\\WINDOWS\\\\system32\\\\spool\\\\DRIVERS*\" and\n not (process.name : \"net.exe\" and process.command_line : (\"*stop*\", \"*start*\")) and\n not (process.name : (\"cmd.exe\", \"powershell.exe\") and process.command_line : (\"*.spl*\", \"*\\\\program files*\", \"*route add*\")) and\n not (process.name : \"netsh.exe\" and process.command_line : (\"*add portopening*\", \"*rule name*\")) and\n not (process.name : \"regsvr32.exe\" and process.command_line : \"*PrintConfig.dll*\")\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n process.parent.name : \"spoolsv.exe\" and process.command_line != null and \n (?process.Ext.token.integrity_level_name : \"System\" or ?winlog.event_data.IntegrityLevel : \"System\") and\n\n /* exclusions for FP control below */\n not process.name : (\"splwow64.exe\", \"PDFCreator.exe\", \"acrodist.exe\", \"spoolsv.exe\", \"msiexec.exe\", \"route.exe\", \"WerFault.exe\") and\n not process.command_line : \"*\\\\WINDOWS\\\\system32\\\\spool\\\\DRIVERS*\" and\n not (process.name : \"net.exe\" and process.command_line : (\"*stop*\", \"*start*\")) and\n not (process.name : (\"cmd.exe\", \"powershell.exe\") and process.command_line : (\"*.spl*\", \"*\\\\program files*\", \"*route add*\")) and\n not (process.name : \"netsh.exe\" and process.command_line : (\"*add portopening*\", \"*rule name*\")) and\n not (process.name : \"regsvr32.exe\" and process.command_line : \"*PrintConfig.dll*\") and\n not process.executable : (\n    \"?:\\\\Program Files (x86)\\\\CutePDF Writer\\\\CPWriter2.exe\",\n    \"?:\\\\Program Files (x86)\\\\GPLGS\\\\gswin32c.exe\"\n )\n",
         "references": [
             "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527"
         ],
@@ -28,6 +29,10 @@
             {
                 "package": "windows",
                 "version": "^1.5.0"
+            },
+            {
+                "package": "system",
+                "version": "^1.6.4"
             }
         ],
         "required_fields": [
@@ -50,6 +55,11 @@
                 "ecs": true,
                 "name": "process.command_line",
                 "type": "wildcard"
+            },
+            {
+                "ecs": true,
+                "name": "process.executable",
+                "type": "keyword"
             },
             {
                 "ecs": true,
@@ -98,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "ee5300a7-7e31-4a72-a258-250abb8b3aa1_105",
+    "id": "ee5300a7-7e31-4a72-a258-250abb8b3aa1_106",
     "type": "security-rule"
 }

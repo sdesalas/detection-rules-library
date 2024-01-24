@@ -14,7 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Remote File Copy to a Hidden Share",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name : (\"cmd.exe\", \"powershell.exe\", \"robocopy.exe\", \"xcopy.exe\") and\n  process.args : (\"copy*\", \"move*\", \"cp\", \"mv\") and process.args : \"*$*\"\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  (\n    process.name : (\"cmd.exe\", \"powershell.exe\", \"xcopy.exe\") and\n    process.args : (\"copy*\", \"move*\", \"cp\", \"mv\") or\n    process.name : \"robocopy.exe\"\n  ) and process.args : \"*\\\\\\\\*\\\\*$*\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -85,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "fa01341d-6662-426b-9d0c-6d81e33c8a9d_106",
+    "id": "fa01341d-6662-426b-9d0c-6d81e33c8a9d_107",
     "type": "security-rule"
 }
