@@ -13,7 +13,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "WMIC Remote Command",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name : \"WMIC.exe\" and\n  process.args : \"*node:*\" and\n  process.args : (\"call\", \"set\", \"get\")\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name : \"WMIC.exe\" and\n  process.args : \"*node:*\" and\n  process.args : (\"call\", \"set\", \"get\") and\n  not process.args : (\"*/node:localhost*\", \"*/node:\\\"127.0.0.1\\\"*\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -94,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "f59668de-caa0-4b84-94c1-3a1549e1e798_2",
+    "id": "f59668de-caa0-4b84-94c1-3a1549e1e798_3",
     "type": "security-rule"
 }

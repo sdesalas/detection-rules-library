@@ -18,7 +18,7 @@
             "process.executable",
             "user.id"
         ],
-        "query": "host.os.type:windows and event.category:process and event.type:start and \nprocess.parent.executable:\"C:\\\\Windows\\\\System32\\\\services.exe\" and \n(process.code_signature.exists:false or process.code_signature.trusted:false)\n",
+        "query": "host.os.type:windows and event.category:process and event.type:start and \nprocess.parent.executable:\"C:\\\\Windows\\\\System32\\\\services.exe\" and \n(process.code_signature.exists:false or process.code_signature.trusted:false) and\nnot process.code_signature.status : (errorCode_endpoint* or \"errorChaining\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -45,6 +45,11 @@
                 "ecs": true,
                 "name": "process.code_signature.exists",
                 "type": "boolean"
+            },
+            {
+                "ecs": true,
+                "name": "process.code_signature.status",
+                "type": "keyword"
             },
             {
                 "ecs": true,
@@ -117,8 +122,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 103
+        "version": 104
     },
-    "id": "56fdfcf1-ca7c-4fd9-951d-e215ee26e404_103",
+    "id": "56fdfcf1-ca7c-4fd9-951d-e215ee26e404_104",
     "type": "security-rule"
 }

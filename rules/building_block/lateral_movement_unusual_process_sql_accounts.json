@@ -12,7 +12,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Unusual Process For MSSQL Service Accounts",
-        "query": "process where event.type == \"start\" and host.os.type == \"windows\" and\n  user.name : (\n    \"SQLSERVERAGENT\", \"SQLAGENT$*\",\n    \"MSSQLSERVER\", \"MSSQL$*\",\n    \"MSSQLServerOLAPService\",\n    \"ReportServer*\", \"MsDtsServer150\",\n    \"MSSQLFDLauncher*\",\n    \"SQLServer2005SQLBrowserUser$*\",\n    \"SQLWriter\", \"winmgmt\"\n  ) and user.domain : \"NT SERVICE\" and\n  not (\n    process.name : (\n        \"sqlceip.exe\", \"sqlservr.exe\", \"sqlagent.exe\",\n        \"msmdsrv.exe\", \"ReportingServicesService.exe\",\n        \"MsDtsSrvr.exe\", \"sqlbrowser.exe\"\n    ) and (process.code_signature.subject_name : \"Microsoft Corporation\" and process.code_signature.trusted == true)\n  )\n",
+        "query": "process where event.type == \"start\" and host.os.type == \"windows\" and\n  user.name : (\n    \"SQLSERVERAGENT\", \"SQLAGENT$*\",\n    \"MSSQLSERVER\", \"MSSQL$*\",\n    \"MSSQLServerOLAPService\",\n    \"ReportServer*\", \"MsDtsServer150\",\n    \"MSSQLFDLauncher*\",\n    \"SQLServer2005SQLBrowserUser$*\",\n    \"SQLWriter\", \"winmgmt\"\n  ) and user.domain : \"NT SERVICE\" and\n  not (\n    (\n      process.name : (\n        \"sqlceip.exe\", \"sqlservr.exe\", \"sqlagent.exe\",\n        \"msmdsrv.exe\", \"ReportingServicesService.exe\",\n        \"MsDtsSrvr.exe\", \"sqlbrowser.exe\", \"DTExec.exe\",\n        \"SQLPS.exe\", \"fdhost.exe\", \"fdlauncher.exe\",\n        \"SqlDumper.exe\", \"sqlsqm.exe\", \"DatabaseMail.exe\"\n      ) or\n      process.executable : (\n        \"?:\\\\Windows\\\\System32\\\\wermgr.exe\",\n        \"?:\\\\Windows\\\\System32\\\\conhost.exe\",\n        \"?:\\\\Windows\\\\System32\\\\WerFault.exe\"\n      )\n    ) and\n    (\n      process.code_signature.subject_name : (\"Microsoft Corporation\", \"Microsoft Windows\") and\n      process.code_signature.trusted == true\n    )\n  ) and\n  not (\n    process.name : \"cmd.exe\" and process.parent.name : \"sqlservr.exe\"\n  )\n",
         "references": [
             "https://www.microsoft.com/en-us/security/blog/2023/08/24/flax-typhoon-using-legitimate-software-to-quietly-access-taiwanese-organizations/",
             "https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?view=sql-server-ver16"
@@ -46,7 +46,17 @@
             },
             {
                 "ecs": true,
+                "name": "process.executable",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
                 "type": "keyword"
             },
             {
@@ -113,8 +123,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "e74d645b-fec6-431e-bf93-ca64a538e0de_2",
+    "id": "e74d645b-fec6-431e-bf93-ca64a538e0de_3",
     "type": "security-rule"
 }

@@ -13,7 +13,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Creation of SettingContent-ms Files",
-        "query": "file where host.os.type == \"windows\" and event.type == \"creation\" and\n  file.extension : \"settingcontent-ms\"\n",
+        "query": "file where host.os.type == \"windows\" and event.type == \"creation\" and\n  file.extension : \"settingcontent-ms\" and\n  not file.path : \"?:\\\\Users\\\\*\\\\AppData\\\\Local\\\\Packages\\\\windows.immersivecontrolpanel_*\\\\LocalState\\\\Indexed\\\\Settings\\\\*\"\n",
         "references": [
             "https://posts.specterops.io/the-tale-of-settingcontent-ms-files-f1ea253e4d39"
         ],
@@ -32,6 +32,11 @@
             {
                 "ecs": true,
                 "name": "file.extension",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "file.path",
                 "type": "keyword"
             },
             {
@@ -99,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "1e6363a6-3af5-41d4-b7ea-d475389c0ceb_1",
+    "id": "1e6363a6-3af5-41d4-b7ea-d475389c0ceb_2",
     "type": "security-rule"
 }

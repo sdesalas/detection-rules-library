@@ -17,7 +17,7 @@
         "new_terms_fields": [
             "process.executable"
         ],
-        "query": "event.category:\"authentication\" and host.os.type:\"windows\" and winlog.logon.type:\"NewCredentials\" and winlog.event_data.LogonProcessName:(Advapi* or \"Advapi  \")\n",
+        "query": "event.category:\"authentication\" and host.os.type:\"windows\" and winlog.logon.type:\"NewCredentials\" and winlog.event_data.LogonProcessName:(Advapi* or \"Advapi  \") and not winlog.event_data.SubjectUserName:*$ and not process.executable :???\\\\Program?Files*\n",
         "references": [
             "https://www.elastic.co/pt/blog/how-attackers-abuse-access-token-manipulation"
         ],
@@ -43,8 +43,18 @@
                 "type": "keyword"
             },
             {
+                "ecs": true,
+                "name": "process.executable",
+                "type": "keyword"
+            },
+            {
                 "ecs": false,
                 "name": "winlog.event_data.LogonProcessName",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "winlog.event_data.SubjectUserName",
                 "type": "keyword"
             },
             {
@@ -88,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "e468f3f6-7c4c-45bb-846a-053738b3fe5d_1",
+    "id": "e468f3f6-7c4c-45bb-846a-053738b3fe5d_2",
     "type": "security-rule"
 }

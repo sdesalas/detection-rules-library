@@ -3,7 +3,6 @@
         "author": [
             "Elastic"
         ],
-        "building_block_type": "default",
         "description": "Identifies the execution of the built-in Windows Installer, msiexec.exe, to install a remote package. Adversaries may abuse msiexec.exe to launch local or network accessible MSI files.",
         "from": "now-9m",
         "index": [
@@ -90,7 +89,6 @@
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
             "Tactic: Defense Evasion",
-            "Rule Type: BBR",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -140,8 +138,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "3e441bdb-596c-44fd-8628-2cfdf4516ada_1",
+    "id": "3e441bdb-596c-44fd-8628-2cfdf4516ada_2",
     "type": "security-rule"
 }

@@ -14,7 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Service Disabled via Registry Modification",
-        "query": "registry where host.os.type == \"windows\" and event.type == \"change\" and\n  registry.path : (\n    \"HKLM\\\\SYSTEM\\\\*ControlSet*\\\\Services\\\\*\\\\Start\",\n    \"\\\\REGISTRY\\\\MACHINE\\\\SYSTEM\\\\*ControlSet*\\\\Services\\\\*\\\\Start\"\n  ) and registry.data.strings : (\"3\", \"4\") and\n  not \n    (\n      process.name : \"services.exe\" and user.id : \"S-1-5-18\"\n    )\n",
+        "query": "registry where host.os.type == \"windows\" and event.type == \"change\" and\n  registry.path : (\n    \"HKLM\\\\SYSTEM\\\\*ControlSet*\\\\Services\\\\*\\\\Start\",\n    \"\\\\REGISTRY\\\\MACHINE\\\\SYSTEM\\\\*ControlSet*\\\\Services\\\\*\\\\Start\"\n  ) and registry.data.strings : (\"3\", \"4\") and\n  not \n    (\n      process.name : \"services.exe\" and user.id : \"S-1-5-18\"\n    )\n  and not registry.path : \"HKLM\\\\SYSTEM\\\\ControlSet001\\\\Services\\\\MrxSmb10\\\\Start\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -99,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "75dcb176-a575-4e33-a020-4a52aaa1b593_1",
+    "id": "75dcb176-a575-4e33-a020-4a52aaa1b593_2",
     "type": "security-rule"
 }

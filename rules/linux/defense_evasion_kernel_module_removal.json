@@ -15,7 +15,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Kernel Module Removal",
-        "query": "process where host.os.type == \"linux\" and event.action == \"exec\" and process.name == \"rmmod\" or\n(process.name == \"modprobe\" and process.args in (\"--remove\", \"-r\")) and \nprocess.parent.name in (\"sudo\", \"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")\n",
+        "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\") and event.type == \"start\" and\nprocess.name == \"rmmod\" or (process.name == \"modprobe\" and process.args in (\"--remove\", \"-r\")) and \nprocess.parent.name in (\"sudo\", \"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")\n",
         "references": [
             "http://man7.org/linux/man-pages/man8/modprobe.8.html"
         ],
@@ -29,6 +29,11 @@
             {
                 "ecs": true,
                 "name": "event.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.type",
                 "type": "keyword"
             },
             {
@@ -112,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "cd66a5af-e34b-4bb0-8931-57d0a043f2ef_107",
+    "id": "cd66a5af-e34b-4bb0-8931-57d0a043f2ef_108",
     "type": "security-rule"
 }

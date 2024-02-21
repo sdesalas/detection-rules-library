@@ -14,7 +14,7 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "PowerShell Script with Log Clear Capabilities",
-        "query": "event.category:process and host.os.type:windows and\n  powershell.file.script_block_text : (\n    \"Clear-EventLog\" or\n    \"Remove-EventLog\" or\n    (\"Eventing.Reader.EventLogSession\" and \".ClearLog\") or\n    (\"Diagnostics.EventLog\" and \".Clear\")\n  ) and\n  not file.path : (\n    ?\\:\\\\\\\\*\\\\\\\\system32\\\\\\\\WindowsPowerShell\\\\\\\\v1.0\\\\\\\\Modules\\\\\\\\Microsoft.PowerShell.Management\\\\\\\\*.psd1\n  )\n",
+        "query": "event.category:process and host.os.type:windows and\n  powershell.file.script_block_text : (\n    \"Clear-EventLog\" or\n    \"Remove-EventLog\" or\n    (\"Eventing.Reader.EventLogSession\" and \".ClearLog\") or\n    (\"Diagnostics.EventLog\" and \".Clear\")\n  ) and\n  not file.path : (\n    ?\\:\\\\\\\\*\\\\\\\\system32\\\\\\\\WindowsPowerShell\\\\\\\\v1.0\\\\\\\\Modules\\\\\\\\Microsoft.PowerShell.Management\\\\\\\\*.psd1\n  ) and\n  not powershell.file.script_block_text : (\n    \"CmdletsToExport=@(\\\"Add-Content\\\"\"\n  )\n",
         "references": [
             "https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.eventlog.clear",
             "https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.eventing.reader.eventlogsession.clearlog"
@@ -107,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "3d3aa8f9-12af-441f-9344-9f31053e316d_3",
+    "id": "3d3aa8f9-12af-441f-9344-9f31053e316d_4",
     "type": "security-rule"
 }

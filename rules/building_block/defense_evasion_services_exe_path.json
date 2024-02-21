@@ -14,7 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Service Path Modification via sc.exe",
-        "query": "process where event.type == \"start\" and\n  process.name : \"sc.exe\" and process.args : \"*binPath*\"\n",
+        "query": "process where event.type == \"start\" and process.name : \"sc.exe\" and\n  process.args : \"*config*\" and process.args : \"*binPath*\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -113,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "c5677997-f75b-4cda-b830-a75920514096_1",
+    "id": "c5677997-f75b-4cda-b830-a75920514096_2",
     "type": "security-rule"
 }

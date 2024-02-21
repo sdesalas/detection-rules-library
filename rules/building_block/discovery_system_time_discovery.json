@@ -15,7 +15,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "System Time Discovery",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n(\n ((process.name: \"net.exe\" or (process.name : \"net1.exe\" and not process.parent.name : \"net.exe\")) and \n   process.args : \"time\") or \n (process.name: \"w32tm.exe\" and process.args: \"/tz\") or \n (process.name: \"tzutil.exe\" and process.args: \"/g\")\n) and not user.id : (\"S-1-5-18\", \"S-1-5-19\", \"S-1-5-20\")\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n(\n (\n    (process.name: \"net.exe\" or (process.name : \"net1.exe\" and not process.parent.name : \"net.exe\")) and \n    process.args : \"time\" and not process.args : \"/set\"\n ) or \n (process.name: \"w32tm.exe\" and process.args: \"/tz\") or \n (process.name: \"tzutil.exe\" and process.args: \"/g\")\n) and not user.id : (\"S-1-5-18\", \"S-1-5-19\", \"S-1-5-20\")\n",
         "related_integrations": [
             {
                 "package": "windows",
@@ -89,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "06568a02-af29-4f20-929c-f3af281e41aa_5",
+    "id": "06568a02-af29-4f20-929c-f3af281e41aa_6",
     "type": "security-rule"
 }

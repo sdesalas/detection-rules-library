@@ -6,12 +6,13 @@
         "description": "Malware or other files dropped or created on a system by an adversary may leave traces behind as to what was done within a network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low or remove them at the end as part of the post-intrusion cleanup process.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.*",
+            "endgame-*"
         ],
-        "language": "kuery",
+        "language": "eql",
         "license": "Elastic License v2",
         "name": "File Deletion via Shred",
-        "query": "event.category:process and host.os.type:linux and event.type:start and process.name:shred and\nprocess.args:(\"-u\" or \"--remove\" or \"-z\" or \"--zero\") and not process.parent.name:logrotate\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and process.name == \"shred\" and process.args in (\n  \"-u\", \"--remove\", \"-z\", \"--zero\"\n) and not process.parent.name == \"logrotate\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -19,11 +20,6 @@
             }
         ],
         "required_fields": [
-            {
-                "ecs": true,
-                "name": "event.category",
-                "type": "keyword"
-            },
             {
                 "ecs": true,
                 "name": "event.type",
@@ -59,7 +55,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -86,9 +83,9 @@
             }
         ],
         "timestamp_override": "event.ingested",
-        "type": "query",
-        "version": 107
+        "type": "eql",
+        "version": 108
     },
-    "id": "a1329140-8de3-4445-9f87-908fb6d824f4_107",
+    "id": "a1329140-8de3-4445-9f87-908fb6d824f4_108",
     "type": "security-rule"
 }

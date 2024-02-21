@@ -10,7 +10,6 @@
         "from": "now-9m",
         "history_window_start": "now-14d",
         "index": [
-            "auditbeat-*",
             "logs-endpoint.events.*"
         ],
         "language": "kuery",
@@ -21,7 +20,7 @@
             "process.parent.executable",
             "process.command_line"
         ],
-        "query": "host.os.type:linux and event.category:process and event.type:start and\nprocess.name:((chattr or chgrp or chmod or chown) and\nnot (apt-key or update-motd-updates-available)) and\nprocess.working_directory:(/dev/shm or /tmp or /var/tmp)\n",
+        "query": "host.os.type:linux and event.category:process and event.type:start and\nprocess.name:(chattr or chgrp or chmod or chown) and process.working_directory:(/dev/shm or /tmp or /var/tmp) and\nnot process.parent.name:(apt-key or update-motd-updates-available)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -47,6 +46,11 @@
             {
                 "ecs": true,
                 "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
                 "type": "keyword"
             },
             {
@@ -85,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 208
+        "version": 209
     },
-    "id": "9f9a2a82-93a8-4b1a-8778-1780895626d4_208",
+    "id": "9f9a2a82-93a8-4b1a-8778-1780895626d4_209",
     "type": "security-rule"
 }

@@ -9,14 +9,13 @@
         ],
         "from": "now-9m",
         "index": [
-            "auditbeat-*",
             "logs-endpoint.events.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "max_signals": 33,
         "name": "Creation of Hidden Files and Directories via CommandLine",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\nprocess.working_directory in (\"/tmp\", \"/var/tmp\", \"/dev/shm\") and\nprocess.args regex~ \"\"\"\\.[a-z0-9_\\-][a-z0-9_\\-\\.]{1,254}\"\"\" and\nnot process.name in (\"ls\", \"find\", \"grep\", \"git\", \"jq\", \"basename\")\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\nprocess.working_directory in (\"/tmp\", \"/var/tmp\", \"/dev/shm\") and\nprocess.args regex~ \"\"\"\\.[a-z0-9_\\-][a-z0-9_\\-\\.]{1,254}\"\"\" and\nnot process.name in (\"ls\", \"find\", \"grep\", \"git\", \"jq\", \"basename\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -24,6 +23,11 @@
             }
         ],
         "required_fields": [
+            {
+                "ecs": true,
+                "name": "event.action",
+                "type": "keyword"
+            },
             {
                 "ecs": true,
                 "name": "event.type",
@@ -96,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "b9666521-4742-49ce-9ddc-b8e84c35acae_108",
+    "id": "b9666521-4742-49ce-9ddc-b8e84c35acae_109",
     "type": "security-rule"
 }

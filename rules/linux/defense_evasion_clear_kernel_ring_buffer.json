@@ -6,16 +6,23 @@
         "description": "Monitors for the deletion of the kernel ring buffer events through dmesg. Attackers may clear kernel ring buffer events to evade detection after installing a Linux kernel module (LKM).",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.*",
+            "endgame-*",
+            "auditbeat-*",
+            "logs-auditd_manager.auditd-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Attempt to Clear Kernel Ring Buffer",
-        "query": "process where host.os.type == \"linux\" and event.action == \"exec\" and event.type == \"start\" and\nprocess.name == \"dmesg\" and process.args : \"-c\"\n",
+        "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\", \"executed\") and\nevent.type == \"start\" and process.name == \"dmesg\" and process.args : \"-c\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "auditd_manager",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -54,7 +61,9 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Elastic Endgame",
+            "Data Source: Auditd Manager"
         ],
         "threat": [
             {
@@ -94,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "2724808c-ba5d-48b2-86d2-0002103df753_1",
+    "id": "2724808c-ba5d-48b2-86d2-0002103df753_2",
     "type": "security-rule"
 }

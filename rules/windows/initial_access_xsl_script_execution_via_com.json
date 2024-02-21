@@ -3,7 +3,6 @@
         "author": [
             "Elastic"
         ],
-        "building_block_type": "default",
         "description": "Identifies the execution of a hosted XSL script using the Microsoft.XMLDOM COM interface via Microsoft Office processes. This behavior may indicate adversarial activity to execute malicious JScript or VBScript on the system.",
         "from": "now-9m",
         "index": [
@@ -70,7 +69,6 @@
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
             "Tactic: Defense Evasion",
-            "Rule Type: BBR",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -113,8 +111,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "48f657ee-de4f-477c-aa99-ed88ee7af97a_1",
+    "id": "48f657ee-de4f-477c-aa99-ed88ee7af97a_2",
     "type": "security-rule"
 }
