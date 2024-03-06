@@ -3,16 +3,16 @@
         "author": [
             "Elastic"
         ],
-        "building_block_type": "default",
         "description": "This rule monitors for the execution of suspicious commands via screen and tmux. When launching a command and detaching directly, the commands will be executed in the background via its parent process. Attackers may leverage screen or tmux to execute commands while attempting to evade detection.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.*",
+            "endgame-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potentially Suspicious Process Started via tmux or screen",
-        "query": "process where host.os.type == \"linux\" and event.action == \"exec\" and event.type == \"start\" and \nprocess.parent.name in (\"screen\", \"tmux\") and process.name : (\n  \"nmap\", \"nc\", \"ncat\", \"netcat\", \"socat\", \"nc.openbsd\", \"ngrok\", \"ping\", \"java\", \"python*\", \"php*\", \"perl\", \"ruby\",\n  \"lua*\", \"openssl\", \"telnet\", \"awk\", \"wget\", \"curl\", \"id\"\n  )\n",
+        "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\") and event.type == \"start\" and \nprocess.parent.name in (\"screen\", \"tmux\") and process.name : (\n  \"nmap\", \"nc\", \"ncat\", \"netcat\", \"socat\", \"nc.openbsd\", \"ngrok\", \"ping\", \"java\", \"python*\", \"php*\", \"perl\", \"ruby\",\n  \"lua*\", \"openssl\", \"telnet\", \"awk\", \"wget\", \"curl\", \"id\"\n  )\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -55,7 +55,7 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -76,8 +76,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "e0cc3807-e108-483c-bf66-5a4fbe0d7e89_2",
+    "id": "e0cc3807-e108-483c-bf66-5a4fbe0d7e89_3",
     "type": "security-rule"
 }

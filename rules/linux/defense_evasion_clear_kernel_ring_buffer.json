@@ -14,7 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Attempt to Clear Kernel Ring Buffer",
-        "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\", \"executed\") and\nevent.type == \"start\" and process.name == \"dmesg\" and process.args : \"-c\"\n",
+        "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\") and\nevent.type == \"start\" and process.name == \"dmesg\" and process.args == \"-c\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -103,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "2724808c-ba5d-48b2-86d2-0002103df753_2",
+    "id": "2724808c-ba5d-48b2-86d2-0002103df753_3",
     "type": "security-rule"
 }

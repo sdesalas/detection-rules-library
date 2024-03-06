@@ -3,7 +3,6 @@
         "author": [
             "Elastic"
         ],
-        "building_block_type": "default",
         "description": "This rule monitors the syslog log file for messages related to instances of a tainted kernel module load. Rootkits often leverage kernel modules as their main defense evasion technique. Detecting tainted kernel module loads is crucial for ensuring system security and integrity, as malicious or unauthorized modules can compromise the kernel and lead to system vulnerabilities or unauthorized access.",
         "from": "now-9m",
         "index": [
@@ -50,8 +49,7 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Tactic: Defense Evasion",
-            "Rule Type: BBR"
+            "Tactic: Defense Evasion"
         ],
         "threat": [
             {
@@ -94,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "05cad2fb-200c-407f-b472-02ea8c9e5e4a_2",
+    "id": "05cad2fb-200c-407f-b472-02ea8c9e5e4a_3",
     "type": "security-rule"
 }

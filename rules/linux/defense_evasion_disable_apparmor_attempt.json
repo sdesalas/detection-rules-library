@@ -14,7 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Disabling of AppArmor",
-        "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\", \"executed\") and event.type == \"start\"\nand (\n  (process.name == \"systemctl\" and process.args == \"disable\" and process.args == \"apparmor\") or\n  (process.name == \"ln\" and process.args : \"/etc/apparmor.d/*\" and process.args == \"/etc/apparmor.d/disable/\")\n)\n",
+        "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\") and\nevent.type == \"start\" and (\n  (process.name == \"systemctl\" and process.args == \"disable\" and process.args == \"apparmor\") or\n  (process.name == \"ln\" and process.args : \"/etc/apparmor.d/*\" and process.args == \"/etc/apparmor.d/disable/\")\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -91,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "fac52c69-2646-4e79-89c0-fd7653461010_4",
+    "id": "fac52c69-2646-4e79-89c0-fd7653461010_5",
     "type": "security-rule"
 }

@@ -3,7 +3,6 @@
         "author": [
             "Elastic"
         ],
-        "building_block_type": "default",
         "description": "Detects the loading of a Linux kernel module through system calls. Threat actors may leverage Linux kernel modules to load a rootkit on a system providing them with complete control and the ability to hide from security products. As other rules monitor for the addition of Linux kernel modules through system utilities or .ko files, this rule covers the gap that evasive rootkits leverage by monitoring for kernel module additions on the lowest level through auditd_manager.",
         "from": "now-9m",
         "index": [
@@ -47,8 +46,7 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Tactic: Defense Evasion",
-            "Rule Type: BBR"
+            "Tactic: Defense Evasion"
         ],
         "threat": [
             {
@@ -91,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "3e12a439-d002-4944-bc42-171c0dcb9b96_3",
+    "id": "3e12a439-d002-4944-bc42-171c0dcb9b96_4",
     "type": "security-rule"
 }

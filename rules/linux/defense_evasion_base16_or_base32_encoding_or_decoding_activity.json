@@ -17,7 +17,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Base16 or Base32 Encoding/Decoding Activity",
-        "query": "process where host.os.type == \"linux\" and event.type in (\"start\", \"process_started\") and\nprocess.name in (\"base16\", \"base32\", \"base32plain\", \"base32hex\") and not process.args in (\"--help\", \"--version\")\n",
+        "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\") and\nevent.type == \"start\" and process.name in (\"base16\", \"base32\", \"base32plain\", \"base32hex\") and\nnot process.args in (\"--help\", \"--version\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -29,6 +29,11 @@
             }
         ],
         "required_fields": [
+            {
+                "ecs": true,
+                "name": "event.action",
+                "type": "keyword"
+            },
             {
                 "ecs": true,
                 "name": "event.type",
@@ -87,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "debff20a-46bc-4a4d-bae5-5cdd14222795_108",
+    "id": "debff20a-46bc-4a4d-bae5-5cdd14222795_109",
     "type": "security-rule"
 }

@@ -3,14 +3,12 @@
         "author": [
             "Elastic"
         ],
-        "building_block_type": "default",
         "description": "This rule monitors for the potential edit of a suspicious file. In Linux, when editing a file through an editor, a temporary .swp file is created. By monitoring for the creation of this .swp file, we can detect potential file edits of suspicious files. The execution of this rule is not a clear sign of the file being edited, as just opening the file through an editor will trigger this event. Attackers may alter any of the files added in this rule to establish persistence, escalate privileges or perform reconnaisance on the system.",
-        "from": "now-119m",
+        "from": "now-9m",
         "index": [
             "logs-endpoint.events.*",
             "endgame-*"
         ],
-        "interval": "60m",
         "language": "eql",
         "license": "Elastic License v2",
         "max_signals": 1,
@@ -49,7 +47,6 @@
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Endgame",
-            "Rule Type: BBR",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -124,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "3728c08d-9b70-456b-b6b8-007c7d246128_3",
+    "id": "3728c08d-9b70-456b-b6b8-007c7d246128_4",
     "type": "security-rule"
 }

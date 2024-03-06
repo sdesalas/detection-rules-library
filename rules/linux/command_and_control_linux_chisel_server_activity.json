@@ -51,12 +51,27 @@
             },
             {
                 "ecs": true,
+                "name": "process.args",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.args_count",
+                "type": "long"
+            },
+            {
+                "ecs": true,
                 "name": "process.entity_id",
                 "type": "keyword"
             },
             {
                 "ecs": true,
                 "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
                 "type": "keyword"
             }
         ],
@@ -89,8 +104,8 @@
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "ac8805f6-1e08-406c-962e-3937057fa86f_4",
+    "id": "ac8805f6-1e08-406c-962e-3937057fa86f_5",
     "type": "security-rule"
 }
