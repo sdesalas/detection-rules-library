@@ -9,7 +9,7 @@
         "index": [
             "logs-endpoint.events.*",
             "winlogbeat-*",
-            "logs-windows.*",
+            "logs-windows.sysmon_operational-*",
             "endgame-*"
         ],
         "language": "kuery",
@@ -78,7 +78,8 @@
             "Use Case: Threat Detection",
             "Tactic: Exfiltration",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Sysmon"
         ],
         "threat": [
             {
@@ -99,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "f580bf0a-2d23-43bb-b8e1-17548bb947ec_1",
+    "id": "f580bf0a-2d23-43bb-b8e1-17548bb947ec_2",
     "type": "security-rule"
 }

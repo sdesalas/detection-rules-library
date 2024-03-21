@@ -58,7 +58,7 @@
         ],
         "risk_score": 47,
         "rule_id": "670b3b5a-35e5-42db-bd36-6c5b9b4b7313",
-        "setup": "\nThe 'Audit Directory Service Changes' logging policy must be configured for (Success, Failure).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nDS Access >\nAudit Directory Service Changes (Success,Failure)\n```\n",
+        "setup": "## Setup\n\nThe 'Audit Directory Service Changes' logging policy must be configured for (Success, Failure).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nDS Access >\nAudit Directory Service Changes (Success,Failure)\n```\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -87,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 8
+        "version": 9
     },
-    "id": "670b3b5a-35e5-42db-bd36-6c5b9b4b7313_8",
+    "id": "670b3b5a-35e5-42db-bd36-6c5b9b4b7313_9",
     "type": "security-rule"
 }

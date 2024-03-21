@@ -8,7 +8,7 @@
         "index": [
             "winlogbeat-*",
             "logs-endpoint.events.*",
-            "logs-windows.*"
+            "logs-windows.sysmon_operational-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -53,14 +53,15 @@
         ],
         "risk_score": 21,
         "rule_id": "e3cf38fa-d5b8-46cc-87f9-4a7513e4281d",
-        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
+        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "low",
         "tags": [
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Sysmon"
         ],
         "threat": [
             {
@@ -81,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "e3cf38fa-d5b8-46cc-87f9-4a7513e4281d_105",
+    "id": "e3cf38fa-d5b8-46cc-87f9-4a7513e4281d_106",
     "type": "security-rule"
 }

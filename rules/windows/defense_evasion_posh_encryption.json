@@ -10,7 +10,7 @@
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
-            "logs-windows.*"
+            "logs-windows.powershell*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -80,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 5
+        "version": 6
     },
-    "id": "1d9aeb0b-9549-46f6-a32d-05e2a001b7fd_5",
+    "id": "1d9aeb0b-9549-46f6-a32d-05e2a001b7fd_6",
     "type": "security-rule"
 }

@@ -8,7 +8,7 @@
         "index": [
             "winlogbeat-*",
             "logs-endpoint.events.*",
-            "logs-windows.*"
+            "logs-windows.sysmon_operational-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -76,7 +76,8 @@
             "Tactic: Defense Evasion",
             "Tactic: Command and Control",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Sysmon"
         ],
         "threat": [
             {
@@ -125,8 +126,8 @@
             }
         ],
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "52aaab7b-b51c-441a-89ce-4387b3aea886_107",
+    "id": "52aaab7b-b51c-441a-89ce-4387b3aea886_108",
     "type": "security-rule"
 }

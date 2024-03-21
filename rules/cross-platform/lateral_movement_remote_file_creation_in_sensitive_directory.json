@@ -11,8 +11,8 @@
         "interval": "5m",
         "language": "eql",
         "license": "Elastic License v2",
-        "name": "Remote File Creation on a Sensitive Directory",
-        "query": "file where (event.action == \"creation\" or event.action == \"modification\") and\nprocess.name:(\"System\", \"scp\", \"sshd\", \"smbd\", \"vsftpd\", \"sftp-server\") and not\nuser.name:(\"SYSTEM\", \"root\") and\n(file.path : (\"C*\\\\Users\\\\*\\\\AppData\\\\Roaming*\", \"C*\\\\Program*Files\\\\*\",\n    \"C*\\\\Windows\\\\*\", \"C*\\\\Windows\\\\System\\\\*\",\n    \"C*\\\\Windows\\\\System32\\\\*\", \"/etc/*\", \"/tmp*\",\n    \"/var/tmp*\", \"/home/*/.*\", \"/home/.*\", \"/usr/bin/*\",\n    \"/sbin/*\", \"/bin/*\", \"/usr/lib/*\", \"/usr/sbin/*\",\n    \"/usr/share/*\", \"/usr/local/*\", \"/var/lib/dpkg/*\",\n    \"/lib/systemd/*\"\n    )\n)\n",
+        "name": "Deprecated - Remote File Creation on a Sensitive Directory",
+        "query": "file where event.action in (\"creation\", \"modification\") and\n  not user.name:(\"SYSTEM\", \"root\") and\n  process.name in (\"System\", \"scp\", \"sshd\", \"smbd\", \"vsftpd\", \"sftp-server\") and\n  (\n    file.path : (\n        \"?:\\\\Users\\\\*\\\\AppData\\\\Roaming*\", \"?:\\\\Program Files*\",\n        \"?:\\\\Windows\\\\*\", \"?:\\\\Windows\\\\System\\\\*\",\n        \"?:\\\\Windows\\\\System32\\\\*\", \"/etc/*\", \"/tmp*\",\n        \"/var/tmp*\", \"/home/*/.*\", \"/home/.*\", \"/usr/bin/*\",\n        \"/sbin/*\", \"/bin/*\", \"/usr/lib/*\", \"/usr/sbin/*\",\n        \"/usr/share/*\", \"/usr/local/*\", \"/var/lib/dpkg/*\",\n        \"/lib/systemd/*\"\n    )\n)\n",
         "references": [
             "https://www.elastic.co/es/blog/remote-desktop-protocol-connections-elastic-security"
         ],
@@ -72,8 +72,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "2377946d-0f01-4957-8812-6878985f515d_1",
+    "id": "2377946d-0f01-4957-8812-6878985f515d_2",
     "type": "security-rule"
 }

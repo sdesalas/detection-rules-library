@@ -55,7 +55,7 @@
         ],
         "risk_score": 47,
         "rule_id": "92d3a04e-6487-4b62-892d-70e640a590dc",
-        "setup": "\nThe 'Filtering Platform Connection' logging policy must be configured for (Success, Failure).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nObject Access >\nFiltering Platform Connection (Success,Failure)\n```\n",
+        "setup": "## Setup\n\nThe 'Filtering Platform Connection' logging policy must be configured for (Success, Failure).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nObject Access >\nFiltering Platform Connection (Success,Failure)\n```\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -89,8 +89,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "92d3a04e-6487-4b62-892d-70e640a590dc_1",
+    "id": "92d3a04e-6487-4b62-892d-70e640a590dc_2",
     "type": "security-rule"
 }

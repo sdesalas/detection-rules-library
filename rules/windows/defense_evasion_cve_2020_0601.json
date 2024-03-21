@@ -6,7 +6,8 @@
         "description": "A spoofing vulnerability exists in the way Windows CryptoAPI (Crypt32.dll) validates Elliptic Curve Cryptography (ECC) certificates. An attacker could exploit the vulnerability by using a spoofed code-signing certificate to sign a malicious executable, making it appear the file was from a trusted, legitimate source.",
         "index": [
             "winlogbeat-*",
-            "logs-windows.*"
+            "logs-windows.*",
+            "logs-system.security*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -71,8 +72,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 103
+        "version": 104
     },
-    "id": "56557cde-d923-4b88-adee-c61b3f3b5dc3_103",
+    "id": "56557cde-d923-4b88-adee-c61b3f3b5dc3_104",
     "type": "security-rule"
 }

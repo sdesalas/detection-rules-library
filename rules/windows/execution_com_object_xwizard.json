@@ -9,12 +9,13 @@
             "winlogbeat-*",
             "logs-endpoint.events.*",
             "logs-windows.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-system.security*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Execution of COM object via Xwizard",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n process.pe.original_file_name : \"xwizard.exe\" and\n (\n   (process.args : \"RunWizard\" and process.args : \"{*}\") or\n   (process.executable != null and\n     not process.executable : (\"C:\\\\Windows\\\\SysWOW64\\\\xwizard.exe\", \"C:\\\\Windows\\\\System32\\\\xwizard.exe\")\n   )\n )\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n (process.name : \"xwizard.exe\" or ?process.pe.original_file_name : \"xwizard.exe\") and\n (\n   (process.args : \"RunWizard\" and process.args : \"{*}\") or\n   (process.executable != null and\n     not process.executable : (\"C:\\\\Windows\\\\SysWOW64\\\\xwizard.exe\", \"C:\\\\Windows\\\\System32\\\\xwizard.exe\")\n   )\n )\n",
         "references": [
             "https://lolbas-project.github.io/lolbas/Binaries/Xwizard/",
             "http://www.hexacorn.com/blog/2017/07/31/the-wizard-of-x-oppa-plugx-style/"
@@ -52,13 +53,18 @@
             },
             {
                 "ecs": true,
+                "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "process.pe.original_file_name",
                 "type": "keyword"
             }
         ],
         "risk_score": 47,
         "rule_id": "1a6075b0-7479-450e-8fe7-b8b8438ac570",
-        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
+        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -94,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "1a6075b0-7479-450e-8fe7-b8b8438ac570_107",
+    "id": "1a6075b0-7479-450e-8fe7-b8b8438ac570_108",
     "type": "security-rule"
 }

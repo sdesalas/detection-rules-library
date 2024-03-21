@@ -7,7 +7,7 @@
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
-            "logs-windows.*"
+            "logs-windows.sysmon_operational-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -53,7 +53,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Data Source: Sysmon Only"
+            "Data Source: Sysmon"
         ],
         "threat": [
             {
@@ -81,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "e72f87d0-a70e-4f8d-8443-a6407bc34643_105",
+    "id": "e72f87d0-a70e-4f8d-8443-a6407bc34643_106",
     "type": "security-rule"
 }

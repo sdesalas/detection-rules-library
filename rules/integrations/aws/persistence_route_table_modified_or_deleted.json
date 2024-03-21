@@ -18,7 +18,7 @@
         "license": "Elastic License v2",
         "name": "AWS Route Table Modified or Deleted",
         "note": "",
-        "query": "event.dataset:aws.cloudtrail and event.provider:cloudtrail.amazonaws.com and event.action:(ReplaceRoute or ReplaceRouteTableAssociation or\nDeleteRouteTable or DeleteRoute or DisassociateRouteTable) and event.outcome:success\n",
+        "query": "event.dataset:aws.cloudtrail and event.provider:ec2.amazonaws.com and event.action:(ReplaceRoute or ReplaceRouteTableAssociation or\nDeleteRouteTable or DeleteRoute or DisassociateRouteTable) and event.outcome:success\n",
         "references": [
             "https://github.com/easttimor/aws-incident-response#network-routing",
             "https://docs.datadoghq.com/security_platform/default_rules/aws-ec2-route-table-modified/",
@@ -81,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 205
+        "version": 206
     },
-    "id": "e7cd5982-17c8-4959-874c-633acde7d426_205",
+    "id": "e7cd5982-17c8-4959-874c-633acde7d426_206",
     "type": "security-rule"
 }

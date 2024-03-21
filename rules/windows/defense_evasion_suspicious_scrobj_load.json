@@ -63,7 +63,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Sysmon"
         ],
         "threat": [
             {
@@ -91,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "4ed678a9-3a4f-41fb-9fea-f85a6e0a0dff_106",
+    "id": "4ed678a9-3a4f-41fb-9fea-f85a6e0a0dff_107",
     "type": "security-rule"
 }

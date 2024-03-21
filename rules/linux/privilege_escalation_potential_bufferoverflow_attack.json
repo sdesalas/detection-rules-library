@@ -26,7 +26,7 @@
         ],
         "risk_score": 21,
         "rule_id": "b7c05aaf-78c2-4558-b069-87fa25973489",
-        "setup": "\nThis rule leverages alert data from other prebuilt detection rules to function correctly. \n\n### Dependent Elastic Detection Rule Enablement\nAs a higher-order rule (based on other detections), this rule also requires the following prerequisite Elastic detection rule to be installed and enabled:\n- Segfault Detected (5c81fc9d-1eae-437f-ba07-268472967013)\n\n",
+        "setup": "## Setup\n\n\nThis rule leverages alert data from other prebuilt detection rules to function correctly. \n\n### Dependent Elastic Detection Rule Enablement\nAs a higher-order rule (based on other detections), this rule also requires the following prerequisite Elastic detection rule to be installed and enabled:\n- Segfault Detected (5c81fc9d-1eae-437f-ba07-268472967013)\n",
         "severity": "low",
         "tags": [
             "Domain: Endpoint",
@@ -78,8 +78,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 1
+        "version": 2
     },
-    "id": "b7c05aaf-78c2-4558-b069-87fa25973489_1",
+    "id": "b7c05aaf-78c2-4558-b069-87fa25973489_2",
     "type": "security-rule"
 }

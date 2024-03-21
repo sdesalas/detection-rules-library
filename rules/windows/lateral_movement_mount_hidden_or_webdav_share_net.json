@@ -9,12 +9,13 @@
             "logs-endpoint.events.*",
             "winlogbeat-*",
             "logs-windows.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-system.security*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Mounting Hidden or WebDav Remote Shares",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n ((process.name : \"net.exe\" or process.pe.original_file_name == \"net.exe\") or ((process.name : \"net1.exe\" or process.pe.original_file_name == \"net1.exe\") and\n not process.parent.name : \"net.exe\")) and\n process.args : \"use\" and\n /* including hidden and webdav based online shares such as onedrive  */\n process.args : (\"\\\\\\\\*\\\\*$*\", \"\\\\\\\\*@SSL\\\\*\", \"http*\") and\n /* excluding shares deletion operation */\n not process.args : \"/d*\"\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n ((process.name : \"net.exe\" or ?process.pe.original_file_name == \"net.exe\") or ((process.name : \"net1.exe\" or ?process.pe.original_file_name == \"net1.exe\") and\n not process.parent.name : \"net.exe\")) and\n process.args : \"use\" and\n /* including hidden and webdav based online shares such as onedrive  */\n process.args : (\"\\\\\\\\*\\\\*$*\", \"\\\\\\\\*@SSL\\\\*\", \"http*\") and\n /* excluding shares deletion operation */\n not process.args : \"/d*\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -59,7 +60,7 @@
         ],
         "risk_score": 47,
         "rule_id": "c4210e1c-64f2-4f48-b67e-b5a8ffe3aa14",
-        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
+        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -145,8 +146,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "c4210e1c-64f2-4f48-b67e-b5a8ffe3aa14_107",
+    "id": "c4210e1c-64f2-4f48-b67e-b5a8ffe3aa14_108",
     "type": "security-rule"
 }

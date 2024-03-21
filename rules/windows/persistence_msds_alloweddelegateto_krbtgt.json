@@ -47,7 +47,7 @@
         ],
         "risk_score": 73,
         "rule_id": "e052c845-48d0-4f46-8a13-7d0aba05df82",
-        "setup": "\nThe 'Audit User Account Management' logging policy must be configured for (Success, Failure).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nAccount Management >\nAudit User Account Management (Success,Failure)\n```\n",
+        "setup": "## Setup\n\nThe 'Audit User Account Management' logging policy must be configured for (Success, Failure).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nAccount Management >\nAudit User Account Management (Success,Failure)\n```\n",
         "severity": "high",
         "tags": [
             "Domain: Endpoint",
@@ -91,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 107
     },
-    "id": "e052c845-48d0-4f46-8a13-7d0aba05df82_106",
+    "id": "e052c845-48d0-4f46-8a13-7d0aba05df82_107",
     "type": "security-rule"
 }

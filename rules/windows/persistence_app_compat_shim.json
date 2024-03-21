@@ -8,7 +8,7 @@
         "index": [
             "logs-endpoint.events.registry*",
             "winlogbeat-*",
-            "logs-windows.*"
+            "logs-windows.sysmon_operational-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -54,7 +54,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Sysmon"
         ],
         "threat": [
             {
@@ -82,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "c5ce48a6-7f57-4ee8-9313-3d0024caee10_106",
+    "id": "c5ce48a6-7f57-4ee8-9313-3d0024caee10_107",
     "type": "security-rule"
 }

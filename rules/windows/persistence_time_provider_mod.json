@@ -7,7 +7,8 @@
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-windows.sysmon_operational-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -60,7 +61,8 @@
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Sysmon"
         ],
         "threat": [
             {
@@ -110,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "14ed1aa9-ebfd-4cf9-a463-0ac59ec55204_107",
+    "id": "14ed1aa9-ebfd-4cf9-a463-0ac59ec55204_108",
     "type": "security-rule"
 }

@@ -9,7 +9,8 @@
             "winlogbeat-*",
             "logs-endpoint.events.*",
             "logs-windows.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-system.security*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -44,7 +45,7 @@
         ],
         "risk_score": 47,
         "rule_id": "32c5cf9c-2ef8-4e87-819e-5ccb7cd18b14",
-        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
+        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -80,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "32c5cf9c-2ef8-4e87-819e-5ccb7cd18b14_107",
+    "id": "32c5cf9c-2ef8-4e87-819e-5ccb7cd18b14_108",
     "type": "security-rule"
 }

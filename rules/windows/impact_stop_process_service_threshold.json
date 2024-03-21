@@ -9,7 +9,8 @@
             "winlogbeat-*",
             "logs-endpoint.events.*",
             "logs-windows.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-system.security*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -98,8 +99,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 107
+        "version": 108
     },
-    "id": "035889c4-2686-4583-a7df-67f89c292f2c_107",
+    "id": "035889c4-2686-4583-a7df-67f89c292f2c_108",
     "type": "security-rule"
 }

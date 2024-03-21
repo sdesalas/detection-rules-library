@@ -7,12 +7,13 @@
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-windows.sysmon_operational-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Privilege Escalation via Windir Environment Variable",
-        "query": "registry where host.os.type == \"windows\" and registry.path : (\n    \"HKEY_USERS\\\\*\\\\Environment\\\\windir\",\n    \"HKEY_USERS\\\\*\\\\Environment\\\\systemroot\",\n    \"\\\\REGISTRY\\\\USER\\\\*\\\\Environment\\\\windir\",\n    \"\\\\REGISTRY\\\\USER\\\\*\\\\Environment\\\\systemroot\"\n    ) and\n not registry.data.strings : (\"C:\\\\windows\", \"%SystemRoot%\")\n",
+        "query": "registry where host.os.type == \"windows\" and registry.path : (\n    \"HKEY_USERS\\\\*\\\\Environment\\\\windir\",\n    \"HKEY_USERS\\\\*\\\\Environment\\\\systemroot\",\n    \"HKU\\\\*\\\\Environment\\\\windir\",\n    \"HKU\\\\*\\\\Environment\\\\systemroot\",\n    \"\\\\REGISTRY\\\\USER\\\\*\\\\Environment\\\\windir\",\n    \"\\\\REGISTRY\\\\USER\\\\*\\\\Environment\\\\systemroot\"\n    ) and\n not registry.data.strings : (\"C:\\\\windows\", \"%SystemRoot%\")\n",
         "references": [
             "https://www.tiraniddo.dev/2017/05/exploiting-environment-variables-in.html"
         ],
@@ -48,7 +49,8 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Sysmon"
         ],
         "threat": [
             {
@@ -76,8 +78,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "d563aaba-2e72-462b-8658-3e5ea22db3a6_104",
+    "id": "d563aaba-2e72-462b-8658-3e5ea22db3a6_105",
     "type": "security-rule"
 }
