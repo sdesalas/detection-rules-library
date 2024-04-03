@@ -6,7 +6,7 @@
         "description": "Identifies processes modifying the services registry key directly, instead of through the expected Windows APIs. This could be an indication of an adversary attempting to stealthily persist through abnormal service creation or modification of an existing service.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.registry-*",
             "endgame-*",
             "logs-windows.sysmon_operational-*"
         ],
@@ -106,8 +106,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "403ef0d3-8259-40c9-a5b6-d48354712e49_107",
+    "id": "403ef0d3-8259-40c9-a5b6-d48354712e49_108",
     "type": "security-rule"
 }

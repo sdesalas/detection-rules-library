@@ -6,7 +6,7 @@
         "description": "This rule detects the Active Directory query tool, AdFind.exe. AdFind has legitimate purposes, but it is frequently leveraged by threat actors to perform post-exploitation Active Directory reconnaissance. The AdFind tool has been observed in Trickbot, Ryuk, Maze, and FIN6 campaigns. For Winlogbeat, this rule requires Sysmon.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
             "winlogbeat-*",
             "logs-windows.*",
             "endgame-*",
@@ -132,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "eda499b8-a073-4e35-9733-22ec71f57f3a_110",
+    "id": "eda499b8-a073-4e35-9733-22ec71f57f3a_111",
     "type": "security-rule"
 }

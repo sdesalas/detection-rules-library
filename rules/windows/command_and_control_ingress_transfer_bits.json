@@ -6,7 +6,7 @@
         "description": "Identifies downloads of executable and archive files via the Windows Background Intelligent Transfer Service (BITS). Adversaries could leverage Windows BITS transfer jobs to download remote payloads.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -109,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "f95972d3-c23b-463b-89a8-796b3f369b49_6",
+    "id": "f95972d3-c23b-463b-89a8-796b3f369b49_7",
     "type": "security-rule"
 }

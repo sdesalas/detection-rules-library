@@ -8,7 +8,7 @@
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
             "logs-windows.*",
             "endgame-*",
             "logs-system.security*"
@@ -98,8 +98,8 @@
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "fd70c98a-c410-42dc-a2e3-761c71848acf_107",
+    "id": "fd70c98a-c410-42dc-a2e3-761c71848acf_108",
     "type": "security-rule"
 }

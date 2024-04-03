@@ -6,7 +6,7 @@
         "description": "Detects changes to registry persistence keys that are not commonly used or modified by legitimate programs. This could be an indication of an adversary's attempt to persist in a stealthy manner.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.registry*",
+            "logs-endpoint.events.registry-*",
             "logs-windows.sysmon_operational-*"
         ],
         "language": "eql",
@@ -120,8 +120,8 @@
         "timeline_title": "Comprehensive Registry Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "54902e45-3467-49a4-8abc-529f2c8cfb80_106",
+    "id": "54902e45-3467-49a4-8abc-529f2c8cfb80_107",
     "type": "security-rule"
 }

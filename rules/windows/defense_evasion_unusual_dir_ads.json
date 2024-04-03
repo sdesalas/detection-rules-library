@@ -6,7 +6,7 @@
         "description": "Identifies processes running from an Alternate Data Stream. This is uncommon for legitimate processes and sometimes done by adversaries to hide malware.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
             "winlogbeat-*",
             "logs-windows.sysmon_operational-*",
             "endgame-*"
@@ -86,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "4bd1c1af-79d4-4d37-9efa-6e0240640242_108",
+    "id": "4bd1c1af-79d4-4d37-9efa-6e0240640242_109",
     "type": "security-rule"
 }

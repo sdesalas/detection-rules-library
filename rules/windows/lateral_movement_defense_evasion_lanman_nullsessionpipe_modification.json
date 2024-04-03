@@ -6,7 +6,7 @@
         "description": "Identifies NullSessionPipe registry modifications that specify which pipes can be accessed anonymously. This could be indicative of adversary lateral movement preparation by making the added pipe available to everyone.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.registry-*",
             "endgame-*",
             "logs-windows.sysmon_operational-*"
         ],
@@ -100,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "ddab1f5f-7089-44f5-9fda-de5b11322e77_107",
+    "id": "ddab1f5f-7089-44f5-9fda-de5b11322e77_108",
     "type": "security-rule"
 }

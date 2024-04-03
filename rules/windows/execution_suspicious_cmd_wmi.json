@@ -6,7 +6,7 @@
         "description": "Identifies suspicious command execution (cmd) via Windows Management Instrumentation (WMI) on a remote host. This could be indicative of adversary lateral movement.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
             "winlogbeat-*",
             "logs-windows.*",
             "endgame-*",
@@ -100,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "12f07955-1674-44f7-86b5-c35da0a6f41a_110",
+    "id": "12f07955-1674-44f7-86b5-c35da0a6f41a_111",
     "type": "security-rule"
 }

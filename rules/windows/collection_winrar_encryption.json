@@ -6,7 +6,7 @@
         "description": "Identifies use of WinRar or 7z to create an encrypted files. Adversaries will often compress and encrypt data in preparation for exfiltration.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
             "winlogbeat-*",
             "logs-windows.*",
             "endgame-*"
@@ -110,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "45d273fb-1dca-457d-9855-bcb302180c21_110",
+    "id": "45d273fb-1dca-457d-9855-bcb302180c21_111",
     "type": "security-rule"
 }

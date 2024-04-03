@@ -6,7 +6,7 @@
         "description": "Identifies modifications to the Windows Defender registry settings to disable the service or set the service to be started manually.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.registry-*",
             "endgame-*",
             "logs-windows.sysmon_operational-*"
         ],
@@ -106,8 +106,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "2ffa1f1e-b6db-47fa-994b-1512743847eb_110",
+    "id": "2ffa1f1e-b6db-47fa-994b-1512743847eb_111",
     "type": "security-rule"
 }

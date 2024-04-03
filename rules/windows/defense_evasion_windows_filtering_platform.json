@@ -7,7 +7,7 @@
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
-            "logs-windows.*",
+            "logs-windows.network-*",
             "logs-system.security-*"
         ],
         "language": "eql",
@@ -89,8 +89,8 @@
             }
         ],
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "92d3a04e-6487-4b62-892d-70e640a590dc_2",
+    "id": "92d3a04e-6487-4b62-892d-70e640a590dc_3",
     "type": "security-rule"
 }

@@ -6,7 +6,7 @@
         "description": "Identifies suspicious instances of communications apps, both unsigned and renamed ones, that can indicate an attempt to conceal malicious activity, bypass security features such as allowlists, or trick users into executing malware.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -101,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "c9482bfa-a553-4226-8ea2-4959bd4f7923_4",
+    "id": "c9482bfa-a553-4226-8ea2-4959bd4f7923_5",
     "type": "security-rule"
 }

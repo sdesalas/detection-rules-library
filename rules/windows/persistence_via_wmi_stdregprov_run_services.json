@@ -6,7 +6,7 @@
         "description": "Identifies use of the Windows Management Instrumentation StdRegProv (registry provider) to modify commonly abused registry locations for persistence.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.registry-*",
             "endgame-*"
         ],
         "language": "eql",
@@ -110,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "70d12c9c-0dbd-4a1a-bc44-1467502c9cf6_107",
+    "id": "70d12c9c-0dbd-4a1a-bc44-1467502c9cf6_108",
     "type": "security-rule"
 }

@@ -6,7 +6,7 @@
         "description": "Identifies modifications to the registered Subject Interface Package (SIP) providers. SIP providers are used by the Windows cryptographic system to validate file signatures on the system. This may be an attempt to bypass signature validation checks or inject code into critical processes.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.registry-*",
             "endgame-*",
             "logs-windows.sysmon_operational-*"
         ],
@@ -83,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "f2c7b914-eda3-40c2-96ac-d23ef91776ca_106",
+    "id": "f2c7b914-eda3-40c2-96ac-d23ef91776ca_107",
     "type": "security-rule"
 }

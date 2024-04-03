@@ -7,7 +7,7 @@
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
             "logs-windows.*",
             "endgame-*",
             "logs-system.security*"
@@ -15,7 +15,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Application Shimming via Sdbinst",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and process.name : \"sdbinst.exe\" and\n  not (process.args : \"-m\" and process.args : \"-bg\") and\n  not process.args : \"-mm\"\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and process.name : \"sdbinst.exe\" and\n  process.args : \"?*\" and\n  not (process.args : \"-m\" and process.args : \"-bg\") and\n  not process.args : \"-mm\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -112,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "fd4a992d-6130-4802-9ff8-829b89ae801f_109",
+    "id": "fd4a992d-6130-4802-9ff8-829b89ae801f_110",
     "type": "security-rule"
 }

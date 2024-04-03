@@ -6,7 +6,7 @@
         "description": "Detects attempts to exploit privilege escalation vulnerabilities related to the Print Spooler service including CVE-2020-1048 and CVE-2020-1337.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.file-*",
             "endgame-*"
         ],
         "language": "eql",
@@ -93,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "a7ccae7b-9d2c-44b2-a061-98e5946971fa_110",
+    "id": "a7ccae7b-9d2c-44b2-a061-98e5946971fa_111",
     "type": "security-rule"
 }

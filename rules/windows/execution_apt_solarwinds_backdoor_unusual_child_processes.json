@@ -9,7 +9,7 @@
         ],
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
             "endgame-*"
         ],
         "language": "eql",
@@ -111,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "93b22c0a-06a0-4131-b830-b10d5e166ff4_109",
+    "id": "93b22c0a-06a0-4131-b830-b10d5e166ff4_110",
     "type": "security-rule"
 }

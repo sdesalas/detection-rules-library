@@ -6,7 +6,7 @@
         "description": "Identifies Service Control (sc.exe) spawning from script interpreter processes to create, modify, or start services. This can potentially indicate an attempt to elevate privileges or maintain persistence.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
             "logs-system.*",
             "winlogbeat-*",
             "logs-windows.*",
@@ -172,8 +172,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "e8571d5f-bea1-46c2-9f56-998de2d3ed95_107",
+    "id": "e8571d5f-bea1-46c2-9f56-998de2d3ed95_108",
     "type": "security-rule"
 }

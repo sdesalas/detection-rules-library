@@ -10,7 +10,7 @@
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
             "logs-windows.*",
             "logs-system.security*"
         ],
@@ -108,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "ee5300a7-7e31-4a72-a258-250abb8b3aa1_107",
+    "id": "ee5300a7-7e31-4a72-a258-250abb8b3aa1_108",
     "type": "security-rule"
 }

@@ -6,7 +6,7 @@
         "description": "Identifies unusual instances of Control Panel with suspicious keywords or paths in the process command line value. Adversaries may abuse control.exe to proxy execution of malicious code.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
             "winlogbeat-*",
             "logs-windows.*",
             "endgame-*",
@@ -94,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "416697ae-e468-4093-a93d-59661fa619ec_110",
+    "id": "416697ae-e468-4093-a93d-59661fa619ec_111",
     "type": "security-rule"
 }

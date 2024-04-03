@@ -6,7 +6,7 @@
         "description": "Identifies attempt to load an untrusted driver. Adversaries may modify code signing policies to enable execution of unsigned or self-signed code.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.library-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -82,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "d8ab1ec1-feeb-48b9-89e7-c12e189448aa_6",
+    "id": "d8ab1ec1-feeb-48b9-89e7-c12e189448aa_7",
     "type": "security-rule"
 }

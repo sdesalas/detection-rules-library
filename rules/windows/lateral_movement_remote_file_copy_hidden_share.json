@@ -6,7 +6,7 @@
         "description": "Identifies a remote file copy attempt to a hidden network share. This may indicate lateral movement or data staging activity.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
             "winlogbeat-*",
             "logs-windows.*",
             "endgame-*",
@@ -86,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "fa01341d-6662-426b-9d0c-6d81e33c8a9d_108",
+    "id": "fa01341d-6662-426b-9d0c-6d81e33c8a9d_109",
     "type": "security-rule"
 }

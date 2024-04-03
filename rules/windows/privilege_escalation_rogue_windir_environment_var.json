@@ -6,7 +6,7 @@
         "description": "Identifies a privilege escalation attempt via a rogue Windows directory (Windir) environment variable. This is a known primitive that is often combined with other vulnerabilities to elevate privileges.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.registry-*",
             "endgame-*",
             "logs-windows.sysmon_operational-*"
         ],
@@ -78,8 +78,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "d563aaba-2e72-462b-8658-3e5ea22db3a6_105",
+    "id": "d563aaba-2e72-462b-8658-3e5ea22db3a6_106",
     "type": "security-rule"
 }

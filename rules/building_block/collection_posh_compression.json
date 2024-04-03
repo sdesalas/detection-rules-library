@@ -5,6 +5,60 @@
         ],
         "building_block_type": "default",
         "description": "Identifies the use of Cmdlets and methods related to archive compression activities. Adversaries will often compress and encrypt data in preparation for exfiltration.",
+        "filters": [
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\ProgramData\\\\Microsoft\\\\Windows Defender Advanced Threat Protection\\\\Downloads\\\\*"
+                        }
+                    }
+                }
+            },
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\ProgramData\\\\Microsoft\\\\Windows Defender Advanced Threat Protection\\\\DataCollection\\\\*"
+                        }
+                    }
+                }
+            },
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\Program Files\\\\Microsoft Dependency Agent\\\\plugins\\\\*"
+                        }
+                    }
+                }
+            },
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\Program Files\\\\Azure\\\\StorageSyncAgent\\\\AFSDiag.ps1"
+                        }
+                    }
+                }
+            }
+        ],
         "from": "now-119m",
         "index": [
             "winlogbeat-*",
@@ -14,7 +68,7 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "PowerShell Script with Archive Compression Capabilities",
-        "query": "event.category:process and host.os.type:windows and\n(\n  powershell.file.script_block_text : (\n    \"IO.Compression.ZipFile\" or\n    \"IO.Compression.ZipArchive\" or\n    \"ZipFile.CreateFromDirectory\" or\n    \"IO.Compression.BrotliStream\" or\n    \"IO.Compression.DeflateStream\" or\n    \"IO.Compression.GZipStream\" or\n    \"IO.Compression.ZLibStream\"\n  ) and \n  powershell.file.script_block_text : (\n    \"CompressionLevel\" or\n    \"CompressionMode\" or\n    \"ZipArchiveMode\"\n  ) or\n  powershell.file.script_block_text : \"Compress-Archive\"\n) and \n  not file.path : (\n        ?\\:\\\\\\\\ProgramData\\\\\\\\Microsoft\\\\\\\\Windows?Defender?Advanced?Threat?Protection\\\\\\\\Downloads\\\\\\\\* or\n        ?\\:\\\\\\\\ProgramData\\\\\\\\Microsoft\\\\\\\\Windows?Defender?Advanced?Threat?Protection\\\\\\\\DataCollection\\\\\\\\* or\n        ?\\:\\\\\\\\Program?Files\\\\\\\\Microsoft?Dependency?Agent\\\\\\\\plugins\\\\\\\\* or\n        ?\\:\\\\\\\\Program?Files\\\\\\\\Azure\\\\\\\\StorageSyncAgent\\\\\\\\AFSDiag.ps1\n      )\n",
+        "query": "event.category:process and host.os.type:windows and\n(\n  powershell.file.script_block_text : (\n    \"IO.Compression.ZipFile\" or\n    \"IO.Compression.ZipArchive\" or\n    \"ZipFile.CreateFromDirectory\" or\n    \"IO.Compression.BrotliStream\" or\n    \"IO.Compression.DeflateStream\" or\n    \"IO.Compression.GZipStream\" or\n    \"IO.Compression.ZLibStream\"\n  ) and \n  powershell.file.script_block_text : (\n    \"CompressionLevel\" or\n    \"CompressionMode\" or\n    \"ZipArchiveMode\"\n  ) or\n  powershell.file.script_block_text : \"Compress-Archive\"\n)\n",
         "related_integrations": [
             {
                 "package": "windows",
@@ -25,11 +79,6 @@
             {
                 "ecs": true,
                 "name": "event.category",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "file.path",
                 "type": "keyword"
             },
             {
@@ -96,8 +145,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 5
+        "version": 105
     },
-    "id": "27071ea3-e806-4697-8abc-e22c92aa4293_5",
+    "id": "27071ea3-e806-4697-8abc-e22c92aa4293_105",
     "type": "security-rule"
 }

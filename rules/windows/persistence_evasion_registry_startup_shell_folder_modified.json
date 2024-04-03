@@ -6,7 +6,7 @@
         "description": "Identifies suspicious startup shell folder modifications to change the default Startup directory in order to bypass detections monitoring file creation in the Windows Startup folder.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.registry-*",
             "endgame-*",
             "logs-windows.sysmon_operational-*"
         ],
@@ -93,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "c8b150f0-0164-475b-a75e-74b47800a9ff_109",
+    "id": "c8b150f0-0164-475b-a75e-74b47800a9ff_110",
     "type": "security-rule"
 }

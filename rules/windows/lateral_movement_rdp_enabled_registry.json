@@ -6,7 +6,7 @@
         "description": "Identifies registry write modifications to enable Remote Desktop Protocol (RDP) access. This could be indicative of adversary lateral movement preparation.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.registry-*",
             "winlogbeat-*",
             "logs-windows.sysmon_operational-*",
             "endgame-*"
@@ -109,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "58aa72ca-d968-4f34-b9f7-bea51d75eb50_110",
+    "id": "58aa72ca-d968-4f34-b9f7-bea51d75eb50_111",
     "type": "security-rule"
 }

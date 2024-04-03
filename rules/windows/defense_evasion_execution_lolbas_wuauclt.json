@@ -6,7 +6,7 @@
         "description": "Identifies abuse of the Windows Update Auto Update Client (wuauclt.exe) to load an arbitrary DLL. This behavior is used as a defense evasion technique to blend-in malicious activity with legitimate Windows software.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
             "winlogbeat-*",
             "logs-windows.*",
             "endgame-*",
@@ -95,8 +95,8 @@
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "edf8ee23-5ea7-4123-ba19-56b41e424ae3_111",
+    "id": "edf8ee23-5ea7-4123-ba19-56b41e424ae3_112",
     "type": "security-rule"
 }

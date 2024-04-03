@@ -6,7 +6,7 @@
         "description": "Identifies execution from the Remote Desktop Protocol (RDP) shared mountpoint tsclient on the target host. This may indicate a lateral movement attempt.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
             "winlogbeat-*",
             "logs-windows.*",
             "endgame-*",
@@ -84,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "4fe9d835-40e1-452d-8230-17c147cafad8_108",
+    "id": "4fe9d835-40e1-452d-8230-17c147cafad8_109",
     "type": "security-rule"
 }
