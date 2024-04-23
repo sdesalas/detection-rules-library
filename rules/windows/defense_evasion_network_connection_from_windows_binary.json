@@ -6,7 +6,8 @@
         "description": "Identifies network activity from unexpected system applications. This may indicate adversarial activity as these applications are often leveraged by adversaries to execute code and evade detection.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
+            "logs-endpoint.events.network-*",
             "winlogbeat-*",
             "logs-windows.sysmon_operational-*"
         ],
@@ -111,8 +112,8 @@
             }
         ],
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "1fe3b299-fbb5-4657-a937-1d746f2c711a_110",
+    "id": "1fe3b299-fbb5-4657-a937-1d746f2c711a_111",
     "type": "security-rule"
 }

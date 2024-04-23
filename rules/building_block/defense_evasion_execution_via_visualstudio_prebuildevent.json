@@ -7,7 +7,7 @@
         "description": "Identifies the execution of a command via Microsoft Visual Studio Pre or Post build events. Adversaries may backdoor a trusted visual studio project to execute a malicious command during the project build process.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -119,8 +119,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "fec7ccb7-6ed9-4f98-93ab-d6b366b063a0_1",
+    "id": "fec7ccb7-6ed9-4f98-93ab-d6b366b063a0_2",
     "type": "security-rule"
 }

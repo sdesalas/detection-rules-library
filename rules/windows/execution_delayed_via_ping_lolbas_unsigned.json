@@ -3,11 +3,10 @@
         "author": [
             "Elastic"
         ],
-        "building_block_type": "default",
         "description": "Identifies the execution of commonly abused Windows utilities via a delayed Ping execution. This behavior is often observed during malware installation and is consistent with an attacker attempting to evade detection.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -100,8 +99,7 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Tactic: Defense Evasion",
-            "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -202,8 +200,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "e00b8d49-632f-4dc6-94a5-76153a481915_1",
+    "id": "e00b8d49-632f-4dc6-94a5-76153a481915_2",
     "type": "security-rule"
 }

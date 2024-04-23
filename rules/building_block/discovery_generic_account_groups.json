@@ -7,7 +7,7 @@
         "description": "This rule identifies the execution of commands that enumerates account or group information. Adversaries may use built-in applications to get a listing of local system or domain accounts and groups.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -125,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "089db1af-740d-4d84-9a5b-babd6de143b0_3",
+    "id": "089db1af-740d-4d84-9a5b-babd6de143b0_4",
     "type": "security-rule"
 }

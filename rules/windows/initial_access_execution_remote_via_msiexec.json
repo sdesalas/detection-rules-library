@@ -6,7 +6,8 @@
         "description": "Identifies the execution of the built-in Windows Installer, msiexec.exe, to install a remote package. Adversaries may abuse msiexec.exe to launch local or network accessible MSI files.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*",
+            "logs-endpoint.events.network-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -138,8 +139,8 @@
             }
         ],
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "3e441bdb-596c-44fd-8628-2cfdf4516ada_2",
+    "id": "3e441bdb-596c-44fd-8628-2cfdf4516ada_3",
     "type": "security-rule"
 }

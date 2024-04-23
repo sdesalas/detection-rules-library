@@ -7,7 +7,7 @@
         "description": "Identifies files written to the root of the Recycle Bin folder instead of subdirectories. Adversaries may place files in the root of the Recycle Bin in preparation for exfiltration or to evade defenses.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file-*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -79,8 +79,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "57bccf1d-daf5-4e1a-9049-ff79b5254704_2",
+    "id": "57bccf1d-daf5-4e1a-9049-ff79b5254704_3",
     "type": "security-rule"
 }

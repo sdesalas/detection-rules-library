@@ -7,7 +7,11 @@
         "description": "This rule identifies the execution of commands that can be used to enumerate running processes. Adversaries may enumerate processes to identify installed applications and security solutions.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*",
+            "logs-system.security*",
+            "winlogbeat-*",
+            "logs-windows.*",
+            "endgame-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -55,7 +59,8 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Rule Type: BBR",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -76,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "4982ac3e-d0ee-4818-b95d-d9522d689259_3",
+    "id": "4982ac3e-d0ee-4818-b95d-d9522d689259_4",
     "type": "security-rule"
 }

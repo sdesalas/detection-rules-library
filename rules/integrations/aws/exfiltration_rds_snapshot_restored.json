@@ -9,7 +9,7 @@
         ],
         "index": [
             "filebeat-*",
-            "logs-aws*"
+            "logs-aws.cloudtrail-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -86,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 205
+        "version": 206
     },
-    "id": "bf1073bf-ce26-4607-b405-ba1ed8e9e204_205",
+    "id": "bf1073bf-ce26-4607-b405-ba1ed8e9e204_206",
     "type": "security-rule"
 }

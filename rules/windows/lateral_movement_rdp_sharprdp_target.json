@@ -6,7 +6,9 @@
         "description": "Identifies potential behavior of SharpRDP, which is a tool that can be used to perform authenticated command execution against a remote target via Remote Desktop Protocol (RDP) for the purposes of lateral movement.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*",
+            "logs-endpoint.events.registry-*",
+            "logs-endpoint.events.network-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -119,8 +121,8 @@
             }
         ],
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "8c81e506-6e82-4884-9b9a-75d3d252f967_105",
+    "id": "8c81e506-6e82-4884-9b9a-75d3d252f967_106",
     "type": "security-rule"
 }

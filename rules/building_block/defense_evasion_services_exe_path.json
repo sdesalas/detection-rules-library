@@ -7,7 +7,7 @@
         "description": "Identifies attempts to modify a service path setting using sc.exe. Attackers may attempt to modify existing services for persistence or privilege escalation.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
             "endgame-*"
         ],
         "interval": "60m",
@@ -113,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "c5677997-f75b-4cda-b830-a75920514096_2",
+    "id": "c5677997-f75b-4cda-b830-a75920514096_3",
     "type": "security-rule"
 }

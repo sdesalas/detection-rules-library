@@ -7,7 +7,11 @@
         "description": "Identifies unusual processes running from the WBEM path, uncommon outside WMI-related Windows processes.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*",
+            "logs-system.security*",
+            "winlogbeat-*",
+            "logs-windows.*",
+            "endgame-*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -51,7 +55,8 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -72,8 +77,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "1f460f12-a3cf-4105-9ebb-f788cc63f365_1",
+    "id": "1f460f12-a3cf-4105-9ebb-f788cc63f365_2",
     "type": "security-rule"
 }

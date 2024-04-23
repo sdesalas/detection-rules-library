@@ -7,7 +7,7 @@
         "description": "Identifies attempts to modify a service path by an unusual process. Attackers may attempt to modify existing services for persistence or privilege escalation.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.registry-*",
             "endgame-*"
         ],
         "interval": "60m",
@@ -118,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "f243fe39-83a4-46f3-a3b6-707557a102df_1",
+    "id": "f243fe39-83a4-46f3-a3b6-707557a102df_2",
     "type": "security-rule"
 }

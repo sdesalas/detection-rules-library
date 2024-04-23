@@ -7,7 +7,7 @@
         "description": "Identifies instances of VLC-related DLLs which are not signed by the original developer. Attackers may name their payload as legitimate applications to blend into the environment, or embedding its malicious code within legitimate applications to deceive machine learning algorithms by incorporating authentic and benign code.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.library-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -104,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "4494c14f-5ff8-4ed2-8e99-bf816a1642fc_2",
+    "id": "4494c14f-5ff8-4ed2-8e99-bf816a1642fc_3",
     "type": "security-rule"
 }

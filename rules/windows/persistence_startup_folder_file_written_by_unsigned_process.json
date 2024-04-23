@@ -6,7 +6,8 @@
         "description": "Identifies files written or modified in the startup folder by unsigned processes. Adversaries may abuse this technique to maintain persistence in an environment.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*",
+            "logs-endpoint.events.file-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -120,8 +121,8 @@
             }
         ],
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "2fba96c0-ade5-4bce-b92f-a5df2509da3f_108",
+    "id": "2fba96c0-ade5-4bce-b92f-a5df2509da3f_109",
     "type": "security-rule"
 }

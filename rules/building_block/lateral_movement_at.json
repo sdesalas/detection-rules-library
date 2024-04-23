@@ -7,7 +7,11 @@
         "description": "Identifies use of at.exe to interact with the task scheduler on remote hosts. Remote task creations, modifications or execution could be indicative of adversary lateral movement.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*",
+            "winlogbeat-*",
+            "logs-windows.*",
+            "endgame-*",
+            "logs-system.security*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -51,7 +55,8 @@
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -99,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "b483365c-98a8-40c0-92d8-0458ca25058a_2",
+    "id": "b483365c-98a8-40c0-92d8-0458ca25058a_3",
     "type": "security-rule"
 }

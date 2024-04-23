@@ -7,7 +7,7 @@
         "description": "This rule identifies the execution of commands that can be used to delete files and directories. Adversaries may delete files and directories on a host system, such as logs, browser history, or malware.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -84,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "5919988c-29e1-4908-83aa-1f087a838f63_2",
+    "id": "5919988c-29e1-4908-83aa-1f087a838f63_3",
     "type": "security-rule"
 }

@@ -7,7 +7,7 @@
         "description": "Attackers may abuse cmd.exe commands to reassemble binary fragments into a malicious payload.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -95,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "53dedd83-1be7-430f-8026-363256395c8b_2",
+    "id": "53dedd83-1be7-430f-8026-363256395c8b_3",
     "type": "security-rule"
 }

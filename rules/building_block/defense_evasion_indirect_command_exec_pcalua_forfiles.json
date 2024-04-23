@@ -7,7 +7,11 @@
         "description": "Identifies indirect command execution via Program Compatibility Assistant (pcalua.exe) or forfiles.exe.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*",
+            "logs-system.security*",
+            "winlogbeat-*",
+            "logs-windows.*",
+            "endgame-*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -46,7 +50,8 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -67,8 +72,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "98843d35-645e-4e66-9d6a-5049acd96ce1_1",
+    "id": "98843d35-645e-4e66-9d6a-5049acd96ce1_2",
     "type": "security-rule"
 }

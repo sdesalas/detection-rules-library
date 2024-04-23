@@ -6,7 +6,8 @@
         "description": "Identifies remote scheduled task creations on a target host. This could be indicative of adversary lateral movement.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.registry-*",
+            "logs-endpoint.events.network-*",
             "winlogbeat-*",
             "logs-windows.sysmon_operational-*"
         ],
@@ -124,8 +125,8 @@
             }
         ],
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "954ee7c8-5437-49ae-b2d6-2960883898e9_107",
+    "id": "954ee7c8-5437-49ae-b2d6-2960883898e9_108",
     "type": "security-rule"
 }

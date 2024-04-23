@@ -5,6 +5,60 @@
         ],
         "building_block_type": "default",
         "description": "Identifies the use of Cmdlets and methods related to Microsoft Exchange Transport Agents install. Adversaries may leverage malicious Microsoft Exchange Transport Agents to execute tasks in response to adversary-defined criteria, establishing persistence.",
+        "filters": [
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\Users\\\\*\\\\AppData\\\\Roaming\\\\Microsoft\\\\Exchange\\\\RemotePowerShell\\\\*"
+                        }
+                    }
+                }
+            },
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\Users\\\\*\\\\AppData\\\\Local\\\\Temp\\\\tmp_????????.???\\\\tmp_????????.???.ps?1"
+                        }
+                    }
+                }
+            },
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\Windows\\\\TEMP\\\\tmp_????????.???\\\\tmp_????????.???.ps?1"
+                        }
+                    }
+                }
+            },
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\Users\\\\*\\\\AppData\\\\Local\\\\Temp\\\\*\\\\tmp_????????.???\\\\tmp_????????.???.ps?1"
+                        }
+                    }
+                }
+            }
+        ],
         "from": "now-119m",
         "index": [
             "winlogbeat-*",
@@ -103,8 +157,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 4
+        "version": 5
     },
-    "id": "846fe13f-6772-4c83-bd39-9d16d4ad1a81_4",
+    "id": "846fe13f-6772-4c83-bd39-9d16d4ad1a81_5",
     "type": "security-rule"
 }

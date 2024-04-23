@@ -6,7 +6,8 @@
         "description": "Identifies Mshta.exe making outbound network connections. This may indicate adversarial activity, as Mshta is often leveraged by adversaries to execute malicious scripts and evade detection.",
         "from": "now-20m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
+            "logs-endpoint.events.network-*",
             "winlogbeat-*",
             "logs-windows.sysmon_operational-*"
         ],
@@ -97,8 +98,8 @@
             }
         ],
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "c2d90150-0133-451c-a783-533e736c12d7_106",
+    "id": "c2d90150-0133-451c-a783-533e736c12d7_107",
     "type": "security-rule"
 }

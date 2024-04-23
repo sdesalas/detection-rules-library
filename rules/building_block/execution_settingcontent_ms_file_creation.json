@@ -5,15 +5,14 @@
         ],
         "building_block_type": "default",
         "description": "Identifies the suspicious creation of SettingContents-ms files, which have been used in attacks to achieve code execution while evading defenses.",
-        "from": "now-119m",
+        "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file-*"
         ],
-        "interval": "60m",
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Creation of SettingContent-ms Files",
-        "query": "file where host.os.type == \"windows\" and event.type == \"creation\" and\n  file.extension : \"settingcontent-ms\" and\n  not file.path : \"?:\\\\Users\\\\*\\\\AppData\\\\Local\\\\Packages\\\\windows.immersivecontrolpanel_*\\\\LocalState\\\\Indexed\\\\Settings\\\\*\"\n",
+        "query": "file where host.os.type == \"windows\" and event.type == \"creation\" and\n  file.extension : \"settingcontent-ms\" and\n  not file.path : (\n    \"?:\\\\*\\\\AppData\\\\Local\\\\Packages\\\\windows.immersivecontrolpanel_*\\\\LocalState\\\\Indexed\\\\Settings\\\\*\",\n    \"\\\\Device\\\\HarddiskVolume*\\\\Windows\\\\WinSxS\\\\amd64_microsoft-windows-s..*\\\\*.settingcontent-ms\"\n  )\n",
         "references": [
             "https://posts.specterops.io/the-tale-of-settingcontent-ms-files-f1ea253e4d39"
         ],
@@ -104,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "1e6363a6-3af5-41d4-b7ea-d475389c0ceb_2",
+    "id": "1e6363a6-3af5-41d4-b7ea-d475389c0ceb_3",
     "type": "security-rule"
 }

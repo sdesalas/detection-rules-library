@@ -6,7 +6,8 @@
         "description": "Identifies the execution of a file that was created by the virtual system process. This may indicate lateral movement via network file shares.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*",
+            "logs-endpoint.events.file-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -116,8 +117,8 @@
             }
         ],
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "ab75c24b-2502-43a0-bf7c-e60e662c811e_110",
+    "id": "ab75c24b-2502-43a0-bf7c-e60e662c811e_111",
     "type": "security-rule"
 }

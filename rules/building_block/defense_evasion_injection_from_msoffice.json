@@ -7,7 +7,7 @@
         "description": "Identifies child processes of frequently targeted Microsoft Office applications (Word, PowerPoint, Excel) with unusual process arguments and path. This behavior is often observed during exploitation of Office applications or from documents with malicious macros.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -126,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "1c5a04ae-d034-41bf-b0d8-96439b5cc774_1",
+    "id": "1c5a04ae-d034-41bf-b0d8-96439b5cc774_2",
     "type": "security-rule"
 }

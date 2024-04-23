@@ -11,7 +11,7 @@
         "from": "now-60m",
         "index": [
             "filebeat-*",
-            "logs-aws*"
+            "logs-aws.cloudtrail-*"
         ],
         "interval": "10m",
         "language": "kuery",
@@ -65,6 +65,7 @@
             "Domain: Cloud",
             "Data Source: AWS",
             "Data Source: Amazon Web Services",
+            "Data Source: AWS Route53",
             "Use Case: Network Security Monitoring",
             "Tactic: Persistence"
         ],
@@ -81,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 206
+        "version": 207
     },
-    "id": "e7cd5982-17c8-4959-874c-633acde7d426_206",
+    "id": "e7cd5982-17c8-4959-874c-633acde7d426_207",
     "type": "security-rule"
 }

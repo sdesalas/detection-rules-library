@@ -6,7 +6,8 @@
         "description": "Identifies unexpected processes making network connections over port 445. Windows File Sharing is typically implemented over Server Message Block (SMB), which communicates between hosts using port 445. When legitimate, these network connections are established by the kernel. Processes making 445/tcp connections may be port scanners, exploits, or suspicious user-level processes moving laterally.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*",
+            "logs-endpoint.events.network-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -112,8 +113,8 @@
             }
         ],
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "c82c7d8f-fb9e-4874-a4bd-fd9e3f9becf1_109",
+    "id": "c82c7d8f-fb9e-4874-a4bd-fd9e3f9becf1_110",
     "type": "security-rule"
 }
