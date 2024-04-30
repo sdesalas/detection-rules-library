@@ -4,7 +4,7 @@
             "Elastic"
         ],
         "description": "This rule monitors for network connections from a kworker process. kworker, or kernel worker, processes are part of the kernel's workqueue mechanism. They are responsible for executing work that has been scheduled to be done in kernel space, which might include tasks like handling interrupts, background activities, and other kernel-related tasks. Attackers may attempt to evade detection by masquerading as a kernel worker process.",
-        "from": "now-60m",
+        "from": "now-9m",
         "history_window_start": "now-14d",
         "index": [
             "logs-endpoint.events.*"
@@ -13,11 +13,11 @@
         "license": "Elastic License v2",
         "name": "Network Activity Detected via Kworker",
         "new_terms_fields": [
-            "host.id",
             "process.name",
-            "destination.ip"
+            "destination.ip",
+            "destination.port"
         ],
-        "query": "host.os.type:linux and event.category:network and event.action:(connection_attempted or connection_accepted) and \nprocess.name:kworker* and not destination.ip:(\n  10.0.0.0/8 or\n  127.0.0.0/8 or\n  169.254.0.0/16 or\n  172.16.0.0/12 or\n  192.168.0.0/16 or\n  224.0.0.0/4 or\n  \"::1\" or\n  \"FE80::/10\" or\n  \"FF00::/8\"\n)\n",
+        "query": "host.os.type:linux and event.category:network and event.action:(connection_attempted or connection_accepted) and \nprocess.name:kworker* and not destination.ip:(\n  10.0.0.0/8 or\n  127.0.0.0/8 or\n  169.254.0.0/16 or\n  172.16.0.0/12 or\n  192.168.0.0/16 or\n  224.0.0.0/4 or\n  \"::1\" or\n  \"FE80::/10\" or\n  \"FF00::/8\"\n) and not destination.port:2049\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -29,6 +29,11 @@
                 "ecs": true,
                 "name": "destination.ip",
                 "type": "ip"
+            },
+            {
+                "ecs": true,
+                "name": "destination.port",
+                "type": "long"
             },
             {
                 "ecs": true,
@@ -110,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "25d917c4-aa3c-4111-974c-286c0312ff95_3",
+    "id": "25d917c4-aa3c-4111-974c-286c0312ff95_4",
     "type": "security-rule"
 }
