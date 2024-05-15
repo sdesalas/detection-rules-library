@@ -3,18 +3,18 @@
         "author": [
             "Elastic"
         ],
-        "description": "Identifies a potential Gatekeeper bypass. In macOS, when applications or programs are downloaded from the internet, there is a quarantine flag set on the file. This attribute is read by Apple's Gatekeeper defense program at execution time. An adversary may disable this attribute to evade defenses.",
+        "description": "Detects deletion of the quarantine attribute by an unusual process (xattr). In macOS, when applications or programs are downloaded from the internet, there is a quarantine flag set on the file. This attribute is read by Apple's Gatekeeper defense program at execution time. An adversary may disable this attribute to evade defenses.",
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
-        "name": "Attempt to Remove File Quarantine Attribute",
-        "query": "process where host.os.type == \"macos\" and event.type in (\"start\", \"process_started\") and\n  process.name : \"xattr\" and\n  (\n    (process.args : \"com.apple.quarantine\" and process.args : (\"-d\", \"-w\")) or\n    (process.args : \"-c\") or\n    (process.command_line : (\"/bin/bash -c xattr -c *\", \"/bin/zsh -c xattr -c *\", \"/bin/sh -c xattr -c *\"))\n  ) and not process.args_count > 12\n",
+        "name": "Quarantine Attrib Removed by Unsigned or Untrusted Process",
+        "query": "file where event.action == \"extended_attributes_delete\" and process.executable != null and\n(process.code_signature.trusted == false or process.code_signature.exists == false) and not\nprocess.executable : (\"/usr/bin/xattr\", \n                      \"/System/*\", \n                      \"/private/tmp/KSInstallAction.*/*/Install Google Software Update.app/Contents/Helpers/ksinstall\",\n                      \"/Applications/CEWE Fotoschau.app/Contents/MacOS/FotoPlus\",\n                      \"/Applications/.com.bomgar.scc.*/Remote Support Customer Client.app/Contents/MacOS/sdcust\") and not\nfile.path : \"/private/var/folders/*\"\n",
         "references": [
-            "https://www.trendmicro.com/en_us/research/20/k/new-macos-backdoor-connected-to-oceanlotus-surfaces.html",
-            "https://ss64.com/osx/xattr.html"
+            "https://nixhacker.com/security-protection-in-macos-1/",
+            "https://eclecticlight.co/2020/10/29/quarantine-and-the-quarantine-flag/"
         ],
         "related_integrations": [
             {
@@ -25,32 +25,27 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.type",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
                 "ecs": true,
-                "name": "host.os.type",
+                "name": "file.path",
                 "type": "keyword"
             },
             {
                 "ecs": true,
-                "name": "process.args",
-                "type": "keyword"
+                "name": "process.code_signature.exists",
+                "type": "boolean"
             },
             {
                 "ecs": true,
-                "name": "process.args_count",
-                "type": "long"
+                "name": "process.code_signature.trusted",
+                "type": "boolean"
             },
             {
                 "ecs": true,
-                "name": "process.command_line",
-                "type": "wildcard"
-            },
-            {
-                "ecs": true,
-                "name": "process.name",
+                "name": "process.executable",
                 "type": "keyword"
             }
         ],
@@ -91,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "f0b48bbc-549e-4bcf-8ee0-a7a72586c6a7_107",
+    "id": "f0b48bbc-549e-4bcf-8ee0-a7a72586c6a7_108",
     "type": "security-rule"
 }

@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Shell Execution via Apple Scripting",
-        "query": "sequence by host.id with maxspan=5s\n [process where host.os.type == \"macos\" and event.type in (\"start\", \"process_started\", \"info\") and process.name == \"osascript\"] by process.pid\n [process where host.os.type == \"macos\" and event.type in (\"start\", \"process_started\") and process.name == \"sh\" and process.args == \"-c\"] by process.parent.pid\n",
+        "query": "sequence by host.id with maxspan=5s\n [process where host.os.type == \"macos\" and event.type in (\"start\", \"process_started\", \"info\") and process.name == \"osascript\" and process.args : \"-e\"] by process.entity_id\n [process where host.os.type == \"macos\" and event.type in (\"start\", \"process_started\") and process.name : (\"sh\", \"bash\", \"zsh\") and process.args == \"-c\" and process.args : (\"*curl*\", \"*pbcopy*\", \"*http*\", \"*chmod*\")] by process.parent.entity_id\n",
         "references": [
             "https://developer.apple.com/library/archive/technotes/tn2065/_index.html",
             "https://objectivebythesea.com/v2/talks/OBTS_v2_Thomas.pdf"
@@ -45,18 +45,18 @@
             },
             {
                 "ecs": true,
+                "name": "process.entity_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "process.name",
                 "type": "keyword"
             },
             {
                 "ecs": true,
-                "name": "process.parent.pid",
-                "type": "long"
-            },
-            {
-                "ecs": true,
-                "name": "process.pid",
-                "type": "long"
+                "name": "process.parent.entity_id",
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -88,8 +88,8 @@
             }
         ],
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "d461fac0-43e8-49e2-85ea-3a58fe120b4f_106",
+    "id": "d461fac0-43e8-49e2-85ea-3a58fe120b4f_107",
     "type": "security-rule"
 }

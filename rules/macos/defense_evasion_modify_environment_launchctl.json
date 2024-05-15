@@ -10,8 +10,8 @@
         ],
         "language": "kuery",
         "license": "Elastic License v2",
-        "name": "Modification of Environment Variable via Launchctl",
-        "query": "event.category:process and host.os.type:macos and event.type:start and \n  process.name:launchctl and \n  process.args:(setenv and not (ANT_HOME or \n                                DBUS_LAUNCHD_SESSION_BUS_SOCKET or \n                                EDEN_ENV or \n                                LG_WEBOS_TV_SDK_HOME or \n                                RUNTIME_JAVA_HOME or \n                                WEBOS_CLI_TV or \n                                JAVA*_HOME) and \n                not *.vmoptions) and \n  not process.parent.executable:(\"/Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home/lib/jspawnhelper\" or \n                                  /Applications/NoMachine.app/Contents/Frameworks/bin/nxserver.bin or \n                                  /Applications/NoMachine.app/Contents/Frameworks/bin/nxserver.bin or \n                                  /usr/local/bin/kr)\n",
+        "name": "Modification of Environment Variable via Unsigned or Untrusted Parent",
+        "query": "event.category:process and host.os.type:macos and event.type:start and \n  process.name:launchctl and \n  (process.parent.code_signature.exists : false or process.parent.code_signature.trusted : false) and\n  process.args:(setenv and not (ANT_HOME or \n                                DBUS_LAUNCHD_SESSION_BUS_SOCKET or \n                                EDEN_ENV or \n                                LG_WEBOS_TV_SDK_HOME or \n                                RUNTIME_JAVA_HOME or \n                                WEBOS_CLI_TV or \n                                JAVA*_HOME) and \n                not *.vmoptions) and \n  not process.parent.executable:(\"/Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home/lib/jspawnhelper\" or \n                                  /Applications/NoMachine.app/Contents/Frameworks/bin/nxserver.bin or \n                                  /Applications/NoMachine.app/Contents/Frameworks/bin/nxserver.bin or \n                                  /usr/local/bin/kr)\n",
         "references": [
             "https://github.com/rapid7/metasploit-framework/blob/master//modules/post/osx/escalate/tccbypass.rb"
         ],
@@ -46,6 +46,16 @@
                 "ecs": true,
                 "name": "process.name",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.code_signature.exists",
+                "type": "boolean"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.code_signature.trusted",
+                "type": "boolean"
             },
             {
                 "ecs": true,
@@ -90,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 206
     },
-    "id": "7453e19e-3dbf-4e4e-9ae0-33d6c6ed15e1_106",
+    "id": "7453e19e-3dbf-4e4e-9ae0-33d6c6ed15e1_206",
     "type": "security-rule"
 }

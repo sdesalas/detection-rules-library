@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Suspicious macOS MS Office Child Process",
-        "query": "process where host.os.type == \"macos\" and event.type in (\"start\", \"process_started\") and\n process.parent.name:(\"Microsoft Word\", \"Microsoft PowerPoint\", \"Microsoft Excel\") and\n process.name:\n (\n   \"bash\",\n   \"dash\",\n   \"sh\",\n   \"tcsh\",\n   \"csh\",\n   \"zsh\",\n   \"ksh\",\n   \"fish\",\n   \"python*\",\n   \"perl*\",\n   \"php*\",\n   \"osascript\",\n   \"pwsh\",\n   \"curl\",\n   \"wget\",\n   \"cp\",\n   \"mv\",\n   \"base64\",\n   \"launchctl\"\n  ) and\n  /* noisy false positives related to product version discovery and office errors reporting */\n  not process.args:\n    (\n      \"ProductVersion\",\n      \"hw.model\",\n      \"ioreg\",\n      \"ProductName\",\n      \"ProductUserVisibleVersion\",\n      \"ProductBuildVersion\",\n      \"/Library/Application Support/Microsoft/MERP*/Microsoft Error Reporting.app/Contents/MacOS/Microsoft Error Reporting\"\n    )\n",
+        "query": "process where event.action == \"exec\" and\n    process.parent.name: (\n      \"Microsoft Word\",\n      \"Microsoft Outlook\",\n      \"Microsoft Excel\",\n      \"Microsoft PowerPoint\",\n      \"Microsoft OneNote\"\n    ) and\n  process.name : (\n    \"curl\",\n    \"nscurl\",\n    \"bash\",\n    \"sh\",\n    \"osascript\",\n    \"python*\",\n    \"perl*\",\n    \"mktemp\",\n    \"chmod\",\n    \"php\",\n    \"nohup\",\n    \"openssl\",\n    \"plutil\",\n    \"PlistBuddy\",\n    \"xattr\",\n    \"mktemp\",\n    \"sqlite3\",\n    \"funzip\",\n    \"popen\"\n  ) and\n\n  // Filter FPs related to product version discovery and Office error reporting behavior\n  not process.args:\n    (\n      \"ProductVersion\",\n      \"hw.model\",\n      \"ioreg\",\n      \"ProductName\",\n      \"ProductUserVisibleVersion\",\n      \"ProductBuildVersion\",\n      \"/Library/Application Support/Microsoft/MERP*/Microsoft Error Reporting.app/Contents/MacOS/Microsoft Error Reporting\",\n      \"open -a Safari *\",\n      \"defaults read *\",\n      \"sysctl hw.model*\",\n      \"ioreg -d2 -c IOPlatformExpertDevice *\",\n      \"ps aux | grep 'ToDesk_Desktop' | grep -v grep\",\n      \"PIPE=\\\"$CFFIXED_USER_HOME/.zoteroIntegrationPipe*\"\n    ) and\n\n   not process.parent.executable :\n        (\n          \"/Applications/ToDesk.app/Contents/MacOS/ToDesk_Service\",\n          \"/usr/local/Privacy-i/PISupervisor\",\n          \"/Library/Addigy/lan-cache\",\n          \"/Library/Elastic/Agent/*\",\n          \"/opt/jc/bin/jumpcloud-agent\",\n          \"/usr/sbin/networksetup\"\n        ) and\n   not (process.name : \"sh\" and process.command_line : \"*$CFFIXED_USER_HOME/.zoteroIntegrationPipe*\") and\n\n   not process.Ext.effective_parent.executable : (\n        \"/Applications/ToDesk.app/Contents/MacOS/ToDesk_Service\",\n        \"/usr/local/Privacy-i/PISupervisor\",\n        \"/Library/Addigy/auditor\",\n        \"/Library/Elastic/Agent/*\",\n        \"/opt/jc/bin/jumpcloud-agent\",\n        \"/usr/sbin/networksetup\"\n      )\n",
         "references": [
             "https://blog.malwarebytes.com/cybercrime/2017/02/microsoft-office-macro-malware-targets-macs/"
         ],
@@ -24,13 +24,13 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.type",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
-                "ecs": true,
-                "name": "host.os.type",
-                "type": "keyword"
+                "ecs": false,
+                "name": "process.Ext.effective_parent.executable",
+                "type": "unknown"
             },
             {
                 "ecs": true,
@@ -39,7 +39,17 @@
             },
             {
                 "ecs": true,
+                "name": "process.command_line",
+                "type": "wildcard"
+            },
+            {
+                "ecs": true,
                 "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.executable",
                 "type": "keyword"
             },
             {
@@ -85,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 206
     },
-    "id": "66da12b1-ac83-40eb-814c-07ed1d82b7b9_106",
+    "id": "66da12b1-ac83-40eb-814c-07ed1d82b7b9_206",
     "type": "security-rule"
 }
