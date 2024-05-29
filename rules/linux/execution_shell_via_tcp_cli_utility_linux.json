@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Reverse Shell",
-        "query": "sequence by host.id with maxspan=5s\n  [network where event.type == \"start\" and event.action in (\"connection_attempted\", \"connection_accepted\") and \n   process.name : (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\", \"socat\") and destination.ip != null and \n   not cidrmatch(destination.ip, \"127.0.0.0/8\", \"169.254.0.0/16\", \"224.0.0.0/4\", \"::1\")] by process.entity_id\n  [process where event.type == \"start\" and event.action in (\"exec\", \"fork\") and \n   process.name in (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\") and (\n     (process.args : (\"-i\", \"-l\")) or (process.parent.name == \"socat\" and process.parent.args : \"*exec*\")\n   )] by process.parent.entity_id\n",
+        "query": "sequence by host.id with maxspan=5s\n  [network where event.type == \"start\" and host.os.type == \"linux\" and\n     event.action in (\"connection_attempted\", \"connection_accepted\") and\n     process.name : (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\", \"socat\") and destination.ip != null and\n     not cidrmatch(destination.ip, \"127.0.0.0/8\", \"169.254.0.0/16\", \"224.0.0.0/4\", \"::1\")] by process.entity_id\n  [process where event.type == \"start\" and host.os.type == \"linux\" and event.action in (\"exec\", \"fork\") and\n     process.name in (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\") and (\n       (process.args : (\"-i\", \"-l\")) or (process.parent.name == \"socat\" and process.parent.args : \"*exec*\")\n   )] by process.parent.entity_id\n",
         "references": [
             "https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md"
         ],
@@ -40,6 +40,11 @@
             {
                 "ecs": true,
                 "name": "host.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "host.os.type",
                 "type": "keyword"
             },
             {
@@ -124,8 +129,8 @@
             }
         ],
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "48b3d2e3-f4e8-41e6-95e6-9b2091228db3_8",
+    "id": "48b3d2e3-f4e8-41e6-95e6-9b2091228db3_9",
     "type": "security-rule"
 }

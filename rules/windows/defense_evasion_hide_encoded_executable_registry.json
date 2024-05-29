@@ -8,7 +8,8 @@
         "index": [
             "logs-endpoint.events.registry-*",
             "endgame-*",
-            "logs-windows.sysmon_operational-*"
+            "logs-windows.sysmon_operational-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -18,6 +19,14 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "windows",
+                "version": "^1.5.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -42,7 +51,8 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -68,8 +78,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 208
     },
-    "id": "93c1ce76-494c-4f01-8167-35edfb52f7b1_107",
+    "id": "93c1ce76-494c-4f01-8167-35edfb52f7b1_208",
     "type": "security-rule"
 }

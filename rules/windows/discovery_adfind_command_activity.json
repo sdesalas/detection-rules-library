@@ -89,6 +89,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1016",
+                        "name": "System Network Configuration Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1016/"
+                    },
+                    {
                         "id": "T1018",
                         "name": "Remote System Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1018/"
@@ -121,19 +126,14 @@
                         "id": "T1482",
                         "name": "Domain Trust Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1482/"
-                    },
-                    {
-                        "id": "T1016",
-                        "name": "System Network Configuration Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1016/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "eda499b8-a073-4e35-9733-22ec71f57f3a_111",
+    "id": "eda499b8-a073-4e35-9733-22ec71f57f3a_112",
     "type": "security-rule"
 }

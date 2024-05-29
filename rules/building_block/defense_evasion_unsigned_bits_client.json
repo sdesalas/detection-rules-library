@@ -67,11 +67,6 @@
                 },
                 "technique": [
                     {
-                        "id": "T1197",
-                        "name": "BITS Jobs",
-                        "reference": "https://attack.mitre.org/techniques/T1197/"
-                    },
-                    {
                         "id": "T1036",
                         "name": "Masquerading",
                         "reference": "https://attack.mitre.org/techniques/T1036/",
@@ -82,14 +77,19 @@
                                 "reference": "https://attack.mitre.org/techniques/T1036/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1197",
+                        "name": "BITS Jobs",
+                        "reference": "https://attack.mitre.org/techniques/T1197/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "9a3884d0-282d-45ea-86ce-b9c81100f026_2",
+    "id": "9a3884d0-282d-45ea-86ce-b9c81100f026_3",
     "type": "security-rule"
 }

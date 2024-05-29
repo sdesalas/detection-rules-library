@@ -15,7 +15,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Suspicious Endpoint Security Parent Process",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name : (\"esensor.exe\", \"elastic-endpoint.exe\") and\n  process.parent.executable != null and\n  /* add FPs here */\n  not process.parent.executable : (\n        \"?:\\\\Program Files\\\\Elastic\\\\*\",\n        \"?:\\\\Windows\\\\System32\\\\services.exe\",\n        \"?:\\\\Windows\\\\System32\\\\WerFault*.exe\",\n        \"?:\\\\Windows\\\\System32\\\\wermgr.exe\",\n        \"?:\\\\Windows\\\\explorer.exe\"\n  ) and\n  not (\n    process.parent.executable : (\n        \"?:\\\\Windows\\\\System32\\\\cmd.exe\",\n        \"?:\\\\Windows\\\\System32\\\\SecurityHealthHost.exe\",\n        \"?:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\"\n    ) and\n    process.args : (\n        \"test\", \"version\",\n        \"top\", \"run\",\n        \"*help\", \"status\",\n        \"upgrade\", \"/launch\",\n        \"/enable\"\n    )\n  )\n  \n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name : (\"esensor.exe\", \"elastic-endpoint.exe\") and\n  process.parent.executable != null and\n  /* add FPs here */\n  not process.parent.executable : (\n        \"?:\\\\Program Files\\\\Elastic\\\\*\",\n        \"?:\\\\Windows\\\\System32\\\\services.exe\",\n        \"?:\\\\Windows\\\\System32\\\\WerFault*.exe\",\n        \"?:\\\\Windows\\\\System32\\\\wermgr.exe\",\n        \"?:\\\\Windows\\\\explorer.exe\"\n  ) and\n  not (\n    process.parent.executable : (\n        \"?:\\\\Windows\\\\System32\\\\cmd.exe\",\n        \"?:\\\\Windows\\\\System32\\\\SecurityHealthHost.exe\",\n        \"?:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\"\n    ) and\n    process.args : (\n        \"test\", \"version\",\n        \"top\", \"run\",\n        \"*help\", \"status\",\n        \"upgrade\", \"/launch\",\n        \"/enable\"\n    )\n  )\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -91,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "b41a13c6-ba45-4bab-a534-df53d0cfed6a_111",
+    "id": "b41a13c6-ba45-4bab-a534-df53d0cfed6a_112",
     "type": "security-rule"
 }

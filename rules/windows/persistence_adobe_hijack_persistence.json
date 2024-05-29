@@ -9,7 +9,8 @@
             "winlogbeat-*",
             "logs-endpoint.events.file-*",
             "logs-windows.sysmon_operational-*",
-            "endgame-*"
+            "endgame-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -27,6 +28,10 @@
             {
                 "package": "windows",
                 "version": "^1.5.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -63,7 +68,8 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -96,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 212
     },
-    "id": "2bf78aa2-9c56-48de-b139-f169bf99cf86_111",
+    "id": "2bf78aa2-9c56-48de-b139-f169bf99cf86_212",
     "type": "security-rule"
 }

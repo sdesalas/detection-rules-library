@@ -87,22 +87,22 @@
                 },
                 "technique": [
                     {
-                        "id": "T1482",
-                        "name": "Domain Trust Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1482/"
-                    },
-                    {
                         "id": "T1018",
                         "name": "Remote System Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1018/"
+                    },
+                    {
+                        "id": "T1482",
+                        "name": "Domain Trust Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1482/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "06a7a03c-c735-47a6-a313-51c354aef6c3_7",
+    "id": "06a7a03c-c735-47a6-a313-51c354aef6c3_8",
     "type": "security-rule"
 }

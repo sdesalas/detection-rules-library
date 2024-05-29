@@ -89,6 +89,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1005",
+                        "name": "Data from Local System",
+                        "reference": "https://attack.mitre.org/techniques/T1005/"
+                    },
+                    {
                         "id": "T1560",
                         "name": "Archive Collected Data",
                         "reference": "https://attack.mitre.org/techniques/T1560/",
@@ -99,19 +104,14 @@
                                 "reference": "https://attack.mitre.org/techniques/T1560/001/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1005",
-                        "name": "Data from Local System",
-                        "reference": "https://attack.mitre.org/techniques/T1005/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "45d273fb-1dca-457d-9855-bcb302180c21_111",
+    "id": "45d273fb-1dca-457d-9855-bcb302180c21_112",
     "type": "security-rule"
 }

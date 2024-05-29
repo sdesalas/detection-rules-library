@@ -10,12 +10,13 @@
             "winlogbeat-*",
             "logs-windows.sysmon_operational-*",
             "logs-system.security*",
-            "endgame-*"
+            "endgame-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Suspicious ScreenConnect Client Child Process",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.parent.name :\n                (\"ScreenConnect.ClientService.exe\",\n                 \"ScreenConnect.WindowsClient.exe\",\n                 \"ScreenConnect.WindowsBackstageShell.exe\",\n                 \"ScreenConnect.WindowsFileManager.exe\") and\n  (\n   (process.name : \"powershell.exe\" and\n    process.args : (\"-enc\", \"-ec\", \"-e\", \"*downloadstring*\", \"*Reflection.Assembly*\", \"*http*\")) or\n   (process.name : \"cmd.exe\" and process.args : \"/c\") or\n   (process.name : \"net.exe\" and process.args : \"/add\") or\n   (process.name : \"schtasks.exe\" and process.args : (\"/create\", \"-create\")) or\n   (process.name : \"sc.exe\" and process.args : \"create\") or\n   (process.name : \"rundll32.exe\" and not process.args : \"url.dll,FileProtocolHandler\") or\n   (process.name : \"msiexec.exe\" and process.args : (\"/i\", \"-i\") and\n    process.args : (\"/q\", \"/quiet\", \"/qn\", \"-q\", \"-quiet\", \"-qn\", \"-Q+\")) or\n   process.name : (\"mshta.exe\", \"certutil.exe\", \"bistadmin.exe\", \"certreq.exe\", \"wscript.exe\", \"cscript.exe\", \"curl.exe\", \n                   \"ssh.exe\", \"scp.exe\", \"wevtutil.exe\", \"wget.exe\", \"wmic.exe\")\n   )\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.parent.name :\n                (\"ScreenConnect.ClientService.exe\",\n                 \"ScreenConnect.WindowsClient.exe\",\n                 \"ScreenConnect.WindowsBackstageShell.exe\",\n                 \"ScreenConnect.WindowsFileManager.exe\") and\n  (\n   (process.name : \"powershell.exe\" and\n    process.args : (\"-enc\", \"-ec\", \"-e\", \"*downloadstring*\", \"*Reflection.Assembly*\", \"*http*\")) or\n   (process.name : \"cmd.exe\" and process.args : \"/c\") or\n   (process.name : \"net.exe\" and process.args : \"/add\") or\n   (process.name : \"schtasks.exe\" and process.args : (\"/create\", \"-create\")) or\n   (process.name : \"sc.exe\" and process.args : \"create\") or\n   (process.name : \"rundll32.exe\" and not process.args : \"url.dll,FileProtocolHandler\") or\n   (process.name : \"msiexec.exe\" and process.args : (\"/i\", \"-i\") and\n    process.args : (\"/q\", \"/quiet\", \"/qn\", \"-q\", \"-quiet\", \"-qn\", \"-Q+\")) or\n   process.name : (\"mshta.exe\", \"certutil.exe\", \"bistadmin.exe\", \"certreq.exe\", \"wscript.exe\", \"cscript.exe\", \"curl.exe\",\n                   \"ssh.exe\", \"scp.exe\", \"wevtutil.exe\", \"wget.exe\", \"wmic.exe\")\n   )\n",
         "references": [
             "https://www.huntress.com/blog/slashandgrab-screen-connect-post-exploitation-in-the-wild-cve-2024-1709-cve-2024-1708"
         ],
@@ -27,6 +28,10 @@
             {
                 "package": "windows",
                 "version": "^1.5.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -67,7 +72,8 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -88,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 102
     },
-    "id": "78de1aeb-5225-4067-b8cc-f4a1de8a8546_1",
+    "id": "78de1aeb-5225-4067-b8cc-f4a1de8a8546_102",
     "type": "security-rule"
 }

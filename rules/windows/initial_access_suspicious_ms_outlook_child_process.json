@@ -10,7 +10,8 @@
             "logs-endpoint.events.process-*",
             "logs-windows.*",
             "endgame-*",
-            "logs-system.security*"
+            "logs-system.security*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -29,6 +30,10 @@
             {
                 "package": "system",
                 "version": "^1.6.4"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -66,7 +71,8 @@
             "Tactic: Execution",
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -136,8 +142,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 212
     },
-    "id": "32f4675e-6c49-4ace-80f9-97c9259dca2e_111",
+    "id": "32f4675e-6c49-4ace-80f9-97c9259dca2e_212",
     "type": "security-rule"
 }

@@ -81,22 +81,22 @@
                 },
                 "technique": [
                     {
-                        "id": "T1490",
-                        "name": "Inhibit System Recovery",
-                        "reference": "https://attack.mitre.org/techniques/T1490/"
-                    },
-                    {
                         "id": "T1485",
                         "name": "Data Destruction",
                         "reference": "https://attack.mitre.org/techniques/T1485/"
+                    },
+                    {
+                        "id": "T1490",
+                        "name": "Inhibit System Recovery",
+                        "reference": "https://attack.mitre.org/techniques/T1490/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "581add16-df76-42bb-af8e-c979bfb39a59_111",
+    "id": "581add16-df76-42bb-af8e-c979bfb39a59_112",
     "type": "security-rule"
 }

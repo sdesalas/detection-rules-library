@@ -103,18 +103,6 @@
                 },
                 "technique": [
                     {
-                        "id": "T1548",
-                        "name": "Abuse Elevation Control Mechanism",
-                        "reference": "https://attack.mitre.org/techniques/T1548/",
-                        "subtechnique": [
-                            {
-                                "id": "T1548.002",
-                                "name": "Bypass User Account Control",
-                                "reference": "https://attack.mitre.org/techniques/T1548/002/"
-                            }
-                        ]
-                    },
-                    {
                         "id": "T1218",
                         "name": "System Binary Proxy Execution",
                         "reference": "https://attack.mitre.org/techniques/T1218/",
@@ -125,14 +113,26 @@
                                 "reference": "https://attack.mitre.org/techniques/T1218/014/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/",
+                        "subtechnique": [
+                            {
+                                "id": "T1548.002",
+                                "name": "Bypass User Account Control",
+                                "reference": "https://attack.mitre.org/techniques/T1548/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "1178ae09-5aff-460a-9f2f-455cd0ac4d8e_111",
+    "id": "1178ae09-5aff-460a-9f2f-455cd0ac4d8e_112",
     "type": "security-rule"
 }

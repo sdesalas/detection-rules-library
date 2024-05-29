@@ -4,7 +4,7 @@
             "Elastic"
         ],
         "description": "This rule identifies a high number (20) of file creation event by the System virtual process from the same host and with same file name containing keywords similar to ransomware note files and all within a short time period.",
-        "from": "now-1m",
+        "from": "now-9m",
         "index": [
             "logs-endpoint.events.file-*"
         ],
@@ -108,8 +108,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 1
+        "version": 2
     },
-    "id": "1397e1b9-0c90-4d24-8d7b-80598eb9bc9a_1",
+    "id": "1397e1b9-0c90-4d24-8d7b-80598eb9bc9a_2",
     "type": "security-rule"
 }

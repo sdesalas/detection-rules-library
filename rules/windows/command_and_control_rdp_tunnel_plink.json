@@ -10,7 +10,8 @@
             "winlogbeat-*",
             "logs-windows.*",
             "endgame-*",
-            "logs-system.security*"
+            "logs-system.security*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -28,6 +29,10 @@
             {
                 "package": "windows",
                 "version": "^1.5.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -59,7 +64,8 @@
             "Tactic: Lateral Movement",
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -102,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 211
     },
-    "id": "76fd43b7-3480-4dd9-8ad7-8bd36bfad92f_110",
+    "id": "76fd43b7-3480-4dd9-8ad7-8bd36bfad92f_211",
     "type": "security-rule"
 }

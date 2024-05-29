@@ -99,21 +99,6 @@
                 },
                 "technique": [
                     {
-                        "id": "T1018",
-                        "name": "Remote System Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1018/"
-                    },
-                    {
-                        "id": "T1087",
-                        "name": "Account Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1087/"
-                    },
-                    {
-                        "id": "T1518",
-                        "name": "Software Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1518/"
-                    },
-                    {
                         "id": "T1016",
                         "name": "System Network Configuration Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1016/",
@@ -126,17 +111,32 @@
                         ]
                     },
                     {
+                        "id": "T1018",
+                        "name": "Remote System Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1018/"
+                    },
+                    {
                         "id": "T1057",
                         "name": "Process Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1057/"
+                    },
+                    {
+                        "id": "T1087",
+                        "name": "Account Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1087/"
+                    },
+                    {
+                        "id": "T1518",
+                        "name": "Software Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1518/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "770e0c4d-b998-41e5-a62e-c7901fd7f470_111",
+    "id": "770e0c4d-b998-41e5-a62e-c7901fd7f470_112",
     "type": "security-rule"
 }

@@ -9,12 +9,13 @@
             "winlogbeat-*",
             "logs-endpoint.events.registry-*",
             "logs-windows.sysmon_operational-*",
-            "endgame-*"
+            "endgame-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Local Account TokenFilter Policy Disabled",
-        "query": "registry where host.os.type == \"windows\" and registry.path : (\n  \"HKLM\\\\*\\\\LocalAccountTokenFilterPolicy\",\n  \"\\\\REGISTRY\\\\MACHINE\\\\*\\\\LocalAccountTokenFilterPolicy\") and\n  registry.data.strings : (\"1\", \"0x00000001\")\n",
+        "query": "registry where host.os.type == \"windows\" and registry.path : (\n  \"HKLM\\\\*\\\\LocalAccountTokenFilterPolicy\",\n  \"\\\\REGISTRY\\\\MACHINE\\\\*\\\\LocalAccountTokenFilterPolicy\",\n  \"MACHINE\\\\*\\\\LocalAccountTokenFilterPolicy\") and\n  registry.data.strings : (\"1\", \"0x00000001\")\n",
         "references": [
             "https://www.stigviewer.com/stig/windows_server_2008_r2_member_server/2014-04-02/finding/V-36439",
             "https://posts.specterops.io/pass-the-hash-is-dead-long-live-localaccounttokenfilterpolicy-506c25a7c167",
@@ -28,6 +29,10 @@
             {
                 "package": "windows",
                 "version": "^1.5.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -58,7 +63,8 @@
             "Tactic: Lateral Movement",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -106,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 109
     },
-    "id": "07b1ef73-1fde-4a49-a34a-5dd40011b076_8",
+    "id": "07b1ef73-1fde-4a49-a34a-5dd40011b076_109",
     "type": "security-rule"
 }
