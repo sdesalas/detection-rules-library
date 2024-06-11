@@ -3,25 +3,18 @@
         "author": [
             "Elastic"
         ],
-        "description": "This rule monitors the creation/alteration of a shell configuration by a previously unknown process executable using the new terms rule type. Unix systems use shell configuration files to set environment variables, create aliases, and customize the user's environment. Adversaries may modify or add a shell configuration file to execute malicious code and gain persistence in the system. This behavior is consistent with the Kaiji malware family.",
+        "description": "This rule monitors the creation/alteration of a shell configuration file. Unix systems use shell configuration files to set environment variables, create aliases, and customize the user's environment. Adversaries may modify or add a shell configuration file to execute malicious code and gain persistence in the system. This behavior is consistent with the Kaiji malware family.",
         "false_positives": [
             "Legitimate user shell modification activity."
         ],
         "from": "now-9m",
-        "history_window_start": "now-10d",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*"
+            "logs-endpoint.events.file*"
         ],
-        "language": "kuery",
+        "language": "eql",
         "license": "Elastic License v2",
-        "name": "Shell Configuration Modification",
-        "new_terms_fields": [
-            "host.id",
-            "user.id",
-            "process.executable"
-        ],
-        "query": "event.category:file and host.os.type:linux and\nevent.action:(creation or file_create_event or rename or file_rename_event) and file.path:(\n  \"/etc/profile\" or \"/etc/profile.local\" or \"/etc/bashrc\" or \"/etc/bash.bashrc\" or \"/etc/bash.bashrc.local\" or\n  \"/etc/zshenv\" or \"/etc/zprofile\" or \"/etc/zlogin\" or \"/etc/zlogout\" or \"/root/.profile\" or \"/root/.bash_logout\" or\n  \"/root/.bashrc\" or \"/root/.bash_login\" or /etc/profile.d/* or /home/*/.profile or /home/*/.bash_logout or\n  /home/*/.bashrc or /home/*/.bash_login\n) and not (\n  (process.executable: (\n  \"/bin/dpkg\" or \"/usr/bin/dpkg\" or \"/bin/useradd\" or \"/usr/sbin/useradd\" or \"/bin/adduser\" or \"/usr/sbin/adduser\" or\n  \"/bin/dockerd\" or \"/usr/bin/dockerd\" or \"/bin/microdnf\" or \"/usr/bin/microdnf\" or \"/bin/rpm\" or \"/usr/bin/rpm\" or\n  \"/bin/snapd\" or \"/usr/bin/snapd\" or \"/bin/yum\" or \"/usr/bin/yum\" or \"/bin/dnf\" or \"/usr/bin/dnf\" or \"/bin/podman\" or\n  \"/usr/bin/podman\" or \"/bin/dnf-automatic\" or \"/usr/bin/dnf-automatic\" or \"/bin/pacman\" or \"/usr/bin/pacman\"\n  )\n) or\n  (file.extension:(\"swp\" or \"swpx\")) or\n  (process.executable:(\"/bin/sed\" or \"/usr/bin/sed\") and file.name:sed*) or\n  (process.executable:(\"/bin/perl\" or \"/usr/bin/perl\") and file.name:e2scrub_all.tmp*)\n)\n",
+        "name": "Shell Configuration Creation or Modification",
+        "query": "file where host.os.type == \"linux\" and event.action in (\"rename\", \"creation\") and file.path : (\n  // system-wide configurations\n  \"/etc/profile\", \"/etc/profile.d/*\", \"/etc/bash.bashrc\", \"/etc/zsh/*\",\n  \"/etc/csh.cshrc\", \"/etc/csh.login\", \"/etc/fish/config.fish\", \"/etc/ksh.kshrc\",\n  // root and user configurations\n  \"/home/*/.profile\", \"/home/*/.bashrc\", \"/home/*/.bash_login\", \"/home/*/.bash_logout\",\n  \"/root/.profile\", \"/root/.bashrc\", \"/root/.bash_login\", \"/root/.bash_logout\",\n  \"/home/*/.zprofile\", \"/home/*/.zshrc\", \"/root/.zprofile\", \"/root/.zshrc\",\n  \"/home/*/.cshrc\", \"/home/*/.login\", \"/home/*/.logout\", \"/root/.cshrc\", \"/root/.login\", \"/root/.logout\",\n  \"/home/*/.config/fish/config.fish\", \"/root/.config/fish/config.fish\",\n  \"/home/*/.kshrc\", \"/root/.kshrc\"\n) and not (\n  process.executable in (\n    \"/bin/dpkg\", \"/usr/bin/dpkg\", \"/bin/dockerd\", \"/usr/bin/dockerd\", \"/usr/sbin/dockerd\", \"/bin/microdnf\",\n    \"/usr/bin/microdnf\", \"/bin/rpm\", \"/usr/bin/rpm\", \"/bin/snapd\", \"/usr/bin/snapd\", \"/bin/yum\", \"/usr/bin/yum\",\n    \"/bin/dnf\", \"/usr/bin/dnf\", \"/bin/podman\", \"/usr/bin/podman\", \"/bin/dnf-automatic\", \"/usr/bin/dnf-automatic\",\n    \"/bin/pacman\", \"/usr/bin/pacman\", \"/usr/bin/dpkg-divert\", \"/bin/dpkg-divert\", \"/sbin/apk\", \"/usr/sbin/apk\",\n    \"/usr/local/sbin/apk\", \"/usr/bin/apt\", \"/usr/sbin/pacman\", \"/bin/podman\", \"/usr/bin/podman\", \"/usr/bin/puppet\",\n    \"/bin/puppet\", \"/opt/puppetlabs/puppet/bin/puppet\", \"/usr/bin/chef-client\", \"/bin/chef-client\",\n    \"/bin/autossl_check\", \"/usr/bin/autossl_check\", \"/proc/self/exe\", \"/dev/fd/*\",  \"/usr/bin/pamac-daemon\",\n    \"/bin/pamac-daemon\", \"/usr/lib/snapd/snapd\", \"/usr/sbin/adduser\", \"/usr/sbin/useradd\", \"/usr/local/bin/dockerd\"\n  ) or\n  file.extension in (\"swp\", \"swpx\", \"swx\", \"dpkg-remove\") or\n  file.Ext.original.extension == \"dpkg-new\" or\n  process.executable : (\n    \"/nix/store/*\", \"/var/lib/dpkg/*\", \"/tmp/vmis.*\", \"/snap/*\", \"/dev/fd/*\", \"/usr/lib/virtualbox/*\"\n  ) or\n  process.executable == null or\n  (process.name == \"sed\" and file.name : \"sed*\") or\n  (process.name == \"perl\" and file.name : \"e2scrub_all.tmp*\") \n)\n",
         "references": [
             "https://intezer.com/blog/research/kaiji-new-chinese-linux-malware-turning-to-golang/"
         ],
@@ -38,9 +31,9 @@
                 "type": "keyword"
             },
             {
-                "ecs": true,
-                "name": "event.category",
-                "type": "keyword"
+                "ecs": false,
+                "name": "file.Ext.original.extension",
+                "type": "unknown"
             },
             {
                 "ecs": true,
@@ -66,6 +59,11 @@
                 "ecs": true,
                 "name": "process.executable",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.name",
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -77,7 +75,6 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -105,9 +102,9 @@
             }
         ],
         "timestamp_override": "event.ingested",
-        "type": "new_terms",
-        "version": 1
+        "type": "eql",
+        "version": 2
     },
-    "id": "28f6f34b-8e16-487a-b5fd-9d22eb903db8_1",
+    "id": "28f6f34b-8e16-487a-b5fd-9d22eb903db8_2",
     "type": "security-rule"
 }

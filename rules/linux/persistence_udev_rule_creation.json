@@ -5,20 +5,13 @@
         ],
         "description": "Monitors for the creation of rule files that are used by systemd-udevd to manage device nodes and handle kernel device events in the Linux operating system. Systemd-udevd can be exploited for persistence by adversaries by creating malicious udev rules that trigger on specific events, executing arbitrary commands or payloads whenever a certain device is plugged in or recognized by the system.",
         "from": "now-9m",
-        "history_window_start": "now-14d",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*"
+            "logs-endpoint.events.file*"
         ],
-        "language": "kuery",
+        "language": "eql",
         "license": "Elastic License v2",
-        "name": "Potential Persistence Through Systemd-udevd",
-        "new_terms_fields": [
-            "host.id",
-            "process.executable",
-            "file.path"
-        ],
-        "query": "host.os.type:\"linux\" and event.category:\"file\" and\nevent.type:(\"change\" or \"file_modify_event\" or \"creation\" or \"file_create_event\") and\nfile.path:/lib/udev/* and process.executable:* and not (\n   process.name:(\"dockerd\" or \"docker\" or \"dpkg\" or \"dnf\" or \"dnf-automatic\" or \"yum\" or \"rpm\" or \"systemd-hwdb\" or\n     \"podman\" or \"buildah\") or file.extension : (\"swp\" or \"swpx\")\n)\n",
+        "name": "Systemd-udevd Rule File Creation",
+        "query": "file where host.os.type == \"linux\" and event.action in (\"rename\", \"creation\") and \nprocess.executable != null and \nfile.path : (\n  \"/lib/udev/*\", \"/etc/udev/rules.d/*\", \"/usr/lib/udev/rules.d/*\", \"/run/udev/rules.d/*\"\n) and not (\n  process.executable in (\n    \"/bin/dpkg\", \"/usr/bin/dpkg\", \"/bin/dockerd\", \"/usr/bin/dockerd\", \"/usr/sbin/dockerd\", \"/bin/microdnf\",\n    \"/usr/bin/microdnf\", \"/bin/rpm\", \"/usr/bin/rpm\", \"/bin/snapd\", \"/usr/bin/snapd\", \"/bin/yum\", \"/usr/bin/yum\",\n    \"/bin/dnf\", \"/usr/bin/dnf\", \"/bin/podman\", \"/usr/bin/podman\", \"/bin/dnf-automatic\", \"/usr/bin/dnf-automatic\",\n    \"/bin/pacman\", \"/usr/bin/pacman\", \"/usr/bin/dpkg-divert\", \"/bin/dpkg-divert\", \"/sbin/apk\", \"/usr/sbin/apk\",\n    \"/usr/local/sbin/apk\", \"/usr/bin/apt\", \"/usr/sbin/pacman\", \"/bin/podman\", \"/usr/bin/podman\", \"/usr/bin/puppet\",\n    \"/bin/puppet\", \"/opt/puppetlabs/puppet/bin/puppet\", \"/usr/bin/chef-client\", \"/bin/chef-client\",\n    \"/bin/autossl_check\", \"/usr/bin/autossl_check\", \"/proc/self/exe\", \"/dev/fd/*\",  \"/usr/bin/pamac-daemon\",\n    \"/bin/pamac-daemon\", \"/usr/lib/snapd/snapd\", \"/usr/local/bin/dockerd\", \"/usr/libexec/netplan/generate\"\n  ) or\n  file.extension in (\"swp\", \"swpx\", \"swx\", \"dpkg-remove\") or\n  file.Ext.original.extension == \"dpkg-new\" or\n  process.executable : (\n    \"/nix/store/*\", \"/var/lib/dpkg/*\", \"/snap/*\", \"/dev/fd/*\", \"/usr/lib/*\", \"/usr/libexec/*\"\n  ) or\n  (process.name == \"sed\" and file.name : \"sed*\") or\n  (process.name == \"perl\" and file.name : \"e2scrub_all.tmp*\") \n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -28,17 +21,22 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.category",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
-                "ecs": true,
-                "name": "event.type",
-                "type": "keyword"
+                "ecs": false,
+                "name": "file.Ext.original.extension",
+                "type": "unknown"
             },
             {
                 "ecs": true,
                 "name": "file.extension",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "file.name",
                 "type": "keyword"
             },
             {
@@ -71,7 +69,6 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -92,9 +89,9 @@
             }
         ],
         "timestamp_override": "event.ingested",
-        "type": "new_terms",
-        "version": 3
+        "type": "eql",
+        "version": 4
     },
-    "id": "054db96b-fd34-43b3-9af2-587b3bd33964_3",
+    "id": "054db96b-fd34-43b3-9af2-587b3bd33964_4",
     "type": "security-rule"
 }

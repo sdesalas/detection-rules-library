@@ -105,7 +105,7 @@
                     },
                     {
                         "id": "T1484",
-                        "name": "Domain Policy Modification",
+                        "name": "Domain or Tenant Policy Modification",
                         "reference": "https://attack.mitre.org/techniques/T1484/",
                         "subtechnique": [
                             {
@@ -135,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 111
     },
-    "id": "15a8ba77-1c13-4274-88fe-6bd14133861e_110",
+    "id": "15a8ba77-1c13-4274-88fe-6bd14133861e_111",
     "type": "security-rule"
 }
