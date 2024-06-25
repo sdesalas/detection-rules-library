@@ -48,7 +48,7 @@
         ],
         "risk_score": 21,
         "rule_id": "192657ba-ab0e-4901-89a2-911d611eee98",
-        "setup": "## Setup\n\nThis rule requires data coming in from the Elastic File Integrity Monitoring (FIM) integration.\n\n### Elastic FIM Integration Setup\nTo configure the Elastic FIM integration, follow these steps:\n\n1. Install and configure the Elastic Agent on your Linux system. You can refer to the [Elastic Agent documentation](https://www.elastic.co/guide/en/ingest-management/current/agent-configuration.html) for detailed instructions.\n2. Once the Elastic Agent is installed, navigate to the Elastic Security app in Kibana.\n3. In the Kibana home page, click on \"Integrations\" in the left sidebar.\n4. Search for \"File Integrity Monitoring\" in the search bar and select the integration.\n6. Provide a name and optional description for the integration.\n7. Select the appropriate agent policy for your Linux system or create a new one.\n8. Configure the FIM policy by specifying the paths that you want to monitor for file modifications. You can use the same paths mentioned in the `query` field of the rule. Note that FIM does not accept wildcards in the paths, so you need to specify the exact paths you want to monitor.\n9. Save the configuration and the Elastic Agent will start monitoring the specified paths for file modifications.\n\nFor more details on configuring the Elastic FIM integration, you can refer to the [Elastic FIM documentation](https://docs.elastic.co/integrations/fim).\n",
+        "setup": "## Setup\n\nThis rule requires data coming in from the Elastic File Integrity Monitoring (FIM) integration.\n\n### Elastic FIM Integration Setup\nTo configure the Elastic FIM integration, follow these steps:\n\n1. Install and configure the Elastic Agent on your Linux system. You can refer to the [Elastic Agent documentation](https://www.elastic.co/guide/en/fleet/current/elastic-agent-installation.html) for detailed instructions.\n2. Once the Elastic Agent is installed, navigate to the Elastic Security app in Kibana.\n3. In the Kibana home page, click on \"Integrations\" in the left sidebar.\n4. Search for \"File Integrity Monitoring\" in the search bar and select the integration.\n5. Provide a name and optional description for the integration.\n6. Select the appropriate agent policy for your Linux system or create a new one.\n7. Configure the FIM policy by specifying the paths that you want to monitor for file modifications. You can use the same paths mentioned in the `query` field of the rule. Note that FIM does not accept wildcards in the paths, so you need to specify the exact paths you want to monitor.\n8. Save the configuration and the Elastic Agent will start monitoring the specified paths for file modifications.\n\nFor more details on configuring the Elastic FIM integration, you can refer to the [Elastic FIM documentation](https://docs.elastic.co/integrations/fim).\n",
         "severity": "low",
         "tags": [
             "Domain: Endpoint",
@@ -159,8 +159,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "192657ba-ab0e-4901-89a2-911d611eee98_1",
+    "id": "192657ba-ab0e-4901-89a2-911d611eee98_2",
     "type": "security-rule"
 }
