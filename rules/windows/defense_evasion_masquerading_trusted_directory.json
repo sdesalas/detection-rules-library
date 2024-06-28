@@ -10,7 +10,8 @@
             "logs-endpoint.events.process-*",
             "logs-windows.*",
             "endgame-*",
-            "logs-system.security*"
+            "logs-system.security*",
+            "logs-m365_defender.event-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -24,6 +25,10 @@
             {
                 "package": "windows",
                 "version": "^1.5.0"
+            },
+            {
+                "package": "m365_defender",
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -53,7 +58,8 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Microsoft Defender for Endpoint"
         ],
         "threat": [
             {
@@ -81,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "32c5cf9c-2ef8-4e87-819e-5ccb7cd18b14_109",
+    "id": "32c5cf9c-2ef8-4e87-819e-5ccb7cd18b14_110",
     "type": "security-rule"
 }

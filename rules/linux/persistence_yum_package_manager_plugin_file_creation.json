@@ -3,20 +3,17 @@
         "author": [
             "Elastic"
         ],
-        "description": "This rule monitors for the addition of an executable bit of the `/etc/rc.local` or `/etc/rc.common` files. These files are used to start custom applications, services, scripts or commands during start-up. They require executable permissions to be executed on boot. An alert of this rule is an indicator that this method is being set up within your environment. This method has mostly been replaced by Systemd. However, through the `systemd-rc-local-generator`, these files can be converted to services that run at boot. Adversaries may alter these files to execute malicious code at start-up, and gain persistence onto the system.",
+        "description": "Detects file creation events in the plugin directories for the Yum package manager.  In Linux, Yum (Yellowdog Updater, Modified) is a command-line utility used for handling packages on (by default) Fedora-based systems, providing functions for installing, updating, upgrading, and removing software along with managing package repositories. Attackers can backdoor Yum to gain persistence by injecting malicious code into plugins that Yum runs, thereby ensuring continued unauthorized access or control each time Yum is used for package management.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process*",
-            "endgame-*"
+            "logs-endpoint.events.file*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
-        "name": "Executable Bit Set for rc.local/rc.common",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and\nprocess.args in (\"/etc/rc.local\", \"/etc/rc.common\") and (\n  (process.name == \"chmod\" and process.args : (\"*+x*\", \"1*\", \"3*\", \"5*\", \"7*\")) or\n  (process.name == \"install\" and process.args : \"-m*\" and process.args : (\"*7*\", \"*5*\", \"*3*\", \"*1*\"))\n)\n",
+        "name": "Yum Package Manager Plugin File Creation",
+        "query": "file where host.os.type == \"linux\" and event.action in (\"rename\", \"creation\") and\nfile.path : (\"/usr/lib/yum-plugins/*\", \"/etc/yum/pluginconf.d/*\") and not (\n  process.executable in (\n    \"/bin/dockerd\", \"/usr/bin/dockerd\", \"/usr/sbin/dockerd\", \"/bin/microdnf\", \"/usr/bin/microdnf\", \"/bin/rpm\",\n    \"/usr/bin/rpm\", \"/bin/snapd\", \"/usr/bin/snapd\", \"/bin/yum\", \"/usr/bin/yum\", \"/bin/dnf\", \"/usr/bin/dnf\",\n    \"/bin/podman\", \"/usr/bin/podman\", \"/bin/dnf-automatic\", \"/usr/bin/dnf-automatic\", \"/sbin/apk\", \"/usr/sbin/apk\",\n    \"/usr/local/sbin/apk\", \"/bin/podman\", \"/usr/bin/podman\", \"/usr/bin/puppet\", \"/bin/puppet\",\n    \"/opt/puppetlabs/puppet/bin/puppet\", \"/usr/bin/chef-client\", \"/bin/chef-client\", \"/bin/autossl_check\",\n    \"/usr/bin/autossl_check\", \"/proc/self/exe\", \"/dev/fd/*\", \"/usr/lib/snapd/snapd\", \"/usr/local/bin/dockerd\",\n    \"/usr/libexec/netplan/generate\"\n  ) or\n  process.name == \"yumBackend.py\" or\n  file.extension in (\"swp\", \"swpx\", \"swx\") or\n  process.executable : (\n    \"/nix/store/*\", \"/var/lib/dpkg/*\", \"/tmp/vmis.*\", \"/snap/*\", \"/dev/fd/*\", \"/usr/lib/*\", \"/usr/libexec/*\",\n    \"/etc/kernel/*\"\n  ) or\n  process.executable == null or\n  (process.name == \"sed\" and file.name : \"sed*\") or\n  (process.name == \"perl\" and file.name : \"e2scrub_all.tmp*\") \n)\n",
         "references": [
-            "https://www.intezer.com/blog/malware-analysis/hiddenwasp-malware-targeting-linux-systems/",
-            "https://pberba.github.io/security/2022/02/06/linux-threat-hunting-for-persistence-initialization-scripts-and-shell-configuration/#8-boot-or-logon-initialization-scripts-rc-scripts",
-            "https://www.cyberciti.biz/faq/how-to-enable-rc-local-shell-script-on-systemd-while-booting-linux-system/"
+            "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/local/yum_package_manager_persistence.rb"
         ],
         "related_integrations": [
             {
@@ -32,7 +29,17 @@
             },
             {
                 "ecs": true,
-                "name": "event.type",
+                "name": "file.extension",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "file.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "file.path",
                 "type": "keyword"
             },
             {
@@ -42,7 +49,7 @@
             },
             {
                 "ecs": true,
-                "name": "process.args",
+                "name": "process.executable",
                 "type": "keyword"
             },
             {
@@ -51,16 +58,16 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
-        "rule_id": "94418745-529f-4259-8d25-a713a6feb6ae",
+        "risk_score": 21,
+        "rule_id": "0b15bcad-aff1-4250-a5be-5d1b7eb56d07",
         "setup": "## Setup\n\nThis rule requires data coming in from Elastic Defend.\n\n### Elastic Defend Integration Setup\nElastic Defend is integrated into the Elastic Agent using Fleet. Upon configuration, the integration allows the Elastic Agent to monitor events on your host and send data to the Elastic Security app.\n\n#### Prerequisite Requirements:\n- Fleet is required for Elastic Defend.\n- To configure Fleet Server refer to the [documentation](https://www.elastic.co/guide/en/fleet/current/fleet-server.html).\n\n#### The following steps should be executed in order to add the Elastic Defend integration on a Linux System:\n- Go to the Kibana home page and click \"Add integrations\".\n- In the query bar, search for \"Elastic Defend\" and select the integration to see more details about it.\n- Click \"Add Elastic Defend\".\n- Configure the integration name and optionally add a description.\n- Select the type of environment you want to protect, either \"Traditional Endpoints\" or \"Cloud Workloads\".\n- Select a configuration preset. Each preset comes with different default settings for Elastic Agent, you can further customize these later by configuring the Elastic Defend integration policy. [Helper guide](https://www.elastic.co/guide/en/security/current/configure-endpoint-integration-policy.html).\n- We suggest selecting \"Complete EDR (Endpoint Detection and Response)\" as a configuration setting, that provides \"All events; all preventions\"\n- Enter a name for the agent policy in \"New agent policy name\". If other agent policies already exist, you can click the \"Existing hosts\" tab and select an existing policy instead.\nFor more details on Elastic Agent configuration settings, refer to the [helper guide](https://www.elastic.co/guide/en/fleet/8.10/agent-policy.html).\n- Click \"Save and Continue\".\n- To complete the integration, select \"Add Elastic Agent to your hosts\" and continue to the next section to install the Elastic Agent on your hosts.\nFor more details on Elastic Defend refer to the [helper guide](https://www.elastic.co/guide/en/security/current/install-endpoint.html).\n",
-        "severity": "medium",
+        "severity": "low",
         "tags": [
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Data Source: Elastic Endgame",
+            "Tactic: Defense Evasion",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -73,24 +80,31 @@
                 },
                 "technique": [
                     {
-                        "id": "T1037",
-                        "name": "Boot or Logon Initialization Scripts",
-                        "reference": "https://attack.mitre.org/techniques/T1037/",
-                        "subtechnique": [
-                            {
-                                "id": "T1037.004",
-                                "name": "RC Scripts",
-                                "reference": "https://attack.mitre.org/techniques/T1037/004/"
-                            }
-                        ]
+                        "id": "T1543",
+                        "name": "Create or Modify System Process",
+                        "reference": "https://attack.mitre.org/techniques/T1543/"
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": []
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
         "version": 1
     },
-    "id": "94418745-529f-4259-8d25-a713a6feb6ae_1",
+    "id": "0b15bcad-aff1-4250-a5be-5d1b7eb56d07_1",
     "type": "security-rule"
 }
