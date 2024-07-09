@@ -7,7 +7,10 @@
         "description": "Identifies the use of wmic.exe to run commands on remote hosts. While this can be used by administrators legitimately, attackers can abuse this built-in utility to achieve lateral movement.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.process-*"
+            "logs-endpoint.events.process-*",
+            "logs-windows.sysmon_operational-*",
+            "endgame-*",
+            "logs-system.security*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -51,7 +54,9 @@
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: Sysmon",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -94,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "f59668de-caa0-4b84-94c1-3a1549e1e798_4",
+    "id": "f59668de-caa0-4b84-94c1-3a1549e1e798_5",
     "type": "security-rule"
 }

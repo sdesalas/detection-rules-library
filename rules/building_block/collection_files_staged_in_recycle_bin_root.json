@@ -7,7 +7,9 @@
         "description": "Identifies files written to the root of the Recycle Bin folder instead of subdirectories. Adversaries may place files in the root of the Recycle Bin in preparation for exfiltration or to evade defenses.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.file-*"
+            "logs-endpoint.events.file-*",
+            "logs-windows.sysmon_operational-*",
+            "endgame-*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -51,7 +53,9 @@
             "Use Case: Threat Detection",
             "Tactic: Collection",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: Elastic Endgame",
+            "Data Source: Sysmon"
         ],
         "threat": [
             {
@@ -79,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "57bccf1d-daf5-4e1a-9049-ff79b5254704_3",
+    "id": "57bccf1d-daf5-4e1a-9049-ff79b5254704_4",
     "type": "security-rule"
 }

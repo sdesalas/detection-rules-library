@@ -9,7 +9,9 @@
         "index": [
             "winlogbeat-*",
             "logs-windows.*",
-            "logs-endpoint.events.process-*"
+            "logs-endpoint.events.process-*",
+            "endgame-*",
+            "logs-system.security*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -65,7 +67,8 @@
             "Tactic: Execution",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -113,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "d68e95ad-1c82-4074-a12a-125fe10ac8ba_10",
+    "id": "d68e95ad-1c82-4074-a12a-125fe10ac8ba_11",
     "type": "security-rule"
 }

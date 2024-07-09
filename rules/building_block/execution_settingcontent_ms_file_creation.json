@@ -7,7 +7,9 @@
         "description": "Identifies the suspicious creation of SettingContents-ms files, which have been used in attacks to achieve code execution while evading defenses.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.file-*"
+            "logs-endpoint.events.file-*",
+            "logs-windows.sysmon_operational-*",
+            "endgame-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -53,7 +55,9 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: Sysmon",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -103,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "1e6363a6-3af5-41d4-b7ea-d475389c0ceb_3",
+    "id": "1e6363a6-3af5-41d4-b7ea-d475389c0ceb_4",
     "type": "security-rule"
 }

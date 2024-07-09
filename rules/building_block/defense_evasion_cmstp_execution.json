@@ -7,7 +7,10 @@
         "description": "The Microsoft Connection Manager Profile Installer (CMSTP.exe) is a command-line program to install Connection Manager service profiles, which accept installation information file (INF) files. Adversaries may abuse CMSTP to proxy the execution of malicious code by supplying INF files that contain malicious commands.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.process-*"
+            "logs-endpoint.events.process-*",
+            "logs-windows.sysmon_operational-*",
+            "endgame-*",
+            "logs-system.security*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -54,7 +57,9 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: Sysmon",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -82,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "bd3d058d-5405-4cee-b890-337f09366ba2_2",
+    "id": "bd3d058d-5405-4cee-b890-337f09366ba2_3",
     "type": "security-rule"
 }

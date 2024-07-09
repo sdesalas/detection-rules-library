@@ -9,7 +9,8 @@
         "index": [
             "winlogbeat-*",
             "logs-endpoint.events.network-*",
-            "logs-windows.sysmon_operational-*"
+            "logs-windows.sysmon_operational-*",
+            "endgame-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -62,7 +63,8 @@
             "Tactic: Command and Control",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -83,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "3838e0e3-1850-4850-a411-2e8c5ba40ba8_111",
+    "id": "3838e0e3-1850-4850-a411-2e8c5ba40ba8_112",
     "type": "security-rule"
 }

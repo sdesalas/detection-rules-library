@@ -7,7 +7,10 @@
         "description": "Windows Background Intelligent Transfer Service (BITS) is a low-bandwidth, asynchronous file transfer mechanism. Adversaries may abuse BITS to persist, download, execute, and even clean up after running malicious code.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.process-*"
+            "logs-endpoint.events.process-*",
+            "logs-windows.sysmon_operational-*",
+            "endgame-*",
+            "logs-system.security*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -51,7 +54,9 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: Sysmon",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -102,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "8eec4df1-4b4b-4502-b6c3-c788714604c9_2",
+    "id": "8eec4df1-4b4b-4502-b6c3-c788714604c9_3",
     "type": "security-rule"
 }

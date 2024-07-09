@@ -8,7 +8,9 @@
         "from": "now-119m",
         "index": [
             "logs-endpoint.events.process-*",
-            "endgame-*"
+            "logs-windows.sysmon_operational-*",
+            "endgame-*",
+            "logs-system.security*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -48,7 +50,8 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: Sysmon"
         ],
         "threat": [
             {
@@ -113,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "c5677997-f75b-4cda-b830-a75920514096_3",
+    "id": "c5677997-f75b-4cda-b830-a75920514096_4",
     "type": "security-rule"
 }

@@ -10,7 +10,8 @@
             "winlogbeat-*",
             "logs-endpoint.events.process-*",
             "logs-windows.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-system.security*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -89,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "51176ed2-2d90-49f2-9f3d-17196428b169_4",
+    "id": "51176ed2-2d90-49f2-9f3d-17196428b169_5",
     "type": "security-rule"
 }
