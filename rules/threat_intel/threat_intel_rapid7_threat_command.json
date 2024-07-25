@@ -45,7 +45,7 @@
         "related_integrations": [
             {
                 "package": "ti_rapid7_threat_command",
-                "version": "^1.0.0"
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -90,8 +90,8 @@
         "threat_query": "@timestamp >= \"now-30d/d\" and vulnerability.id : * and event.module: ti_rapid7_threat_command",
         "timestamp_override": "event.ingested",
         "type": "threat_match",
-        "version": 1
+        "version": 2
     },
-    "id": "3a657da0-1df2-11ef-a327-f661ea17fbcc_1",
+    "id": "3a657da0-1df2-11ef-a327-f661ea17fbcc_2",
     "type": "security-rule"
 }

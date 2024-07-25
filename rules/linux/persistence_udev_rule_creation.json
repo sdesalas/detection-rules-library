@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Systemd-udevd Rule File Creation",
-        "query": "file where host.os.type == \"linux\" and event.action in (\"rename\", \"creation\") and \nprocess.executable != null and \nfile.path : (\n  \"/lib/udev/*\", \"/etc/udev/rules.d/*\", \"/usr/lib/udev/rules.d/*\", \"/run/udev/rules.d/*\"\n) and not (\n  process.executable in (\n    \"/bin/dpkg\", \"/usr/bin/dpkg\", \"/bin/dockerd\", \"/usr/bin/dockerd\", \"/usr/sbin/dockerd\", \"/bin/microdnf\",\n    \"/usr/bin/microdnf\", \"/bin/rpm\", \"/usr/bin/rpm\", \"/bin/snapd\", \"/usr/bin/snapd\", \"/bin/yum\", \"/usr/bin/yum\",\n    \"/bin/dnf\", \"/usr/bin/dnf\", \"/bin/podman\", \"/usr/bin/podman\", \"/bin/dnf-automatic\", \"/usr/bin/dnf-automatic\",\n    \"/bin/pacman\", \"/usr/bin/pacman\", \"/usr/bin/dpkg-divert\", \"/bin/dpkg-divert\", \"/sbin/apk\", \"/usr/sbin/apk\",\n    \"/usr/local/sbin/apk\", \"/usr/bin/apt\", \"/usr/sbin/pacman\", \"/bin/podman\", \"/usr/bin/podman\", \"/usr/bin/puppet\",\n    \"/bin/puppet\", \"/opt/puppetlabs/puppet/bin/puppet\", \"/usr/bin/chef-client\", \"/bin/chef-client\",\n    \"/bin/autossl_check\", \"/usr/bin/autossl_check\", \"/proc/self/exe\", \"/dev/fd/*\",  \"/usr/bin/pamac-daemon\",\n    \"/bin/pamac-daemon\", \"/usr/lib/snapd/snapd\", \"/usr/local/bin/dockerd\", \"/usr/libexec/netplan/generate\"\n  ) or\n  file.extension in (\"swp\", \"swpx\", \"swx\", \"dpkg-remove\") or\n  file.Ext.original.extension == \"dpkg-new\" or\n  process.executable : (\n    \"/nix/store/*\", \"/var/lib/dpkg/*\", \"/snap/*\", \"/dev/fd/*\", \"/usr/lib/*\", \"/usr/libexec/*\"\n  ) or\n  (process.name == \"sed\" and file.name : \"sed*\") or\n  (process.name == \"perl\" and file.name : \"e2scrub_all.tmp*\") \n)\n",
+        "query": "file where host.os.type == \"linux\" and event.action in (\"rename\", \"creation\") and \nprocess.executable != null and file.extension == \"rules\" and\nfile.path : (\n  \"/lib/udev/*\", \"/etc/udev/rules.d/*\", \"/usr/lib/udev/rules.d/*\", \"/run/udev/rules.d/*\", \"/usr/local/lib/udev/rules.d/*\"\n) and not (\n  process.executable in (\n    \"/bin/dpkg\", \"/usr/bin/dpkg\", \"/bin/dockerd\", \"/usr/bin/dockerd\", \"/usr/sbin/dockerd\", \"/bin/microdnf\",\n    \"/usr/bin/microdnf\", \"/bin/rpm\", \"/usr/bin/rpm\", \"/bin/snapd\", \"/usr/bin/snapd\", \"/bin/yum\", \"/usr/bin/yum\",\n    \"/bin/dnf\", \"/usr/bin/dnf\", \"/bin/podman\", \"/usr/bin/podman\", \"/bin/dnf-automatic\", \"/usr/bin/dnf-automatic\",\n    \"/bin/pacman\", \"/usr/bin/pacman\", \"/usr/bin/dpkg-divert\", \"/bin/dpkg-divert\", \"/sbin/apk\", \"/usr/sbin/apk\",\n    \"/usr/local/sbin/apk\", \"/usr/bin/apt\", \"/usr/sbin/pacman\", \"/bin/podman\", \"/usr/bin/podman\", \"/usr/bin/puppet\",\n    \"/bin/puppet\", \"/opt/puppetlabs/puppet/bin/puppet\", \"/usr/bin/chef-client\", \"/bin/chef-client\",\n    \"/bin/autossl_check\", \"/usr/bin/autossl_check\", \"/proc/self/exe\", \"/dev/fd/*\",  \"/usr/bin/pamac-daemon\",\n    \"/bin/pamac-daemon\", \"/usr/lib/snapd/snapd\", \"/usr/local/bin/dockerd\", \"/usr/libexec/netplan/generate\",\n    \"/lib/systemd/system-generators/netplan\", \"/lib/systemd/systemd\", \"/usr/bin/containerd\", \"/usr/sbin/sshd\",\n    \"/kaniko/executor\"\n  ) or\n  file.Ext.original.extension == \"dpkg-new\" or\n  process.executable : (\n    \"/nix/store/*\", \"/var/lib/dpkg/*\", \"/snap/*\", \"/dev/fd/*\", \"/usr/lib/*\", \"/usr/libexec/*\"\n  ) or\n  (process.name == \"sed\" and file.name : \"sed*\") or\n  (process.name == \"perl\" and file.name : \"e2scrub_all.tmp*\") \n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -81,6 +81,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/"
+                    },
+                    {
                         "id": "T1037",
                         "name": "Boot or Logon Initialization Scripts",
                         "reference": "https://attack.mitre.org/techniques/T1037/"
@@ -90,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "054db96b-fd34-43b3-9af2-587b3bd33964_4",
+    "id": "054db96b-fd34-43b3-9af2-587b3bd33964_5",
     "type": "security-rule"
 }

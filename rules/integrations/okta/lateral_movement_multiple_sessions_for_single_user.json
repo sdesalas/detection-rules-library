@@ -17,7 +17,7 @@
         "license": "Elastic License v2",
         "name": "Multiple Okta Sessions Detected for a Single User",
         "note": "",
-        "query": "event.dataset:okta.system and okta.event_type:user.session.start and okta.authentication_context.external_session_id:*\n    and not (okta.actor.id: okta* or okta.actor.display_name: okta*) \n",
+        "query": "event.dataset:okta.system and okta.event_type:user.session.start and okta.authentication_context.external_session_id:*\n    and not (okta.actor.id: okta* or okta.actor.display_name: okta*)\n",
         "references": [
             "https://developer.okta.com/docs/reference/api/system-log/",
             "https://developer.okta.com/docs/reference/api/event-types/",
@@ -104,8 +104,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 1
+        "version": 2
     },
-    "id": "621e92b6-7e54-11ee-bdc0-f661ea17fbcd_1",
+    "id": "621e92b6-7e54-11ee-bdc0-f661ea17fbcd_2",
     "type": "security-rule"
 }

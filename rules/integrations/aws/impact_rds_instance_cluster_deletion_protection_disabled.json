@@ -7,7 +7,7 @@
         "false_positives": [
             "The deletionProtection feature must be disabled as a prerequisite for deletion of a DB instance or cluster. Ensure that the instance should not be modified in this way before taking action."
         ],
-        "from": "now-10m",
+        "from": "now-6m",
         "index": [
             "filebeat-*",
             "logs-aws.cloudtrail-*"
@@ -86,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "f6652fb5-cd8e-499c-8311-2ce2bb6cac62_1",
+    "id": "f6652fb5-cd8e-499c-8311-2ce2bb6cac62_2",
     "type": "security-rule"
 }

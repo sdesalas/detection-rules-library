@@ -7,7 +7,7 @@
         "false_positives": [
             "Snapshots may be deleted by a system administrator. Verify whether the user identity should be making changes in your environment. Snapshot deletions by unfamiliar users or hosts should be investigated. If known behavior is causing false positives, it can be exempted from the rule."
         ],
-        "from": "now-10m",
+        "from": "now-6m",
         "index": [
             "filebeat-*",
             "logs-aws.cloudtrail-*"
@@ -84,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "b36c99af-b944-4509-a523-7e0fad275be1_1",
+    "id": "b36c99af-b944-4509-a523-7e0fad275be1_2",
     "type": "security-rule"
 }

@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Linux Ransomware Note Creation Detected",
-        "query": "sequence by process.entity_id, host.id with maxspan=1s \n  [file where host.os.type == \"linux\" and event.type == \"change\" and event.action == \"rename\" and file.extension : \"?*\" \n   and process.executable : (\"./*\", \"/tmp/*\", \"/var/tmp/*\", \"/dev/shm/*\", \"/var/run/*\", \"/boot/*\", \"/srv/*\", \"/run/*\") and\n   file.path : (\n     \"/home/*/Downloads/*\", \"/home/*/Documents/*\", \"/root/*\", \"/bin/*\", \"/usr/bin/*\", \"/var/log/*\", \"/var/lib/log/*\",\n     \"/var/backup/*\", \"/var/www/*\") and\n   not process.name : (\n     \"dpkg\", \"yum\", \"dnf\", \"rpm\", \"dockerd\", \"go\", \"java\", \"pip*\", \"python*\", \"node\", \"containerd\", \"php\", \"p4d\",\n     \"conda\", \"chrome\", \"imap\", \"cmake\", \"firefox\", \"semanage\", \"semodule\", \"ansible-galaxy\", \"fc-cache\", \"jammy\", \"git\",\n     \"systemsettings\", \"vmis-launcher\", \"bundle\", \"kudu-tserver\", \"suldownloader\"\n    )\n  ] with runs=25\n  [file where host.os.type == \"linux\" and event.action == \"creation\" and file.name : (\n     \"*crypt*\", \"*restore*\", \"*lock*\", \"*recovery*\", \"*data*\", \"*read*\", \"*instruction*\", \"*how_to*\", \"*ransom*\"\n    )\n  ]\n",
+        "query": "sequence by process.entity_id, host.id with maxspan=1s \n  [file where host.os.type == \"linux\" and event.type == \"change\" and event.action == \"rename\" and file.extension : \"?*\" \n   and process.executable : (\"./*\", \"/tmp/*\", \"/var/tmp/*\", \"/dev/shm/*\", \"/var/run/*\", \"/boot/*\") and\n   file.path : (\n     \"/home/*/Downloads/*\", \"/home/*/Documents/*\", \"/root/*\", \"/bin/*\", \"/usr/bin/*\", \"/var/log/*\", \"/var/lib/log/*\",\n     \"/var/backup/*\", \"/var/www/*\") and\n   not process.name : (\n     \"dpkg\", \"yum\", \"dnf\", \"rpm\", \"dockerd\", \"go\", \"java\", \"pip*\", \"python*\", \"node\", \"containerd\", \"php\", \"p4d\",\n     \"conda\", \"chrome\", \"imap\", \"cmake\", \"firefox\", \"semanage\", \"semodule\", \"ansible-galaxy\", \"fc-cache\", \"jammy\", \"git\",\n     \"systemsettings\", \"vmis-launcher\", \"bundle\", \"kudu-tserver\", \"suldownloader\", \"rustup-init\"\n    )\n  ] with runs=25\n  [file where host.os.type == \"linux\" and event.action == \"creation\" and file.name : (\n     \"*crypt*\", \"*restore*\", \"*lock*\", \"*recovery*\", \"*data*\", \"*read*\", \"*instruction*\", \"*how_to*\", \"*ransom*\"\n    )\n  ]\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -99,8 +99,8 @@
             }
         ],
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "c8935a8b-634a-4449-98f7-bb24d3b2c0af_8",
+    "id": "c8935a8b-634a-4449-98f7-bb24d3b2c0af_9",
     "type": "security-rule"
 }

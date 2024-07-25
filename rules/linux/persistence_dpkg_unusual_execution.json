@@ -3,15 +3,18 @@
         "author": [
             "Elastic"
         ],
-        "description": "This rule identifies a sequence of 100 file extension rename events within a set of common file paths by the same process in a timespan of 1 second. Ransomware is a type of malware that encrypts a victim's files or systems and demands payment (usually in cryptocurrency) in exchange for the decryption key. One important indicator of a ransomware attack is the mass encryption of the file system, after which a new file extension is added to the file.",
+        "description": "This rule detects the execution of the DPKG command by processes not associated with the DPKG package manager. The DPKG command is used to install, remove, and manage Debian packages on a Linux system. Attackers can abuse the DPKG command to install malicious packages on a system.",
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
-        "name": "Suspicious File Changes Activity Detected",
-        "query": "sequence by process.entity_id, host.id with maxspan=1s\n  [file where host.os.type == \"linux\" and event.type == \"change\" and event.action == \"rename\" and file.extension : \"?*\" \n   and process.executable : (\"./*\", \"/tmp/*\", \"/var/tmp/*\", \"/dev/shm/*\", \"/var/run/*\", \"/boot/*\", \"/srv/*\", \"/run/*\") and\n   file.path : (\n     \"/home/*/Downloads/*\", \"/home/*/Documents/*\", \"/root/*\", \"/bin/*\", \"/usr/bin/*\", \"/var/log/*\", \"/var/lib/log/*\",\n     \"/var/backup/*\", \"/var/www/*\"\n   ) and\n   not process.name : (\n     \"dpkg\", \"yum\", \"dnf\", \"rpm\", \"dockerd\", \"go\", \"java\", \"pip*\", \"python*\", \"node\", \"containerd\", \"php\", \"p4d\",\n     \"conda\", \"chrome\", \"imap\", \"cmake\", \"firefox\", \"semanage\", \"semodule\", \"ansible-galaxy\", \"fc-cache\", \"jammy\", \"git\",\n     \"systemsettings\", \"vmis-launcher\", \"bundle\", \"kudu-tserver\", \"suldownloader\"\n    )\n   ] with runs=25\n",
+        "name": "Unusual DPKG Execution",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\nprocess.executable : \"/var/lib/dpkg/info/*\" and process.session_leader.name != null and\nprocess.group_leader.name != null and not (\n  process.parent.name in (\"dpkg\", \"dpkg-reconfigure\") or\n  process.session_leader.name == \"dpkg\" or\n  process.group_leader.name == \"dpkg\"\n)\n",
+        "references": [
+            "https://www.makeuseof.com/how-deb-packages-are-backdoored-how-to-detect-it/"
+        ],
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -31,27 +34,7 @@
             },
             {
                 "ecs": true,
-                "name": "file.extension",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "file.path",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "host.id",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
                 "name": "host.os.type",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "process.entity_id",
                 "type": "keyword"
             },
             {
@@ -61,41 +44,91 @@
             },
             {
                 "ecs": true,
-                "name": "process.name",
+                "name": "process.group_leader.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.session_leader.name",
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
-        "rule_id": "28738f9f-7427-4d23-bc69-756708b5f624",
+        "risk_score": 21,
+        "rule_id": "d6241c90-99f2-44db-b50f-299b6ebd7ee9",
         "setup": "## Setup\n\nThis rule requires data coming in from Elastic Defend.\n\n### Elastic Defend Integration Setup\nElastic Defend is integrated into the Elastic Agent using Fleet. Upon configuration, the integration allows the Elastic Agent to monitor events on your host and send data to the Elastic Security app.\n\n#### Prerequisite Requirements:\n- Fleet is required for Elastic Defend.\n- To configure Fleet Server refer to the [documentation](https://www.elastic.co/guide/en/fleet/current/fleet-server.html).\n\n#### The following steps should be executed in order to add the Elastic Defend integration on a Linux System:\n- Go to the Kibana home page and click \"Add integrations\".\n- In the query bar, search for \"Elastic Defend\" and select the integration to see more details about it.\n- Click \"Add Elastic Defend\".\n- Configure the integration name and optionally add a description.\n- Select the type of environment you want to protect, either \"Traditional Endpoints\" or \"Cloud Workloads\".\n- Select a configuration preset. Each preset comes with different default settings for Elastic Agent, you can further customize these later by configuring the Elastic Defend integration policy. [Helper guide](https://www.elastic.co/guide/en/security/current/configure-endpoint-integration-policy.html).\n- We suggest selecting \"Complete EDR (Endpoint Detection and Response)\" as a configuration setting, that provides \"All events; all preventions\"\n- Enter a name for the agent policy in \"New agent policy name\". If other agent policies already exist, you can click the \"Existing hosts\" tab and select an existing policy instead.\nFor more details on Elastic Agent configuration settings, refer to the [helper guide](https://www.elastic.co/guide/en/fleet/8.10/agent-policy.html).\n- Click \"Save and Continue\".\n- To complete the integration, select \"Add Elastic Agent to your hosts\" and continue to the next section to install the Elastic Agent on your hosts.\nFor more details on Elastic Defend refer to the [helper guide](https://www.elastic.co/guide/en/security/current/install-endpoint.html).\n",
-        "severity": "medium",
+        "severity": "low",
         "tags": [
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Impact",
+            "Tactic: Persistence",
             "Data Source: Elastic Defend"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0040",
-                    "name": "Impact",
-                    "reference": "https://attack.mitre.org/tactics/TA0040/"
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
                 },
                 "technique": [
                     {
-                        "id": "T1486",
-                        "name": "Data Encrypted for Impact",
-                        "reference": "https://attack.mitre.org/techniques/T1486/"
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/",
+                        "subtechnique": [
+                            {
+                                "id": "T1546.016",
+                                "name": "Installer Packages",
+                                "reference": "https://attack.mitre.org/techniques/T1546/016/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1543",
+                        "name": "Create or Modify System Process",
+                        "reference": "https://attack.mitre.org/techniques/T1543/"
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0001",
+                    "name": "Initial Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                },
+                "technique": [
+                    {
+                        "id": "T1195",
+                        "name": "Supply Chain Compromise",
+                        "reference": "https://attack.mitre.org/techniques/T1195/",
+                        "subtechnique": [
+                            {
+                                "id": "T1195.002",
+                                "name": "Compromise Software Supply Chain",
+                                "reference": "https://attack.mitre.org/techniques/T1195/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
+        "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 1
     },
-    "id": "28738f9f-7427-4d23-bc69-756708b5f624_8",
+    "id": "d6241c90-99f2-44db-b50f-299b6ebd7ee9_1",
     "type": "security-rule"
 }

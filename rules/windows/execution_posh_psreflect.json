@@ -64,10 +64,10 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "56f2e9b5-4803-4e44-a0a4-a52dc79d57fe",
         "setup": "## Setup\n\nThe 'PowerShell Script Block Logging' logging policy must be configured (Enable).\n\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration >\nAdministrative Templates >\nWindows PowerShell >\nTurn on PowerShell Script Block Logging (Enable)\n```\n\nSteps to implement the logging policy via registry:\n\n```\nreg add \"hklm\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\ScriptBlockLogging\" /v EnableScriptBlockLogging /t REG_DWORD /d 1\n```\n",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Endpoint",
             "OS: Windows",
@@ -107,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 210
+        "version": 211
     },
-    "id": "56f2e9b5-4803-4e44-a0a4-a52dc79d57fe_210",
+    "id": "56f2e9b5-4803-4e44-a0a4-a52dc79d57fe_211",
     "type": "security-rule"
 }
