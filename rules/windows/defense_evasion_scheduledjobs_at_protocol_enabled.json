@@ -14,7 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Scheduled Tasks AT Command Enabled",
-        "query": "registry where host.os.type == \"windows\" and\n  registry.path : (\n    \"HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Schedule\\\\Configuration\\\\EnableAt\",\n    \"\\\\REGISTRY\\\\MACHINE\\\\SOFTWARE\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Schedule\\\\Configuration\\\\EnableAt\"\n  ) and registry.data.strings : (\"1\", \"0x00000001\")\n",
+        "query": "registry where host.os.type == \"windows\" and event.type == \"change\" and\n  registry.path : (\n    \"HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Schedule\\\\Configuration\\\\EnableAt\",\n    \"\\\\REGISTRY\\\\MACHINE\\\\SOFTWARE\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Schedule\\\\Configuration\\\\EnableAt\"\n  ) and registry.data.strings : (\"1\", \"0x00000001\")\n",
         "references": [
             "https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-scheduledjob"
         ],
@@ -29,6 +29,11 @@
             }
         ],
         "required_fields": [
+            {
+                "ecs": true,
+                "name": "event.type",
+                "type": "keyword"
+            },
             {
                 "ecs": true,
                 "name": "host.os.type",
@@ -107,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "9aa0e1f6-52ce-42e1-abb3-09657cee2698_109",
+    "id": "9aa0e1f6-52ce-42e1-abb3-09657cee2698_110",
     "type": "security-rule"
 }

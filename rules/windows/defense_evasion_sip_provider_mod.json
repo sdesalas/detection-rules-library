@@ -13,7 +13,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "SIP Provider Modification",
-        "query": "registry where host.os.type == \"windows\" and event.type:\"change\" and\n  registry.path: (\n    \"*\\\\SOFTWARE\\\\Microsoft\\\\Cryptography\\\\OID\\\\EncodingType 0\\\\CryptSIPDllPutSignedDataMsg\\\\{*}\\\\Dll\",\n    \"*\\\\SOFTWARE\\\\WOW6432Node\\\\Microsoft\\\\Cryptography\\\\OID\\\\EncodingType 0\\\\CryptSIPDllPutSignedDataMsg\\\\{*}\\\\Dll\",\n    \"*\\\\SOFTWARE\\\\Microsoft\\\\Cryptography\\\\Providers\\\\Trust\\\\FinalPolicy\\\\{*}\\\\$Dll\",\n    \"*\\\\SOFTWARE\\\\WOW6432Node\\\\Microsoft\\\\Cryptography\\\\Providers\\\\Trust\\\\FinalPolicy\\\\{*}\\\\$Dll\"\n    ) and\n  registry.data.strings:\"*.dll\"\n",
+        "query": "registry where host.os.type == \"windows\" and event.type == \"change\" and registry.value : (\"Dll\", \"$Dll\") and\n  registry.path: (\n    \"*\\\\SOFTWARE\\\\Microsoft\\\\Cryptography\\\\OID\\\\EncodingType 0\\\\CryptSIPDllPutSignedDataMsg\\\\{*}\\\\Dll\",\n    \"*\\\\SOFTWARE\\\\WOW6432Node\\\\Microsoft\\\\Cryptography\\\\OID\\\\EncodingType 0\\\\CryptSIPDllPutSignedDataMsg\\\\{*}\\\\Dll\",\n    \"*\\\\SOFTWARE\\\\Microsoft\\\\Cryptography\\\\Providers\\\\Trust\\\\FinalPolicy\\\\{*}\\\\$Dll\",\n    \"*\\\\SOFTWARE\\\\WOW6432Node\\\\Microsoft\\\\Cryptography\\\\Providers\\\\Trust\\\\FinalPolicy\\\\{*}\\\\$Dll\"\n    ) and\n  registry.data.strings:\"*.dll\" and\n  not (process.name : \"msiexec.exe\" and registry.data.strings : \"mso.dll\") and\n  not (process.name : \"regsvr32.exe\" and registry.data.strings == \"WINTRUST.DLL\")\n",
         "references": [
             "https://github.com/mattifestation/PoCSubjectInterfacePackage"
         ],
@@ -36,12 +36,22 @@
             },
             {
                 "ecs": true,
+                "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "registry.data.strings",
                 "type": "wildcard"
             },
             {
                 "ecs": true,
                 "name": "registry.path",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "registry.value",
                 "type": "keyword"
             }
         ],
@@ -83,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "f2c7b914-eda3-40c2-96ac-d23ef91776ca_107",
+    "id": "f2c7b914-eda3-40c2-96ac-d23ef91776ca_108",
     "type": "security-rule"
 }

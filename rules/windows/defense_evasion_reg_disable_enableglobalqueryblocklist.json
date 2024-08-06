@@ -12,7 +12,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "DNS Global Query Block List Modified or Disabled",
-        "query": "registry where host.os.type == \"windows\" and event.type : \"change\" and\n(\n  (registry.value : \"EnableGlobalQueryBlockList\" and registry.data.strings : (\"0\", \"0x00000000\")) or\n  (registry.value : \"GlobalQueryBlockList\" and not registry.data.strings : \"wpad\")\n)\n",
+        "query": "registry where host.os.type == \"windows\" and event.type == \"change\" and\n(\n  (registry.value : \"EnableGlobalQueryBlockList\" and registry.data.strings : (\"0\", \"0x00000000\")) or\n  (registry.value : \"GlobalQueryBlockList\" and not registry.data.strings : \"wpad\")\n)\n",
         "references": [
             "https://cube0x0.github.io/Pocing-Beyond-DA/",
             "https://www.thehacker.recipes/ad/movement/mitm-and-coerced-authentications/wpad-spoofing",
@@ -102,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "57bfa0a9-37c0-44d6-b724-54bf16787492_1",
+    "id": "57bfa0a9-37c0-44d6-b724-54bf16787492_2",
     "type": "security-rule"
 }

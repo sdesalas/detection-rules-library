@@ -14,7 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "SolarWinds Process Disabling Services via Registry",
-        "query": "registry where host.os.type == \"windows\" and registry.path : (\n    \"HKLM\\\\SYSTEM\\\\*ControlSet*\\\\Services\\\\*\\\\Start\",\n    \"\\\\REGISTRY\\\\MACHINE\\\\SYSTEM\\\\*ControlSet*\\\\Services\\\\*\\\\Start\"\n  ) and\n  registry.data.strings : (\"4\", \"0x00000004\") and\n  process.name : (\n      \"SolarWinds.BusinessLayerHost*.exe\",\n      \"ConfigurationWizard*.exe\",\n      \"NetflowDatabaseMaintenance*.exe\",\n      \"NetFlowService*.exe\",\n      \"SolarWinds.Administration*.exe\",\n      \"SolarWinds.Collector.Service*.exe\",\n      \"SolarwindsDiagnostics*.exe\")\n",
+        "query": "registry where host.os.type == \"windows\" and event.type == \"change\" and registry.value : \"Start\" and\n  registry.path : (\n    \"HKLM\\\\SYSTEM\\\\*ControlSet*\\\\Services\\\\*\\\\Start\",\n    \"\\\\REGISTRY\\\\MACHINE\\\\SYSTEM\\\\*ControlSet*\\\\Services\\\\*\\\\Start\"\n  ) and\n  registry.data.strings : (\"4\", \"0x00000004\") and\n  process.name : (\n      \"SolarWinds.BusinessLayerHost*.exe\",\n      \"ConfigurationWizard*.exe\",\n      \"NetflowDatabaseMaintenance*.exe\",\n      \"NetFlowService*.exe\",\n      \"SolarWinds.Administration*.exe\",\n      \"SolarWinds.Collector.Service*.exe\",\n      \"SolarwindsDiagnostics*.exe\")\n",
         "references": [
             "https://www.fireeye.com/blog/threat-research/2020/12/evasive-attacker-leverages-solarwinds-supply-chain-compromises-with-sunburst-backdoor.html"
         ],
@@ -29,6 +29,11 @@
             }
         ],
         "required_fields": [
+            {
+                "ecs": true,
+                "name": "event.type",
+                "type": "keyword"
+            },
             {
                 "ecs": true,
                 "name": "host.os.type",
@@ -47,6 +52,11 @@
             {
                 "ecs": true,
                 "name": "registry.path",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "registry.value",
                 "type": "keyword"
             }
         ],
@@ -117,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "b9960fef-82c6-4816-befa-44745030e917_110",
+    "id": "b9960fef-82c6-4816-befa-44745030e917_111",
     "type": "security-rule"
 }

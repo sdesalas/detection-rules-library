@@ -13,7 +13,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Unusual Persistence via Services Registry",
-        "query": "registry where host.os.type == \"windows\" and event.type == \"change\" and\n  registry.path : (\n      \"HKLM\\\\SYSTEM\\\\ControlSet*\\\\Services\\\\*\\\\ServiceDLL\",\n      \"HKLM\\\\SYSTEM\\\\ControlSet*\\\\Services\\\\*\\\\ImagePath\",\n      \"\\\\REGISTRY\\\\MACHINE\\\\SYSTEM\\\\ControlSet*\\\\Services\\\\*\\\\ServiceDLL\",\n      \"\\\\REGISTRY\\\\MACHINE\\\\SYSTEM\\\\ControlSet*\\\\Services\\\\*\\\\ImagePath\"\n  ) and not registry.data.strings : (\n      \"?:\\\\windows\\\\system32\\\\Drivers\\\\*.sys\",\n      \"\\\\SystemRoot\\\\System32\\\\drivers\\\\*.sys\",\n      \"\\\\??\\\\?:\\\\Windows\\\\system32\\\\Drivers\\\\*.SYS\",\n      \"system32\\\\DRIVERS\\\\USBSTOR\") and\n  not (process.name : \"procexp??.exe\" and registry.data.strings : \"?:\\\\*\\\\procexp*.sys\") and\n  not process.executable : (\n      \"?:\\\\Program Files\\\\*.exe\",\n      \"?:\\\\Program Files (x86)\\\\*.exe\",\n      \"?:\\\\Windows\\\\System32\\\\svchost.exe\",\n      \"?:\\\\Windows\\\\winsxs\\\\*\\\\TiWorker.exe\",\n      \"?:\\\\Windows\\\\System32\\\\drvinst.exe\",\n      \"?:\\\\Windows\\\\System32\\\\services.exe\",\n      \"?:\\\\Windows\\\\System32\\\\msiexec.exe\",\n      \"?:\\\\Windows\\\\System32\\\\regsvr32.exe\")\n",
+        "query": "registry where host.os.type == \"windows\" and event.type == \"change\" and\n  registry.value : (\"ServiceDLL\", \"ImagePath\") and\n  registry.path : (\n      \"HKLM\\\\SYSTEM\\\\ControlSet*\\\\Services\\\\*\\\\ServiceDLL\",\n      \"HKLM\\\\SYSTEM\\\\ControlSet*\\\\Services\\\\*\\\\ImagePath\",\n      \"\\\\REGISTRY\\\\MACHINE\\\\SYSTEM\\\\ControlSet*\\\\Services\\\\*\\\\ServiceDLL\",\n      \"\\\\REGISTRY\\\\MACHINE\\\\SYSTEM\\\\ControlSet*\\\\Services\\\\*\\\\ImagePath\"\n  ) and not registry.data.strings : (\n      \"?:\\\\windows\\\\system32\\\\Drivers\\\\*.sys\",\n      \"\\\\SystemRoot\\\\System32\\\\drivers\\\\*.sys\",\n      \"\\\\??\\\\?:\\\\Windows\\\\system32\\\\Drivers\\\\*.SYS\",\n      \"\\\\??\\\\?:\\\\Windows\\\\syswow64\\\\*.sys\",\n      \"system32\\\\DRIVERS\\\\USBSTOR\") and\n  not (process.name : \"procexp??.exe\" and registry.data.strings : \"?:\\\\*\\\\procexp*.sys\") and\n  not process.executable : (\n      \"?:\\\\Program Files\\\\*.exe\",\n      \"?:\\\\Program Files (x86)\\\\*.exe\",\n      \"?:\\\\Windows\\\\System32\\\\svchost.exe\",\n      \"?:\\\\Windows\\\\winsxs\\\\*\\\\TiWorker.exe\",\n      \"?:\\\\Windows\\\\System32\\\\drvinst.exe\",\n      \"?:\\\\Windows\\\\System32\\\\services.exe\",\n      \"?:\\\\Windows\\\\System32\\\\msiexec.exe\",\n      \"?:\\\\Windows\\\\System32\\\\regsvr32.exe\",\n      \"?:\\\\Windows\\\\System32\\\\WaaSMedicAgent.exe\"\n  )\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -49,6 +49,11 @@
             {
                 "ecs": true,
                 "name": "registry.path",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "registry.value",
                 "type": "keyword"
             }
         ],
@@ -106,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "403ef0d3-8259-40c9-a5b6-d48354712e49_108",
+    "id": "403ef0d3-8259-40c9-a5b6-d48354712e49_109",
     "type": "security-rule"
 }

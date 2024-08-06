@@ -6,13 +6,12 @@
         "description": "Identifies the creation of a symbolic link to a suspicious file or location. A symbolic link is a reference to a file or directory that acts as a pointer or shortcut, allowing users to access the target file or directory from a different location in the file system. An attacker can potentially leverage symbolic links for privilege escalation by tricking a privileged process into following the symbolic link to a sensitive file, giving the attacker access to data or capabilities they would not normally have.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*"
+            "logs-endpoint.events.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Suspicious Symbolic Link Created",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and\nprocess.name == \"ln\" and process.args in (\"-s\", \"-sf\") and \n  (\n    /* suspicious files */\n    (process.args in (\"/etc/shadow\", \"/etc/shadow-\", \"/etc/shadow~\", \"/etc/gshadow\", \"/etc/gshadow-\") or \n    (process.working_directory == \"/etc\" and process.args in (\"shadow\", \"shadow-\", \"shadow~\", \"gshadow\", \"gshadow-\"))) or \n    \n    /* suspicious bins */\n    (process.args in (\"/bin/bash\", \"/bin/dash\", \"/bin/sh\", \"/bin/tcsh\", \"/bin/csh\", \"/bin/zsh\", \"/bin/ksh\", \"/bin/fish\") or \n    (process.working_directory == \"/bin\" and process.args : (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\"))) or \n    (process.args in (\"/usr/bin/bash\", \"/usr/bin/dash\", \"/usr/bin/sh\", \"/usr/bin/tcsh\", \"/usr/bin/csh\", \"/usr/bin/zsh\", \"/usr/bin/ksh\", \"/usr/bin/fish\") or \n    (process.working_directory == \"/usr/bin\" and process.args in (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\"))) or\n    \n    /* suspicious locations */\n    (process.args : (\"/etc/cron.d/*\", \"/etc/cron.daily/*\", \"/etc/cron.hourly/*\", \"/etc/cron.weekly/*\", \"/etc/cron.monthly/*\")) or\n    (process.args : (\"/home/*/.ssh/*\", \"/root/.ssh/*\",\"/etc/sudoers.d/*\", \"/dev/shm/*\"))\n  ) and \n  process.parent.name in (\"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\") and \n  not user.Ext.real.id == \"0\" and not group.Ext.real.id == \"0\"\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\nprocess.name == \"ln\" and process.args in (\"-s\", \"-sf\") and \n  (\n    /* suspicious files */\n    (process.args in (\"/etc/shadow\", \"/etc/shadow-\", \"/etc/shadow~\", \"/etc/gshadow\", \"/etc/gshadow-\") or \n    (process.working_directory == \"/etc\" and process.args in (\"shadow\", \"shadow-\", \"shadow~\", \"gshadow\", \"gshadow-\"))) or \n    \n    /* suspicious bins */\n    (process.args in (\"/bin/bash\", \"/bin/dash\", \"/bin/sh\", \"/bin/tcsh\", \"/bin/csh\", \"/bin/zsh\", \"/bin/ksh\", \"/bin/fish\") or \n    (process.working_directory == \"/bin\" and process.args : (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\"))) or \n    (process.args in (\"/usr/bin/bash\", \"/usr/bin/dash\", \"/usr/bin/sh\", \"/usr/bin/tcsh\", \"/usr/bin/csh\", \"/usr/bin/zsh\", \"/usr/bin/ksh\", \"/usr/bin/fish\") or \n    (process.working_directory == \"/usr/bin\" and process.args in (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\"))) or\n    \n    /* suspicious locations */\n    (process.args : (\"/etc/cron.d/*\", \"/etc/cron.daily/*\", \"/etc/cron.hourly/*\", \"/etc/cron.weekly/*\", \"/etc/cron.monthly/*\")) or\n    (process.args : (\"/home/*/.ssh/*\", \"/root/.ssh/*\",\"/etc/sudoers.d/*\", \"/dev/shm/*\"))\n  ) and \n  process.parent.name in (\"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\") and \n  not user.Ext.real.id == \"0\" and not group.Ext.real.id == \"0\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -76,7 +75,6 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Tactic: Credential Access",
-            "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -120,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "8a024633-c444-45c0-a4fe-78128d8c1ab6_5",
+    "id": "8a024633-c444-45c0-a4fe-78128d8c1ab6_6",
     "type": "security-rule"
 }
