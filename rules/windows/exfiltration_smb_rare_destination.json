@@ -7,7 +7,7 @@
         "from": "now-9m",
         "history_window_start": "now-7d",
         "index": [
-            "logs-endpoint.events.network-*",
+            "logs-endpoint.events.*",
             "winlogbeat-*",
             "logs-windows.sysmon_operational-*",
             "endgame-*"
@@ -100,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 2
     },
-    "id": "f580bf0a-2d23-43bb-b8e1-17548bb947ec_3",
+    "id": "f580bf0a-2d23-43bb-b8e1-17548bb947ec_2",
     "type": "security-rule"
 }

@@ -6,7 +6,7 @@
         "description": "Identifies the creation of a process impersonating the token of another user logon session. Adversaries may create a new process with a different token to escalate privileges and bypass access controls.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*"
+            "logs-endpoint.events.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -129,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 2
     },
-    "id": "1b0b4818-5655-409b-9c73-341cac4bb73f_3",
+    "id": "1b0b4818-5655-409b-9c73-341cac4bb73f_2",
     "type": "security-rule"
 }

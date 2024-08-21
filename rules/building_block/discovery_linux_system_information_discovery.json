@@ -7,32 +7,21 @@
         "description": "Enrich process events with uname and other command lines that imply Linux system information discovery.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*",
             "auditbeat-*",
-            "logs-auditd_manager.auditd-*"
+            "logs-endpoint.events.*"
         ],
         "interval": "60m",
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Linux System Information Discovery",
-        "query": "process where event.type == \"start\" and event.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\") and (\n  process.name: \"uname\" or (\n  process.name: (\"cat\", \"more\", \"less\") and process.args: (\"*issue*\", \"*version*\", \"*profile*\", \"*services*\", \"*cpuinfo*\")\n  )\n)\n",
+        "query": "process where event.type == \"start\" and\n(\n  process.name: \"uname\" or\n  (process.name: (\"cat\", \"more\", \"less\") and\n  process.args: (\"*issue*\", \"*version*\", \"*profile*\", \"*services*\", \"*cpuinfo*\"))\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
-            },
-            {
-                "package": "auditd_manager",
-                "version": "^1.0.0"
             }
         ],
         "required_fields": [
-            {
-                "ecs": true,
-                "name": "event.action",
-                "type": "keyword"
-            },
             {
                 "ecs": true,
                 "name": "event.type",
@@ -58,9 +47,7 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Rule Type: BBR",
-            "Data Source: Elastic Defend",
-            "Data Source: Elastic Endgame",
-            "Data Source: Auditd Manager"
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -81,8 +68,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 2
     },
-    "id": "b81bd314-db5b-4d97-82e8-88e3e5fc9de5_3",
+    "id": "b81bd314-db5b-4d97-82e8-88e3e5fc9de5_2",
     "type": "security-rule"
 }

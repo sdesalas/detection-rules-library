@@ -6,8 +6,7 @@
         "description": "Identifies the execution of a hosted XSL script using the Microsoft.XMLDOM COM interface via Microsoft Office processes. This behavior may indicate adversarial activity to execute malicious JScript or VBScript on the system.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "logs-endpoint.events.library-*"
+            "logs-endpoint.events.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -112,8 +111,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 2
     },
-    "id": "48f657ee-de4f-477c-aa99-ed88ee7af97a_3",
+    "id": "48f657ee-de4f-477c-aa99-ed88ee7af97a_2",
     "type": "security-rule"
 }

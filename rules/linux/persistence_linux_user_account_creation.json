@@ -6,7 +6,6 @@
         "description": "Identifies attempts to create new users. Attackers may add new users to establish persistence on a system.",
         "from": "now-9m",
         "index": [
-            "filebeat-*",
             "logs-system.auth-*"
         ],
         "language": "eql",
@@ -79,8 +78,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 4
     },
-    "id": "edfd5ca9-9d6c-44d9-b615-1e56b920219c_5",
+    "id": "edfd5ca9-9d6c-44d9-b615-1e56b920219c_4",
     "type": "security-rule"
 }

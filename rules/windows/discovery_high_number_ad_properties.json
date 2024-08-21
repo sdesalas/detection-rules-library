@@ -13,7 +13,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Suspicious Access to LDAP Attributes",
-        "query": "any where event.action in (\"Directory Service Access\", \"object-operation-performed\") and\n event.code == \"4662\" and not winlog.event_data.SubjectUserSid : \"S-1-5-18\" and\n winlog.event_data.AccessMaskDescription == \"Read Property\" and length(winlog.event_data.Properties) >= 2000\n",
+        "query": "any where event.action == \"Directory Service Access\" and\n event.code == \"4662\" and not winlog.event_data.SubjectUserSid : \"S-1-5-18\" and\n winlog.event_data.AccessMaskDescription == \"Read Property\" and length(winlog.event_data.Properties) >= 2000\n",
         "related_integrations": [
             {
                 "package": "windows",
@@ -83,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 1
     },
-    "id": "68ad737b-f90a-4fe5-bda6-a68fa460044e_2",
+    "id": "68ad737b-f90a-4fe5-bda6-a68fa460044e_1",
     "type": "security-rule"
 }

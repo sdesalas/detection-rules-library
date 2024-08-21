@@ -3,10 +3,11 @@
         "author": [
             "Elastic"
         ],
+        "building_block_type": "default",
         "description": "Identifies the attempt to disable Network-Level Authentication (NLA) via registry modification. Network Level Authentication (NLA) is a feature on Windows that provides an extra layer of security for Remote Desktop (RDP) connections, as it requires users to authenticate before allowing a full RDP session. Attackers can disable NLA to enable persistence methods that require access to the Windows sign-in screen without authenticating, such as Accessibility Features persistence methods, like Sticky Keys.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.registry-*",
+            "logs-endpoint.events.*",
             "endgame-*"
         ],
         "language": "eql",
@@ -53,7 +54,8 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Rule Type: BBR"
         ],
         "threat": [
             {
@@ -79,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 2
     },
-    "id": "db65f5ba-d1ef-4944-b9e8-7e51060c2b42_3",
+    "id": "db65f5ba-d1ef-4944-b9e8-7e51060c2b42_2",
     "type": "security-rule"
 }

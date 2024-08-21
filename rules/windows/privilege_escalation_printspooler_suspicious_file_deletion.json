@@ -10,7 +10,7 @@
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
-            "logs-endpoint.events.file-*",
+            "logs-endpoint.events.*",
             "logs-windows.sysmon_operational-*",
             "endgame-*"
         ],
@@ -86,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 106
     },
-    "id": "c4818812-d44f-47be-aaef-4cfb2f9cc799_107",
+    "id": "c4818812-d44f-47be-aaef-4cfb2f9cc799_106",
     "type": "security-rule"
 }

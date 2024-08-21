@@ -10,8 +10,7 @@
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
-            "logs-endpoint.events.process-*",
-            "logs-endpoint.events.network-*",
+            "logs-endpoint.events.*",
             "logs-windows.sysmon_operational-*"
         ],
         "language": "eql",
@@ -109,8 +108,8 @@
             }
         ],
         "type": "eql",
-        "version": 108
+        "version": 107
     },
-    "id": "89f9a4b0-9f8f-4ee0-8823-c4751a6d6696_108",
+    "id": "89f9a4b0-9f8f-4ee0-8823-c4751a6d6696_107",
     "type": "security-rule"
 }

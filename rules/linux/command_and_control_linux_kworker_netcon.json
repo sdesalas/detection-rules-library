@@ -86,14 +86,14 @@
                 },
                 "technique": [
                     {
-                        "id": "T1014",
-                        "name": "Rootkit",
-                        "reference": "https://attack.mitre.org/techniques/T1014/"
-                    },
-                    {
                         "id": "T1036",
                         "name": "Masquerading",
                         "reference": "https://attack.mitre.org/techniques/T1036/"
+                    },
+                    {
+                        "id": "T1014",
+                        "name": "Rootkit",
+                        "reference": "https://attack.mitre.org/techniques/T1014/"
                     }
                 ]
             },
@@ -115,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 4
     },
-    "id": "25d917c4-aa3c-4111-974c-286c0312ff95_5",
+    "id": "25d917c4-aa3c-4111-974c-286c0312ff95_4",
     "type": "security-rule"
 }

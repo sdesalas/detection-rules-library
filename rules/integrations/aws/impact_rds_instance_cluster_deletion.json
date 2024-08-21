@@ -10,7 +10,7 @@
         "from": "now-60m",
         "index": [
             "filebeat-*",
-            "logs-aws.cloudtrail-*"
+            "logs-aws*"
         ],
         "interval": "10m",
         "language": "kuery",
@@ -63,7 +63,6 @@
             "Domain: Cloud",
             "Data Source: AWS",
             "Data Source: Amazon Web Services",
-            "Data Source: AWS RDS",
             "Use Case: Asset Visibility",
             "Tactic: Impact"
         ],
@@ -86,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 206
+        "version": 205
     },
-    "id": "9055ece6-2689-4224-a0e0-b04881e1f8ad_206",
+    "id": "9055ece6-2689-4224-a0e0-b04881e1f8ad_205",
     "type": "security-rule"
 }

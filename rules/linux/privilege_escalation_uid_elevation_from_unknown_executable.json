@@ -13,9 +13,11 @@
         "license": "Elastic License v2",
         "name": "UID Elevation from Previously Unknown Executable",
         "new_terms_fields": [
-            "process.executable"
+            "host.id",
+            "process.executable",
+            "process.command_line"
         ],
-        "query": "host.os.type:\"linux\" and event.category:\"process\" and event.action:\"uid_change\" and event.type:\"change\" and user.id:\"0\"\nand process.parent.name:(\"bash\" or \"dash\" or \"sh\" or \"tcsh\" or \"csh\" or \"zsh\" or \"ksh\" or \"fish\") and not (\n  process.executable:(\n    /bin/* or /usr/bin/* or /sbin/* or /usr/sbin/* or /snap/* or /tmp/newroot/* or /var/lib/docker/* or /usr/local/* or\n    /opt/psa/admin/* or /usr/lib/snapd/snap-confine or /opt/dynatrace/* or /opt/microsoft/* or\n    /var/lib/snapd/snap/bin/node or /opt/gitlab/embedded/sbin/logrotate or /etc/apt/universal-hooks/* or\n    /opt/puppetlabs/puppet/bin/puppet or /opt/cisco/* or /run/k3s/containerd/* or /usr/lib/postfix/sbin/master or\n    /usr/libexec/postfix/local\n  ) or\n  process.name:(\n    \"bash\" or \"dash\" or \"sh\" or \"tcsh\" or \"csh\" or \"zsh\" or \"ksh\" or \"fish\" or \"sudo\" or \"su\" or \"apt\" or \"apt-get\" or\n    \"aptitude\" or \"squid\" or \"snap\" or \"fusermount\" or \"pkexec\" or \"umount\" or \"master\" or \"omsbaseline\" or \"dzdo\" or\n    \"sandfly\" or \"logrotate\"\n  ) or\n  process.args:/usr/bin/python*\n)\n",
+        "query": "host.os.type:\"linux\" and event.category:\"process\" and event.action:\"uid_change\" and event.type:\"change\" and user.id:\"0\"\nand process.parent.name:(\"bash\" or \"dash\" or \"sh\" or \"tcsh\" or \"csh\" or \"zsh\" or \"ksh\" or \"fish\") and not (\n  process.executable:(\n    /bin/* or /usr/bin/* or /sbin/* or /usr/sbin/* or /snap/* or /tmp/newroot/* or /var/lib/docker/* or /usr/local/*\n  ) or\n  process.name:(\n    \"bash\" or \"dash\" or \"sh\" or \"tcsh\" or \"csh\" or \"zsh\" or \"ksh\" or \"fish\" or \"sudo\" or \"su\" or \"apt\" or \"apt-get\" or\n    \"aptitude\" or \"squid\" or \"snap\" or \"fusermount\" or \"pkexec\" or \"umount\" or \"master\" or \"omsbaseline\" or \"dzdo\" or\n    \"sandfly\" or \"logrotate\"\n  ) or\n  process.args:/usr/bin/python*\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -122,8 +124,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 2
     },
-    "id": "7787362c-90ff-4b1a-b313-8808b1020e64_3",
+    "id": "7787362c-90ff-4b1a-b313-8808b1020e64_2",
     "type": "security-rule"
 }

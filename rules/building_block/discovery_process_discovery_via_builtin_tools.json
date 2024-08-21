@@ -7,14 +7,13 @@
         "description": "Identifies the use of built-in tools attackers can use to discover running processes on an endpoint.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*"
+            "logs-endpoint.events.*"
         ],
         "interval": "60m",
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Process Discovery via Built-In Applications",
-        "query": "process where event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and process.name in (\n  \"ps\", \"pstree\", \"htop\", \"pgrep\"\n) and \nnot process.parent.name in (\"amazon-ssm-agent\", \"snap\")\n",
+        "query": "process where event.type == \"start\" and event.action == \"exec\" and\n  process.name :(\"ps\", \"pstree\", \"htop\", \"pgrep\") and\n  not (event.action == \"exec\" and process.parent.name in (\"amazon-ssm-agent\", \"snap\"))\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -53,8 +52,7 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Rule Type: BBR",
-            "Data Source: Elastic Defend",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -87,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 2
     },
-    "id": "3f4d7734-2151-4481-b394-09d7c6c91f75_3",
+    "id": "3f4d7734-2151-4481-b394-09d7c6c91f75_2",
     "type": "security-rule"
 }

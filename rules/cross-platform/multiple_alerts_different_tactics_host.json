@@ -32,8 +32,9 @@
         "rule_id": "b946c2f7-df06-4c00-a5aa-1f6fbc7bb72c",
         "severity": "high",
         "tags": [
-            "Use Case: Threat Detection",
-            "Rule Type: Higher-Order Rule"
+            "Elastic",
+            "Threat Detection",
+            "Higher-Order Rules"
         ],
         "threshold": {
             "cardinality": [
@@ -49,8 +50,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 4
+        "version": 3
     },
-    "id": "b946c2f7-df06-4c00-a5aa-1f6fbc7bb72c_4",
+    "id": "b946c2f7-df06-4c00-a5aa-1f6fbc7bb72c_3",
     "type": "security-rule"
 }

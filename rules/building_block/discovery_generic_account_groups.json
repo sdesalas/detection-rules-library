@@ -99,6 +99,11 @@
                         ]
                     },
                     {
+                        "id": "T1201",
+                        "name": "Password Policy Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1201/"
+                    },
+                    {
                         "id": "T1087",
                         "name": "Account Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1087/",
@@ -114,19 +119,14 @@
                                 "reference": "https://attack.mitre.org/techniques/T1087/002/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1201",
-                        "name": "Password Policy Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1201/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 4
     },
-    "id": "089db1af-740d-4d84-9a5b-babd6de143b0_5",
+    "id": "089db1af-740d-4d84-9a5b-babd6de143b0_4",
     "type": "security-rule"
 }

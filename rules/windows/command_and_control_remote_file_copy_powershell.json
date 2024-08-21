@@ -6,8 +6,7 @@
         "description": "Identifies powershell.exe being used to download an executable file from an untrusted remote destination.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.network-*",
-            "logs-endpoint.events.file-*"
+            "logs-endpoint.events.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -118,8 +117,8 @@
             }
         ],
         "type": "eql",
-        "version": 110
+        "version": 109
     },
-    "id": "33f306e8-417c-411b-965c-c2812d6d3f4d_110",
+    "id": "33f306e8-417c-411b-965c-c2812d6d3f4d_109",
     "type": "security-rule"
 }

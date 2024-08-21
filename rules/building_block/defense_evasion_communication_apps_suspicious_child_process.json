@@ -121,7 +121,7 @@
                 "technique": [
                     {
                         "id": "T1554",
-                        "name": "Compromise Host Software Binary",
+                        "name": "Compromise Client Software Binary",
                         "reference": "https://attack.mitre.org/techniques/T1554/"
                     }
                 ]
@@ -129,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 4
     },
-    "id": "adbfa3ee-777e-4747-b6b0-7bd645f30880_5",
+    "id": "adbfa3ee-777e-4747-b6b0-7bd645f30880_4",
     "type": "security-rule"
 }

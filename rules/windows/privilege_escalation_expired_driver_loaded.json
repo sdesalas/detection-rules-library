@@ -6,7 +6,7 @@
         "description": "Identifies an attempt to load a revoked or expired driver. Adversaries may bring outdated drivers with vulnerabilities to gain code execution in kernel mode or abuse revoked certificates to sign their drivers.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.library-*"
+            "logs-endpoint.events.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -90,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 4
     },
-    "id": "d12bac54-ab2a-4159-933f-d7bcefa7b61d_5",
+    "id": "d12bac54-ab2a-4159-933f-d7bcefa7b61d_4",
     "type": "security-rule"
 }

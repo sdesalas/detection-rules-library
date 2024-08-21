@@ -6,8 +6,7 @@
         "description": "Identifies InstallUtil.exe making outbound network connections. This may indicate adversarial activity as InstallUtil is often leveraged by adversaries to execute code and evade detection.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "logs-endpoint.events.network-*",
+            "logs-endpoint.events.*",
             "winlogbeat-*",
             "logs-windows.sysmon_operational-*"
         ],
@@ -88,8 +87,8 @@
             }
         ],
         "type": "eql",
-        "version": 107
+        "version": 106
     },
-    "id": "a13167f1-eec2-4015-9631-1fee60406dcf_107",
+    "id": "a13167f1-eec2-4015-9631-1fee60406dcf_106",
     "type": "security-rule"
 }

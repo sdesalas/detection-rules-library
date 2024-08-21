@@ -6,7 +6,7 @@
         "description": "Identifies potential abuse of the Microsoft Diagnostics Troubleshooting Wizard (MSDT) to proxy malicious command or binary execution via malicious process arguments.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*",
+            "logs-endpoint.events.*",
             "winlogbeat-*",
             "logs-windows.*",
             "endgame-*"
@@ -97,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 108
     },
-    "id": "2c3c29a4-f170-42f8-a3d8-2ceebc18eb6a_109",
+    "id": "2c3c29a4-f170-42f8-a3d8-2ceebc18eb6a_108",
     "type": "security-rule"
 }

@@ -49,10 +49,12 @@
         "setup": "The CyberArk Privileged Access Security (PAS) Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
         "severity": "high",
         "tags": [
-            "Data Source: CyberArk PAS",
-            "Use Case: Log Auditing",
-            "Use Case: Threat Detection",
-            "Tactic: Privilege Escalation"
+            "Elastic",
+            "cyberarkpas",
+            "SecOps",
+            "Log Auditing",
+            "Threat Detection",
+            "Privilege Escalation"
         ],
         "threat": [
             {
@@ -82,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 101
     },
-    "id": "c5f81243-56e0-47f9-b5bb-55a5ed89ba57_102",
+    "id": "c5f81243-56e0-47f9-b5bb-55a5ed89ba57_101",
     "type": "security-rule"
 }

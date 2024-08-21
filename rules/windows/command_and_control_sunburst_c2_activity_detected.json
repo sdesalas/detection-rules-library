@@ -6,7 +6,7 @@
         "description": "The malware known as SUNBURST targets the SolarWind's Orion business software for command and control. This rule detects post-exploitation command and control activity of the SUNBURST backdoor.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.network-*"
+            "logs-endpoint.events.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -108,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 107
     },
-    "id": "22599847-5d13-48cb-8872-5796fee8692b_108",
+    "id": "22599847-5d13-48cb-8872-5796fee8692b_107",
     "type": "security-rule"
 }

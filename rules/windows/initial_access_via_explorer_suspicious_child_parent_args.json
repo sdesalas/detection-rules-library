@@ -6,7 +6,7 @@
         "description": "Identifies a suspicious Windows explorer child process. Explorer.exe can be abused to launch malicious scripts or executables from a trusted parent process.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*",
+            "logs-endpoint.events.*",
             "winlogbeat-*",
             "logs-windows.sysmon_operational-*",
             "endgame-*"
@@ -150,8 +150,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 108
     },
-    "id": "9a5b4e31-6cde-4295-9ff7-6be1b8567e1b_109",
+    "id": "9a5b4e31-6cde-4295-9ff7-6be1b8567e1b_108",
     "type": "security-rule"
 }

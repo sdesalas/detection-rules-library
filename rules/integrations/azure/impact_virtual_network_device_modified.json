@@ -49,10 +49,13 @@
         "setup": "The Azure Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
         "severity": "low",
         "tags": [
-            "Domain: Cloud",
-            "Data Source: Azure",
-            "Use Case: Network Security Monitoring",
-            "Tactic: Impact"
+            "Elastic",
+            "Cloud",
+            "Azure",
+            "Continuous Monitoring",
+            "SecOps",
+            "Network Security",
+            "Impact"
         ],
         "threat": [
             {
@@ -67,8 +70,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 101
     },
-    "id": "573f6e7a-7acf-4bcd-ad42-c4969124d3c0_102",
+    "id": "573f6e7a-7acf-4bcd-ad42-c4969124d3c0_101",
     "type": "security-rule"
 }

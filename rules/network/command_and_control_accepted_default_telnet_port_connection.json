@@ -17,7 +17,7 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Accepted Default Telnet Port Connection",
-        "query": "(event.dataset:network_traffic.flow or event.category:(network or network_traffic))\n    and event.type:connection and not event.action:(\n        flow_dropped or flow_denied or denied or deny or\n        flow_terminated or timeout or Reject or network_flow)\n    and destination.port:23\n",
+        "query": "(event.dataset:network_traffic.flow or event.category:(network or network_traffic))\n    and event.type:connection and not event.action:(\n        flow_dropped or denied or deny or\n        flow_terminated or timeout or Reject or network_flow)\n    and destination.port:23\n",
         "related_integrations": [
             {
                 "package": "network_traffic",
@@ -106,8 +106,8 @@
         "timeline_title": "Comprehensive Network Timeline",
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 104
     },
-    "id": "34fde489-94b0-4500-a76f-b8a157cf9269_105",
+    "id": "34fde489-94b0-4500-a76f-b8a157cf9269_104",
     "type": "security-rule"
 }

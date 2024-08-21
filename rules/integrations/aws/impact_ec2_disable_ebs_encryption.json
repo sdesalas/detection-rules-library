@@ -10,7 +10,7 @@
         "from": "now-60m",
         "index": [
             "filebeat-*",
-            "logs-aws.cloudtrail-*"
+            "logs-aws*"
         ],
         "interval": "10m",
         "language": "kuery",
@@ -60,7 +60,6 @@
             "Domain: Cloud",
             "Data Source: AWS",
             "Data Source: Amazon Web Services",
-            "Data Source: AWS EC2",
             "Tactic: Impact"
         ],
         "threat": [
@@ -89,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 206
+        "version": 205
     },
-    "id": "bb9b13b2-1700-48a8-a750-b43b0a72ab69_206",
+    "id": "bb9b13b2-1700-48a8-a750-b43b0a72ab69_205",
     "type": "security-rule"
 }

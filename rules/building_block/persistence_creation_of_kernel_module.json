@@ -7,14 +7,14 @@
         "description": "Identifies activity related to loading kernel modules on Linux via creation of new ko files in the LKM directory.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*"
+            "auditbeat-*",
+            "logs-endpoint.events.*"
         ],
         "interval": "60m",
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Creation of Kernel Module",
-        "query": "file where host.os.type == \"linux\" and event.type in (\"change\", \"creation\") and file.path : \"/lib/modules/*\" and\nfile.extension == \"ko\" and not process.name : (\n  \"dpkg\", \"systemd\", \"falcon-sensor*\", \"dnf\", \"yum\", \"rpm\", \"cp\"\n)\n",
+        "query": "file where event.type in (\"change\", \"creation\") and host.os.type == \"linux\" and\nfile.path : \"/lib/modules/*\" and file.name : \"*.ko\" and \nnot process.name : (\"dpkg\", \"systemd\", \"falcon-sensor*\", \"dnf\", \"yum\", \"rpm\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -29,7 +29,7 @@
             },
             {
                 "ecs": true,
-                "name": "file.extension",
+                "name": "file.name",
                 "type": "keyword"
             },
             {
@@ -57,8 +57,7 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Rule Type: BBR",
-            "Data Source: Elastic Defend",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -86,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 2
     },
-    "id": "947827c6-9ed6-4dec-903e-c856c86e72f3_3",
+    "id": "947827c6-9ed6-4dec-903e-c856c86e72f3_2",
     "type": "security-rule"
 }

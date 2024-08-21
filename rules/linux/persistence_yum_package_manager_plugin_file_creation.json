@@ -80,18 +80,6 @@
                 },
                 "technique": [
                     {
-                        "id": "T1546",
-                        "name": "Event Triggered Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1546/",
-                        "subtechnique": [
-                            {
-                                "id": "T1546.016",
-                                "name": "Installer Packages",
-                                "reference": "https://attack.mitre.org/techniques/T1546/016/"
-                            }
-                        ]
-                    },
-                    {
                         "id": "T1543",
                         "name": "Create or Modify System Process",
                         "reference": "https://attack.mitre.org/techniques/T1543/"
@@ -115,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 1
     },
-    "id": "0b15bcad-aff1-4250-a5be-5d1b7eb56d07_2",
+    "id": "0b15bcad-aff1-4250-a5be-5d1b7eb56d07_1",
     "type": "security-rule"
 }

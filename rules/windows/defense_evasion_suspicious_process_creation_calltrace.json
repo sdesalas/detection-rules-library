@@ -7,7 +7,7 @@
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
-            "logs-windows.sysmon_operational-*"
+            "logs-windows.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -86,7 +86,7 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon Only"
         ],
         "threat": [
             {
@@ -106,8 +106,8 @@
             }
         ],
         "type": "eql",
-        "version": 208
+        "version": 207
     },
-    "id": "3ed032b2-45d8-4406-bc79-7ad1eabb2c72_208",
+    "id": "3ed032b2-45d8-4406-bc79-7ad1eabb2c72_207",
     "type": "security-rule"
 }

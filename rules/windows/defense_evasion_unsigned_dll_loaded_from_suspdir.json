@@ -6,7 +6,7 @@
         "description": "Identifies a Windows trusted program running from locations often abused by adversaries to masquerade as a trusted program and loading a recently dropped DLL. This behavior may indicate an attempt to evade defenses via side-loading a malicious DLL within the memory space of a signed processes.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.library-*"
+            "logs-endpoint.events.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -114,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 7
     },
-    "id": "ca98c7cf-a56e-4057-a4e8-39603f7f0389_8",
+    "id": "ca98c7cf-a56e-4057-a4e8-39603f7f0389_7",
     "type": "security-rule"
 }

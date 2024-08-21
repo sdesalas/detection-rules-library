@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "GitHub Protected Branch Settings Changed",
-        "query": "configuration where event.dataset == \"github.audit\" \n  and github.category == \"protected_branch\" and event.type == \"change\"\n",
+        "query": "configuration where event.dataset == \"github.audit\" \n  and github.category == \"protected_branch\" and event.type == \"change\" \n",
         "related_integrations": [
             {
                 "package": "github",
@@ -70,8 +70,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 2
     },
-    "id": "07639887-da3a-4fbf-9532-8ce748ff8c50_3",
+    "id": "07639887-da3a-4fbf-9532-8ce748ff8c50_2",
     "type": "security-rule"
 }

@@ -13,7 +13,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Windows Installer with Suspicious Properties",
-        "query": "sequence with maxspan=1m\n  [registry where host.os.type == \"windows\" and event.type == \"change\" and process.name : \"msiexec.exe\" and\n   (\n    (registry.value : \"InstallSource\" and\n     registry.data.strings : (\"?:\\\\Users\\\\*\\\\Temp\\\\Temp?_*.zip\\\\*\",\n                             \"?:\\\\Users\\\\*\\\\*.7z\\\\*\",\n                             \"?:\\\\Users\\\\*\\\\*.rar\\\\*\")) or\n\n    (registry.value : (\"DisplayName\", \"ProductName\") and registry.data.strings : \"SetupTest\")\n    )]\n  [process where host.os.type == \"windows\" and event.action == \"start\" and\n    process.parent.name : \"msiexec.exe\" and\n    not process.name : \"msiexec.exe\" and\n    not (process.executable : (\"?:\\\\Program Files (x86)\\\\*.exe\", \"?:\\\\Program Files\\\\*.exe\") and process.code_signature.trusted == true)]\n",
+        "query": "sequence with maxspan=1m\n  [registry where host.os.type == \"windows\" and process.name : \"msiexec.exe\" and\n   (\n    (registry.value : \"InstallSource\" and\n     registry.data.strings : (\"?:\\\\Users\\\\*\\\\Temp\\\\Temp?_*.zip\\\\*\",\n                             \"?:\\\\Users\\\\*\\\\*.7z\\\\*\",\n                             \"?:\\\\Users\\\\*\\\\*.rar\\\\*\")) or\n\n    (registry.value : (\"DisplayName\", \"ProductName\") and registry.data.strings : \"SetupTest\")\n    )]\n  [process where host.os.type == \"windows\" and event.action == \"start\" and\n    process.parent.name : \"msiexec.exe\" and\n    not process.name : \"msiexec.exe\" and\n    not (process.executable : (\"?:\\\\Program Files (x86)\\\\*.exe\", \"?:\\\\Program Files\\\\*.exe\") and process.code_signature.trusted == true)]\n",
         "references": [
             "https://lolbas-project.github.io/lolbas/Binaries/Msiexec/"
         ],
@@ -27,11 +27,6 @@
             {
                 "ecs": true,
                 "name": "event.action",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "event.type",
                 "type": "keyword"
             },
             {
@@ -106,8 +101,8 @@
             }
         ],
         "type": "eql",
-        "version": 2
+        "version": 1
     },
-    "id": "55f07d1b-25bc-4a0f-aa0c-05323c1319d0_2",
+    "id": "55f07d1b-25bc-4a0f-aa0c-05323c1319d0_1",
     "type": "security-rule"
 }

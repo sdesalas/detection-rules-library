@@ -18,7 +18,7 @@
             "process.executable",
             "file.path"
         ],
-        "query": "event.category:file and event.type:change and file.path:(/etc/sudoers* or /private/etc/sudoers*) and\nnot process.name:(dpkg or platform-python or puppet or yum or dnf) and \nnot process.executable:(/opt/chef/embedded/bin/ruby or /opt/puppetlabs/puppet/bin/ruby or /usr/bin/dockerd)\n",
+        "query": "event.category:file and event.type:change and file.path:(/etc/sudoers* or /private/etc/sudoers*)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -39,16 +39,6 @@
             {
                 "ecs": true,
                 "name": "file.path",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "process.executable",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "process.name",
                 "type": "keyword"
             }
         ],
@@ -89,8 +79,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 204
+        "version": 203
     },
-    "id": "931e25a5-0f5e-4ae0-ba0d-9e94eff7e3a4_204",
+    "id": "931e25a5-0f5e-4ae0-ba0d-9e94eff7e3a4_203",
     "type": "security-rule"
 }

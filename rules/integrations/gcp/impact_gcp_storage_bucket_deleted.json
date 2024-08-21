@@ -43,10 +43,13 @@
         "setup": "The GCP Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
         "severity": "medium",
         "tags": [
-            "Domain: Cloud",
-            "Data Source: GCP",
-            "Data Source: Google Cloud Platform",
-            "Tactic: Impact"
+            "Elastic",
+            "Cloud",
+            "GCP",
+            "Google Cloud Platform",
+            "Continuous Monitoring",
+            "SecOps",
+            "Monitoring"
         ],
         "threat": [
             {
@@ -67,8 +70,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 104
+        "version": 103
     },
-    "id": "bc0f2d83-32b8-4ae2-b0e6-6a45772e9331_104",
+    "id": "bc0f2d83-32b8-4ae2-b0e6-6a45772e9331_103",
     "type": "security-rule"
 }

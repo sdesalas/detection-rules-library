@@ -7,7 +7,7 @@
         "false_positives": [
             "Public access is a common configuration used to enable access from outside a private VPC. Ensure that the instance should not be modified in this way before taking action."
         ],
-        "from": "now-6m",
+        "from": "now-10m",
         "index": [
             "filebeat-*",
             "logs-aws.cloudtrail-*"
@@ -105,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 1
     },
-    "id": "9efb3f79-b77b-466a-9fa0-3645d22d1e7f_2",
+    "id": "9efb3f79-b77b-466a-9fa0-3645d22d1e7f_1",
     "type": "security-rule"
 }

@@ -6,8 +6,7 @@
         "description": "Identifies process execution from a removable media and by an unusual process. Adversaries may move onto systems, possibly those on disconnected or air-gapped networks, by copying malware to removable media and taking advantage of Autorun features when the media is inserted into a system and executes.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "logs-endpoint.events.network-*"
+            "logs-endpoint.events.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -89,8 +88,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 2
     },
-    "id": "1542fa53-955e-4330-8e4d-b2d812adeb5f_3",
+    "id": "1542fa53-955e-4330-8e4d-b2d812adeb5f_2",
     "type": "security-rule"
 }

@@ -44,8 +44,7 @@
             "OS: Linux",
             "OS: macOS",
             "Use Case: Threat Detection",
-            "Tactic: Privilege Escalation",
-            "Data Source: Elastic Defend"
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -73,8 +72,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 103
+        "version": 102
     },
-    "id": "76152ca1-71d0-4003-9e37-0983e12832da_103",
+    "id": "76152ca1-71d0-4003-9e37-0983e12832da_102",
     "type": "security-rule"
 }

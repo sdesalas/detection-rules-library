@@ -9,9 +9,7 @@
         ],
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.library-*",
-            "logs-endpoint.events.process-*",
-            "logs-endpoint.events.network-*"
+            "logs-endpoint.events.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -125,8 +123,8 @@
             }
         ],
         "type": "eql",
-        "version": 106
+        "version": 105
     },
-    "id": "acd611f3-2b93-47b3-a0a3-7723bcc46f6d_106",
+    "id": "acd611f3-2b93-47b3-a0a3-7723bcc46f6d_105",
     "type": "security-rule"
 }

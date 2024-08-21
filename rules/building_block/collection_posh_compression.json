@@ -40,20 +40,7 @@
                     "wildcard": {
                         "file.path": {
                             "case_insensitive": true,
-                            "value": "?:\\\\Program Files\\\\WindowsPowerShell\\\\Modules\\\\dbatools\\\\*\\\\optional\\\\Expand-Archive.ps1"
-                        }
-                    }
-                }
-            },
-            {
-                "meta": {
-                    "negate": true
-                },
-                "query": {
-                    "wildcard": {
-                        "file.path": {
-                            "case_insensitive": true,
-                            "value": "?:\\\\Program Files\\\\WindowsPowerShell\\\\Modules\\\\dbatools\\\\*\\\\optional\\\\Compress-Archive.ps1"
+                            "value": "?:\\\\Program Files\\\\Microsoft Dependency Agent\\\\plugins\\\\*"
                         }
                     }
                 }
@@ -72,15 +59,16 @@
                 }
             }
         ],
-        "from": "now-9m",
+        "from": "now-119m",
         "index": [
             "winlogbeat-*",
             "logs-windows.powershell*"
         ],
+        "interval": "60m",
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "PowerShell Script with Archive Compression Capabilities",
-        "query": "event.category:process and host.os.type:windows and\n(\n  powershell.file.script_block_text : (\n    \"IO.Compression.ZipFile\" or\n    \"IO.Compression.ZipArchive\" or\n    \"ZipFile.CreateFromDirectory\" or\n    \"IO.Compression.BrotliStream\" or\n    \"IO.Compression.DeflateStream\" or\n    \"IO.Compression.GZipStream\" or\n    \"IO.Compression.ZLibStream\"\n  ) and \n  powershell.file.script_block_text : (\n    \"CompressionLevel\" or\n    \"CompressionMode\" or\n    \"ZipArchiveMode\"\n  ) or\n  powershell.file.script_block_text : \"Compress-Archive\"\n) and\nnot powershell.file.script_block_text : (\n  \"Compress-Archive -Path 'C:\\ProgramData\\Lenovo\\Udc\\diagnostics\\latest\" or\n  (\"Copyright: (c) 2017, Ansible Project\" and \"Ansible.ModuleUtils.Backup\")\n) and\nnot file.directory : \"C:\\Program Files\\Microsoft Dependency Agent\\plugins\\lib\"\n",
+        "query": "event.category:process and host.os.type:windows and\n(\n  powershell.file.script_block_text : (\n    \"IO.Compression.ZipFile\" or\n    \"IO.Compression.ZipArchive\" or\n    \"ZipFile.CreateFromDirectory\" or\n    \"IO.Compression.BrotliStream\" or\n    \"IO.Compression.DeflateStream\" or\n    \"IO.Compression.GZipStream\" or\n    \"IO.Compression.ZLibStream\"\n  ) and \n  powershell.file.script_block_text : (\n    \"CompressionLevel\" or\n    \"CompressionMode\" or\n    \"ZipArchiveMode\"\n  ) or\n  powershell.file.script_block_text : \"Compress-Archive\"\n)\n",
         "related_integrations": [
             {
                 "package": "windows",
@@ -91,11 +79,6 @@
             {
                 "ecs": true,
                 "name": "event.category",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "file.directory",
                 "type": "keyword"
             },
             {
@@ -162,8 +145,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 105
     },
-    "id": "27071ea3-e806-4697-8abc-e22c92aa4293_106",
+    "id": "27071ea3-e806-4697-8abc-e22c92aa4293_105",
     "type": "security-rule"
 }

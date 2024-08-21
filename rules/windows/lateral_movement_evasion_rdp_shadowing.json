@@ -6,8 +6,7 @@
         "description": "Identifies the modification of the Remote Desktop Protocol (RDP) Shadow registry or the execution of processes indicative of an active RDP shadowing session. An adversary may abuse the RDP Shadowing feature to spy on or control other users active RDP sessions.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "logs-endpoint.events.registry-*",
+            "logs-endpoint.events.*",
             "winlogbeat-*",
             "logs-windows.sysmon_operational-*",
             "endgame-*"
@@ -111,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 108
     },
-    "id": "c57f8579-e2a5-4804-847f-f2732edc5156_109",
+    "id": "c57f8579-e2a5-4804-847f-f2732edc5156_108",
     "type": "security-rule"
 }

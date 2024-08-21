@@ -80,18 +80,6 @@
                 },
                 "technique": [
                     {
-                        "id": "T1036",
-                        "name": "Masquerading",
-                        "reference": "https://attack.mitre.org/techniques/T1036/",
-                        "subtechnique": [
-                            {
-                                "id": "T1036.005",
-                                "name": "Match Legitimate Name or Location",
-                                "reference": "https://attack.mitre.org/techniques/T1036/005/"
-                            }
-                        ]
-                    },
-                    {
                         "id": "T1127",
                         "name": "Trusted Developer Utilities Proxy Execution",
                         "reference": "https://attack.mitre.org/techniques/T1127/",
@@ -107,13 +95,25 @@
                                 "reference": "https://attack.mitre.org/techniques/T1218/005/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.005",
+                                "name": "Match Legitimate Name or Location",
+                                "reference": "https://attack.mitre.org/techniques/T1036/005/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 112
+        "version": 111
     },
-    "id": "1fe3b299-fbb5-4657-a937-1d746f2c711a_112",
+    "id": "1fe3b299-fbb5-4657-a937-1d746f2c711a_111",
     "type": "security-rule"
 }

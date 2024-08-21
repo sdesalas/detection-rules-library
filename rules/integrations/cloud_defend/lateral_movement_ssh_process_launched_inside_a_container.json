@@ -52,12 +52,13 @@
         "rule_id": "03a514d9-500e-443e-b6a9-72718c548f6c",
         "severity": "high",
         "tags": [
-            "Data Source: Elastic Defend for Containers",
-            "Domain: Container",
-            "OS: Linux",
-            "Use Case: Threat Detection",
-            "Tactic: Lateral Movement",
-            "Tactic: Persistence"
+            "Elastic",
+            "Host",
+            "Linux",
+            "Threat Detection",
+            "Lateral Movement",
+            "Persistence",
+            "Container"
         ],
         "threat": [
             {
@@ -100,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 1
     },
-    "id": "03a514d9-500e-443e-b6a9-72718c548f6c_2",
+    "id": "03a514d9-500e-443e-b6a9-72718c548f6c_1",
     "type": "security-rule"
 }

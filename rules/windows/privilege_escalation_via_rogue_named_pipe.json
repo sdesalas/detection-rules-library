@@ -7,7 +7,7 @@
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
-            "logs-windows.sysmon_operational-*"
+            "logs-windows.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -43,14 +43,14 @@
         ],
         "risk_score": 73,
         "rule_id": "76ddb638-abf7-42d5-be22-4a70b0bf7241",
-        "setup": "## Setup\n\nNamed Pipe Creation Events need to be enabled within the Sysmon configuration by including the following settings:\n`condition equal \"contains\" and keyword equal \"pipe\"`\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
+        "setup": "\nNamed Pipe Creation Events need to be enabled within the Sysmon configuration by including the following settings:\n`condition equal \"contains\" and keyword equal \"pipe\"`\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "high",
         "tags": [
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon Only"
         ],
         "threat": [
             {
@@ -71,8 +71,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 105
     },
-    "id": "76ddb638-abf7-42d5-be22-4a70b0bf7241_106",
+    "id": "76ddb638-abf7-42d5-be22-4a70b0bf7241_105",
     "type": "security-rule"
 }

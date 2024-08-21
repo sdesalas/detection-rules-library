@@ -46,7 +46,7 @@
             {
                 "ecs": false,
                 "name": "kubernetes.audit.requestObject.spec.containers.image",
-                "type": "keyword"
+                "type": "text"
             },
             {
                 "ecs": false,
@@ -102,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 5
+        "version": 4
     },
-    "id": "7164081a-3930-11ed-a261-0242ac120002_5",
+    "id": "7164081a-3930-11ed-a261-0242ac120002_4",
     "type": "security-rule"
 }

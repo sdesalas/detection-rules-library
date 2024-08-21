@@ -10,7 +10,7 @@
         "from": "now-60m",
         "index": [
             "filebeat-*",
-            "logs-aws.cloudtrail-*"
+            "logs-aws*"
         ],
         "interval": "10m",
         "language": "kuery",
@@ -59,7 +59,6 @@
             "Domain: Cloud",
             "Data Source: AWS",
             "Data Source: Amazon Web Services",
-            "Data Source: AWS KMS",
             "Use Case: Log Auditing",
             "Tactic: Impact"
         ],
@@ -82,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 105
     },
-    "id": "6951f15e-533c-4a60-8014-a3c3ab851a1b_106",
+    "id": "6951f15e-533c-4a60-8014-a3c3ab851a1b_105",
     "type": "security-rule"
 }

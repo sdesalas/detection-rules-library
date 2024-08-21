@@ -13,7 +13,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Memory Seeking Activity",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and (\n  (process.name == \"tail\" and process.args == \"-c\") or\n  (process.name == \"cmp\" and process.args == \"-i\") or\n  (process.name in (\"hexdump\", \"xxd\") and process.args == \"-s\") or\n  (process.name == \"dd\" and process.args : (\"skip*\", \"seek*\"))\n)\n",
+        "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\") and event.type == \"start\" and (\n  (process.name == \"tail\" and process.args == \"-c\") or\n  (process.name == \"cmp\" and process.args == \"-i\") or\n  (process.name in (\"hexdump\", \"xxd\") and process.args == \"-s\") or\n  (process.name == \"dd\" and process.args : (\"skip*\", \"seek*\"))\n)\n",
         "references": [
             "https://github.com/arget13/DDexec"
         ],
@@ -81,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 1
     },
-    "id": "035a6f21-4092-471d-9cda-9e379f459b1e_2",
+    "id": "035a6f21-4092-471d-9cda-9e379f459b1e_1",
     "type": "security-rule"
 }

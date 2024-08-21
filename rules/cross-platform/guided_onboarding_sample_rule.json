@@ -8,12 +8,17 @@
         "false_positives": [
             "This rule is not looking for threat activity. Disable the rule if you're already familiar with alerts."
         ],
-        "from": "now-30m",
+        "from": "now-24h",
         "index": [
+            "apm-*-transaction*",
             "auditbeat-*",
+            "endgame-*",
             "filebeat-*",
             "logs-*",
-            "winlogbeat-*"
+            "packetbeat-*",
+            "traces-apm*",
+            "winlogbeat-*",
+            "-*elastic-cloud-logs-*"
         ],
         "interval": "24h",
         "language": "kuery",
@@ -36,7 +41,10 @@
         "rule_id": "a198fbbd-9413-45ec-a269-47ae4ccf59ce",
         "severity": "low",
         "tags": [
-            "Use Case: Guided Onboarding"
+            "Use Case: Guided Onboarding",
+            "Data Source: APM",
+            "OS: Windows",
+            "Data Source: Elastic Endgame"
         ],
         "threshold": {
             "field": [
@@ -46,8 +54,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 3
+        "version": 2
     },
-    "id": "a198fbbd-9413-45ec-a269-47ae4ccf59ce_3",
+    "id": "a198fbbd-9413-45ec-a269-47ae4ccf59ce_2",
     "type": "security-rule"
 }

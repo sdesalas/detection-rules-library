@@ -44,7 +44,7 @@
         ],
         "risk_score": 47,
         "rule_id": "58ac2aa5-6718-427c-a845-5f3ac5af00ba",
-        "setup": "## Setup\n\nThe Zoom Filebeat module or similarly structured data is required to be compatible with this rule.",
+        "setup": "\nThe Zoom Filebeat module or similarly structured data is required to be compatible with this rule.",
         "severity": "medium",
         "tags": [
             "Data Source: Zoom",
@@ -70,8 +70,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 103
+        "version": 102
     },
-    "id": "58ac2aa5-6718-427c-a845-5f3ac5af00ba_103",
+    "id": "58ac2aa5-6718-427c-a845-5f3ac5af00ba_102",
     "type": "security-rule"
 }

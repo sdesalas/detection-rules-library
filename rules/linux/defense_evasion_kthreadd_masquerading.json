@@ -71,6 +71,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1564",
+                        "name": "Hide Artifacts",
+                        "reference": "https://attack.mitre.org/techniques/T1564/"
+                    },
+                    {
                         "id": "T1036",
                         "name": "Masquerading",
                         "reference": "https://attack.mitre.org/techniques/T1036/",
@@ -81,19 +86,14 @@
                                 "reference": "https://attack.mitre.org/techniques/T1036/004/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1564",
-                        "name": "Hide Artifacts",
-                        "reference": "https://attack.mitre.org/techniques/T1564/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 2
     },
-    "id": "202829f6-0271-4e88-b882-11a655c590d4_3",
+    "id": "202829f6-0271-4e88-b882-11a655c590d4_2",
     "type": "security-rule"
 }

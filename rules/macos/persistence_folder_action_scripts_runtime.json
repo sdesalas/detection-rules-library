@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Persistence via Folder Action Script",
-        "query": "process where host.os.type == \"macos\" and event.type : \"start\" and process.name in (\"osascript\", \"python\", \"tcl\", \"node\", \"perl\", \"ruby\", \"php\", \"bash\", \"csh\", \"zsh\", \"sh\") and\n  process.parent.name == \"com.apple.foundation.UserScriptService\" and not process.args : (\"/Users/*/Library/Application Support/iTerm2/Scripts/AutoLaunch/*.scpt\", \"/Users/*/Library/Application Scripts/com.microsoft.*/FoxitUtils.applescript\")\n",
+        "query": "sequence by host.id with maxspan=5s\n [process where host.os.type == \"macos\" and event.type in (\"start\", \"process_started\", \"info\") and process.name == \"com.apple.foundation.UserScriptService\"] by process.pid\n [process where host.os.type == \"macos\" and event.type in (\"start\", \"process_started\") and process.name in (\"osascript\", \"python\", \"tcl\", \"node\", \"perl\", \"ruby\", \"php\", \"bash\", \"csh\", \"zsh\", \"sh\") and\n  not process.args : \"/Users/*/Library/Application Support/iTerm2/Scripts/AutoLaunch/*.scpt\"\n ] by process.parent.pid\n",
         "references": [
             "https://posts.specterops.io/folder-actions-for-persistence-on-macos-8923f222343d"
         ],
@@ -25,6 +25,11 @@
             {
                 "ecs": true,
                 "name": "event.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "host.id",
                 "type": "keyword"
             },
             {
@@ -44,8 +49,13 @@
             },
             {
                 "ecs": true,
-                "name": "process.parent.name",
-                "type": "keyword"
+                "name": "process.parent.pid",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "process.pid",
+                "type": "long"
             }
         ],
         "risk_score": 47,
@@ -92,10 +102,9 @@
                 ]
             }
         ],
-        "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 106
     },
-    "id": "c292fa52-4115-408a-b897-e14f684b3cb7_107",
+    "id": "c292fa52-4115-408a-b897-e14f684b3cb7_106",
     "type": "security-rule"
 }

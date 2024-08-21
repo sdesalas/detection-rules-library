@@ -3,15 +3,17 @@
         "author": [
             "Elastic"
         ],
+        "building_block_type": "default",
         "description": "Adversaries may leverage unquoted service path vulnerabilities to escalate privileges. By placing an executable in a higher-level directory within the path of an unquoted service executable, Windows will natively launch this executable from its defined path variable instead of the benign one in a deeper directory, thus leading to code execution.",
-        "from": "now-9m",
+        "from": "now-119m",
         "index": [
-            "logs-endpoint.events.process-*"
+            "logs-endpoint.events.*"
         ],
+        "interval": "60m",
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Exploitation of an Unquoted Service Path Vulnerability",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and \n  (\n    process.executable : \"?:\\\\Program.exe\" or \n    process.executable regex \"\"\"(C:\\\\Program Files \\(x86\\)\\\\|C:\\\\Program Files\\\\)\\w+.exe\"\"\"\n  )\n",
+        "query": "process where event.type == \"start\" and \n  (\n    process.executable : \"?:\\\\Program.exe\" or \n    process.executable regex \"\"\"(C:\\\\Program Files \\(x86\\)\\\\|C:\\\\Program Files\\\\)\\w+.exe\"\"\"\n  )\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -22,11 +24,6 @@
             {
                 "ecs": true,
                 "name": "event.type",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "host.os.type",
                 "type": "keyword"
             },
             {
@@ -43,6 +40,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
+            "Rule Type: BBR",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -71,8 +69,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 2
     },
-    "id": "12de29d4-bbb0-4eef-b687-857e8a163870_3",
+    "id": "12de29d4-bbb0-4eef-b687-857e8a163870_2",
     "type": "security-rule"
 }

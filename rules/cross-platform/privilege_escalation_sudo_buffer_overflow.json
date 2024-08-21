@@ -85,10 +85,9 @@
             ],
             "value": 100
         },
-        "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 104
+        "version": 103
     },
-    "id": "f37f3054-d40b-49ac-aa9b-a786c74c58b8_104",
+    "id": "f37f3054-d40b-49ac-aa9b-a786c74c58b8_103",
     "type": "security-rule"
 }

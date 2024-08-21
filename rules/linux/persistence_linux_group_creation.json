@@ -6,7 +6,6 @@
         "description": "Identifies attempts to create a new group. Attackers may create new groups to establish persistence on a system.",
         "from": "now-9m",
         "index": [
-            "filebeat-*",
             "logs-system.auth-*"
         ],
         "language": "eql",
@@ -79,8 +78,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 4
     },
-    "id": "a1c2589e-0c8c-4ca8-9eb6-f83c4bbdbe8f_5",
+    "id": "a1c2589e-0c8c-4ca8-9eb6-f83c4bbdbe8f_4",
     "type": "security-rule"
 }

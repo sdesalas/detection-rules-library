@@ -18,7 +18,7 @@
             "user.id",
             "process.command_line"
         ],
-        "query": "host.os.type:windows and event.category:process and event.type:start and \nprocess.name.caseless:(\"ping.exe\" or \"tracert.exe\" or \"pathping.exe\") and\nnot process.args:(\"127.0.0.1\" or \"0.0.0.0\" or \"localhost\" or \"::1\")\n",
+        "query": "host.os.type:windows and event.category:process and event.type:start and \nprocess.name.caseless:(\"ping.exe\" or \"tracert.exe\" or \"pathping.exe\") and\nnot process.args:(\"127.0.0.1\" or \"0.0.0.0\" or \"localhost\" or \"1.1.1.1\" or \"1.2.3.4\" or \"::1\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -89,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 102
+        "version": 101
     },
-    "id": "7f89afef-9fc5-4e7b-bf16-75ffdf27f8db_102",
+    "id": "7f89afef-9fc5-4e7b-bf16-75ffdf27f8db_101",
     "type": "security-rule"
 }

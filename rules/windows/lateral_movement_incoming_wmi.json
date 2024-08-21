@@ -6,8 +6,7 @@
         "description": "Identifies processes executed via Windows Management Instrumentation (WMI) on a remote host. This could be indicative of adversary lateral movement, but could be noisy if administrators use WMI to remotely manage hosts.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "logs-endpoint.events.network-*",
+            "logs-endpoint.events.*",
             "winlogbeat-*",
             "logs-windows.sysmon_operational-*"
         ],
@@ -141,8 +140,8 @@
             }
         ],
         "type": "eql",
-        "version": 110
+        "version": 109
     },
-    "id": "f3475224-b179-4f78-8877-c2bd64c26b88_110",
+    "id": "f3475224-b179-4f78-8877-c2bd64c26b88_109",
     "type": "security-rule"
 }

@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Quarantine Attrib Removed by Unsigned or Untrusted Process",
-        "query": "file where event.action == \"extended_attributes_delete\" and host.os.type == \"macos\" and process.executable != null and\n(process.code_signature.trusted == false or process.code_signature.exists == false) and not\nprocess.executable : (\"/usr/bin/xattr\", \n                      \"/System/*\", \n                      \"/private/tmp/KSInstallAction.*/*/Install Google Software Update.app/Contents/Helpers/ksinstall\",\n                      \"/Applications/CEWE Fotoschau.app/Contents/MacOS/FotoPlus\",\n                      \"/Applications/.com.bomgar.scc.*/Remote Support Customer Client.app/Contents/MacOS/sdcust\") and not\nfile.path : \"/private/var/folders/*\"\n",
+        "query": "file where event.action == \"extended_attributes_delete\" and process.executable != null and\n(process.code_signature.trusted == false or process.code_signature.exists == false) and not\nprocess.executable : (\"/usr/bin/xattr\", \n                      \"/System/*\", \n                      \"/private/tmp/KSInstallAction.*/*/Install Google Software Update.app/Contents/Helpers/ksinstall\",\n                      \"/Applications/CEWE Fotoschau.app/Contents/MacOS/FotoPlus\",\n                      \"/Applications/.com.bomgar.scc.*/Remote Support Customer Client.app/Contents/MacOS/sdcust\") and not\nfile.path : \"/private/var/folders/*\"\n",
         "references": [
             "https://nixhacker.com/security-protection-in-macos-1/",
             "https://eclecticlight.co/2020/10/29/quarantine-and-the-quarantine-flag/"
@@ -31,11 +31,6 @@
             {
                 "ecs": true,
                 "name": "file.path",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "host.os.type",
                 "type": "keyword"
             },
             {
@@ -91,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 108
     },
-    "id": "f0b48bbc-549e-4bcf-8ee0-a7a72586c6a7_109",
+    "id": "f0b48bbc-549e-4bcf-8ee0-a7a72586c6a7_108",
     "type": "security-rule"
 }

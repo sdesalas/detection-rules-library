@@ -7,7 +7,7 @@
         "false_positives": [
             "Known or internal account IDs or automation"
         ],
-        "from": "now-6m",
+        "from": "now-10m",
         "language": "esql",
         "license": "Elastic License v2",
         "name": "AWS S3 Bucket Enumeration or Brute Force",
@@ -78,8 +78,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 1
     },
-    "id": "5f0234fd-7f21-42af-8391-511d5fd11d5c_2",
+    "id": "5f0234fd-7f21-42af-8391-511d5fd11d5c_1",
     "type": "security-rule"
 }

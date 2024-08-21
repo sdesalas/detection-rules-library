@@ -77,8 +77,7 @@
             "OS: macOS",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Use Case: Vulnerability",
-            "Data Source: Elastic Defend"
+            "Use Case: Vulnerability"
         ],
         "threat": [
             {
@@ -110,8 +109,8 @@
             }
         ],
         "type": "eql",
-        "version": 104
+        "version": 103
     },
-    "id": "c3f5e1d8-910e-43b4-8d44-d748e498ca86_104",
+    "id": "c3f5e1d8-910e-43b4-8d44-d748e498ca86_103",
     "type": "security-rule"
 }

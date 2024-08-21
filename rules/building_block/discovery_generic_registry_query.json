@@ -18,7 +18,7 @@
             "host.id",
             "user.id"
         ],
-        "query": "host.os.type:windows and event.category:process and event.type:start and\n  (\n    (process.name.caseless:\"reg.exe\" and process.args:\"query\") or\n    (process.name.caseless:(\"powershell.exe\" or \"powershell_ise.exe\" or \"pwsh.exe\") and\n     process.args:(\n       (\"get-childitem\" or \"Get-ChildItem\" or \"gci\" or \"dir\" or \"ls\" or\n        \"get-item\" or \"Get-Item\" or \"gi\" or\n        \"get-itemproperty\" or \"Get-ItemProperty\" or \"gp\") and\n       (\"hkcu\" or \"HKCU\" or \"hkey_current_user\" or \"HKEY_CURRENT_USER\" or\n        \"hkey_local_machine\" or \"HKEY_LOCAL_MACHINE\" or\n        \"hklm\" or \"HKLM\" or registry\\:\\:*)\n      )\n    )\n  ) and\n  not process.command_line : (\n    \"C:\\\\Windows\\\\system32\\\\reg.exe  query hklm\\\\software\\\\microsoft\\\\windows\\\\softwareinventorylogging /v collectionstate /reg:64\" or\n    \"reg  query \\\"HKLM\\\\Software\\\\WOW6432Node\\\\Npcap\\\" /ve  \"\n  )\n",
+        "query": "host.os.type:windows and event.category:process and event.type:start and\n  (\n    (process.name.caseless:\"reg.exe\" and process.args:\"query\") or\n    (process.name.caseless:(\"powershell.exe\" or \"powershell_ise.exe\" or \"pwsh.exe\") and\n     process.args:(\n       (\"get-childitem\" or \"Get-ChildItem\" or \"gci\" or \"dir\" or \"ls\" or\n        \"get-item\" or \"Get-Item\" or \"gi\" or\n        \"get-itemproperty\" or \"Get-ItemProperty\" or \"gp\") and\n       (\"hkcu\" or \"HKCU\" or \"hkey_current_user\" or \"HKEY_CURRENT_USER\" or\n        \"hkey_local_machine\" or \"HKEY_LOCAL_MACHINE\" or\n        \"hklm\" or \"HKLM\" or registry\\:\\:*)\n      )\n    )\n  )\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -45,11 +45,6 @@
                 "ecs": true,
                 "name": "process.args",
                 "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "process.command_line",
-                "type": "wildcard"
             },
             {
                 "ecs": false,
@@ -87,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 105
+        "version": 104
     },
-    "id": "ded09d02-0137-4ccc-8005-c45e617e8d4c_105",
+    "id": "ded09d02-0137-4ccc-8005-c45e617e8d4c_104",
     "type": "security-rule"
 }

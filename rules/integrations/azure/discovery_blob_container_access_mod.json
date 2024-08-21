@@ -49,10 +49,12 @@
         "setup": "The Azure Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
         "severity": "low",
         "tags": [
-            "Domain: Cloud",
-            "Data Source: Azure",
-            "Use Case: Asset Visibility",
-            "Tactic: Discovery"
+            "Elastic",
+            "Cloud",
+            "Azure",
+            "Continuous Monitoring",
+            "SecOps",
+            "Asset Visibility"
         ],
         "threat": [
             {
@@ -88,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 101
     },
-    "id": "2636aa6c-88b5-4337-9c31-8d0192a8ef45_102",
+    "id": "2636aa6c-88b5-4337-9c31-8d0192a8ef45_101",
     "type": "security-rule"
 }

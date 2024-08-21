@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Shell via Wildcard Injection Detected",
-        "query": "sequence by host.id with maxspan=1s\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and (\n    (process.name == \"tar\" and process.args : \"--checkpoint=*\" and process.args : \"--checkpoint-action=*\") or\n    (process.name == \"rsync\" and process.args : \"-e*\") or\n    (process.name == \"zip\" and process.args == \"--unzip-command\")\n   ) and not process.executable : \"/tmp/newroot/*\"\n  ]  by process.entity_id\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and \n     process.parent.name : (\"tar\", \"rsync\", \"zip\") and \n     process.name : (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")\n  ] by process.parent.entity_id\n",
+        "query": "sequence by host.id with maxspan=1s\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and (\n    (process.name == \"tar\" and process.args : \"--checkpoint=*\" and process.args : \"--checkpoint-action=*\") or\n    (process.name == \"rsync\" and process.args : \"-e*\") or\n    (process.name == \"zip\" and process.args == \"--unzip-command\") )]  by process.entity_id\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and \n     process.parent.name : (\"tar\", \"rsync\", \"zip\") and \n     process.name : (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")] by process.parent.entity_id\n",
         "references": [
             "https://www.exploit-db.com/papers/33930"
         ],
@@ -50,11 +50,6 @@
             {
                 "ecs": true,
                 "name": "process.entity_id",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "process.executable",
                 "type": "keyword"
             },
             {
@@ -118,8 +113,8 @@
             }
         ],
         "type": "eql",
-        "version": 6
+        "version": 5
     },
-    "id": "0b803267-74c5-444d-ae29-32b5db2d562a_6",
+    "id": "0b803267-74c5-444d-ae29-32b5db2d562a_5",
     "type": "security-rule"
 }

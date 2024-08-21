@@ -6,8 +6,7 @@
         "description": "Identifies remote execution of Windows services over remote procedure call (RPC). This could be indicative of lateral movement, but will be noisy if commonly done by administrators.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "logs-endpoint.events.network-*",
+            "logs-endpoint.events.*",
             "winlogbeat-*",
             "logs-windows.sysmon_operational-*"
         ],
@@ -131,8 +130,8 @@
             }
         ],
         "type": "eql",
-        "version": 112
+        "version": 111
     },
-    "id": "aa9a274d-6b53-424d-ac5e-cb8ca4251650_112",
+    "id": "aa9a274d-6b53-424d-ac5e-cb8ca4251650_111",
     "type": "security-rule"
 }

@@ -14,9 +14,10 @@
         "license": "Elastic License v2",
         "name": "Unknown Execution of Binary with RWX Memory Region",
         "new_terms_fields": [
+            "host.id",
             "process.executable"
         ],
-        "query": "event.category:process and host.os.type:linux and auditd.data.syscall:mprotect and auditd.data.a2:7 and not (\n  process.executable:(\n    \"/usr/share/kibana/node/bin/node\" or \"/usr/share/elasticsearch/jdk/bin/java\" or \"/usr/sbin/apache2\"\n  ) or\n  process.name:httpd\n)\n",
+        "query": "event.category:process and host.os.type:linux and auditd.data.syscall:mprotect and auditd.data.a2:7\n",
         "references": [
             "https://man7.org/linux/man-pages/man2/mprotect.2.html"
         ],
@@ -45,16 +46,6 @@
             {
                 "ecs": true,
                 "name": "host.os.type",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "process.executable",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "process.name",
                 "type": "keyword"
             }
         ],
@@ -95,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 1
     },
-    "id": "23bcd283-2bc0-4db2-81d4-273fc051e5c0_2",
+    "id": "23bcd283-2bc0-4db2-81d4-273fc051e5c0_1",
     "type": "security-rule"
 }

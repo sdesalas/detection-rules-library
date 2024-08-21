@@ -6,7 +6,7 @@
         "description": "Identifies suspicious Image Loading of the Remote Desktop Services ActiveX Client (mstscax), this may indicate the presence of RDP lateral movement capability.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.library-*",
+            "logs-endpoint.events.*",
             "winlogbeat-*",
             "logs-windows.sysmon_operational-*",
             "endgame-*"
@@ -99,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 108
     },
-    "id": "71c5cb27-eca5-4151-bb47-64bc3f883270_109",
+    "id": "71c5cb27-eca5-4151-bb47-64bc3f883270_108",
     "type": "security-rule"
 }

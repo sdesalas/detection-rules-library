@@ -11,7 +11,7 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Statistical Model Detected C2 Beaconing Activity",
-        "query": "beacon_stats.is_beaconing: true and\nnot process.name: (\"WaAppAgent.exe\" or \"metricbeat.exe\" or \"packetbeat.exe\" or \"WindowsAzureGuestAgent.exe\" or \"HealthService.exe\" or \"Widgets.exe\" or \"lsass.exe\" or \"msedgewebview2.exe\" or \n                   \"MsMpEng.exe\" or \"OUTLOOK.EXE\" or \"msteams.exe\" or \"FileSyncHelper.exe\" or \"SearchProtocolHost.exe\" or \"Creative Cloud.exe\" or \"ms-teams.exe\" or \"ms-teamsupdate.exe\" or \n                   \"curl.exe\" or \"rundll32.exe\" or \"MsSense.exe\" or \"wermgr.exe\" or \"java\" or \"olk.exe\" or \"iexplore.exe\" or \"NetworkManager\" or \"packetbeat\" or \"Ssms.exe\" or \"NisSrv.exe\" or \n                   \"gamingservices.exe\" or \"appidcertstorecheck.exe\" or \"POWERPNT.EXE\" or \"miiserver.exe\" or \"Grammarly.Desktop.exe\" or \"SnagitEditor.exe\" or \"CRWindowsClientService.exe\" or\n                   \"agentbeat\" or \"dnf\" or \"yum\" or \"apt\"\n                  )\n",
+        "query": "beacon_stats.is_beaconing: true and\nnot process.name: (\"WaAppAgent.exe\" or \"metricbeat.exe\" or \"packetbeat.exe\" or \"WindowsAzureGuestAgent.exe\" or \"HealthService.exe\" or \"Widgets.exe\" or \"lsass.exe\" or \"msedgewebview2.exe\" or \"MsMpEng.exe\" or \"OUTLOOK.EXE\" or \"msteams.exe\" or \"FileSyncHelper.exe\" or \"SearchProtocolHost.exe\" or \"Creative Cloud.exe\" or \"ms-teams.exe\" or \"ms-teamsupdate.exe\" or \"curl.exe\" or \"rundll32.exe\" or \"MsSense.exe\" or \"wermgr.exe\" or \"java\" or \"olk.exe\" or \"iexplore.exe\" or \"NetworkManager\" or \"packetbeat\" or \"Ssms.exe\" or \"NisSrv.exe\" or \"gamingservices.exe\" or \"appidcertstorecheck.exe\" or \"POWERPNT.EXE\" or \"miiserver.exe\" or \"Grammarly.Desktop.exe\" or \"SnagitEditor.exe\" or \"CRWindowsClientService.exe\")\n",
         "references": [
             "https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html",
             "https://docs.elastic.co/en/integrations/beaconing",
@@ -78,8 +78,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 6
+        "version": 5
     },
-    "id": "5397080f-34e5-449b-8e9c-4c8083d7ccc6_6",
+    "id": "5397080f-34e5-449b-8e9c-4c8083d7ccc6_5",
     "type": "security-rule"
 }

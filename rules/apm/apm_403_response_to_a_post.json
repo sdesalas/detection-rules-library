@@ -40,12 +40,13 @@
         "rule_id": "a87a4e42-1d82-44bd-b0bf-d9b7f91fb89e",
         "severity": "medium",
         "tags": [
-            "Data Source: APM"
+            "Elastic",
+            "APM"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 101
     },
-    "id": "a87a4e42-1d82-44bd-b0bf-d9b7f91fb89e_102",
+    "id": "a87a4e42-1d82-44bd-b0bf-d9b7f91fb89e_101",
     "type": "security-rule"
 }

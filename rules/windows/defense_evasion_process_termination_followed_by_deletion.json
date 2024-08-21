@@ -6,8 +6,7 @@
         "description": "Identifies a process termination event quickly followed by the deletion of its executable file. Malware tools and other non-native files dropped or created on a system by an adversary may leave traces to indicate to what occurred. Removal of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "logs-endpoint.events.file-*",
+            "logs-endpoint.events.*",
             "endgame-*"
         ],
         "language": "eql",
@@ -107,8 +106,8 @@
             }
         ],
         "type": "eql",
-        "version": 109
+        "version": 108
     },
-    "id": "09443c92-46b3-45a4-8f25-383b028b258d_109",
+    "id": "09443c92-46b3-45a4-8f25-383b028b258d_108",
     "type": "security-rule"
 }

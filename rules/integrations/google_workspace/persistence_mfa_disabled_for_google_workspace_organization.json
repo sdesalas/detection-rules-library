@@ -56,11 +56,14 @@
         "setup": "The Google Workspace Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
         "severity": "medium",
         "tags": [
-            "Domain: Cloud",
-            "Data Source: Google Workspace",
-            "Use Case: Identity and Access Audit",
-            "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Elastic",
+            "Cloud",
+            "Google Workspace",
+            "Continuous Monitoring",
+            "SecOps",
+            "Identity and Access",
+            "Persistence",
+            "Investigation Guide"
         ],
         "threat": [
             {
@@ -81,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 205
+        "version": 204
     },
-    "id": "e555105c-ba6d-481f-82bb-9b633e7b4827_205",
+    "id": "e555105c-ba6d-481f-82bb-9b633e7b4827_204",
     "type": "security-rule"
 }

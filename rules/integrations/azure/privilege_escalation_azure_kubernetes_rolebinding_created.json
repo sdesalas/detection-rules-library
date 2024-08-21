@@ -47,10 +47,12 @@
         "setup": "The Azure Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
         "severity": "low",
         "tags": [
-            "Domain: Cloud",
-            "Data Source: Azure",
-            "Use Case: Identity and Access Audit",
-            "Tactic: Privilege Escalation"
+            "Elastic",
+            "Cloud",
+            "Azure",
+            "Continuous Monitoring",
+            "SecOps",
+            "Identity and Access"
         ],
         "threat": [
             {
@@ -65,8 +67,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 101
     },
-    "id": "1c966416-60c1-436b-bfd0-e002fddbfd89_102",
+    "id": "1c966416-60c1-436b-bfd0-e002fddbfd89_101",
     "type": "security-rule"
 }

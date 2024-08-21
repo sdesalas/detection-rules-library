@@ -61,15 +61,16 @@
             }
         ],
         "tags": [
-            "Domain: Cloud",
-            "Data Source: Google Workspace",
-            "Use Case: Log Auditing",
-            "Use Case: Threat Detection"
+            "Elastic",
+            "Cloud",
+            "Google Workspace",
+            "Log Auditing",
+            "Threat Detection"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 1
     },
-    "id": "f1a6d0f4-95b8-11ed-9517-f661ea17fbcc_2",
+    "id": "f1a6d0f4-95b8-11ed-9517-f661ea17fbcc_1",
     "type": "security-rule"
 }
