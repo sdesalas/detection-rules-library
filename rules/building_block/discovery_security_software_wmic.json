@@ -67,7 +67,8 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -110,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "6ea55c81-e2ba-42f2-a134-bccf857ba922_111",
+    "id": "6ea55c81-e2ba-42f2-a134-bccf857ba922_112",
     "type": "security-rule"
 }

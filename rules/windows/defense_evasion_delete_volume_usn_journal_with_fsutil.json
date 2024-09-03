@@ -68,7 +68,8 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -96,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "f675872f-6d85-40a3-b502-c0d2ef101e92_109",
+    "id": "f675872f-6d85-40a3-b502-c0d2ef101e92_110",
     "type": "security-rule"
 }

@@ -74,7 +74,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -116,8 +117,8 @@
             }
         ],
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "d33ea3bf-9a11-463e-bd46-f648f2a0f4b1_6",
+    "id": "d33ea3bf-9a11-463e-bd46-f648f2a0f4b1_7",
     "type": "security-rule"
 }

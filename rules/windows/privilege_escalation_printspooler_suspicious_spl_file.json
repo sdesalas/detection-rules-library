@@ -60,10 +60,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 21,
         "rule_id": "a7ccae7b-9d2c-44b2-a061-98e5946971fa",
-        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
-        "severity": "medium",
+        "severity": "low",
         "tags": [
             "Domain: Endpoint",
             "OS: Windows",
@@ -93,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "a7ccae7b-9d2c-44b2-a061-98e5946971fa_111",
+    "id": "a7ccae7b-9d2c-44b2-a061-98e5946971fa_112",
     "type": "security-rule"
 }

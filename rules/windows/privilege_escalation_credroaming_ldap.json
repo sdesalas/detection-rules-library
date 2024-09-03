@@ -66,7 +66,8 @@
             "Use Case: Threat Detection",
             "Data Source: Active Directory",
             "Tactic: Privilege Escalation",
-            "Use Case: Active Directory Monitoring"
+            "Use Case: Active Directory Monitoring",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -87,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 10
+        "version": 11
     },
-    "id": "670b3b5a-35e5-42db-bd36-6c5b9b4b7313_10",
+    "id": "670b3b5a-35e5-42db-bd36-6c5b9b4b7313_11",
     "type": "security-rule"
 }

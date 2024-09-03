@@ -44,7 +44,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Use Case: Vulnerability"
+            "Use Case: Vulnerability",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -72,8 +73,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 104
+        "version": 105
     },
-    "id": "56557cde-d923-4b88-adee-c61b3f3b5dc3_104",
+    "id": "56557cde-d923-4b88-adee-c61b3f3b5dc3_105",
     "type": "security-rule"
 }

@@ -6,7 +6,8 @@
         "description": "Identifies the creation or change of a Windows executable file over network shares. Adversaries may transfer tools or other files between systems in a compromised environment.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file-*",
+            "logs-endpoint.events.network-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -117,8 +118,8 @@
             }
         ],
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "58bc134c-e8d2-4291-a552-b4b3e537c60b_107",
+    "id": "58bc134c-e8d2-4291-a552-b4b3e537c60b_108",
     "type": "security-rule"
 }

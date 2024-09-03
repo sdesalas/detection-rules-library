@@ -10,12 +10,14 @@
         "from": "now-9m",
         "index": [
             "packetbeat-*",
+            "auditbeat-*",
+            "filebeat-*",
             "logs-network_traffic.*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "IPSEC NAT Traversal Port Activity",
-        "query": "event.dataset: network_traffic.flow and network.transport:udp and destination.port:4500\n",
+        "query": "(event.dataset: network_traffic.flow or (event.category: (network or network_traffic))) and network.transport:udp and destination.port:4500\n",
         "related_integrations": [
             {
                 "package": "network_traffic",
@@ -27,6 +29,11 @@
                 "ecs": true,
                 "name": "destination.port",
                 "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "event.category",
+                "type": "keyword"
             },
             {
                 "ecs": true,
@@ -60,8 +67,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 103
+        "version": 104
     },
-    "id": "a9cb3641-ff4b-4cdc-a063-b4b8d02a67c7_103",
+    "id": "a9cb3641-ff4b-4cdc-a063-b4b8d02a67c7_104",
     "type": "security-rule"
 }

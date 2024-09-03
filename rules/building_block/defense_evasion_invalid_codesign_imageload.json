@@ -7,7 +7,7 @@
         "description": "Identifies binaries that are loaded and with an invalid code signature. This may indicate an attempt to masquerade as a signed binary.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.library-*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -99,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "fd9484f2-1c56-44ae-8b28-dc1354e3a0e8_1",
+    "id": "fd9484f2-1c56-44ae-8b28-dc1354e3a0e8_2",
     "type": "security-rule"
 }

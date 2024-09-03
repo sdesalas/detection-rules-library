@@ -7,7 +7,7 @@
         "description": "Identifies the creation or modification of an executable file with an unexpected file extension. Attackers may attempt to evade detection by masquerading files using the file extension values used by image, audio, or document file types.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file-*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -89,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "ecd4857b-5bac-455e-a7c9-a88b66e56a9e_1",
+    "id": "ecd4857b-5bac-455e-a7c9-a88b66e56a9e_2",
     "type": "security-rule"
 }

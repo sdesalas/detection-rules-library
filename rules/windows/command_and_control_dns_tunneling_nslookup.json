@@ -71,7 +71,8 @@
             "Tactic: Command and Control",
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -103,8 +104,8 @@
             }
         ],
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "3a59fc81-99d3-47ea-8cd6-d48d561fca20_110",
+    "id": "3a59fc81-99d3-47ea-8cd6-d48d561fca20_111",
     "type": "security-rule"
 }

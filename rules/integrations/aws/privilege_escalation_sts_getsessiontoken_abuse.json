@@ -9,7 +9,7 @@
         ],
         "index": [
             "filebeat-*",
-            "logs-aws*"
+            "logs-aws.cloudtrail-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -61,6 +61,7 @@
             "Domain: Cloud",
             "Data Source: AWS",
             "Data Source: Amazon Web Services",
+            "Data Source: AWS STS",
             "Use Case: Identity and Access Audit",
             "Tactic: Privilege Escalation"
         ],
@@ -105,8 +106,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 205
+        "version": 206
     },
-    "id": "b45ab1d2-712f-4f01-a751-df3826969807_205",
+    "id": "b45ab1d2-712f-4f01-a751-df3826969807_206",
     "type": "security-rule"
 }

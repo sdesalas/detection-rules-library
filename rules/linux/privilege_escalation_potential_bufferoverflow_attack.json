@@ -11,11 +11,16 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Potential Buffer Overflow Attack Detected",
-        "query": "kibana.alert.rule.rule_id:5c81fc9d-1eae-437f-ba07-268472967013 and event.kind:signal\n",
+        "query": "kibana.alert.rule.rule_id:\"5c81fc9d-1eae-437f-ba07-268472967013\" and host.os.type:linux and event.kind:signal\n",
         "required_fields": [
             {
                 "ecs": true,
                 "name": "event.kind",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "host.os.type",
                 "type": "keyword"
             },
             {
@@ -78,8 +83,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 2
+        "version": 3
     },
-    "id": "b7c05aaf-78c2-4558-b069-87fa25973489_2",
+    "id": "b7c05aaf-78c2-4558-b069-87fa25973489_3",
     "type": "security-rule"
 }

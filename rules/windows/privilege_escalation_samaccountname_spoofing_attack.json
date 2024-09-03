@@ -60,7 +60,8 @@
             "Tactic: Privilege Escalation",
             "Use Case: Active Directory Monitoring",
             "Data Source: Active Directory",
-            "Use Case: Vulnerability"
+            "Use Case: Vulnerability",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -108,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "bdcf646b-08d4-492c-870a-6c04e3700034_108",
+    "id": "bdcf646b-08d4-492c-870a-6c04e3700034_109",
     "type": "security-rule"
 }

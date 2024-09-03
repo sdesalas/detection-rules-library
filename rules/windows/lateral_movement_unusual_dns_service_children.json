@@ -70,7 +70,8 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Use Case: Vulnerability",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -91,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "8c37dc0e-e3ac-4c97-8aa0-cf6a9122de45_110",
+    "id": "8c37dc0e-e3ac-4c97-8aa0-cf6a9122de45_111",
     "type": "security-rule"
 }

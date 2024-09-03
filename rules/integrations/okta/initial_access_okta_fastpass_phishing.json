@@ -12,7 +12,7 @@
         "license": "Elastic License v2",
         "name": "Okta FastPass Phishing Detection",
         "note": "",
-        "query": "event.dataset:okta.system and event.category:authentication and \n  okta.event_type:user.authentication.auth_via_mfa and event.outcome:failure and okta.outcome.reason:\"FastPass declined phishing attempt\"\n",
+        "query": "event.dataset:okta.system and event.category:authentication and\n  okta.event_type:user.authentication.auth_via_mfa and event.outcome:failure and okta.outcome.reason:\"FastPass declined phishing attempt\"\n",
         "references": [
             "https://developer.okta.com/docs/reference/api/system-log/",
             "https://developer.okta.com/docs/reference/api/event-types/",
@@ -80,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 103
     },
-    "id": "ee39a9f7-5a79-4b0a-9815-d36b3cf28d3e_2",
+    "id": "ee39a9f7-5a79-4b0a-9815-d36b3cf28d3e_103",
     "type": "security-rule"
 }

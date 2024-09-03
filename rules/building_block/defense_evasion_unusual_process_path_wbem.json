@@ -56,7 +56,8 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
             "Rule Type: BBR",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -77,8 +78,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "1f460f12-a3cf-4105-9ebb-f788cc63f365_2",
+    "id": "1f460f12-a3cf-4105-9ebb-f788cc63f365_3",
     "type": "security-rule"
 }

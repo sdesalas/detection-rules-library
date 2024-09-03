@@ -13,7 +13,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Installation of Custom Shim Databases",
-        "query": "registry where host.os.type == \"windows\" and event.type in (\"creation\", \"change\") and\n    registry.path : \"HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\AppCompatFlags\\\\Custom\\\\*.sdb\" and \n    not process.executable : \n                       (\"?:\\\\Program Files (x86)\\\\DesktopCentral_Agent\\\\swrepository\\\\1\\\\swuploads\\\\SAP-SLC\\\\SAPSetupSLC02_14-80001954\\\\Setup\\\\NwSapSetup.exe\", \n                        \"?:\\\\$WINDOWS.~BT\\\\Sources\\\\SetupPlatform.exe\", \n                         \"?:\\\\Program Files (x86)\\\\SAP\\\\SAPsetup\\\\setup\\\\NwSapSetup.exe\", \n                         \"?:\\\\Program Files (x86)\\\\SAP\\\\SapSetup\\\\OnRebootSvc\\\\NWSAPSetupOnRebootInstSvc.exe\", \n                         \"?:\\\\Program Files (x86)\\\\Kaspersky Lab\\\\Kaspersky Security for Windows Server\\\\kavfs.exe\")\n",
+        "query": "registry where host.os.type == \"windows\" and event.type == \"change\" and\n    registry.path : \"HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\AppCompatFlags\\\\Custom\\\\*.sdb\" and \n    not process.executable : \n                       (\"?:\\\\Program Files (x86)\\\\DesktopCentral_Agent\\\\swrepository\\\\1\\\\swuploads\\\\SAP-SLC\\\\SAPSetupSLC02_14-80001954\\\\Setup\\\\NwSapSetup.exe\", \n                        \"?:\\\\$WINDOWS.~BT\\\\Sources\\\\SetupPlatform.exe\", \n                         \"?:\\\\Program Files (x86)\\\\SAP\\\\SAPsetup\\\\setup\\\\NwSapSetup.exe\", \n                         \"?:\\\\Program Files (x86)\\\\SAP\\\\SapSetup\\\\OnRebootSvc\\\\NWSAPSetupOnRebootInstSvc.exe\", \n                         \"?:\\\\Program Files (x86)\\\\Kaspersky Lab\\\\Kaspersky Security for Windows Server\\\\kavfs.exe\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -83,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "c5ce48a6-7f57-4ee8-9313-3d0024caee10_108",
+    "id": "c5ce48a6-7f57-4ee8-9313-3d0024caee10_109",
     "type": "security-rule"
 }

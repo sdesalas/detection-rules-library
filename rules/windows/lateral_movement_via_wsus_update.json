@@ -11,7 +11,8 @@
             "endgame-*",
             "logs-sentinel_one_cloud_funnel.*",
             "logs-m365_defender.event-*",
-            "logs-system.security-*"
+            "logs-system.security-*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -86,7 +87,8 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
-            "Data Source: Microsoft Defender for Endpoint"
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -107,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "8e2485b6-a74f-411b-bf7f-38b819f3a846_103",
+    "id": "8e2485b6-a74f-411b-bf7f-38b819f3a846_104",
     "type": "security-rule"
 }

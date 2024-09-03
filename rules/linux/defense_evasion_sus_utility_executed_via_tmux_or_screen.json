@@ -12,7 +12,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potentially Suspicious Process Started via tmux or screen",
-        "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\") and event.type == \"start\" and \nprocess.parent.name in (\"screen\", \"tmux\") and process.name : (\n  \"nmap\", \"nc\", \"ncat\", \"netcat\", \"socat\", \"nc.openbsd\", \"ngrok\", \"ping\", \"java\", \"python*\", \"php*\", \"perl\", \"ruby\",\n  \"lua*\", \"openssl\", \"telnet\", \"awk\", \"wget\", \"curl\", \"id\"\n  )\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and \nprocess.parent.name in (\"screen\", \"tmux\") and process.name : (\n  \"nmap\", \"nc\", \"ncat\", \"netcat\", \"socat\", \"nc.openbsd\", \"ngrok\", \"ping\", \"java\", \"python*\", \"php*\", \"perl\", \"ruby\",\n  \"lua*\", \"openssl\", \"telnet\", \"awk\", \"wget\", \"curl\", \"id\"\n  )\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -76,8 +76,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "e0cc3807-e108-483c-bf66-5a4fbe0d7e89_3",
+    "id": "e0cc3807-e108-483c-bf66-5a4fbe0d7e89_4",
     "type": "security-rule"
 }

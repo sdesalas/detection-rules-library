@@ -135,7 +135,8 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -158,8 +159,8 @@
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 212
+        "version": 213
     },
-    "id": "fd7a6052-58fa-4397-93c3-4795249ccfa2_212",
+    "id": "fd7a6052-58fa-4397-93c3-4795249ccfa2_213",
     "type": "security-rule"
 }

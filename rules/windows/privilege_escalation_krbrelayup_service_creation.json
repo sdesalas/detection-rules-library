@@ -87,7 +87,8 @@
             "Tactic: Privilege Escalation",
             "Tactic: Credential Access",
             "Use Case: Active Directory Monitoring",
-            "Data Source: Active Directory"
+            "Data Source: Active Directory",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -129,8 +130,8 @@
             }
         ],
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "e4e31051-ee01-4307-a6ee-b21b186958f4_105",
+    "id": "e4e31051-ee01-4307-a6ee-b21b186958f4_106",
     "type": "security-rule"
 }

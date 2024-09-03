@@ -9,7 +9,7 @@
             "auditbeat-*",
             "winlogbeat-*",
             "logs-endpoint.events.*",
-            "logs-windows.*"
+            "logs-windows.sysmon_operational-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -39,7 +39,7 @@
         ],
         "risk_score": 47,
         "rule_id": "665e7a4f-c58e-4fc6-bc83-87a7572670ac",
-        "setup": "\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
+        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -48,7 +48,8 @@
             "OS: macOS",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Sysmon"
         ],
         "threat": [
             {
@@ -69,8 +70,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "665e7a4f-c58e-4fc6-bc83-87a7572670ac_104",
+    "id": "665e7a4f-c58e-4fc6-bc83-87a7572670ac_105",
     "type": "security-rule"
 }

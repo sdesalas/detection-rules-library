@@ -7,16 +7,23 @@
         "description": "This rule monitors for inter-process communication via Unix sockets. Adversaries may attempt to communicate with local Unix sockets to enumerate application details, find vulnerabilities/configuration mistakes and potentially escalate privileges or set up malicious communication channels via Unix sockets for inter-process communication to attempt to evade detection.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.*",
+            "endgame-*",
+            "auditbeat-*",
+            "logs-auditd_manager.auditd-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Unix Socket Connection",
-        "query": "process where host.os.type == \"linux\" and event.action == \"exec\" and event.type == \"start\" and (\n  (process.name in (\"nc\", \"ncat\", \"netcat\", \"nc.openbsd\") and \n   process.args == \"-U\" and process.args : (\"/usr/local/*\", \"/run/*\", \"/var/run/*\")) or\n  (process.name == \"socat\" and \n   process.args == \"-\" and process.args : (\"UNIX-CLIENT:/usr/local/*\", \"UNIX-CLIENT:/run/*\", \"UNIX-CLIENT:/var/run/*\"))\n)\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\")\n and (\n  (process.name in (\"nc\", \"ncat\", \"netcat\", \"nc.openbsd\") and \n   process.args == \"-U\" and process.args : (\"/usr/local/*\", \"/run/*\", \"/var/run/*\")) or\n  (process.name == \"socat\" and \n   process.args == \"-\" and process.args : (\"UNIX-CLIENT:/usr/local/*\", \"UNIX-CLIENT:/run/*\", \"UNIX-CLIENT:/var/run/*\"))\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "auditd_manager",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -55,7 +62,9 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Data Source: Elastic Endgame",
+            "Data Source: Auditd Manager"
         ],
         "threat": [
             {
@@ -76,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "41284ba3-ed1a-4598-bfba-a97f75d9aba2_1",
+    "id": "41284ba3-ed1a-4598-bfba-a97f75d9aba2_2",
     "type": "security-rule"
 }

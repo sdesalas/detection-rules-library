@@ -71,7 +71,8 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: Microsoft Defender for Endpoint"
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -121,8 +122,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 113
+        "version": 114
     },
-    "id": "31b4c719-f2b4-41f6-a9bd-fce93c2eaf62_113",
+    "id": "31b4c719-f2b4-41f6-a9bd-fce93c2eaf62_114",
     "type": "security-rule"
 }

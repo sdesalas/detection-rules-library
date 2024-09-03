@@ -7,7 +7,7 @@
         "description": "Identifies the creation of an archive file with an unusual extension. Attackers may attempt to evade detection by masquerading files using the file extension values used by image, audio, or document file types.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -88,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "cffbaf47-9391-4e09-a83c-1f27d7474826_1",
+    "id": "cffbaf47-9391-4e09-a83c-1f27d7474826_2",
     "type": "security-rule"
 }

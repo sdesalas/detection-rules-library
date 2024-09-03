@@ -72,7 +72,8 @@
             "Resources: Investigation Guide",
             "Data Source: Windows",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -93,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "5f2f463e-6997-478c-8405-fb41cc283281_1",
+    "id": "5f2f463e-6997-478c-8405-fb41cc283281_2",
     "type": "security-rule"
 }

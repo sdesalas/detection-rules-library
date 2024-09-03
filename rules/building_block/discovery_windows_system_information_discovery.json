@@ -69,7 +69,8 @@
             "Tactic: Discovery",
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -90,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "51176ed2-2d90-49f2-9f3d-17196428b169_5",
+    "id": "51176ed2-2d90-49f2-9f3d-17196428b169_6",
     "type": "security-rule"
 }

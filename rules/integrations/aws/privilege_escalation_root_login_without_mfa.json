@@ -10,7 +10,7 @@
         "from": "now-60m",
         "index": [
             "filebeat-*",
-            "logs-aws*"
+            "logs-aws.cloudtrail-*"
         ],
         "interval": "10m",
         "language": "kuery",
@@ -68,6 +68,7 @@
             "Domain: Cloud",
             "Data Source: AWS",
             "Data Source: Amazon Web Services",
+            "Data Source: AWS Route53",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
             "Tactic: Privilege Escalation"
@@ -91,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 208
+        "version": 209
     },
-    "id": "bc0c6f0d-dab0-47a3-b135-0925f0a333bc_208",
+    "id": "bc0c6f0d-dab0-47a3-b135-0925f0a333bc_209",
     "type": "security-rule"
 }

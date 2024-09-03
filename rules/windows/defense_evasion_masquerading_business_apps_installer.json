@@ -6,7 +6,7 @@
         "description": "Identifies executables with names resembling legitimate business applications but lacking signatures from the original developer. Attackers may trick users into downloading malicious executables that masquerade as legitimate applications via malicious ads, forum posts, and tutorials, effectively gaining initial access.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -138,8 +138,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "feafdc51-c575-4ed2-89dd-8e20badc2d6c_3",
+    "id": "feafdc51-c575-4ed2-89dd-8e20badc2d6c_4",
     "type": "security-rule"
 }

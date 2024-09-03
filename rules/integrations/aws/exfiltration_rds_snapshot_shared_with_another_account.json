@@ -7,7 +7,7 @@
         "false_positives": [
             "DB snapshot sharing is a common practice in AWS environments. Ensure that the sharing is authorized before taking action."
         ],
-        "from": "now-10m",
+        "from": "now-6m",
         "index": [
             "filebeat-*",
             "logs-aws.cloudtrail-*"
@@ -87,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "4577ef08-61d1-4458-909f-25a4b10c87fe_1",
+    "id": "4577ef08-61d1-4458-909f-25a4b10c87fe_2",
     "type": "security-rule"
 }

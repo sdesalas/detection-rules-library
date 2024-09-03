@@ -58,12 +58,11 @@
         "rule_id": "8d3d0794-c776-476b-8674-ee2e685f6470",
         "severity": "high",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Container",
-            "Threat Detection",
-            "Execution"
+            "Data Source: Elastic Defend for Containers",
+            "Domain: Container",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Execution"
         ],
         "threat": [
             {
@@ -91,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "8d3d0794-c776-476b-8674-ee2e685f6470_1",
+    "id": "8d3d0794-c776-476b-8674-ee2e685f6470_2",
     "type": "security-rule"
 }

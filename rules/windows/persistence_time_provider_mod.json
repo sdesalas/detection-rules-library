@@ -8,7 +8,8 @@
         "index": [
             "logs-endpoint.events.registry-*",
             "endgame-*",
-            "logs-windows.sysmon_operational-*"
+            "logs-windows.sysmon_operational-*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -112,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "14ed1aa9-ebfd-4cf9-a463-0ac59ec55204_110",
+    "id": "14ed1aa9-ebfd-4cf9-a463-0ac59ec55204_111",
     "type": "security-rule"
 }

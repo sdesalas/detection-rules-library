@@ -6,13 +6,12 @@
         "description": "This rule monitors for the usage of the built-in Linux DebugFS utility to access a disk device without root permissions. Linux users that are part of the \"disk\" group have sufficient privileges to access all data inside of the machine through DebugFS. Attackers may leverage DebugFS in conjunction with \"disk\" permissions to read sensitive files owned by root, such as the shadow file, root ssh private keys or other sensitive files that may allow them to further escalate privileges.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*"
+            "logs-endpoint.events.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Suspicious DebugFS Root Device Access",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and \nprocess.name == \"debugfs\" and process.args : \"/dev/sd*\" and not process.args == \"-R\" and \nnot user.Ext.real.id == \"0\" and not group.Ext.real.id == \"0\"\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and \nprocess.name == \"debugfs\" and process.args : \"/dev/sd*\" and not process.args == \"-R\" and \nnot user.Ext.real.id == \"0\" and not group.Ext.real.id == \"0\"\n",
         "references": [
             "https://book.hacktricks.xyz/linux-hardening/privilege-escalation/interesting-groups-linux-pe#disk-group"
         ],
@@ -68,7 +67,6 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend"
         ],
         "threat": [
@@ -97,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "2605aa59-29ac-4662-afad-8d86257c7c91_5",
+    "id": "2605aa59-29ac-4662-afad-8d86257c7c91_6",
     "type": "security-rule"
 }

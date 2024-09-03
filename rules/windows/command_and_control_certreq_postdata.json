@@ -72,7 +72,8 @@
             "Tactic: Command and Control",
             "Tactic: Exfiltration",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -123,8 +124,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "79f0a1f7-ed6b-471c-8eb1-23abd6470b1c_8",
+    "id": "79f0a1f7-ed6b-471c-8eb1-23abd6470b1c_9",
     "type": "security-rule"
 }

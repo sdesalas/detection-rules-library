@@ -7,7 +7,7 @@
         "false_positives": [
             "While this can be normal behavior, it should be investigated to ensure validity. Verify whether the user identity should be using the IAM `CreateAccessKey` for the targeted user."
         ],
-        "from": "now-10m",
+        "from": "now-6m",
         "language": "esql",
         "license": "Elastic License v2",
         "name": "AWS IAM User Created Access Keys For Another User",
@@ -80,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "696015ef-718e-40ff-ac4a-cc2ba88dbeeb_1",
+    "id": "696015ef-718e-40ff-ac4a-cc2ba88dbeeb_2",
     "type": "security-rule"
 }

@@ -43,7 +43,7 @@
         "tags": [
             "OS: Windows",
             "Data Source: Elastic Endgame",
-            "Rule Type: Indicator Match"
+            "Rule Type: Threat Match"
         ],
         "threat_filters": [
             {
@@ -135,8 +135,8 @@
         "timeline_title": "Generic Threat Match Timeline",
         "timestamp_override": "event.ingested",
         "type": "threat_match",
-        "version": 6
+        "version": 7
     },
-    "id": "0c41e478-5263-4c69-8f9e-7dfd2c22da64_6",
+    "id": "0c41e478-5263-4c69-8f9e-7dfd2c22da64_7",
     "type": "security-rule"
 }

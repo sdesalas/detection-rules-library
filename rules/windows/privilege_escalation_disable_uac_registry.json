@@ -99,6 +99,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1112",
+                        "name": "Modify Registry",
+                        "reference": "https://attack.mitre.org/techniques/T1112/"
+                    },
+                    {
                         "id": "T1548",
                         "name": "Abuse Elevation Control Mechanism",
                         "reference": "https://attack.mitre.org/techniques/T1548/",
@@ -121,19 +126,14 @@
                                 "reference": "https://attack.mitre.org/techniques/T1562/001/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1112",
-                        "name": "Modify Registry",
-                        "reference": "https://attack.mitre.org/techniques/T1112/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "d31f183a-e5b1-451b-8534-ba62bca0b404_110",
+    "id": "d31f183a-e5b1-451b-8534-ba62bca0b404_111",
     "type": "security-rule"
 }

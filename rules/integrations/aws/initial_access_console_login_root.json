@@ -10,7 +10,7 @@
         "from": "now-60m",
         "index": [
             "filebeat-*",
-            "logs-aws*"
+            "logs-aws.cloudtrail-*"
         ],
         "interval": "10m",
         "language": "kuery",
@@ -63,6 +63,7 @@
             "Domain: Cloud",
             "Data Source: AWS",
             "Data Source: Amazon Web Services",
+            "Data Source: AWS Signin",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
             "Tactic: Initial Access"
@@ -101,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 208
+        "version": 209
     },
-    "id": "e2a67480-3b79-403d-96e3-fdd2992c50ef_208",
+    "id": "e2a67480-3b79-403d-96e3-fdd2992c50ef_209",
     "type": "security-rule"
 }

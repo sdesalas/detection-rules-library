@@ -6,7 +6,7 @@
         "description": "This rule identifies the creation of SSH keys using the ssh-keygen tool, which is the standard utility for generating SSH keys. Users often create SSH keys for authentication with remote services. However, threat actors can exploit this tool to move laterally across a network or maintain persistence by generating unauthorized SSH keys, granting them SSH access to systems.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process*",
+            "logs-endpoint.events.file*",
             "endgame-*"
         ],
         "language": "eql",
@@ -118,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "7df3cb8b-5c0c-4228-b772-bb6cd619053c_1",
+    "id": "7df3cb8b-5c0c-4228-b772-bb6cd619053c_2",
     "type": "security-rule"
 }

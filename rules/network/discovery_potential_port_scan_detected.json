@@ -51,7 +51,8 @@
             "Domain: Network",
             "Tactic: Discovery",
             "Tactic: Reconnaissance",
-            "Use Case: Network Security Monitoring"
+            "Use Case: Network Security Monitoring",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -107,8 +108,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 5
+        "version": 6
     },
-    "id": "0171f283-ade7-4f87-9521-ac346c68cc9b_5",
+    "id": "0171f283-ade7-4f87-9521-ac346c68cc9b_6",
     "type": "security-rule"
 }

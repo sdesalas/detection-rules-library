@@ -8,7 +8,10 @@
         "from": "now-119m",
         "history_window_start": "now-7d",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.*",
+            "endgame-*",
+            "auditbeat-*",
+            "logs-auditd_manager.auditd-*"
         ],
         "interval": "60m",
         "language": "kuery",
@@ -18,11 +21,15 @@
             "host.id",
             "process.group_leader.executable"
         ],
-        "query": "event.category:process and host.os.type:\"linux\" and event.action:\"exec\" and event.type:\"start\" and\nprocess.name:(\"xclip\" or \"xsel\" or \"wl-clipboard\" or \"clipman\" or \"copyq\")\n",
+        "query": "event.category:process and host.os.type:\"linux\" and\nevent.type:\"start\" and event.action:(\"exec\" or \"exec_event\" or \"executed\" or \"process_started\") and\nprocess.name:(\"xclip\" or \"xsel\" or \"wl-clipboard\" or \"clipman\" or \"copyq\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "auditd_manager",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -61,7 +68,9 @@
             "Use Case: Threat Detection",
             "Tactic: Collection",
             "Rule Type: BBR",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Elastic Endgame",
+            "Data Source: Auditd Manager"
         ],
         "threat": [
             {
@@ -82,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "884e87cc-c67b-4c90-a4ed-e1e24a940c82_3",
+    "id": "884e87cc-c67b-4c90-a4ed-e1e24a940c82_4",
     "type": "security-rule"
 }

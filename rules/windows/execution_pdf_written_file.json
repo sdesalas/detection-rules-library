@@ -6,7 +6,8 @@
         "description": "Identifies a suspicious file that was written by a PDF reader application and subsequently executed. These processes are often launched via exploitation of PDF applications.",
         "from": "now-120m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process-*",
+            "logs-endpoint.events.file-*",
             "winlogbeat-*",
             "logs-windows.sysmon_operational-*",
             "endgame-*"
@@ -121,8 +122,8 @@
             }
         ],
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "1defdd62-cd8d-426e-a246-81a37751bb2b_107",
+    "id": "1defdd62-cd8d-426e-a246-81a37751bb2b_108",
     "type": "security-rule"
 }

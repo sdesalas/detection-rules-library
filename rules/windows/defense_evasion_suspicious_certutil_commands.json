@@ -75,7 +75,8 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -98,8 +99,8 @@
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "fd70c98a-c410-42dc-a2e3-761c71848acf_108",
+    "id": "fd70c98a-c410-42dc-a2e3-761c71848acf_109",
     "type": "security-rule"
 }

@@ -66,18 +66,6 @@
                 },
                 "technique": [
                     {
-                        "id": "T1098",
-                        "name": "Account Manipulation",
-                        "reference": "https://attack.mitre.org/techniques/T1098/",
-                        "subtechnique": [
-                            {
-                                "id": "T1098.003",
-                                "name": "Additional Cloud Roles",
-                                "reference": "https://attack.mitre.org/techniques/T1098/003/"
-                            }
-                        ]
-                    },
-                    {
                         "id": "T1078",
                         "name": "Valid Accounts",
                         "reference": "https://attack.mitre.org/techniques/T1078/",
@@ -88,14 +76,26 @@
                                 "reference": "https://attack.mitre.org/techniques/T1078/004/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.003",
+                                "name": "Additional Cloud Roles",
+                                "reference": "https://attack.mitre.org/techniques/T1098/003/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "10445cf0-0748-11ef-ba75-f661ea17fbcc_1",
+    "id": "10445cf0-0748-11ef-ba75-f661ea17fbcc_2",
     "type": "security-rule"
 }

@@ -3,17 +3,15 @@
         "author": [
             "Elastic"
         ],
-        "building_block_type": "default",
         "description": "Managed Object Format (MOF) files can be compiled locally or remotely through mofcomp.exe. Attackers may leverage MOF files to build their own namespaces and classes into the Windows Management Instrumentation (WMI) repository, or establish persistence using WMI Event Subscription.",
-        "from": "now-119m",
+        "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process-*"
         ],
-        "interval": "60m",
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Mofcomp Activity",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name : \"mofcomp.exe\" and process.args : \"*.mof\" and\n  not user.id : \"S-1-5-18\"\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name : \"mofcomp.exe\" and process.args : \"*.mof\" and\n  not user.id : \"S-1-5-18\" and\n  not\n  (\n    process.parent.name : \"ScenarioEngine.exe\" and\n    process.args : (\n      \"*\\\\MSSQL\\\\Binn\\\\*.mof\",\n      \"*\\\\Microsoft SQL Server\\\\???\\\\Shared\\\\*.mof\",\n      \"*\\\\OLAP\\\\bin\\\\*.mof\"\n    )\n  )\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -43,6 +41,11 @@
             },
             {
                 "ecs": true,
+                "name": "process.parent.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "user.id",
                 "type": "keyword"
             }
@@ -55,8 +58,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -99,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "210d4430-b371-470e-b879-80b7182aa75e_1",
+    "id": "210d4430-b371-470e-b879-80b7182aa75e_2",
     "type": "security-rule"
 }

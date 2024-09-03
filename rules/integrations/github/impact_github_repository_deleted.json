@@ -30,6 +30,7 @@
         "tags": [
             "Domain: Cloud",
             "Use Case: Threat Detection",
+            "Use Case: UEBA",
             "Tactic: Impact",
             "Data Source: Github"
         ],
@@ -52,8 +53,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "345889c4-23a8-4bc0-b7ca-756bd17ce83b_1",
+    "id": "345889c4-23a8-4bc0-b7ca-756bd17ce83b_2",
     "type": "security-rule"
 }

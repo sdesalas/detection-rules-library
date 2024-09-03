@@ -10,7 +10,7 @@
         "from": "now-60m",
         "index": [
             "filebeat-*",
-            "logs-aws*"
+            "logs-aws.cloudtrail-*"
         ],
         "interval": "10m",
         "language": "kuery",
@@ -77,8 +77,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 208
+        "version": 209
     },
-    "id": "98fd7407-0bd5-5817-cda0-3fcc33113a56_208",
+    "id": "98fd7407-0bd5-5817-cda0-3fcc33113a56_209",
     "type": "security-rule"
 }

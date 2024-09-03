@@ -71,7 +71,8 @@
             "Tactic: Persistence",
             "Tactic: Execution",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -114,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "9b6813a1-daf1-457e-b0e6-0bb4e55b8a4c_111",
+    "id": "9b6813a1-daf1-457e-b0e6-0bb4e55b8a4c_112",
     "type": "security-rule"
 }

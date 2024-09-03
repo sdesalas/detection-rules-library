@@ -14,7 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Non-Standard Port SSH connection",
-        "query": "sequence by process.entity_id with maxspan=1m\n[process where event.action == \"exec\" and process.name:\"ssh\"]\n[network where process.name:\"ssh\"\n and event.action in (\"connection_attempted\", \"connection_accepted\")\n and destination.port != 22\n and destination.ip != \"127.0.0.1\"\n and network.transport: \"tcp\"\n]\n",
+        "query": "sequence by process.entity_id with maxspan=1m\n  [process where event.action == \"exec\" and process.name:\"ssh\" and not process.parent.name in (\n   \"rsync\", \"pyznap\", \"git\", \"ansible-playbook\", \"scp\", \"pgbackrest\", \"git-lfs\", \"expect\", \"Sourcetree\", \"ssh-copy-id\",\n   \"run\"\n   )\n  ]\n  [network where process.name:\"ssh\" and event.action in (\"connection_attempted\", \"connection_accepted\") and \n   destination.port != 22 and destination.ip != \"127.0.0.1\" and network.transport: \"tcp\"\n  ]\n",
         "references": [
             "https://attack.mitre.org/techniques/T1571/"
         ],
@@ -54,6 +54,11 @@
                 "ecs": true,
                 "name": "process.name",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
+                "type": "keyword"
             }
         ],
         "risk_score": 21,
@@ -85,8 +90,8 @@
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "bc8ca7e0-92fd-4b7c-b11e-ee0266b8d9c9_4",
+    "id": "bc8ca7e0-92fd-4b7c-b11e-ee0266b8d9c9_5",
     "type": "security-rule"
 }

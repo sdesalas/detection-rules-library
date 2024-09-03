@@ -59,7 +59,8 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: Microsoft Defender for Endpoint"
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -87,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "32c5cf9c-2ef8-4e87-819e-5ccb7cd18b14_110",
+    "id": "32c5cf9c-2ef8-4e87-819e-5ccb7cd18b14_111",
     "type": "security-rule"
 }

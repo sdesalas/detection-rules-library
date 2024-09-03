@@ -35,22 +35,22 @@
             {
                 "ecs": false,
                 "name": "kubernetes.audit.annotations.authorization_k8s_io/decision",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": false,
                 "name": "kubernetes.audit.objectRef.resource",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": false,
                 "name": "kubernetes.audit.requestObject.spec.type",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": false,
                 "name": "kubernetes.audit.verb",
-                "type": "unknown"
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -81,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 202
+        "version": 203
     },
-    "id": "65f9bccd-510b-40df-8263-334f03174fed_202",
+    "id": "65f9bccd-510b-40df-8263-334f03174fed_203",
     "type": "security-rule"
 }

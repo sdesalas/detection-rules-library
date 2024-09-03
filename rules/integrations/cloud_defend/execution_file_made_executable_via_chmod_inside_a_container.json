@@ -45,13 +45,12 @@
         "rule_id": "ec604672-bed9-43e1-8871-cf591c052550",
         "severity": "medium",
         "tags": [
-            "Elastic",
-            "Host",
-            "Linux",
-            "Threat Detection",
-            "Execution",
-            "Defense Evasion",
-            "Container"
+            "Data Source: Elastic Defend for Containers",
+            "Domain: Container",
+            "OS: Linux",
+            "Use Case: Threat Detection",
+            "Tactic: Execution",
+            "Tactic: Defense Evasion"
         ],
         "threat": [
             {
@@ -94,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "ec604672-bed9-43e1-8871-cf591c052550_1",
+    "id": "ec604672-bed9-43e1-8871-cf591c052550_2",
     "type": "security-rule"
 }

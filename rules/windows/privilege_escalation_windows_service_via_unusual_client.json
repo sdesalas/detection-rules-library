@@ -64,7 +64,8 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Privilege Escalation"
+            "Tactic: Privilege Escalation",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -92,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "55c2bf58-2a39-4c58-a384-c8b1978153c2_109",
+    "id": "55c2bf58-2a39-4c58-a384-c8b1978153c2_110",
     "type": "security-rule"
 }

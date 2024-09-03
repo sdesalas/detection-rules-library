@@ -51,7 +51,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -79,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 108
+        "version": 109
     },
-    "id": "45ac4800-840f-414c-b221-53dd36a5aaf7_108",
+    "id": "45ac4800-840f-414c-b221-53dd36a5aaf7_109",
     "type": "security-rule"
 }

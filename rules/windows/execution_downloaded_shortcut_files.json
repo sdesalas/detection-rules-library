@@ -40,9 +40,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 21,
+        "risk_score": 47,
         "rule_id": "39157d52-4035-44a8-9d1a-6f8c5f580a07",
-        "severity": "low",
+        "severity": "medium",
         "tags": [
             "Domain: Endpoint",
             "OS: Windows",
@@ -103,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "39157d52-4035-44a8-9d1a-6f8c5f580a07_2",
+    "id": "39157d52-4035-44a8-9d1a-6f8c5f580a07_3",
     "type": "security-rule"
 }

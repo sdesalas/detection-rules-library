@@ -13,7 +13,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Suspicious Memory grep Activity",
-        "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\") and event.type == \"start\" and\nprocess.name in (\"grep\", \"egrep\", \"fgrep\", \"rgrep\") and process.args in (\"[stack]\", \"[vdso]\", \"[heap]\")\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and\nprocess.name in (\"grep\", \"egrep\", \"fgrep\", \"rgrep\") and process.args in (\"[stack]\", \"[vdso]\", \"[heap]\")\n",
         "references": [
             "https://github.com/arget13/DDexec"
         ],
@@ -81,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "d74d6506-427a-4790-b170-0c2a6ddac799_1",
+    "id": "d74d6506-427a-4790-b170-0c2a6ddac799_2",
     "type": "security-rule"
 }

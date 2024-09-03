@@ -69,7 +69,8 @@
             "Tactic: Persistence",
             "Data Source: Active Directory",
             "Resources: Investigation Guide",
-            "Use Case: Active Directory Monitoring"
+            "Use Case: Active Directory Monitoring",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -90,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 108
+        "version": 109
     },
-    "id": "62a70f6f-3c37-43df-a556-f64fa475fba2_108",
+    "id": "62a70f6f-3c37-43df-a556-f64fa475fba2_109",
     "type": "security-rule"
 }

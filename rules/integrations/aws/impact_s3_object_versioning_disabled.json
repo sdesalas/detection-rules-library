@@ -8,6 +8,10 @@
             "Administrators within an AWS Organization structure may legitimately suspend object versioning. Ensure that this behavior is not part of a legitimate operation before taking action."
         ],
         "from": "now-6m",
+        "index": [
+            "filebeat-*",
+            "logs-aws.cloudtrail-*"
+        ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "AWS S3 Object Versioning Suspended",
@@ -79,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "30b5bb96-c7db-492c-80e9-1eab00db580b_1",
+    "id": "30b5bb96-c7db-492c-80e9-1eab00db580b_2",
     "type": "security-rule"
 }

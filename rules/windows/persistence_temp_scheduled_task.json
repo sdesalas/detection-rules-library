@@ -60,7 +60,8 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Tactic: Execution"
+            "Tactic: Execution",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -109,8 +110,8 @@
             }
         ],
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "81ff45f8-f8c2-4e28-992e-5a0e8d98e0fe_7",
+    "id": "81ff45f8-f8c2-4e28-992e-5a0e8d98e0fe_8",
     "type": "security-rule"
 }

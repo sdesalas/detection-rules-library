@@ -51,7 +51,8 @@
             "Domain: Cloud",
             "Data Source: Azure",
             "Use Case: Identity and Access Audit",
-            "Tactic: Defense Evasion"
+            "Tactic: Defense Evasion",
+            "Data Source: Elastic Defend"
         ],
         "threat": [
             {
@@ -72,8 +73,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 103
     },
-    "id": "d79c4b2a-6134-4edd-86e6-564a92a933f9_102",
+    "id": "d79c4b2a-6134-4edd-86e6-564a92a933f9_103",
     "type": "security-rule"
 }

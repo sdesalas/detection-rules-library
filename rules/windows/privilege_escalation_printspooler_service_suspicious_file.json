@@ -4,17 +4,115 @@
             "Elastic"
         ],
         "description": "Detects attempts to exploit privilege escalation vulnerabilities related to the Print Spooler service. For more information refer to the following CVE's - CVE-2020-1048, CVE-2020-1337 and CVE-2020-1300 and verify that the impacted system is patched.",
+        "filters": [
+            {
+                "meta": {
+                    "negate": false
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\Windows\\\\Sys?????\\\\*"
+                        }
+                    }
+                }
+            },
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\Windows\\\\Sys?????\\\\PrintConfig.dll"
+                        }
+                    }
+                }
+            },
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\Windows\\\\Sys?????\\\\x5lrs.dll"
+                        }
+                    }
+                }
+            },
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\Windows\\\\system32\\\\spool\\\\DRIVERS\\\\x64\\\\*.dll"
+                        }
+                    }
+                }
+            },
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\Windows\\\\system32\\\\spool\\\\DRIVERS\\\\W32X86\\\\*.dll"
+                        }
+                    }
+                }
+            },
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\Windows\\\\system32\\\\spool\\\\PRTPROCS\\\\x64\\\\*.dll"
+                        }
+                    }
+                }
+            },
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\Windows\\\\system32\\\\spool\\\\{????????-????-????-????-????????????}\\\\*.dll"
+                        }
+                    }
+                }
+            }
+        ],
         "from": "now-9m",
+        "history_window_start": "now-14d",
         "index": [
             "winlogbeat-*",
             "logs-endpoint.events.file-*",
             "logs-windows.sysmon_operational-*",
             "endgame-*"
         ],
-        "language": "eql",
+        "language": "kuery",
         "license": "Elastic License v2",
         "name": "Suspicious PrintSpooler Service Executable File Creation",
-        "query": "file where host.os.type == \"windows\" and event.type == \"creation\" and\n  process.name : \"spoolsv.exe\" and file.extension : \"dll\" and\n  file.path : (\"?:\\\\Windows\\\\System32\\\\*\", \"?:\\\\Windows\\\\SysWOW64\\\\*\") and\n  not file.path : (\n    \"?:\\\\WINDOWS\\\\SysWOW64\\\\PrintConfig.dll\",\n    \"?:\\\\WINDOWS\\\\system32\\\\x5lrs.dll\",\n    \"?:\\\\WINDOWS\\\\sysWOW64\\\\x5lrs.dll\",\n    \"?:\\\\WINDOWS\\\\system32\\\\PrintConfig.dll\",\n    \"?:\\\\WINDOWS\\\\system32\\\\spool\\\\DRIVERS\\\\x64\\\\*.dll\",\n    \"?:\\\\WINDOWS\\\\system32\\\\spool\\\\DRIVERS\\\\W32X86\\\\*.dll\",\n    \"?:\\\\WINDOWS\\\\system32\\\\spool\\\\PRTPROCS\\\\x64\\\\*.dll\",\n    \"?:\\\\WINDOWS\\\\system32\\\\spool\\\\{????????-????-????-????-????????????}\\\\*.dll\"\n  )\n",
+        "new_terms_fields": [
+            "host.id",
+            "file.path"
+        ],
+        "query": "event.category : \"file\" and host.os.type : \"windows\" and event.type : \"creation\" and\n  process.name : \"spoolsv.exe\" and file.extension : \"dll\"\n",
         "references": [
             "https://voidsec.com/cve-2020-1337-printdemon-is-dead-long-live-printdemon/",
             "https://www.thezdi.com/blog/2020/7/8/cve-2020-1300-remote-code-execution-through-microsoft-windows-cab-files"
@@ -32,17 +130,17 @@
         "required_fields": [
             {
                 "ecs": true,
+                "name": "event.category",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "event.type",
                 "type": "keyword"
             },
             {
                 "ecs": true,
                 "name": "file.extension",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "file.path",
                 "type": "keyword"
             },
             {
@@ -56,10 +154,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 73,
+        "risk_score": 21,
         "rule_id": "5bb4a95d-5a08-48eb-80db-4c3a63ec78a8",
-        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
-        "severity": "high",
+        "severity": "low",
         "tags": [
             "Domain: Endpoint",
             "OS: Windows",
@@ -88,9 +185,9 @@
             }
         ],
         "timestamp_override": "event.ingested",
-        "type": "eql",
-        "version": 108
+        "type": "new_terms",
+        "version": 109
     },
-    "id": "5bb4a95d-5a08-48eb-80db-4c3a63ec78a8_108",
+    "id": "5bb4a95d-5a08-48eb-80db-4c3a63ec78a8_109",
     "type": "security-rule"
 }

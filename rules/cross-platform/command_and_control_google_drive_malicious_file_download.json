@@ -12,7 +12,8 @@
         "index": [
             "auditbeat-*",
             "logs-endpoint*",
-            "logs-system.security*"
+            "logs-system.security*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -57,7 +58,8 @@
             "OS: Windows",
             "OS: macOS",
             "Use Case: Threat Detection",
-            "Tactic: Command and Control"
+            "Tactic: Command and Control",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -78,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "a8afdce2-0ec1-11ee-b843-f661ea17fbcd_3",
+    "id": "a8afdce2-0ec1-11ee-b843-f661ea17fbcd_4",
     "type": "security-rule"
 }

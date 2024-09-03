@@ -56,7 +56,8 @@
             "Tactic: Lateral Movement",
             "Data Source: Elastic Defend",
             "Rule Type: BBR",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -104,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "b483365c-98a8-40c0-92d8-0458ca25058a_3",
+    "id": "b483365c-98a8-40c0-92d8-0458ca25058a_4",
     "type": "security-rule"
 }

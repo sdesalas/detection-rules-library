@@ -33,17 +33,17 @@
             {
                 "ecs": false,
                 "name": "kubernetes.audit.annotations.authorization_k8s_io/decision",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": false,
                 "name": "kubernetes.audit.requestURI",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": false,
                 "name": "kubernetes.audit.user.username",
-                "type": "unknown"
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -82,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 5
+        "version": 6
     },
-    "id": "63c057cc-339a-11ed-a261-0242ac120002_5",
+    "id": "63c057cc-339a-11ed-a261-0242ac120002_6",
     "type": "security-rule"
 }

@@ -10,10 +10,10 @@
             "logs-system.*",
             "logs-windows.*"
         ],
-        "language": "kuery",
+        "language": "eql",
         "license": "Elastic License v2",
         "name": "KRBTGT Delegation Backdoor",
-        "query": "event.action:modified-user-account and event.code:4738 and\n  winlog.event_data.AllowedToDelegateTo:*krbtgt*\n",
+        "query": "iam where event.action == \"modified-user-account\" and event.code == \"4738\" and\n  winlog.event_data.AllowedToDelegateTo : \"*krbtgt*\"\n",
         "references": [
             "https://skyblue.team/posts/delegate-krbtgt",
             "https://github.com/atc-project/atomic-threat-coverage/blob/master/Atomic_Threat_Coverage/Logging_Policies/LP_0026_windows_audit_user_account_management.md"
@@ -55,7 +55,8 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Use Case: Active Directory Monitoring",
-            "Data Source: Active Directory"
+            "Data Source: Active Directory",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -90,9 +91,9 @@
             }
         ],
         "timestamp_override": "event.ingested",
-        "type": "query",
-        "version": 107
+        "type": "eql",
+        "version": 108
     },
-    "id": "e052c845-48d0-4f46-8a13-7d0aba05df82_107",
+    "id": "e052c845-48d0-4f46-8a13-7d0aba05df82_108",
     "type": "security-rule"
 }

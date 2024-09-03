@@ -82,7 +82,8 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Privilege Escalation"
+            "Tactic: Privilege Escalation",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -114,8 +115,8 @@
             }
         ],
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "42eeee3d-947f-46d3-a14d-7036b962c266_9",
+    "id": "42eeee3d-947f-46d3-a14d-7036b962c266_10",
     "type": "security-rule"
 }
