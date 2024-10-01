@@ -22,7 +22,8 @@
         "references": [
             "https://twitter.com/SBousseaden/status/1235533224337641473",
             "https://www.hexacorn.com/blog/2019/09/20/werfault-command-line-switches-v0-1/",
-            "https://app.any.run/tasks/26051d84-b68e-4afb-8a9a-76921a271b81/"
+            "https://app.any.run/tasks/26051d84-b68e-4afb-8a9a-76921a271b81/",
+            "https://www.elastic.co/security-labs/elastic-security-uncovers-blister-malware-campaign"
         ],
         "related_integrations": [
             {
@@ -118,8 +119,8 @@
             }
         ],
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "6ea41894-66c3-4df7-ad6b-2c5074eb3df8_108",
+    "id": "6ea41894-66c3-4df7-ad6b-2c5074eb3df8_109",
     "type": "security-rule"
 }

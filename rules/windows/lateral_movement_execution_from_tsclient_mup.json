@@ -17,7 +17,8 @@
         "name": "Execution via TSClient Mountpoint",
         "query": "process where host.os.type == \"windows\" and event.type == \"start\" and process.executable : \"\\\\Device\\\\Mup\\\\tsclient\\\\*.exe\"\n",
         "references": [
-            "https://posts.specterops.io/revisiting-remote-desktop-lateral-movement-8fb905cb46c3"
+            "https://posts.specterops.io/revisiting-remote-desktop-lateral-movement-8fb905cb46c3",
+            "https://www.elastic.co/security-labs/hunting-for-lateral-movement-using-event-query-language"
         ],
         "related_integrations": [
             {
@@ -85,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "4fe9d835-40e1-452d-8230-17c147cafad8_110",
+    "id": "4fe9d835-40e1-452d-8230-17c147cafad8_111",
     "type": "security-rule"
 }

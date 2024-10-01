@@ -19,6 +19,7 @@
         "query": "sequence by source.user.email with maxspan=3m\n[file where event.dataset == \"google_workspace.drive\" and event.action == \"copy\" and\n\n    /* Should only match if the object lives in a Drive that is external to the user's GWS organization */\n    google_workspace.drive.owner_is_team_drive == \"false\" and google_workspace.drive.copy_type == \"external\" and\n\n    /* Google Script, Forms, Sheets and Document can have container-bound scripts */\n    google_workspace.drive.file.type: (\"script\", \"form\", \"spreadsheet\", \"document\")]\n\n[any where event.dataset == \"google_workspace.token\" and event.action == \"authorize\" and\n\n    /* Ensures application ID references custom app in Google Workspace and not GCP */\n    google_workspace.token.client.id : \"*apps.googleusercontent.com\"]\n",
         "references": [
             "https://www.elastic.co/security-labs/google-workspace-attack-surface-part-one",
+            "https://www.elastic.co/security-labs/google-workspace-attack-surface-part-two",
             "https://developers.google.com/apps-script/guides/bound",
             "https://support.google.com/a/users/answer/13004165#share_make_a_copy_links"
         ],
@@ -100,8 +101,8 @@
             }
         ],
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "f33e68a4-bd19-11ed-b02f-f661ea17fbcc_6",
+    "id": "f33e68a4-bd19-11ed-b02f-f661ea17fbcc_7",
     "type": "security-rule"
 }

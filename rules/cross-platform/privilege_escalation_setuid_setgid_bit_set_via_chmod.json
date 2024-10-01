@@ -14,6 +14,9 @@
         "max_signals": 33,
         "name": "SUID/SGID Bit Set",
         "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and (\n  (process.name == \"chmod\" and (process.args : (\"+s\", \"u+s\", \"g+s\") or process.args regex \"[24][0-9]{3}\")) or\n  (process.name == \"install\" and process.args : \"-m\" and\n  (process.args : (\"+s\", \"u+s\", \"g+s\") or process.args regex \"[24][0-9]{3}\"))\n) and not (\n  process.parent.executable : (\n    \"/usr/NX/*\", \"/var/lib/docker/*\", \"/var/lib/dpkg/info*\", \"/tmp/newroot/*\",\n    \"/System/Library/PrivateFrameworks/PackageKit.framework/Versions/A/XPCServices/package_script_service.xpc/Contents/MacOS/package_script_service\"\n  ) or\n  process.args : (\n    \"/run/*\", \"/var/run/*\", \"/usr/bin/keybase-redirector\", \"/usr/local/share/fonts\", \"/usr/bin/ssh-agent\"\n  )\n)\n",
+        "references": [
+            "https://www.elastic.co/security-labs/primer-on-persistence-mechanisms"
+        ],
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -98,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "8a1b0278-0f9a-487d-96bd-d4833298e87a_104",
+    "id": "8a1b0278-0f9a-487d-96bd-d4833298e87a_105",
     "type": "security-rule"
 }

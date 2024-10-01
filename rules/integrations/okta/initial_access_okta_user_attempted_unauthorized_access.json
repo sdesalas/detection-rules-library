@@ -17,7 +17,9 @@
         "references": [
             "https://developer.okta.com/docs/reference/api/system-log/",
             "https://developer.okta.com/docs/reference/api/event-types/",
-            "https://www.elastic.co/security-labs/testing-okta-visibility-and-detection-dorothy"
+            "https://www.elastic.co/security-labs/testing-okta-visibility-and-detection-dorothy",
+            "https://www.elastic.co/security-labs/monitoring-okta-threats-with-elastic-security",
+            "https://www.elastic.co/security-labs/starter-guide-to-understanding-okta"
         ],
         "related_integrations": [
             {
@@ -92,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 206
+        "version": 207
     },
-    "id": "4edd3e1a-3aa0-499b-8147-4d2ea43b1613_206",
+    "id": "4edd3e1a-3aa0-499b-8147-4d2ea43b1613_207",
     "type": "security-rule"
 }

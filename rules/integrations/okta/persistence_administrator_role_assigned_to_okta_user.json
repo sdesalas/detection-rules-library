@@ -20,7 +20,10 @@
             "https://help.okta.com/en/prod/Content/Topics/Security/administrators-admin-comparison.htm",
             "https://developer.okta.com/docs/reference/api/system-log/",
             "https://developer.okta.com/docs/reference/api/event-types/",
-            "https://www.elastic.co/security-labs/testing-okta-visibility-and-detection-dorothy"
+            "https://www.elastic.co/security-labs/testing-okta-visibility-and-detection-dorothy",
+            "https://www.elastic.co/security-labs/monitoring-okta-threats-with-elastic-security",
+            "https://www.elastic.co/security-labs/starter-guide-to-understanding-okta",
+            "https://www.elastic.co/security-labs/okta-and-lapsus-what-you-need-to-know"
         ],
         "related_integrations": [
             {
@@ -68,8 +71,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 205
+        "version": 206
     },
-    "id": "f06414a6-f2a4-466d-8eba-10f85e8abf71_205",
+    "id": "f06414a6-f2a4-466d-8eba-10f85e8abf71_206",
     "type": "security-rule"
 }

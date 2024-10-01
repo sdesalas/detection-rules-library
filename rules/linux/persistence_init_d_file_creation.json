@@ -17,7 +17,8 @@
         "references": [
             "https://www.intezer.com/blog/malware-analysis/hiddenwasp-malware-targeting-linux-systems/",
             "https://pberba.github.io/security/2022/02/06/linux-threat-hunting-for-persistence-initialization-scripts-and-shell-configuration/#8-boot-or-logon-initialization-scripts-rc-scripts",
-            "https://www.cyberciti.biz/faq/how-to-enable-rc-local-shell-script-on-systemd-while-booting-linux-system/"
+            "https://www.cyberciti.biz/faq/how-to-enable-rc-local-shell-script-on-systemd-while-booting-linux-system/",
+            "https://www.elastic.co/security-labs/sequel-on-persistence-mechanisms"
         ],
         "related_integrations": [
             {
@@ -94,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 11
+        "version": 12
     },
-    "id": "474fd20e-14cc-49c5-8160-d9ab4ba16c8b_11",
+    "id": "474fd20e-14cc-49c5-8160-d9ab4ba16c8b_12",
     "type": "security-rule"
 }

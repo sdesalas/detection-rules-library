@@ -12,6 +12,9 @@
         "license": "Elastic License v2",
         "name": "SUID/SGUID Enumeration Detected",
         "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and \nprocess.name == \"find\" and process.args : \"-perm\" and process.args : (\n  \"/6000\", \"-6000\", \"/4000\", \"-4000\", \"/2000\", \"-2000\", \"/u=s\", \"-u=s\", \"/g=s\", \"-g=s\", \"/u=s,g=s\", \"/g=s,u=s\"\n) and not (\n  user.Ext.real.id == \"0\" or group.Ext.real.id == \"0\" or process.args_count >= 12 or \n  (process.args : \"/usr/bin/pkexec\" and process.args : \"-xdev\" and process.args_count == 7)\n)\n",
+        "references": [
+            "https://www.elastic.co/security-labs/primer-on-persistence-mechanisms"
+        ],
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -122,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "5b06a27f-ad72-4499-91db-0c69667bffa5_5",
+    "id": "5b06a27f-ad72-4499-91db-0c69667bffa5_6",
     "type": "security-rule"
 }

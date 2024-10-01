@@ -15,7 +15,8 @@
         "name": "System Log File Deletion",
         "query": "file where host.os.type == \"linux\" and event.type == \"deletion\" and\n  file.path :\n    (\n    \"/var/run/utmp\",\n    \"/var/log/wtmp\",\n    \"/var/log/btmp\",\n    \"/var/log/lastlog\",\n    \"/var/log/faillog\",\n    \"/var/log/syslog\",\n    \"/var/log/messages\",\n    \"/var/log/secure\",\n    \"/var/log/auth.log\",\n    \"/var/log/boot.log\",\n    \"/var/log/kern.log\",\n    \"/var/log/dmesg\"\n    ) and\n    not process.name in (\"gzip\", \"executor\", \"dockerd\")\n",
         "references": [
-            "https://www.fireeye.com/blog/threat-research/2020/11/live-off-the-land-an-overview-of-unc1945.html"
+            "https://www.fireeye.com/blog/threat-research/2020/11/live-off-the-land-an-overview-of-unc1945.html",
+            "https://www.elastic.co/security-labs/detecting-log4j2-with-elastic-security"
         ],
         "related_integrations": [
             {
@@ -83,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "aa895aea-b69c-4411-b110-8d7599634b30_111",
+    "id": "aa895aea-b69c-4411-b110-8d7599634b30_112",
     "type": "security-rule"
 }

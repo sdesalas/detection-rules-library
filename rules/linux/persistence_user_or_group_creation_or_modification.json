@@ -13,6 +13,9 @@
         "license": "Elastic License v2",
         "name": "User or Group Creation/Modification",
         "query": "iam where host.os.type == \"linux\" and event.type in (\"creation\", \"change\") and auditd.result == \"success\" and \nevent.action in (\"changed-password\", \"added-user-account\", \"added-group-account-to\")\n",
+        "references": [
+            "https://www.elastic.co/security-labs/primer-on-persistence-mechanisms"
+        ],
         "related_integrations": [
             {
                 "package": "auditd_manager",
@@ -78,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "fcf733d5-7801-4eb0-92ac-8ffacf3658f2_2",
+    "id": "fcf733d5-7801-4eb0-92ac-8ffacf3658f2_3",
     "type": "security-rule"
 }

@@ -22,7 +22,8 @@
             "https://twitter.com/Moriarty_Meng/status/984380793383370752",
             "https://twitter.com/egre55/status/1087685529016193025",
             "https://www.sysadmins.lv/blog-en/certutil-tips-and-tricks-working-with-x509-file-format.aspx",
-            "https://docs.microsoft.com/en-us/archive/blogs/pki/basic-crl-checking-with-certutil"
+            "https://docs.microsoft.com/en-us/archive/blogs/pki/basic-crl-checking-with-certutil",
+            "https://www.elastic.co/security-labs/siestagraph-new-implant-uncovered-in-asean-member-foreign-ministry"
         ],
         "related_integrations": [
             {
@@ -99,8 +100,8 @@
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "fd70c98a-c410-42dc-a2e3-761c71848acf_109",
+    "id": "fd70c98a-c410-42dc-a2e3-761c71848acf_110",
     "type": "security-rule"
 }

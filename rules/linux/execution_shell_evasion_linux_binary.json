@@ -38,7 +38,8 @@
             "https://gtfobins.github.io/gtfobins/capsh/",
             "https://gtfobins.github.io/gtfobins/byebug/",
             "https://gtfobins.github.io/gtfobins/git/",
-            "https://gtfobins.github.io/gtfobins/ftp/"
+            "https://gtfobins.github.io/gtfobins/ftp/",
+            "https://www.elastic.co/security-labs/sequel-on-persistence-mechanisms"
         ],
         "related_integrations": [
             {
@@ -131,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "52376a86-ee86-4967-97ae-1a05f55816f0_112",
+    "id": "52376a86-ee86-4967-97ae-1a05f55816f0_113",
     "type": "security-rule"
 }

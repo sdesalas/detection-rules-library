@@ -17,7 +17,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Attempt to Establish VScode Remote Tunnel",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.args : \"tunnel\" and (process.args : \"--accept-server-license-terms\" or process.name : \"code*.exe\")\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.args : \"tunnel\" and (process.args : \"--accept-server-license-terms\" or process.name : \"code*.exe\") and \n  not (process.name == \"code-tunnel.exe\" and process.args == \"status\" and process.parent.name == \"Code.exe\")\n",
         "references": [
             "https://badoption.eu/blog/2023/01/31/code_c2.html",
             "https://code.visualstudio.com/docs/remote/tunnels"
@@ -60,6 +60,11 @@
                 "ecs": true,
                 "name": "process.name",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -96,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "0b96dfd8-5b8c-4485-9a1c-69ff7839786a_1",
+    "id": "0b96dfd8-5b8c-4485-9a1c-69ff7839786a_2",
     "type": "security-rule"
 }

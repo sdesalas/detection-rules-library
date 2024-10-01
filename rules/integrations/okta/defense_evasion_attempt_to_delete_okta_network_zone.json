@@ -20,7 +20,9 @@
             "https://help.okta.com/en/prod/Content/Topics/Security/network/network-zones.htm",
             "https://developer.okta.com/docs/reference/api/system-log/",
             "https://developer.okta.com/docs/reference/api/event-types/",
-            "https://www.elastic.co/security-labs/testing-okta-visibility-and-detection-dorothy"
+            "https://www.elastic.co/security-labs/testing-okta-visibility-and-detection-dorothy",
+            "https://www.elastic.co/security-labs/monitoring-okta-threats-with-elastic-security",
+            "https://www.elastic.co/security-labs/starter-guide-to-understanding-okta"
         ],
         "related_integrations": [
             {
@@ -76,8 +78,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 206
+        "version": 207
     },
-    "id": "c749e367-a069-4a73-b1f2-43a3798153ad_206",
+    "id": "c749e367-a069-4a73-b1f2-43a3798153ad_207",
     "type": "security-rule"
 }

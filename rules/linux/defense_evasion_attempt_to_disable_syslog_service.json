@@ -14,6 +14,9 @@
         "license": "Elastic License v2",
         "name": "Attempt to Disable Syslog Service",
         "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\") and\n ( (process.name == \"service\" and process.args == \"stop\") or\n   (process.name == \"chkconfig\" and process.args == \"off\") or\n   (process.name == \"systemctl\" and process.args in (\"disable\", \"stop\", \"kill\"))\n ) and process.args in (\"syslog\", \"rsyslog\", \"syslog-ng\")\n",
+        "references": [
+            "https://www.elastic.co/security-labs/detecting-log4j2-with-elastic-security"
+        ],
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -80,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "2f8a1226-5720-437d-9c20-e0029deb6194_109",
+    "id": "2f8a1226-5720-437d-9c20-e0029deb6194_110",
     "type": "security-rule"
 }

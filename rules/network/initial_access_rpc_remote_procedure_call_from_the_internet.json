@@ -9,7 +9,8 @@
             "packetbeat-*",
             "auditbeat-*",
             "filebeat-*",
-            "logs-network_traffic.*"
+            "logs-network_traffic.*",
+            "logs-panw.panos*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -22,6 +23,10 @@
             {
                 "package": "network_traffic",
                 "version": "^1.1.0"
+            },
+            {
+                "package": "panw",
+                "version": "^4.0.0"
             }
         ],
         "required_fields": [
@@ -62,7 +67,8 @@
         "tags": [
             "Tactic: Initial Access",
             "Domain: Endpoint",
-            "Use Case: Threat Detection"
+            "Use Case: Threat Detection",
+            "Data Source: PAN-OS"
         ],
         "threat": [
             {
@@ -83,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 103
+        "version": 104
     },
-    "id": "143cb236-0956-4f42-a706-814bcaa0cf5a_103",
+    "id": "143cb236-0956-4f42-a706-814bcaa0cf5a_104",
     "type": "security-rule"
 }

@@ -16,7 +16,8 @@
         "name": "Suspicious RDP ActiveX Client Loaded",
         "query": "any where host.os.type == \"windows\" and\n (event.category : (\"library\", \"driver\") or (event.category == \"process\" and event.action : \"Image loaded*\")) and\n (?dll.name : \"mstscax.dll\" or file.name : \"mstscax.dll\") and\n   /* depending on noise in your env add here extra paths  */\n  process.executable : (\n    \"C:\\\\Windows\\\\*\",\n    \"C:\\\\Users\\\\Public\\\\*\",\n    \"C:\\\\Users\\\\Default\\\\*\",\n    \"C:\\\\Intel\\\\*\",\n    \"C:\\\\PerfLogs\\\\*\",\n    \"C:\\\\ProgramData\\\\*\",\n    \"\\\\Device\\\\Mup\\\\*\",\n    \"\\\\\\\\*\"\n  ) and\n  /* add here FPs */\n  not process.executable : (\n    \"?:\\\\Windows\\\\System32\\\\mstsc.exe\",\n    \"?:\\\\Windows\\\\SysWOW64\\\\mstsc.exe\",\n    \"?:\\\\Windows\\\\System32\\\\vmconnect.exe\",\n    \"?:\\\\Windows\\\\System32\\\\WindowsSandboxClient.exe\",\n    \"?:\\\\Windows\\\\System32\\\\hvsirdpclient.exe\"\n  )\n",
         "references": [
-            "https://posts.specterops.io/revisiting-remote-desktop-lateral-movement-8fb905cb46c3"
+            "https://posts.specterops.io/revisiting-remote-desktop-lateral-movement-8fb905cb46c3",
+            "https://www.elastic.co/security-labs/hunting-for-lateral-movement-using-event-query-language"
         ],
         "related_integrations": [
             {
@@ -99,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "71c5cb27-eca5-4151-bb47-64bc3f883270_109",
+    "id": "71c5cb27-eca5-4151-bb47-64bc3f883270_110",
     "type": "security-rule"
 }

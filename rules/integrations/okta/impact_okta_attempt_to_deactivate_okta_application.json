@@ -20,7 +20,9 @@
             "https://help.okta.com/en/prod/Content/Topics/Apps/Apps_Apps.htm",
             "https://developer.okta.com/docs/reference/api/system-log/",
             "https://developer.okta.com/docs/reference/api/event-types/",
-            "https://www.elastic.co/security-labs/testing-okta-visibility-and-detection-dorothy"
+            "https://www.elastic.co/security-labs/testing-okta-visibility-and-detection-dorothy",
+            "https://www.elastic.co/security-labs/monitoring-okta-threats-with-elastic-security",
+            "https://www.elastic.co/security-labs/starter-guide-to-understanding-okta"
         ],
         "related_integrations": [
             {
@@ -68,8 +70,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 206
+        "version": 207
     },
-    "id": "edb91186-1c7e-4db8-b53e-bfa33a1a0a8a_206",
+    "id": "edb91186-1c7e-4db8-b53e-bfa33a1a0a8a_207",
     "type": "security-rule"
 }

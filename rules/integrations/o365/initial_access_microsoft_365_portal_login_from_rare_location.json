@@ -20,7 +20,7 @@
             "o365.audit.UserId",
             "source.geo.country_name"
         ],
-        "query": "event.dataset: \"o365.audit\"\n    and event.provider: \"AzureActiveDirectory\"\n    and event.action: \"UserLoggedIn\"\n    and event.outcome: \"success\"\n",
+        "query": "event.dataset: \"o365.audit\"\n    and event.provider: \"AzureActiveDirectory\"\n    and event.action: \"UserLoggedIn\"\n    and event.outcome: \"success\"\n    and not o365.audit.UserId: \"Not Available\"\n    and o365.audit.Target.Type: (\"0\" or \"2\" or \"3\" or \"5\" or \"6\" or \"10\")\n",
         "references": [
             "https://www.huntress.com/blog/time-travelers-busted-how-to-detect-impossible-travel-"
         ],
@@ -49,6 +49,16 @@
             {
                 "ecs": true,
                 "name": "event.provider",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "o365.audit.Target.Type",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "o365.audit.UserId",
                 "type": "keyword"
             }
         ],
@@ -87,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "32d3ad0e-6add-11ef-8c7b-f661ea17fbcc_1",
+    "id": "32d3ad0e-6add-11ef-8c7b-f661ea17fbcc_2",
     "type": "security-rule"
 }

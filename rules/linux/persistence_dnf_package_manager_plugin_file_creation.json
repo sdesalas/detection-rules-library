@@ -13,7 +13,8 @@
         "name": "DNF Package Manager Plugin File Creation",
         "query": "file where host.os.type == \"linux\" and event.action in (\"rename\", \"creation\") and\nfile.path : (\"/usr/lib/python*/site-packages/dnf-plugins/*\", \"/etc/dnf/plugins/*\") and not (\n  process.executable in (\n    \"/bin/dockerd\", \"/usr/bin/dockerd\", \"/usr/sbin/dockerd\", \"/bin/microdnf\", \"/usr/bin/microdnf\", \"/bin/rpm\",\n    \"/usr/bin/rpm\", \"/bin/snapd\", \"/usr/bin/snapd\", \"/bin/yum\", \"/usr/bin/yum\", \"/bin/dnf\", \"/usr/bin/dnf\",\n    \"/bin/podman\", \"/usr/bin/podman\", \"/bin/dnf-automatic\", \"/usr/bin/dnf-automatic\", \"/sbin/apk\", \"/usr/sbin/apk\",\n    \"/usr/local/sbin/apk\", \"/bin/podman\", \"/usr/bin/podman\", \"/usr/bin/puppet\", \"/bin/puppet\",\n    \"/opt/puppetlabs/puppet/bin/puppet\", \"/usr/bin/chef-client\", \"/bin/chef-client\", \"/bin/autossl_check\",\n    \"/usr/bin/autossl_check\", \"/proc/self/exe\", \"/dev/fd/*\", \"/usr/lib/snapd/snapd\", \"/usr/local/bin/dockerd\",\n    \"/usr/libexec/netplan/generate\"\n  ) or\n  file.extension in (\"swp\", \"swpx\", \"swx\") or\n  process.executable : (\n    \"/nix/store/*\", \"/var/lib/dpkg/*\", \"/tmp/vmis.*\", \"/snap/*\", \"/dev/fd/*\", \"/usr/lib/*\", \"/usr/libexec/*\",\n    \"/etc/kernel/*\"\n  ) or\n  process.executable == null or\n  (process.name == \"sed\" and file.name : \"sed*\") or\n  (process.name == \"perl\" and file.name : \"e2scrub_all.tmp*\") \n)\n",
         "references": [
-            "https://pwnshift.github.io/2020/10/01/persistence.html"
+            "https://pwnshift.github.io/2020/10/01/persistence.html",
+            "https://www.elastic.co/security-labs/sequel-on-persistence-mechanisms"
         ],
         "related_integrations": [
             {
@@ -80,6 +81,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1543",
+                        "name": "Create or Modify System Process",
+                        "reference": "https://attack.mitre.org/techniques/T1543/"
+                    },
+                    {
                         "id": "T1546",
                         "name": "Event Triggered Execution",
                         "reference": "https://attack.mitre.org/techniques/T1546/",
@@ -90,11 +96,6 @@
                                 "reference": "https://attack.mitre.org/techniques/T1546/016/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1543",
-                        "name": "Create or Modify System Process",
-                        "reference": "https://attack.mitre.org/techniques/T1543/"
                     },
                     {
                         "id": "T1574",
@@ -115,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "3fe4e20c-a600-4a86-9d98-3ecb1ef23550_2",
+    "id": "3fe4e20c-a600-4a86-9d98-3ecb1ef23550_3",
     "type": "security-rule"
 }

@@ -13,6 +13,9 @@
         "license": "Elastic License v2",
         "name": "SSH Key Generated via ssh-keygen",
         "query": "file where host.os.type == \"linux\" and event.action in (\"creation\", \"file_create_event\") and\nprocess.executable == \"/usr/bin/ssh-keygen\" and file.path : (\"/home/*/.ssh/*\", \"/root/.ssh/*\", \"/etc/ssh/*\") and\nnot file.name : \"known_hosts.*\"\n",
+        "references": [
+            "https://www.elastic.co/security-labs/primer-on-persistence-mechanisms"
+        ],
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -118,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "7df3cb8b-5c0c-4228-b772-bb6cd619053c_2",
+    "id": "7df3cb8b-5c0c-4228-b772-bb6cd619053c_3",
     "type": "security-rule"
 }

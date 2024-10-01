@@ -3,7 +3,7 @@
         "author": [
             "Elastic"
         ],
-        "description": "Detects file creation events in the plugin directories for the Yum package manager.  In Linux, Yum (Yellowdog Updater, Modified) is a command-line utility used for handling packages on (by default) Fedora-based systems, providing functions for installing, updating, upgrading, and removing software along with managing package repositories. Attackers can backdoor Yum to gain persistence by injecting malicious code into plugins that Yum runs, thereby ensuring continued unauthorized access or control each time Yum is used for package management.",
+        "description": "Detects file creation events in the plugin directories for the Yum package manager. In Linux, Yum (Yellowdog Updater, Modified) is a command-line utility used for handling packages on (by default) Fedora-based systems, providing functions for installing, updating, upgrading, and removing software along with managing package repositories. Attackers can backdoor Yum to gain persistence by injecting malicious code into plugins that Yum runs, thereby ensuring continued unauthorized access or control each time Yum is used for package management.",
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.file*"
@@ -13,7 +13,8 @@
         "name": "Yum Package Manager Plugin File Creation",
         "query": "file where host.os.type == \"linux\" and event.action in (\"rename\", \"creation\") and\nfile.path : (\"/usr/lib/yum-plugins/*\", \"/etc/yum/pluginconf.d/*\") and not (\n  process.executable in (\n    \"/bin/dockerd\", \"/usr/bin/dockerd\", \"/usr/sbin/dockerd\", \"/bin/microdnf\", \"/usr/bin/microdnf\", \"/bin/rpm\",\n    \"/usr/bin/rpm\", \"/bin/snapd\", \"/usr/bin/snapd\", \"/bin/yum\", \"/usr/bin/yum\", \"/bin/dnf\", \"/usr/bin/dnf\",\n    \"/bin/podman\", \"/usr/bin/podman\", \"/bin/dnf-automatic\", \"/usr/bin/dnf-automatic\", \"/sbin/apk\", \"/usr/sbin/apk\",\n    \"/usr/local/sbin/apk\", \"/bin/podman\", \"/usr/bin/podman\", \"/usr/bin/puppet\", \"/bin/puppet\",\n    \"/opt/puppetlabs/puppet/bin/puppet\", \"/usr/bin/chef-client\", \"/bin/chef-client\", \"/bin/autossl_check\",\n    \"/usr/bin/autossl_check\", \"/proc/self/exe\", \"/dev/fd/*\", \"/usr/lib/snapd/snapd\", \"/usr/local/bin/dockerd\",\n    \"/usr/libexec/netplan/generate\"\n  ) or\n  process.name == \"yumBackend.py\" or\n  file.extension in (\"swp\", \"swpx\", \"swx\") or\n  process.executable : (\n    \"/nix/store/*\", \"/var/lib/dpkg/*\", \"/tmp/vmis.*\", \"/snap/*\", \"/dev/fd/*\", \"/usr/lib/*\", \"/usr/libexec/*\",\n    \"/etc/kernel/*\"\n  ) or\n  process.executable == null or\n  (process.name == \"sed\" and file.name : \"sed*\") or\n  (process.name == \"perl\" and file.name : \"e2scrub_all.tmp*\") \n)\n",
         "references": [
-            "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/local/yum_package_manager_persistence.rb"
+            "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/local/yum_package_manager_persistence.rb",
+            "https://www.elastic.co/security-labs/sequel-on-persistence-mechanisms"
         ],
         "related_integrations": [
             {
@@ -80,6 +81,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1543",
+                        "name": "Create or Modify System Process",
+                        "reference": "https://attack.mitre.org/techniques/T1543/"
+                    },
+                    {
                         "id": "T1546",
                         "name": "Event Triggered Execution",
                         "reference": "https://attack.mitre.org/techniques/T1546/",
@@ -90,11 +96,6 @@
                                 "reference": "https://attack.mitre.org/techniques/T1546/016/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1543",
-                        "name": "Create or Modify System Process",
-                        "reference": "https://attack.mitre.org/techniques/T1543/"
                     },
                     {
                         "id": "T1574",
@@ -115,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "0b15bcad-aff1-4250-a5be-5d1b7eb56d07_2",
+    "id": "0b15bcad-aff1-4250-a5be-5d1b7eb56d07_3",
     "type": "security-rule"
 }

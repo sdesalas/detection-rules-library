@@ -19,7 +19,9 @@
             "https://blog.cloudflare.com/cloudflare-investigation-of-the-january-2022-okta-compromise/",
             "https://www.elastic.co/security-labs/testing-okta-visibility-and-detection-dorothy",
             "https://sec.okta.com/articles/2023/08/cross-tenant-impersonation-prevention-and-detection",
-            "https://unit42.paloaltonetworks.com/muddled-libra/"
+            "https://unit42.paloaltonetworks.com/muddled-libra/",
+            "https://www.elastic.co/security-labs/monitoring-okta-threats-with-elastic-security",
+            "https://www.elastic.co/security-labs/starter-guide-to-understanding-okta"
         ],
         "related_integrations": [
             {
@@ -79,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "29b53942-7cd4-11ee-b70e-f661ea17fbcd_1",
+    "id": "29b53942-7cd4-11ee-b70e-f661ea17fbcd_2",
     "type": "security-rule"
 }

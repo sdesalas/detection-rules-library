@@ -16,7 +16,9 @@
             "https://developer.okta.com/docs/reference/api/event-types/",
             "https://www.elastic.co/security-labs/testing-okta-visibility-and-detection-dorothy",
             "https://sec.okta.com/articles/2023/08/cross-tenant-impersonation-prevention-and-detection",
-            "https://www.rezonate.io/blog/okta-logs-decoded-unveiling-identity-threats-through-threat-hunting/"
+            "https://www.rezonate.io/blog/okta-logs-decoded-unveiling-identity-threats-through-threat-hunting/",
+            "https://www.elastic.co/security-labs/monitoring-okta-threats-with-elastic-security",
+            "https://www.elastic.co/security-labs/starter-guide-to-understanding-okta"
         ],
         "risk_score": 47,
         "rule_id": "2e56e1bc-867a-11ee-b13e-f661ea17fbcd",
@@ -53,8 +55,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 101
+        "version": 102
     },
-    "id": "2e56e1bc-867a-11ee-b13e-f661ea17fbcd_101",
+    "id": "2e56e1bc-867a-11ee-b13e-f661ea17fbcd_102",
     "type": "security-rule"
 }

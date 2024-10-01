@@ -12,7 +12,7 @@
         "language": "esql",
         "license": "Elastic License v2",
         "name": "AWS Bedrock Guardrails Detected Multiple Violations by a Single User Over a Session",
-        "query": "from logs-aws_bedrock.invocation-*\n| where gen_ai.compliance.violation_detected\n| stats violations = count(*) by user.id, gen_ai.model.id, cloud.account.id\n| where violations > 1\n| sort violations desc\n",
+        "query": "from logs-aws_bedrock.invocation-*\n| where gen_ai.compliance.violation_detected\n| stats violations = count(*) by user.id, gen_ai.request.model.id, cloud.account.id\n| where violations > 1\n| sort violations desc\n",
         "references": [
             "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-components.html",
             "https://atlas.mitre.org/techniques/AML.T0051",
@@ -34,8 +34,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "0cd2f3e6-41da-40e6-b28b-466f688f00a6_1",
+    "id": "0cd2f3e6-41da-40e6-b28b-466f688f00a6_2",
     "type": "security-rule"
 }

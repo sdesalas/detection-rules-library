@@ -17,7 +17,9 @@
             "https://developer.okta.com/docs/reference/api/system-log/",
             "https://developer.okta.com/docs/reference/api/event-types/",
             "https://help.okta.com/en-us/Content/Topics/Security/threat-insight/configure-threatinsight-system-log.html",
-            "https://www.elastic.co/security-labs/testing-okta-visibility-and-detection-dorothy"
+            "https://www.elastic.co/security-labs/testing-okta-visibility-and-detection-dorothy",
+            "https://www.elastic.co/security-labs/monitoring-okta-threats-with-elastic-security",
+            "https://www.elastic.co/security-labs/starter-guide-to-understanding-okta"
         ],
         "related_integrations": [
             {
@@ -73,8 +75,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 205
+        "version": 206
     },
-    "id": "6885d2ae-e008-4762-b98a-e8e1cd3a81e9_205",
+    "id": "6885d2ae-e008-4762-b98a-e8e1cd3a81e9_206",
     "type": "security-rule"
 }

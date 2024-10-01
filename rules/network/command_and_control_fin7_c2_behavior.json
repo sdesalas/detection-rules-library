@@ -12,7 +12,8 @@
             "packetbeat-*",
             "auditbeat-*",
             "filebeat-*",
-            "logs-network_traffic.*"
+            "logs-network_traffic.*",
+            "logs-panw.panos*"
         ],
         "language": "lucene",
         "license": "Elastic License v2",
@@ -29,7 +30,8 @@
         "tags": [
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
-            "Domain: Endpoint"
+            "Domain: Endpoint",
+            "Data Source: PAN-OS"
         ],
         "threat": [
             {
@@ -62,8 +64,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "4a4e23cf-78a2-449c-bac3-701924c269d3_105",
+    "id": "4a4e23cf-78a2-449c-bac3-701924c269d3_106",
     "type": "security-rule"
 }

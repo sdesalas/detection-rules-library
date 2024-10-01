@@ -15,7 +15,8 @@
         "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and\nprocess.name == \"grep\" and process.args : \"plugins*\" and process.args : (\n  \"/etc/yum.conf\", \"/usr/lib/yum-plugins/*\", \"/etc/yum/pluginconf.d/*\",\n  \"/usr/lib/python*/site-packages/dnf-plugins/*\", \"/etc/dnf/plugins/*\", \"/etc/dnf/dnf.conf\"\n)\n",
         "references": [
             "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/local/yum_package_manager_persistence.rb",
-            "https://pwnshift.github.io/2020/10/01/persistence.html"
+            "https://pwnshift.github.io/2020/10/01/persistence.html",
+            "https://www.elastic.co/security-labs/sequel-on-persistence-mechanisms"
         ],
         "related_integrations": [
             {
@@ -81,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "78390eb5-c838-4c1d-8240-69dd7397cfb7_1",
+    "id": "78390eb5-c838-4c1d-8240-69dd7397cfb7_2",
     "type": "security-rule"
 }

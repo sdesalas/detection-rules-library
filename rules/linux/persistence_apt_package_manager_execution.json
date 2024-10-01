@@ -12,6 +12,9 @@
         "license": "Elastic License v2",
         "name": "Suspicious APT Package Manager Execution",
         "query": "sequence by host.id with maxspan=5s\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\n   process.parent.name == \"apt\" and process.args == \"-c\" and process.name in (\n     \"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\"\n   )\n  ] by process.entity_id\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and process.name : (\n     \"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\", \"python*\", \"php*\",\n     \"perl\", \"ruby\", \"lua*\", \"openssl\", \"nc\", \"netcat\", \"ncat\", \"telnet\", \"awk\"\n   )\n  ] by process.parent.entity_id\n",
+        "references": [
+            "https://www.elastic.co/security-labs/sequel-on-persistence-mechanisms"
+        ],
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -88,6 +91,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1543",
+                        "name": "Create or Modify System Process",
+                        "reference": "https://attack.mitre.org/techniques/T1543/"
+                    },
+                    {
                         "id": "T1546",
                         "name": "Event Triggered Execution",
                         "reference": "https://attack.mitre.org/techniques/T1546/",
@@ -98,11 +106,6 @@
                                 "reference": "https://attack.mitre.org/techniques/T1546/016/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1543",
-                        "name": "Create or Modify System Process",
-                        "reference": "https://attack.mitre.org/techniques/T1543/"
                     },
                     {
                         "id": "T1574",
@@ -144,8 +147,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "ad959eeb-2b7b-4722-ba08-a45f6622f005_3",
+    "id": "ad959eeb-2b7b-4722-ba08-a45f6622f005_4",
     "type": "security-rule"
 }

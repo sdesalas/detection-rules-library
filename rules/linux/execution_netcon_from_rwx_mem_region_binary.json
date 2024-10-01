@@ -15,7 +15,8 @@
         "name": "Network Connection from Binary with RWX Memory Region",
         "query": "sample by host.id, process.pid, process.name\n  /* auditd.data.a2 == \"7\" translates to RWX memory region protection (PROT_READ | PROT_WRITE | PROT_EXEC) */\n  [process where host.os.type == \"linux\" and auditd.data.syscall == \"mprotect\" and auditd.data.a2 == \"7\"]\n  [network where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"connection_attempted\" and\n   not cidrmatch(destination.ip, \"127.0.0.0/8\", \"169.254.0.0/16\", \"224.0.0.0/4\", \"::1\")]\n",
         "references": [
-            "https://man7.org/linux/man-pages/man2/mprotect.2.html"
+            "https://man7.org/linux/man-pages/man2/mprotect.2.html",
+            "https://www.elastic.co/security-labs/linux-detection-engineering-with-auditd"
         ],
         "related_integrations": [
             {
@@ -127,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "32300431-c2d5-432d-8ec8-0e03f9924756_1",
+    "id": "32300431-c2d5-432d-8ec8-0e03f9924756_2",
     "type": "security-rule"
 }

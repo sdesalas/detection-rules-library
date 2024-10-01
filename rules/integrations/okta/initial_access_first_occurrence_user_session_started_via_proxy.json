@@ -23,7 +23,9 @@
             "https://developer.okta.com/docs/reference/api/event-types/",
             "https://developer.okta.com/docs/reference/api/system-log/#issuer-object",
             "https://www.elastic.co/security-labs/testing-okta-visibility-and-detection-dorothy",
-            "https://sec.okta.com/articles/2023/08/cross-tenant-impersonation-prevention-and-detection"
+            "https://sec.okta.com/articles/2023/08/cross-tenant-impersonation-prevention-and-detection",
+            "https://www.elastic.co/security-labs/monitoring-okta-threats-with-elastic-security",
+            "https://www.elastic.co/security-labs/starter-guide-to-understanding-okta"
         ],
         "related_integrations": [
             {
@@ -81,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "6f1bb4b2-7dc8-11ee-92b2-f661ea17fbcd_1",
+    "id": "6f1bb4b2-7dc8-11ee-92b2-f661ea17fbcd_2",
     "type": "security-rule"
 }

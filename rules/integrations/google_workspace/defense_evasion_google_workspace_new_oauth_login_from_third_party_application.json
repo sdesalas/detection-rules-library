@@ -24,6 +24,7 @@
         "query": "event.dataset: \"google_workspace.token\" and event.action: \"authorize\" and\ngoogle_workspace.token.scope.data: *Login and google_workspace.token.client.id: *apps.googleusercontent.com\n",
         "references": [
             "https://www.elastic.co/security-labs/google-workspace-attack-surface-part-one",
+            "https://www.elastic.co/security-labs/google-workspace-attack-surface-part-two",
             "https://developers.google.com/apps-script/guides/bound",
             "https://developers.google.com/identity/protocols/oauth2"
         ],
@@ -113,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "21bafdf0-cf17-11ed-bd57-f661ea17fbcc_4",
+    "id": "21bafdf0-cf17-11ed-bd57-f661ea17fbcc_5",
     "type": "security-rule"
 }

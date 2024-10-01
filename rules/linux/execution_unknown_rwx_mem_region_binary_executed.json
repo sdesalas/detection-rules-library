@@ -18,7 +18,8 @@
         ],
         "query": "event.category:process and host.os.type:linux and auditd.data.syscall:mprotect and auditd.data.a2:7 and not (\n  process.executable:(\n    \"/usr/share/kibana/node/bin/node\" or \"/usr/share/elasticsearch/jdk/bin/java\" or \"/usr/sbin/apache2\"\n  ) or\n  process.name:httpd\n)\n",
         "references": [
-            "https://man7.org/linux/man-pages/man2/mprotect.2.html"
+            "https://man7.org/linux/man-pages/man2/mprotect.2.html",
+            "https://www.elastic.co/security-labs/linux-detection-engineering-with-auditd"
         ],
         "related_integrations": [
             {
@@ -95,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "23bcd283-2bc0-4db2-81d4-273fc051e5c0_2",
+    "id": "23bcd283-2bc0-4db2-81d4-273fc051e5c0_3",
     "type": "security-rule"
 }
