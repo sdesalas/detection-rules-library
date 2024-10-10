@@ -12,7 +12,7 @@
         "language": "esql",
         "license": "Elastic License v2",
         "name": "AWS Bedrock Detected Multiple Validation Exception Errors by a Single User",
-        "query": "from logs-aws_bedrock.invocation-*\n// truncate the timestamp to a 1-minute window\n| eval target_time_window = DATE_TRUNC(1 minutes, @timestamp)\n| where gen_ai.response.error_code == \"ValidationException\"\n// count the number of users causing validation errors within a 1 minute window\n| stats total_denials = count(*) by target_time_window, user.id, cloud.account.id\n| where total_denials > 3\n",
+        "query": "from logs-aws_bedrock.invocation-*\n// truncate the timestamp to a 1-minute window\n| eval target_time_window = DATE_TRUNC(1 minutes, @timestamp)\n| where gen_ai.response.error_code == \"ValidationException\"\n| keep user.id, gen_ai.request.model.id, cloud.account.id, gen_ai.response.error_code, target_time_window\n// count the number of users causing validation errors within a 1 minute window\n| stats total_denials = count(*) by target_time_window, user.id, cloud.account.id\n| where total_denials > 3\n",
         "references": [
             "https://atlas.mitre.org/techniques/AML.T0015",
             "https://atlas.mitre.org/techniques/AML.T0034",
@@ -35,8 +35,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "725a048a-88c5-4fc7-8677-a44fc0031822_1",
+    "id": "725a048a-88c5-4fc7-8677-a44fc0031822_2",
     "type": "security-rule"
 }

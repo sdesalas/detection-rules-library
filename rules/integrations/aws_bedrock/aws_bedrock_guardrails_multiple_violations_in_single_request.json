@@ -12,7 +12,7 @@
         "language": "esql",
         "license": "Elastic License v2",
         "name": "AWS Bedrock Guardrails Detected Multiple Policy Violations Within a Single Blocked Request",
-        "query": "from logs-aws_bedrock.invocation-*\n| where gen_ai.policy.action == \"BLOCKED\"\n| eval policy_violations = mv_count(gen_ai.policy.name)\n| where policy_violations > 1\n| stats total_unique_request_violations = count(*) by policy_violations, user.id, gen_ai.request.model.id, cloud.account.id\n| sort total_unique_request_violations desc\n",
+        "query": "from logs-aws_bedrock.invocation-*\n| where gen_ai.policy.action == \"BLOCKED\"\n| eval policy_violations = mv_count(gen_ai.policy.name)\n| where policy_violations > 1\n| keep gen_ai.policy.action, policy_violations, user.id, gen_ai.request.model.id, cloud.account.id, user.id\n| stats total_unique_request_violations = count(*) by policy_violations, user.id, gen_ai.request.model.id, cloud.account.id\n| sort total_unique_request_violations desc\n",
         "references": [
             "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-components.html",
             "https://atlas.mitre.org/techniques/AML.T0051",
@@ -34,8 +34,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "f4c2515a-18bb-47ce-a768-1dc4e7b0fe6c_1",
+    "id": "f4c2515a-18bb-47ce-a768-1dc4e7b0fe6c_2",
     "type": "security-rule"
 }

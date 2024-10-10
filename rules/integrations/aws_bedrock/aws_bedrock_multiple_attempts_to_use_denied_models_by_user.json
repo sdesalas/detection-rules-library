@@ -12,7 +12,7 @@
         "language": "esql",
         "license": "Elastic License v2",
         "name": "AWS Bedrock Detected Multiple Attempts to use Denied Models by a Single User",
-        "query": "from logs-aws_bedrock.invocation-*\n| where gen_ai.response.error_code == \"AccessDeniedException\"\n| stats total_denials = count(*) by user.id, gen_ai.request.model.id, cloud.account.id\n| where total_denials > 3\n| sort total_denials desc\n",
+        "query": "from logs-aws_bedrock.invocation-*\n| where gen_ai.response.error_code == \"AccessDeniedException\"\n| keep user.id, gen_ai.request.model.id, cloud.account.id, gen_ai.response.error_code\n| stats total_denials = count(*) by user.id, gen_ai.request.model.id, cloud.account.id\n| where total_denials > 3\n| sort total_denials desc\n",
         "references": [
             "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-components.html",
             "https://atlas.mitre.org/techniques/AML.T0015",
@@ -34,8 +34,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "17261da3-a6d0-463c-aac8-ea1718afcd20_1",
+    "id": "17261da3-a6d0-463c-aac8-ea1718afcd20_2",
     "type": "security-rule"
 }
