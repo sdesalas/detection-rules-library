@@ -8,9 +8,10 @@
         "index": [
             "logs-endpoint.events.process-*",
             "winlogbeat-*",
-            "logs-windows.*",
+            "logs-windows.forwarded*",
             "endgame-*",
-            "logs-system.security*"
+            "logs-system.security*",
+            "logs-m365_defender.event-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -24,11 +25,15 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             },
             {
                 "package": "system",
                 "version": "^1.6.4"
+            },
+            {
+                "package": "m365_defender",
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -70,7 +75,6 @@
         ],
         "risk_score": 21,
         "rule_id": "871ea072-1b71-4def-b016-6278b505138d",
-        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "low",
         "tags": [
             "Domain: Endpoint",
@@ -80,7 +84,8 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: System"
+            "Data Source: System",
+            "Data Source: Microsoft Defender for Endpoint"
         ],
         "threat": [
             {
@@ -130,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 113
+        "version": 214
     },
-    "id": "871ea072-1b71-4def-b016-6278b505138d_113",
+    "id": "871ea072-1b71-4def-b016-6278b505138d_214",
     "type": "security-rule"
 }

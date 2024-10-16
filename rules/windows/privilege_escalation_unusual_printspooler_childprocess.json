@@ -28,7 +28,7 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             },
             {
                 "package": "system",
@@ -109,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 209
     },
-    "id": "ee5300a7-7e31-4a72-a258-250abb8b3aa1_109",
+    "id": "ee5300a7-7e31-4a72-a258-250abb8b3aa1_209",
     "type": "security-rule"
 }

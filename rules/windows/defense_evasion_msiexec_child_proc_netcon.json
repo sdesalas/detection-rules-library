@@ -22,7 +22,7 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
@@ -113,8 +113,8 @@
             }
         ],
         "type": "eql",
-        "version": 101
+        "version": 201
     },
-    "id": "65432f4a-e716-4cc1-ab11-931c4966da2d_101",
+    "id": "65432f4a-e716-4cc1-ab11-931c4966da2d_201",
     "type": "security-rule"
 }

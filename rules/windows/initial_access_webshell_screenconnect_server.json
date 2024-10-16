@@ -8,9 +8,12 @@
         "index": [
             "logs-endpoint.events.process-*",
             "winlogbeat-*",
+            "logs-windows.forwarded*",
             "logs-windows.sysmon_operational-*",
+            "endgame-*",
             "logs-system.security*",
-            "endgame-*"
+            "logs-m365_defender.event-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -26,7 +29,19 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
+            },
+            {
+                "package": "system",
+                "version": "^1.6.4"
+            },
+            {
+                "package": "m365_defender",
+                "version": "^2.0.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -68,7 +83,9 @@
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
-            "Data Source: System"
+            "Data Source: System",
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -116,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 202
     },
-    "id": "3d00feab-e203-4acc-a463-c3e15b7e9a73_2",
+    "id": "3d00feab-e203-4acc-a463-c3e15b7e9a73_202",
     "type": "security-rule"
 }

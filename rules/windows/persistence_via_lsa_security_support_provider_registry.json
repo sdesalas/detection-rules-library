@@ -9,12 +9,14 @@
             "winlogbeat-*",
             "logs-endpoint.events.registry-*",
             "logs-windows.sysmon_operational-*",
-            "endgame-*"
+            "endgame-*",
+            "logs-m365_defender.event-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Installation of Security Support Provider",
-        "query": "registry where host.os.type == \"windows\" and event.type == \"change\" and\n   registry.path : (\n      \"HKLM\\\\SYSTEM\\\\*ControlSet*\\\\Control\\\\Lsa\\\\Security Packages*\",\n      \"HKLM\\\\SYSTEM\\\\*ControlSet*\\\\Control\\\\Lsa\\\\OSConfig\\\\Security Packages*\",\n      \"\\\\REGISTRY\\\\MACHINE\\\\SYSTEM\\\\*ControlSet*\\\\Control\\\\Lsa\\\\Security Packages*\",\n      \"\\\\REGISTRY\\\\MACHINE\\\\SYSTEM\\\\*ControlSet*\\\\Control\\\\Lsa\\\\OSConfig\\\\Security Packages*\"\n   ) and\n   not process.executable : (\"C:\\\\Windows\\\\System32\\\\msiexec.exe\", \"C:\\\\Windows\\\\SysWOW64\\\\msiexec.exe\")\n",
+        "query": "registry where host.os.type == \"windows\" and event.type == \"change\" and\n   registry.path : (\n      \"HKLM\\\\SYSTEM\\\\*ControlSet*\\\\Control\\\\Lsa\\\\Security Packages*\",\n      \"HKLM\\\\SYSTEM\\\\*ControlSet*\\\\Control\\\\Lsa\\\\OSConfig\\\\Security Packages*\",\n      \"\\\\REGISTRY\\\\MACHINE\\\\SYSTEM\\\\*ControlSet*\\\\Control\\\\Lsa\\\\Security Packages*\",\n      \"\\\\REGISTRY\\\\MACHINE\\\\SYSTEM\\\\*ControlSet*\\\\Control\\\\Lsa\\\\OSConfig\\\\Security Packages*\",\n      \"MACHINE\\\\SYSTEM\\\\*ControlSet*\\\\Control\\\\Lsa\\\\Security Packages*\",\n      \"MACHINE\\\\SYSTEM\\\\*ControlSet*\\\\Control\\\\Lsa\\\\OSConfig\\\\Security Packages*\"\n   ) and\n   not process.executable : (\"C:\\\\Windows\\\\System32\\\\msiexec.exe\", \"C:\\\\Windows\\\\SysWOW64\\\\msiexec.exe\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -22,7 +24,15 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
+            },
+            {
+                "package": "m365_defender",
+                "version": "^2.0.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -49,7 +59,6 @@
         ],
         "risk_score": 47,
         "rule_id": "e86da94d-e54b-4fb5-b96c-cecff87e8787",
-        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -59,7 +68,9 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -102,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 309
     },
-    "id": "e86da94d-e54b-4fb5-b96c-cecff87e8787_109",
+    "id": "e86da94d-e54b-4fb5-b96c-cecff87e8787_309",
     "type": "security-rule"
 }

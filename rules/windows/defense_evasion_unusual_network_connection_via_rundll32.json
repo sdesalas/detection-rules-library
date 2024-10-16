@@ -27,7 +27,7 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -127,8 +127,8 @@
             }
         ],
         "type": "eql",
-        "version": 109
+        "version": 209
     },
-    "id": "52aaab7b-b51c-441a-89ce-4387b3aea886_109",
+    "id": "52aaab7b-b51c-441a-89ce-4387b3aea886_209",
     "type": "security-rule"
 }

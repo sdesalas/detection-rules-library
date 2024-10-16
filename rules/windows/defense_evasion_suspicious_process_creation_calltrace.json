@@ -17,7 +17,7 @@
         "related_integrations": [
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -106,8 +106,8 @@
             }
         ],
         "type": "eql",
-        "version": 208
+        "version": 308
     },
-    "id": "3ed032b2-45d8-4406-bc79-7ad1eabb2c72_208",
+    "id": "3ed032b2-45d8-4406-bc79-7ad1eabb2c72_308",
     "type": "security-rule"
 }

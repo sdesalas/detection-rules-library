@@ -6,7 +6,12 @@
         "description": "This rule identifies a high number (20) of file creation event by the System virtual process from the same host and with same file name containing keywords similar to ransomware note files and all within a short time period.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.file-*"
+            "logs-endpoint.events.file-*",
+            "winlogbeat-*",
+            "logs-windows.sysmon_operational-*",
+            "endgame-*",
+            "logs-m365_defender.event-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -20,6 +25,18 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "windows",
+                "version": "^2.0.0"
+            },
+            {
+                "package": "m365_defender",
+                "version": "^2.0.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -58,7 +75,11 @@
             "Use Case: Threat Detection",
             "Tactic: Impact",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Elastic Endgame",
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Sysmon",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -108,8 +129,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 2
+        "version": 5
     },
-    "id": "1397e1b9-0c90-4d24-8d7b-80598eb9bc9a_2",
+    "id": "1397e1b9-0c90-4d24-8d7b-80598eb9bc9a_5",
     "type": "security-rule"
 }

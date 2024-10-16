@@ -6,7 +6,10 @@
         "description": "Identifies the modification of the Microsoft Office \"Office Test\" Registry key, a registry location that can be used to specify a DLL which will be executed every time an MS Office application is started. Attackers can abuse this to gain persistence on a compromised host.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.registry-*"
+            "logs-endpoint.events.registry-*",
+            "logs-m365_defender.event-*",
+            "endgame-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -19,6 +22,14 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "m365_defender",
+                "version": "^2.0.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -47,7 +58,10 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Tactic: Defense Evasion",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Elastic Endgame",
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -90,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 103
     },
-    "id": "14dab405-5dd9-450c-8106-72951af2391f_3",
+    "id": "14dab405-5dd9-450c-8106-72951af2391f_103",
     "type": "security-rule"
 }

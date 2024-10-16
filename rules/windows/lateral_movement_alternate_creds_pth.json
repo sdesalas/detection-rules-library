@@ -24,7 +24,7 @@
         "related_integrations": [
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             },
             {
                 "package": "system",
@@ -104,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "daafdf96-e7b1-4f14-b494-27e0d24b11f6_4",
+    "id": "daafdf96-e7b1-4f14-b494-27e0d24b11f6_5",
     "type": "security-rule"
 }

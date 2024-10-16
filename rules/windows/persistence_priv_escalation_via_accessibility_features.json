@@ -9,7 +9,8 @@
             "winlogbeat-*",
             "logs-endpoint.events.process-*",
             "logs-windows.sysmon_operational-*",
-            "endgame-*"
+            "endgame-*",
+            "logs-m365_defender.event-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -26,7 +27,11 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
+            },
+            {
+                "package": "m365_defender",
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -63,7 +68,6 @@
         ],
         "risk_score": 73,
         "rule_id": "7405ddf1-6c8e-41ce-818f-48bea6bcaed8",
-        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "high",
         "tags": [
             "Domain: Endpoint",
@@ -73,7 +77,8 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Data Source: Microsoft Defender for Endpoint"
         ],
         "threat": [
             {
@@ -123,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 212
     },
-    "id": "7405ddf1-6c8e-41ce-818f-48bea6bcaed8_111",
+    "id": "7405ddf1-6c8e-41ce-818f-48bea6bcaed8_212",
     "type": "security-rule"
 }

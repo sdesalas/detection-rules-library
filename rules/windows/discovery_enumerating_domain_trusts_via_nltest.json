@@ -11,9 +11,11 @@
         "index": [
             "winlogbeat-*",
             "logs-endpoint.events.process-*",
-            "logs-windows.*",
+            "logs-windows.forwarded*",
+            "logs-windows.sysmon_operational-*",
             "endgame-*",
-            "logs-system.security*"
+            "logs-system.security*",
+            "logs-m365_defender.event-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -31,11 +33,15 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             },
             {
                 "package": "system",
                 "version": "^1.6.4"
+            },
+            {
+                "package": "m365_defender",
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -81,7 +87,9 @@
             "Data Source: Elastic Endgame",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: System"
+            "Data Source: System",
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Sysmon"
         ],
         "threat": [
             {
@@ -107,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 112
+        "version": 213
     },
-    "id": "84da2554-e12a-11ec-b896-f661ea17fbcd_112",
+    "id": "84da2554-e12a-11ec-b896-f661ea17fbcd_213",
     "type": "security-rule"
 }

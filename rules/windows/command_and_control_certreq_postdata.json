@@ -8,9 +8,12 @@
         "index": [
             "winlogbeat-*",
             "logs-endpoint.events.process-*",
-            "logs-windows.*",
+            "logs-windows.forwarded*",
+            "logs-windows.sysmon_operational-*",
             "endgame-*",
-            "logs-system.security*"
+            "logs-system.security*",
+            "logs-m365_defender.event-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -27,11 +30,19 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             },
             {
                 "package": "system",
                 "version": "^1.6.4"
+            },
+            {
+                "package": "m365_defender",
+                "version": "^2.0.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -73,7 +84,10 @@
             "Tactic: Exfiltration",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: System"
+            "Data Source: System",
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Sysmon",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -124,8 +138,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 209
     },
-    "id": "79f0a1f7-ed6b-471c-8eb1-23abd6470b1c_9",
+    "id": "79f0a1f7-ed6b-471c-8eb1-23abd6470b1c_209",
     "type": "security-rule"
 }

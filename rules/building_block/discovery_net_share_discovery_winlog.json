@@ -19,7 +19,7 @@
         "related_integrations": [
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             },
             {
                 "package": "system",
@@ -98,8 +98,8 @@
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "b2318c71-5959-469a-a3ce-3a0768e63b9c_4",
+    "id": "b2318c71-5959-469a-a3ce-3a0768e63b9c_5",
     "type": "security-rule"
 }

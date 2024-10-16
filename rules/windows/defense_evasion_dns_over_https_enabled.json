@@ -9,12 +9,14 @@
             "winlogbeat-*",
             "logs-endpoint.events.registry-*",
             "logs-windows.sysmon_operational-*",
-            "endgame-*"
+            "endgame-*",
+            "logs-m365_defender.event-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "DNS-over-HTTPS Enabled via Registry",
-        "query": "registry where host.os.type == \"windows\" and event.type == \"change\" and\n  (registry.path : \"*\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Edge\\\\BuiltInDnsClientEnabled\" and\n  registry.data.strings : \"1\") or\n  (registry.path : \"*\\\\SOFTWARE\\\\Google\\\\Chrome\\\\DnsOverHttpsMode\" and\n  registry.data.strings : \"secure\") or\n  (registry.path : \"*\\\\SOFTWARE\\\\Policies\\\\Mozilla\\\\Firefox\\\\DNSOverHTTPS\" and\n  registry.data.strings : \"1\")\n",
+        "query": "registry where host.os.type == \"windows\" and event.type == \"change\" and\n  (registry.path : \"*\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Edge\\\\BuiltInDnsClientEnabled\" and\n  registry.data.strings : (\"1\", \"0x00000001\")) or\n  (registry.path : \"*\\\\SOFTWARE\\\\Google\\\\Chrome\\\\DnsOverHttpsMode\" and\n  registry.data.strings : \"secure\") or\n  (registry.path : \"*\\\\SOFTWARE\\\\Policies\\\\Mozilla\\\\Firefox\\\\DNSOverHTTPS\" and\n  registry.data.strings : (\"1\", \"0x00000001\"))\n",
         "references": [
             "https://www.tenforums.com/tutorials/151318-how-enable-disable-dns-over-https-doh-microsoft-edge.html",
             "https://chromeenterprise.google/policies/?policy=DnsOverHttpsMode"
@@ -26,7 +28,15 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
+            },
+            {
+                "package": "m365_defender",
+                "version": "^2.0.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -53,7 +63,6 @@
         ],
         "risk_score": 21,
         "rule_id": "a22a09c2-2162-4df0-a356-9aacbeb56a04",
-        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "low",
         "tags": [
             "Domain: Endpoint",
@@ -62,7 +71,9 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -88,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 311
     },
-    "id": "a22a09c2-2162-4df0-a356-9aacbeb56a04_111",
+    "id": "a22a09c2-2162-4df0-a356-9aacbeb56a04_311",
     "type": "security-rule"
 }

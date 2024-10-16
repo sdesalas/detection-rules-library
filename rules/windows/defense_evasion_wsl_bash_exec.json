@@ -8,14 +8,15 @@
         "index": [
             "winlogbeat-*",
             "logs-endpoint.events.process-*",
-            "logs-windows.*",
+            "logs-windows.sysmon_operational-*",
             "endgame-*",
-            "logs-system.security*"
+            "logs-m365_defender.event-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Suspicious Execution via Windows Subsystem for Linux",
-        "query": "process where host.os.type == \"windows\" and event.type : \"start\" and\n  (\n    (\n      (process.executable : \"?:\\\\Windows\\\\System32\\\\bash.exe\" or ?process.pe.original_file_name == \"Bash.exe\") and \n      not process.command_line : (\"bash\", \"bash.exe\")\n    ) or \n    process.executable : \"?:\\\\Users\\\\*\\\\AppData\\\\Local\\\\Packages\\\\*\\\\rootfs\\\\usr\\\\bin\\\\bash\" or \n    (\n      process.parent.name : \"wsl.exe\" and ?process.parent.command_line : \"bash*\" and not process.name : \"wslhost.exe\"\n    ) or \n    (\n      process.name : \"wsl.exe\" and process.args : (\n        \"curl\", \"/etc/shadow\", \"/etc/passwd\", \"cat\", \"--system\", \"root\", \"-e\", \"--exec\", \"bash\", \"/mnt/c/*\"\n      ) and not process.args : (\"wsl-bootstrap\", \"docker-desktop-data\", \"*.vscode-server*\")\n    )\n  ) and \n    not process.parent.executable : (\"?:\\\\Program Files\\\\Docker\\\\*.exe\", \"?:\\\\Program Files (x86)\\\\Docker\\\\*.exe\")\n",
+        "query": "process where host.os.type == \"windows\" and event.type : \"start\" and\n  (\n    (\n      (process.executable : \"?:\\\\Windows\\\\System32\\\\bash.exe\" or ?process.pe.original_file_name == \"Bash.exe\") and \n      not process.command_line : (\"bash\", \"bash.exe\")\n    ) or \n    process.executable : \"?:\\\\Users\\\\*\\\\AppData\\\\Local\\\\Packages\\\\*\\\\rootfs\\\\usr\\\\bin\\\\bash\" or \n    (\n      process.parent.name : \"wsl.exe\" and process.parent.command_line : \"bash*\" and not process.name : \"wslhost.exe\"\n    ) or \n    (\n      process.name : \"wsl.exe\" and process.args : (\n        \"curl\", \"/etc/shadow\", \"/etc/passwd\", \"cat\", \"--system\", \"root\", \"-e\", \"--exec\", \"bash\", \"/mnt/c/*\"\n      ) and not process.args : (\"wsl-bootstrap\", \"docker-desktop-data\", \"*.vscode-server*\")\n    )\n  ) and \n    not process.parent.executable : (\"?:\\\\Program Files\\\\Docker\\\\*.exe\", \"?:\\\\Program Files (x86)\\\\Docker\\\\*.exe\")\n",
         "references": [
             "https://blog.f-secure.com/hunting-for-windows-subsystem-for-linux/",
             "https://lolbas-project.github.io/lolbas/OtherMSBinaries/Wsl/",
@@ -28,11 +29,15 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             },
             {
-                "package": "system",
-                "version": "^1.6.4"
+                "package": "m365_defender",
+                "version": "^2.0.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -98,7 +103,9 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: System"
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Sysmon",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -141,8 +148,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 207
     },
-    "id": "3e0eeb75-16e8-4f2f-9826-62461ca128b7_7",
+    "id": "3e0eeb75-16e8-4f2f-9826-62461ca128b7_207",
     "type": "security-rule"
 }

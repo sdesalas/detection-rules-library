@@ -25,7 +25,7 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             },
             {
                 "package": "m365_defender",
@@ -104,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 112
+        "version": 212
     },
-    "id": "06dceabf-adca-48af-ac79-ffdf4c3b1e9a_112",
+    "id": "06dceabf-adca-48af-ac79-ffdf4c3b1e9a_212",
     "type": "security-rule"
 }

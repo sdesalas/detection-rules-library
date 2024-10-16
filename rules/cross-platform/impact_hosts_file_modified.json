@@ -26,7 +26,7 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -103,8 +103,8 @@
         "timeline_title": "Comprehensive File Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "9c260313-c811-4ec8-ab89-8f6530e0246c_108",
+    "id": "9c260313-c811-4ec8-ab89-8f6530e0246c_109",
     "type": "security-rule"
 }

@@ -26,7 +26,7 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             }
         ],
         "risk_score": 21,
@@ -59,8 +59,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 5
+        "version": 6
     },
-    "id": "56004189-4e69-4a39-b4a9-195329d226e9_5",
+    "id": "56004189-4e69-4a39-b4a9-195329d226e9_6",
     "type": "security-rule"
 }

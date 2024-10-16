@@ -9,12 +9,14 @@
             "logs-endpoint.events.registry-*",
             "endgame-*",
             "logs-windows.sysmon_operational-*",
-            "winlogbeat-*"
+            "winlogbeat-*",
+            "logs-m365_defender.event-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Privilege Escalation via Windir Environment Variable",
-        "query": "registry where host.os.type == \"windows\" and event.type == \"change\" and\nregistry.value : (\"windir\", \"systemroot\") and\nregistry.path : (\n    \"HKEY_USERS\\\\*\\\\Environment\\\\windir\",\n    \"HKEY_USERS\\\\*\\\\Environment\\\\systemroot\",\n    \"HKU\\\\*\\\\Environment\\\\windir\",\n    \"HKU\\\\*\\\\Environment\\\\systemroot\",\n    \"\\\\REGISTRY\\\\USER\\\\*\\\\Environment\\\\windir\",\n    \"\\\\REGISTRY\\\\USER\\\\*\\\\Environment\\\\systemroot\"\n    ) and\n not registry.data.strings : (\"C:\\\\windows\", \"%SystemRoot%\")\n",
+        "query": "registry where host.os.type == \"windows\" and event.type == \"change\" and\nregistry.value : (\"windir\", \"systemroot\") and\nregistry.path : (\n    \"HKEY_USERS\\\\*\\\\Environment\\\\windir\",\n    \"HKEY_USERS\\\\*\\\\Environment\\\\systemroot\",\n    \"HKU\\\\*\\\\Environment\\\\windir\",\n    \"HKU\\\\*\\\\Environment\\\\systemroot\",\n    \"HKCU\\\\*\\\\Environment\\\\windir\",\n    \"HKCU\\\\*\\\\Environment\\\\systemroot\",\n    \"\\\\REGISTRY\\\\USER\\\\*\\\\Environment\\\\windir\",\n    \"\\\\REGISTRY\\\\USER\\\\*\\\\Environment\\\\systemroot\",\n    \"USER\\\\*\\\\Environment\\\\windir\",\n    \"USER\\\\*\\\\Environment\\\\systemroot\"\n    ) and\n not registry.data.strings : (\"C:\\\\windows\", \"%SystemRoot%\")\n",
         "references": [
             "https://www.tiraniddo.dev/2017/05/exploiting-environment-variables-in.html"
         ],
@@ -22,6 +24,18 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "windows",
+                "version": "^2.0.0"
+            },
+            {
+                "package": "m365_defender",
+                "version": "^2.0.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -61,7 +75,9 @@
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -89,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 308
     },
-    "id": "d563aaba-2e72-462b-8658-3e5ea22db3a6_108",
+    "id": "d563aaba-2e72-462b-8658-3e5ea22db3a6_308",
     "type": "security-rule"
 }

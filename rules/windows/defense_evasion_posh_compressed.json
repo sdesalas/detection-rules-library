@@ -35,7 +35,7 @@
         "related_integrations": [
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -118,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 212
+        "version": 213
     },
-    "id": "81fe9dc6-a2d7-4192-a2d8-eed98afc766a_212",
+    "id": "81fe9dc6-a2d7-4192-a2d8-eed98afc766a_213",
     "type": "security-rule"
 }

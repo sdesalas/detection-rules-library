@@ -30,7 +30,7 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
@@ -124,8 +124,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 203
     },
-    "id": "5188c68e-d3de-4e96-994d-9e242269446f_103",
+    "id": "5188c68e-d3de-4e96-994d-9e242269446f_203",
     "type": "security-rule"
 }

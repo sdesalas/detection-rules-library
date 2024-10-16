@@ -33,7 +33,7 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             },
             {
                 "package": "system",
@@ -118,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 212
+        "version": 213
     },
-    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae6_212",
+    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae6_213",
     "type": "security-rule"
 }

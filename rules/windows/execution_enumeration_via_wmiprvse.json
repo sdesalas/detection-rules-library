@@ -8,14 +8,17 @@
         "index": [
             "winlogbeat-*",
             "logs-endpoint.events.process-*",
-            "logs-windows.*",
+            "logs-windows.forwarded*",
+            "logs-windows.sysmon_operational-*",
             "endgame-*",
-            "logs-system.security*"
+            "logs-system.security*",
+            "logs-m365_defender.event-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Enumeration Command Spawned via WMIPrvSE",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and process.command_line != null and \n  process.name:\n  (\n    \"arp.exe\",\n    \"dsquery.exe\",\n    \"dsget.exe\",\n    \"gpresult.exe\",\n    \"hostname.exe\",\n    \"ipconfig.exe\",\n    \"nbtstat.exe\",\n    \"net.exe\",\n    \"net1.exe\",\n    \"netsh.exe\",\n    \"netstat.exe\",\n    \"nltest.exe\",\n    \"ping.exe\",\n    \"qprocess.exe\",\n    \"quser.exe\",\n    \"qwinsta.exe\",\n    \"reg.exe\",\n    \"sc.exe\",\n    \"systeminfo.exe\",\n    \"tasklist.exe\",\n    \"tracert.exe\",\n    \"whoami.exe\"\n  ) and\n  process.parent.name:\"wmiprvse.exe\" and \n  not (\n    process.name : \"sc.exe\" and process.args : \"RemoteRegistry\" and process.args : \"start=\" and \n    process.args : (\"demand\", \"disabled\")\n  ) and\n  not process.args : \"tenable_mw_scan\"\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and process.command_line != null and \n  process.name:\n  (\n    \"arp.exe\", \"dsquery.exe\", \"dsget.exe\", \"gpresult.exe\", \"hostname.exe\", \"ipconfig.exe\", \"nbtstat.exe\",\n    \"net.exe\", \"net1.exe\", \"netsh.exe\", \"netstat.exe\", \"nltest.exe\", \"ping.exe\", \"qprocess.exe\", \"quser.exe\",\n    \"qwinsta.exe\", \"reg.exe\", \"sc.exe\", \"systeminfo.exe\", \"tasklist.exe\", \"tracert.exe\", \"whoami.exe\"\n  ) and\n  process.parent.name:\"wmiprvse.exe\" and \n  not (\n    process.name : \"sc.exe\" and process.args : \"RemoteRegistry\" and process.args : \"start=\" and \n    process.args : (\"demand\", \"disabled\")\n  ) and\n  not process.args : \"tenable_mw_scan\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -23,11 +26,19 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
             },
             {
                 "package": "system",
                 "version": "^1.6.4"
+            },
+            {
+                "package": "m365_defender",
+                "version": "^2.0.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -64,7 +75,6 @@
         ],
         "risk_score": 21,
         "rule_id": "770e0c4d-b998-41e5-a62e-c7901fd7f470",
-        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "low",
         "tags": [
             "Domain: Endpoint",
@@ -73,7 +83,10 @@
             "Tactic: Execution",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: System"
+            "Data Source: System",
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Sysmon",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -136,8 +149,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 113
+        "version": 313
     },
-    "id": "770e0c4d-b998-41e5-a62e-c7901fd7f470_113",
+    "id": "770e0c4d-b998-41e5-a62e-c7901fd7f470_313",
     "type": "security-rule"
 }

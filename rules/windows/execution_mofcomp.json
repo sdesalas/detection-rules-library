@@ -6,7 +6,10 @@
         "description": "Managed Object Format (MOF) files can be compiled locally or remotely through mofcomp.exe. Attackers may leverage MOF files to build their own namespaces and classes into the Windows Management Instrumentation (WMI) repository, or establish persistence using WMI Event Subscription.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*"
+            "logs-endpoint.events.process-*",
+            "logs-m365_defender.event-*",
+            "endgame-*",
+            "logs-system.security-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -16,6 +19,14 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "m365_defender",
+                "version": "^2.0.0"
+            },
+            {
+                "package": "system",
+                "version": "^1.6.4"
             }
         ],
         "required_fields": [
@@ -58,7 +69,10 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Elastic Endgame",
+            "Data Source: System"
         ],
         "threat": [
             {
@@ -101,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "210d4430-b371-470e-b879-80b7182aa75e_2",
+    "id": "210d4430-b371-470e-b879-80b7182aa75e_3",
     "type": "security-rule"
 }

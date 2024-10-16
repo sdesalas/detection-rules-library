@@ -9,12 +9,14 @@
             "winlogbeat-*",
             "logs-endpoint.events.file-*",
             "logs-windows.sysmon_operational-*",
-            "endgame-*"
+            "endgame-*",
+            "logs-m365_defender.event-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Creation or Modification of a new GPO Scheduled Task or Service",
-        "query": "file where host.os.type == \"windows\" and event.type != \"deletion\" and\n  file.path : (\"?:\\\\Windows\\\\SYSVOL\\\\domain\\\\Policies\\\\*\\\\MACHINE\\\\Preferences\\\\ScheduledTasks\\\\ScheduledTasks.xml\",\n               \"?:\\\\Windows\\\\SYSVOL\\\\domain\\\\Policies\\\\*\\\\MACHINE\\\\Preferences\\\\Services\\\\Services.xml\") and\n  not process.name : \"dfsrs.exe\"\n",
+        "query": "file where host.os.type == \"windows\" and event.type != \"deletion\" and event.action != \"open\" and \n file.name : (\"ScheduledTasks.xml\", \"Services.xml\") and \n  file.path : (\n    \"?:\\\\Windows\\\\SYSVOL\\\\domain\\\\Policies\\\\*\\\\MACHINE\\\\Preferences\\\\ScheduledTasks\\\\ScheduledTasks.xml\",\n    \"?:\\\\Windows\\\\SYSVOL\\\\domain\\\\Policies\\\\*\\\\MACHINE\\\\Preferences\\\\Services\\\\Services.xml\"\n  ) and\n  not process.executable : \"C:\\\\Windows\\\\System32\\\\dfsrs.exe\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -22,13 +24,31 @@
             },
             {
                 "package": "windows",
-                "version": "^1.5.0"
+                "version": "^2.0.0"
+            },
+            {
+                "package": "m365_defender",
+                "version": "^2.0.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
             {
                 "ecs": true,
+                "name": "event.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "event.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "file.name",
                 "type": "keyword"
             },
             {
@@ -43,13 +63,12 @@
             },
             {
                 "ecs": true,
-                "name": "process.name",
+                "name": "process.executable",
                 "type": "keyword"
             }
         ],
         "risk_score": 21,
         "rule_id": "c0429aa8-9974-42da-bfb6-53a0a515a145",
-        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "low",
         "tags": [
             "Domain: Endpoint",
@@ -59,7 +78,9 @@
             "Tactic: Persistence",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -109,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 310
     },
-    "id": "c0429aa8-9974-42da-bfb6-53a0a515a145_110",
+    "id": "c0429aa8-9974-42da-bfb6-53a0a515a145_310",
     "type": "security-rule"
 }
