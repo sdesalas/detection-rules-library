@@ -12,7 +12,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Openssl Client or Server Activity",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and\nprocess.name == \"openssl\" and (\n  (process.args == \"s_client\" and process.args : (\"-connect\", \"*:*\") and not process.args == \"-showcerts\") or\n  (process.args == \"s_server\" and process.args == \"-port\")\n)\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and\nprocess.name == \"openssl\" and (\n  (process.args == \"s_client\" and process.args : (\"-connect\", \"*:*\") and not process.args == \"-showcerts\") or\n  (process.args == \"s_server\" and process.args == \"-port\")\n) and\nnot process.parent.executable in (\"/pro/xymon/client/ext/awsXymonCheck.sh\", \"/opt/antidot-svc/nrpe/plugins/check_cert\")\n",
         "references": [
             "https://gtfobins.github.io/gtfobins/openssl/"
         ],
@@ -46,6 +46,11 @@
             {
                 "ecs": true,
                 "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.executable",
                 "type": "keyword"
             }
         ],
@@ -102,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "ad5a3757-c872-4719-8c72-12d3f08db655_1",
+    "id": "ad5a3757-c872-4719-8c72-12d3f08db655_2",
     "type": "security-rule"
 }

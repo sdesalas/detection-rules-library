@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Execution via XZBackdoor",
-        "query": "sequence by host.id, user.id with maxspan=1s\n [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and process.name == \"sshd\" and\n    process.args == \"-D\" and process.args == \"-R\"] by process.pid, process.entity_id\n [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and process.parent.name == \"sshd\" and \n  process.executable != null and \n  not process.executable in (\"/usr/sbin/sshd\", \"/usr/sbin/unix_chkpwd\", \"/usr/bin/google_authorized_keys\", \"/usr/bin/fipscheck\") and \n  process.command_line != \"sh -c /usr/bin/env -i PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin run-parts --lsbsysinit /etc/update-motd.d > /run/motd.dynamic.new\"] by process.parent.pid, process.parent.entity_id\n [process where host.os.type == \"linux\" and event.action == \"end\" and process.name == \"sshd\" and process.exit_code != 0] by process.pid, process.entity_id\n [network where host.os.type == \"linux\" and event.type == \"end\" and event.action == \"disconnect_received\" and process.name == \"sshd\"] by process.pid, process.entity_id\n",
+        "query": "sequence by host.id, user.id with maxspan=1s\n [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and process.name == \"sshd\" and\n    process.args == \"-D\" and process.args == \"-R\"] by process.pid, process.entity_id\n [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and process.parent.name == \"sshd\" and \n  process.executable != null and not (\n    process.executable in (\"/usr/sbin/sshd\", \"/usr/sbin/unix_chkpwd\", \"/usr/bin/google_authorized_keys\", \"/usr/bin/fipscheck\") or\n    process.args like (\"rsync*\", \"systemctl*\", \"/usr/sbin/unix_chkpwd\", \"/usr/bin/google_authorized_keys\", \"/usr/sbin/aad_certhandler*\") or\n    process.command_line like \"sh -c /usr/bin/env -i PATH=*\"\n  )] by process.parent.pid, process.parent.entity_id\n [process where host.os.type == \"linux\" and event.action == \"end\" and process.name == \"sshd\" and process.exit_code != 0] by process.pid, process.entity_id\n [network where host.os.type == \"linux\" and event.type == \"end\" and event.action == \"disconnect_received\" and process.name == \"sshd\"] by process.pid, process.entity_id\n",
         "references": [
             "https://github.com/amlweems/xzbot",
             "https://access.redhat.com/security/cve/CVE-2024-3094",
@@ -180,8 +180,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "7afc6cc9-8800-4c7f-be6b-b688d2dea248_3",
+    "id": "7afc6cc9-8800-4c7f-be6b-b688d2dea248_4",
     "type": "security-rule"
 }

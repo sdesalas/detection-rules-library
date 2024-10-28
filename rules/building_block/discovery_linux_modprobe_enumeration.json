@@ -16,10 +16,9 @@
         "license": "Elastic License v2",
         "name": "Suspicious Modprobe File Event",
         "new_terms_fields": [
-            "host.id",
             "process.executable"
         ],
-        "query": "host.os.type:linux and event.category:file and event.action:\"opened-file\" and\nfile.path : (\"/etc/modprobe.conf\" or \"/etc/modprobe.d\" or /etc/modprobe.d/*) and not process.name:(\n  cp or dpkg or dockerd or lynis or mkinitramfs or snapd or systemd-udevd or grep or borg or auditbeat or lspci or\n  aide or modprobe or python*\n)\n",
+        "query": "host.os.type:linux and event.category:file and event.action:\"opened-file\" and\nfile.path : (\"/etc/modprobe.conf\" or \"/etc/modprobe.d\" or /etc/modprobe.d/*) and not process.name:(\n  cp or dpkg or dockerd or lynis or mkinitramfs or snapd or systemd-udevd or borg or auditbeat or lspci or\n  aide or modprobe or python*\n)\n",
         "related_integrations": [
             {
                 "package": "auditd_manager",
@@ -83,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 107
+        "version": 108
     },
-    "id": "40ddbcc8-6561-44d9-afc8-eefdbfe0cccd_107",
+    "id": "40ddbcc8-6561-44d9-afc8-eefdbfe0cccd_108",
     "type": "security-rule"
 }

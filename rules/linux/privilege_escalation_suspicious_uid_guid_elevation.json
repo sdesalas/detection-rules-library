@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Privilege Escalation via CAP_SETUID/SETGID Capabilities",
-        "query": "sequence by host.id, process.entity_id with maxspan=1s\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and process.name != null and\n   (process.thread.capabilities.effective : \"CAP_SET?ID\" or process.thread.capabilities.permitted : \"CAP_SET?ID\") and \n   user.id != \"0\" and not (\n     process.parent.executable : (\"/tmp/newroot/*\", \"/opt/carbonblack*\") or\n     process.parent.executable in (\n       \"/opt/SolarWinds/Agent/bin/Plugins/JobEngine/SolarWinds.Agent.JobEngine.Plugin\", \"/usr/bin/vmware-toolbox-cmd\",\n       \"/usr/bin/dbus-daemon\", \"/usr/bin/update-notifier\", \"/usr/share/language-tools/language-options\"\n     ) or\n     process.executable : (\"/opt/dynatrace/*\", \"/tmp/newroot/*\") or\n     process.executable in (\n       \"/bin/fgrep\", \"/usr/bin/sudo\", \"/usr/bin/pkexec\", \"/usr/lib/cockpit/cockpit-session\", \"/usr/sbin/suexec\"\n     )\n   )]\n  [process where host.os.type == \"linux\" and event.action == \"uid_change\" and event.type == \"change\" and \n   (process.thread.capabilities.effective : \"CAP_SET?ID\" or process.thread.capabilities.permitted : \"CAP_SET?ID\")\n   and user.id == \"0\"]\n",
+        "query": "sequence by host.id, process.entity_id with maxspan=1s\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and process.name != null and\n   (process.thread.capabilities.effective : \"CAP_SET?ID\" or process.thread.capabilities.permitted : \"CAP_SET?ID\") and \n   user.id != \"0\" and not (\n     process.parent.executable : (\"/tmp/newroot/*\", \"/opt/carbonblack*\") or\n     process.parent.executable in (\n       \"/opt/SolarWinds/Agent/bin/Plugins/JobEngine/SolarWinds.Agent.JobEngine.Plugin\", \"/usr/bin/vmware-toolbox-cmd\",\n       \"/usr/bin/dbus-daemon\", \"/usr/bin/update-notifier\", \"/usr/share/language-tools/language-options\",\n       \"/opt/SolarWinds/Agent/*\", \"/usr/local/sbin/lynis.sh\"\n     ) or\n     process.executable : (\"/opt/dynatrace/*\", \"/tmp/newroot/*\", \"/opt/SolarWinds/Agent/*\") or\n     process.executable in (\n       \"/bin/fgrep\", \"/usr/bin/sudo\", \"/usr/bin/pkexec\", \"/usr/lib/cockpit/cockpit-session\", \"/usr/sbin/suexec\"\n     ) or\n     process.parent.name in (\"update-notifier\", \"language-options\", \"osqueryd\", \"saposcol\", \"dbus-daemon\", \"osqueryi\", \"sdbrun\") or\n     process.command_line like (\"sudo*BECOME-SUCCESS*\", \"/bin/sh*sapsysinfo.sh*\", \"sudo su\", \"sudo su -\") or\n     process.name == \"sudo\" or\n     process.parent.command_line like \"/usr/bin/python*ansible*\"\n   )]\n  [process where host.os.type == \"linux\" and event.action == \"uid_change\" and event.type == \"change\" and \n   (process.thread.capabilities.effective : \"CAP_SET?ID\" or process.thread.capabilities.permitted : \"CAP_SET?ID\")\n   and user.id == \"0\"]\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -41,6 +41,11 @@
             },
             {
                 "ecs": true,
+                "name": "process.command_line",
+                "type": "wildcard"
+            },
+            {
+                "ecs": true,
                 "name": "process.entity_id",
                 "type": "keyword"
             },
@@ -56,7 +61,17 @@
             },
             {
                 "ecs": true,
+                "name": "process.parent.command_line",
+                "type": "wildcard"
+            },
+            {
+                "ecs": true,
                 "name": "process.parent.executable",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
                 "type": "keyword"
             },
             {
@@ -116,8 +131,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "9b80cb26-9966-44b5-abbf-764fbdbc3586_3",
+    "id": "9b80cb26-9966-44b5-abbf-764fbdbc3586_4",
     "type": "security-rule"
 }

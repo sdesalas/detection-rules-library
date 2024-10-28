@@ -3,9 +3,8 @@
         "author": [
             "Elastic"
         ],
-        "building_block_type": "default",
         "description": "This rule monitors for the usage of the most common clipboard utilities on unix systems by an uncommon process group leader. Adversaries may collect data stored in the clipboard from users copying information within or between applications.",
-        "from": "now-119m",
+        "from": "now-9m",
         "history_window_start": "now-7d",
         "index": [
             "logs-endpoint.events.*",
@@ -13,15 +12,14 @@
             "auditbeat-*",
             "logs-auditd_manager.auditd-*"
         ],
-        "interval": "60m",
         "language": "kuery",
         "license": "Elastic License v2",
-        "name": "Potential Suspicious Clipboard Activity Detected",
+        "name": "Linux Clipboard Activity Detected",
         "new_terms_fields": [
             "host.id",
             "process.group_leader.executable"
         ],
-        "query": "event.category:process and host.os.type:\"linux\" and\nevent.type:\"start\" and event.action:(\"exec\" or \"exec_event\" or \"executed\" or \"process_started\") and\nprocess.name:(\"xclip\" or \"xsel\" or \"wl-clipboard\" or \"clipman\" or \"copyq\")\n",
+        "query": "event.category:process and host.os.type:\"linux\" and event.type:\"start\" and\nevent.action:(\"exec\" or \"exec_event\" or \"executed\" or \"process_started\") and\nprocess.name:(\"xclip\" or \"xsel\" or \"wl-clipboard\" or \"clipman\" or \"copyq\") and\nnot process.parent.name:(\"bwrap\" or \"micro\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -57,6 +55,11 @@
                 "ecs": true,
                 "name": "process.name",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
+                "type": "keyword"
             }
         ],
         "risk_score": 21,
@@ -67,7 +70,6 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Collection",
-            "Rule Type: BBR",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
             "Data Source: Auditd Manager"
@@ -91,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "884e87cc-c67b-4c90-a4ed-e1e24a940c82_4",
+    "id": "884e87cc-c67b-4c90-a4ed-e1e24a940c82_5",
     "type": "security-rule"
 }

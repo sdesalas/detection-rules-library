@@ -14,10 +14,9 @@
         "name": "Network Activity Detected via Kworker",
         "new_terms_fields": [
             "process.name",
-            "destination.ip",
-            "destination.port"
+            "host.id"
         ],
-        "query": "host.os.type:linux and event.category:network and event.action:(connection_attempted or connection_accepted) and \nprocess.name:kworker* and not destination.ip:(\n  10.0.0.0/8 or\n  127.0.0.0/8 or\n  169.254.0.0/16 or\n  172.16.0.0/12 or\n  192.168.0.0/16 or\n  224.0.0.0/4 or\n  \"::1\" or\n  \"FE80::/10\" or\n  \"FF00::/8\"\n) and not destination.port:2049\n",
+        "query": "host.os.type:linux and event.category:network and event.action:(connection_attempted or connection_accepted) and \nprocess.name:kworker* and not destination.ip:(\n  10.0.0.0/8 or\n  127.0.0.0/8 or\n  169.254.0.0/16 or\n  172.16.0.0/12 or\n  192.168.0.0/16 or\n  224.0.0.0/4 or\n  \"::1\" or\n  \"FE80::/10\" or\n  \"FF00::/8\"\n) and not destination.port:(\"2049\" or \"111\" or \"892\" or \"597\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -115,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "25d917c4-aa3c-4111-974c-286c0312ff95_5",
+    "id": "25d917c4-aa3c-4111-974c-286c0312ff95_6",
     "type": "security-rule"
 }

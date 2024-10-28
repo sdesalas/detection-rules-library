@@ -14,11 +14,9 @@
         "license": "Elastic License v2",
         "name": "Potential Shadow File Read via Command Line Utilities",
         "new_terms_fields": [
-            "process.command_line",
-            "host.id",
             "process.executable"
         ],
-        "query": "host.os.type : \"linux\" and event.category : \"process\" and event.action : (\"exec\" or \"exec_event\") and\n(process.args : \"/etc/shadow\" or (process.working_directory: \"/etc\" and process.args: \"shadow\")) and not \n(process.executable : (\"/bin/chown\" or \"/usr/bin/chown\") and process.args : \"root:shadow\") and not \n(process.executable : (\"/bin/chmod\" or \"/usr/bin/chmod\") and process.args : \"640\")\n",
+        "query": "host.os.type : \"linux\" and event.category : \"process\" and event.action : (\"exec\" or \"exec_event\") and\n(process.args : \"/etc/shadow\" or (process.working_directory: \"/etc\" and process.args: \"shadow\")) and not (\n  (process.executable : (\"/bin/chown\" or \"/usr/bin/chown\") and process.args : \"root:shadow\") or\n  (process.executable : (\"/bin/chmod\" or \"/usr/bin/chmod\") and process.args : \"640\") or\n  process.executable:(/vz/* or /var/lib/docker/* or /run/containerd/* or /tmp/.criu* or /tmp/newroot/*) or\n  process.parent.name:(gen_passwd_sets or scc_* or wazuh-modulesd)\n)\n",
         "references": [
             "https://www.cyberciti.biz/faq/unix-linux-password-cracking-john-the-ripper/"
         ],
@@ -52,6 +50,11 @@
             {
                 "ecs": true,
                 "name": "process.executable",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
                 "type": "keyword"
             },
             {
@@ -114,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 208
+        "version": 209
     },
-    "id": "9a3a3689-8ed1-4cdb-83fb-9506db54c61f_208",
+    "id": "9a3a3689-8ed1-4cdb-83fb-9506db54c61f_209",
     "type": "security-rule"
 }

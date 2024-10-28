@@ -17,11 +17,10 @@
         "license": "Elastic License v2",
         "name": "Enumeration of Kernel Modules",
         "new_terms_fields": [
-            "process.parent.command_line",
-            "process.command_line",
-            "host.id"
+            "process.executable",
+            "process.parent.executable"
         ],
-        "query": "event.category:process and host.os.type:linux and event.type:start and event.action:(exec or exec_event) and (\n (process.name:(lsmod or modinfo)) or \n (process.name:kmod and process.args:list) or \n (process.name:depmod and process.args:(--all or -a))\n) and not process.parent.name:(mkinitramfs or cryptroot or framebuffer or dracut or jem or thin-provisioning-tools\nor readykernel or lvm2 or vz-start or iscsi or mdadm or ovalprobes or bcache or plymouth or dkms or overlayroot or \nweak-modules or zfs)\n",
+        "query": "event.category:process and host.os.type:linux and event.type:start and event.action:(exec or exec_event) and (\n (process.name:(lsmod or modinfo)) or \n (process.name:kmod and process.args:list) or \n (process.name:depmod and process.args:(--all or -a))\n) and\nnot (\n  process.parent.name:(\n    mkinitramfs or cryptroot or framebuffer or dracut or jem or thin-provisioning-tools or readykernel or lvm2 or\n    vz-start or iscsi or mdadm or ovalprobes or bcache or plymouth or dkms or overlayroot or weak-modules or zfs or\n    systemd or whoopsie-upload-all or kdumpctl or apport-gtk or casper or rear or kernel-install\n  )\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -96,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 209
+        "version": 210
     },
-    "id": "2d8043ed-5bda-4caf-801c-c1feb7410504_209",
+    "id": "2d8043ed-5bda-4caf-801c-c1feb7410504_210",
     "type": "security-rule"
 }

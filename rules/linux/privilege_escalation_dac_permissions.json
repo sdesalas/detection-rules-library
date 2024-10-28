@@ -13,11 +13,9 @@
         "license": "Elastic License v2",
         "name": "Potential Privilege Escalation via Linux DAC permissions",
         "new_terms_fields": [
-            "host.id",
-            "process.command_line",
             "process.executable"
         ],
-        "query": "event.category:process and host.os.type:linux and event.type:start and event.action:exec and\n(process.thread.capabilities.permitted:CAP_DAC_* or process.thread.capabilities.effective: CAP_DAC_*) and\nprocess.command_line:(*sudoers* or *passwd* or *shadow* or */root/*) and not user.id:\"0\"\n",
+        "query": "event.category:process and host.os.type:linux and event.type:start and event.action:exec and\n(process.thread.capabilities.permitted:CAP_DAC_* or process.thread.capabilities.effective: CAP_DAC_*) and\nprocess.command_line:(*sudoers* or *passwd* or *shadow* or */root/*) and not (\n  user.id : \"0\" or\n  process.name : (\n    \"tar\" or \"getent\" or \"su\" or \"stat\" or \"dirname\" or \"chown\" or \"sudo\" or \"dpkg-split\" or \"dpkg-deb\" or \"dpkg\" or\n    \"podman\" or \"awk\" or \"passwd\" or \"dpkg-maintscript-helper\" or \"mutt_dotlock\" or \"nscd\" or \"logger\" or \"gpasswd\"\n  ) or\n  process.executable : /usr/lib/*/lxc/rootfs/* or\n  process.parent.name : (\n    \"dpkg\" or \"java\" or *postinst or \"dpkg-preconfigure\" or \"gnome-shell\"\n  )\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -49,6 +47,21 @@
                 "ecs": true,
                 "name": "process.command_line",
                 "type": "wildcard"
+            },
+            {
+                "ecs": true,
+                "name": "process.executable",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
+                "type": "keyword"
             },
             {
                 "ecs": true,
@@ -96,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "f7c70f2e-4616-439c-85ac-5b98415042fe_2",
+    "id": "f7c70f2e-4616-439c-85ac-5b98415042fe_3",
     "type": "security-rule"
 }

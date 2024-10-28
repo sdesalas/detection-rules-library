@@ -35,6 +35,14 @@
             {
                 "package": "m365_defender",
                 "version": "^2.0.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
+            },
+            {
+                "package": "system",
+                "version": "^1.6.4"
             }
         ],
         "required_fields": [
@@ -110,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 310
+        "version": 311
     },
-    "id": "1a6075b0-7479-450e-8fe7-b8b8438ac570_310",
+    "id": "1a6075b0-7479-450e-8fe7-b8b8438ac570_311",
     "type": "security-rule"
 }

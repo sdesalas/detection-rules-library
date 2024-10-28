@@ -17,6 +17,10 @@
             {
                 "package": "windows",
                 "version": "^2.0.0"
+            },
+            {
+                "package": "system",
+                "version": "^1.6.4"
             }
         ],
         "required_fields": [
@@ -73,8 +77,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 207
     },
-    "id": "56557cde-d923-4b88-adee-c61b3f3b5dc3_106",
+    "id": "56557cde-d923-4b88-adee-c61b3f3b5dc3_207",
     "type": "security-rule"
 }

@@ -28,6 +28,10 @@
             {
                 "package": "windows",
                 "version": "^2.0.0"
+            },
+            {
+                "package": "system",
+                "version": "^1.6.4"
             }
         ],
         "required_fields": [
@@ -100,8 +104,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 111
+        "version": 212
     },
-    "id": "035889c4-2686-4583-a7df-67f89c292f2c_111",
+    "id": "035889c4-2686-4583-a7df-67f89c292f2c_212",
     "type": "security-rule"
 }

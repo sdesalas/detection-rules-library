@@ -15,7 +15,7 @@
         "license": "Elastic License v2",
         "max_signals": 33,
         "name": "Creation of Hidden Files and Directories via CommandLine",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\nprocess.working_directory in (\"/tmp\", \"/var/tmp\", \"/dev/shm\") and\nprocess.args regex~ \"\"\"\\.[a-z0-9_\\-][a-z0-9_\\-\\.]{1,254}\"\"\" and\nnot process.name in (\"ls\", \"find\", \"grep\", \"git\", \"jq\", \"basename\")\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\nprocess.working_directory in (\"/tmp\", \"/var/tmp\", \"/dev/shm\") and\nprocess.args regex~ \"\"\"\\.[a-z0-9_\\-][a-z0-9_\\-\\.]{1,254}\"\"\" and\nnot process.name in (\n  \"ls\", \"find\", \"grep\", \"git\", \"jq\", \"basename\", \"check_snmp\", \"snmpget\", \"snmpwalk\", \"cc1plus\", \"snap\",\n  \"command-not-found\"\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -100,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "b9666521-4742-49ce-9ddc-b8e84c35acae_110",
+    "id": "b9666521-4742-49ce-9ddc-b8e84c35acae_111",
     "type": "security-rule"
 }

@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential curl CVE-2023-38545 Exploitation",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and process.name == \"curl\" \nand (\n  process.args : (\"--socks5-hostname\", \"--proxy\", \"--preproxy\", \"socks5*\") or \n  process.env_vars: (\"http_proxy=socks5h://*\", \"HTTPS_PROXY=socks5h://*\", \"ALL_PROXY=socks5h://*\")\n) and length(process.command_line) > 255 and \nnot process.parent.name in (\"cf-agent\", \"agent-run\", \"agent-check\", \"rudder\", \"agent-inventory\", \"cf-execd\") and\nnot process.args == \"/opt/rudder/bin/curl\"\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and process.name == \"curl\" \nand (\n  process.args like (\"--socks5-hostname\", \"--proxy\", \"--preproxy\", \"socks5*\") or \n  process.env_vars like (\"http_proxy=socks5h://*\", \"HTTPS_PROXY=socks5h://*\", \"ALL_PROXY=socks5h://*\")\n) and length(process.command_line) > 255 and not (\n  process.parent.name in (\"cf-agent\", \"agent-run\", \"agent-check\", \"rudder\", \"agent-inventory\", \"cf-execd\") or\n  process.args like \"/opt/rudder/*\" or\n  process.parent.executable like (\"/vz/root/*\", \"/var/rudder/*\")\n)\n",
         "references": [
             "https://curl.se/docs/CVE-2023-38545.html",
             "https://daniel.haxx.se/blog/2023/10/11/curl-8-4-0/",
@@ -61,6 +61,11 @@
             },
             {
                 "ecs": true,
+                "name": "process.parent.executable",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "process.parent.name",
                 "type": "keyword"
             }
@@ -96,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "f41296b4-9975-44d6-9486-514c6f635b2d_5",
+    "id": "f41296b4-9975-44d6-9486-514c6f635b2d_6",
     "type": "security-rule"
 }

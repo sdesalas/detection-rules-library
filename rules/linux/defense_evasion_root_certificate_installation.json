@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Root Certificate Installation",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\nprocess.name in (\"update-ca-trust\", \"update-ca-certificates\") and not (\n  process.parent.name : (\n    \"ca-certificates.postinst\", \"ca-certificates-*.trigger\", \"pacman\", \"pamac-daemon\", \"autofirma.postinst\"\n  ) or\n  process.parent.args : \"/var/tmp/rpm*\" or\n  (process.parent.name in (\"sh\", \"bash\", \"zsh\") and process.args == \"-e\")\n)\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\nprocess.name in (\"update-ca-trust\", \"update-ca-certificates\") and not (\n  process.parent.name like (\n    \"ca-certificates.postinst\", \"ca-certificates-*.trigger\", \"pacman\", \"pamac-daemon\", \"autofirma.postinst\",\n    \"ipa-client-install\", \"su\", \"platform-python\", \"python*\", \"kesl\", \"execd\"\n  ) or\n  process.parent.args like \"/var/tmp/rpm*\" or\n  (process.parent.name in (\"sh\", \"bash\", \"zsh\") and process.args == \"-e\")\n)\n",
         "references": [
             "https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1553.004/T1553.004.md"
         ],
@@ -95,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "6ded0996-7d4b-40f2-bf4a-6913e7591795_1",
+    "id": "6ded0996-7d4b-40f2-bf4a-6913e7591795_2",
     "type": "security-rule"
 }

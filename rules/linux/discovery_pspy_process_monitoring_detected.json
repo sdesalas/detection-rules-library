@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Pspy Process Monitoring Detected",
-        "query": "sequence by process.pid, host.id with maxspan=5s\n  [file where host.os.type == \"linux\" and auditd.data.syscall == \"openat\" and file.path == \"/proc\" and\n   auditd.data.a0 : (\"ffffffffffffff9c\", \"ffffff9c\") and auditd.data.a2 : (\"80000\", \"88000\") ] with runs=10\n",
+        "query": "sequence by process.pid, host.id with maxspan=5s\n  [file where host.os.type == \"linux\" and auditd.data.syscall == \"openat\" and file.path == \"/proc\" and\n   auditd.data.a0 : (\"ffffffffffffff9c\", \"ffffff9c\") and auditd.data.a2 : (\"80000\", \"88000\") and\n   not process.name == \"agentbeat\"\n  ] with runs=10\n",
         "references": [
             "https://github.com/DominicBreuker/pspy"
         ],
@@ -54,6 +54,11 @@
             },
             {
                 "ecs": true,
+                "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "process.pid",
                 "type": "long"
             }
@@ -92,8 +97,8 @@
             }
         ],
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "bdb04043-f0e3-4efa-bdee-7d9d13fa9edc_7",
+    "id": "bdb04043-f0e3-4efa-bdee-7d9d13fa9edc_8",
     "type": "security-rule"
 }

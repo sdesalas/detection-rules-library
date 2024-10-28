@@ -38,6 +38,10 @@
             {
                 "package": "m365_defender",
                 "version": "^2.0.0"
+            },
+            {
+                "package": "system",
+                "version": "^1.6.4"
             }
         ],
         "required_fields": [
@@ -101,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "0b96dfd8-5b8c-4485-9a1c-69ff7839786a_102",
+    "id": "0b96dfd8-5b8c-4485-9a1c-69ff7839786a_103",
     "type": "security-rule"
 }

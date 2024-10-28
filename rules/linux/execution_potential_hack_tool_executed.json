@@ -14,7 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Linux Hack Tool Launched",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\")\n and process.name in (\n  // exploitation frameworks\n  \"crackmapexec\", \"msfconsole\", \"msfvenom\", \"sliver-client\", \"sliver-server\", \"havoc\",\n  // network scanners (nmap left out to reduce noise)\n  \"zenmap\", \"nuclei\", \"netdiscover\", \"legion\",\n  // web enumeration\n  \"gobuster\", \"dirbuster\", \"dirb\", \"wfuzz\", \"ffuf\", \"whatweb\", \"eyewitness\",\n  // web vulnerability scanning\n  \"wpscan\", \"joomscan\", \"droopescan\", \"nikto\", \n  // exploitation tools\n  \"sqlmap\", \"commix\", \"yersinia\",\n  // cracking and brute forcing\n  \"john\", \"hashcat\", \"hydra\", \"ncrack\", \"cewl\", \"fcrackzip\", \"rainbowcrack\",\n  // host and network\n  \"linenum.sh\", \"linpeas.sh\", \"pspy32\", \"pspy32s\", \"pspy64\", \"pspy64s\", \"binwalk\", \"evil-winrm\"\n)\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\nevent.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\") and\nprocess.name in~ (\n  // exploitation frameworks\n  \"crackmapexec\", \"msfconsole\", \"msfvenom\", \"sliver-client\", \"sliver-server\", \"havoc\",\n  // network scanners (nmap left out to reduce noise)\n  \"zenmap\", \"nuclei\", \"netdiscover\", \"legion\",\n  // web enumeration\n  \"gobuster\", \"dirbuster\", \"dirb\", \"wfuzz\", \"ffuf\", \"whatweb\", \"eyewitness\",\n  // web vulnerability scanning\n  \"wpscan\", \"joomscan\", \"droopescan\", \"nikto\", \n  // exploitation tools\n  \"sqlmap\", \"commix\", \"yersinia\",\n  // cracking and brute forcing\n  \"john\", \"hashcat\", \"hydra\", \"ncrack\", \"cewl\", \"fcrackzip\", \"rainbowcrack\",\n  // host and network\n  \"linenum.sh\", \"linpeas.sh\", \"pspy32\", \"pspy32s\", \"pspy64\", \"pspy64s\", \"binwalk\", \"evil-winrm\",\n  \"linux-exploit-suggester-2.pl\", \"linux-exploit-suggester.sh\", \"panix.sh\"\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -73,8 +73,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "1df1152b-610a-4f48-9d7a-504f6ee5d9da_3",
+    "id": "1df1152b-610a-4f48-9d7a-504f6ee5d9da_4",
     "type": "security-rule"
 }

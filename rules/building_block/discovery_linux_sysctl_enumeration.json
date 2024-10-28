@@ -16,10 +16,9 @@
         "license": "Elastic License v2",
         "name": "Suspicious Sysctl File Event",
         "new_terms_fields": [
-            "host.id",
             "process.executable"
         ],
-        "query": "host.os.type:linux and event.category:file and event.action:(\"opened-file\" or \"read-file\" or \"wrote-to-file\") and\nfile.path : (\"/etc/sysctl.conf\" or \"/etc/sysctl.d\" or /etc/sysctl.d/*) and not process.name:(\n  dpkg or dockerd or unattended-upg or systemd-sysctl or python* or auditbeat or dpkg or grep or pool*\n)\n",
+        "query": "host.os.type:linux and event.category:file and event.action:(\"opened-file\" or \"read-file\" or \"wrote-to-file\") and\nfile.path : (\"/etc/sysctl.conf\" or \"/etc/sysctl.d\" or /etc/sysctl.d/*) and not process.name:(\n  dpkg or dockerd or unattended-upg or systemd-sysctl or python* or auditbeat or dpkg or pool*\n)\n",
         "related_integrations": [
             {
                 "package": "auditd_manager",
@@ -83,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 107
+        "version": 108
     },
-    "id": "7592c127-89fb-4209-a8f6-f9944dfd7e02_107",
+    "id": "7592c127-89fb-4209-a8f6-f9944dfd7e02_108",
     "type": "security-rule"
 }

@@ -39,6 +39,10 @@
             {
                 "package": "sentinel_one_cloud_funnel",
                 "version": "^1.0.0"
+            },
+            {
+                "package": "system",
+                "version": "^1.6.4"
             }
         ],
         "required_fields": [
@@ -136,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 311
+        "version": 312
     },
-    "id": "265db8f5-fc73-4d0d-b434-6483b56372e2_311",
+    "id": "265db8f5-fc73-4d0d-b434-6483b56372e2_312",
     "type": "security-rule"
 }

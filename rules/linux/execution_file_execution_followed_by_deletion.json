@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "File Creation, Execution and Self-Deletion in Suspicious Directory",
-        "query": "sequence by host.id, user.id with maxspan=1m\n  [file where host.os.type == \"linux\" and event.action == \"creation\" and \n   process.name in (\"curl\", \"wget\", \"fetch\", \"ftp\", \"sftp\", \"scp\", \"rsync\", \"ld\") and \n   file.path : (\"/dev/shm/*\", \"/run/shm/*\", \"/tmp/*\", \"/var/tmp/*\",\n     \"/run/*\", \"/var/run/*\", \"/var/www/*\", \"/proc/*/fd/*\")] by file.name\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and \n   process.parent.name in (\"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")] by process.name\n  [file where host.os.type == \"linux\" and event.action == \"deletion\" and not process.name in (\"rm\", \"ld\") and \n   file.path : (\"/dev/shm/*\", \"/run/shm/*\", \"/tmp/*\", \"/var/tmp/*\",\n     \"/run/*\", \"/var/run/*\", \"/var/www/*\", \"/proc/*/fd/*\")] by file.name\n",
+        "query": "sequence by host.id, user.id with maxspan=1m\n  [file where host.os.type == \"linux\" and event.action == \"creation\" and \n   process.name in (\"curl\", \"wget\", \"fetch\", \"ftp\", \"sftp\", \"scp\", \"rsync\", \"ld\") and \n   file.path : (\"/dev/shm/*\", \"/run/shm/*\", \"/tmp/*\", \"/var/tmp/*\",\n     \"/run/*\", \"/var/run/*\", \"/var/www/*\", \"/proc/*/fd/*\")] by file.name\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and \n   process.parent.name in (\"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\") and\n   not process.parent.executable like (\n     \"/tmp/VeeamApp*\", \"/tmp/rajh/spack-stage/*\", \"plz-out/bin/vault/bridge/test/e2e/base/bridge-dev\",\n     \"/usr/bin/ranlib\", \"/usr/bin/ar\", \"plz-out/bin/vault/bridge/test/e2e/base/local-k8s\"  \n   )] by process.name\n  [file where host.os.type == \"linux\" and event.action == \"deletion\" and not process.name in (\"rm\", \"ld\") and \n   file.path : (\"/dev/shm/*\", \"/run/shm/*\", \"/tmp/*\", \"/var/tmp/*\",\n     \"/run/*\", \"/var/run/*\", \"/var/www/*\", \"/proc/*/fd/*\")] by file.name\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -52,6 +52,11 @@
             {
                 "ecs": true,
                 "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.executable",
                 "type": "keyword"
             },
             {
@@ -101,8 +106,8 @@
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "09bc6c90-7501-494d-b015-5d988dc3f233_4",
+    "id": "09bc6c90-7501-494d-b015-5d988dc3f233_5",
     "type": "security-rule"
 }

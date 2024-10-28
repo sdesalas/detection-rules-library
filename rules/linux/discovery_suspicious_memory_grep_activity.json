@@ -3,7 +3,6 @@
         "author": [
             "Elastic"
         ],
-        "building_block_type": "default",
         "description": "Monitors for grep activity related to memory mapping. The /proc/*/maps file in Linux provides a memory map for a specific process, detailing the memory segments, permissions, and what files are mapped to these segments. Attackers may read a process's memory map to identify memory addresses for code injection or process hijacking.",
         "from": "now-9m",
         "index": [
@@ -58,7 +57,6 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Rule Type: BBR",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame"
         ],
@@ -81,8 +79,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "d74d6506-427a-4790-b170-0c2a6ddac799_2",
+    "id": "d74d6506-427a-4790-b170-0c2a6ddac799_3",
     "type": "security-rule"
 }

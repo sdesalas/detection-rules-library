@@ -23,6 +23,10 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "windows",
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -108,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 106
     },
-    "id": "1e6363a6-3af5-41d4-b7ea-d475389c0ceb_5",
+    "id": "1e6363a6-3af5-41d4-b7ea-d475389c0ceb_106",
     "type": "security-rule"
 }

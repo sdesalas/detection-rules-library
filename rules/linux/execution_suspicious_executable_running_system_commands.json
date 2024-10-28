@@ -16,7 +16,7 @@
         "new_terms_fields": [
             "process.parent.executable"
         ],
-        "query": "host.os.type:linux and event.category:process and event.action:(exec or exec_event or fork or fork_event) and\nprocess.executable:(\n  (/etc/crontab or /bin/* or /boot/* or /dev/shm/* or /etc/cron.*/* or /etc/init.d/* or /etc/rc*.d/* or\n  /etc/update-motd.d/* or /home/*/.* or /tmp/* or /usr/bin/* or /usr/lib/update-notifier/* or\n  /usr/share/* or /var/tmp/*) and not /tmp/go-build*\n) and\nprocess.args:(hostname or id or ifconfig or ls or netstat or ps or pwd or route or top or uptime or whoami) and\nnot process.name:(\n  apt or dnf or docker or dockerd or dpkg or hostname or id or ls or netstat or ps or pwd or rpm or snap or snapd\n  or sudo or top or uptime or which or whoami or yum\n) and\nnot process.parent.executable:(\n  /opt/cassandra/bin/cassandra or /opt/nessus/sbin/nessusd or /opt/nessus_agent/sbin/nessus-agent-module or\n  /opt/puppetlabs/puppet/bin/puppet or /opt/puppetlabs/puppet/bin/ruby or /usr/libexec/platform-python or\n  /usr/local/cloudamize/bin/CCAgent or /usr/sbin/sshd or /bin/* or /etc/network/* or /opt/Elastic/* or\n  /run/k3s/* or /tmp/newroot/* or /usr/bin/*\n)\n",
+        "query": "host.os.type:linux and event.category:process and event.action:(exec or exec_event or fork or fork_event) and\nprocess.executable:(* and (\n  /etc/crontab or /bin/* or /boot/* or /dev/shm/* or /etc/cron.*/* or /etc/init.d/* or /etc/rc*.d/* or /etc/update-motd.d/* or\n  /home/*/.* or /tmp/* or /usr/bin/* or /usr/lib/update-notifier/* or /usr/share/* or /var/tmp/*\n) and not /tmp/go-build*) and\nprocess.args:(hostname or id or ifconfig or ls or netstat or ps or pwd or route or top or uptime or whoami) and\nnot (process.name:\n  (apt or dnf or docker or dockerd or dpkg or hostname or id or ls or netstat or ps or pwd or rpm or snap or\n  snapd or sudo or top or uptime or which or whoami or yum) or\nprocess.parent.executable:(\n  /opt/cassandra/bin/cassandra or /opt/nessus/sbin/nessusd or /opt/nessus_agent/sbin/nessus-agent-module or /opt/puppetlabs/puppet/bin/puppet or\n  /opt/puppetlabs/puppet/bin/ruby or /usr/libexec/platform-python or /usr/local/cloudamize/bin/CCAgent or /usr/sbin/sshd or /bin/* or\n  /etc/network/* or /opt/Elastic/* or /opt/TrendMicro* or /opt/aws/* or /opt/eset/* or /opt/rapid7/* or /run/containerd/* or /run/k3s/* or\n  /snap/* or /tmp/dpkg-licenses* or /tmp/newroot/* or /usr/bin/* or /var/lib/amagent/* or /var/lib/docker/* or /vz/*\n  ) or\n  process.executable:(/run/containerd/* or /srv/snp/docker/* or /tmp/.criu*)\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -98,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 106
+        "version": 107
     },
-    "id": "e9001ee6-2d00-4d2f-849e-b8b1fb05234c_106",
+    "id": "e9001ee6-2d00-4d2f-849e-b8b1fb05234c_107",
     "type": "security-rule"
 }

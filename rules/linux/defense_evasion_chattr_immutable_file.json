@@ -14,7 +14,7 @@
         "license": "Elastic License v2",
         "max_signals": 33,
         "name": "File made Immutable by Chattr",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and user.id == \"0\" and\n  process.executable : \"/usr/bin/chattr\" and process.args : (\"-*i*\", \"+*i*\") and\n  not process.parent.executable: (\"/lib/systemd/systemd\", \"/usr/local/uems_agent/bin/*\", \"/usr/lib/systemd/systemd\") and\n  not process.parent.name in (\"systemd\", \"cf-agent\", \"ntpdate\", \"xargs\", \"px\", \"preinst\", \"auth\")\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and process.parent.executable != null and\nprocess.executable : \"/usr/bin/chattr\" and process.args : (\"-*i*\", \"+*i*\") and not (\n  process.parent.executable: (\"/lib/systemd/systemd\", \"/usr/local/uems_agent/bin/*\", \"/usr/lib/systemd/systemd\") or\n  process.parent.name in (\n    \"systemd\", \"cf-agent\", \"ntpdate\", \"xargs\", \"px\", \"preinst\", \"auth\", \"cf-agent\", \"dcservice\", \"dcagentupgrader\",\n    \"sudo\", \"ephemeral-disk-warning\"\n  )\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -50,11 +50,6 @@
             {
                 "ecs": true,
                 "name": "process.parent.name",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "user.id",
                 "type": "keyword"
             }
         ],
@@ -96,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "968ccab9-da51-4a87-9ce2-d3c9782fd759_111",
+    "id": "968ccab9-da51-4a87-9ce2-d3c9782fd759_112",
     "type": "security-rule"
 }

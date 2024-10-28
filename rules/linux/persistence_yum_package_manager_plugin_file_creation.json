@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Yum Package Manager Plugin File Creation",
-        "query": "file where host.os.type == \"linux\" and event.action in (\"rename\", \"creation\") and\nfile.path : (\"/usr/lib/yum-plugins/*\", \"/etc/yum/pluginconf.d/*\") and not (\n  process.executable in (\n    \"/bin/dockerd\", \"/usr/bin/dockerd\", \"/usr/sbin/dockerd\", \"/bin/microdnf\", \"/usr/bin/microdnf\", \"/bin/rpm\",\n    \"/usr/bin/rpm\", \"/bin/snapd\", \"/usr/bin/snapd\", \"/bin/yum\", \"/usr/bin/yum\", \"/bin/dnf\", \"/usr/bin/dnf\",\n    \"/bin/podman\", \"/usr/bin/podman\", \"/bin/dnf-automatic\", \"/usr/bin/dnf-automatic\", \"/sbin/apk\", \"/usr/sbin/apk\",\n    \"/usr/local/sbin/apk\", \"/bin/podman\", \"/usr/bin/podman\", \"/usr/bin/puppet\", \"/bin/puppet\",\n    \"/opt/puppetlabs/puppet/bin/puppet\", \"/usr/bin/chef-client\", \"/bin/chef-client\", \"/bin/autossl_check\",\n    \"/usr/bin/autossl_check\", \"/proc/self/exe\", \"/dev/fd/*\", \"/usr/lib/snapd/snapd\", \"/usr/local/bin/dockerd\",\n    \"/usr/libexec/netplan/generate\"\n  ) or\n  process.name == \"yumBackend.py\" or\n  file.extension in (\"swp\", \"swpx\", \"swx\") or\n  process.executable : (\n    \"/nix/store/*\", \"/var/lib/dpkg/*\", \"/tmp/vmis.*\", \"/snap/*\", \"/dev/fd/*\", \"/usr/lib/*\", \"/usr/libexec/*\",\n    \"/etc/kernel/*\"\n  ) or\n  process.executable == null or\n  (process.name == \"sed\" and file.name : \"sed*\") or\n  (process.name == \"perl\" and file.name : \"e2scrub_all.tmp*\") \n)\n",
+        "query": "file where host.os.type == \"linux\" and event.action in (\"rename\", \"creation\") and\nfile.path : (\"/usr/lib/yum-plugins/*\", \"/etc/yum/pluginconf.d/*\") and not (\n  process.executable in (\n    \"/bin/dockerd\", \"/usr/bin/dockerd\", \"/usr/sbin/dockerd\", \"/bin/microdnf\", \"/usr/bin/microdnf\", \"/bin/rpm\",\n    \"/usr/bin/rpm\", \"/bin/snapd\", \"/usr/bin/snapd\", \"/bin/yum\", \"/usr/bin/yum\", \"/bin/dnf\", \"/usr/bin/dnf\",\n    \"/bin/podman\", \"/usr/bin/podman\", \"/bin/dnf-automatic\", \"/usr/bin/dnf-automatic\", \"/sbin/apk\", \"/usr/sbin/apk\",\n    \"/usr/local/sbin/apk\", \"/bin/podman\", \"/usr/bin/podman\", \"/usr/bin/puppet\", \"/bin/puppet\",\n    \"/opt/puppetlabs/puppet/bin/puppet\", \"/usr/bin/chef-client\", \"/bin/chef-client\", \"/bin/autossl_check\",\n    \"/usr/bin/autossl_check\", \"/proc/self/exe\", \"/dev/fd/*\", \"/usr/lib/snapd/snapd\", \"/usr/local/bin/dockerd\",\n    \"/usr/libexec/netplan/generate\"\n  ) or\n  process.name == \"yumBackend.py\" or\n  file.extension in (\"swp\", \"swpx\", \"swx\") or\n  file.Ext.original.name like \".ansible*\" or\n  file.name like \".ansible_tmp*\" or\n  process.executable : (\n    \"/nix/store/*\", \"/var/lib/dpkg/*\", \"/tmp/vmis.*\", \"/snap/*\", \"/dev/fd/*\", \"/usr/lib/*\", \"/usr/libexec/*\",\n    \"/etc/kernel/*\"\n  ) or\n  process.executable == null or\n  (process.name == \"sed\" and file.name : \"sed*\") or\n  (process.name == \"perl\" and file.name : \"e2scrub_all.tmp*\") \n)\n",
         "references": [
             "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/local/yum_package_manager_persistence.rb",
             "https://www.elastic.co/security-labs/sequel-on-persistence-mechanisms"
@@ -27,6 +27,11 @@
                 "ecs": true,
                 "name": "event.action",
                 "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "file.Ext.original.name",
+                "type": "unknown"
             },
             {
                 "ecs": true,
@@ -116,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "0b15bcad-aff1-4250-a5be-5d1b7eb56d07_3",
+    "id": "0b15bcad-aff1-4250-a5be-5d1b7eb56d07_4",
     "type": "security-rule"
 }

@@ -12,7 +12,7 @@
         ],
         "language": "kuery",
         "license": "Elastic License v2",
-        "name": "Suspicious JAVA Child Process",
+        "name": "Deprecated - Suspicious JAVA Child Process",
         "new_terms_fields": [
             "host.id",
             "process.command_line"
@@ -99,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 208
+        "version": 209
     },
-    "id": "8acb7614-1d92-4359-bfcf-478b6d9de150_208",
+    "id": "8acb7614-1d92-4359-bfcf-478b6d9de150_209",
     "type": "security-rule"
 }
