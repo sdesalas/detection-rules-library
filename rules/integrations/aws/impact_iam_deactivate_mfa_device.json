@@ -62,7 +62,8 @@
             "Data Source: Amazon Web Services",
             "Data Source: AWS IAM",
             "Resources: Investigation Guide",
-            "Tactic: Impact"
+            "Tactic: Impact",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -79,12 +80,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1531/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/",
+                        "subtechnique": [
+                            {
+                                "id": "T1556.006",
+                                "name": "Multi-Factor Authentication",
+                                "reference": "https://attack.mitre.org/techniques/T1556/006/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 209
+        "version": 210
     },
-    "id": "d8fc1cca-93ed-43c1-bbb6-c0dd3eff2958_209",
+    "id": "d8fc1cca-93ed-43c1-bbb6-c0dd3eff2958_210",
     "type": "security-rule"
 }

@@ -78,6 +78,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1543",
+                        "name": "Create or Modify System Process",
+                        "reference": "https://attack.mitre.org/techniques/T1543/"
+                    },
+                    {
                         "id": "T1546",
                         "name": "Event Triggered Execution",
                         "reference": "https://attack.mitre.org/techniques/T1546/",
@@ -88,11 +93,6 @@
                                 "reference": "https://attack.mitre.org/techniques/T1546/016/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1543",
-                        "name": "Create or Modify System Process",
-                        "reference": "https://attack.mitre.org/techniques/T1543/"
                     },
                     {
                         "id": "T1574",
@@ -126,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "f4d1c0ac-aedb-4063-9fa6-cc651eb5e6ee_1",
+    "id": "f4d1c0ac-aedb-4063-9fa6-cc651eb5e6ee_2",
     "type": "security-rule"
 }

@@ -15,7 +15,8 @@
             "logs-windows.sysmon_operational-*",
             "endgame-*",
             "logs-system.security*",
-            "logs-m365_defender.event-*"
+            "logs-m365_defender.event-*",
+            "logs-crowdstrike.fdr*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -42,6 +43,10 @@
             {
                 "package": "m365_defender",
                 "version": "^2.0.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
             }
         ],
         "required_fields": [
@@ -89,7 +94,8 @@
             "Data Source: Elastic Defend",
             "Data Source: System",
             "Data Source: Microsoft Defender for Endpoint",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Data Source: Crowdstrike"
         ],
         "threat": [
             {
@@ -115,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 213
+        "version": 214
     },
-    "id": "84da2554-e12a-11ec-b896-f661ea17fbcd_213",
+    "id": "84da2554-e12a-11ec-b896-f661ea17fbcd_214",
     "type": "security-rule"
 }

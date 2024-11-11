@@ -11,7 +11,8 @@
             "winlogbeat-*",
             "logs-windows.forwarded*",
             "endgame-*",
-            "logs-m365_defender.event-*"
+            "logs-m365_defender.event-*",
+            "logs-crowdstrike.fdr*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -37,6 +38,10 @@
             {
                 "package": "m365_defender",
                 "version": "^2.0.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
             }
         ],
         "required_fields": [
@@ -90,7 +95,8 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
             "Data Source: System",
-            "Data Source: Microsoft Defender for Endpoint"
+            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Crowdstrike"
         ],
         "threat": [
             {
@@ -182,8 +188,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "e8571d5f-bea1-46c2-9f56-998de2d3ed95_212",
+    "id": "e8571d5f-bea1-46c2-9f56-998de2d3ed95_213",
     "type": "security-rule"
 }

@@ -12,12 +12,13 @@
             "endgame-*",
             "logs-system.security*",
             "logs-sentinel_one_cloud_funnel.*",
-            "logs-m365_defender.event-*"
+            "logs-m365_defender.event-*",
+            "logs-crowdstrike.fdr*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Microsoft Management Console File from Unusual Path",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.executable : \"?:\\\\Windows\\\\System32\\\\mmc.exe\" and process.args : \"*.msc\" and\n  not process.args : (\"?:\\\\Windows\\\\System32\\\\*.msc\", \"?:\\\\Windows\\\\SysWOW64\\\\*.msc\", \"?:\\\\Program files\\\\*.msc\", \"?:\\\\Program Files (x86)\\\\*.msc\")\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.executable : (\n    \"?:\\\\Windows\\\\System32\\\\mmc.exe\",\n    \"\\\\Device\\\\HarddiskVolume?\\\\Windows\\\\System32\\\\mmc.exe\"\n  ) and\n  process.args : \"*.msc\" and\n  not process.args : (\n        \"?:\\\\Windows\\\\System32\\\\*.msc\",\n        \"?:\\\\Windows\\\\SysWOW64\\\\*.msc\",\n        \"?:\\\\Program files\\\\*.msc\",\n        \"?:\\\\Program Files (x86)\\\\*.msc\"\n  )\n",
         "references": [
             "https://www.elastic.co/security-labs/grimresource"
         ],
@@ -41,6 +42,10 @@
             {
                 "package": "system",
                 "version": "^1.6.4"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
             }
         ],
         "required_fields": [
@@ -77,7 +82,8 @@
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
             "Data Source: Microsoft Defender for Endpoint",
-            "Data Source: System"
+            "Data Source: System",
+            "Data Source: Crowdstrike"
         ],
         "threat": [
             {
@@ -132,8 +138,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 306
+        "version": 307
     },
-    "id": "7e23dfef-da2c-4d64-b11d-5f285b638853_306",
+    "id": "7e23dfef-da2c-4d64-b11d-5f285b638853_307",
     "type": "security-rule"
 }

@@ -26,7 +26,7 @@
         "related_integrations": [
             {
                 "package": "okta",
-                "version": "^2.0.0"
+                "version": "^3.0.0"
             }
         ],
         "required_fields": [
@@ -81,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "29b53942-7cd4-11ee-b70e-f661ea17fbcd_2",
+    "id": "29b53942-7cd4-11ee-b70e-f661ea17fbcd_3",
     "type": "security-rule"
 }

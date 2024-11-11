@@ -8,6 +8,14 @@
             "Known or internal account IDs or automation"
         ],
         "from": "now-6m",
+        "investigation_fields": {
+            "field_names": [
+                "source.address",
+                "tls.client.server_name",
+                "cloud.account.id",
+                "failed_requests"
+            ]
+        },
         "language": "esql",
         "license": "Elastic License v2",
         "name": "AWS S3 Bucket Enumeration or Brute Force",
@@ -78,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "5f0234fd-7f21-42af-8391-511d5fd11d5c_3",
+    "id": "5f0234fd-7f21-42af-8391-511d5fd11d5c_4",
     "type": "security-rule"
 }

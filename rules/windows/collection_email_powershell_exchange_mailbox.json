@@ -15,7 +15,8 @@
             "endgame-*",
             "logs-system.security*",
             "logs-sentinel_one_cloud_funnel.*",
-            "logs-m365_defender.event-*"
+            "logs-m365_defender.event-*",
+            "logs-crowdstrike.fdr*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -47,6 +48,10 @@
             {
                 "package": "m365_defender",
                 "version": "^2.0.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
             }
         ],
         "required_fields": [
@@ -73,7 +78,6 @@
         ],
         "risk_score": 47,
         "rule_id": "6aace640-e631-4870-ba8e-5fdda09325db",
-        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -86,7 +90,8 @@
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
             "Data Source: Microsoft Defender for Endpoint",
-            "Data Source: System"
+            "Data Source: System",
+            "Data Source: Crowdstrike"
         ],
         "threat": [
             {
@@ -141,8 +146,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 416
+        "version": 417
     },
-    "id": "6aace640-e631-4870-ba8e-5fdda09325db_416",
+    "id": "6aace640-e631-4870-ba8e-5fdda09325db_417",
     "type": "security-rule"
 }

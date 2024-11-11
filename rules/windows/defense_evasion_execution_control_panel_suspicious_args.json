@@ -13,12 +13,13 @@
             "endgame-*",
             "logs-system.security*",
             "logs-m365_defender.event-*",
-            "logs-sentinel_one_cloud_funnel.*"
+            "logs-sentinel_one_cloud_funnel.*",
+            "logs-crowdstrike.fdr*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Control Panel Process with Unusual Arguments",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n process.executable : (\"?:\\\\Windows\\\\SysWOW64\\\\control.exe\", \"?:\\\\Windows\\\\System32\\\\control.exe\") and\n process.command_line :\n          (\"*.jpg*\",\n           \"*.png*\",\n           \"*.gif*\",\n           \"*.bmp*\",\n           \"*.jpeg*\",\n           \"*.TIFF*\",\n           \"*.inf*\",\n           \"*.cpl:*/*\",\n           \"*../../..*\",\n           \"*/AppData/Local/*\",\n           \"*:\\\\Users\\\\Public\\\\*\",\n           \"*\\\\AppData\\\\Local\\\\*\")\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name : \"control.exe\" and \n  process.command_line : (\n    \"*.jpg*\", \"*.png*\",\n    \"*.gif*\", \"*.bmp*\",\n    \"*.jpeg*\", \"*.TIFF*\",\n    \"*.inf*\", \"*.cpl:*/*\",\n    \"*../../..*\",\n    \"*/AppData/Local/*\",\n    \"*:\\\\Users\\\\Public\\\\*\",\n    \"*\\\\AppData\\\\Local\\\\*\"\n)\n",
         "references": [
             "https://www.joesandbox.com/analysis/476188/1/html"
         ],
@@ -42,6 +43,10 @@
             {
                 "package": "sentinel_one_cloud_funnel",
                 "version": "^1.0.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
             }
         ],
         "required_fields": [
@@ -62,13 +67,12 @@
             },
             {
                 "ecs": true,
-                "name": "process.executable",
+                "name": "process.name",
                 "type": "keyword"
             }
         ],
         "risk_score": 73,
         "rule_id": "416697ae-e468-4093-a93d-59661fa619ec",
-        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "high",
         "tags": [
             "Domain: Endpoint",
@@ -81,7 +85,8 @@
             "Data Source: System",
             "Data Source: Microsoft Defender for Endpoint",
             "Data Source: Sysmon",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Data Source: Crowdstrike"
         ],
         "threat": [
             {
@@ -109,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 312
+        "version": 313
     },
-    "id": "416697ae-e468-4093-a93d-59661fa619ec_312",
+    "id": "416697ae-e468-4093-a93d-59661fa619ec_313",
     "type": "security-rule"
 }

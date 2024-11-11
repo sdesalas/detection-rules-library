@@ -1,14 +1,11 @@
 {
     "attributes": {
         "author": [
-            "Elastic",
-            "Austin Songer"
+            "Elastic"
         ],
-        "description": "Identifies when a user has assumed a role in AWS Security Token Service (STS). Users can assume a role to obtain temporary credentials and access AWS resources. Adversaries can use this technique for credential access and privilege escalation.",
+        "description": "Identifies when a user has assumed a role using a new MFA device. Users can assume a role to obtain temporary credentials and access AWS resources using the AssumeRole API of AWS Security Token Service (STS). While a new MFA device is not always indicative of malicious behavior it should be verified as adversaries can use this technique for persistence and privilege escalation.",
         "false_positives": [
-            "AWS administrators or automated processes might regularly assume roles for legitimate administrative purposes.",
-            "Applications integrated with AWS might assume roles to access AWS resources.",
-            "Automated workflows might assume roles to perform periodic tasks such as data backups, updates, or deployments."
+            "AWS administrators or automated processes might regularly assume roles for legitimate administrative purposes and to perform periodic tasks such as data backups, updates, or deployments."
         ],
         "history_window_start": "now-10d",
         "index": [
@@ -17,15 +14,16 @@
         ],
         "language": "kuery",
         "license": "Elastic License v2",
-        "name": "AWS STS Temporary Credentials via AssumeRole",
+        "name": "AWS STS AssumeRole with New MFA Device",
         "new_terms_fields": [
             "user.id",
-            "aws.cloudtrail.flattened.request_parameters.roleArn"
+            "aws.cloudtrail.flattened.request_parameters.serialNumber"
         ],
         "note": "",
-        "query": "event.dataset:aws.cloudtrail\n    and event.provider:sts.amazonaws.com\n    and event.action:AssumeRole*\n    and event.outcome:success\n    and user.id:*\n",
+        "query": "event.dataset:aws.cloudtrail\n    and event.provider:sts.amazonaws.com\n    and event.action:(AssumeRole or AssumeRoleWithSAML or AssumeRoleWithWebIdentity)\n    and event.outcome:success\n    and user.id:* \n    and aws.cloudtrail.flattened.request_parameters.serialNumber:*\n",
         "references": [
-            "https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html"
+            "https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html",
+            "https://github.com/RhinoSecurityLabs/cloudgoat/blob/d5863b80afd082d853f2e8df1955c6393695a4da/scenarios/iam_privesc_by_key_rotation/README.md"
         ],
         "related_integrations": [
             {
@@ -35,6 +33,11 @@
             }
         ],
         "required_fields": [
+            {
+                "ecs": false,
+                "name": "aws.cloudtrail.flattened.request_parameters.serialNumber",
+                "type": "unknown"
+            },
             {
                 "ecs": true,
                 "name": "event.action",
@@ -62,7 +65,7 @@
             }
         ],
         "risk_score": 21,
-        "rule_id": "93075852-b0f5-4b8b-89c3-a226efae5726",
+        "rule_id": "a22f566b-5b23-4412-880d-c6c957acd321",
         "setup": "The AWS Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
         "severity": "low",
         "tags": [
@@ -71,9 +74,33 @@
             "Data Source: Amazon Web Services",
             "Data Source: AWS STS",
             "Use Case: Identity and Access Audit",
-            "Tactic: Privilege Escalation"
+            "Tactic: Privilege Escalation",
+            "Tactic: Persistence",
+            "Tactic: Lateral Movement"
         ],
         "threat": [
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/",
+                        "subtechnique": [
+                            {
+                                "id": "T1556.006",
+                                "name": "Multi-Factor Authentication",
+                                "reference": "https://attack.mitre.org/techniques/T1556/006/"
+                            }
+                        ]
+                    }
+                ]
+            },
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
@@ -114,8 +141,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 208
+        "version": 1
     },
-    "id": "93075852-b0f5-4b8b-89c3-a226efae5726_208",
+    "id": "a22f566b-5b23-4412-880d-c6c957acd321_1",
     "type": "security-rule"
 }

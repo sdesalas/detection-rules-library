@@ -76,11 +76,6 @@
                 },
                 "technique": [
                     {
-                        "id": "T1609",
-                        "name": "Container Administration Command",
-                        "reference": "https://attack.mitre.org/techniques/T1609/"
-                    },
-                    {
                         "id": "T1059",
                         "name": "Command and Scripting Interpreter",
                         "reference": "https://attack.mitre.org/techniques/T1059/",
@@ -91,6 +86,11 @@
                                 "reference": "https://attack.mitre.org/techniques/T1059/004/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1609",
+                        "name": "Container Administration Command",
+                        "reference": "https://attack.mitre.org/techniques/T1609/"
                     }
                 ]
             },
@@ -112,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "a80d96cd-1164-41b3-9852-ef58724be496_1",
+    "id": "a80d96cd-1164-41b3-9852-ef58724be496_2",
     "type": "security-rule"
 }

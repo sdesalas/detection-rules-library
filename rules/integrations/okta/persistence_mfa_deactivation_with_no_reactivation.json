@@ -28,7 +28,7 @@
         "related_integrations": [
             {
                 "package": "okta",
-                "version": "^2.0.0"
+                "version": "^3.0.0"
             }
         ],
         "required_fields": [
@@ -93,8 +93,8 @@
             }
         ],
         "type": "eql",
-        "version": 209
+        "version": 210
     },
-    "id": "cd89602e-9db0-48e3-9391-ae3bf241acd8_209",
+    "id": "cd89602e-9db0-48e3-9391-ae3bf241acd8_210",
     "type": "security-rule"
 }

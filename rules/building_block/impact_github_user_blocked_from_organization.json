@@ -16,7 +16,7 @@
         "related_integrations": [
             {
                 "package": "github",
-                "version": "^1.0.0"
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -61,8 +61,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "4030c951-448a-4017-a2da-ed60f6d14f4f_1",
+    "id": "4030c951-448a-4017-a2da-ed60f6d14f4f_2",
     "type": "security-rule"
 }
