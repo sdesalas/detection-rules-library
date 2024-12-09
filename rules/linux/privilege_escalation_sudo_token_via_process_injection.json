@@ -43,9 +43,9 @@
                 "type": "keyword"
             },
             {
-                "ecs": false,
+                "ecs": true,
                 "name": "process.group.id",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": true,
@@ -111,8 +111,8 @@
             }
         ],
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "ff9bc8b9-f03b-4283-be58-ee0a16f5a11b_5",
+    "id": "ff9bc8b9-f03b-4283-be58-ee0a16f5a11b_6",
     "type": "security-rule"
 }

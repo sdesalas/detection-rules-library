@@ -11,7 +11,7 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "High Number of Cloned GitHub Repos From PAT",
-        "query": "event.dataset:\"github.audit\" and event.category:\"configuration\" and event.action:\"git.clone\" and \ngithub.programmatic_access_type:(\"OAuth access token\" or \"Fine-grained personal access token\") and \ngithub.repository_public:false\n",
+        "query": "event.dataset:\"github.audit\" and event.category:\"configuration\" and event.action:\"git.clone\" and\ngithub.programmatic_access_type:(\"OAuth access token\" or \"Fine-grained personal access token\") and\ngithub.repository_public:false\n",
         "related_integrations": [
             {
                 "package": "github",
@@ -86,8 +86,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 103
+        "version": 204
     },
-    "id": "fb0afac5-bbd6-49b0-b4f8-44e5381e1587_103",
+    "id": "fb0afac5-bbd6-49b0-b4f8-44e5381e1587_204",
     "type": "security-rule"
 }
