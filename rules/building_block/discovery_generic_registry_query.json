@@ -10,7 +10,7 @@
         "index": [
             "logs-endpoint.events.process-*"
         ],
-        "interval": "24h",
+        "interval": "12h",
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Query Registry using Built-in Tools",
@@ -87,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 105
+        "version": 106
     },
-    "id": "ded09d02-0137-4ccc-8005-c45e617e8d4c_105",
+    "id": "ded09d02-0137-4ccc-8005-c45e617e8d4c_106",
     "type": "security-rule"
 }

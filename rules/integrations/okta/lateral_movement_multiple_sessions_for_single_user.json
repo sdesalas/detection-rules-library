@@ -7,17 +7,17 @@
         "false_positives": [
             "A user may have multiple sessions open at the same time, such as on a mobile device and a laptop."
         ],
-        "from": "now-30m",
+        "from": "now-35m",
         "index": [
             "filebeat-*",
             "logs-okta*"
         ],
-        "interval": "60m",
+        "interval": "30m",
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Multiple Okta Sessions Detected for a Single User",
         "note": "",
-        "query": "event.dataset:okta.system and okta.event_type:user.session.start and okta.authentication_context.external_session_id:*\n    and not (okta.actor.id: okta* or okta.actor.display_name: okta*)\n",
+        "query": "event.dataset:okta.system\n    and okta.event_type:user.session.start\n    and okta.authentication_context.external_session_id:*\n    and not (okta.actor.id: okta* or okta.actor.display_name: okta*)\n",
         "references": [
             "https://developer.okta.com/docs/reference/api/system-log/",
             "https://developer.okta.com/docs/reference/api/event-types/",
@@ -106,8 +106,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 206
+        "version": 207
     },
-    "id": "621e92b6-7e54-11ee-bdc0-f661ea17fbcd_206",
+    "id": "621e92b6-7e54-11ee-bdc0-f661ea17fbcd_207",
     "type": "security-rule"
 }

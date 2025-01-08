@@ -8,14 +8,14 @@
         "false_positives": [
             "This rule is not looking for threat activity. Disable the rule if you're already familiar with alerts."
         ],
-        "from": "now-30m",
+        "from": "now-35m",
         "index": [
             "auditbeat-*",
             "filebeat-*",
             "logs-*",
             "winlogbeat-*"
         ],
-        "interval": "24h",
+        "interval": "30m",
         "language": "kuery",
         "license": "Elastic License v2",
         "max_signals": 1,
@@ -46,8 +46,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 3
+        "version": 4
     },
-    "id": "a198fbbd-9413-45ec-a269-47ae4ccf59ce_3",
+    "id": "a198fbbd-9413-45ec-a269-47ae4ccf59ce_4",
     "type": "security-rule"
 }
