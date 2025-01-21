@@ -7,12 +7,13 @@
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Suspicious Content Extracted or Decompressed via Funzip",
-        "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\") and\n((process.args == \"tail\" and process.args == \"-c\" and process.args == \"funzip\")) and\nnot process.args : \"/var/log/messages\" and \nnot process.parent.executable : (\"/usr/bin/dracut\", \"/sbin/dracut\", \"/usr/bin/xargs\") and\nnot (process.parent.name in (\"sh\", \"sudo\") and process.parent.command_line : \"*nessus_su*\")\n",
+        "query": "process where host.os.type == \"linux\" and event.action in (\"exec\", \"exec_event\", \"start\") and\n((process.args == \"tail\" and process.args == \"-c\" and process.args == \"funzip\")) and\nnot process.args : \"/var/log/messages\" and \nnot process.parent.executable : (\"/usr/bin/dracut\", \"/sbin/dracut\", \"/usr/bin/xargs\") and\nnot (process.parent.name in (\"sh\", \"sudo\") and process.parent.command_line : \"*nessus_su*\")\n",
         "references": [
             "https://attack.mitre.org/software/S0482/"
         ],
@@ -20,6 +21,10 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -64,7 +69,8 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -112,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 105
     },
-    "id": "dc0b7782-0df0-47ff-8337-db0d678bdb66_5",
+    "id": "dc0b7782-0df0-47ff-8337-db0d678bdb66_105",
     "type": "security-rule"
 }

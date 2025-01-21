@@ -6,12 +6,14 @@
         "description": "This rule detects the installation of root certificates on a Linux system. Adversaries may install a root certificate on a compromised system to avoid warnings when connecting to their command and control servers. Root certificates are used in public key cryptography to identify a root certificate authority (CA). When a root certificate is installed, the system or application will trust certificates in the root's chain of trust that have been signed by the root certificate.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process*"
+            "logs-endpoint.events.process*",
+            "logs-sentinel_one_cloud_funnel.*",
+            "endgame-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Root Certificate Installation",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\nprocess.name in (\"update-ca-trust\", \"update-ca-certificates\") and not (\n  process.parent.name like (\n    \"ca-certificates.postinst\", \"ca-certificates-*.trigger\", \"pacman\", \"pamac-daemon\", \"autofirma.postinst\",\n    \"ipa-client-install\", \"su\", \"platform-python\", \"python*\", \"kesl\", \"execd\"\n  ) or\n  process.parent.args like \"/var/tmp/rpm*\" or\n  (process.parent.name in (\"sh\", \"bash\", \"zsh\") and process.args == \"-e\")\n)\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\", \"start\") and\nprocess.name in (\"update-ca-trust\", \"update-ca-certificates\") and not (\n  process.parent.name like (\n    \"ca-certificates.postinst\", \"ca-certificates-*.trigger\", \"pacman\", \"pamac-daemon\", \"autofirma.postinst\",\n    \"ipa-client-install\", \"su\", \"platform-python\", \"python*\", \"kesl\", \"execd\"\n  ) or\n  process.parent.args like \"/var/tmp/rpm*\" or\n  (process.parent.name in (\"sh\", \"bash\", \"zsh\") and process.args == \"-e\")\n)\n",
         "references": [
             "https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1553.004/T1553.004.md"
         ],
@@ -19,6 +21,10 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -67,7 +73,9 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: SentinelOne",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -95,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 102
     },
-    "id": "6ded0996-7d4b-40f2-bf4a-6913e7591795_2",
+    "id": "6ded0996-7d4b-40f2-bf4a-6913e7591795_102",
     "type": "security-rule"
 }

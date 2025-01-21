@@ -8,7 +8,8 @@
         "index": [
             "auditbeat-*",
             "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -19,6 +20,10 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -58,7 +63,8 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -86,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 210
     },
-    "id": "766d3f91-3f12-448c-b65f-20123e9e9e8c_110",
+    "id": "766d3f91-3f12-448c-b65f-20123e9e9e8c_210",
     "type": "security-rule"
 }

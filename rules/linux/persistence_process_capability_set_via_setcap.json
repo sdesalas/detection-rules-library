@@ -7,16 +7,21 @@
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.process*",
-            "endgame-*"
+            "endgame-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Process Capability Set via setcap Utility",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and\nprocess.name == \"setcap\" and not (\n  process.parent.executable == null or\n  process.parent.executable : (\"/var/lib/dpkg/*\", \"/var/lib/docker/*\", \"/tmp/newroot/*\", \"/var/tmp/newroot/*\") or \n  process.parent.name in (\"jem\", \"vzctl\")\n)\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\", \"start\") and\nprocess.name == \"setcap\" and not (\n  process.parent.executable == null or\n  process.parent.executable : (\"/var/lib/dpkg/*\", \"/var/lib/docker/*\", \"/tmp/newroot/*\", \"/var/tmp/newroot/*\") or \n  process.parent.name in (\"jem\", \"vzctl\")\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -62,7 +67,8 @@
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -86,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 101
     },
-    "id": "f18a474c-3632-427f-bcf5-363c994309ee_1",
+    "id": "f18a474c-3632-427f-bcf5-363c994309ee_101",
     "type": "security-rule"
 }

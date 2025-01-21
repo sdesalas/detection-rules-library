@@ -12,7 +12,8 @@
             "logs-endpoint.events.*",
             "endgame-*",
             "auditbeat-*",
-            "logs-auditd_manager.auditd-*"
+            "logs-auditd_manager.auditd-*",
+            "logs-crowdstrike.fdr*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -33,6 +34,10 @@
             {
                 "package": "auditd_manager",
                 "version": "^1.0.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
             }
         ],
         "required_fields": [
@@ -69,7 +74,8 @@
             "Threat: BPFDoor",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: Auditd Manager"
+            "Data Source: Auditd Manager",
+            "Data Source: Crowdstrike"
         ],
         "threat": [
             {
@@ -90,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "3688577a-d196-11ec-90b0-f661ea17fbce_109",
+    "id": "3688577a-d196-11ec-90b0-f661ea17fbce_110",
     "type": "security-rule"
 }

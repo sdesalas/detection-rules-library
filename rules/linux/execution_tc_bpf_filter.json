@@ -7,7 +7,8 @@
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -21,6 +22,10 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -61,7 +66,8 @@
             "Tactic: Execution",
             "Threat: TripleCross",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -89,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 208
     },
-    "id": "ef04a476-07ec-48fc-8f3d-5e1742de76d3_108",
+    "id": "ef04a476-07ec-48fc-8f3d-5e1742de76d3_208",
     "type": "security-rule"
 }

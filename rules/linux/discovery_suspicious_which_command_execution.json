@@ -7,16 +7,21 @@
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Suspicious which Enumeration",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and \nprocess.name == \"which\" and process.args_count >= 10 and not (\n  process.parent.name == \"jem\" or\n  process.parent.executable like (\"/vz/root/*\", \"/var/lib/docker/*\") or\n  process.args == \"--tty-only\"\n)\n\n/* potential tuning if rule would turn out to be noisy\nand process.args in (\"nmap\", \"nc\", \"ncat\", \"netcat\", nc.traditional\", \"gcc\", \"g++\", \"socat\") and \nprocess.parent.name in (\"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")\n*/\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\n  event.action in (\"exec\", \"exec_event\", \"start\") and \n  process.name == \"which\" and process.args_count >= 10 and not (\n    process.parent.name == \"jem\" or\n    process.parent.executable like (\"/vz/root/*\", \"/var/lib/docker/*\") or\n    process.args == \"--tty-only\"\n  )\n\n/* potential tuning if rule would turn out to be noisy\nand process.args in (\"nmap\", \"nc\", \"ncat\", \"netcat\", nc.traditional\", \"gcc\", \"g++\", \"socat\") and \nprocess.parent.name in (\"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")\n*/\n",
         "related_integrations": [
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -70,7 +75,8 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Data Source: Elastic Defend",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -91,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 107
     },
-    "id": "5b18eef4-842c-4b47-970f-f08d24004bde_7",
+    "id": "5b18eef4-842c-4b47-970f-f08d24004bde_107",
     "type": "security-rule"
 }

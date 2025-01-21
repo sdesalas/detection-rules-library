@@ -7,12 +7,13 @@
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-crowdstrike.fdr*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Privilege Escalation via UID INT_MAX Bug Detected",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and \nprocess.name == \"systemd-run\" and process.args == \"-t\" and process.args_count >= 3 and user.id >= \"1000000000\"\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\n  event.action in (\"exec\", \"exec_event\", \"ProcessRollup2\") and\n  process.name == \"systemd-run\" and process.args == \"-t\" and process.args_count >= 3 and user.id >= \"1000000000\"\n",
         "references": [
             "https://twitter.com/paragonsec/status/1071152249529884674",
             "https://github.com/mirchr/security-research/blob/master/vulnerabilities/CVE-2018-19788.sh",
@@ -22,6 +23,10 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
             }
         ],
         "required_fields": [
@@ -71,7 +76,8 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Crowdstrike"
         ],
         "threat": [
             {
@@ -92,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "d55436a8-719c-445f-92c4-c113ff2f9ba5_5",
+    "id": "d55436a8-719c-445f-92c4-c113ff2f9ba5_6",
     "type": "security-rule"
 }

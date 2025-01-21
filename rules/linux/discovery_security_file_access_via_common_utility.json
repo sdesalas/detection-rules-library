@@ -6,16 +6,27 @@
         "description": "This rule detects sensitive security file access via common utilities on Linux systems. Adversaries may attempt to read from sensitive files using common utilities to gather information about the system and its security configuration.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.*",
+            "logs-crowdstrike.fdr*",
+            "logs-sentinel_one_cloud_funnel.*",
+            "endgame-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Security File Access via Common Utilities",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\nprocess.name in (\"cat\", \"grep\", \"less\", \"more\", \"strings\", \"awk\", \"find\", \"xargs\") and\nprocess.args like (\n  \"/etc/security/*\", \"/etc/pam.d/*\", \"/etc/login.defs\", \"/lib/security/*\", \"/lib64/security/*\",\n  \"/usr/lib/security/*\", \"/usr/lib64/security/*\", \"/usr/lib/x86_64-linux-gnu/security/*\",\n  \"/home/*/.aws/credentials\", \"/home/*/.aws/config\", \"/home/*/.config/gcloud/*credentials.json\",\n  \"/home/*/.config/gcloud/configurations/config_default\", \"/home/*/.azure/accessTokens.json\",\n  \"/home/*/.azure/azureProfile.json\"\n)\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\n  event.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\") and\n  process.name in (\"cat\", \"grep\", \"less\", \"more\", \"strings\", \"awk\", \"find\", \"xargs\") and\n  process.args like (\n    \"/etc/security/*\", \"/etc/pam.d/*\", \"/etc/login.defs\", \"/lib/security/*\", \"/lib64/security/*\",\n    \"/usr/lib/security/*\", \"/usr/lib64/security/*\", \"/usr/lib/x86_64-linux-gnu/security/*\",\n    \"/home/*/.aws/credentials\", \"/home/*/.aws/config\", \"/home/*/.config/gcloud/*credentials.json\",\n    \"/home/*/.config/gcloud/configurations/config_default\", \"/home/*/.azure/accessTokens.json\",\n    \"/home/*/.azure/azureProfile.json\"\n  )\n",
         "related_integrations": [
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -54,7 +65,10 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Crowdstrike",
+            "Data Source: SentinelOne",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -69,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 101
     },
-    "id": "7efca3ad-a348-43b2-b544-c93a78a0ef92_1",
+    "id": "7efca3ad-a348-43b2-b544-c93a78a0ef92_101",
     "type": "security-rule"
 }

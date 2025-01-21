@@ -6,7 +6,9 @@
         "description": "This rule detects the deletion of SSL certificates on a Linux system. Adversaries may delete SSL certificates to subvert trust controls and negatively impact the system.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.file*"
+            "logs-endpoint.events.file*",
+            "logs-sentinel_one_cloud_funnel.*",
+            "endgame-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -16,6 +18,10 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -55,7 +61,9 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Tactic: Impact",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: SentinelOne",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -103,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 101
     },
-    "id": "7957f3b9-f590-4062-b9f9-003c32bfc7d6_1",
+    "id": "7957f3b9-f590-4062-b9f9-003c32bfc7d6_101",
     "type": "security-rule"
 }

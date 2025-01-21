@@ -6,7 +6,9 @@
         "description": "This rule detects the creation of the dynamic linker (ld.so) file. The dynamic linker is used to load shared libraries needed by an executable. Attackers may attempt to replace the dynamic linker with a malicious version to execute arbitrary code.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.file*"
+            "logs-endpoint.events.file*",
+            "logs-sentinel_one_cloud_funnel.*",
+            "endgame-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -16,6 +18,10 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -56,7 +62,9 @@
             "Tactic: Defense Evasion",
             "Tactic: Execution",
             "Tactic: Persistence",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: SentinelOne",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -121,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 101
     },
-    "id": "06d555e4-c8ce-4d90-90e1-ec7f66df5a6a_1",
+    "id": "06d555e4-c8ce-4d90-90e1-ec7f66df5a6a_101",
     "type": "security-rule"
 }

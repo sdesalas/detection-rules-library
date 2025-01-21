@@ -6,7 +6,9 @@
         "description": "This rule detects the creation or modification of a Git hook file on a Linux system. Git hooks are scripts that Git executes before or after events such as commit, push, and receive. They are used to automate tasks, enforce policies, and customize Git's behavior. Attackers can abuse Git hooks to maintain persistence on a system by executing malicious code whenever a specific Git event occurs.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.file*"
+            "logs-endpoint.events.file*",
+            "logs-sentinel_one_cloud_funnel.*",
+            "endgame-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -20,6 +22,10 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -70,7 +76,9 @@
             "Tactic: Persistence",
             "Tactic: Execution",
             "Tactic: Defense Evasion",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: SentinelOne",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -127,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 103
     },
-    "id": "ac531fcc-1d3b-476d-bbb5-1357728c9a37_3",
+    "id": "ac531fcc-1d3b-476d-bbb5-1357728c9a37_103",
     "type": "security-rule"
 }

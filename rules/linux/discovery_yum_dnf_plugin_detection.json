@@ -7,12 +7,14 @@
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-crowdstrike.fdr*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Yum/DNF Plugin Status Discovery",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and\nprocess.name == \"grep\" and process.args : \"plugins*\" and process.args : (\n  \"/etc/yum.conf\", \"/usr/lib/yum-plugins/*\", \"/etc/yum/pluginconf.d/*\",\n  \"/usr/lib/python*/site-packages/dnf-plugins/*\", \"/etc/dnf/plugins/*\", \"/etc/dnf/dnf.conf\"\n)\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\n  event.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\") and\n  process.name == \"grep\" and process.args : \"plugins*\" and process.args : (\n    \"/etc/yum.conf\", \"/usr/lib/yum-plugins/*\", \"/etc/yum/pluginconf.d/*\",\n    \"/usr/lib/python*/site-packages/dnf-plugins/*\", \"/etc/dnf/plugins/*\", \"/etc/dnf/dnf.conf\"\n  )\n",
         "references": [
             "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/local/yum_package_manager_persistence.rb",
             "https://pwnshift.github.io/2020/10/01/persistence.html",
@@ -22,6 +24,14 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -61,7 +71,9 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Data Source: Elastic Defend",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Crowdstrike",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -82,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 102
     },
-    "id": "78390eb5-c838-4c1d-8240-69dd7397cfb7_2",
+    "id": "78390eb5-c838-4c1d-8240-69dd7397cfb7_102",
     "type": "security-rule"
 }

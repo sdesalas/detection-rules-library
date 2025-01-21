@@ -12,12 +12,14 @@
             "logs-endpoint.events.*",
             "endgame-*",
             "auditbeat-*",
-            "logs-auditd_manager.auditd-*"
+            "logs-auditd_manager.auditd-*",
+            "logs-crowdstrike.fdr*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Nping Process Activity",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\")\n and process.name == \"nping\"\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\n event.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\", \"executed\", \"process_started\") and\n process.name == \"nping\"\n",
         "references": [
             "https://en.wikipedia.org/wiki/Nmap"
         ],
@@ -28,6 +30,14 @@
             },
             {
                 "package": "auditd_manager",
+                "version": "^1.0.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
                 "version": "^1.0.0"
             }
         ],
@@ -64,7 +74,9 @@
             "Tactic: Discovery",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: Auditd Manager"
+            "Data Source: Auditd Manager",
+            "Data Source: Crowdstrike",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -85,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 208
     },
-    "id": "0d69150b-96f8-467c-a86d-a67a3378ce77_108",
+    "id": "0d69150b-96f8-467c-a86d-a67a3378ce77_208",
     "type": "security-rule"
 }

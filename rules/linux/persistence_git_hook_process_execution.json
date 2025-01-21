@@ -6,12 +6,15 @@
         "description": "This rule detects child processes spawned by Git hooks. Git hooks are scripts that Git executes before or after events such as commit, push, and receive. The rule identifies child processes spawned by Git hooks that are not typically spawned by the Git process itself. This behavior may indicate an attacker attempting to hide malicious activity by leveraging the legitimate Git process to execute unauthorized commands.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process*"
+            "logs-endpoint.events.process*",
+            "logs-crowdstrike.fdr*",
+            "logs-sentinel_one_cloud_funnel.*",
+            "endgame-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Git Hook Child Process",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and process.parent.name in (\n  \"applypatch-msg\", \"commit-msg\", \"fsmonitor-watchman\", \"post-update\", \"post-checkout\", \"post-commit\",\n  \"pre-applypatch\", \"pre-commit\", \"pre-merge-commit\", \"prepare-commit-msg\", \"pre-push\", \"pre-rebase\", \"pre-receive\",\n  \"push-to-checkout\", \"update\", \"post-receive\", \"pre-auto-gc\", \"post-rewrite\", \"sendemail-validate\", \"p4-pre-submit\",\n  \"post-index-change\", \"post-merge\", \"post-applypatch\"\n) and (\n  process.name in (\"nohup\", \"setsid\", \"disown\", \"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\") or \n  process.name : (\"php*\", \"perl*\", \"ruby*\", \"lua*\") or \n  process.executable : (\n    \"/boot/*\", \"/dev/shm/*\", \"/etc/cron.*/*\", \"/etc/init.d/*\", \"/etc/update-motd.d/*\",\n    \"/run/*\", \"/srv/*\", \"/tmp/*\", \"/var/tmp/*\", \"/var/log/*\"\n  )\n) and not process.name in (\"git\", \"dirname\")\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\n  event.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\") and\n  process.parent.name in (\n    \"applypatch-msg\", \"commit-msg\", \"fsmonitor-watchman\", \"post-update\", \"post-checkout\", \"post-commit\",\n    \"pre-applypatch\", \"pre-commit\", \"pre-merge-commit\", \"prepare-commit-msg\", \"pre-push\", \"pre-rebase\", \"pre-receive\",\n    \"push-to-checkout\", \"update\", \"post-receive\", \"pre-auto-gc\", \"post-rewrite\", \"sendemail-validate\", \"p4-pre-submit\",\n    \"post-index-change\", \"post-merge\", \"post-applypatch\"\n  ) and\n  (\n    process.name in (\"nohup\", \"setsid\", \"disown\", \"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\") or \n    process.name : (\"php*\", \"perl*\", \"ruby*\", \"lua*\") or \n    process.executable : (\n      \"/boot/*\", \"/dev/shm/*\", \"/etc/cron.*/*\", \"/etc/init.d/*\", \"/etc/update-motd.d/*\",\n      \"/run/*\", \"/srv/*\", \"/tmp/*\", \"/var/tmp/*\", \"/var/log/*\"\n    )\n  ) and\n  not process.name in (\"git\", \"dirname\")\n",
         "references": [
             "https://git-scm.com/docs/githooks/2.26.0",
             "https://www.elastic.co/security-labs/sequel-on-persistence-mechanisms"
@@ -20,6 +23,14 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -65,7 +76,10 @@
             "Tactic: Persistence",
             "Tactic: Execution",
             "Tactic: Defense Evasion",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Crowdstrike",
+            "Data Source: SentinelOne",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -122,8 +136,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 102
     },
-    "id": "7ce5e1c7-6a49-45e6-a101-0720d185667f_2",
+    "id": "7ce5e1c7-6a49-45e6-a101-0720d185667f_102",
     "type": "security-rule"
 }

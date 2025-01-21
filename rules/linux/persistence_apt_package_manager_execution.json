@@ -6,12 +6,13 @@
         "description": "Detects suspicious process events executed by the APT package manager, potentially indicating persistence through an APT backdoor. In Linux, APT (Advanced Package Tool) is a command-line utility used for handling packages on Debian-based systems, providing functions for installing, updating, upgrading, and removing software along with managing package repositories. Attackers can backdoor APT to gain persistence by injecting malicious code into scripts that APT runs, thereby ensuring continued unauthorized access or control each time APT is used for package management.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Suspicious APT Package Manager Execution",
-        "query": "sequence by host.id with maxspan=5s\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\n   process.parent.name == \"apt\" and process.args == \"-c\" and process.name in (\n     \"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\"\n   )\n  ] by process.entity_id\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and process.name : (\n     \"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\", \"python*\", \"php*\",\n     \"perl\", \"ruby\", \"lua*\", \"openssl\", \"nc\", \"netcat\", \"ncat\", \"telnet\", \"awk\"\n   )\n  ] by process.parent.entity_id\n",
+        "query": "sequence by host.id with maxspan=5s\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"start\") and\n   process.parent.name == \"apt\" and process.args == \"-c\" and process.name in (\n     \"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\"\n   )\n  ] by process.entity_id\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"start\") and process.name : (\n     \"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\", \"python*\", \"php*\",\n     \"perl\", \"ruby\", \"lua*\", \"openssl\", \"nc\", \"netcat\", \"ncat\", \"telnet\", \"awk\"\n   )\n  ] by process.parent.entity_id\n",
         "references": [
             "https://www.elastic.co/security-labs/sequel-on-persistence-mechanisms"
         ],
@@ -19,6 +20,10 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -79,7 +84,8 @@
             "Tactic: Persistence",
             "Tactic: Execution",
             "Tactic: Defense Evasion",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -147,8 +153,8 @@
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 104
     },
-    "id": "ad959eeb-2b7b-4722-ba08-a45f6622f005_4",
+    "id": "ad959eeb-2b7b-4722-ba08-a45f6622f005_104",
     "type": "security-rule"
 }

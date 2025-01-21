@@ -13,7 +13,7 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "PowerShell Script with Windows Defender Tampering Capabilities",
-        "query": "event.category: \"process\" and host.os.type:windows and\n(\n  powershell.file.script_block_text: \"Set-MpPreference\" and\n  powershell.file.script_block_text: (\n    DisableArchiveScanning or DisableBehaviorMonitoring or\n    DisableIntrusionPreventionSystem or DisableIOAVProtection or\n    DisableRemovableDriveScanning or DisableBlockAtFirstSeen or\n    DisableScanningMappedNetworkDrivesForFullScan or\n    DisableScanningNetworkFiles or DisableScriptScanning or\n    DisableRealtimeMonitoring or LowThreatDefaultAction or\n    ModerateThreatDefaultAction or HighThreatDefaultAction\n  )\n)\n",
+        "query": "event.category: \"process\" and host.os.type:windows and\n(\n  powershell.file.script_block_text: \"Set-MpPreference\" and\n  powershell.file.script_block_text: (\n    DisableArchiveScanning or DisableBehaviorMonitoring or\n    DisableIntrusionPreventionSystem or DisableIOAVProtection or\n    DisableRemovableDriveScanning or DisableBlockAtFirstSeen or\n    DisableScanningMappedNetworkDrivesForFullScan or\n    DisableScanningNetworkFiles or DisableScriptScanning or\n    DisableRealtimeMonitoring or LowThreatDefaultAction or\n    ModerateThreatDefaultAction or HighThreatDefaultAction\n  )\n) and\nnot powershell.file.script_block_text : (\n  (\"cmdletization\" and \"cdxml-Help.xml\") or\n  (\"function Set-MpPreference\" and \"Microsoft.PowerShell.Cmdletization.GeneratedTypes.MpPreference.SubmitSamplesConsentType\")\n) and\nnot file.directory : \"C:\\ProgramData\\Microsoft\\Windows Defender Advanced Threat Protection\\SenseCM\"\n",
         "related_integrations": [
             {
                 "package": "windows",
@@ -24,6 +24,11 @@
             {
                 "ecs": true,
                 "name": "event.category",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "file.directory",
                 "type": "keyword"
             },
             {
@@ -97,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 103
+        "version": 104
     },
-    "id": "c124dc1b-cef2-4d01-8d74-ff6b0d5096b6_103",
+    "id": "c124dc1b-cef2-4d01-8d74-ff6b0d5096b6_104",
     "type": "security-rule"
 }

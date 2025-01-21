@@ -9,12 +9,14 @@
             "logs-endpoint.events.*",
             "endgame-*",
             "auditbeat-*",
-            "logs-auditd_manager.auditd-*"
+            "logs-auditd_manager.auditd-*",
+            "logs-crowdstrike.fdr*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Unix Socket Connection",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\")\n and (\n  (process.name in (\"nc\", \"ncat\", \"netcat\", \"nc.openbsd\") and \n   process.args == \"-U\" and process.args : (\"/usr/local/*\", \"/run/*\", \"/var/run/*\")) or\n  (process.name == \"socat\" and \n   process.args == \"-\" and process.args : (\"UNIX-CLIENT:/usr/local/*\", \"UNIX-CLIENT:/run/*\", \"UNIX-CLIENT:/var/run/*\"))\n) and\nnot process.args == \"/var/run/libvirt/libvirt-sock\"\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\n event.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\", \"executed\", \"process_started\") and\n (\n  (process.name in (\"nc\", \"ncat\", \"netcat\", \"nc.openbsd\") and \n   process.args == \"-U\" and process.args : (\"/usr/local/*\", \"/run/*\", \"/var/run/*\")) or\n  (process.name == \"socat\" and \n   process.args == \"-\" and process.args : (\"UNIX-CLIENT:/usr/local/*\", \"UNIX-CLIENT:/run/*\", \"UNIX-CLIENT:/var/run/*\"))\n) and\nnot process.args == \"/var/run/libvirt/libvirt-sock\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -22,6 +24,14 @@
             },
             {
                 "package": "auditd_manager",
+                "version": "^1.0.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
                 "version": "^1.0.0"
             }
         ],
@@ -62,7 +72,9 @@
             "Tactic: Execution",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
-            "Data Source: Auditd Manager"
+            "Data Source: Auditd Manager",
+            "Data Source: Crowdstrike",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -83,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 103
     },
-    "id": "41284ba3-ed1a-4598-bfba-a97f75d9aba2_3",
+    "id": "41284ba3-ed1a-4598-bfba-a97f75d9aba2_103",
     "type": "security-rule"
 }

@@ -80,7 +80,7 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "PowerShell Script with Archive Compression Capabilities",
-        "query": "event.category:process and host.os.type:windows and\n(\n  powershell.file.script_block_text : (\n    \"IO.Compression.ZipFile\" or\n    \"IO.Compression.ZipArchive\" or\n    \"ZipFile.CreateFromDirectory\" or\n    \"IO.Compression.BrotliStream\" or\n    \"IO.Compression.DeflateStream\" or\n    \"IO.Compression.GZipStream\" or\n    \"IO.Compression.ZLibStream\"\n  ) and \n  powershell.file.script_block_text : (\n    \"CompressionLevel\" or\n    \"CompressionMode\" or\n    \"ZipArchiveMode\"\n  ) or\n  powershell.file.script_block_text : \"Compress-Archive\"\n) and\nnot powershell.file.script_block_text : (\n  \"Compress-Archive -Path 'C:\\ProgramData\\Lenovo\\Udc\\diagnostics\\latest\" or\n  (\"Copyright: (c) 2017, Ansible Project\" and \"Ansible.ModuleUtils.Backup\")\n) and\nnot file.directory : \"C:\\Program Files\\Microsoft Dependency Agent\\plugins\\lib\"\n",
+        "query": "event.category:process and host.os.type:windows and\n(\n  powershell.file.script_block_text : (\n    \"IO.Compression.ZipFile\" or\n    \"IO.Compression.ZipArchive\" or\n    \"ZipFile.CreateFromDirectory\" or\n    \"IO.Compression.BrotliStream\" or\n    \"IO.Compression.DeflateStream\" or\n    \"IO.Compression.GZipStream\" or\n    \"IO.Compression.ZLibStream\"\n  ) and \n  powershell.file.script_block_text : (\n    \"CompressionLevel\" or\n    \"CompressionMode\" or\n    \"ZipArchiveMode\"\n  ) or\n  powershell.file.script_block_text : \"Compress-Archive\"\n) and\nnot powershell.file.script_block_text : (\n  \"Compress-Archive -Path 'C:\\ProgramData\\Lenovo\\Udc\\diagnostics\\latest\" or\n  (\"Copyright: (c) 2017, Ansible Project\" and \"Ansible.ModuleUtils.Backup\")\n) and\nnot file.directory : (\n  \"C:\\Program Files\\Microsoft Dependency Agent\\plugins\\lib\" or\n  \"C:\\Program Files\\WindowsPowerShell\\Modules\\icinga-powershell-framework\\cache\" or\n  \"C:\\ProgramData\\Microsoft\\Windows Defender Advanced Threat Protection\\Downloads\"\n)\n",
         "related_integrations": [
             {
                 "package": "windows",
@@ -162,8 +162,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 208
+        "version": 209
     },
-    "id": "27071ea3-e806-4697-8abc-e22c92aa4293_208",
+    "id": "27071ea3-e806-4697-8abc-e22c92aa4293_209",
     "type": "security-rule"
 }

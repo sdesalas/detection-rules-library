@@ -7,7 +7,9 @@
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-crowdstrike.fdr*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -17,6 +19,14 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -51,7 +61,9 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Crowdstrike",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -79,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 106
     },
-    "id": "e2258f48-ba75-4248-951b-7c885edf18c2_6",
+    "id": "e2258f48-ba75-4248-951b-7c885edf18c2_106",
     "type": "security-rule"
 }

@@ -10,12 +10,14 @@
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-crowdstrike.fdr*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Kernel Module Removal",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and (\n  process.name == \"rmmod\" or\n  (process.name == \"modprobe\" and process.args in (\"--remove\", \"-r\"))\n) and process.parent.name in (\"sudo\", \"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\n  event.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\") and\n  (\n    process.name == \"rmmod\" or\n    (process.name == \"modprobe\" and process.args in (\"--remove\", \"-r\"))\n  ) and\n  process.parent.name in (\"sudo\", \"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")\n",
         "references": [
             "http://man7.org/linux/man-pages/man8/modprobe.8.html"
         ],
@@ -23,6 +25,14 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -67,7 +77,9 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Crowdstrike",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -117,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 210
     },
-    "id": "cd66a5af-e34b-4bb0-8931-57d0a043f2ef_110",
+    "id": "cd66a5af-e34b-4bb0-8931-57d0a043f2ef_210",
     "type": "security-rule"
 }

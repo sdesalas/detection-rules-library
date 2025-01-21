@@ -9,16 +9,22 @@
         ],
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.*",
+            "logs-sentinel_one_cloud_funnel.*",
+            "endgame-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Hidden Directory Creation via Unusual Parent",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\nprocess.name == \"mkdir\" and process.parent.executable like (\n  \"/dev/shm/*\", \"/tmp/*\", \"/var/tmp/*\", \"/var/run/*\", \"/root/*\", \"/boot/*\", \"/var/www/html/*\", \"/opt/.*\"\n) and process.args like (\".*\", \"/*/.*\") and process.args_count <= 3 and not (\n  process.parent.executable like (\"/tmp/newroot/*\", \"/run/containerd/*\") or\n  process.command_line like (\"mkdir -p .\", \"mkdir ./*\") or\n  process.parent.executable like (\n    \"/tmp/pear/temp/*\", \"/var/tmp/buildah*\", \"/tmp/python-build.*\", \"/tmp/cliphist-wofi-img\"\n  )\n)\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"start\", \"exec_event\") and\nprocess.name == \"mkdir\" and process.parent.executable like (\n  \"/dev/shm/*\", \"/tmp/*\", \"/var/tmp/*\", \"/var/run/*\", \"/root/*\", \"/boot/*\", \"/var/www/html/*\", \"/opt/.*\"\n) and process.args like (\".*\", \"/*/.*\") and process.args_count <= 3 and not (\n  process.parent.executable like (\"/tmp/newroot/*\", \"/run/containerd/*\") or\n  process.command_line like (\"mkdir -p .\", \"mkdir ./*\") or\n  process.parent.executable like (\n    \"/tmp/pear/temp/*\", \"/var/tmp/buildah*\", \"/tmp/python-build.*\", \"/tmp/cliphist-wofi-img\"\n  )\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -73,7 +79,9 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Data Source: SentinelOne",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -110,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 101
     },
-    "id": "b15a15f2-becf-475d-aa69-45c9e0ff1c49_1",
+    "id": "b15a15f2-becf-475d-aa69-45c9e0ff1c49_101",
     "type": "security-rule"
 }

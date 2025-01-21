@@ -6,16 +6,27 @@
         "description": "This rule detects potential hex payload execution on Linux systems. Adversaries may use hex encoding to obfuscate payloads and evade detection mechanisms.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process*"
+            "logs-endpoint.events.process*",
+            "logs-crowdstrike.fdr*",
+            "logs-sentinel_one_cloud_funnel.*",
+            "endgame-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Hex Payload Execution",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and (\n  (process.name == \"xxd\" and process.args like (\"-r*\", \"-p*\")) or\n  (process.name like \"python*\" and process.command_line like \"*fromhex*\" and process.command_line like (\"*decode*\", \"*encode*\")) or\n  (process.name like \"php*\" and process.command_line like \"*hex2bin*\") or\n  (process.name like \"ruby*\" and process.command_line like \"*].pack(\\\"H*\\\")*\") or\n  (process.name like \"perl*\" and process.command_line like \"*pack(\\\"H*\\\",*\") or\n  (process.name like \"lua*\" and process.command_line like \"*tonumber(cc, 16)*\")\n)\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\n  event.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\") and\n  (\n    (process.name == \"xxd\" and process.args like (\"-r*\", \"-p*\")) or\n    (process.name like \"python*\" and process.command_line like \"*fromhex*\" and process.command_line like (\"*decode*\", \"*encode*\")) or\n    (process.name like \"php*\" and process.command_line like \"*hex2bin*\") or\n    (process.name like \"ruby*\" and process.command_line like \"*].pack(\\\"H*\\\")*\") or\n    (process.name like \"perl*\" and process.command_line like \"*pack(\\\"H*\\\",*\") or\n    (process.name like \"lua*\" and process.command_line like \"*tonumber(cc, 16)*\")\n  )\n",
         "related_integrations": [
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -60,7 +71,10 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Tactic: Execution",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Crowdstrike",
+            "Data Source: SentinelOne",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -120,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 101
     },
-    "id": "0c1e8fda-4f09-451e-bc77-a192b6cbfc32_1",
+    "id": "0c1e8fda-4f09-451e-bc77-a192b6cbfc32_101",
     "type": "security-rule"
 }

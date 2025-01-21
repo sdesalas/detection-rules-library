@@ -9,12 +9,14 @@
             "logs-endpoint.events.*",
             "endgame-*",
             "auditbeat-*",
-            "logs-auditd_manager.auditd-*"
+            "logs-auditd_manager.auditd-*",
+            "logs-crowdstrike.fdr*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Access Control List Modification via setfacl",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\nevent.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\") and\nprocess.name == \"setfacl\" and not (\n  process.command_line == \"/bin/setfacl --restore=-\" or\n  process.args == \"/var/log/journal/\"\n)\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\nevent.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\", \"executed\", \"process_started\") and\nprocess.name == \"setfacl\" and not (\n  process.command_line == \"/bin/setfacl --restore=-\" or\n  process.args == \"/var/log/journal/\"\n)\n",
         "references": [
             "https://www.uptycs.com/blog/threat-research-report-team/evasive-techniques-used-by-malicious-linux-shell-scripts"
         ],
@@ -25,6 +27,14 @@
             },
             {
                 "package": "auditd_manager",
+                "version": "^1.0.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
                 "version": "^1.0.0"
             }
         ],
@@ -70,7 +80,9 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
-            "Data Source: Auditd Manager"
+            "Data Source: Auditd Manager",
+            "Data Source: Crowdstrike",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -98,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 102
     },
-    "id": "999565a2-fc52-4d72-91e4-ba6712c0377e_2",
+    "id": "999565a2-fc52-4d72-91e4-ba6712c0377e_102",
     "type": "security-rule"
 }

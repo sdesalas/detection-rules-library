@@ -6,12 +6,13 @@
         "description": "Monitors for the execution of a file system mount followed by a chroot execution. Given enough permissions, a user within a container is capable of mounting the root file system of the host, and leveraging chroot to escape its containarized environment. This behavior pattern is very uncommon and should be investigated.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Chroot Container Escape via Mount",
-        "query": "sequence by host.id, process.parent.entity_id with maxspan=5m\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\n   process.name == \"mount\" and process.args : \"/dev/sd*\" and process.args_count >= 3 and\n   process.parent.name in (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")]\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\n   process.name == \"chroot\"]\n",
+        "query": "sequence by host.id, process.parent.entity_id with maxspan=5m\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"start\") and\n   process.name == \"mount\" and process.args : \"/dev/sd*\" and process.args_count >= 3 and\n   process.parent.name in (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")]\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"start\") and\n   process.name == \"chroot\"]\n",
         "references": [
             "https://book.hacktricks.xyz/v/portugues-ht/linux-hardening/privilege-escalation/escaping-from-limited-bash"
         ],
@@ -19,6 +20,10 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -78,7 +83,8 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Domain: Container",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -98,8 +104,8 @@
             }
         ],
         "type": "eql",
-        "version": 2
+        "version": 102
     },
-    "id": "5ae02ebc-a5de-4eac-afe6-c88de696477d_2",
+    "id": "5ae02ebc-a5de-4eac-afe6-c88de696477d_102",
     "type": "security-rule"
 }

@@ -7,16 +7,26 @@
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-crowdstrike.fdr*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Reverse Shell via Background Process",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and \nprocess.name in (\"setsid\", \"nohup\") and process.args : \"*/dev/tcp/*0>&1*\" and \nprocess.parent.name in (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\n  event.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\") and \n  process.name in (\"setsid\", \"nohup\") and process.args : \"*/dev/tcp/*0>&1*\" and \n  process.parent.name in (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -61,7 +71,9 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: Crowdstrike",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -104,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 104
     },
-    "id": "259be2d8-3b1a-4c2c-a0eb-0c8e77f35e39_4",
+    "id": "259be2d8-3b1a-4c2c-a0eb-0c8e77f35e39_104",
     "type": "security-rule"
 }

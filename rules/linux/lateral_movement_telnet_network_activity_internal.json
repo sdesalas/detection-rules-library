@@ -9,7 +9,8 @@
         ],
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -22,6 +23,10 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -60,7 +65,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -80,8 +86,8 @@
             }
         ],
         "type": "eql",
-        "version": 107
+        "version": 207
     },
-    "id": "1b21abcc-4d9f-4b08-a7f5-316f5f94b973_107",
+    "id": "1b21abcc-4d9f-4b08-a7f5-316f5f94b973_207",
     "type": "security-rule"
 }

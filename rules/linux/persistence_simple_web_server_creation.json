@@ -6,16 +6,27 @@
         "description": "This rule detects the creation of a simple HTTP web server using PHP or Python built-in modules. Adversaries may create simple HTTP web servers to establish persistence on a compromised system by uploading a reverse or command shell payload to the server web root, allowing them to regain remote access to the system if lost.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process*"
+            "logs-endpoint.events.process*",
+            "logs-crowdstrike.fdr*",
+            "logs-sentinel_one_cloud_funnel.*",
+            "endgame-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Simple HTTP Web Server Creation",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and (\n  (process.name regex~ \"\"\"php?[0-9]?\\.?[0-9]{0,2}\"\"\" and process.args == \"-S\") or\n  (process.name like \"python*\" and process.args in (\"--cgi\", \"CGIHTTPServer\"))\n)\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\n  event.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\") and\n  (\n    (process.name regex~ \"\"\"php?[0-9]?\\.?[0-9]{0,2}\"\"\" and process.args == \"-S\") or\n    (process.name like \"python*\" and process.args in (\"--cgi\", \"CGIHTTPServer\"))\n  )\n",
         "related_integrations": [
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^1.1.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -56,7 +67,10 @@
             "Tactic: Persistence",
             "Tactic: Execution",
             "Tactic: Command and Control",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: Crowdstrike",
+            "Data Source: SentinelOne",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -121,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 101
     },
-    "id": "907a26f5-3eb6-4338-a70e-6c375c1cde8a_1",
+    "id": "907a26f5-3eb6-4338-a70e-6c375c1cde8a_101",
     "type": "security-rule"
 }

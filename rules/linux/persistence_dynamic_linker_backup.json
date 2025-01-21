@@ -6,7 +6,8 @@
         "description": "Detects the copying of the Linux dynamic loader binary and subsequent file creation for the purpose of creating a backup copy. This technique was seen recently being utilized by Linux malware prior to patching the dynamic loader in order to inject and preload a malicious shared object file. This activity should never occur and if it does then it should be considered highly suspicious or malicious.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -20,6 +21,10 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -69,7 +74,8 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Threat: Orbit",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -96,8 +102,8 @@
             }
         ],
         "type": "eql",
-        "version": 109
+        "version": 209
     },
-    "id": "df6f62d9-caab-4b88-affa-044f4395a1e0_109",
+    "id": "df6f62d9-caab-4b88-affa-044f4395a1e0_209",
     "type": "security-rule"
 }

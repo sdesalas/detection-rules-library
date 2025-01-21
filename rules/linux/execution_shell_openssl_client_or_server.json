@@ -7,12 +7,13 @@
         "from": "now-9m",
         "index": [
             "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Openssl Client or Server Activity",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\") and\nprocess.name == \"openssl\" and (\n  (process.args == \"s_client\" and process.args : (\"-connect\", \"*:*\") and not process.args == \"-showcerts\") or\n  (process.args == \"s_server\" and process.args == \"-port\")\n) and\nnot process.parent.executable in (\"/pro/xymon/client/ext/awsXymonCheck.sh\", \"/opt/antidot-svc/nrpe/plugins/check_cert\")\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\", \"start\") and\n  process.name == \"openssl\" and (\n    (process.args == \"s_client\" and process.args : (\"-connect\", \"*:*\") and not process.args == \"-showcerts\") or\n    (process.args == \"s_server\" and process.args == \"-port\")\n  ) and\n  not process.parent.executable in (\"/pro/xymon/client/ext/awsXymonCheck.sh\", \"/opt/antidot-svc/nrpe/plugins/check_cert\")\n",
         "references": [
             "https://gtfobins.github.io/gtfobins/openssl/"
         ],
@@ -20,6 +21,10 @@
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -64,7 +69,8 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -107,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 102
     },
-    "id": "ad5a3757-c872-4719-8c72-12d3f08db655_2",
+    "id": "ad5a3757-c872-4719-8c72-12d3f08db655_102",
     "type": "security-rule"
 }
