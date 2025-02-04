@@ -11,7 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "User Added to the Admin Group",
-        "note": "## Triage and analysis\n\nTo thoroughly investigate the actions that occurred **after a user was elevated to administrator**, it's essential to conduct a search on the Timeline. This allows you to review and understand the sequence of events that followed the elevation, helping to identify any potentially malicious or unauthorized activities that might have taken place. **Analyzing these actions is crucial for maintaining security and ensuring that the elevation was not exploited for harmful purposes.**\n\n> **Note**:\n> This investigation guide uses the [Investigate Markdown Plugin](https://www.elastic.co/guide/en/security/master/interactive-investigation-guides.html) introduced in Elastic Stack version 8.8.0. Older Elastic Stack versions will display unrendered Markdown in this guide.\n\n**Consider reviewing these actions:**\n\n- Have persistency items been added?\n- Is any software installed after elevation?\n- Were any additional users created after elevation?\n\n!{investigate{\"label\":\"Show events after Privilege Escalation\",\"providers\":[[{\"excluded\":false,\"field\":\"host.hostname\",\"queryType\":\"phrase\",\"value\":\"{{host.hostname}}\",\"valueType\":\"string\"}]],\"relativeFrom\":\"now\",\"relativeTo\":\"now+30m\"}}\n!{investigate{\"label\":\"Show events having the same reponsible process\",\"providers\":[[{\"excluded\":false,\"field\":\"host.hostname\",\"queryType\":\"phrase\",\"value\":\"{{host.hostname}}\",\"valueType\":\"string\"},{\"excluded\":false,\"field\":\"process.entity_id\",\"queryType\":\"phrase\",\"value\":\"{{process.group_leader.entity_id}}\",\"valueType\":\"string\"}]]}}\n!{investigate{\"label\":\"Show events having the same parent process\",\"providers\":[[{\"excluded\":false,\"field\":\"host.hostname\",\"queryType\":\"phrase\",\"value\":\"{{host.hostname}}\",\"valueType\":\"string\"},{\"excluded\":false,\"field\":\"process.entity_id\",\"queryType\":\"phrase\",\"value\":\"{{process.parent.entity_id}}\",\"valueType\":\"string\"}]]}}\n",
+        "note": "## Triage and analysis\n\nTo thoroughly investigate the actions that occurred **after a user was elevated to administrator**, it's essential to conduct a search on the Timeline. This allows you to review and understand the sequence of events that followed the elevation, helping to identify any potentially malicious or unauthorized activities that might have taken place. **Analyzing these actions is crucial for maintaining security and ensuring that the elevation was not exploited for harmful purposes.**\n\n> **Note**:\n> This investigation guide uses the [Investigate Markdown Plugin](https://www.elastic.co/guide/en/security/current/interactive-investigation-guides.html) introduced in Elastic Stack version 8.8.0. Older Elastic Stack versions will display unrendered Markdown in this guide.\n\n**Consider reviewing these actions:**\n\n- Have persistency items been added?\n- Is any software installed after elevation?\n- Were any additional users created after elevation?\n\n!{investigate{\"label\":\"Show events after Privilege Escalation\",\"providers\":[[{\"excluded\":false,\"field\":\"host.hostname\",\"queryType\":\"phrase\",\"value\":\"{{host.hostname}}\",\"valueType\":\"string\"}]],\"relativeFrom\":\"now\",\"relativeTo\":\"now+30m\"}}\n!{investigate{\"label\":\"Show events having the same reponsible process\",\"providers\":[[{\"excluded\":false,\"field\":\"host.hostname\",\"queryType\":\"phrase\",\"value\":\"{{host.hostname}}\",\"valueType\":\"string\"},{\"excluded\":false,\"field\":\"process.entity_id\",\"queryType\":\"phrase\",\"value\":\"{{process.group_leader.entity_id}}\",\"valueType\":\"string\"}]]}}\n!{investigate{\"label\":\"Show events having the same parent process\",\"providers\":[[{\"excluded\":false,\"field\":\"host.hostname\",\"queryType\":\"phrase\",\"value\":\"{{host.hostname}}\",\"valueType\":\"string\"},{\"excluded\":false,\"field\":\"process.entity_id\",\"queryType\":\"phrase\",\"value\":\"{{process.parent.entity_id}}\",\"valueType\":\"string\"}]]}}\n",
         "query": "configuration where host.os.type == \"macos\" and event.type == \"change\" and\n  event.action == \"od_group_add\" and group.name:\"admin\"\n",
         "references": [
             "https://www.loobins.io/binaries/dscl/",
@@ -54,7 +54,8 @@
             "OS: macOS",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Data Source: Jamf Protect"
+            "Data Source: Jamf Protect",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -82,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "04e65517-16e9-4fc4-b7f1-94dc21ecea0d_1",
+    "id": "04e65517-16e9-4fc4-b7f1-94dc21ecea0d_2",
     "type": "security-rule"
 }

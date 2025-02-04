@@ -66,7 +66,8 @@
         "tags": [
             "Data Source: Kubernetes",
             "Tactic: Execution",
-            "Tactic: Privilege Escalation"
+            "Tactic: Privilege Escalation",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -102,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 5
+        "version": 6
     },
-    "id": "7164081a-3930-11ed-a261-0242ac120002_5",
+    "id": "7164081a-3930-11ed-a261-0242ac120002_6",
     "type": "security-rule"
 }

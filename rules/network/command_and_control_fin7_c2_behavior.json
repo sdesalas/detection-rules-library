@@ -31,7 +31,8 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Domain: Endpoint",
-            "Data Source: PAN-OS"
+            "Data Source: PAN-OS",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -64,8 +65,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 107
     },
-    "id": "4a4e23cf-78a2-449c-bac3-701924c269d3_106",
+    "id": "4a4e23cf-78a2-449c-bac3-701924c269d3_107",
     "type": "security-rule"
 }

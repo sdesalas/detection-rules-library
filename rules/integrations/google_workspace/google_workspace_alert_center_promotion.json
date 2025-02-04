@@ -66,12 +66,13 @@
             "Domain: Cloud",
             "Data Source: Google Workspace",
             "Use Case: Log Auditing",
-            "Use Case: Threat Detection"
+            "Use Case: Threat Detection",
+            "Resources: Investigation Guide"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "f1a6d0f4-95b8-11ed-9517-f661ea17fbcc_3",
+    "id": "f1a6d0f4-95b8-11ed-9517-f661ea17fbcc_4",
     "type": "security-rule"
 }

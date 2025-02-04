@@ -27,7 +27,8 @@
         "tags": [
             "Use Case: Identity and Access Audit",
             "Data Source: Okta",
-            "Tactic: Initial Access"
+            "Tactic: Initial Access",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -55,8 +56,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 303
+        "version": 304
     },
-    "id": "2e56e1bc-867a-11ee-b13e-f661ea17fbcd_303",
+    "id": "2e56e1bc-867a-11ee-b13e-f661ea17fbcd_304",
     "type": "security-rule"
 }

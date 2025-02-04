@@ -16,7 +16,8 @@
             "process.name",
             "host.id"
         ],
-        "query": "host.os.type:linux and event.category:network and event.action:(connection_attempted or connection_accepted) and \nprocess.name:kworker* and not destination.ip:(\n  10.0.0.0/8 or\n  127.0.0.0/8 or\n  169.254.0.0/16 or\n  172.16.0.0/12 or\n  192.168.0.0/16 or\n  224.0.0.0/4 or\n  \"::1\" or\n  \"FE80::/10\" or\n  \"FF00::/8\"\n) and not destination.port:(\"2049\" or \"111\" or \"892\" or \"597\")\n",
+        "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Network Activity Detected via Kworker\n\nKworker processes are integral to Linux systems, handling kernel tasks like interrupts and background activities. Adversaries may exploit these processes to mask malicious network activities, evading detection by blending in with legitimate kernel operations. The detection rule identifies suspicious network connections initiated by kworker processes, excluding trusted IP ranges and ports, to uncover potential command and control activities.\n\n### Possible investigation steps\n\n- Review the alert details to confirm the kworker process is indeed initiating network connections, focusing on the process.name field.\n- Examine the destination IP address and port to determine if the connection is to an untrusted or suspicious external network, as the rule excludes trusted IP ranges and ports.\n- Check historical data for any previous alerts or network activity involving the same kworker process to identify patterns or repeated behavior.\n- Investigate the source host for any signs of compromise or unusual activity, such as unauthorized access attempts or unexpected process executions.\n- Correlate the network activity with other security events or logs from the same timeframe to identify potential indicators of compromise or related malicious activities.\n\n### False positive analysis\n\n- Network monitoring tools or legitimate applications may occasionally use kworker processes for routine checks or updates, leading to false positives. Users can create exceptions for these specific applications by identifying their typical IP ranges and ports.\n- Internal network scanning or monitoring activities might trigger alerts. To mitigate this, users should exclude known internal IP ranges and ports used by these activities from the detection rule.\n- Automated backup or synchronization services that operate in the background could be mistaken for suspicious activity. Users should identify these services and adjust the rule to exclude their associated network traffic.\n- Some system updates or maintenance tasks might temporarily use kworker processes for network communication. Users can whitelist the IP addresses and ports associated with these tasks to prevent false alerts.\n- If a specific kworker process consistently triggers alerts without any malicious intent, users should investigate the process's behavior and, if deemed safe, add it to an exception list to avoid future false positives.\n\n### Response and remediation\n\n- Isolate the affected system from the network to prevent further malicious activity and potential lateral movement by the attacker.\n- Terminate any suspicious kworker processes identified as initiating unauthorized network connections to halt ongoing malicious activities.\n- Conduct a thorough forensic analysis of the affected system to identify any additional indicators of compromise, such as unauthorized files or processes, and remove them.\n- Update and patch the affected system to the latest security standards to close any vulnerabilities that may have been exploited.\n- Monitor network traffic for any further suspicious activity originating from other systems, indicating potential spread or persistence of the threat.\n- Escalate the incident to the security operations center (SOC) or incident response team for further investigation and to determine if additional systems are compromised.\n- Implement enhanced monitoring and logging for kworker processes and network activities to improve detection of similar threats in the future.",
+        "query": "host.os.type:linux and event.category:network and event.action:(connection_attempted or connection_accepted) and\nprocess.name:kworker* and not destination.ip:(\n  10.0.0.0/8 or\n  127.0.0.0/8 or\n  169.254.0.0/16 or\n  172.16.0.0/12 or\n  192.168.0.0/16 or\n  224.0.0.0/4 or\n  \"::1\" or\n  \"FE80::/10\" or\n  \"FF00::/8\" or\n  \"0.0.0.0\"\n) and not destination.port:(\"2049\" or \"111\" or \"892\" or \"597\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -64,7 +65,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -114,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "25d917c4-aa3c-4111-974c-286c0312ff95_6",
+    "id": "25d917c4-aa3c-4111-974c-286c0312ff95_7",
     "type": "security-rule"
 }

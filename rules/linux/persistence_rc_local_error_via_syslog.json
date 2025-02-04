@@ -11,6 +11,7 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Suspicious rc.local Error Message",
+        "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Suspicious rc.local Error Message\n\nThe rc.local script is crucial in Linux systems, executing commands at boot. Adversaries may exploit this by inserting malicious scripts to gain persistence. The detection rule monitors syslog for specific error messages linked to rc.local, such as \"Connection refused,\" indicating potential tampering. This proactive monitoring helps identify unauthorized modifications, mitigating persistent threats.\n\n### Possible investigation steps\n\n- Review the syslog entries for the specific error messages \"Connection refused,\" \"No such file or directory,\" or \"command not found\" associated with the rc.local process to understand the context and frequency of these errors.\n- Check the rc.local file for any recent modifications or unusual entries that could indicate tampering or unauthorized changes.\n- Investigate the source of the error messages by identifying any related processes or network connections that might have triggered the \"Connection refused\" error.\n- Examine the system's boot logs and startup scripts to identify any anomalies or unauthorized scripts that may have been introduced.\n- Cross-reference the timestamps of the error messages with other system logs to identify any correlated suspicious activities or changes in the system.\n\n### False positive analysis\n\n- Legitimate software updates or installations may modify the rc.local file, triggering error messages. Users can create exceptions for known update processes by identifying the specific software and excluding its related syslog entries.\n- Custom scripts or administrative tasks that intentionally modify rc.local for legitimate purposes might cause false alerts. Document these scripts and add them to an exclusion list to prevent unnecessary alerts.\n- Network configuration changes can lead to temporary \"Connection refused\" errors. If these changes are expected, users should temporarily adjust the monitoring rule to ignore these specific messages during the maintenance window.\n- System misconfigurations or missing dependencies might result in \"No such file or directory\" or \"command not found\" errors. Regularly audit system configurations and ensure all necessary files and commands are correctly installed to minimize these false positives.\n\n### Response and remediation\n\n- Isolate the affected system from the network to prevent further unauthorized access or spread of potential malware.\n- Review the rc.local file for unauthorized modifications and restore it from a known good backup if tampering is confirmed.\n- Conduct a thorough scan of the system using updated antivirus and anti-malware tools to identify and remove any malicious scripts or software.\n- Check for additional persistence mechanisms by reviewing other boot or logon initialization scripts and scheduled tasks.\n- Escalate the incident to the security operations team for further investigation and to determine if other systems are affected.\n- Implement enhanced monitoring on the affected system and similar systems to detect any future unauthorized changes to boot scripts.\n- Review and update access controls and permissions to ensure that only authorized personnel can modify critical system files like rc.local.",
         "query": "host.os.type:linux and event.dataset:system.syslog and process.name:rc.local and\nmessage:(\"Connection refused\" or \"No such file or directory\" or \"command not found\")\n",
         "references": [
             "https://www.intezer.com/blog/malware-analysis/hiddenwasp-malware-targeting-linux-systems/",
@@ -54,7 +55,8 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -82,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "69c116bb-d86f-48b0-857d-3648511a6cac_2",
+    "id": "69c116bb-d86f-48b0-857d-3648511a6cac_3",
     "type": "security-rule"
 }

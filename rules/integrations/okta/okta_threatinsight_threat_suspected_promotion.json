@@ -71,12 +71,13 @@
         ],
         "tags": [
             "Use Case: Identity and Access Audit",
-            "Data Source: Okta"
+            "Data Source: Okta",
+            "Resources: Investigation Guide"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 409
+        "version": 410
     },
-    "id": "6885d2ae-e008-4762-b98a-e8e1cd3a81e9_409",
+    "id": "6885d2ae-e008-4762-b98a-e8e1cd3a81e9_410",
     "type": "security-rule"
 }

@@ -13,6 +13,7 @@
         "license": "Elastic License v2",
         "machine_learning_job_id": "packetbeat_rare_server_domain",
         "name": "Unusual Network Destination Domain Name",
+        "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Unusual Network Destination Domain Name\n\nMachine learning models analyze network traffic to identify atypical domain names, which may indicate malicious activities like phishing or malware communication. Adversaries exploit uncommon domains for initial access or command-and-control. This detection rule leverages ML to flag these anomalies, aiding analysts in identifying potential threats early.\n\n### Possible investigation steps\n\n- Review the domain name flagged by the alert to determine if it is known for malicious activity or if it is newly registered, using threat intelligence sources and domain reputation services.\n- Analyze the network traffic associated with the domain to identify the source IP address and any related communication patterns, such as frequency and data volume.\n- Check the user or system that initiated the connection to the unusual domain for any recent changes or suspicious activities, such as software installations or configuration changes.\n- Investigate any related alerts or logs that might provide additional context, such as other unusual domain requests or failed login attempts, to identify potential patterns or correlations.\n- Assess the endpoint security logs for signs of malware or unauthorized access attempts that could be linked to the unusual domain activity.\n\n### False positive analysis\n\n- Legitimate software updates or downloads from uncommon domains can trigger false positives. Users should maintain a list of known software vendors and their associated domains to exclude these from alerts.\n- Internal testing or development environments may use non-standard domain names. Organizations should document these domains and configure exceptions to prevent unnecessary alerts.\n- Newly registered domains for legitimate business purposes might be flagged. Regularly update the list of approved domains as new business initiatives arise.\n- Third-party services or APIs that use unique domain names can cause false positives. Identify and whitelist these services to reduce noise in alerts.\n- Temporary or one-time use domains for events or campaigns should be monitored and excluded as needed to avoid repeated false positives.\n\n### Response and remediation\n\n- Isolate the affected system from the network to prevent further communication with the suspicious domain and potential spread of malware.\n- Conduct a thorough scan of the isolated system using updated antivirus and anti-malware tools to identify and remove any malicious software.\n- Review and analyze network logs to identify any other systems that may have communicated with the unusual domain and apply similar isolation and scanning procedures to those systems.\n- Change passwords and credentials associated with the affected system and any potentially compromised accounts to prevent unauthorized access.\n- Escalate the incident to the security operations center (SOC) or incident response team for further investigation and to determine if additional containment measures are necessary.\n- Implement network-level blocking of the identified unusual domain across the organization to prevent future access attempts.\n- Update threat intelligence feeds and detection systems with indicators of compromise (IOCs) related to the unusual domain to enhance future detection capabilities.",
         "references": [
             "https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html"
         ],
@@ -33,11 +34,12 @@
         "tags": [
             "Use Case: Threat Detection",
             "Rule Type: ML",
-            "Rule Type: Machine Learning"
+            "Rule Type: Machine Learning",
+            "Resources: Investigation Guide"
         ],
         "type": "machine_learning",
-        "version": 104
+        "version": 105
     },
-    "id": "17e68559-b274-4948-ad0b-f8415bb31126_104",
+    "id": "17e68559-b274-4948-ad0b-f8415bb31126_105",
     "type": "security-rule"
 }

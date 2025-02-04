@@ -14,6 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Manual Dracut Execution",
+        "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Manual Dracut Execution\n\nDracut is a utility in Linux systems used to create initramfs images, essential for booting. Adversaries might exploit Dracut to craft malicious initramfs, embedding backdoors for persistence. The detection rule identifies unusual Dracut executions by scrutinizing process origins and excluding legitimate parent processes, flagging potential unauthorized use.\n\n### Possible investigation steps\n\n- Review the process details to confirm the execution of the dracut command, focusing on the process.name and process.parent.executable fields to identify any unusual parent processes.\n- Examine the command line arguments used with the dracut process by checking the process.parent.command_line field to understand the context of its execution.\n- Investigate the user account associated with the dracut execution to determine if it aligns with expected administrative activity or if it indicates potential unauthorized access.\n- Check the system logs and any related security alerts around the time of the dracut execution to identify any correlated suspicious activities or anomalies.\n- Assess the system for any changes to the initramfs image or other boot-related files that could indicate tampering or the presence of backdoors.\n\n### False positive analysis\n\n- Legitimate system updates or kernel installations may trigger the rule. To handle this, users can create exceptions for processes originating from known update paths like /usr/lib/kernel/* or /etc/kernel/install.d/*.\n- Automated scripts or maintenance tasks that use dracut for legitimate purposes might be flagged. Users should identify these scripts and add their parent process names, such as dracut-install or run-parts, to the exclusion list.\n- Custom administrative scripts executed by trusted users could be mistaken for suspicious activity. Users can exclude specific command lines or arguments associated with these scripts, such as /usr/bin/dracut-rebuild, to prevent false positives.\n- Temporary or testing environments where dracut is used for non-malicious testing purposes might trigger alerts. Users can exclude these environments by specifying unique parent process paths or names that are characteristic of the testing setup.\n\n### Response and remediation\n\n- Immediately isolate the affected system from the network to prevent potential lateral movement or data exfiltration by the adversary.\n- Terminate any suspicious or unauthorized dracut processes identified on the system to halt any ongoing malicious activity.\n- Conduct a thorough review of the initramfs images on the affected system to identify and remove any unauthorized or malicious modifications.\n- Restore the system's initramfs from a known good backup to ensure the integrity of the boot process.\n- Implement monitoring for any future unauthorized dracut executions by setting up alerts for similar process activities, ensuring quick detection and response.\n- Escalate the incident to the security operations team for further investigation and to determine if additional systems are affected.\n- Review and update access controls and permissions to limit the ability to execute dracut to only authorized personnel, reducing the risk of future exploitation.",
         "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\nevent.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\") and\nprocess.name == \"dracut\" and process.parent.executable != null and not (\n  process.parent.executable like~ (\n    \"/usr/lib/kernel/*\", \"/etc/kernel/install.d/*\", \"/var/lib/dpkg/info/dracut.postinst\",\n    \"/tmp/newroot/*\", \"/usr/lib/module-init-tools/*\"\n  ) or\n  process.parent.name in (\n    \"dracut-install\", \"dracut\", \"run-parts\", \"weak-modules\", \"mkdumprd\", \"new-kernel-pkg\", \"sudo\"\n  ) or\n  process.parent.args like~ (\"/usr/bin/dracut-rebuild\", \"/var/tmp/rpm-tmp.*\") or\n  process.parent.command_line like~ \"/bin/sh -c if command -v mkinitcpio*\"\n)\n",
         "related_integrations": [
             {
@@ -84,7 +85,8 @@
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Data Source: Crowdstrike",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -127,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "834ee026-f9f9-4ec7-b5e0-7fbfe84765f4_1",
+    "id": "834ee026-f9f9-4ec7-b5e0-7fbfe84765f4_2",
     "type": "security-rule"
 }

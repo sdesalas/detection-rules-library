@@ -11,6 +11,7 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Process Started with Executable Stack",
+        "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Process Started with Executable Stack\n\nIn Linux environments, processes with executable stacks can pose security risks as they may allow code execution from the stack, a behavior often exploited by attackers to run arbitrary code. Adversaries might leverage this to execute malicious scripts or commands. The detection rule monitors syslog for kernel messages indicating such processes, flagging potential threats for further investigation.\n\n### Possible investigation steps\n\n- Review the syslog entries to identify the specific process that triggered the alert, focusing on the message field containing \"started with executable stack\".\n- Investigate the process name and associated command-line arguments to understand the nature and purpose of the process.\n- Check the process's parent process to determine if it was spawned by a legitimate application or service.\n- Analyze the user account under which the process is running to assess if it aligns with expected behavior and permissions.\n- Look for any recent changes or anomalies in the system that might correlate with the process start time, such as new software installations or configuration changes.\n- Cross-reference the process with known threat intelligence sources to identify if it matches any known malicious patterns or indicators.\n\n### False positive analysis\n\n- Development tools and environments may intentionally use executable stacks for legitimate purposes, such as certain debugging or testing scenarios. Users can create exceptions for these specific tools by identifying their process names and excluding them from the detection rule.\n- Some legacy applications might require executable stacks due to outdated coding practices. Users should verify the necessity of these applications and, if deemed non-threatening, add them to an exclusion list based on their process names or paths.\n- Custom scripts or applications developed in-house might inadvertently use executable stacks. Conduct a review of these scripts to ensure they are safe, and if so, exclude them from monitoring by specifying their unique identifiers.\n- Certain system utilities or libraries might trigger this rule during normal operations. Users should consult documentation or vendor support to confirm if these are expected behaviors and exclude them accordingly if they pose no risk.\n\n### Response and remediation\n\n- Immediately isolate the affected system from the network to prevent potential lateral movement by the attacker.\n- Terminate the suspicious process identified with an executable stack to halt any ongoing malicious activity.\n- Conduct a thorough analysis of the process and its associated files to identify any malicious payloads or scripts that may have been executed.\n- Restore the system from a known good backup if any unauthorized changes or malware are detected.\n- Apply security patches and updates to the operating system and applications to mitigate vulnerabilities that could be exploited by similar threats.\n- Implement stack protection mechanisms such as stack canaries or non-executable stack configurations to prevent future exploitation.\n- Escalate the incident to the security operations team for further investigation and to assess the need for additional security measures.",
         "query": "host.os.type:\"linux\" and event.dataset:\"system.syslog\" and process.name:\"kernel\" and\nmessage:\"started with executable stack\"\n",
         "related_integrations": [
             {
@@ -49,7 +50,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Data Source: System"
+            "Data Source: System",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -77,8 +79,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "fc5105ce-2584-48b6-a0cf-9ace7eeffd3c_1",
+    "id": "fc5105ce-2584-48b6-a0cf-9ace7eeffd3c_2",
     "type": "security-rule"
 }

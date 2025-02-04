@@ -66,7 +66,8 @@
             "Tactic: Persistence",
             "Use Case: Identity and Access Audit",
             "Data Source: Okta",
-            "Domain: Cloud"
+            "Domain: Cloud",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -93,8 +94,8 @@
             }
         ],
         "type": "eql",
-        "version": 412
+        "version": 413
     },
-    "id": "cd89602e-9db0-48e3-9391-ae3bf241acd8_412",
+    "id": "cd89602e-9db0-48e3-9391-ae3bf241acd8_413",
     "type": "security-rule"
 }

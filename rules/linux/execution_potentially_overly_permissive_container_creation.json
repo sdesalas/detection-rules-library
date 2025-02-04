@@ -15,6 +15,7 @@
         "new_terms_fields": [
             "process.parent.executable"
         ],
+        "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Privileged Docker Container Creation\n\nDocker containers are lightweight, portable units that package applications and their dependencies. The `--privileged` flag grants containers extensive host access, posing security risks. Adversaries exploit this to escalate privileges or escape containers. The detection rule identifies unusual privileged container creation by monitoring specific process actions and arguments, helping to flag potential threats early.\n\n### Possible investigation steps\n\n- Review the alert details to confirm the presence of the `--privileged` flag in the process arguments, as indicated by the query field `process.args:(run and --privileged)`.\n- Identify the parent process of the Docker command by examining the `event.category:process` and `event.type:start` fields to determine if it originates from an unusual or unauthorized source.\n- Check the user account associated with the Docker process to verify if it has legitimate access and permissions to create privileged containers.\n- Investigate the timeline of events leading up to the container creation by reviewing related logs and events around the `event.action:exec` to identify any suspicious activities or patterns.\n- Assess the container's configuration and running processes to determine if any unauthorized or potentially harmful applications are being executed within the container.\n- Correlate the alert with other security events or alerts in the environment to identify potential indicators of compromise or broader attack patterns.\n\n### False positive analysis\n\n- Routine administrative tasks may trigger the rule if system administrators use the --privileged flag for legitimate container management. To handle this, identify and document these tasks, then create exceptions for known administrative processes.\n- Automated deployment scripts that require elevated privileges might also cause false positives. Review these scripts and whitelist them by specifying the parent process or script name in the exclusion criteria.\n- Development environments often use privileged containers for testing purposes. To reduce noise, exclude processes originating from known development machines or user accounts.\n- Some monitoring or security tools may use privileged containers for legitimate purposes. Verify these tools and add them to the exception list to prevent unnecessary alerts.\n- Regularly review and update the exclusion list to ensure it reflects current operational practices and does not inadvertently allow malicious activity.\n\n### Response and remediation\n\n- Immediately isolate the affected container to prevent further interaction with the host system. This can be done by stopping the container using `docker stop <container_id>`.\n\n- Review and revoke any unnecessary permissions or access rights granted to the container. Ensure that the `--privileged` flag is not used unless absolutely necessary.\n\n- Conduct a thorough investigation of the container's filesystem and running processes to identify any malicious activity or unauthorized changes. Use tools like `docker exec` to inspect the container's environment.\n\n- Check for any signs of container escape or host compromise by reviewing system logs and monitoring for unusual activity on the host machine.\n\n- If a compromise is confirmed, initiate a full incident response procedure, including forensic analysis and system restoration from clean backups.\n\n- Update and patch the Docker daemon and any related software to the latest versions to mitigate known vulnerabilities that could be exploited.\n\n- Enhance monitoring and alerting for privileged container creation by integrating additional security tools or services that provide real-time threat intelligence and anomaly detection.",
         "query": "host.os.type:linux and event.category:process and event.type:start and event.action:exec and process.name:docker and\nprocess.args:(run and --privileged)\n",
         "related_integrations": [
             {
@@ -64,7 +65,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -112,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "a80d96cd-1164-41b3-9852-ef58724be496_2",
+    "id": "a80d96cd-1164-41b3-9852-ef58724be496_3",
     "type": "security-rule"
 }

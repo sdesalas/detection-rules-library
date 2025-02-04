@@ -50,7 +50,8 @@
             "Use Case: Identity and Access Audit",
             "Data Source: Okta",
             "Use Case: Network Security Monitoring",
-            "Tactic: Defense Evasion"
+            "Tactic: Defense Evasion",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -78,8 +79,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 410
+        "version": 411
     },
-    "id": "c749e367-a069-4a73-b1f2-43a3798153ad_410",
+    "id": "c749e367-a069-4a73-b1f2-43a3798153ad_411",
     "type": "security-rule"
 }

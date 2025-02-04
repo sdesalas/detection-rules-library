@@ -63,7 +63,8 @@
             "Data Source: AWS EC2",
             "Use Case: Identity and Access Audit",
             "Tactic: Privilege Escalation",
-            "Tactic: Lateral Movement"
+            "Tactic: Lateral Movement",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -113,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "873b5452-074e-11ef-852e-f661ea17fbcc_2",
+    "id": "873b5452-074e-11ef-852e-f661ea17fbcc_3",
     "type": "security-rule"
 }

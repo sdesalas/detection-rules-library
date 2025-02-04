@@ -75,7 +75,8 @@
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Data Source: Auditd Manager",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -96,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "3688577a-d196-11ec-90b0-f661ea17fbce_110",
+    "id": "3688577a-d196-11ec-90b0-f661ea17fbce_111",
     "type": "security-rule"
 }

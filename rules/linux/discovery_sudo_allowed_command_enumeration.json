@@ -14,7 +14,8 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Sudo Command Enumeration Detected",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\n  event.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\") and process.name == \"sudo\" and process.args == \"-l\" and\n  process.args_count == 2 and process.parent.name in (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\") and \n  not process.args == \"dpkg\"\n",
+        "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Sudo Command Enumeration Detected\n\nThe sudo command in Linux environments allows users to execute commands with elevated privileges, typically as the root user. Attackers may exploit this by using the `sudo -l` command to list permissible commands, potentially identifying paths to escalate privileges. The detection rule identifies this behavior by monitoring for the execution of `sudo -l` from common shell environments, flagging potential misuse for privilege escalation.\n\n### Possible investigation steps\n\n- Review the process execution details to confirm the presence of the `sudo -l` command, ensuring the process name is \"sudo\" and the arguments include \"-l\" with an argument count of 2.\n- Identify the parent process of the `sudo` command to determine the shell environment used, checking if it matches any of the specified shells like \"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", or \"fish\".\n- Investigate the user account that executed the `sudo -l` command to assess if the activity aligns with their typical behavior or if it appears suspicious.\n- Check for any recent changes in user permissions or sudoers configuration that might indicate unauthorized modifications.\n- Correlate this event with other logs or alerts to identify any subsequent suspicious activities that might suggest privilege escalation attempts.\n\n### False positive analysis\n\n- System administrators frequently use the sudo -l command to verify their permissions. To reduce noise, consider excluding specific user accounts or groups known for legitimate use.\n- Automated scripts or configuration management tools may execute sudo -l as part of routine checks. Identify these scripts and exclude their execution paths or parent processes from the rule.\n- Some software installations or updates might invoke sudo -l to check permissions. Monitor and document these processes, then create exceptions for known benign software.\n- Developers or testers might use sudo -l during debugging or testing phases. Coordinate with development teams to identify and exclude these activities when they are part of approved workflows.\n\n### Response and remediation\n\n- Immediately isolate the affected system from the network to prevent potential lateral movement by the attacker.\n- Review the sudoers file on the affected system to identify any unauthorized or suspicious entries that may have been added or modified, and revert any changes to their original state.\n- Terminate any suspicious processes initiated by the user who executed the `sudo -l` command, especially if they are not part of normal operations.\n- Reset the password of the user account involved in the alert to prevent further unauthorized access.\n- Conduct a thorough review of system logs to identify any additional suspicious activity or commands executed by the user, and assess the scope of potential compromise.\n- Escalate the incident to the security operations team for further investigation and to determine if additional systems may be affected.\n- Implement additional monitoring and alerting for similar `sudo -l` command executions across the environment to enhance detection and response capabilities.",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\n  event.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\") and process.name == \"sudo\" and process.args == \"-l\" and\n  process.args_count == 2 and process.parent.name in (\"bash\", \"dash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\") and\n  not process.args == \"dpkg\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -78,7 +79,8 @@
             "Data Source: Elastic Defend",
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -99,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "28d39238-0c01-420a-b77a-24e5a7378663_106",
+    "id": "28d39238-0c01-420a-b77a-24e5a7378663_107",
     "type": "security-rule"
 }

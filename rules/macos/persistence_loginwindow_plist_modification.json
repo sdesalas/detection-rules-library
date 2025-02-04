@@ -58,7 +58,8 @@
             "OS: macOS",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -94,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 108
+        "version": 109
     },
-    "id": "ac412404-57a5-476f-858f-4e8fbb4f48d8_108",
+    "id": "ac412404-57a5-476f-858f-4e8fbb4f48d8_109",
     "type": "security-rule"
 }

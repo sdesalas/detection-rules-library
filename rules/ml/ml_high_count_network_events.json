@@ -13,6 +13,7 @@
         "license": "Elastic License v2",
         "machine_learning_job_id": "high_count_network_events",
         "name": "Spike in Network Traffic",
+        "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Spike in Network Traffic\nMachine learning models analyze network traffic patterns to identify anomalies, such as unexpected spikes. These spikes may indicate malicious activities like data exfiltration or denial-of-service attacks. Adversaries exploit network vulnerabilities to flood traffic or extract data. The 'Spike in Network Traffic' rule leverages ML to flag unusual traffic surges, aiding in early threat detection and response.\n\n### Possible investigation steps\n\n- Review the timestamp and duration of the traffic spike to determine if it correlates with any scheduled business activities or known events.\n- Analyze the source and destination IP addresses involved in the traffic spike to identify any unfamiliar or suspicious entities.\n- Examine the types of network protocols and services involved in the spike to assess if they align with typical network usage patterns.\n- Check for any recent changes in network configurations or security policies that might explain the unusual traffic patterns.\n- Investigate any associated user accounts or devices to determine if they have been compromised or are exhibiting unusual behavior.\n- Cross-reference the spike with other security alerts or logs to identify potential patterns or related incidents.\n\n### False positive analysis\n\n- Business-related traffic surges: Regular spikes due to legitimate business activities, such as marketing campaigns or software updates, can trigger false positives. Users should analyze historical traffic patterns and create exceptions for known business events.\n- Scheduled data backups: Routine data backups can cause significant network traffic. Users can exclude these by identifying backup schedules and configuring the rule to ignore traffic during these times.\n- Software updates and patches: Large-scale updates from software vendors can lead to temporary traffic spikes. Users should maintain a list of update schedules and whitelist these events to prevent false alerts.\n- Internal network scans: Regular security scans or inventory checks within the organization may cause traffic spikes. Users should document these activities and adjust the rule to recognize them as non-threatening.\n- Cloud service synchronization: Synchronization activities with cloud services can generate high traffic volumes. Users should identify and exclude these regular sync patterns to reduce false positives.\n\n### Response and remediation\n\n- Immediately isolate affected systems from the network to prevent further data exfiltration or traffic flooding.\n- Conduct a thorough analysis of network logs to identify the source and destination of the traffic spike, focusing on any unauthorized or suspicious IP addresses.\n- Block identified malicious IP addresses and domains at the firewall and update intrusion prevention systems to prevent further access.\n- If data exfiltration is suspected, perform a data integrity check to assess any potential data loss or compromise.\n- Notify the incident response team to assess the situation and determine if further escalation is necessary, including potential involvement of law enforcement if data theft is confirmed.\n- Review and update network access controls and permissions to ensure only authorized users and devices have access to sensitive data and systems.\n- Implement enhanced monitoring and alerting for similar traffic patterns to improve early detection and response to future incidents.",
         "references": [
             "https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html"
         ],
@@ -33,11 +34,12 @@
         "tags": [
             "Use Case: Threat Detection",
             "Rule Type: ML",
-            "Rule Type: Machine Learning"
+            "Rule Type: Machine Learning",
+            "Resources: Investigation Guide"
         ],
         "type": "machine_learning",
-        "version": 104
+        "version": 105
     },
-    "id": "b240bfb8-26b7-4e5e-924e-218144a3fa71_104",
+    "id": "b240bfb8-26b7-4e5e-924e-218144a3fa71_105",
     "type": "security-rule"
 }

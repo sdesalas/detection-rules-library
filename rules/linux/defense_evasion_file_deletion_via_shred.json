@@ -14,6 +14,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "File Deletion via Shred",
+        "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating File Deletion via Shred\n\nThe `shred` command in Linux is used to securely delete files by overwriting them, making recovery difficult. Adversaries exploit this to erase traces of malicious activity, hindering forensic analysis. The detection rule identifies suspicious use of `shred` by monitoring its execution with specific arguments, excluding benign processes like `logrotate`, to flag potential defense evasion attempts.\n\n### Possible investigation steps\n\n- Review the process execution details to confirm the use of the `shred` command with suspicious arguments such as \"-u\", \"--remove\", \"-z\", or \"--zero\".\n- Identify the user account associated with the `shred` process to determine if the activity aligns with expected behavior for that user.\n- Investigate the parent process of `shred` to ensure it is not `logrotate` and assess whether the parent process is legitimate or potentially malicious.\n- Examine the timeline of events leading up to and following the `shred` execution to identify any related suspicious activities or file modifications.\n- Check for any other alerts or logs related to the same host or user to identify patterns or additional indicators of compromise.\n- Assess the impact of the file deletion by determining which files were targeted and whether they are critical to system operations or security.\n\n### False positive analysis\n\n- Logrotate processes may trigger false positives as they use shred for legitimate log file management. Exclude logrotate as a parent process in detection rules to prevent these alerts.\n- System maintenance scripts that securely delete temporary files using shred can cause false positives. Identify and whitelist these scripts to reduce unnecessary alerts.\n- Backup or cleanup operations that involve shredding old data might be flagged. Review and exclude these operations if they are part of routine system management.\n- User-initiated file deletions for privacy or space management can appear suspicious. Educate users on the implications of using shred and consider excluding known user actions if they are frequent and benign.\n\n### Response and remediation\n\n- Immediately isolate the affected system from the network to prevent further malicious activity or data exfiltration.\n- Terminate any active `shred` processes that are not associated with legitimate applications like `logrotate` to halt ongoing file deletion.\n- Conduct a thorough review of recent system logs and file access records to identify any additional malicious activities or files that may have been created or modified by the adversary.\n- Restore any critical files that were deleted using `shred` from the most recent backup, ensuring the integrity and security of the backup source.\n- Escalate the incident to the security operations center (SOC) or incident response team for further investigation and to determine if additional systems are affected.\n- Implement enhanced monitoring on the affected system and similar environments to detect any future unauthorized use of `shred` or similar file deletion tools.\n- Review and update endpoint security configurations to prevent unauthorized execution of file deletion commands by non-administrative users.",
         "query": "process where host.os.type == \"linux\" and event.type == \"start\" and process.name == \"shred\" and process.args in (\n  \"-u\", \"--remove\", \"-z\", \"--zero\"\n) and not process.parent.name == \"logrotate\"\n",
         "related_integrations": [
             {
@@ -68,7 +69,8 @@
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
             "Data Source: Crowdstrike",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -96,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 209
+        "version": 210
     },
-    "id": "a1329140-8de3-4445-9f87-908fb6d824f4_209",
+    "id": "a1329140-8de3-4445-9f87-908fb6d824f4_210",
     "type": "security-rule"
 }

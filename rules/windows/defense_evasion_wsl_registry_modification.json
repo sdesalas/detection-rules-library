@@ -73,7 +73,8 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Data Source: Microsoft Defender for Endpoint",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -101,8 +102,8 @@
         "timeline_title": "Comprehensive Registry Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 208
+        "version": 209
     },
-    "id": "a1699af0-8e1e-4ed0-8ec1-89783538a061_208",
+    "id": "a1699af0-8e1e-4ed0-8ec1-89783538a061_209",
     "type": "security-rule"
 }

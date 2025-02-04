@@ -70,7 +70,8 @@
             "Domain: Cloud",
             "Data Source: Microsoft 365",
             "Use Case: Configuration Audit",
-            "Tactic: Initial Access"
+            "Tactic: Initial Access",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -91,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 107
+        "version": 108
     },
-    "id": "48819484-9826-4083-9eba-1da74cd0eaf2_107",
+    "id": "48819484-9826-4083-9eba-1da74cd0eaf2_108",
     "type": "security-rule"
 }

@@ -49,7 +49,8 @@
         "tags": [
             "Use Case: Identity and Access Audit",
             "Data Source: Okta",
-            "Tactic: Impact"
+            "Tactic: Impact",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -70,8 +71,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 410
+        "version": 411
     },
-    "id": "edb91186-1c7e-4db8-b53e-bfa33a1a0a8a_410",
+    "id": "edb91186-1c7e-4db8-b53e-bfa33a1a0a8a_411",
     "type": "security-rule"
 }

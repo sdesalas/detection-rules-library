@@ -77,7 +77,8 @@
             "Use Case: Threat Detection",
             "Use Case: Vulnerability",
             "Tactic: Command and Control",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -124,8 +125,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "e80ee207-9505-49ab-8ca8-bc57d80e2cab_1",
+    "id": "e80ee207-9505-49ab-8ca8-bc57d80e2cab_2",
     "type": "security-rule"
 }

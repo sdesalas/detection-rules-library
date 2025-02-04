@@ -52,7 +52,8 @@
             "Data Source: CyberArk PAS",
             "Use Case: Log Auditing",
             "Use Case: Threat Detection",
-            "Tactic: Privilege Escalation"
+            "Tactic: Privilege Escalation",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -82,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 102
+        "version": 103
     },
-    "id": "c5f81243-56e0-47f9-b5bb-55a5ed89ba57_102",
+    "id": "c5f81243-56e0-47f9-b5bb-55a5ed89ba57_103",
     "type": "security-rule"
 }

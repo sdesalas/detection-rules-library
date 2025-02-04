@@ -15,6 +15,7 @@
             "v3_linux_system_process_discovery"
         ],
         "name": "Unusual Linux Process Discovery Activity",
+        "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Unusual Linux Process Discovery Activity\n\nIn Linux environments, process discovery commands help users and administrators understand active processes, aiding in system management and troubleshooting. However, adversaries can exploit these commands to map running applications, potentially identifying vulnerabilities for privilege escalation or persistence. The detection rule leverages machine learning to identify atypical usage patterns, flagging potential threats when process discovery occurs from unexpected user contexts, thus helping to preemptively mitigate risks associated with compromised accounts.\n\n### Possible investigation steps\n\n- Review the user context from which the process discovery command was executed to determine if the user account is expected to perform such actions.\n- Check the command history for the user account to identify any other unusual or unauthorized commands executed around the same time.\n- Analyze the process discovery command details, including the specific command used and its parameters, to understand the intent and scope of the activity.\n- Investigate the source IP address and host from which the command was executed to verify if it aligns with known and authorized devices for the user.\n- Examine recent authentication logs for the user account to identify any suspicious login attempts or anomalies in login patterns.\n- Correlate the activity with any other alerts or logs that might indicate a broader attack pattern or compromise, such as privilege escalation attempts or lateral movement.\n\n### False positive analysis\n\n- System administrators performing routine maintenance or troubleshooting may trigger the rule. To manage this, create exceptions for known administrator accounts or specific maintenance windows.\n- Automated scripts or monitoring tools that regularly check system processes can be mistaken for unusual activity. Identify these scripts and whitelist their execution context to prevent false alerts.\n- New software installations or updates might involve process discovery commands as part of their setup. Monitor installation activities and temporarily adjust the rule sensitivity during these periods.\n- Developers or power users who frequently use process discovery commands for legitimate purposes can be excluded by adding their user accounts to an exception list, ensuring their activities do not trigger false positives.\n- Training or testing environments where process discovery is part of normal operations should be configured with separate rules or exceptions to avoid unnecessary alerts.\n\n### Response and remediation\n\n- Immediately isolate the affected system from the network to prevent further unauthorized access or lateral movement by the threat actor.\n- Terminate any suspicious processes identified during the investigation to halt potential malicious activity.\n- Change passwords for the compromised account and any other accounts that may have been accessed using the same credentials to prevent further unauthorized access.\n- Conduct a thorough review of system logs and user activity to identify any additional signs of compromise or unauthorized access attempts.\n- Restore the system from a known good backup if any malicious modifications or persistence mechanisms are detected.\n- Implement additional monitoring on the affected system and similar environments to detect any recurrence of unusual process discovery activity.\n- Escalate the incident to the security operations team for further analysis and to determine if broader organizational impacts need to be addressed.",
         "related_integrations": [
             {
                 "package": "auditd_manager",
@@ -35,7 +36,8 @@
             "Use Case: Threat Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Tactic: Discovery"
+            "Tactic: Discovery",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -55,8 +57,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 104
+        "version": 105
     },
-    "id": "5c983105-4681-46c3-9890-0c66d05e776b_104",
+    "id": "5c983105-4681-46c3-9890-0c66d05e776b_105",
     "type": "security-rule"
 }

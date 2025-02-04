@@ -13,6 +13,7 @@
         "license": "Elastic License v2",
         "machine_learning_job_id": "high_count_network_denies",
         "name": "Spike in Firewall Denies",
+        "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Spike in Firewall Denies\n\nFirewalls and ACLs are critical in controlling network traffic, blocking unauthorized access. Adversaries may exploit misconfigurations or launch attacks like reconnaissance or denial-of-service to overwhelm these defenses. The 'Spike in Firewall Denies' detection rule leverages machine learning to identify unusual surges in denied traffic, signaling potential misconfigurations or malicious activities.\n\n### Possible investigation steps\n\n- Review the time frame and source IP addresses associated with the spike in denied traffic to identify any patterns or anomalies.\n- Check the firewall and ACL logs for any recent changes or misconfigurations that could have led to the increase in denied traffic.\n- Investigate the destination IP addresses and ports targeted by the denied traffic to determine if they are associated with known malicious activity or if they are legitimate services.\n- Analyze the volume and frequency of the denied requests to assess whether they align with typical denial-of-service attack patterns or reconnaissance activities.\n- Correlate the denied traffic with other security alerts or logs to identify any related suspicious activities or potential indicators of compromise within the network.\n\n### False positive analysis\n\n- Routine network scans by security tools or IT teams may trigger spikes in denied traffic. Regularly review and whitelist known IP addresses or tools to prevent these from being flagged.\n- Misconfigured applications that frequently attempt unauthorized access can cause false positives. Identify and correct these configurations to reduce unnecessary alerts.\n- Legitimate but high-volume business applications might generate traffic patterns similar to reconnaissance activities. Monitor and document these applications, and create exceptions for their traffic patterns.\n- Scheduled maintenance or updates can lead to temporary spikes in denied traffic. Coordinate with IT teams to anticipate these events and adjust monitoring rules accordingly.\n- Internal network changes, such as new device deployments or network architecture updates, might cause unexpected traffic patterns. Ensure these changes are communicated and accounted for in the firewall rules to minimize false positives.\n\n### Response and remediation\n\n- Immediately isolate affected systems or segments of the network to prevent further unauthorized access or potential spread of malicious activity.\n- Analyze the denied traffic logs to identify the source IP addresses and block them at the firewall or ACL level to prevent further attempts.\n- Review and correct any misconfigurations in firewall rules or ACLs that may have contributed to the spike in denied traffic.\n- Conduct a thorough investigation to determine if the spike is related to a denial-of-service attack and, if confirmed, engage with your internet service provider (ISP) for additional support and mitigation strategies.\n- If malicious activity is suspected, escalate the incident to the security operations center (SOC) or incident response team for further analysis and response.\n- Implement additional monitoring and alerting for similar patterns of denied traffic to enhance early detection of potential threats.\n- Document the incident, including actions taken and lessons learned, to improve future response efforts and update incident response plans accordingly.",
         "references": [
             "https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html"
         ],
@@ -33,11 +34,12 @@
         "tags": [
             "Use Case: Threat Detection",
             "Rule Type: ML",
-            "Rule Type: Machine Learning"
+            "Rule Type: Machine Learning",
+            "Resources: Investigation Guide"
         ],
         "type": "machine_learning",
-        "version": 104
+        "version": 105
     },
-    "id": "eaa77d63-9679-4ce3-be25-3ba8b795e5fa_104",
+    "id": "eaa77d63-9679-4ce3-be25-3ba8b795e5fa_105",
     "type": "security-rule"
 }

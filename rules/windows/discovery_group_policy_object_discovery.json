@@ -88,7 +88,8 @@
             "Data Source: Microsoft Defender for Endpoint",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -109,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 210
+        "version": 211
     },
-    "id": "94a401ba-4fa2-455c-b7ae-b6e037afc0b7_210",
+    "id": "94a401ba-4fa2-455c-b7ae-b6e037afc0b7_211",
     "type": "security-rule"
 }

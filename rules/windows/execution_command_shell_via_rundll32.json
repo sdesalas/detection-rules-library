@@ -19,6 +19,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Command Shell Activity Started via RunDLL32",
+        "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Command Shell Activity Started via RunDLL32\n\nRunDLL32 is a legitimate Windows utility used to execute functions in DLLs, often leveraged by attackers to run malicious code stealthily. Adversaries exploit it to launch command shells like cmd.exe or PowerShell, bypassing security controls. The detection rule identifies such abuse by monitoring for command shells initiated by RunDLL32, excluding known benign patterns, thus highlighting potential threats.\n\n### Possible investigation steps\n\n- Review the process details to confirm the parent-child relationship between rundll32.exe and the command shell (cmd.exe or powershell.exe) to ensure the alert is not a false positive.\n- Examine the command line arguments of rundll32.exe to identify any suspicious or unusual DLLs or functions being executed, excluding known benign patterns.\n- Check the user account associated with the process to determine if it aligns with expected behavior or if it indicates potential compromise.\n- Investigate the source and destination network connections associated with the process to identify any suspicious or unauthorized communication.\n- Correlate the event with other security alerts or logs from the same host or user to identify any patterns or additional indicators of compromise.\n- Review recent changes or activities on the host, such as software installations or updates, that might explain the execution of rundll32.exe with command shells.\n\n### False positive analysis\n\n- Known false positives include command shells initiated by RunDLL32 for legitimate administrative tasks or software installations.\n- Exclude command lines that match common benign patterns, such as those involving SHELL32.dll or temporary files used by trusted applications.\n- Regularly update the list of exceptions to include new benign patterns identified through monitoring and analysis.\n- Collaborate with IT and security teams to identify and document legitimate use cases of RunDLL32 in your environment.\n- Use process monitoring tools to verify the legitimacy of command shells started by RunDLL32, ensuring they align with expected behavior.\n\n### Response and remediation\n\n- Isolate the affected system from the network to prevent further malicious activity and lateral movement.\n- Terminate any suspicious processes identified as cmd.exe or powershell.exe that were initiated by rundll32.exe to halt potential malicious actions.\n- Conduct a thorough scan of the affected system using updated antivirus or endpoint detection and response (EDR) tools to identify and remove any malicious files or remnants.\n- Review and analyze the rundll32.exe command line arguments to understand the scope and intent of the activity, and identify any additional compromised systems or accounts.\n- Reset credentials for any user accounts that were active on the affected system during the time of the alert to prevent unauthorized access.\n- Escalate the incident to the security operations center (SOC) or incident response team for further investigation and to determine if additional systems are affected.\n- Implement enhanced monitoring and logging for rundll32.exe and related processes to detect similar activities in the future and improve response times.",
         "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n process.name : (\"cmd.exe\", \"powershell.exe\") and\n  process.parent.name : \"rundll32.exe\" and process.parent.command_line != null and\n  /* common FPs can be added here */\n  not process.parent.args : (\"C:\\\\Windows\\\\System32\\\\SHELL32.dll,RunAsNewUser_RunDLL\",\n                             \"C:\\\\WINDOWS\\\\*.tmp,zzzzInvokeManagedCustomActionOutOfProc\")\n",
         "related_integrations": [
             {
@@ -84,7 +85,8 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Data Source: Microsoft Defender for Endpoint",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -154,8 +156,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 310
+        "version": 311
     },
-    "id": "9ccf3ce0-0057-440a-91f5-870c6ad39093_310",
+    "id": "9ccf3ce0-0057-440a-91f5-870c6ad39093_311",
     "type": "security-rule"
 }

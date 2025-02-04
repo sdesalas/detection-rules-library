@@ -13,6 +13,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Privilege Escalation via CAP_CHOWN/CAP_FOWNER Capabilities",
+        "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Privilege Escalation via CAP_CHOWN/CAP_FOWNER Capabilities\n\nIn Linux, CAP_CHOWN and CAP_FOWNER are capabilities that allow processes to change file ownership and bypass file permission checks, respectively. Adversaries exploit these to gain unauthorized access to sensitive files, such as password or configuration files. The detection rule identifies suspicious processes with these capabilities that alter ownership of critical files, signaling potential privilege escalation attempts.\n\n### Possible investigation steps\n\n- Review the process details, including process.name and process.command_line, to understand the context of the executed process and its intended function.\n- Check the user.id associated with the process to determine if the process was executed by a non-root user, which could indicate unauthorized privilege escalation attempts.\n- Investigate the file.path that had its ownership changed to assess the potential impact, focusing on critical files like /etc/passwd, /etc/shadow, /etc/sudoers, and /root/.ssh/*.\n- Analyze the sequence of events by examining the host.id and process.pid to identify any related processes or activities that occurred within the maxspan=1s timeframe.\n- Correlate the event with other logs or alerts from the same host to identify any patterns or additional suspicious activities that might indicate a broader attack or compromise.\n\n### False positive analysis\n\n- System administration scripts or automated processes may legitimately use CAP_CHOWN or CAP_FOWNER capabilities to manage file permissions or ownership. Review and whitelist these processes if they are verified as non-malicious.\n- Backup or restoration operations often require changing file ownership and permissions. Identify and exclude these operations from triggering alerts by specifying known backup tools or scripts.\n- Software installation or update processes might alter file ownership as part of their normal operation. Monitor and exclude these processes if they are part of a trusted software management system.\n- Development or testing environments may have scripts that modify file ownership for testing purposes. Ensure these environments are properly segmented and exclude known development scripts from detection.\n- Custom user scripts that require elevated permissions for legitimate tasks should be reviewed and, if deemed safe, added to an exception list to prevent false positives.\n\n### Response and remediation\n\n- Immediately isolate the affected host from the network to prevent further unauthorized access or data exfiltration.\n- Terminate any suspicious processes identified with CAP_CHOWN or CAP_FOWNER capabilities that are altering file ownership, especially those targeting critical files like /etc/passwd or /etc/shadow.\n- Revert any unauthorized changes to file ownership or permissions on critical files to their original state to restore system integrity.\n- Conduct a thorough review of user accounts and privileges on the affected system to identify and disable any unauthorized accounts or privilege escalations.\n- Escalate the incident to the security operations center (SOC) or incident response team for further investigation and to determine if additional systems are compromised.\n- Implement additional monitoring on the affected host and similar systems to detect any further attempts to exploit CAP_CHOWN or CAP_FOWNER capabilities.\n- Review and update security policies and configurations to restrict the assignment of CAP_CHOWN and CAP_FOWNER capabilities to only trusted and necessary processes.",
         "query": "sequence by host.id, process.pid with maxspan=1s\n  [process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\n   process.name != null and process.thread.capabilities.effective : (\"CAP_CHOWN\", \"CAP_FOWNER\") and\n   process.command_line : (\"*sudoers*\", \"*passwd*\", \"*shadow*\", \"*/root/*\") and user.id != \"0\"]\n  [file where host.os.type == \"linux\" and event.action == \"changed-file-ownership-of\" and event.type == \"change\" and\n   event.outcome == \"success\" and file.path in (\n     \"/etc/passwd\",\n     \"/etc/shadow\",\n     \"/etc/sudoers\",\n     \"/root/.ssh/*\"\n   ) and user.id != \"0\"\n  ]\n",
         "related_integrations": [
             {
@@ -91,7 +92,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -111,8 +113,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "d55abdfb-5384-402b-add4-6c401501b0c3_3",
+    "id": "d55abdfb-5384-402b-add4-6c401501b0c3_4",
     "type": "security-rule"
 }

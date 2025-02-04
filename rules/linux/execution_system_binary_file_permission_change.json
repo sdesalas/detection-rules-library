@@ -11,6 +11,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "System Binary Path File Permission Modification",
+        "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating System Binary Path File Permission Modification\n\nIn Linux environments, system binary paths contain critical executables. Adversaries may exploit these by altering file permissions to execute malicious payloads. The detection rule monitors processes like `chmod` and `chown` in key directories, flagging suspicious permission changes. It excludes benign activities, focusing on unauthorized modifications to prevent potential execution of harmful scripts.\n\n### Possible investigation steps\n\n- Review the process details to identify the exact command executed, focusing on the process name and arguments, especially those involving `chmod` or `chown` in critical directories like `/bin`, `/usr/bin`, and `/lib`.\n- Examine the parent process information, including the executable path and command line, to determine if the process was initiated by a known or trusted application, excluding those like `udevadm`, `systemd`, or `sudo`.\n- Check the user account associated with the process to verify if the action was performed by an authorized user or if there are signs of compromised credentials.\n- Investigate the file or directory whose permissions were modified to assess its importance and potential impact, focusing on changes to permissions like `4755`, `755`, or `777`.\n- Correlate the event with other security alerts or logs to identify any related suspicious activities, such as unauthorized access attempts or unexpected script executions.\n- Review recent changes or updates in the system that might explain the permission modification, ensuring they align with legitimate administrative tasks or software installations.\n\n### False positive analysis\n\n- System updates and package installations often involve legitimate permission changes in system binary paths. Users can exclude processes with parent executables located in directories like /var/lib/dpkg/info to reduce noise from these activities.\n- Administrative scripts or automation tools may execute chmod or chown commands as part of routine maintenance. Exclude processes with parent names such as udevadm, systemd, or sudo to prevent these from being flagged.\n- Container initialization processes might trigger permission changes. Exclude processes with parent command lines like runc init to avoid false positives related to container setups.\n- Temporary script executions during software installations can cause permission modifications. Exclude processes with parent arguments matching patterns like /var/tmp/rpm-tmp.* to filter out these benign events.\n\n### Response and remediation\n\n- Immediately isolate the affected system from the network to prevent further unauthorized access or execution of malicious payloads.\n- Terminate any suspicious processes identified as executing `chmod` or `chown` commands in critical system binary paths.\n- Revert any unauthorized file permission changes to their original state to ensure system integrity and prevent execution of malicious scripts.\n- Conduct a thorough review of system logs and process execution history to identify any additional unauthorized activities or related threats.\n- Escalate the incident to the security operations team for further investigation and to determine if the threat has spread to other systems.\n- Implement additional monitoring on the affected system and similar environments to detect any recurrence of unauthorized permission modifications.\n- Review and update access controls and permissions policies to minimize the risk of unauthorized modifications in critical system directories.",
         "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and process.name in (\"chmod\", \"chown\") and\nprocess.args like~ (\n  \"/bin/*\", \"/usr/bin/*\", \"/usr/local/bin/*\", \"/sbin/*\", \"/usr/sbin/*\", \"/usr/local/sbin/*\",\n  \"/lib/*\", \"/usr/lib/*\", \"/lib64/*\", \"/usr/lib64/*\"\n) and\nprocess.args in (\"4755\", \"755\", \"000\", \"777\", \"444\", \"-x\", \"+x\") and not (\n  process.args in (\"/bin/chmod\", \"/usr/bin/chmod\", \"/usr/local/bin/chmod\") or\n  process.parent.executable like~ (\"/tmp/newroot/*\", \"/var/lib/dpkg/info/*\") or\n  process.parent.name in (\"udevadm\", \"systemd\", \"entrypoint\", \"sudo\", \"dart\") or\n  process.parent.command_line == \"runc init\" or\n  process.parent.args like \"/var/tmp/rpm-tmp.*\"\n)\n",
         "references": [
             "https://blog.exatrack.com/Perfctl-using-portainer-and-new-persistences/"
@@ -77,7 +78,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -98,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "0049cf71-fe13-4d79-b767-f7519921ffb5_1",
+    "id": "0049cf71-fe13-4d79-b767-f7519921ffb5_2",
     "type": "security-rule"
 }
