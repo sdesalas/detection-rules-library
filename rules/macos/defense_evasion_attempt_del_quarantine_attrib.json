@@ -6,7 +6,7 @@
         "description": "Detects deletion of the quarantine attribute by an unusual process (xattr). In macOS, when applications or programs are downloaded from the internet, there is a quarantine flag set on the file. This attribute is read by Apple's Gatekeeper defense program at execution time. An adversary may disable this attribute to evade defenses.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -93,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "f0b48bbc-549e-4bcf-8ee0-a7a72586c6a7_110",
+    "id": "f0b48bbc-549e-4bcf-8ee0-a7a72586c6a7_111",
     "type": "security-rule"
 }

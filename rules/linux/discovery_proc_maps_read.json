@@ -6,7 +6,7 @@
         "description": "Monitors for /proc/*/maps file reads. The /proc/*/maps file in Linux provides a memory map for a specific process, detailing the memory segments, permissions, and what files are mapped to these segments. Attackers may read a process's memory map to identify memory addresses for code injection or process hijacking.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -85,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "2f95540c-923e-4f57-9dae-de30169c68b9_3",
+    "id": "2f95540c-923e-4f57-9dae-de30169c68b9_4",
     "type": "security-rule"
 }

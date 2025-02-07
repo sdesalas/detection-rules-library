@@ -6,7 +6,7 @@
         "description": "Identifies instances where VMware-related files, such as those with extensions like \".vmdk\", \".vmx\", \".vmxf\", \".vmsd\", \".vmsn\", \".vswp\", \".vmss\", \".nvram\", and \".vmem\", are renamed on a Linux system. The rule monitors for the \"rename\" event action associated with these file types, which could indicate malicious activity.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -82,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "97db8b42-69d8-4bf3-9fd4-c69a1d895d68_7",
+    "id": "97db8b42-69d8-4bf3-9fd4-c69a1d895d68_8",
     "type": "security-rule"
 }

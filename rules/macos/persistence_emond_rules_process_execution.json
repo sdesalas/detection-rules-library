@@ -6,7 +6,7 @@
         "description": "Identifies the execution of a suspicious child process of the Event Monitor Daemon (emond). Adversaries may abuse this service by writing a rule to execute commands when a defined event occurs, such as system start up or user authentication.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -83,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "3e3d15c6-1509-479a-b125-21718372157e_108",
+    "id": "3e3d15c6-1509-479a-b125-21718372157e_109",
     "type": "security-rule"
 }

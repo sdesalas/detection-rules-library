@@ -9,9 +9,9 @@
         ],
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "logs-sentinel_one_cloud_funnel.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-endpoint.events.process*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -120,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "b15a15f2-becf-475d-aa69-45c9e0ff1c49_102",
+    "id": "b15a15f2-becf-475d-aa69-45c9e0ff1c49_103",
     "type": "security-rule"
 }

@@ -10,7 +10,8 @@
         "from": "now-9m",
         "index": [
             "auditbeat-*",
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -106,8 +107,8 @@
             }
         ],
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "adb961e0-cb74-42a0-af9e-29fc41f88f5f_211",
+    "id": "adb961e0-cb74-42a0-af9e-29fc41f88f5f_212",
     "type": "security-rule"
 }

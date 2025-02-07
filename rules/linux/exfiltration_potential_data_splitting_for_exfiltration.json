@@ -6,10 +6,10 @@
         "description": "This rule looks for the usage of common data splitting utilities with specific arguments that indicate data splitting for exfiltration on Linux systems. Data splitting is a technique used by adversaries to split data into smaller parts to avoid detection and exfiltrate data.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "endgame-*",
             "logs-crowdstrike.fdr*",
-            "logs-sentinel_one_cloud_funnel.*",
-            "endgame-*"
+            "logs-endpoint.events.process*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -90,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "e302e6c3-448c-4243-8d9b-d41da70db582_102",
+    "id": "e302e6c3-448c-4243-8d9b-d41da70db582_103",
     "type": "security-rule"
 }

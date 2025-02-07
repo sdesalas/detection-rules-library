@@ -6,7 +6,7 @@
         "description": "This rule monitors for the execution of a set of linux binaries, that are potentially vulnerable to wildcard injection, with suspicious command line flags followed by a shell spawn event. Linux wildcard injection is a type of security vulnerability where attackers manipulate commands or input containing wildcards (e.g., *, ?, []) to execute unintended operations or access sensitive data by tricking the system into interpreting the wildcard characters in unexpected ways.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -126,8 +126,8 @@
             }
         ],
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "0b803267-74c5-444d-ae29-32b5db2d562a_107",
+    "id": "0b803267-74c5-444d-ae29-32b5db2d562a_108",
     "type": "security-rule"
 }

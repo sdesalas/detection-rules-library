@@ -6,7 +6,7 @@
         "description": "Identifies the execution of the shell process (sh) via scripting (JXA or AppleScript). Adversaries may use the doShellScript functionality in JXA or do shell script in AppleScript to execute system commands.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -90,8 +90,8 @@
             }
         ],
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "d461fac0-43e8-49e2-85ea-3a58fe120b4f_108",
+    "id": "d461fac0-43e8-49e2-85ea-3a58fe120b4f_109",
     "type": "security-rule"
 }

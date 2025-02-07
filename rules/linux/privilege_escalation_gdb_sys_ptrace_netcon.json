@@ -6,7 +6,8 @@
         "description": "Identifies instances where GDB (granted the CAP_SYS_PTRACE capability) is executed, after which an outbound network connection is initiated by UID/GID 0 (root). In Linux, the CAP_SYS_PTRACE capability grants a process the ability to use the ptrace system call, which is typically used for debugging and allows the process to trace and control other processes. Attackers may leverage this capability to hook and inject into a process that is running with root permissions in order to execute shell code and gain a reverse shell with root privileges.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -147,8 +148,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "28bc620d-b2f7-4132-b372-f77953881d05_3",
+    "id": "28bc620d-b2f7-4132-b372-f77953881d05_4",
     "type": "security-rule"
 }

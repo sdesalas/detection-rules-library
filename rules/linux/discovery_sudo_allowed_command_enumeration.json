@@ -6,10 +6,10 @@
         "description": "This rule monitors for the usage of the sudo -l command, which is used to list the allowed and forbidden commands for the invoking user. Attackers may execute this command to enumerate commands allowed to be executed with sudo permissions, potentially allowing to escalate privileges to root.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "endgame-*",
             "logs-crowdstrike.fdr*",
-            "logs-sentinel_one_cloud_funnel.*",
-            "endgame-*"
+            "logs-endpoint.events.process*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -101,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "28d39238-0c01-420a-b77a-24e5a7378663_107",
+    "id": "28d39238-0c01-420a-b77a-24e5a7378663_108",
     "type": "security-rule"
 }

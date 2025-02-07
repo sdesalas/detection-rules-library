@@ -6,8 +6,8 @@
         "description": "Identifies when a terminal (tty) is spawned via Python. Attackers may upgrade a simple reverse shell to a fully interactive tty after obtaining initial access to a host.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -112,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "d76b02ef-fc95-4001-9297-01cb7412232f_211",
+    "id": "d76b02ef-fc95-4001-9297-01cb7412232f_212",
     "type": "security-rule"
 }

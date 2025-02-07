@@ -6,11 +6,11 @@
         "description": "Identifies processes that are capable of downloading files with command line arguments containing URLs to SSH-IT's autonomous SSH worm. This worm intercepts outgoing SSH connections every time a user uses ssh.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*",
             "auditbeat-*",
+            "endgame-*",
             "logs-auditd_manager.auditd-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -120,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "2ddc468e-b39b-4f5b-9825-f3dcb0e998ea_104",
+    "id": "2ddc468e-b39b-4f5b-9825-f3dcb0e998ea_105",
     "type": "security-rule"
 }

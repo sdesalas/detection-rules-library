@@ -6,9 +6,9 @@
         "description": "Identifies when a non-interactive terminal (tty) is being upgraded to a fully interactive shell. Attackers may upgrade a simple reverse shell to a fully interactive tty after obtaining initial access to a host, in order to obtain a more stable connection.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -103,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "84d1f8db-207f-45ab-a578-921d91c23eb2_104",
+    "id": "84d1f8db-207f-45ab-a578-921d91c23eb2_105",
     "type": "security-rule"
 }

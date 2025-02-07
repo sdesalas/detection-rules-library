@@ -6,7 +6,7 @@
         "description": "This rule detects kernel seeking activity through several built-in Linux utilities. Attackers may use these utilities to search the Linux kernel for available symbols, functions, and other information that can be used to exploit the kernel.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -101,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "3c9f7901-01d8-465d-8dc0-5d46671035fa_2",
+    "id": "3c9f7901-01d8-465d-8dc0-5d46671035fa_3",
     "type": "security-rule"
 }

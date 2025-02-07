@@ -9,7 +9,8 @@
         ],
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -88,8 +89,8 @@
             }
         ],
         "type": "eql",
-        "version": 208
+        "version": 209
     },
-    "id": "e19e64ee-130e-4c07-961f-8a339f0b8362_208",
+    "id": "e19e64ee-130e-4c07-961f-8a339f0b8362_209",
     "type": "security-rule"
 }

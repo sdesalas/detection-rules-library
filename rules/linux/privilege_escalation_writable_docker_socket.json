@@ -6,7 +6,7 @@
         "description": "This rule monitors for the usage of Docker runtime sockets to escalate privileges on Linux systems. Docker sockets by default are only be writable by the root user and docker group. Attackers that have permissions to write to these sockets may be able to create and run a container that allows them to escalate privileges and gain further access onto the host file system.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -91,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "7acb2de3-8465-472a-8d9c-ccd7b73d0ed8_6",
+    "id": "7acb2de3-8465-472a-8d9c-ccd7b73d0ed8_7",
     "type": "security-rule"
 }

@@ -6,9 +6,10 @@
         "description": "Identifies instances where a processes (granted CAP_CHOWN and/or CAP_FOWNER capabilities) is executed, after which the ownership of a suspicious file or binary is changed. In Linux, the CAP_CHOWN capability allows a process to change the owner of a file, while CAP_FOWNER permits it to bypass permission checks on operations that require file ownership (like reading, writing, and executing). Attackers may abuse these capabilities to obtain unauthorized access to files.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "auditbeat-*",
-            "logs-auditd_manager.auditd-*"
+            "logs-auditd_manager.auditd-*",
+            "logs-endpoint.events.file*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -113,8 +114,8 @@
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "d55abdfb-5384-402b-add4-6c401501b0c3_4",
+    "id": "d55abdfb-5384-402b-add4-6c401501b0c3_5",
     "type": "security-rule"
 }

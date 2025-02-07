@@ -6,7 +6,7 @@
         "description": "This rule monitors for the usage of the built-in Linux DebugFS utility to access a disk device without root permissions. Linux users that are part of the \"disk\" group have sufficient privileges to access all data inside of the machine through DebugFS. Attackers may leverage DebugFS in conjunction with \"disk\" permissions to read sensitive files owned by root, such as the shadow file, root ssh private keys or other sensitive files that may allow them to further escalate privileges.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -97,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "2605aa59-29ac-4662-afad-8d86257c7c91_7",
+    "id": "2605aa59-29ac-4662-afad-8d86257c7c91_8",
     "type": "security-rule"
 }

@@ -6,9 +6,9 @@
         "description": "Malware or other files dropped or created on a system by an adversary may leave traces behind as to what was done within a network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low or remove them at the end as part of the post-intrusion cleanup process.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -98,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 210
+        "version": 211
     },
-    "id": "a1329140-8de3-4445-9f87-908fb6d824f4_210",
+    "id": "a1329140-8de3-4445-9f87-908fb6d824f4_211",
     "type": "security-rule"
 }

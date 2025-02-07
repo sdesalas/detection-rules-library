@@ -9,8 +9,8 @@
         ],
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -93,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "3f3f9fe2-d095-11ec-95dc-f661ea17fbce_111",
+    "id": "3f3f9fe2-d095-11ec-95dc-f661ea17fbce_112",
     "type": "security-rule"
 }

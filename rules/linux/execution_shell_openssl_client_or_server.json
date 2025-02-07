@@ -6,8 +6,8 @@
         "description": "This rule identifies when the openssl client or server is used to establish a connection. Attackers may use openssl to establish a secure connection to a remote server or to create a secure server to receive connections. This activity may be used to exfiltrate data or establish a command and control channel.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -115,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "ad5a3757-c872-4719-8c72-12d3f08db655_103",
+    "id": "ad5a3757-c872-4719-8c72-12d3f08db655_104",
     "type": "security-rule"
 }

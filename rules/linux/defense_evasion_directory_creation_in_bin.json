@@ -6,10 +6,10 @@
         "description": "This rule identifies the creation of directories in the /bin directory. The /bin directory contains essential binary files that are required for the system to function properly. The creation of directories in this location could be an attempt to hide malicious files or executables, as these /bin directories usually just contain binaries.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "endgame-*",
             "logs-crowdstrike.fdr*",
-            "logs-sentinel_one_cloud_funnel.*",
-            "endgame-*"
+            "logs-endpoint.events.process*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -108,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "3302835b-0049-4004-a325-660b1fba1f67_102",
+    "id": "3302835b-0049-4004-a325-660b1fba1f67_103",
     "type": "security-rule"
 }

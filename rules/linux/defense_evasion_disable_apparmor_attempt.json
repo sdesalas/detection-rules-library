@@ -6,11 +6,11 @@
         "description": "This rule monitors for potential attempts to disable AppArmor. AppArmor is a Linux security module that enforces fine-grained access control policies to restrict the actions and resources that specific applications and processes can access. Adversaries may disable security tools to avoid possible detection of their tools and activities.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*",
             "auditbeat-*",
+            "endgame-*",
             "logs-auditd_manager.auditd-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -105,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "fac52c69-2646-4e79-89c0-fd7653461010_108",
+    "id": "fac52c69-2646-4e79-89c0-fd7653461010_109",
     "type": "security-rule"
 }

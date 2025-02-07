@@ -6,7 +6,7 @@
         "description": "This rule detects potential sudo token manipulation attacks through process injection by monitoring the use of a debugger (gdb) process followed by a successful uid change event during the execution of the sudo process. A sudo token manipulation attack is performed by injecting into a process that has a valid sudo token, which can then be used by attackers to activate their own sudo token. This attack requires ptrace to be enabled in conjunction with the existence of a living process that has a valid sudo token with the same uid as the current user.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -113,8 +113,8 @@
             }
         ],
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "ff9bc8b9-f03b-4283-be58-ee0a16f5a11b_108",
+    "id": "ff9bc8b9-f03b-4283-be58-ee0a16f5a11b_109",
     "type": "security-rule"
 }

@@ -6,11 +6,11 @@
         "description": "This rule monitors for the execution of a suspicious sudo command that is leveraged in CVE-2019-14287 to escalate privileges to root. Sudo does not verify the presence of the designated user ID and proceeds to execute using a user ID that can be chosen arbitrarily. By using the sudo privileges, the command \"sudo -u#-1\" translates to an ID of 0, representing the root user. This exploit may work for sudo versions prior to v1.28.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*",
             "auditbeat-*",
+            "endgame-*",
             "logs-auditd_manager.auditd-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -102,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "8af5b42f-8d74-48c8-a8d0-6d14b4197288_105",
+    "id": "8af5b42f-8d74-48c8-a8d0-6d14b4197288_106",
     "type": "security-rule"
 }

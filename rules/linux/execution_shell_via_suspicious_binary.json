@@ -6,7 +6,8 @@
         "description": "This detection rule detects the creation of a shell through a chain consisting of the execution of a suspicious binary (located in a commonly abused location or executed manually) followed by a network event and ending with a shell being spawned. Stageless reverse tcp shells display this behaviour. Attackers may spawn reverse shells to establish persistence onto a target system.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -121,8 +122,8 @@
             }
         ],
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "fa3a59dc-33c3-43bf-80a9-e8437a922c7f_8",
+    "id": "fa3a59dc-33c3-43bf-80a9-e8437a922c7f_9",
     "type": "security-rule"
 }

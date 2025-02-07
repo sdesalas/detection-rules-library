@@ -9,11 +9,11 @@
         ],
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*",
             "auditbeat-*",
+            "endgame-*",
             "logs-auditd_manager.auditd-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -106,8 +106,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "debff20a-46bc-4a4d-bae5-5cdd14222795_211",
+    "id": "debff20a-46bc-4a4d-bae5-5cdd14222795_212",
     "type": "security-rule"
 }

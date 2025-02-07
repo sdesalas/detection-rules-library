@@ -6,7 +6,7 @@
         "description": "This rule identifies file permission modification events on files located in common system binary paths. Adversaries may attempt to hide their payloads in the default Linux system directories, and modify the file permissions of these payloads prior to execution.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -100,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "0049cf71-fe13-4d79-b767-f7519921ffb5_2",
+    "id": "0049cf71-fe13-4d79-b767-f7519921ffb5_3",
     "type": "security-rule"
 }

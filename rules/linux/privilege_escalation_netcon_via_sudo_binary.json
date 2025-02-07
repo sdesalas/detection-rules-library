@@ -6,8 +6,9 @@
         "description": "Detects network connections initiated by the \"sudo\" binary. This behavior is uncommon and may occur in instances where reverse shell shellcode is injected into a process run with elevated permissions via \"sudo\". Attackers may attempt to inject shellcode into processes running as root, to escalate privileges.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -107,8 +108,8 @@
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "30e1e9f2-eb9c-439f-aff6-1e3068e99384_4",
+    "id": "30e1e9f2-eb9c-439f-aff6-1e3068e99384_5",
     "type": "security-rule"
 }

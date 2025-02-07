@@ -6,7 +6,7 @@
         "description": "This rule monitors for a sequence of 20 \"id\" command executions within 1 second by the same parent process. This behavior is unusual, and may be indicative of the execution of an enumeration script such as LinPEAS or LinEnum. These scripts leverage the \"id\" command to enumerate the privileges of all users present on the system.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -96,8 +96,8 @@
             }
         ],
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "afa135c0-a365-43ab-aa35-fd86df314a47_5",
+    "id": "afa135c0-a365-43ab-aa35-fd86df314a47_6",
     "type": "security-rule"
 }

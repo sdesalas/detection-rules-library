@@ -6,7 +6,7 @@
         "description": "This rule detects the use of the `curl` command-line tool with SOCKS proxy options, launched from an unusual parent process. Attackers may use `curl` to establish a SOCKS proxy connection to bypass network restrictions and exfiltrate data or communicate with C2 servers.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -92,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "734239fe-eda8-48c0-bca8-9e3dafd81a88_2",
+    "id": "734239fe-eda8-48c0-bca8-9e3dafd81a88_3",
     "type": "security-rule"
 }

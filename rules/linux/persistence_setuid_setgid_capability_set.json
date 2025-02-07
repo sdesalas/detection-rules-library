@@ -6,9 +6,9 @@
         "description": "This rule monitors for the addition of the cap_setuid+ep or cap_setgid+ep capabilities via setcap. Setuid (Set User ID) and setgid (Set Group ID) are Unix-like OS features that enable processes to run with elevated privileges, based on the file owner or group. Threat actors can exploit these attributes to achieve persistence by creating malicious binaries, allowing them to maintain control over a compromised system with elevated permissions.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -112,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "f5c005d3-4e17-48b0-9cd7-444d48857f97_107",
+    "id": "f5c005d3-4e17-48b0-9cd7-444d48857f97_108",
     "type": "security-rule"
 }

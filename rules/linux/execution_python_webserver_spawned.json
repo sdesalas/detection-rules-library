@@ -6,10 +6,10 @@
         "description": "This rule identifies when a web server is spawned via Python. Attackers may use Python to spawn a web server to exfiltrate/infiltrate data or to move laterally within a network.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "endgame-*",
             "logs-crowdstrike.fdr*",
-            "logs-sentinel_one_cloud_funnel.*",
-            "endgame-*"
+            "logs-endpoint.events.process*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -118,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "99c2b626-de44-4322-b1f9-157ca408c17e_102",
+    "id": "99c2b626-de44-4322-b1f9-157ca408c17e_103",
     "type": "security-rule"
 }

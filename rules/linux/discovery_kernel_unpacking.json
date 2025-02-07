@@ -6,7 +6,7 @@
         "description": "This rule detects kernel unpacking activity through several built-in Linux utilities. Attackers may use these utilities to unpack kernel images and modules to search for vulnerabilities or to modify the kernel.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -106,8 +106,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "4f725dc5-ae44-46c1-9ac5-99f6f7a70d8a_2",
+    "id": "4f725dc5-ae44-46c1-9ac5-99f6f7a70d8a_3",
     "type": "security-rule"
 }

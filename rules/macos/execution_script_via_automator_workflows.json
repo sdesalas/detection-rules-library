@@ -6,7 +6,8 @@
         "description": "Identifies the execution of the Automator Workflows process followed by a network connection from it's XPC service. Adversaries may drop a custom workflow template that hosts malicious JavaScript for Automation (JXA) code as an alternative to using osascript.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -74,8 +75,8 @@
             }
         ],
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "5d9f8cfc-0d03-443e-a167-2b0597ce0965_107",
+    "id": "5d9f8cfc-0d03-443e-a167-2b0597ce0965_108",
     "type": "security-rule"
 }

@@ -6,8 +6,8 @@
         "description": "This detection rule addresses multiple vulnerabilities in the CUPS printing system, including CVE-2024-47176, CVE-2024-47076, CVE-2024-47175, and CVE-2024-47177. Specifically, this rule detects shell executions from the foomatic-rip parent process through the default printer user (lp). These flaws impact components like cups-browsed, libcupsfilters, libppd, and foomatic-rip, allowing remote unauthenticated attackers to manipulate IPP URLs or inject malicious data through crafted UDP packets or network spoofing. This can result in arbitrary command execution when a print job is initiated.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -101,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "f86cd31c-5c7e-4481-99d7-6875a3e31309_4",
+    "id": "f86cd31c-5c7e-4481-99d7-6875a3e31309_5",
     "type": "security-rule"
 }

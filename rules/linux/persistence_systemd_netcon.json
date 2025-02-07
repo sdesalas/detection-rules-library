@@ -6,7 +6,8 @@
         "description": "Detects suspicious network events executed by systemd, potentially indicating persistence through a systemd backdoor. Systemd is a system and service manager for Linux operating systems, used to initialize and manage system processes. Attackers can backdoor systemd for persistence by creating or modifying systemd unit files to execute malicious scripts or commands, or by replacing legitimate systemd binaries with compromised ones, ensuring that their malicious code is automatically executed at system startup or during certain system events.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -128,8 +129,8 @@
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "f3818c85-2207-4b51-8a28-d70fb156ee87_4",
+    "id": "f3818c85-2207-4b51-8a28-d70fb156ee87_5",
     "type": "security-rule"
 }

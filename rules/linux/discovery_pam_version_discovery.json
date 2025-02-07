@@ -6,9 +6,9 @@
         "description": "This rule detects PAM version discovery activity on Linux systems. PAM version discovery can be an indication of an attacker attempting to backdoor the authentication process through malicious PAM modules.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -132,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "135abb91-dcf4-48aa-b81a-5ad036b67c68_102",
+    "id": "135abb91-dcf4-48aa-b81a-5ad036b67c68_103",
     "type": "security-rule"
 }

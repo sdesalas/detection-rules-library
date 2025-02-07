@@ -6,10 +6,10 @@
         "description": "Identifies instances where the 'find' command is started on a Linux system with arguments targeting specific VM-related paths, such as \"/etc/vmware/\", \"/usr/lib/vmware/\", or \"/vmfs/*\". These paths are associated with VMware virtualization software, and their presence in the find command arguments may indicate that a threat actor is attempting to search for, analyze, or manipulate VM-related files and configurations on the system.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*",
             "auditbeat-*",
+            "endgame-*",
             "logs-auditd_manager.auditd-*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -100,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "33a6752b-da5e-45f8-b13a-5f094c09522f_108",
+    "id": "33a6752b-da5e-45f8-b13a-5f094c09522f_109",
     "type": "security-rule"
 }

@@ -6,10 +6,10 @@
         "description": "This rule detects sensitive security file access via common utilities on Linux systems. Adversaries may attempt to read from sensitive files using common utilities to gather information about the system and its security configuration.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "endgame-*",
             "logs-crowdstrike.fdr*",
-            "logs-sentinel_one_cloud_funnel.*",
-            "endgame-*"
+            "logs-endpoint.events.process*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -90,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "7efca3ad-a348-43b2-b544-c93a78a0ef92_102",
+    "id": "7efca3ad-a348-43b2-b544-c93a78a0ef92_103",
     "type": "security-rule"
 }

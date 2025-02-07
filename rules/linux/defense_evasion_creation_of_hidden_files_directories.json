@@ -6,10 +6,10 @@
         "description": "Identify activity related where adversaries can add the 'hidden' flag to files to hide them from the user in an attempt to evade detection.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*",
             "auditbeat-*",
+            "endgame-*",
             "logs-auditd_manager.auditd-*",
+            "logs-endpoint.events.file*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -89,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "5124e65f-df97-4471-8dcb-8e3953b3ea97_104",
+    "id": "5124e65f-df97-4471-8dcb-8e3953b3ea97_105",
     "type": "security-rule"
 }

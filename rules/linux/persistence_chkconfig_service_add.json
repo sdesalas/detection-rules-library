@@ -6,8 +6,8 @@
         "description": "Detects the use of the chkconfig binary to manually add a service for management by chkconfig. Threat actors may utilize this technique to maintain persistence on a system. When a new service is added, chkconfig ensures that the service has either a start or a kill entry in every runlevel and when the system is rebooted the service file added will run providing long-term persistence.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -94,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "b910f25a-2d44-47f2-a873-aabdc0d355e6_214",
+    "id": "b910f25a-2d44-47f2-a873-aabdc0d355e6_215",
     "type": "security-rule"
 }

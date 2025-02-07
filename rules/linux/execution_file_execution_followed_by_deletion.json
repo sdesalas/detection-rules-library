@@ -6,7 +6,8 @@
         "description": "This rule monitors for the creation of a file, followed by its execution and self-deletion in a short timespan within a directory often used for malicious purposes by threat actors. This behavior is often used by malware to execute malicious code and delete itself to hide its tracks.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -108,8 +109,8 @@
             }
         ],
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "09bc6c90-7501-494d-b015-5d988dc3f233_6",
+    "id": "09bc6c90-7501-494d-b015-5d988dc3f233_7",
     "type": "security-rule"
 }

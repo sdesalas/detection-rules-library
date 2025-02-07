@@ -6,7 +6,8 @@
         "description": "This rule monitors for common command line flags leveraged by the Chisel server utility followed by a received connection within a timespan of 1 minute. Chisel is a command-line utility used for creating and managing TCP and UDP tunnels, enabling port forwarding and secure communication between machines. Attackers can abuse the Chisel utility to establish covert communication channels, bypass network restrictions, and carry out malicious activities by creating tunnels that allow unauthorized access to internal systems.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -105,8 +106,8 @@
             }
         ],
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "ac8805f6-1e08-406c-962e-3937057fa86f_7",
+    "id": "ac8805f6-1e08-406c-962e-3937057fa86f_8",
     "type": "security-rule"
 }

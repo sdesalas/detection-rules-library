@@ -6,8 +6,9 @@
         "description": "Monitors for the generation of a passwd password entry via openssl, followed by a file write activity on the \"/etc/passwd\" file. The \"/etc/passwd\" file in Linux stores user account information, including usernames, user IDs, group IDs, home directories, and default shell paths. Attackers may exploit a misconfiguration in the \"/etc/passwd\" file permissions or other privileges to add a new entry to the \"/etc/passwd\" file with root permissions, and leverage this new user account to login as root.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "logs-auditd_manager.auditd-*"
+            "logs-auditd_manager.auditd-*",
+            "logs-endpoint.events.file*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -112,8 +113,8 @@
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "71d6a53d-abbd-40df-afee-c21fff6aafb0_4",
+    "id": "71d6a53d-abbd-40df-afee-c21fff6aafb0_5",
     "type": "security-rule"
 }

@@ -6,9 +6,9 @@
         "description": "This rule monitors for the execution of suspicious commands via screen and tmux. When launching a command and detaching directly, the commands will be executed in the background via its parent process. Attackers may leverage screen or tmux to execute commands while attempting to evade detection.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -90,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "e0cc3807-e108-483c-bf66-5a4fbe0d7e89_106",
+    "id": "e0cc3807-e108-483c-bf66-5a4fbe0d7e89_107",
     "type": "security-rule"
 }

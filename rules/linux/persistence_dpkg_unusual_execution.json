@@ -6,7 +6,7 @@
         "description": "This rule detects the execution of the DPKG command by processes not associated with the DPKG package manager. The DPKG command is used to install, remove, and manage Debian packages on a Linux system. Attackers can abuse the DPKG command to install malicious packages on a system.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -134,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "d6241c90-99f2-44db-b50f-299b6ebd7ee9_3",
+    "id": "d6241c90-99f2-44db-b50f-299b6ebd7ee9_4",
     "type": "security-rule"
 }

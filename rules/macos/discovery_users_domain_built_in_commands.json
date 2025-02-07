@@ -6,7 +6,7 @@
         "description": "Identifies the execution of macOS built-in commands related to account or group enumeration. Adversaries may use account and group information to orient themselves before deciding how to act.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -111,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 208
+        "version": 209
     },
-    "id": "6e9b351e-a531-4bdc-b73e-7034d6eed7ff_208",
+    "id": "6e9b351e-a531-4bdc-b73e-7034d6eed7ff_209",
     "type": "security-rule"
 }

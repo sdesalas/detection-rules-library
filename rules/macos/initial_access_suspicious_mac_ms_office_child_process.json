@@ -6,7 +6,7 @@
         "description": "Identifies suspicious child processes of frequently targeted Microsoft Office applications (Word, PowerPoint, and Excel). These child processes are often launched during exploitation of Office applications or by documents with malicious macros.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -102,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 208
+        "version": 209
     },
-    "id": "66da12b1-ac83-40eb-814c-07ed1d82b7b9_208",
+    "id": "66da12b1-ac83-40eb-814c-07ed1d82b7b9_209",
     "type": "security-rule"
 }

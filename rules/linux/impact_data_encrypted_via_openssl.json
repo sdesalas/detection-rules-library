@@ -6,7 +6,7 @@
         "description": "Identifies when the openssl command-line utility is used to encrypt multiple files on a host within a short time window. Adversaries may encrypt data on a single or multiple systems in order to disrupt the availability of their target's data and may attempt to hold the organization's data to ransom for the purposes of extortion.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -95,8 +95,8 @@
             }
         ],
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "f530ca17-153b-4a7a-8cd3-98dd4b4ddf73_7",
+    "id": "f530ca17-153b-4a7a-8cd3-98dd4b4ddf73_8",
     "type": "security-rule"
 }

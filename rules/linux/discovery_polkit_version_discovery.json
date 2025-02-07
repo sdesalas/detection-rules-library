@@ -6,9 +6,9 @@
         "description": "This rule detects Polkit version discovery activity on Linux systems. Polkit version discovery can be an indication of an attacker attempting to exploit misconfigurations or vulnerabilities in the Polkit service.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -91,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "ca3bcacc-9285-4452-a742-5dae77538f61_2",
+    "id": "ca3bcacc-9285-4452-a742-5dae77538f61_3",
     "type": "security-rule"
 }

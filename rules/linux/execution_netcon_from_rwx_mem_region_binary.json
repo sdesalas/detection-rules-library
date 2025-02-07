@@ -6,9 +6,10 @@
         "description": "Monitors for the execution of a unix binary with read, write and execute memory region permissions, followed by a network connection. The mprotect() system call is used to change the access protections on a region of memory that has already been allocated. This syscall allows a process to modify the permissions of pages in its virtual address space, enabling or disabling permissions such as read, write, and execute for those pages. RWX permissions on memory is in many cases overly permissive, and should (especially in conjunction with an outbound network connection) be analyzed thoroughly.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "auditbeat-*",
-            "logs-auditd_manager.auditd-*"
+            "logs-auditd_manager.auditd-*",
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -130,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "32300431-c2d5-432d-8ec8-0e03f9924756_4",
+    "id": "32300431-c2d5-432d-8ec8-0e03f9924756_5",
     "type": "security-rule"
 }

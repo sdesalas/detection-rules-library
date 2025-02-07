@@ -6,7 +6,8 @@
         "description": "Detects execution via the Apple script interpreter (osascript) followed by a network connection from the same process within a short time period. Adversaries may use malicious scripts for execution and command and control.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -108,8 +109,8 @@
             }
         ],
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "47f76567-d58a-4fed-b32b-21f571e28910_107",
+    "id": "47f76567-d58a-4fed-b32b-21f571e28910_108",
     "type": "security-rule"
 }

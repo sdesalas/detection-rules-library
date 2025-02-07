@@ -6,7 +6,7 @@
         "description": "Detects modification of a Folder Action script. A Folder Action script is executed when the folder to which it is attached has items added or removed, or when its window is opened, closed, moved, or resized. Adversaries may abuse this feature to establish persistence by utilizing a malicious script.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -96,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "c292fa52-4115-408a-b897-e14f684b3cb7_108",
+    "id": "c292fa52-4115-408a-b897-e14f684b3cb7_109",
     "type": "security-rule"
 }

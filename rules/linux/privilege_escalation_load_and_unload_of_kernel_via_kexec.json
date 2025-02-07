@@ -6,11 +6,11 @@
         "description": "This detection rule identifies the usage of kexec, helping to uncover unauthorized kernel replacements and potential compromise of the system's integrity. Kexec is a Linux feature that enables the loading and execution of a different kernel without going through the typical boot process. Malicious actors can abuse kexec to bypass security measures, escalate privileges, establish persistence or hide their activities by loading a malicious kernel, enabling them to tamper with the system's trusted state, allowing e.g. a VM Escape.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*",
             "auditbeat-*",
+            "endgame-*",
             "logs-auditd_manager.auditd-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -154,8 +154,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "4d4c35f4-414e-4d0c-bb7e-6db7c80a6957_108",
+    "id": "4d4c35f4-414e-4d0c-bb7e-6db7c80a6957_109",
     "type": "security-rule"
 }

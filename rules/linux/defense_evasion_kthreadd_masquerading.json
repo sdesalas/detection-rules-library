@@ -6,9 +6,9 @@
         "description": "Monitors for kernel processes with associated process executable fields that are not empty. Unix kernel processes such as kthreadd and kworker typically do not have process.executable fields associated to them. Attackers may attempt to hide their malicious programs by masquerading as legitimate kernel processes.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -106,8 +106,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "202829f6-0271-4e88-b882-11a655c590d4_104",
+    "id": "202829f6-0271-4e88-b882-11a655c590d4_105",
     "type": "security-rule"
 }

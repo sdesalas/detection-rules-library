@@ -6,7 +6,8 @@
         "description": "This rule monitors for the execution of the cat command, followed by a connection attempt by the same process. Cat is capable of transfering data via tcp/udp channels by redirecting its read output to a /dev/tcp or /dev/udp channel. This activity is highly suspicious, and should be investigated. Attackers may leverage this capability to transfer tools or files to another host in the network or exfiltrate data while attempting to evade detection in the process.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -103,8 +104,8 @@
             }
         ],
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "afd04601-12fc-4149-9b78-9c3f8fe45d39_7",
+    "id": "afd04601-12fc-4149-9b78-9c3f8fe45d39_8",
     "type": "security-rule"
 }

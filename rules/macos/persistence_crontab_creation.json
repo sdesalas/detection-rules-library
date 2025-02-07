@@ -6,7 +6,7 @@
         "description": "Identifies attempts to create or modify a crontab via a process that is not crontab (i.e python, osascript, etc.). This activity should not be highly prevalent and could indicate the use of cron as a persistence mechanism by a threat actor.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -88,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "530178da-92ea-43ce-94c2-8877a826783d_107",
+    "id": "530178da-92ea-43ce-94c2-8877a826783d_108",
     "type": "security-rule"
 }

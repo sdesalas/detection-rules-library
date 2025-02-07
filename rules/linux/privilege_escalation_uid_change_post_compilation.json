@@ -6,7 +6,8 @@
         "description": "This rule monitors a sequence involving a program compilation event followed by its execution and a subsequent alteration of UID permissions to root privileges. This behavior can potentially indicate the execution of a kernel or software privilege escalation exploit.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -92,8 +93,8 @@
             }
         ],
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "193549e8-bb9e-466a-a7f9-7e783f5cb5a6_5",
+    "id": "193549e8-bb9e-466a-a7f9-7e783f5cb5a6_6",
     "type": "security-rule"
 }

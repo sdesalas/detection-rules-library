@@ -6,7 +6,8 @@
         "description": "This detection rule identifies suspicious network traffic patterns associated with TCP reverse shell activity. This activity consists of a parent-child relationship where a network event is followed by the creation of a shell process. An attacker may establish a Linux TCP reverse shell to gain remote access to a target system.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -131,8 +132,8 @@
             }
         ],
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "48b3d2e3-f4e8-41e6-95e6-9b2091228db3_10",
+    "id": "48b3d2e3-f4e8-41e6-95e6-9b2091228db3_11",
     "type": "security-rule"
 }

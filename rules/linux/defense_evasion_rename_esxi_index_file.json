@@ -6,7 +6,7 @@
         "description": "Identifies instances where the \"index.html\" file within the \"/usr/lib/vmware/*\" directory is renamed on a Linux system. The rule monitors for the \"rename\" event action associated with this specific file and path, which could indicate malicious activity.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -82,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "c125e48f-6783-41f0-b100-c3bf1b114d16_7",
+    "id": "c125e48f-6783-41f0-b100-c3bf1b114d16_8",
     "type": "security-rule"
 }

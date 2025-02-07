@@ -6,7 +6,7 @@
         "description": "Adversaries may create or modify the Sublime application plugins or scripts to execute a malicious payload each time the Sublime application is started.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -80,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "88817a33-60d3-411f-ba79-7c905d865b2a_109",
+    "id": "88817a33-60d3-411f-ba79-7c905d865b2a_110",
     "type": "security-rule"
 }

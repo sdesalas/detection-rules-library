@@ -6,7 +6,7 @@
         "description": "Detects the creation or modification of files related to the dynamic linker on Linux systems. The dynamic linker is a shared library that is used by the Linux kernel to load and execute programs. Attackers may attempt to hijack the execution flow of a program by modifying the dynamic linker configuration files.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -122,8 +122,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "640f79d1-571d-4f96-a9af-1194fc8cf763_3",
+    "id": "640f79d1-571d-4f96-a9af-1194fc8cf763_4",
     "type": "security-rule"
 }

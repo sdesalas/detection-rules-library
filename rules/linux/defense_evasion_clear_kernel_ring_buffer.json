@@ -6,11 +6,11 @@
         "description": "Monitors for the deletion of the kernel ring buffer events through dmesg. Attackers may clear kernel ring buffer events to evade detection after installing a Linux kernel module (LKM).",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*",
             "auditbeat-*",
+            "endgame-*",
             "logs-auditd_manager.auditd-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -117,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "2724808c-ba5d-48b2-86d2-0002103df753_106",
+    "id": "2724808c-ba5d-48b2-86d2-0002103df753_107",
     "type": "security-rule"
 }

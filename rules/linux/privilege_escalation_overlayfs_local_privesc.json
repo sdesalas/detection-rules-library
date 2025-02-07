@@ -6,7 +6,7 @@
         "description": "Identifies an attempt to exploit a local privilege escalation (CVE-2023-2640 and CVE-2023-32629) via a flaw in Ubuntu's modifications to OverlayFS. These flaws allow the creation of specialized executables, which, upon execution, grant the ability to escalate privileges to root on the affected machine.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -96,8 +96,8 @@
             }
         ],
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "b51dbc92-84e2-4af1-ba47-65183fcd0c57_6",
+    "id": "b51dbc92-84e2-4af1-ba47-65183fcd0c57_7",
     "type": "security-rule"
 }

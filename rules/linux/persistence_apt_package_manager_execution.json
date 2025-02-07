@@ -6,7 +6,7 @@
         "description": "Detects suspicious process events executed by the APT package manager, potentially indicating persistence through an APT backdoor. In Linux, APT (Advanced Package Tool) is a command-line utility used for handling packages on Debian-based systems, providing functions for installing, updating, upgrading, and removing software along with managing package repositories. Attackers can backdoor APT to gain persistence by injecting malicious code into scripts that APT runs, thereby ensuring continued unauthorized access or control each time APT is used for package management.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -160,8 +160,8 @@
             }
         ],
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "ad959eeb-2b7b-4722-ba08-a45f6622f005_105",
+    "id": "ad959eeb-2b7b-4722-ba08-a45f6622f005_106",
     "type": "security-rule"
 }

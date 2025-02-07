@@ -6,7 +6,8 @@
         "description": "This detection rule addresses multiple vulnerabilities in the CUPS printing system, including CVE-2024-47176, CVE-2024-47076, CVE-2024-47175, and CVE-2024-47177. Specifically, this rule detects suspicious file creation events executed by child processes of foomatic-rip. These flaws impact components like cups-browsed, libcupsfilters, libppd, and foomatic-rip, allowing remote unauthenticated attackers to manipulate IPP URLs or inject malicious data through crafted UDP packets or network spoofing. This can result in arbitrary command execution when a print job is initiated.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
+            "logs-endpoint.events.file*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -109,8 +110,8 @@
             }
         ],
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "b9b14be7-b7f4-4367-9934-81f07d2f63c4_102",
+    "id": "b9b14be7-b7f4-4367-9934-81f07d2f63c4_103",
     "type": "security-rule"
 }

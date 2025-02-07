@@ -6,7 +6,7 @@
         "description": "Identifies execution of the Apple script interpreter (osascript) without a password prompt and with administrator privileges.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -101,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 208
+        "version": 209
     },
-    "id": "827f8d8f-4117-4ae4-b551-f56d54b9da6b_208",
+    "id": "827f8d8f-4117-4ae4-b551-f56d54b9da6b_209",
     "type": "security-rule"
 }

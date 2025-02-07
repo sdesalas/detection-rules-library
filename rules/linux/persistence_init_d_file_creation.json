@@ -6,8 +6,8 @@
         "description": "Files that are placed in the /etc/init.d/ directory in Unix can be used to start custom applications, services, scripts or commands during start-up. Init.d has been mostly replaced in favor of Systemd. However, the \"systemd-sysv-generator\" can convert init.d files to service unit files that run at boot. Adversaries may add or alter files located in the /etc/init.d/ directory to execute malicious code upon boot in order to gain persistence on the system.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
+            "logs-endpoint.events.file*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -101,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 114
+        "version": 115
     },
-    "id": "474fd20e-14cc-49c5-8160-d9ab4ba16c8b_114",
+    "id": "474fd20e-14cc-49c5-8160-d9ab4ba16c8b_115",
     "type": "security-rule"
 }

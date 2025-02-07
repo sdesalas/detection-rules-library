@@ -6,9 +6,9 @@
         "description": "This rule monitors for the execution of the systemd-run command by a user with a UID that is larger than the maximum allowed UID size (INT_MAX). Some older Linux versions were affected by a bug which allows user accounts with a UID greater than INT_MAX to escalate privileges by spawning a shell through systemd-run.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
-            "logs-crowdstrike.fdr*"
+            "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -100,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "d55436a8-719c-445f-92c4-c113ff2f9ba5_7",
+    "id": "d55436a8-719c-445f-92c4-c113ff2f9ba5_8",
     "type": "security-rule"
 }

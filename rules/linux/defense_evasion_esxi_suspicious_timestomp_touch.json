@@ -6,11 +6,11 @@
         "description": "Identifies instances where the 'touch' command is executed on a Linux system with the \"-r\" flag, which is used to modify the timestamp of a file based on another file's timestamp. The rule targets specific VM-related paths, such as \"/etc/vmware/\", \"/usr/lib/vmware/\", or \"/vmfs/*\". These paths are associated with VMware virtualization software, and their presence in the touch command arguments may indicate that a threat actor is attempting to tamper with timestamps of VM-related files and configurations on the system.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*",
             "auditbeat-*",
+            "endgame-*",
             "logs-auditd_manager.auditd-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -108,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "30bfddd7-2954-4c9d-bbc6-19a99ca47e23_109",
+    "id": "30bfddd7-2954-4c9d-bbc6-19a99ca47e23_110",
     "type": "security-rule"
 }

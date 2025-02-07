@@ -6,11 +6,11 @@
         "description": "Monitors for the execution of different processes that might be used by attackers for malicious intent. An alert from this rule should be investigated further, as hack tools are commonly used by blue teamers and system administrators as well.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*",
             "auditbeat-*",
+            "endgame-*",
             "logs-auditd_manager.auditd-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -87,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "1df1152b-610a-4f48-9d7a-504f6ee5d9da_105",
+    "id": "1df1152b-610a-4f48-9d7a-504f6ee5d9da_106",
     "type": "security-rule"
 }

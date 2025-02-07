@@ -6,7 +6,8 @@
         "description": "This detection rule identifies the execution of a Linux shell process from a Java JAR application post an incoming network connection. This behavior may indicate reverse shell activity via a Java application.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -126,8 +127,8 @@
             }
         ],
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "5a3d5447-31c9-409a-aed1-72f9921594fd_9",
+    "id": "5a3d5447-31c9-409a-aed1-72f9921594fd_10",
     "type": "security-rule"
 }

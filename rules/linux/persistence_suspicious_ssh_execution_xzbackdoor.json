@@ -6,7 +6,8 @@
         "description": "It identifies potential malicious shell executions through remote SSH and detects cases where the sshd service suddenly terminates soon after successful execution, suggesting suspicious behavior similar to the XZ backdoor.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -182,8 +183,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "7afc6cc9-8800-4c7f-be6b-b688d2dea248_5",
+    "id": "7afc6cc9-8800-4c7f-be6b-b688d2dea248_6",
     "type": "security-rule"
 }

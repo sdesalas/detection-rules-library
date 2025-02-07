@@ -6,9 +6,9 @@
         "description": "Monitors for the execution of background processes with process arguments capable of opening a socket in the /dev/tcp channel. This may indicate the creation of a backdoor reverse connection, and should be investigated further.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -118,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "259be2d8-3b1a-4c2c-a0eb-0c8e77f35e39_105",
+    "id": "259be2d8-3b1a-4c2c-a0eb-0c8e77f35e39_106",
     "type": "security-rule"
 }

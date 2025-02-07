@@ -6,9 +6,9 @@
         "description": "This rule detects the execution of the `grep` command with the `plugins` argument on Linux systems. This command is used to search for YUM/DNF configurations and/or plugins with an enabled state. This behavior may indicate an attacker is attempting to establish persistence in a YUM or DNF plugin.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -96,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "78390eb5-c838-4c1d-8240-69dd7397cfb7_103",
+    "id": "78390eb5-c838-4c1d-8240-69dd7397cfb7_104",
     "type": "security-rule"
 }

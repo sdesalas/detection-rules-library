@@ -6,11 +6,11 @@
         "description": "Identifies attempts to add a user to a privileged group. Attackers may add users to a privileged group in order to establish persistence on a system.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*",
             "auditbeat-*",
+            "endgame-*",
             "logs-auditd_manager.auditd-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -108,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "43d6ec12-2b1c-47b5-8f35-e9de65551d3b_109",
+    "id": "43d6ec12-2b1c-47b5-8f35-e9de65551d3b_110",
     "type": "security-rule"
 }

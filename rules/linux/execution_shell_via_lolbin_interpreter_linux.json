@@ -6,7 +6,8 @@
         "description": "This detection rule detects the creation of a shell through a suspicious process chain. Any reverse shells spawned by the specified utilities that are initialized from a single process followed by a network connection attempt will be captured through this rule. Attackers may spawn reverse shells to establish persistence onto a target system.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -126,8 +127,8 @@
             }
         ],
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "76e4d92b-61c1-4a95-ab61-5fd94179a1ee_10",
+    "id": "76e4d92b-61c1-4a95-ab61-5fd94179a1ee_11",
     "type": "security-rule"
 }

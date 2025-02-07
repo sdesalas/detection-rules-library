@@ -6,9 +6,9 @@
         "description": "Identifies recursive process capability enumeration of the entire filesystem through the getcap command. Malicious users may manipulate identified capabilities to gain root privileges.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
-            "logs-crowdstrike.fdr*"
+            "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -95,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "5c351f54-4187-4ad8-abc8-29b0cfbef8b1_4",
+    "id": "5c351f54-4187-4ad8-abc8-29b0cfbef8b1_5",
     "type": "security-rule"
 }

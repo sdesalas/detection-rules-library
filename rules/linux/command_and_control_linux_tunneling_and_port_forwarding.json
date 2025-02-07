@@ -6,9 +6,9 @@
         "description": "This rule monitors for a set of Linux utilities that can be used for tunneling and port forwarding. Attackers can leverage tunneling and port forwarding techniques to bypass network defenses, establish hidden communication channels, and gain unauthorized access to internal resources, facilitating data exfiltration, lateral movement, and remote control.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -105,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "6ee947e9-de7e-4281-a55d-09289bdf947e_108",
+    "id": "6ee947e9-de7e-4281-a55d-09289bdf947e_109",
     "type": "security-rule"
 }

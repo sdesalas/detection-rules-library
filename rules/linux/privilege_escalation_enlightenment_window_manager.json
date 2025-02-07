@@ -6,7 +6,7 @@
         "description": "Identifies an attempt to exploit a local privilege escalation CVE-2022-37706 via a flaw in Linux window manager package Enlightenment. enlightenment_sys in Enlightenment before 0.25.4 allows local users to gain privileges because it is setuid root, and the system library function mishandles pathnames that begin with a /dev/.. substring.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -96,8 +96,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "bc0fc359-68db-421e-a435-348ced7a7f92_3",
+    "id": "bc0fc359-68db-421e-a435-348ced7a7f92_4",
     "type": "security-rule"
 }

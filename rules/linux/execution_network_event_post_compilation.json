@@ -6,7 +6,9 @@
         "description": "This rule monitors a sequence involving a program compilation event followed by its execution and a subsequent network connection event. This behavior can indicate the set up of a reverse tcp connection to a command-and-control server. Attackers may spawn reverse shells to establish persistence onto a target system.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file*",
+            "logs-endpoint.events.network*",
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -113,8 +115,8 @@
             }
         ],
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "64cfca9e-0f6f-4048-8251-9ec56a055e9e_7",
+    "id": "64cfca9e-0f6f-4048-8251-9ec56a055e9e_8",
     "type": "security-rule"
 }

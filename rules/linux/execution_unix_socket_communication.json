@@ -6,11 +6,11 @@
         "description": "This rule monitors for inter-process communication via Unix sockets. Adversaries may attempt to communicate with local Unix sockets to enumerate application details, find vulnerabilities/configuration mistakes and potentially escalate privileges or set up malicious communication channels via Unix sockets for inter-process communication to attempt to evade detection.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*",
             "auditbeat-*",
+            "endgame-*",
             "logs-auditd_manager.auditd-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -102,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "41284ba3-ed1a-4598-bfba-a97f75d9aba2_104",
+    "id": "41284ba3-ed1a-4598-bfba-a97f75d9aba2_105",
     "type": "security-rule"
 }

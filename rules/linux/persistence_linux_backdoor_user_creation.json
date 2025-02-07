@@ -6,11 +6,11 @@
         "description": "Identifies the attempt to create a new backdoor user by setting the user's UID to 0. Attackers may alter a user's UID to 0 to establish persistence on a system.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
-            "endgame-*",
             "auditbeat-*",
+            "endgame-*",
             "logs-auditd_manager.auditd-*",
             "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -108,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "494ebba4-ecb7-4be4-8c6f-654c686549ad_109",
+    "id": "494ebba4-ecb7-4be4-8c6f-654c686549ad_110",
     "type": "security-rule"
 }

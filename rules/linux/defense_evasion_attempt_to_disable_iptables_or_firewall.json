@@ -6,8 +6,8 @@
         "description": "Adversaries may attempt to disable the iptables or firewall service in an attempt to affect how a host is allowed to receive or send network traffic.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*",
             "endgame-*",
+            "logs-endpoint.events.process*",
             "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
@@ -105,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "83e9c2b3-24ef-4c1d-a8cd-5ebafb5dfa2f_110",
+    "id": "83e9c2b3-24ef-4c1d-a8cd-5ebafb5dfa2f_111",
     "type": "security-rule"
 }

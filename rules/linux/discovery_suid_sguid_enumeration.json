@@ -6,7 +6,7 @@
         "description": "This rule monitors for the usage of the \"find\" command in conjunction with SUID and SGUID permission arguments. SUID (Set User ID) and SGID (Set Group ID) are special permissions in Linux that allow a program to execute with the privileges of the file owner or group, respectively, rather than the privileges of the user running the program. In case an attacker is able to enumerate and find a binary that is misconfigured, they might be able to leverage this misconfiguration to escalate privileges by exploiting vulnerabilities or built-in features in the privileged program.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -127,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "5b06a27f-ad72-4499-91db-0c69667bffa5_7",
+    "id": "5b06a27f-ad72-4499-91db-0c69667bffa5_8",
     "type": "security-rule"
 }

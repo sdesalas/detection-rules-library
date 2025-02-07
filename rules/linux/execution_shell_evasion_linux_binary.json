@@ -6,7 +6,7 @@
         "description": "Identifies the abuse of a Linux binary to break out of a restricted shell or environment by spawning an interactive system shell. The activity of spawning a shell from a binary is not common behavior for a user or system administrator, and may indicate an attempt to evade detection, increase capabilities or enhance the stability of an adversary.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -133,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 114
+        "version": 115
     },
-    "id": "52376a86-ee86-4967-97ae-1a05f55816f0_114",
+    "id": "52376a86-ee86-4967-97ae-1a05f55816f0_115",
     "type": "security-rule"
 }

@@ -6,7 +6,7 @@
         "description": "Identifies the execution of a suspicious browser child process. Adversaries may gain access to a system through a user visiting a website over the normal course of browsing. With this technique, the user's web browser is typically targeted for exploitation.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -102,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "080bc66a-5d56-4d1f-8071-817671716db9_108",
+    "id": "080bc66a-5d56-4d1f-8071-817671716db9_109",
     "type": "security-rule"
 }

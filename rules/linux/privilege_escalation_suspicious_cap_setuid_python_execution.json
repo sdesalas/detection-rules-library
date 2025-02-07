@@ -6,7 +6,7 @@
         "description": "This detection rule monitors for the execution of a system command with setuid or setgid capabilities via Python, followed by a uid or gid change to the root user. This sequence of events may indicate successful privilege escalation. Setuid (Set User ID) and setgid (Set Group ID) are Unix-like OS features that enable processes to run with elevated privileges, based on the file owner or group. Threat actors can exploit these attributes to escalate privileges to the privileges that are set on the binary that is being executed.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.process*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -103,8 +103,8 @@
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "a0ddb77b-0318-41f0-91e4-8c1b5528834f_4",
+    "id": "a0ddb77b-0318-41f0-91e4-8c1b5528834f_5",
     "type": "security-rule"
 }
