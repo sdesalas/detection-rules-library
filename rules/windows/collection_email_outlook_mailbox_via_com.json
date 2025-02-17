@@ -6,7 +6,7 @@
         "description": "Detects Inter-Process Communication with Outlook via Component Object Model from an unusual process. Adversaries may target user email to collect sensitive information or send email on their behalf via API.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process*"
+            "logs-endpoint.events.process-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -132,8 +132,8 @@
             }
         ],
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "1dee0500-4aeb-44ca-b24b-4a285d7b6ba1_8",
+    "id": "1dee0500-4aeb-44ca-b24b-4a285d7b6ba1_9",
     "type": "security-rule"
 }

@@ -6,7 +6,8 @@
         "description": "Identifies an incoming SMB connection followed by a suspicious file rename operation. This may indicate a remote ransomware attack via the SMB protocol.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.*"
+            "logs-endpoint.events.file-*",
+            "logs-endpoint.events.network-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -156,8 +157,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "78e9b5d5-7c07-40a7-a591-3dbbf464c386_3",
+    "id": "78e9b5d5-7c07-40a7-a591-3dbbf464c386_4",
     "type": "security-rule"
 }

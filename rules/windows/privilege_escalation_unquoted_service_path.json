@@ -11,7 +11,7 @@
             "logs-sentinel_one_cloud_funnel.*",
             "endgame-*",
             "logs-windows.sysmon_operational-*",
-            "logs-system.security-*"
+            "logs-system.security*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -99,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 204
+        "version": 205
     },
-    "id": "12de29d4-bbb0-4eef-b687-857e8a163870_204",
+    "id": "12de29d4-bbb0-4eef-b687-857e8a163870_205",
     "type": "security-rule"
 }

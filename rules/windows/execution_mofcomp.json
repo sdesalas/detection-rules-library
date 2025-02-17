@@ -9,7 +9,7 @@
             "logs-endpoint.events.process-*",
             "logs-m365_defender.event-*",
             "endgame-*",
-            "logs-system.security-*",
+            "logs-system.security*",
             "logs-crowdstrike.fdr*"
         ],
         "language": "eql",
@@ -123,8 +123,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "210d4430-b371-470e-b879-80b7182aa75e_5",
+    "id": "210d4430-b371-470e-b879-80b7182aa75e_6",
     "type": "security-rule"
 }

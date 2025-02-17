@@ -11,7 +11,7 @@
             "endgame-*",
             "logs-sentinel_one_cloud_funnel.*",
             "logs-m365_defender.event-*",
-            "logs-system.security-*",
+            "logs-system.security*",
             "logs-crowdstrike.fdr*"
         ],
         "language": "eql",
@@ -115,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "bdfaddc4-4438-48b4-bc43-9f5cf8151c46_103",
+    "id": "bdfaddc4-4438-48b4-bc43-9f5cf8151c46_104",
     "type": "security-rule"
 }
