@@ -6,15 +6,15 @@
         "description": "Identifies the use of net.exe to mount a WebDav or hidden remote share. This may indicate lateral movement or preparation for data exfiltration.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "winlogbeat-*",
-            "logs-windows.forwarded*",
-            "logs-windows.sysmon_operational-*",
             "endgame-*",
-            "logs-system.security*",
+            "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process-*",
             "logs-m365_defender.event-*",
             "logs-sentinel_one_cloud_funnel.*",
-            "logs-crowdstrike.fdr*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "logs-windows.sysmon_operational-*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -90,7 +90,7 @@
             "Tactic: Lateral Movement",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Data Source: Microsoft Defender for Endpoint",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
@@ -172,8 +172,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 312
+        "version": 313
     },
-    "id": "c4210e1c-64f2-4f48-b67e-b5a8ffe3aa14_312",
+    "id": "c4210e1c-64f2-4f48-b67e-b5a8ffe3aa14_313",
     "type": "security-rule"
 }

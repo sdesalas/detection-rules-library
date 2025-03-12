@@ -8,15 +8,15 @@
         "description": "Identifies attempts to disable EventLog via the logman Windows utility, PowerShell, or auditpol. This is often done by attackers in an attempt to evade detection on a system.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-endpoint.events.process-*",
-            "logs-windows.forwarded*",
-            "logs-windows.sysmon_operational-*",
             "endgame-*",
-            "logs-system.security*",
+            "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process-*",
             "logs-m365_defender.event-*",
             "logs-sentinel_one_cloud_funnel.*",
-            "logs-crowdstrike.fdr*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "logs-windows.sysmon_operational-*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -91,7 +91,7 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Data Source: Microsoft Defender for Endpoint",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
@@ -140,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 314
+        "version": 315
     },
-    "id": "4de76544-f0e5-486a-8f84-eae0b6063cdc_314",
+    "id": "4de76544-f0e5-486a-8f84-eae0b6063cdc_315",
     "type": "security-rule"
 }

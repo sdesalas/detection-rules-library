@@ -6,12 +6,12 @@
         "description": "Adversaries may leverage unquoted service path vulnerabilities to escalate privileges. By placing an executable in a higher-level directory within the path of an unquoted service executable, Windows will natively launch this executable from its defined path variable instead of the benign one in a deeper directory, thus leading to code execution.",
         "from": "now-9m",
         "index": [
+            "endgame-*",
             "logs-endpoint.events.process-*",
             "logs-m365_defender.event-*",
             "logs-sentinel_one_cloud_funnel.*",
-            "endgame-*",
-            "logs-windows.sysmon_operational-*",
-            "logs-system.security*"
+            "logs-system.security*",
+            "logs-windows.sysmon_operational-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -70,7 +70,7 @@
             "Data Source: SentinelOne",
             "Data Source: Elastic Endgame",
             "Data Source: Sysmon",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -99,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 205
+        "version": 206
     },
-    "id": "12de29d4-bbb0-4eef-b687-857e8a163870_205",
+    "id": "12de29d4-bbb0-4eef-b687-857e8a163870_206",
     "type": "security-rule"
 }

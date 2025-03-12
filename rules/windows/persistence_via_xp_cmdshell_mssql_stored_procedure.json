@@ -6,15 +6,15 @@
         "description": "Identifies execution via MSSQL xp_cmdshell stored procedure. Malicious users may attempt to elevate their privileges by using xp_cmdshell, which is disabled by default, thus, it's important to review the context of it's use.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-endpoint.events.process-*",
-            "logs-windows.forwarded*",
-            "logs-windows.sysmon_operational-*",
             "endgame-*",
-            "logs-system.security*",
+            "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process-*",
             "logs-m365_defender.event-*",
             "logs-sentinel_one_cloud_funnel.*",
-            "logs-crowdstrike.fdr*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "logs-windows.sysmon_operational-*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -93,7 +93,7 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Data Source: Microsoft Defender for Endpoint",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
@@ -147,8 +147,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 313
+        "version": 314
     },
-    "id": "4ed493fc-d637-4a36-80ff-ac84937e5461_313",
+    "id": "4ed493fc-d637-4a36-80ff-ac84937e5461_314",
     "type": "security-rule"
 }

@@ -6,15 +6,15 @@
         "description": "Windows Component Object Model (COM) is an inter-process communication (IPC) component of the native Windows application programming interface (API) that enables interaction between software objects or executable code. Xwizard can be used to run a COM object created in registry to evade defensive counter measures.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-endpoint.events.process-*",
-            "logs-windows.forwarded*",
-            "logs-windows.sysmon_operational-*",
             "endgame-*",
-            "logs-system.security*",
+            "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process-*",
             "logs-m365_defender.event-*",
             "logs-sentinel_one_cloud_funnel.*",
-            "logs-crowdstrike.fdr*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "logs-windows.sysmon_operational-*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -93,7 +93,7 @@
             "Tactic: Execution",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Data Source: Microsoft Defender for Endpoint",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
@@ -126,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 313
+        "version": 314
     },
-    "id": "1a6075b0-7479-450e-8fe7-b8b8438ac570_313",
+    "id": "1a6075b0-7479-450e-8fe7-b8b8438ac570_314",
     "type": "security-rule"
 }

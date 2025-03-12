@@ -7,10 +7,10 @@
         "description": "Identifies attempts to modify a service path setting using sc.exe. Attackers may attempt to modify existing services for persistence or privilege escalation.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "logs-windows.sysmon_operational-*",
             "endgame-*",
+            "logs-endpoint.events.process-*",
             "logs-system.security*",
+            "logs-windows.sysmon_operational-*",
             "winlogbeat-*"
         ],
         "interval": "60m",
@@ -61,7 +61,7 @@
             "Data Source: Elastic Defend",
             "Rule Type: BBR",
             "Data Source: Sysmon",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -126,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "c5677997-f75b-4cda-b830-a75920514096_106",
+    "id": "c5677997-f75b-4cda-b830-a75920514096_107",
     "type": "security-rule"
 }

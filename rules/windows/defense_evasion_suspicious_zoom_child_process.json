@@ -6,14 +6,15 @@
         "description": "A suspicious Zoom child process was detected, which may indicate an attempt to run unnoticed. Verify process details such as command line, network connections, file writes and associated file signature details as well.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-endpoint.events.process-*",
-            "logs-windows.*",
             "endgame-*",
-            "logs-system.security*",
-            "logs-sentinel_one_cloud_funnel.*",
+            "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process-*",
             "logs-m365_defender.event-*",
-            "logs-crowdstrike.fdr*"
+            "logs-sentinel_one_cloud_funnel.*",
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "logs-windows.sysmon_operational-*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -82,8 +83,9 @@
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
             "Data Source: Microsoft Defender for Endpoint",
-            "Data Source: System",
-            "Data Source: Crowdstrike"
+            "Data Source: Windows Security Event Logs",
+            "Data Source: Crowdstrike",
+            "Data Source: Sysmon"
         ],
         "threat": [
             {
@@ -124,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 417
+        "version": 418
     },
-    "id": "97aba1ef-6034-4bd3-8c1a-1e0996b27afa_417",
+    "id": "97aba1ef-6034-4bd3-8c1a-1e0996b27afa_418",
     "type": "security-rule"
 }

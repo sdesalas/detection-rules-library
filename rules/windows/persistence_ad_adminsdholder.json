@@ -7,8 +7,8 @@
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-windows.forwarded*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -51,7 +51,7 @@
             "Tactic: Persistence",
             "Use Case: Active Directory Monitoring",
             "Data Source: Active Directory",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -85,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 211
+        "version": 212
     },
-    "id": "6e9130a5-9be6-48e5-943a-9628bfc74b18_211",
+    "id": "6e9130a5-9be6-48e5-943a-9628bfc74b18_212",
     "type": "security-rule"
 }

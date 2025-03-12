@@ -6,14 +6,14 @@
         "description": "Identifies a potential Windows Server Update Services (WSUS) abuse to execute psexec to enable for lateral movement. WSUS is limited to executing Microsoft signed binaries, which limits the executables that can be used to tools published by Microsoft.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "logs-windows.sysmon_operational-*",
             "endgame-*",
-            "logs-sentinel_one_cloud_funnel.*",
+            "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process-*",
             "logs-m365_defender.event-*",
+            "logs-sentinel_one_cloud_funnel.*",
             "logs-system.security*",
-            "winlogbeat-*",
-            "logs-crowdstrike.fdr*"
+            "logs-windows.sysmon_operational-*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -94,7 +94,7 @@
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
             "Data Source: Microsoft Defender for Endpoint",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Data Source: Crowdstrike",
             "Resources: Investigation Guide"
         ],
@@ -117,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 207
+        "version": 208
     },
-    "id": "8e2485b6-a74f-411b-bf7f-38b819f3a846_207",
+    "id": "8e2485b6-a74f-411b-bf7f-38b819f3a846_208",
     "type": "security-rule"
 }

@@ -7,11 +7,11 @@
         "description": "Identifies the execution of the Microsoft Diagnostic Wizard to open a diagcab file from a suspicious path and with an unusual parent process. This may indicate an attempt to execute malicious Troubleshooting Pack Cabinet files.",
         "from": "now-119m",
         "index": [
+            "endgame-*",
             "logs-endpoint.events.process-*",
             "logs-system.security*",
-            "winlogbeat-*",
             "logs-windows.*",
-            "endgame-*"
+            "winlogbeat-*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -78,7 +78,7 @@
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -99,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "808291d3-e918-4a3a-86cd-73052a0c9bdc_104",
+    "id": "808291d3-e918-4a3a-86cd-73052a0c9bdc_105",
     "type": "security-rule"
 }

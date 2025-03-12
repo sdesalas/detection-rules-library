@@ -6,15 +6,15 @@
         "description": "Detects the usage of gpresult.exe to query group policy objects. Attackers may query group policy objects during the reconnaissance phase after compromising a system to gain a better understanding of the active directory environment and possible methods to escalate privileges or move laterally.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-endpoint.events.process-*",
-            "logs-windows.forwarded*",
-            "logs-windows.sysmon_operational-*",
             "endgame-*",
-            "logs-system.security*",
+            "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process-*",
             "logs-m365_defender.event-*",
             "logs-sentinel_one_cloud_funnel.*",
-            "logs-crowdstrike.fdr*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "logs-windows.sysmon_operational-*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -84,7 +84,7 @@
             "Tactic: Discovery",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Data Source: Microsoft Defender for Endpoint",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
@@ -110,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "94a401ba-4fa2-455c-b7ae-b6e037afc0b7_211",
+    "id": "94a401ba-4fa2-455c-b7ae-b6e037afc0b7_212",
     "type": "security-rule"
 }

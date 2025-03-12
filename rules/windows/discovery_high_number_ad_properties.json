@@ -6,9 +6,9 @@
         "description": "Identify read access to a high number of Active Directory object attributes. The knowledge of objects properties can help adversaries find vulnerabilities, elevate privileges or collect sensitive information.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
             "logs-system.security*",
-            "logs-windows.forwarded*"
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -56,7 +56,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Data Source: Active Directory",
             "Data Source: Windows",
             "Resources: Investigation Guide"
@@ -80,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "68ad737b-f90a-4fe5-bda6-a68fa460044e_103",
+    "id": "68ad737b-f90a-4fe5-bda6-a68fa460044e_104",
     "type": "security-rule"
 }

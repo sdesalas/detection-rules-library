@@ -6,9 +6,9 @@
         "description": "Identifies a user being added to an active directory group by the SYSTEM (S-1-5-18) user. This behavior can indicate that the attacker has achieved SYSTEM privileges in a domain controller, which attackers can obtain by exploiting vulnerabilities or abusing default group privileges (e.g., Server Operators), and is attempting to pivot to a domain account.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
             "logs-system.security*",
-            "logs-windows.forwarded*"
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -57,7 +57,7 @@
             "Tactic: Persistence",
             "Use Case: Active Directory Monitoring",
             "Data Source: Active Directory",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -94,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "6f024bde-7085-489b-8250-5957efdf1caf_103",
+    "id": "6f024bde-7085-489b-8250-5957efdf1caf_104",
     "type": "security-rule"
 }

@@ -7,11 +7,11 @@
         "description": "Detects the usage of commonly used system service discovery techniques, which attackers may use during the reconnaissance phase after compromising a system in order to gain a better understanding of the environment and/or escalate privileges.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-endpoint.events.process-*",
-            "logs-windows.*",
             "endgame-*",
-            "logs-system.security*"
+            "logs-endpoint.events.process-*",
+            "logs-system.security*",
+            "logs-windows.*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -84,7 +84,7 @@
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
             "Rule Type: BBR",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -105,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "e0881d20-54ac-457f-8733-fe0bc5d44c55_109",
+    "id": "e0881d20-54ac-457f-8733-fe0bc5d44c55_110",
     "type": "security-rule"
 }

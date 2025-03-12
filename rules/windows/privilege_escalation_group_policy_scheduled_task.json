@@ -5,9 +5,9 @@
         ],
         "description": "Detects the modification of Group Policy Object attributes to execute a scheduled task in the objects controlled by the GPO.",
         "index": [
-            "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -81,7 +81,7 @@
             "Data Source: Active Directory",
             "Resources: Investigation Guide",
             "Use Case: Active Directory Monitoring",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -136,8 +136,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "15a8ba77-1c13-4274-88fe-6bd14133861e_212",
+    "id": "15a8ba77-1c13-4274-88fe-6bd14133861e_213",
     "type": "security-rule"
 }

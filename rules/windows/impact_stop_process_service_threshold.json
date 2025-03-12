@@ -6,11 +6,12 @@
         "description": "This rule identifies a high number (10) of process terminations (stop, delete, or suspend) from the same host within a short time period.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-endpoint.events.process-*",
-            "logs-windows.*",
             "endgame-*",
-            "logs-system.security*"
+            "logs-endpoint.events.process-*",
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "logs-windows.sysmon_operational-*",
+            "winlogbeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -77,7 +78,8 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: System"
+            "Data Source: Sysmon",
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -104,8 +106,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 212
+        "version": 213
     },
-    "id": "035889c4-2686-4583-a7df-67f89c292f2c_212",
+    "id": "035889c4-2686-4583-a7df-67f89c292f2c_213",
     "type": "security-rule"
 }

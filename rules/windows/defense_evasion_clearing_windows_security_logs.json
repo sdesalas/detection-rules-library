@@ -8,8 +8,9 @@
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-system.system*",
+            "logs-windows.forwarded*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -52,7 +53,8 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs",
+            "Data Source: Windows System Event Logs"
         ],
         "threat": [
             {
@@ -80,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 211
+        "version": 212
     },
-    "id": "45ac4800-840f-414c-b221-53dd36a5aaf7_211",
+    "id": "45ac4800-840f-414c-b221-53dd36a5aaf7_212",
     "type": "security-rule"
 }

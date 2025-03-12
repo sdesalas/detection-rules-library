@@ -7,10 +7,10 @@
         "description": "Attackers may abuse cmd.exe commands to reassemble binary fragments into a malicious payload.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "logs-windows.sysmon_operational-*",
             "endgame-*",
+            "logs-endpoint.events.process-*",
             "logs-system.security*",
+            "logs-windows.sysmon_operational-*",
             "winlogbeat-*"
         ],
         "interval": "60m",
@@ -67,7 +67,7 @@
             "Rule Type: BBR",
             "Data Source: Sysmon",
             "Data Source: Elastic Endgame",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -110,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "53dedd83-1be7-430f-8026-363256395c8b_106",
+    "id": "53dedd83-1be7-430f-8026-363256395c8b_107",
     "type": "security-rule"
 }

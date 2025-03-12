@@ -6,14 +6,14 @@
         "description": "Identifies suspicious processes being spawned by the ScreenConnect client processes. This activity may indicate execution abusing unauthorized access to the ScreenConnect remote access software.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "winlogbeat-*",
-            "logs-windows.sysmon_operational-*",
-            "logs-system.security*",
             "endgame-*",
-            "logs-sentinel_one_cloud_funnel.*",
+            "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process-*",
             "logs-m365_defender.event-*",
-            "logs-crowdstrike.fdr*"
+            "logs-sentinel_one_cloud_funnel.*",
+            "logs-system.security*",
+            "logs-windows.sysmon_operational-*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -90,7 +90,7 @@
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
             "Data Source: Microsoft Defender for Endpoint",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Data Source: Crowdstrike"
         ],
         "threat": [
@@ -112,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 308
+        "version": 309
     },
-    "id": "78de1aeb-5225-4067-b8cc-f4a1de8a8546_308",
+    "id": "78de1aeb-5225-4067-b8cc-f4a1de8a8546_309",
     "type": "security-rule"
 }

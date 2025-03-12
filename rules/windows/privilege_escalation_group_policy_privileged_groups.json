@@ -5,9 +5,9 @@
         ],
         "description": "Detects the first occurrence of a modification to Group Policy Object Attributes to add privileges to user accounts or use them to add users as local admins.",
         "index": [
-            "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -62,7 +62,7 @@
             "Data Source: Active Directory",
             "Resources: Investigation Guide",
             "Use Case: Active Directory Monitoring",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -90,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "b9554892-5e0e-424b-83a0-5aef95aa43bf_211",
+    "id": "b9554892-5e0e-424b-83a0-5aef95aa43bf_212",
     "type": "security-rule"
 }

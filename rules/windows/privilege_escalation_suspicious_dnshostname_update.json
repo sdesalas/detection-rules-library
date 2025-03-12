@@ -6,9 +6,9 @@
         "description": "Identifies the remote update to a computer account's DnsHostName attribute. If the new value set is a valid domain controller DNS hostname and the subject computer name is not a domain controller, then it's highly likely a preparation step to exploit CVE-2022-26923 in an attempt to elevate privileges from a standard domain user to domain admin privileges.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -62,7 +62,7 @@
             "Use Case: Active Directory Monitoring",
             "Data Source: Active Directory",
             "Use Case: Vulnerability",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -96,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 209
+        "version": 210
     },
-    "id": "6bed021a-0afb-461c-acbe-ffdb9574d3f3_209",
+    "id": "6bed021a-0afb-461c-acbe-ffdb9574d3f3_210",
     "type": "security-rule"
 }

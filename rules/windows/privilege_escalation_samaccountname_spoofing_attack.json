@@ -6,9 +6,9 @@
         "description": "Identifies a suspicious computer account name rename event, which may indicate an attempt to exploit CVE-2021-42278 to elevate privileges from a standard domain user to a user with domain admin privileges. CVE-2021-42278 is a security vulnerability that allows potential attackers to impersonate a domain controller via samAccountName attribute spoofing.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -51,7 +51,6 @@
         ],
         "risk_score": 73,
         "rule_id": "bdcf646b-08d4-492c-870a-6c04e3700034",
-        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "high",
         "tags": [
             "Domain: Endpoint",
@@ -62,7 +61,7 @@
             "Use Case: Active Directory Monitoring",
             "Data Source: Active Directory",
             "Use Case: Vulnerability",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -111,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 210
+        "version": 211
     },
-    "id": "bdcf646b-08d4-492c-870a-6c04e3700034_210",
+    "id": "bdcf646b-08d4-492c-870a-6c04e3700034_211",
     "type": "security-rule"
 }

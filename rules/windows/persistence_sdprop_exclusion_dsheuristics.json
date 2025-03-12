@@ -6,9 +6,9 @@
         "description": "Identifies a modification on the dsHeuristics attribute on the bit that holds the configuration of groups excluded from the SDProp process. The SDProp compares the permissions on protected objects with those defined on the AdminSDHolder object. If the permissions on any of the protected accounts and groups do not match, the permissions on the protected accounts and groups are reset to match those of the domain's AdminSDHolder object, meaning that groups excluded will remain unchanged. Attackers can abuse this misconfiguration to maintain long-term access to privileged accounts in these groups.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -48,7 +48,7 @@
         ],
         "risk_score": 73,
         "rule_id": "61d29caf-6c15-4d1e-9ccb-7ad12ccc0bc7",
-        "setup": "## Setup\n\nThe 'Audit Directory Service Changes' logging policy must be configured for (Success).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nDS Access >\nAudit Directory Service Changes (Success)\n```\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
+        "setup": "## Setup\n\nThe 'Audit Directory Service Changes' logging policy must be configured for (Success).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nDS Access >\nAudit Directory Service Changes (Success)\n```\n",
         "severity": "high",
         "tags": [
             "Domain: Endpoint",
@@ -58,7 +58,7 @@
             "Data Source: Active Directory",
             "Resources: Investigation Guide",
             "Use Case: Active Directory Monitoring",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -91,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 213
+        "version": 214
     },
-    "id": "61d29caf-6c15-4d1e-9ccb-7ad12ccc0bc7_213",
+    "id": "61d29caf-6c15-4d1e-9ccb-7ad12ccc0bc7_214",
     "type": "security-rule"
 }

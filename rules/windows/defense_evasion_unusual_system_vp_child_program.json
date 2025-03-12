@@ -6,14 +6,14 @@
         "description": "Identifies a suspicious child process of the Windows virtual system process, which could indicate code injection.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
+            "endgame-*",
             "logs-endpoint.events.process-*",
+            "logs-m365_defender.event-*",
+            "logs-sentinel_one_cloud_funnel.*",
+            "logs-system.security*",
             "logs-windows.forwarded*",
             "logs-windows.sysmon_operational-*",
-            "endgame-*",
-            "logs-system.security*",
-            "logs-m365_defender.event-*",
-            "logs-sentinel_one_cloud_funnel.*"
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -74,7 +74,7 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Data Source: Microsoft Defender for Endpoint",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
@@ -99,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 313
+        "version": 314
     },
-    "id": "de9bd7e0-49e9-4e92-a64d-53ade2e66af1_313",
+    "id": "de9bd7e0-49e9-4e92-a64d-53ade2e66af1_314",
     "type": "security-rule"
 }

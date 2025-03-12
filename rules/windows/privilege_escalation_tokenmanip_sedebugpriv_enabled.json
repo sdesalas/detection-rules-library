@@ -6,9 +6,9 @@
         "description": "Identifies the creation of a process running as SYSTEM and impersonating a Windows core binary privileges. Adversaries may create a new process with a different token to escalate privileges and bypass access controls.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-windows.*",
-            "logs-system.security*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -70,7 +70,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -92,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "97020e61-e591-4191-8a3b-2861a2b887cd_109",
+    "id": "97020e61-e591-4191-8a3b-2861a2b887cd_110",
     "type": "security-rule"
 }

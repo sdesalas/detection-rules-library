@@ -6,15 +6,15 @@
         "description": "Identifies abuse of the Windows Update Auto Update Client (wuauclt.exe) to load an arbitrary DLL. This behavior is used as a defense evasion technique to blend-in malicious activity with legitimate Windows software.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "winlogbeat-*",
-            "logs-windows.forwarded*",
-            "logs-windows.sysmon_operational-*",
             "endgame-*",
-            "logs-system.security*",
+            "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process-*",
             "logs-m365_defender.event-*",
             "logs-sentinel_one_cloud_funnel.*",
-            "logs-crowdstrike.fdr*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "logs-windows.sysmon_operational-*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -88,7 +88,7 @@
             "Tactic: Execution",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Data Source: Microsoft Defender for Endpoint",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
@@ -116,8 +116,8 @@
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 315
+        "version": 316
     },
-    "id": "edf8ee23-5ea7-4123-ba19-56b41e424ae3_315",
+    "id": "edf8ee23-5ea7-4123-ba19-56b41e424ae3_316",
     "type": "security-rule"
 }

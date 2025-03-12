@@ -9,9 +9,9 @@
         ],
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -62,7 +62,7 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Tactic: Execution",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -112,8 +112,8 @@
             }
         ],
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "81ff45f8-f8c2-4e28-992e-5a0e8d98e0fe_109",
+    "id": "81ff45f8-f8c2-4e28-992e-5a0e8d98e0fe_110",
     "type": "security-rule"
 }

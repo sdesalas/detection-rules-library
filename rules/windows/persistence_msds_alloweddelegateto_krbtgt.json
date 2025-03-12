@@ -6,9 +6,9 @@
         "description": "Identifies the modification of the msDS-AllowedToDelegateTo attribute to KRBTGT. Attackers can use this technique to maintain persistence to the domain by having the ability to request tickets for the KRBTGT service.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -52,7 +52,7 @@
             "Tactic: Persistence",
             "Use Case: Active Directory Monitoring",
             "Data Source: Active Directory",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -89,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 209
+        "version": 210
     },
-    "id": "e052c845-48d0-4f46-8a13-7d0aba05df82_209",
+    "id": "e052c845-48d0-4f46-8a13-7d0aba05df82_210",
     "type": "security-rule"
 }

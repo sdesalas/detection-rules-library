@@ -6,14 +6,15 @@
         "description": "Identifies suspicious child processes of Microsoft Outlook. These child processes are often associated with spear phishing activity.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-endpoint.events.process-*",
-            "logs-windows.*",
             "endgame-*",
-            "logs-system.security*",
-            "logs-sentinel_one_cloud_funnel.*",
+            "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process-*",
             "logs-m365_defender.event-*",
-            "logs-crowdstrike.fdr*"
+            "logs-sentinel_one_cloud_funnel.*",
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "logs-windows.sysmon_operational-*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -83,8 +84,9 @@
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
             "Data Source: Microsoft Defender for Endpoint",
-            "Data Source: System",
-            "Data Source: Crowdstrike"
+            "Data Source: Windows Security Event Logs",
+            "Data Source: Crowdstrike",
+            "Data Source: Sysmon"
         ],
         "threat": [
             {
@@ -154,8 +156,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 416
+        "version": 417
     },
-    "id": "32f4675e-6c49-4ace-80f9-97c9259dca2e_416",
+    "id": "32f4675e-6c49-4ace-80f9-97c9259dca2e_417",
     "type": "security-rule"
 }

@@ -6,14 +6,14 @@
         "description": "This rule identifies a large number (15) of nslookup.exe executions with an explicit query type from the same host. This may indicate command and control activity utilizing the DNS protocol.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
+            "endgame-*",
             "logs-endpoint.events.process-*",
+            "logs-m365_defender.event-*",
+            "logs-sentinel_one_cloud_funnel.*",
+            "logs-system.security*",
             "logs-windows.forwarded*",
             "logs-windows.sysmon_operational-*",
-            "endgame-*",
-            "logs-system.security*",
-            "logs-m365_defender.event-*",
-            "logs-sentinel_one_cloud_funnel.*"
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -83,7 +83,7 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Data Source: Microsoft Defender for Endpoint",
             "Data Source: SentinelOne",
             "Data Source: Sysmon"
@@ -118,8 +118,8 @@
             }
         ],
         "type": "eql",
-        "version": 311
+        "version": 312
     },
-    "id": "3a59fc81-99d3-47ea-8cd6-d48d561fca20_311",
+    "id": "3a59fc81-99d3-47ea-8cd6-d48d561fca20_312",
     "type": "security-rule"
 }

@@ -8,9 +8,9 @@
             "Legitimate Administrative Activity"
         ],
         "index": [
-            "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -81,7 +81,7 @@
             "Data Source: Active Directory",
             "Resources: Investigation Guide",
             "Use Case: Active Directory Monitoring",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -114,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "16fac1a1-21ee-4ca6-b720-458e3855d046_211",
+    "id": "16fac1a1-21ee-4ca6-b720-458e3855d046_212",
     "type": "security-rule"
 }

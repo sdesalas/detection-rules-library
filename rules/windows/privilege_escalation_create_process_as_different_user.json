@@ -6,9 +6,9 @@
         "description": "Identifies process creation with alternate credentials. Adversaries may create a new process with a different token to escalate privileges and bypass access controls.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -77,14 +77,14 @@
         ],
         "risk_score": 47,
         "rule_id": "42eeee3d-947f-46d3-a14d-7036b962c266",
-        "setup": "## Setup\n\nAudit events 4624 and 4688 are needed to trigger this rule.\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
+        "setup": "## Setup\n\nAudit events 4624 and 4688 are needed to trigger this rule.\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -117,8 +117,8 @@
             }
         ],
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "42eeee3d-947f-46d3-a14d-7036b962c266_111",
+    "id": "42eeee3d-947f-46d3-a14d-7036b962c266_112",
     "type": "security-rule"
 }

@@ -6,9 +6,10 @@
         "description": "Identifies the creation of a new Windows service with suspicious Service command values. Windows services typically run as SYSTEM and can be used for privilege escalation and persistence.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-system.system*",
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -51,7 +52,8 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs",
+            "Data Source: Windows System Event Logs"
         ],
         "threat": [
             {
@@ -79,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "da87eee1-129c-4661-a7aa-57d0b9645fad_111",
+    "id": "da87eee1-129c-4661-a7aa-57d0b9645fad_112",
     "type": "security-rule"
 }

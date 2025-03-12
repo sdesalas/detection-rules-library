@@ -7,11 +7,11 @@
         "description": "Detects the usage of commonly used system time discovery techniques, which attackers may use during the reconnaissance phase after compromising a system.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-endpoint.events.process-*",
-            "logs-windows.*",
             "endgame-*",
-            "logs-system.security*"
+            "logs-endpoint.events.process-*",
+            "logs-system.security*",
+            "logs-windows.*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -74,7 +74,7 @@
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
             "Rule Type: BBR",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -95,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "06568a02-af29-4f20-929c-f3af281e41aa_110",
+    "id": "06568a02-af29-4f20-929c-f3af281e41aa_111",
     "type": "security-rule"
 }

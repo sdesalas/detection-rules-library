@@ -61,7 +61,7 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -106,8 +106,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "0ef5d3eb-67ef-43ab-93b7-305cfa5a21f6_3",
+    "id": "0ef5d3eb-67ef-43ab-93b7-305cfa5a21f6_4",
     "type": "security-rule"
 }

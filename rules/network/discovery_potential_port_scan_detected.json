@@ -3,7 +3,7 @@
         "author": [
             "Elastic"
         ],
-        "description": "This rule identifies a potential port scan. A port scan is a method utilized by attackers to systematically scan a target system or network for open ports, allowing them to identify available services and potential vulnerabilities. By mapping out the open ports, attackers can gather critical information to plan and execute targeted attacks, gaining unauthorized access, compromising security, and potentially leading to data breaches, unauthorized control, or further exploitation of the targeted system or network. This rule proposes threshold logic to check for connection attempts from one source host to 250 or more destination ports.",
+        "description": "This rule identifies a potential port scan. A port scan is a method utilized by attackers to systematically scan a target system or network for open ports, allowing them to identify available services and potential vulnerabilities. By mapping out the open ports, attackers can gather critical information to plan and execute targeted attacks, gaining unauthorized access, compromising security, and potentially leading to data breaches, unauthorized control, or further exploitation of the targeted system or network. This rule defines a threshold-based approach to detect connection attempts from a single source to a wide range of destination ports.",
         "from": "now-9m",
         "index": [
             "logs-network_traffic.*",
@@ -109,8 +109,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 9
+        "version": 10
     },
-    "id": "0171f283-ade7-4f87-9521-ac346c68cc9b_9",
+    "id": "0171f283-ade7-4f87-9521-ac346c68cc9b_10",
     "type": "security-rule"
 }

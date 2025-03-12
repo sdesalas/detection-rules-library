@@ -8,7 +8,7 @@
         "history_window_start": "now-10d",
         "index": [
             "winlogbeat-*",
-            "logs-windows.*",
+            "logs-windows.forwarded*",
             "logs-system.security*"
         ],
         "language": "kuery",
@@ -77,7 +77,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -106,8 +106,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 107
+        "version": 108
     },
-    "id": "daafdf96-e7b1-4f14-b494-27e0d24b11f6_107",
+    "id": "daafdf96-e7b1-4f14-b494-27e0d24b11f6_108",
     "type": "security-rule"
 }

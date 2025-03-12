@@ -36,8 +36,8 @@
         "history_window_start": "now-14d",
         "index": [
             "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-windows.forwarded*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -103,7 +103,7 @@
         ],
         "risk_score": 47,
         "rule_id": "291a0de9-937a-4189-94c0-3e847c8b13e4",
-        "setup": "## Setup\n\nThe 'Audit Security Group Management' audit policy must be configured (Success).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nAccount Management >\nAudit Security Group Management (Success)\n```\n\nMicrosoft introduced the [event used](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4799) in this detection rule on Windows 10 and Windows Server 2016 or later operating systems.\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
+        "setup": "## Setup\n\nThe 'Audit Security Group Management' audit policy must be configured (Success).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nAccount Management >\nAudit Security Group Management (Success)\n```\n\nMicrosoft introduced the [event used](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4799) in this detection rule on Windows 10 and Windows Server 2016 or later operating systems.\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -111,7 +111,7 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Resources: Investigation Guide",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -139,8 +139,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 416
+        "version": 417
     },
-    "id": "291a0de9-937a-4189-94c0-3e847c8b13e4_416",
+    "id": "291a0de9-937a-4189-94c0-3e847c8b13e4_417",
     "type": "security-rule"
 }

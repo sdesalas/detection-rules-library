@@ -7,11 +7,11 @@
         "description": "Adversaries may abuse the WMI diagnostic tool, wbemtest.exe, to enumerate WMI object instances or invoke methods against local or remote endpoints.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "winlogbeat-*",
-            "logs-windows.*",
             "endgame-*",
-            "logs-system.security*"
+            "logs-endpoint.events.process-*",
+            "logs-system.security*",
+            "logs-windows.*",
+            "winlogbeat-*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -60,7 +60,7 @@
             "Data Source: Elastic Defend",
             "Rule Type: BBR",
             "Data Source: Elastic Endgame",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -81,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "d3551433-782f-4e22-bbea-c816af2d41c6_104",
+    "id": "d3551433-782f-4e22-bbea-c816af2d41c6_105",
     "type": "security-rule"
 }

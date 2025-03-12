@@ -60,7 +60,7 @@
             "OS: macOS",
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -82,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "a8afdce2-0ec1-11ee-b843-f661ea17fbcd_5",
+    "id": "a8afdce2-0ec1-11ee-b843-f661ea17fbcd_6",
     "type": "security-rule"
 }

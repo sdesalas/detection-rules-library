@@ -7,11 +7,11 @@
         "description": "Identifies the execution of discovery commands to enumerate system information, files, and folders using the Windows Command Shell.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-windows.*",
-            "logs-endpoint.events.process-*",
             "endgame-*",
-            "logs-system.security*"
+            "logs-endpoint.events.process-*",
+            "logs-system.security*",
+            "logs-windows.*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -66,7 +66,6 @@
         ],
         "risk_score": 21,
         "rule_id": "d68e95ad-1c82-4074-a12a-125fe10ac8ba",
-        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "low",
         "tags": [
             "Domain: Endpoint",
@@ -78,7 +77,7 @@
             "Data Source: Elastic Defend",
             "Rule Type: BBR",
             "Data Source: Elastic Endgame",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -126,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 115
+        "version": 116
     },
-    "id": "d68e95ad-1c82-4074-a12a-125fe10ac8ba_115",
+    "id": "d68e95ad-1c82-4074-a12a-125fe10ac8ba_116",
     "type": "security-rule"
 }

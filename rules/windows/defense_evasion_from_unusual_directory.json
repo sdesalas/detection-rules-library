@@ -6,14 +6,14 @@
         "description": "Identifies process execution from suspicious default Windows directories. This is sometimes done by adversaries to hide malware in trusted paths.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
+            "endgame-*",
             "logs-endpoint.events.process-*",
+            "logs-m365_defender.event-*",
+            "logs-sentinel_one_cloud_funnel.*",
+            "logs-system.security*",
             "logs-windows.forwarded*",
             "logs-windows.sysmon_operational-*",
-            "endgame-*",
-            "logs-system.security*",
-            "logs-m365_defender.event-*",
-            "logs-sentinel_one_cloud_funnel.*"
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -78,7 +78,7 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Data Source: Microsoft Defender for Endpoint",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
@@ -110,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 314
+        "version": 315
     },
-    "id": "ebfe1448-7fac-4d59-acea-181bd89b1f7f_314",
+    "id": "ebfe1448-7fac-4d59-acea-181bd89b1f7f_315",
     "type": "security-rule"
 }

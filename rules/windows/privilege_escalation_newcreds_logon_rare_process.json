@@ -8,8 +8,8 @@
         "history_window_start": "now-7d",
         "index": [
             "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-windows.forwarded*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -72,7 +72,7 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -101,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 106
+        "version": 107
     },
-    "id": "e468f3f6-7c4c-45bb-846a-053738b3fe5d_106",
+    "id": "e468f3f6-7c4c-45bb-846a-053738b3fe5d_107",
     "type": "security-rule"
 }

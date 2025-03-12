@@ -7,10 +7,10 @@
         "description": "Identifies commands containing references to Outlook data files extensions, which can potentially indicate the search, access, or modification of these files.",
         "from": "now-119m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "logs-windows.sysmon_operational-*",
             "endgame-*",
+            "logs-endpoint.events.process-*",
             "logs-system.security*",
+            "logs-windows.sysmon_operational-*",
             "winlogbeat-*"
         ],
         "interval": "60m",
@@ -66,7 +66,7 @@
             "Rule Type: BBR",
             "Data Source: Sysmon",
             "Data Source: Elastic Endgame",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -94,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "2e311539-cd88-4a85-a301-04f38795007c_105",
+    "id": "2e311539-cd88-4a85-a301-04f38795007c_106",
     "type": "security-rule"
 }

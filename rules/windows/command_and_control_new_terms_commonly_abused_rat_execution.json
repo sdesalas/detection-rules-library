@@ -10,7 +10,8 @@
             "logs-endpoint.events.process-*",
             "endgame-*",
             "winlogbeat-*",
-            "logs-windows.*",
+            "logs-windows.forwarded*",
+            "logs-windows.sysmon_operational-*",
             "logs-system.security*"
         ],
         "language": "kuery",
@@ -88,7 +89,8 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs",
+            "Data Source: Sysmon"
         ],
         "threat": [
             {
@@ -109,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 108
+        "version": 109
     },
-    "id": "6e1a2cc4-d260-11ed-8829-f661ea17fbcc_108",
+    "id": "6e1a2cc4-d260-11ed-8829-f661ea17fbcc_109",
     "type": "security-rule"
 }

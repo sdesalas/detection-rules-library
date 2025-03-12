@@ -6,13 +6,13 @@
         "description": "Identifies Service Control (sc.exe) spawning from script interpreter processes to create, modify, or start services. This can potentially indicate an attempt to elevate privileges or maintain persistence.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*",
-            "logs-system.security*",
-            "winlogbeat-*",
-            "logs-windows.forwarded*",
             "endgame-*",
+            "logs-crowdstrike.fdr*",
+            "logs-endpoint.events.process-*",
             "logs-m365_defender.event-*",
-            "logs-crowdstrike.fdr*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -94,7 +94,7 @@
             "Data Source: Elastic Endgame",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Data Source: Microsoft Defender for Endpoint",
             "Data Source: Crowdstrike"
         ],
@@ -188,8 +188,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "e8571d5f-bea1-46c2-9f56-998de2d3ed95_214",
+    "id": "e8571d5f-bea1-46c2-9f56-998de2d3ed95_215",
     "type": "security-rule"
 }

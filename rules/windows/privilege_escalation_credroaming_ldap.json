@@ -7,8 +7,8 @@
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-windows.forwarded*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -63,7 +63,7 @@
             "Data Source: Active Directory",
             "Tactic: Privilege Escalation",
             "Use Case: Active Directory Monitoring",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -85,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 114
+        "version": 115
     },
-    "id": "670b3b5a-35e5-42db-bd36-6c5b9b4b7313_114",
+    "id": "670b3b5a-35e5-42db-bd36-6c5b9b4b7313_115",
     "type": "security-rule"
 }

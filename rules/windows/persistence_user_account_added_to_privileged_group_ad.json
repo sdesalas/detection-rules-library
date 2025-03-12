@@ -7,9 +7,9 @@
         "description": "Identifies a user being added to a privileged group in Active Directory. Privileged accounts and groups in Active Directory are those to which powerful rights, privileges, and permissions are granted that allow them to perform nearly any action in Active Directory and on domain-joined systems.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -53,7 +53,6 @@
         ],
         "risk_score": 47,
         "rule_id": "5cd8e1f7-0050-4afc-b2df-904e40b2f5ae",
-        "setup": "## Setup\n\nIf enabling an EQL rule on a non-elastic-agent index (such as beats) for versions <8.2,\nevents will not define `event.ingested` and default fallback for EQL rules was not added until version 8.2.\nHence for this rule to work effectively, users will need to add a custom ingest pipeline to populate\n`event.ingested` to @timestamp.\nFor more details on adding a custom ingest pipeline refer - https://www.elastic.co/guide/en/fleet/current/data-streams-pipeline-tutorial.html\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -63,7 +62,7 @@
             "Resources: Investigation Guide",
             "Use Case: Active Directory Monitoring",
             "Data Source: Active Directory",
-            "Data Source: System"
+            "Data Source: Windows Security Event Logs"
         ],
         "threat": [
             {
@@ -84,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "5cd8e1f7-0050-4afc-b2df-904e40b2f5ae_211",
+    "id": "5cd8e1f7-0050-4afc-b2df-904e40b2f5ae_212",
     "type": "security-rule"
 }

@@ -6,9 +6,9 @@
         "description": "Identifies a suspicious local successful logon event where the Logon Package is Kerberos, the remote address is set to localhost, followed by a sevice creation from the same LogonId. This may indicate an attempt to leverage a Kerberos relay attack variant that can be used to elevate privilege locally from a domain joined user to local System privileges.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
-            "logs-system.*",
-            "logs-windows.*"
+            "logs-system.security*",
+            "logs-windows.forwarded*",
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -89,7 +89,7 @@
             "Tactic: Credential Access",
             "Use Case: Active Directory Monitoring",
             "Data Source: Active Directory",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -132,8 +132,8 @@
             }
         ],
         "type": "eql",
-        "version": 207
+        "version": 208
     },
-    "id": "e4e31051-ee01-4307-a6ee-b21b186958f4_207",
+    "id": "e4e31051-ee01-4307-a6ee-b21b186958f4_208",
     "type": "security-rule"
 }

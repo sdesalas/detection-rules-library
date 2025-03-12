@@ -6,9 +6,9 @@
         "description": "Identifies multiple Windows Filtering Platform block events and where the process name is related to an endpoint security software. Adversaries may add malicious WFP rules to prevent Endpoint security from sending telemetry.",
         "from": "now-9m",
         "index": [
-            "winlogbeat-*",
+            "logs-system.security*",
             "logs-windows.forwarded*",
-            "logs-system.security*"
+            "winlogbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -64,7 +64,7 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Data Source: System",
+            "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -92,8 +92,8 @@
             }
         ],
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "92d3a04e-6487-4b62-892d-70e640a590dc_106",
+    "id": "92d3a04e-6487-4b62-892d-70e640a590dc_107",
     "type": "security-rule"
 }
