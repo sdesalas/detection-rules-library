@@ -10,7 +10,7 @@
         "language": "esql",
         "license": "Elastic License v2",
         "name": "Unusual File Creation by Web Server",
-        "query": "from logs-endpoint.events.file-*\n| keep @timestamp, host.os.type, event.type, event.action, user.name, user.id, process.name, process.executable, file.path, agent.id\n| where @timestamp > now() - 1 hours\n| where host.os.type == \"linux\" and event.type == \"change\" and event.action in (\"rename\", \"creation\") and (\n     user.name in (\n      \"apache\", \"www-data\", \"httpd\", \"nginx\", \"lighttpd\", \"tomcat\", \"tomcat8\", \"tomcat9\", \"ftp\", \"ftpuser\", \"ftpd\"\n     ) or\n     user.id in (\"99\", \"33\", \"498\", \"48\")\n   ) and (\n   process.name in (\n    \"apache\", \"nginx\", \"apache2\", \"httpd\", \"lighttpd\", \"caddy\", \"node\", \"mongrel_rails\", \"java\", \"gunicorn\",\n    \"uwsgi\", \"openresty\", \"cherokee\", \"h2o\", \"resin\", \"puma\", \"unicorn\", \"traefik\", \"tornado\", \"hypercorn\",\n    \"daphne\", \"twistd\", \"yaws\", \"webfsd\", \"httpd.worker\", \"flask\", \"rails\", \"mongrel\"\n  ) or\n    process.name like \"php-*\" or\n    process.name like \"python*\" or\n    process.name like \"ruby*\" or\n    process.name like \"perl*\"\n   )\n| stats cc = count(), agent_count = count_distinct(agent.id) by process.executable, file.path\n| where agent_count == 1 and cc < 5\n| sort cc asc\n| limit 100\n",
+        "query": "from logs-endpoint.events.file-*\n| keep @timestamp, host.os.type, event.type, event.action, user.name, user.id, process.name, process.executable, file.path, agent.id, host.name\n| where @timestamp > now() - 1 hours\n| where host.os.type == \"linux\" and event.type == \"change\" and event.action in (\"rename\", \"creation\") and (\n     user.name in (\n      \"apache\", \"www-data\", \"httpd\", \"nginx\", \"lighttpd\", \"tomcat\", \"tomcat8\", \"tomcat9\", \"ftp\", \"ftpuser\", \"ftpd\"\n     ) or\n     user.id in (\"99\", \"33\", \"498\", \"48\")\n   ) and (\n   process.name in (\n    \"apache\", \"nginx\", \"apache2\", \"httpd\", \"lighttpd\", \"caddy\", \"node\", \"mongrel_rails\", \"java\", \"gunicorn\",\n    \"uwsgi\", \"openresty\", \"cherokee\", \"h2o\", \"resin\", \"puma\", \"unicorn\", \"traefik\", \"tornado\", \"hypercorn\",\n    \"daphne\", \"twistd\", \"yaws\", \"webfsd\", \"httpd.worker\", \"flask\", \"rails\", \"mongrel\"\n  ) or\n    process.name like \"php-*\" or\n    process.name like \"python*\" or\n    process.name like \"ruby*\" or\n    process.name like \"perl*\"\n   )\n| stats cc = count(), agent_count = count_distinct(agent.id), host.name = VALUES(host.name), agent.id = VALUES(agent.id) by process.executable, file.path\n| where agent_count == 1 and cc < 5\n| sort cc asc\n| limit 100\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -94,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 3
     },
-    "id": "894b7cc9-040b-427c-aca5-36b40d3667bf_1",
+    "id": "894b7cc9-040b-427c-aca5-36b40d3667bf_3",
     "type": "security-rule"
 }

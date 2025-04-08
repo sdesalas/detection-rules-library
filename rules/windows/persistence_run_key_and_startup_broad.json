@@ -119,8 +119,8 @@
         "timeline_title": "Comprehensive Registry Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 114
+        "version": 116
     },
-    "id": "97fc44d3-8dae-4019-ae83-298c3015600f_114",
+    "id": "97fc44d3-8dae-4019-ae83-298c3015600f_116",
     "type": "security-rule"
 }

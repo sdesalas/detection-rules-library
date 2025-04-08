@@ -90,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 109
     },
-    "id": "f683dcdf-a018-4801-b066-193d4ae6c8e5_107",
+    "id": "f683dcdf-a018-4801-b066-193d4ae6c8e5_109",
     "type": "security-rule"
 }

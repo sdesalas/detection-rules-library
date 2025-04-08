@@ -116,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 212
+        "version": 214
     },
-    "id": "e2f9fdf5-8076-45ad-9427-41e0e03dc9c2_212",
+    "id": "e2f9fdf5-8076-45ad-9427-41e0e03dc9c2_214",
     "type": "security-rule"
 }

@@ -87,6 +87,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1554",
+                        "name": "Compromise Host Software Binary",
+                        "reference": "https://attack.mitre.org/techniques/T1554/"
+                    },
+                    {
                         "id": "T1574",
                         "name": "Hijack Execution Flow",
                         "reference": "https://attack.mitre.org/techniques/T1574/",
@@ -97,19 +102,14 @@
                                 "reference": "https://attack.mitre.org/techniques/T1574/010/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1554",
-                        "name": "Compromise Host Software Binary",
-                        "reference": "https://attack.mitre.org/techniques/T1554/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 415
+        "version": 417
     },
-    "id": "2bf78aa2-9c56-48de-b139-f169bf99cf86_415",
+    "id": "2bf78aa2-9c56-48de-b139-f169bf99cf86_417",
     "type": "security-rule"
 }

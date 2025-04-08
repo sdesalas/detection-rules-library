@@ -151,8 +151,8 @@
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 316
+        "version": 318
     },
-    "id": "4630d948-40d4-4cef-ac69-4002e29bc3db_316",
+    "id": "4630d948-40d4-4cef-ac69-4002e29bc3db_318",
     "type": "security-rule"
 }

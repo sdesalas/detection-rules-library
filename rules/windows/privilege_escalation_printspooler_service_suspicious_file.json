@@ -39,7 +39,7 @@
                     "wildcard": {
                         "file.path": {
                             "case_insensitive": true,
-                            "value": "?:\\\\Windows\\\\Sys?????\\\\x5lrs.dll"
+                            "value": "?:\\Windows\\Sys?????\\u005lrs.dll"
                         }
                     }
                 }
@@ -52,7 +52,7 @@
                     "wildcard": {
                         "file.path": {
                             "case_insensitive": true,
-                            "value": "?:\\\\Windows\\\\system32\\\\spool\\\\DRIVERS\\\\x64\\\\*.dll"
+                            "value": "?:\\Windows\\system32\\spool\\DRIVERS\\u0064\\\\*.dll"
                         }
                     }
                 }
@@ -78,7 +78,7 @@
                     "wildcard": {
                         "file.path": {
                             "case_insensitive": true,
-                            "value": "?:\\\\Windows\\\\system32\\\\spool\\\\PRTPROCS\\\\x64\\\\*.dll"
+                            "value": "?:\\Windows\\system32\\spool\\PRTPROCS\\u0064\\\\*.dll"
                         }
                     }
                 }
@@ -200,8 +200,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 315
+        "version": 317
     },
-    "id": "5bb4a95d-5a08-48eb-80db-4c3a63ec78a8_315",
+    "id": "5bb4a95d-5a08-48eb-80db-4c3a63ec78a8_317",
     "type": "security-rule"
 }

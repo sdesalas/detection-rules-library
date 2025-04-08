@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "jamf_protect",
-                "version": "^2.0.0"
+                "version": "^3.0.0"
             }
         ],
         "required_fields": [
@@ -83,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "04e65517-16e9-4fc4-b7f1-94dc21ecea0d_2",
+    "id": "04e65517-16e9-4fc4-b7f1-94dc21ecea0d_3",
     "type": "security-rule"
 }

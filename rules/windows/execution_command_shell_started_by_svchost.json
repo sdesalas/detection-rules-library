@@ -52,7 +52,7 @@
                     "wildcard": {
                         "process.command_line": {
                             "case_insensitive": true,
-                            "value": "cmd /C \".\\\\inetsrv\\\\iissetup.exe /keygen \""
+                            "value": "cmd /C \".\\inetsrv\\iissetup.exe /keygen \"\n"
                         }
                     }
                 }
@@ -174,8 +174,8 @@
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 420
+        "version": 422
     },
-    "id": "fd7a6052-58fa-4397-93c3-4795249ccfa2_420",
+    "id": "fd7a6052-58fa-4397-93c3-4795249ccfa2_422",
     "type": "security-rule"
 }

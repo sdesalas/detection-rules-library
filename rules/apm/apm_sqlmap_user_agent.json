@@ -22,7 +22,7 @@
         "related_integrations": [
             {
                 "package": "apm",
-                "version": "^8.0.0"
+                "version": "^8.0.0-rc1"
             }
         ],
         "required_fields": [
@@ -41,8 +41,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 103
+        "version": 105
     },
-    "id": "d49cc73f-7a16-4def-89ce-9fc7127d7820_103",
+    "id": "d49cc73f-7a16-4def-89ce-9fc7127d7820_105",
     "type": "security-rule"
 }

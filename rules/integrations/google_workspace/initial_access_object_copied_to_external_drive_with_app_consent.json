@@ -101,8 +101,8 @@
             }
         ],
         "type": "eql",
-        "version": 8
+        "version": 10
     },
-    "id": "f33e68a4-bd19-11ed-b02f-f661ea17fbcc_8",
+    "id": "f33e68a4-bd19-11ed-b02f-f661ea17fbcc_10",
     "type": "security-rule"
 }
