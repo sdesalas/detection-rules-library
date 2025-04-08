@@ -19,11 +19,11 @@
         "related_integrations": [
             {
                 "package": "ded",
-                "version": "^2.0.0"
+                "version": "^2.3.0"
             },
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             }
         ],
         "risk_score": 21,
@@ -55,8 +55,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 5
+        "version": 6
     },
-    "id": "4b95ecea-7225-4690-9938-2a2c0bad9c99_5",
+    "id": "4b95ecea-7225-4690-9938-2a2c0bad9c99_6",
     "type": "security-rule"
 }

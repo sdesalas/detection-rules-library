@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             }
         ],
         "risk_score": 21,
@@ -34,8 +34,8 @@
             "Resources: Investigation Guide"
         ],
         "type": "machine_learning",
-        "version": 1
+        "version": 2
     },
-    "id": "fe8d6507-b543-4bbc-849f-dc0da6db29f6_1",
+    "id": "fe8d6507-b543-4bbc-849f-dc0da6db29f6_2",
     "type": "security-rule"
 }

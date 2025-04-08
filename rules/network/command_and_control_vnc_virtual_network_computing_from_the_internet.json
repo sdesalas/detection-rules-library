@@ -26,11 +26,11 @@
         "related_integrations": [
             {
                 "package": "network_traffic",
-                "version": "^1.1.0"
+                "version": "^1.33.0"
             },
             {
                 "package": "panw",
-                "version": "^5.0.0"
+                "version": "^5.2.0"
             }
         ],
         "required_fields": [
@@ -109,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 107
     },
-    "id": "5700cb81-df44-46aa-a5d7-337798f53eb8_106",
+    "id": "5700cb81-df44-46aa-a5d7-337798f53eb8_107",
     "type": "security-rule"
 }

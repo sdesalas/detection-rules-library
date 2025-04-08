@@ -22,11 +22,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             }
         ],
         "required_fields": [
@@ -103,8 +103,8 @@
         "timeline_title": "Comprehensive File Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 210
+        "version": 211
     },
-    "id": "9c260313-c811-4ec8-ab89-8f6530e0246c_210",
+    "id": "9c260313-c811-4ec8-ab89-8f6530e0246c_211",
     "type": "security-rule"
 }

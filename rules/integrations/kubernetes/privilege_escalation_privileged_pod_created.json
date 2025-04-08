@@ -22,7 +22,7 @@
         "related_integrations": [
             {
                 "package": "kubernetes",
-                "version": "^1.4.1"
+                "version": "^1.80.0"
             }
         ],
         "required_fields": [
@@ -101,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 205
+        "version": 206
     },
-    "id": "c7908cac-337a-4f38-b50d-5eeb78bdb531_205",
+    "id": "c7908cac-337a-4f38-b50d-5eeb78bdb531_206",
     "type": "security-rule"
 }

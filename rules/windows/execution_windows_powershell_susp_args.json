@@ -22,23 +22,23 @@
         "related_integrations": [
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             },
             {
                 "package": "system",
-                "version": "^1.6.4"
+                "version": "^1.64.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.0.0"
+                "version": "^1.9.0"
             },
             {
                 "package": "m365_defender",
-                "version": "^2.0.0"
+                "version": "^2.22.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^1.1.0"
+                "version": "^1.51.0"
             }
         ],
         "required_fields": [
@@ -114,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 204
+        "version": 205
     },
-    "id": "83bf249e-4348-47ba-9741-1202a09556ad_204",
+    "id": "83bf249e-4348-47ba-9741-1202a09556ad_205",
     "type": "security-rule"
 }

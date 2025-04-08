@@ -24,11 +24,11 @@
         "related_integrations": [
             {
                 "package": "system",
-                "version": "^1.6.4"
+                "version": "^1.64.0"
             },
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             }
         ],
         "required_fields": [
@@ -90,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "a02cb68e-7c93-48d1-93b2-2c39023308eb_111",
+    "id": "a02cb68e-7c93-48d1-93b2-2c39023308eb_112",
     "type": "security-rule"
 }

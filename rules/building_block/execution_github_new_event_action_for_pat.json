@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "github",
-                "version": "^2.0.0"
+                "version": "^2.4.0"
             }
         ],
         "required_fields": [
@@ -81,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 204
+        "version": 205
     },
-    "id": "ce08b55a-f67d-4804-92b5-617b0fe5a5b5_204",
+    "id": "ce08b55a-f67d-4804-92b5-617b0fe5a5b5_205",
     "type": "security-rule"
 }

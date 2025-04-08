@@ -26,7 +26,7 @@
         "related_integrations": [
             {
                 "package": "network_traffic",
-                "version": "^1.1.0"
+                "version": "^1.33.0"
             }
         ],
         "required_fields": [
@@ -89,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "11013227-0301-4a8c-b150-4db924484475_105",
+    "id": "11013227-0301-4a8c-b150-4db924484475_106",
     "type": "security-rule"
 }

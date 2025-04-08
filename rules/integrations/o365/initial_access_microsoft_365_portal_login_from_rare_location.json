@@ -28,7 +28,7 @@
         "related_integrations": [
             {
                 "package": "o365",
-                "version": "^2.0.0"
+                "version": "^2.11.0"
             }
         ],
         "required_fields": [
@@ -99,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "32d3ad0e-6add-11ef-8c7b-f661ea17fbcc_3",
+    "id": "32d3ad0e-6add-11ef-8c7b-f661ea17fbcc_4",
     "type": "security-rule"
 }

@@ -24,19 +24,19 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.0.0"
+                "version": "^1.9.0"
             },
             {
                 "package": "m365_defender",
-                "version": "^2.0.0"
+                "version": "^2.22.0"
             }
         ],
         "required_fields": [
@@ -87,6 +87,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1554",
+                        "name": "Compromise Host Software Binary",
+                        "reference": "https://attack.mitre.org/techniques/T1554/"
+                    },
+                    {
                         "id": "T1574",
                         "name": "Hijack Execution Flow",
                         "reference": "https://attack.mitre.org/techniques/T1574/",
@@ -97,19 +102,14 @@
                                 "reference": "https://attack.mitre.org/techniques/T1574/010/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1554",
-                        "name": "Compromise Host Software Binary",
-                        "reference": "https://attack.mitre.org/techniques/T1554/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 415
+        "version": 416
     },
-    "id": "2bf78aa2-9c56-48de-b139-f169bf99cf86_415",
+    "id": "2bf78aa2-9c56-48de-b139-f169bf99cf86_416",
     "type": "security-rule"
 }

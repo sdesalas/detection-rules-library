@@ -23,11 +23,11 @@
         "related_integrations": [
             {
                 "package": "problemchild",
-                "version": "^2.0.0"
+                "version": "^2.3.0"
             },
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             }
         ],
         "required_fields": [
@@ -92,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "13e908b9-7bf0-4235-abc9-b5deb500d0ad_9",
+    "id": "13e908b9-7bf0-4235-abc9-b5deb500d0ad_10",
     "type": "security-rule"
 }

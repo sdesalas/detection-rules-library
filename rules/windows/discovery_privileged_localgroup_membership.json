@@ -52,11 +52,11 @@
         "related_integrations": [
             {
                 "package": "system",
-                "version": "^1.6.4"
+                "version": "^1.64.0"
             },
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             }
         ],
         "required_fields": [
@@ -139,8 +139,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 417
+        "version": 418
     },
-    "id": "291a0de9-937a-4189-94c0-3e847c8b13e4_417",
+    "id": "291a0de9-937a-4189-94c0-3e847c8b13e4_418",
     "type": "security-rule"
 }

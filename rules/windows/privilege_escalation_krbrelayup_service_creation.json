@@ -24,11 +24,11 @@
         "related_integrations": [
             {
                 "package": "system",
-                "version": "^1.6.4"
+                "version": "^1.64.0"
             },
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             }
         ],
         "required_fields": [
@@ -132,8 +132,8 @@
             }
         ],
         "type": "eql",
-        "version": 208
+        "version": 209
     },
-    "id": "e4e31051-ee01-4307-a6ee-b21b186958f4_208",
+    "id": "e4e31051-ee01-4307-a6ee-b21b186958f4_209",
     "type": "security-rule"
 }

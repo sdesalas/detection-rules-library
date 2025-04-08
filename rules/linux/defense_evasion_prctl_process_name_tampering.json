@@ -22,7 +22,7 @@
         "related_integrations": [
             {
                 "package": "auditd_manager",
-                "version": "^1.0.0"
+                "version": "^1.18.0"
             }
         ],
         "required_fields": [
@@ -85,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "fef62ecf-0260-4b71-848b-a8624b304828_2",
+    "id": "fef62ecf-0260-4b71-848b-a8624b304828_3",
     "type": "security-rule"
 }

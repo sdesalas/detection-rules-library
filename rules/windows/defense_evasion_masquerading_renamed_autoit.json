@@ -20,15 +20,15 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             },
             {
                 "package": "m365_defender",
-                "version": "^2.0.0"
+                "version": "^2.22.0"
             }
         ],
         "required_fields": [
@@ -93,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "2e1e835d-01e5-48ca-b9fc-7a61f7f11902_212",
+    "id": "2e1e835d-01e5-48ca-b9fc-7a61f7f11902_213",
     "type": "security-rule"
 }

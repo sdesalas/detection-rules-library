@@ -17,11 +17,11 @@
         "related_integrations": [
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             },
             {
                 "package": "system",
-                "version": "^1.6.4"
+                "version": "^1.64.0"
             }
         ],
         "required_fields": [
@@ -79,8 +79,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 209
+        "version": 210
     },
-    "id": "56557cde-d923-4b88-adee-c61b3f3b5dc3_209",
+    "id": "56557cde-d923-4b88-adee-c61b3f3b5dc3_210",
     "type": "security-rule"
 }

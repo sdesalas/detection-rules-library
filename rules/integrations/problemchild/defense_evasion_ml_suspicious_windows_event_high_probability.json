@@ -23,15 +23,15 @@
         "related_integrations": [
             {
                 "package": "problemchild",
-                "version": "^2.0.0"
+                "version": "^2.3.0"
             },
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             }
         ],
         "required_fields": [
@@ -96,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "994e40aa-8c85-43de-825e-15f665375ee8_111",
+    "id": "994e40aa-8c85-43de-825e-15f665375ee8_112",
     "type": "security-rule"
 }

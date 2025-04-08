@@ -19,15 +19,15 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^1.1.0"
+                "version": "^1.51.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.0.0"
+                "version": "^1.9.0"
             }
         ],
         "required_fields": [
@@ -101,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "28d39238-0c01-420a-b77a-24e5a7378663_108",
+    "id": "28d39238-0c01-420a-b77a-24e5a7378663_109",
     "type": "security-rule"
 }

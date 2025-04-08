@@ -20,11 +20,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             },
             {
                 "package": "auditd_manager",
-                "version": "^1.0.0"
+                "version": "^1.18.0"
             }
         ],
         "required_fields": [
@@ -82,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "f75f65cf-ed04-48df-a7ff-b02a8bfe636e_3",
+    "id": "f75f65cf-ed04-48df-a7ff-b02a8bfe636e_4",
     "type": "security-rule"
 }

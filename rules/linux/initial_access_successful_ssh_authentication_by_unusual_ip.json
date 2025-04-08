@@ -16,11 +16,12 @@
         "new_terms_fields": [
             "related.ip"
         ],
+        "note": " ## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Successful SSH Authentication from Unusual IP Address\n\nSecure Shell (SSH) is a protocol used to securely access and manage Linux systems. Adversaries may exploit SSH by using stolen credentials to gain unauthorized access. The detection rule identifies successful logins from IPs not seen in the past 10 days, flagging potential intrusions. This approach helps in spotting unusual access patterns that could indicate compromised accounts.\n\n### Possible investigation steps\n\n- Review the IP address flagged in the alert to determine its geolocation and assess if it aligns with expected access patterns for the user account involved.\n- Check historical authentication logs for the user account to identify any other unusual or unauthorized access attempts, focusing on the event.category:authentication and event.action:ssh_login fields.\n- Investigate the user account's recent activity on the system to identify any suspicious commands or actions executed post-authentication.\n- Correlate the flagged IP address with known threat intelligence sources to determine if it is associated with any malicious activity or previously reported incidents.\n- Contact the user associated with the account to verify if they recognize the login attempt and if they have recently accessed the system from a new location or device.\n\n### False positive analysis\n\n- New employee or contractor access from a previously unseen IP address may trigger the rule. Regularly update the list of known IP addresses for new users to prevent unnecessary alerts.\n- Remote workers or employees traveling may log in from different IP addresses. Implement a process to whitelist IP ranges associated with common travel destinations or VPNs used by the organization.\n- Automated scripts or services that occasionally run from different IPs can cause false positives. Identify and document these services, then create exceptions for their known IP addresses.\n- Cloud-based infrastructure changes, such as new instances or containers, might authenticate from new IPs. Maintain an updated inventory of cloud resources and their expected IP ranges to adjust the rule accordingly.\n- Third-party vendors accessing systems for maintenance or support might use different IPs. Establish a protocol for temporary exceptions for vendor IPs during their access periods.\n\n### Response and remediation\n\n- Immediately isolate the affected system from the network to prevent further unauthorized access or lateral movement by the attacker.\n- Verify the legitimacy of the login by contacting the account owner to confirm whether the access was authorized. If unauthorized, proceed with further steps.\n- Change the password of the compromised account and any other accounts that may have been accessed using the same credentials.\n- Review and analyze the system logs for any additional suspicious activity or changes made during the unauthorized access period.\n- Escalate the incident to the security operations team for a thorough investigation and to determine if further systems are affected.\n- Implement IP whitelisting or geofencing to restrict SSH access to known and trusted IP addresses only.\n- Update and enhance monitoring rules to detect similar unauthorized access attempts in the future, ensuring that alerts are promptly reviewed and acted upon.\n",
         "query": "event.category:authentication and host.os.type:linux and event.action:ssh_login and event.outcome:success\n",
         "related_integrations": [
             {
                 "package": "system",
-                "version": "^1.6.4"
+                "version": "^1.64.0"
             }
         ],
         "required_fields": [
@@ -54,7 +55,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -75,8 +77,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "5c495612-9992-49a7-afe3-0f647671fb60_1",
+    "id": "5c495612-9992-49a7-afe3-0f647671fb60_2",
     "type": "security-rule"
 }

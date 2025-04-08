@@ -24,19 +24,19 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             },
             {
                 "package": "m365_defender",
-                "version": "^2.0.0"
+                "version": "^2.22.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.0.0"
+                "version": "^1.9.0"
             }
         ],
         "required_fields": [
@@ -158,8 +158,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 310
+        "version": 311
     },
-    "id": "b90cdde7-7e0d-4359-8bf0-2c112ce2008a_310",
+    "id": "b90cdde7-7e0d-4359-8bf0-2c112ce2008a_311",
     "type": "security-rule"
 }

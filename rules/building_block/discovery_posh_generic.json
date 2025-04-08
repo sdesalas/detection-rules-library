@@ -124,7 +124,7 @@
         "related_integrations": [
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             }
         ],
         "required_fields": [
@@ -172,6 +172,41 @@
                 },
                 "technique": [
                     {
+                        "id": "T1007",
+                        "name": "System Service Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1007/"
+                    },
+                    {
+                        "id": "T1012",
+                        "name": "Query Registry",
+                        "reference": "https://attack.mitre.org/techniques/T1012/"
+                    },
+                    {
+                        "id": "T1049",
+                        "name": "System Network Connections Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1049/"
+                    },
+                    {
+                        "id": "T1057",
+                        "name": "Process Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1057/"
+                    },
+                    {
+                        "id": "T1082",
+                        "name": "System Information Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1082/"
+                    },
+                    {
+                        "id": "T1082",
+                        "name": "System Information Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1082/"
+                    },
+                    {
+                        "id": "T1083",
+                        "name": "File and Directory Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1083/"
+                    },
+                    {
                         "id": "T1087",
                         "name": "Account Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1087/",
@@ -189,26 +224,6 @@
                         ]
                     },
                     {
-                        "id": "T1482",
-                        "name": "Domain Trust Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1482/"
-                    },
-                    {
-                        "id": "T1082",
-                        "name": "System Information Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1082/"
-                    },
-                    {
-                        "id": "T1083",
-                        "name": "File and Directory Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1083/"
-                    },
-                    {
-                        "id": "T1615",
-                        "name": "Group Policy Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1615/"
-                    },
-                    {
                         "id": "T1135",
                         "name": "Network Share Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1135/"
@@ -219,9 +234,9 @@
                         "reference": "https://attack.mitre.org/techniques/T1201/"
                     },
                     {
-                        "id": "T1057",
-                        "name": "Process Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1057/"
+                        "id": "T1482",
+                        "name": "Domain Trust Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1482/"
                     },
                     {
                         "id": "T1518",
@@ -236,24 +251,9 @@
                         ]
                     },
                     {
-                        "id": "T1012",
-                        "name": "Query Registry",
-                        "reference": "https://attack.mitre.org/techniques/T1012/"
-                    },
-                    {
-                        "id": "T1082",
-                        "name": "System Information Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1082/"
-                    },
-                    {
-                        "id": "T1049",
-                        "name": "System Network Connections Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1049/"
-                    },
-                    {
-                        "id": "T1007",
-                        "name": "System Service Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1007/"
+                        "id": "T1615",
+                        "name": "Group Policy Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1615/"
                     }
                 ]
             },
@@ -282,8 +282,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 210
+        "version": 211
     },
-    "id": "1e0a3f7c-21e7-4bb1-98c7-2036612fb1be_210",
+    "id": "1e0a3f7c-21e7-4bb1-98c7-2036612fb1be_211",
     "type": "security-rule"
 }

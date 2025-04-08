@@ -49,7 +49,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^2.0.0"
+                "version": "^2.40.0"
             }
         ],
         "required_fields": [
@@ -116,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "c1a9ed70-d349-11ef-841c-f661ea17fbcd_1",
+    "id": "c1a9ed70-d349-11ef-841c-f661ea17fbcd_2",
     "type": "security-rule"
 }

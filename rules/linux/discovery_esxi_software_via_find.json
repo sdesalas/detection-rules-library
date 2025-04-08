@@ -23,15 +23,15 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             },
             {
                 "package": "auditd_manager",
-                "version": "^1.0.0"
+                "version": "^1.18.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.0.0"
+                "version": "^1.9.0"
             }
         ],
         "required_fields": [
@@ -100,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "33a6752b-da5e-45f8-b13a-5f094c09522f_109",
+    "id": "33a6752b-da5e-45f8-b13a-5f094c09522f_110",
     "type": "security-rule"
 }

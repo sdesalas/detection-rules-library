@@ -20,11 +20,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             },
             {
                 "package": "network_traffic",
-                "version": "^1.1.0"
+                "version": "^1.33.0"
             }
         ],
         "risk_score": 21,
@@ -38,8 +38,8 @@
             "Resources: Investigation Guide"
         ],
         "type": "machine_learning",
-        "version": 105
+        "version": 106
     },
-    "id": "b240bfb8-26b7-4e5e-924e-218144a3fa71_105",
+    "id": "b240bfb8-26b7-4e5e-924e-218144a3fa71_106",
     "type": "security-rule"
 }

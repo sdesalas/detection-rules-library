@@ -26,7 +26,7 @@
         "related_integrations": [
             {
                 "package": "google_workspace",
-                "version": "^2.0.0"
+                "version": "^2.31.0"
             }
         ],
         "required_fields": [
@@ -101,8 +101,8 @@
             }
         ],
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "f33e68a4-bd19-11ed-b02f-f661ea17fbcc_8",
+    "id": "f33e68a4-bd19-11ed-b02f-f661ea17fbcc_9",
     "type": "security-rule"
 }

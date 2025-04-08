@@ -18,11 +18,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             }
         ],
         "required_fields": [
@@ -84,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 208
+        "version": 209
     },
-    "id": "e3cf38fa-d5b8-46cc-87f9-4a7513e4281d_208",
+    "id": "e3cf38fa-d5b8-46cc-87f9-4a7513e4281d_209",
     "type": "security-rule"
 }

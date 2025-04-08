@@ -19,7 +19,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             }
         ],
         "required_fields": [
@@ -110,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "f95972d3-c23b-463b-89a8-796b3f369b49_9",
+    "id": "f95972d3-c23b-463b-89a8-796b3f369b49_10",
     "type": "security-rule"
 }

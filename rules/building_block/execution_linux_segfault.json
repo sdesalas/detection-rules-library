@@ -16,7 +16,7 @@
         "related_integrations": [
             {
                 "package": "system",
-                "version": "^1.6.4"
+                "version": "^1.64.0"
             }
         ],
         "required_fields": [
@@ -65,8 +65,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "5c81fc9d-1eae-437f-ba07-268472967013_1",
+    "id": "5c81fc9d-1eae-437f-ba07-268472967013_2",
     "type": "security-rule"
 }

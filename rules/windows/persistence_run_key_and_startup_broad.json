@@ -19,7 +19,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             }
         ],
         "required_fields": [
@@ -119,8 +119,8 @@
         "timeline_title": "Comprehensive Registry Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 114
+        "version": 115
     },
-    "id": "97fc44d3-8dae-4019-ae83-298c3015600f_114",
+    "id": "97fc44d3-8dae-4019-ae83-298c3015600f_115",
     "type": "security-rule"
 }

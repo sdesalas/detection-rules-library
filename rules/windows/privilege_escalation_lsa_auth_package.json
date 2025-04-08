@@ -18,11 +18,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             },
             {
                 "package": "m365_defender",
-                "version": "^2.0.0"
+                "version": "^2.22.0"
             }
         ],
         "required_fields": [
@@ -108,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "e9abe69b-1deb-4e19-ac4a-5d5ac00f72eb_107",
+    "id": "e9abe69b-1deb-4e19-ac4a-5d5ac00f72eb_108",
     "type": "security-rule"
 }

@@ -20,11 +20,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.0.0"
+                "version": "^1.9.0"
             }
         ],
         "required_fields": [
@@ -95,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 213
+        "version": 214
     },
-    "id": "b25a7df2-120a-4db2-bd3f-3e4b86b24bee_213",
+    "id": "b25a7df2-120a-4db2-bd3f-3e4b86b24bee_214",
     "type": "security-rule"
 }

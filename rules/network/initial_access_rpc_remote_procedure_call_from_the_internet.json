@@ -23,11 +23,11 @@
         "related_integrations": [
             {
                 "package": "network_traffic",
-                "version": "^1.1.0"
+                "version": "^1.33.0"
             },
             {
                 "package": "panw",
-                "version": "^5.0.0"
+                "version": "^5.2.0"
             }
         ],
         "required_fields": [
@@ -91,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "143cb236-0956-4f42-a706-814bcaa0cf5a_105",
+    "id": "143cb236-0956-4f42-a706-814bcaa0cf5a_106",
     "type": "security-rule"
 }

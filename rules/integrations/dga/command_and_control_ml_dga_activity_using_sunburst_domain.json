@@ -22,15 +22,15 @@
         "related_integrations": [
             {
                 "package": "dga",
-                "version": "^2.0.0"
+                "version": "^2.2.0"
             },
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             },
             {
                 "package": "network_traffic",
-                "version": "^1.1.0"
+                "version": "^1.33.0"
             }
         ],
         "required_fields": [
@@ -85,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 6
+        "version": 7
     },
-    "id": "bcaa15ce-2d41-44d7-a322-918f9db77766_6",
+    "id": "bcaa15ce-2d41-44d7-a322-918f9db77766_7",
     "type": "security-rule"
 }

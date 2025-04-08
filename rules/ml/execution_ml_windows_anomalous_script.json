@@ -23,11 +23,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             }
         ],
         "risk_score": 21,
@@ -68,8 +68,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 208
+        "version": 209
     },
-    "id": "1781d055-5c66-4adf-9d60-fc0fa58337b6_208",
+    "id": "1781d055-5c66-4adf-9d60-fc0fa58337b6_209",
     "type": "security-rule"
 }

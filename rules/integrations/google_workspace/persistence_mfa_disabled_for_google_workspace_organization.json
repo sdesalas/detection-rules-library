@@ -26,7 +26,7 @@
         "related_integrations": [
             {
                 "package": "google_workspace",
-                "version": "^2.0.0"
+                "version": "^2.31.0"
             }
         ],
         "required_fields": [
@@ -86,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 206
+        "version": 207
     },
-    "id": "e555105c-ba6d-481f-82bb-9b633e7b4827_206",
+    "id": "e555105c-ba6d-481f-82bb-9b633e7b4827_207",
     "type": "security-rule"
 }

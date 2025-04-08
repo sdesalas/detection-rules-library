@@ -39,7 +39,7 @@
         "related_integrations": [
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             }
         ],
         "required_fields": [
@@ -107,14 +107,14 @@
                         ]
                     },
                     {
-                        "id": "T1482",
-                        "name": "Domain Trust Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1482/"
-                    },
-                    {
                         "id": "T1135",
                         "name": "Network Share Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1135/"
+                    },
+                    {
+                        "id": "T1482",
+                        "name": "Domain Trust Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1482/"
                     }
                 ]
             },
@@ -163,8 +163,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 316
+        "version": 317
     },
-    "id": "61ac3638-40a3-44b2-855a-985636ca985e_316",
+    "id": "61ac3638-40a3-44b2-855a-985636ca985e_317",
     "type": "security-rule"
 }

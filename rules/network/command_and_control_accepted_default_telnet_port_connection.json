@@ -23,11 +23,11 @@
         "related_integrations": [
             {
                 "package": "network_traffic",
-                "version": "^1.1.0"
+                "version": "^1.33.0"
             },
             {
                 "package": "panw",
-                "version": "^5.0.0"
+                "version": "^5.2.0"
             }
         ],
         "required_fields": [
@@ -114,8 +114,8 @@
         "timeline_title": "Comprehensive Network Timeline",
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "34fde489-94b0-4500-a76f-b8a157cf9269_107",
+    "id": "34fde489-94b0-4500-a76f-b8a157cf9269_108",
     "type": "security-rule"
 }

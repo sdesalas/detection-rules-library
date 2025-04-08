@@ -20,15 +20,15 @@
         "related_integrations": [
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             },
             {
                 "package": "m365_defender",
-                "version": "^2.0.0"
+                "version": "^2.22.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.0.0"
+                "version": "^1.9.0"
             }
         ],
         "required_fields": [
@@ -113,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 308
+        "version": 309
     },
-    "id": "feeed87c-5e95-4339-aef1-47fd79bcfbe3_308",
+    "id": "feeed87c-5e95-4339-aef1-47fd79bcfbe3_309",
     "type": "security-rule"
 }

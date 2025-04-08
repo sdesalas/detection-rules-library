@@ -23,7 +23,7 @@
             {
                 "integration": "audit",
                 "package": "gcp",
-                "version": "^2.0.0"
+                "version": "^2.41.0"
             }
         ],
         "required_fields": [
@@ -74,8 +74,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "184dfe52-2999-42d9-b9d1-d1ca54495a61_105",
+    "id": "184dfe52-2999-42d9-b9d1-d1ca54495a61_106",
     "type": "security-rule"
 }

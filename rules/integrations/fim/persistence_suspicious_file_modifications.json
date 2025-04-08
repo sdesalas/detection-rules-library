@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "fim",
-                "version": "^1.0.0"
+                "version": "^1.16.0"
             }
         ],
         "required_fields": [
@@ -209,8 +209,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "192657ba-ab0e-4901-89a2-911d611eee98_7",
+    "id": "192657ba-ab0e-4901-89a2-911d611eee98_8",
     "type": "security-rule"
 }

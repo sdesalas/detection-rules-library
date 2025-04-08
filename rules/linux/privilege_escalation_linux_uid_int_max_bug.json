@@ -23,11 +23,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^1.1.0"
+                "version": "^1.51.0"
             }
         ],
         "required_fields": [
@@ -100,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "d55436a8-719c-445f-92c4-c113ff2f9ba5_8",
+    "id": "d55436a8-719c-445f-92c4-c113ff2f9ba5_9",
     "type": "security-rule"
 }

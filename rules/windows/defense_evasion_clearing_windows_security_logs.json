@@ -20,11 +20,11 @@
         "related_integrations": [
             {
                 "package": "system",
-                "version": "^1.6.4"
+                "version": "^1.64.0"
             },
             {
                 "package": "windows",
-                "version": "^2.0.0"
+                "version": "^2.5.0"
             }
         ],
         "required_fields": [
@@ -36,7 +36,7 @@
             {
                 "ecs": false,
                 "name": "winlog.api",
-                "type": "keyword"
+                "type": "unknown"
             },
             {
                 "ecs": false,
@@ -82,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 212
+        "version": 213
     },
-    "id": "45ac4800-840f-414c-b221-53dd36a5aaf7_212",
+    "id": "45ac4800-840f-414c-b221-53dd36a5aaf7_213",
     "type": "security-rule"
 }

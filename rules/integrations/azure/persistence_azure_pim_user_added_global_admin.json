@@ -22,7 +22,7 @@
         "related_integrations": [
             {
                 "package": "azure",
-                "version": "^1.0.0"
+                "version": "^1.22.0"
             }
         ],
         "required_fields": [
@@ -82,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 103
+        "version": 104
     },
-    "id": "ed9ecd27-e3e6-4fd9-8586-7754803f7fc8_103",
+    "id": "ed9ecd27-e3e6-4fd9-8586-7754803f7fc8_104",
     "type": "security-rule"
 }

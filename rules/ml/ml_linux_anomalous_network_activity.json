@@ -19,11 +19,11 @@
         "related_integrations": [
             {
                 "package": "auditd_manager",
-                "version": "^1.0.0"
+                "version": "^1.18.0"
             },
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             }
         ],
         "risk_score": 21,
@@ -39,8 +39,8 @@
             "Resources: Investigation Guide"
         ],
         "type": "machine_learning",
-        "version": 105
+        "version": 106
     },
-    "id": "52afbdc5-db15-485e-bc24-f5707f820c4b_105",
+    "id": "52afbdc5-db15-485e-bc24-f5707f820c4b_106",
     "type": "security-rule"
 }

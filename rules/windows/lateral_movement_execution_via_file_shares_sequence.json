@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             }
         ],
         "required_fields": [
@@ -118,8 +118,8 @@
             }
         ],
         "type": "eql",
-        "version": 117
+        "version": 118
     },
-    "id": "ab75c24b-2502-43a0-bf7c-e60e662c811e_117",
+    "id": "ab75c24b-2502-43a0-bf7c-e60e662c811e_118",
     "type": "security-rule"
 }
