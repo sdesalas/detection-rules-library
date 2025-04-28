@@ -17,7 +17,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^8.2.0"
+                "version": "^9.0.0"
             }
         ],
         "required_fields": [
@@ -37,14 +37,14 @@
                 "type": "keyword"
             },
             {
-                "ecs": false,
+                "ecs": true,
                 "name": "file.origin_referrer_url",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
-                "ecs": false,
+                "ecs": true,
                 "name": "file.origin_url",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": true,
@@ -151,8 +151,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 104
     },
-    "id": "79543b00-28a5-4461-81ac-644c4dc4012f_5",
+    "id": "79543b00-28a5-4461-81ac-644c4dc4012f_104",
     "type": "security-rule"
 }
