@@ -90,8 +90,8 @@
         "threat_query": "@timestamp >= \"now-30d/d\" and vulnerability.id : * and event.module: ti_rapid7_threat_command",
         "timestamp_override": "event.ingested",
         "type": "threat_match",
-        "version": 105
+        "version": 106
     },
-    "id": "3a657da0-1df2-11ef-a327-f661ea17fbcc_105",
+    "id": "3a657da0-1df2-11ef-a327-f661ea17fbcc_106",
     "type": "security-rule"
 }

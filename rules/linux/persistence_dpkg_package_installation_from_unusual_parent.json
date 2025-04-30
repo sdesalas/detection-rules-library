@@ -128,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "f4d1c0ac-aedb-4063-9fa6-cc651eb5e6ee_4",
+    "id": "f4d1c0ac-aedb-4063-9fa6-cc651eb5e6ee_5",
     "type": "security-rule"
 }

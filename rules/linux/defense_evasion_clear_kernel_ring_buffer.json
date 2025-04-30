@@ -117,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "2724808c-ba5d-48b2-86d2-0002103df753_108",
+    "id": "2724808c-ba5d-48b2-86d2-0002103df753_109",
     "type": "security-rule"
 }

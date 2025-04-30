@@ -133,8 +133,8 @@
         "timeline_title": "Comprehensive Registry Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "54902e45-3467-49a4-8abc-529f2c8cfb80_214",
+    "id": "54902e45-3467-49a4-8abc-529f2c8cfb80_215",
     "type": "security-rule"
 }
