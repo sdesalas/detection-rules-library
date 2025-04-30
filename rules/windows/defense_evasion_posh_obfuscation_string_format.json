@@ -12,7 +12,7 @@
         "related_integrations": [
             {
                 "package": "windows",
-                "version": "^2.5.0"
+                "version": "^2.0.0"
             }
         ],
         "risk_score": 21,
@@ -72,8 +72,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "e903ce9a-5ce6-4246-bb14-75ed3ec2edf5_1",
+    "id": "e903ce9a-5ce6-4246-bb14-75ed3ec2edf5_2",
     "type": "security-rule"
 }
