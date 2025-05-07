@@ -38,7 +38,7 @@
             },
             {
                 "package": "m365_defender",
-                "version": "^2.22.0"
+                "version": "^3.0.0"
             },
             {
                 "package": "system",
@@ -104,7 +104,7 @@
                 "technique": [
                     {
                         "id": "T1219",
-                        "name": "Remote Access Software",
+                        "name": "Remote Access Tools",
                         "reference": "https://attack.mitre.org/techniques/T1219/"
                     }
                 ]
@@ -112,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 311
+        "version": 312
     },
-    "id": "78de1aeb-5225-4067-b8cc-f4a1de8a8546_311",
+    "id": "78de1aeb-5225-4067-b8cc-f4a1de8a8546_312",
     "type": "security-rule"
 }

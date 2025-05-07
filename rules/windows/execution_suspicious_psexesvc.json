@@ -28,7 +28,7 @@
             },
             {
                 "package": "m365_defender",
-                "version": "^2.22.0"
+                "version": "^3.0.0"
             }
         ],
         "required_fields": [
@@ -106,7 +106,7 @@
                         "subtechnique": [
                             {
                                 "id": "T1036.003",
-                                "name": "Rename System Utilities",
+                                "name": "Rename Legitimate Utilities",
                                 "reference": "https://attack.mitre.org/techniques/T1036/003/"
                             }
                         ]
@@ -116,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "e2f9fdf5-8076-45ad-9427-41e0e03dc9c2_214",
+    "id": "e2f9fdf5-8076-45ad-9427-41e0e03dc9c2_215",
     "type": "security-rule"
 }

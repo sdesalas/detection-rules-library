@@ -36,7 +36,7 @@
             },
             {
                 "package": "m365_defender",
-                "version": "^2.22.0"
+                "version": "^3.0.0"
             }
         ],
         "required_fields": [
@@ -109,7 +109,7 @@
                         "subtechnique": [
                             {
                                 "id": "T1574.001",
-                                "name": "DLL Search Order Hijacking",
+                                "name": "DLL",
                                 "reference": "https://attack.mitre.org/techniques/T1574/001/"
                             }
                         ]
@@ -119,8 +119,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 317
+        "version": 318
     },
-    "id": "fa488440-04cc-41d7-9279-539387bf2a17_317",
+    "id": "fa488440-04cc-41d7-9279-539387bf2a17_318",
     "type": "security-rule"
 }

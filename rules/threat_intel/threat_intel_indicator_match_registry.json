@@ -30,10 +30,10 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 99,
+        "risk_score": 73,
         "rule_id": "a61809f3-fb5b-465c-8bff-23a8a068ac60",
         "setup": "## Setup\n\nThis rule needs threat intelligence indicators to work.\nThreat intelligence indicators can be collected using an [Elastic Agent integration](https://www.elastic.co/guide/en/security/current/es-threat-intel-integrations.html#agent-ti-integration),\nthe [Threat Intel module](https://www.elastic.co/guide/en/security/current/es-threat-intel-integrations.html#ti-mod-integration),\nor a [custom integration](https://www.elastic.co/guide/en/security/current/es-threat-intel-integrations.html#custom-ti-integration).\n\nMore information can be found [here](https://www.elastic.co/guide/en/security/current/es-threat-intel-integrations.html).\n",
-        "severity": "critical",
+        "severity": "high",
         "tags": [
             "OS: Windows",
             "Data Source: Elastic Endgame",
@@ -121,8 +121,8 @@
         "timeline_title": "Generic Threat Match Timeline",
         "timestamp_override": "event.ingested",
         "type": "threat_match",
-        "version": 8
+        "version": 9
     },
-    "id": "a61809f3-fb5b-465c-8bff-23a8a068ac60_8",
+    "id": "a61809f3-fb5b-465c-8bff-23a8a068ac60_9",
     "type": "security-rule"
 }

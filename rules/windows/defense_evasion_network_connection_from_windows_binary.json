@@ -91,7 +91,7 @@
                         "subtechnique": [
                             {
                                 "id": "T1036.005",
-                                "name": "Match Legitimate Name or Location",
+                                "name": "Match Legitimate Resource Name or Location",
                                 "reference": "https://attack.mitre.org/techniques/T1036/005/"
                             }
                         ]
@@ -117,8 +117,8 @@
             }
         ],
         "type": "eql",
-        "version": 216
+        "version": 217
     },
-    "id": "1fe3b299-fbb5-4657-a937-1d746f2c711a_216",
+    "id": "1fe3b299-fbb5-4657-a937-1d746f2c711a_217",
     "type": "security-rule"
 }

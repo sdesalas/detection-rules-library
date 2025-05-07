@@ -94,7 +94,7 @@
                             },
                             {
                                 "id": "T1036.005",
-                                "name": "Match Legitimate Name or Location",
+                                "name": "Match Legitimate Resource Name or Location",
                                 "reference": "https://attack.mitre.org/techniques/T1036/005/"
                             }
                         ]
@@ -119,8 +119,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "79ce2c96-72f7-44f9-88ef-60fa1ac2ce47_7",
+    "id": "79ce2c96-72f7-44f9-88ef-60fa1ac2ce47_8",
     "type": "security-rule"
 }

@@ -155,7 +155,7 @@
                         "subtechnique": [
                             {
                                 "id": "T1574.001",
-                                "name": "DLL Search Order Hijacking",
+                                "name": "DLL",
                                 "reference": "https://attack.mitre.org/techniques/T1574/001/"
                             }
                         ]
@@ -187,8 +187,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 216
+        "version": 217
     },
-    "id": "bfeaf89b-a2a7-48a3-817f-e41829dc61ee_216",
+    "id": "bfeaf89b-a2a7-48a3-817f-e41829dc61ee_217",
     "type": "security-rule"
 }
