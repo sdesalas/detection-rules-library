@@ -94,7 +94,7 @@
                             },
                             {
                                 "id": "T1036.005",
-                                "name": "Match Legitimate Name or Location",
+                                "name": "Match Legitimate Resource Name or Location",
                                 "reference": "https://attack.mitre.org/techniques/T1036/005/"
                             }
                         ]
@@ -106,7 +106,7 @@
                         "subtechnique": [
                             {
                                 "id": "T1574.001",
-                                "name": "DLL Search Order Hijacking",
+                                "name": "DLL",
                                 "reference": "https://attack.mitre.org/techniques/T1574/001/"
                             },
                             {
@@ -136,8 +136,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "fb01d790-9f74-4e76-97dd-b4b0f7bf6435_107",
+    "id": "fb01d790-9f74-4e76-97dd-b4b0f7bf6435_108",
     "type": "security-rule"
 }

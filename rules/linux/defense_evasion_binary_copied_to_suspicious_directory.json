@@ -98,7 +98,7 @@
                         "subtechnique": [
                             {
                                 "id": "T1036.003",
-                                "name": "Rename System Utilities",
+                                "name": "Rename Legitimate Utilities",
                                 "reference": "https://attack.mitre.org/techniques/T1036/003/"
                             }
                         ]
@@ -113,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 16
+        "version": 17
     },
-    "id": "fda1d332-5e08-4f27-8a9b-8c802e3292a6_16",
+    "id": "fda1d332-5e08-4f27-8a9b-8c802e3292a6_17",
     "type": "security-rule"
 }

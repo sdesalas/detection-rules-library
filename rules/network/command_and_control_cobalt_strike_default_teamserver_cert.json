@@ -57,9 +57,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 99,
+        "risk_score": 73,
         "rule_id": "e7075e8d-a966-458e-a183-85cd331af255",
-        "severity": "critical",
+        "severity": "high",
         "tags": [
             "Tactic: Command and Control",
             "Threat: Cobalt Strike",
@@ -93,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "e7075e8d-a966-458e-a183-85cd331af255_107",
+    "id": "e7075e8d-a966-458e-a183-85cd331af255_108",
     "type": "security-rule"
 }

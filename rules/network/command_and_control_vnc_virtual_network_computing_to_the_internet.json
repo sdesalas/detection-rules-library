@@ -86,7 +86,7 @@
                 "technique": [
                     {
                         "id": "T1219",
-                        "name": "Remote Access Software",
+                        "name": "Remote Access Tools",
                         "reference": "https://attack.mitre.org/techniques/T1219/"
                     }
                 ]
@@ -94,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 108
+        "version": 109
     },
-    "id": "3ad49c61-7adc-42c1-b788-732eda2f5abf_108",
+    "id": "3ad49c61-7adc-42c1-b788-732eda2f5abf_109",
     "type": "security-rule"
 }

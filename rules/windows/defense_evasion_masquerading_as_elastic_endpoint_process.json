@@ -35,7 +35,7 @@
             },
             {
                 "package": "m365_defender",
-                "version": "^2.0.0"
+                "version": "^3.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
@@ -101,7 +101,7 @@
                         "subtechnique": [
                             {
                                 "id": "T1036.005",
-                                "name": "Match Legitimate Name or Location",
+                                "name": "Match Legitimate Resource Name or Location",
                                 "reference": "https://attack.mitre.org/techniques/T1036/005/"
                             }
                         ]
@@ -111,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 317
+        "version": 318
     },
-    "id": "b41a13c6-ba45-4bab-a534-df53d0cfed6a_317",
+    "id": "b41a13c6-ba45-4bab-a534-df53d0cfed6a_318",
     "type": "security-rule"
 }
