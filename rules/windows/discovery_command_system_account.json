@@ -14,7 +14,7 @@
         "license": "Elastic License v2",
         "name": "Account Discovery Command via SYSTEM Account",
         "note": "## Triage and analysis\n\n### Investigating Account Discovery Command via SYSTEM Account\n\nAfter successfully compromising an environment, attackers may try to gain situational awareness to plan their next steps. This can happen by running commands to enumerate network resources, users, connections, files, and installed security software.\n\nThis rule looks for the execution of account discovery utilities using the SYSTEM account, which is commonly observed after attackers successfully perform privilege escalation or exploit web applications.\n\n#### Possible investigation steps\n\n- Investigate the process execution chain (parent process tree) for unknown processes. Examine their executable files for prevalence, whether they are located in expected locations, and if they are signed with valid digital signatures.\n  - If the process tree includes a web-application server process such as w3wp, httpd.exe, nginx.exe and alike, investigate any suspicious file creation or modification in the last 48 hours to assess the presence of any potential webshell backdoor.\n- Investigate other alerts associated with the user/host during the past 48 hours.\n- Determine how the SYSTEM account is being used. For example, users with administrator privileges can spawn a system shell using Windows services, scheduled tasks or other third party utilities.\n\n### False positive analysis\n\n- Discovery activities are not inherently malicious if they occur in isolation. As long as the analyst did not identify suspicious activity related to the user or host, such alerts can be dismissed.\n\n### Response and remediation\n\n- Initiate the incident response process based on the outcome of the triage.\n- Isolate the involved hosts to prevent further post-compromise behavior.\n- Investigate credential exposure on systems compromised or used by the attacker to ensure all compromised accounts are identified. Reset passwords for these accounts and other potentially compromised credentials, such as email, business systems, and web services.\n- Run a full antimalware scan. This may reveal additional artifacts left in the system, persistence mechanisms, and malware components.\n- Determine the initial vector abused by the attacker and take action to prevent reinfection via the same vector.\n- Using the incident response data, update logging and audit policies to improve the mean time to detect (MTTD) and the mean time to respond (MTTR).\n- Use the data collected through the analysis to investigate other machines affected in the environment.\n",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  (?process.Ext.token.integrity_level_name : \"System\" or\n  ?winlog.event_data.IntegrityLevel : \"System\") and\n  (\n    process.name : \"whoami.exe\" or\n    (\n      process.name : \"net1.exe\" and not process.parent.name : \"net.exe\" and not process.args : (\"start\", \"stop\", \"/active:*\")\n    )\n  )\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  (?process.Ext.token.integrity_level_name : \"System\" or\n  ?winlog.event_data.IntegrityLevel : \"System\") and\n  (\n    process.name : \"whoami.exe\" or\n    (\n      process.name : \"net1.exe\" and not process.parent.name : \"net.exe\" and not process.args : (\"start\", \"stop\", \"/active:*\")\n    )\n  ) and \nprocess.parent.executable != null and \nnot (process.name : \"net1.exe\" and process.working_directory : \"C:\\\\ProgramData\\\\Microsoft\\\\Windows Defender Advanced Threat Protection\\\\Downloads\\\\\") and \nnot process.parent.executable : \n                (\"C:\\\\Program Files\\\\Microsoft Monitoring Agent\\\\Agent\\\\MonitoringHost.exe\", \n                 \"C:\\\\Program Files\\\\Dell\\\\SupportAssistAgent\\\\SRE\\\\SRE.exe\", \n                 \"C:\\\\Program Files\\\\Obkio Agent\\\\main.dist\\\\ObkioAgentSoftware.exe\", \n                 \"C:\\\\Windows\\\\Temp\\\\WinGet\\\\defaultState\\\\PostgreSQL.PostgreSQL*\\\\postgresql-*-windows-x64.exe\", \n                 \"C:\\\\Program Files\\\\Obkio Agent\\\\main.dist\\\\ObkioAgentSoftware.exe\", \n                 \"C:\\\\Program Files (x86)\\\\SolarWinds\\\\Agent\\\\Plugins\\\\JobEngine\\\\SWJobEngineWorker2.exe\") and \nnot (process.parent.executable : \"C:\\\\Windows\\\\Sys?????\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\" and \n     process.parent.args : (\"C:\\\\Program Files (x86)\\\\Microsoft Intune Management Extension\\\\*.ps1\", \n                            \"Agent\\\\Modules\\\\AdHealthConfiguration\\\\AdHealthConfiguration.psd1'\")) and \nnot (process.parent.name : \"cmd.exe\" and process.working_directory : \"C:\\\\Program Files\\\\Infraon Corp\\\\SecuraAgent\\\\\")\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -22,7 +22,7 @@
             },
             {
                 "package": "windows",
-                "version": "^2.5.0"
+                "version": "^3.0.0"
             }
         ],
         "required_fields": [
@@ -53,7 +53,22 @@
             },
             {
                 "ecs": true,
+                "name": "process.parent.args",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.executable",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "process.parent.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.working_directory",
                 "type": "keyword"
             },
             {
@@ -117,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 213
+        "version": 214
     },
-    "id": "2856446a-34e6-435b-9fb5-f8f040bfa7ed_213",
+    "id": "2856446a-34e6-435b-9fb5-f8f040bfa7ed_214",
     "type": "security-rule"
 }
