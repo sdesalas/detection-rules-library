@@ -8,7 +8,7 @@
         "language": "esql",
         "license": "Elastic License v2",
         "name": "Potential PowerShell Obfuscation via Invalid Escape Sequences",
-        "query": "FROM logs-windows.powershell_operational* metadata _id, _version, _index\n| WHERE event.code == \"4104\" and powershell.file.script_block_text LIKE \"*`*\"\n\n// Replace string format expressions with \ud83d\udd25 to enable counting the occurrence of the patterns we are looking for\n// The emoji is used because it's unlikely to appear in scripts and has a consistent character length of 1\n| EVAL replaced_with_fire = REPLACE(powershell.file.script_block_text, \"\"\"[A-Za-z0-9_-]`(?![rntb]|\\r|\\n|\\d)[A-Za-z0-9_-]\"\"\", \"\ud83d\udd25\")\n\n// Count how many patterns were detected by calculating the number of \ud83d\udd25 characters inserted\n| EVAL count = LENGTH(replaced_with_fire) - LENGTH(REPLACE(replaced_with_fire, \"\ud83d\udd25\", \"\"))\n\n// Keep the fields relevant to the query, although this is not needed as the alert is populated using _id\n| KEEP count, replaced_with_fire, powershell.file.script_block_text, powershell.file.script_block_id, file.name, file.path, powershell.sequence, powershell.total, _id, _index, host.name, agent.id, user.id\n| WHERE count >= 10\n\n// Filter FPs, and due to the behavior of the LIKE operator, allow null values\n| WHERE (file.name NOT LIKE \"TSS_*.psm1\" or file.name IS NULL)\n",
+        "query": "FROM logs-windows.powershell_operational* metadata _id, _version, _index\n| WHERE event.code == \"4104\" and powershell.file.script_block_text LIKE \"*`*\"\n\n// Replace string format expressions with \ud83d\udd25 to enable counting the occurrence of the patterns we are looking for\n// The emoji is used because it's unlikely to appear in scripts and has a consistent character length of 1\n| EVAL replaced_with_fire = REPLACE(powershell.file.script_block_text, \"\"\"[A-Za-z0-9_-]`(?![rntb]|\\r|\\n|\\d)[A-Za-z0-9_-]\"\"\", \"\ud83d\udd25\")\n\n// Count how many patterns were detected by calculating the number of \ud83d\udd25 characters inserted\n| EVAL count = LENGTH(replaced_with_fire) - LENGTH(REPLACE(replaced_with_fire, \"\ud83d\udd25\", \"\"))\n\n// Keep the fields relevant to the query, although this is not needed as the alert is populated using _id\n| KEEP count, replaced_with_fire, powershell.file.script_block_text, powershell.file.script_block_id, file.name, file.path, powershell.sequence, powershell.total, _id, _index, host.name, agent.id, user.id\n| WHERE count >= 10\n\n// Filter FPs, and due to the behavior of the LIKE operator, allow null values\n| WHERE (file.name NOT LIKE \"TSS_*.psm1\" or file.name IS NULL)\n\n| WHERE\n    // VSCode Shell integration\n    NOT powershell.file.script_block_text LIKE \"*$([char]0x1b)]633*\"\n",
         "related_integrations": [
             {
                 "package": "windows",
@@ -72,8 +72,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "64f17c52-6c6e-479e-ba72-236f3df18f3d_1",
+    "id": "64f17c52-6c6e-479e-ba72-236f3df18f3d_2",
     "type": "security-rule"
 }

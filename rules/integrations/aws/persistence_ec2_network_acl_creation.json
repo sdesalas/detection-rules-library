@@ -3,16 +3,33 @@
         "author": [
             "Elastic"
         ],
-        "description": "Identifies the creation of an AWS Elastic Compute Cloud (EC2) network access control list (ACL) or an entry in a network ACL with a specified rule number.",
+        "description": "Identifies the creation of an AWS EC2 network access control list (ACL) or an entry in a network ACL with a specified rule number. Adversaries may exploit ACLs to establish persistence or exfiltrate data by creating permissive rules.",
         "false_positives": [
-            "Network ACL's may be created by a network administrator. Verify whether the user identity, user agent, and/or hostname should be making changes in your environment. Network ACL creations by unfamiliar users or hosts should be investigated. If known behavior is causing false positives, it can be exempted from the rule."
+            "Network ACL's may be created by a network administrator. Verify whether the user identity should be making changes in your environment. Network ACL creations by unfamiliar users should be investigated. If known behavior is causing false positives, it can be exempted from the rule."
         ],
-        "from": "now-60m",
+        "from": "now-6m",
         "index": [
             "filebeat-*",
             "logs-aws.cloudtrail-*"
         ],
-        "interval": "10m",
+        "interval": "5m",
+        "investigation_fields": {
+            "field_names": [
+                "@timestamp",
+                "user.name",
+                "user_agent.original",
+                "source.address",
+                "aws.cloudtrail.user_identity.arn",
+                "aws.cloudtrail.user_identity.type",
+                "aws.cloudtrail.user_identity.access_key_id",
+                "event.action",
+                "event.outcome",
+                "cloud.account.id",
+                "cloud.region",
+                "aws.cloudtrail.request_parameters",
+                "aws.cloudtrail.response_elements"
+            ]
+        },
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "AWS EC2 Network Access Control List Creation",
@@ -64,6 +81,7 @@
             "Data Source: AWS EC2",
             "Use Case: Network Security Monitoring",
             "Tactic: Persistence",
+            "Tactic: Defense Evasion",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -81,12 +99,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1133/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1562",
+                        "name": "Impair Defenses",
+                        "reference": "https://attack.mitre.org/techniques/T1562/",
+                        "subtechnique": [
+                            {
+                                "id": "T1562.007",
+                                "name": "Disable or Modify Cloud Firewall",
+                                "reference": "https://attack.mitre.org/techniques/T1562/007/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 209
+        "version": 210
     },
-    "id": "39144f38-5284-4f8e-a2ae-e3fd628d90b0_209",
+    "id": "39144f38-5284-4f8e-a2ae-e3fd628d90b0_210",
     "type": "security-rule"
 }
