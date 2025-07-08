@@ -46,21 +46,21 @@
                 },
                 "technique": [
                     {
-                        "id": "T1098",
-                        "name": "Account Manipulation",
-                        "reference": "https://attack.mitre.org/techniques/T1098/"
-                    },
-                    {
                         "id": "T1078",
                         "name": "Valid Accounts",
                         "reference": "https://attack.mitre.org/techniques/T1078/"
+                    },
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/"
                     }
                 ]
             }
         ],
         "type": "machine_learning",
-        "version": 3
+        "version": 4
     },
-    "id": "178770e0-5c20-4246-b430-e216a2888b23_3",
+    "id": "178770e0-5c20-4246-b430-e216a2888b23_4",
     "type": "security-rule"
 }

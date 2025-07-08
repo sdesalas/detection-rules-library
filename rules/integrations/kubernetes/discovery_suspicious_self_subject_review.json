@@ -8,7 +8,7 @@
             "An administrator may submit this request as an \"impersonatedUser\" to determine what privileges a particular service account has been granted. However, an adversary may utilize the same technique as a means to determine the privileges of another token other than that of the compromised account."
         ],
         "index": [
-            "logs-kubernetes.*"
+            "logs-kubernetes.audit_logs-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -86,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 206
+        "version": 207
     },
-    "id": "12a2f15d-597e-4334-88ff-38a02cb1330b_206",
+    "id": "12a2f15d-597e-4334-88ff-38a02cb1330b_207",
     "type": "security-rule"
 }

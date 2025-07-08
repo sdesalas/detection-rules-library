@@ -8,7 +8,7 @@
             "By default a container is not allowed to access any devices on the host, but a \"privileged\" container is given access to all devices on the host. This allows the container nearly all the same access as processes running on the host. An administrator may want to run a privileged container to use operating system administrative capabilities such as manipulating the network stack or accessing hardware devices from within the cluster. Add exceptions for trusted container images using the query field \"kubernetes.audit.requestObject.spec.container.image\""
         ],
         "index": [
-            "logs-kubernetes.*"
+            "logs-kubernetes.audit_logs-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -101,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 207
+        "version": 208
     },
-    "id": "c7908cac-337a-4f38-b50d-5eeb78bdb531_207",
+    "id": "c7908cac-337a-4f38-b50d-5eeb78bdb531_208",
     "type": "security-rule"
 }

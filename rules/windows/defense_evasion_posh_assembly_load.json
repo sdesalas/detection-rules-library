@@ -17,6 +17,19 @@
                         }
                     }
                 }
+            },
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\ProgramData\\\\Microsoft\\\\Windows Defender Advanced Threat Protection\\\\DataCollection\\\\*"
+                        }
+                    }
+                }
             }
         ],
         "from": "now-9m",
@@ -136,8 +149,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 319
+        "version": 320
     },
-    "id": "e26f042e-c590-4e82-8e05-41e81bd822ad_319",
+    "id": "e26f042e-c590-4e82-8e05-41e81bd822ad_320",
     "type": "security-rule"
 }
