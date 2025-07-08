@@ -45,14 +45,15 @@
                 }
             ],
             "field": [
-                "host.id"
+                "host.id",
+                "host.name"
             ],
             "value": 1
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 5
+        "version": 6
     },
-    "id": "b946c2f7-df06-4c00-a5aa-1f6fbc7bb72c_5",
+    "id": "b946c2f7-df06-4c00-a5aa-1f6fbc7bb72c_6",
     "type": "security-rule"
 }

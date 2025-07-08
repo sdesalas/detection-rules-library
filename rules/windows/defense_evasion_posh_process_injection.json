@@ -7,6 +7,21 @@
         "false_positives": [
             "Legitimate PowerShell scripts that make use of these functions."
         ],
+        "filters": [
+            {
+                "meta": {
+                    "negate": true
+                },
+                "query": {
+                    "wildcard": {
+                        "file.path": {
+                            "case_insensitive": true,
+                            "value": "?:\\\\ProgramData\\\\Microsoft\\\\Windows Defender Advanced Threat Protection\\\\DataCollection\\\\*"
+                        }
+                    }
+                }
+            }
+        ],
         "from": "now-9m",
         "index": [
             "winlogbeat-*",
@@ -122,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 215
+        "version": 216
     },
-    "id": "2e29e96a-b67c-455a-afe4-de6183431d0d_215",
+    "id": "2e29e96a-b67c-455a-afe4-de6183431d0d_216",
     "type": "security-rule"
 }

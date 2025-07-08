@@ -8,7 +8,7 @@
             "Developers may have a legitimate use for NodePorts. For frontend parts of an application you may want to expose a Service onto an external IP address without using cloud specific Loadbalancers. NodePort can be used to expose the Service on each Node's IP at a static port (the NodePort). You'll be able to contact the NodePort Service from outside the cluster, by requesting <NodeIP>:<NodePort>. NodePort unlike Loadbalancers, allow the freedom to set up your own load balancing solution, configure environments that aren't fully supported by Kubernetes, or even to expose one or more node's IPs directly."
         ],
         "index": [
-            "logs-kubernetes.*"
+            "logs-kubernetes.audit_logs-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -82,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 206
+        "version": 207
     },
-    "id": "65f9bccd-510b-40df-8263-334f03174fed_206",
+    "id": "65f9bccd-510b-40df-8263-334f03174fed_207",
     "type": "security-rule"
 }

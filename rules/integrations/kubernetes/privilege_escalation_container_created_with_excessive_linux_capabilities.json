@@ -8,7 +8,7 @@
             "Some container images require the addition of privileged capabilities. This rule leaves space for the exception of trusted container images. To add an exception, add the trusted container image name to the query field, kubernetes.audit.requestObject.spec.containers.image."
         ],
         "index": [
-            "logs-kubernetes.*"
+            "logs-kubernetes.audit_logs-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -103,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 8
+        "version": 9
     },
-    "id": "7164081a-3930-11ed-a261-0242ac120002_8",
+    "id": "7164081a-3930-11ed-a261-0242ac120002_9",
     "type": "security-rule"
 }

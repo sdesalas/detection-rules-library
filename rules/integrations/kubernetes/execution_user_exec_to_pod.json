@@ -8,7 +8,7 @@
             "An administrator may need to exec into a pod for a legitimate reason like debugging purposes. Containers built from Linux and Windows OS images, tend to include debugging utilities. In this case, an admin may choose to run commands inside a specific container with kubectl exec ${POD_NAME} -c ${CONTAINER_NAME} -- ${CMD} ${ARG1} ${ARG2} ... ${ARGN}. For example, the following command can be used to look at logs from a running Cassandra pod: kubectl exec cassandra --cat /var/log/cassandra/system.log . Additionally, the -i and -t arguments might be used to run a shell connected to the terminal: kubectl exec -i -t cassandra -- sh"
         ],
         "index": [
-            "logs-kubernetes.*"
+            "logs-kubernetes.audit_logs-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -85,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 207
+        "version": 208
     },
-    "id": "14de811c-d60f-11ec-9fd7-f661ea17fbce_207",
+    "id": "14de811c-d60f-11ec-9fd7-f661ea17fbce_208",
     "type": "security-rule"
 }

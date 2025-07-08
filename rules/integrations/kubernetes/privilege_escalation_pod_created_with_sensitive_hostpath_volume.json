@@ -8,7 +8,7 @@
             "An administrator may need to attach a hostPath volume for a legitimate reason. This alert should be investigated for legitimacy by determining if the kuberenetes.audit.requestObject.spec.volumes.hostPath.path triggered is one needed by its target container/pod. For example, when the fleet managed elastic agent is deployed as a daemonset it creates several hostPath volume mounts, some of which are sensitive host directories like /proc, /etc/kubernetes, and /var/log. Add exceptions for trusted container images using the query field \"kubernetes.audit.requestObject.spec.container.image\""
         ],
         "index": [
-            "logs-kubernetes.*"
+            "logs-kubernetes.audit_logs-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -101,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 207
+        "version": 208
     },
-    "id": "2abda169-416b-4bb3-9a6b-f8d239fd78ba_207",
+    "id": "2abda169-416b-4bb3-9a6b-f8d239fd78ba_208",
     "type": "security-rule"
 }
