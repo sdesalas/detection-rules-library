@@ -3,7 +3,7 @@
         "author": [
             "Elastic"
         ],
-        "description": "This rule leverages ES|QL to detect the execution of unusual file transfer utilities on Linux systems. Attackers may use these utilities to exfiltrate data from a compromised system. ES|QL rules have limited fields available in its alert documents. Make sure to review the original documents to aid in the investigation of this alert.",
+        "description": "This rule leverages ESQL to detect the execution of unusual file transfer utilities on Linux systems. Attackers may use these utilities to exfiltrate data from a compromised system. ESQL rules have limited fields available in its alert documents. Make sure to review the original documents to aid in the investigation of this alert.",
         "from": "now-61m",
         "interval": "1h",
         "language": "esql",
@@ -52,8 +52,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "8eeeda11-dca6-4c3e-910f-7089db412d1c_3",
+    "id": "8eeeda11-dca6-4c3e-910f-7089db412d1c_4",
     "type": "security-rule"
 }
