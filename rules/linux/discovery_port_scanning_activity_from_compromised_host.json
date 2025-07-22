@@ -3,7 +3,7 @@
         "author": [
             "Elastic"
         ],
-        "description": "This rule detects potential port scanning activity from a compromised host. Port scanning is a common reconnaissance technique used by attackers to identify open ports and services on a target system. A compromised host may exhibit port scanning behavior when an attacker is attempting to map out the network topology, identify vulnerable services, or prepare for further exploitation. This rule identifies potential port scanning activity by monitoring network connection attempts from a single host to a large number of ports within a short time frame. ES|QL rules have limited fields available in its alert documents. Make sure to review the original documents to aid in the investigation of this alert.",
+        "description": "This rule detects potential port scanning activity from a compromised host. Port scanning is a common reconnaissance technique used by attackers to identify open ports and services on a target system. A compromised host may exhibit port scanning behavior when an attacker is attempting to map out the network topology, identify vulnerable services, or prepare for further exploitation. This rule identifies potential port scanning activity by monitoring network connection attempts from a single host to a large number of ports within a short time frame. ESQL rules have limited fields available in its alert documents. Make sure to review the original documents to aid in the investigation of this alert.",
         "from": "now-61m",
         "interval": "1h",
         "language": "esql",
@@ -48,8 +48,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "6b341d03-1d63-41ac-841a-2009c86959ca_3",
+    "id": "6b341d03-1d63-41ac-841a-2009c86959ca_4",
     "type": "security-rule"
 }

@@ -32,6 +32,7 @@
         "license": "Elastic License v2",
         "name": "AWS EC2 User Data Retrieval for EC2 Instance",
         "new_terms_fields": [
+            "cloud.account.id",
             "user.name",
             "aws.cloudtrail.flattened.request_parameters.instanceId"
         ],
@@ -133,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "c1e79a70-fa6f-11ee-8bc8-f661ea17fbce_6",
+    "id": "c1e79a70-fa6f-11ee-8bc8-f661ea17fbce_7",
     "type": "security-rule"
 }

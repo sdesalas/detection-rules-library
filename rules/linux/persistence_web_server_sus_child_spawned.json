@@ -3,7 +3,7 @@
         "author": [
             "Elastic"
         ],
-        "description": "This rule detects unusual processes spawned from a web server parent process by identifying low frequency counts of process spawning activity. Unusual process spawning activity may indicate an attacker attempting to establish persistence, execute malicious commands, or establish command and control channels on the host system. ES|QL rules have limited fields available in its alert documents. Make sure to review the original documents to aid in the investigation of this alert.",
+        "description": "This rule detects unusual processes spawned from a web server parent process by identifying low frequency counts of process spawning activity. Unusual process spawning activity may indicate an attacker attempting to establish persistence, execute malicious commands, or establish command and control channels on the host system. ESQL rules have limited fields available in its alert documents. Make sure to review the original documents to aid in the investigation of this alert.",
         "from": "now-61m",
         "interval": "1h",
         "language": "esql",
@@ -94,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "976b2391-413f-4a94-acb4-7911f3803346_3",
+    "id": "976b2391-413f-4a94-acb4-7911f3803346_4",
     "type": "security-rule"
 }

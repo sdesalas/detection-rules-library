@@ -3,7 +3,7 @@
         "author": [
             "Elastic"
         ],
-        "description": "This rule detects a high number of egress network connections from an unusual executable on a Linux system. This could indicate a command and control (C2) communication attempt, a brute force attack via a malware infection, or other malicious activity. ES|QL rules have limited fields available in its alert documents. Make sure to review the original documents to aid in the investigation of this alert.",
+        "description": "This rule detects a high number of egress network connections from an unusual executable on a Linux system. This could indicate a command and control (C2) communication attempt, a brute force attack via a malware infection, or other malicious activity. ESQL rules have limited fields available in its alert documents. Make sure to review the original documents to aid in the investigation of this alert.",
         "from": "now-61m",
         "interval": "1h",
         "language": "esql",
@@ -48,8 +48,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "1fa350e0-0aa2-4055-bf8f-ab8b59233e59_3",
+    "id": "1fa350e0-0aa2-4055-bf8f-ab8b59233e59_4",
     "type": "security-rule"
 }

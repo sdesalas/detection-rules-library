@@ -3,7 +3,7 @@
         "author": [
             "Elastic"
         ],
-        "description": "This rule leverages ES|QL to detect unusual base64 encoding/decoding activity on Linux systems. Attackers may use base64 encoding/decoding to obfuscate data, such as command and control traffic or payloads, to evade detection by host- or network-based security controls. ES|QL rules have limited fields available in its alert documents. Make sure to review the original documents to aid in the investigation of this alert.",
+        "description": "This rule leverages ESQL to detect unusual base64 encoding/decoding activity on Linux systems. Attackers may use base64 encoding/decoding to obfuscate data, such as command and control traffic or payloads, to evade detection by host- or network-based security controls. ESQL rules have limited fields available in its alert documents. Make sure to review the original documents to aid in the investigation of this alert.",
         "from": "now-61m",
         "interval": "1h",
         "language": "esql",
@@ -87,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "c5637438-e32d-4bb3-bc13-bd7932b3289f_3",
+    "id": "c5637438-e32d-4bb3-bc13-bd7932b3289f_4",
     "type": "security-rule"
 }
