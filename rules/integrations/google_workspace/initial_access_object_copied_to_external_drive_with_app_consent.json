@@ -43,7 +43,7 @@
             {
                 "ecs": false,
                 "name": "google_workspace.drive.copy_type",
-                "type": "unknown"
+                "type": "keyword"
             },
             {
                 "ecs": false,
@@ -101,8 +101,8 @@
             }
         ],
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "f33e68a4-bd19-11ed-b02f-f661ea17fbcc_10",
+    "id": "f33e68a4-bd19-11ed-b02f-f661ea17fbcc_11",
     "type": "security-rule"
 }
