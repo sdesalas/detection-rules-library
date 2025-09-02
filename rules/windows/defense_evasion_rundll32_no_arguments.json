@@ -8,7 +8,8 @@
         "index": [
             "logs-endpoint.events.process-*",
             "winlogbeat-*",
-            "logs-windows.sysmon_operational-*"
+            "logs-windows.sysmon_operational-*",
+            "logs-crowdstrike.fdr*"
         ],
         "interval": "30m",
         "language": "eql",
@@ -24,6 +25,10 @@
             {
                 "package": "windows",
                 "version": "^3.0.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -83,6 +88,7 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
+            "Data Source: Crowdstrike",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -110,8 +116,8 @@
             }
         ],
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "f036953a-4615-4707-a1ca-dc53bf69dcd5_212",
+    "id": "f036953a-4615-4707-a1ca-dc53bf69dcd5_213",
     "type": "security-rule"
 }
