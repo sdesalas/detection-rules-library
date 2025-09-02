@@ -11,7 +11,8 @@
             "logs-windows.sysmon_operational-*",
             "endgame-*",
             "logs-m365_defender.event-*",
-            "logs-sentinel_one_cloud_funnel.*"
+            "logs-sentinel_one_cloud_funnel.*",
+            "logs-crowdstrike.fdr*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -38,6 +39,10 @@
             {
                 "package": "sentinel_one_cloud_funnel",
                 "version": "^1.0.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -75,7 +80,8 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Data Source: Microsoft Defender for Endpoint",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Data Source: Crowdstrike"
         ],
         "threat": [
             {
@@ -108,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 314
+        "version": 315
     },
-    "id": "f874315d-5188-4b4a-8521-d1c73093a7e4_314",
+    "id": "f874315d-5188-4b4a-8521-d1c73093a7e4_315",
     "type": "security-rule"
 }

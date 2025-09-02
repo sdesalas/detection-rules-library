@@ -113,9 +113,9 @@
                                 "reference": "https://attack.mitre.org/techniques/T1574/001/"
                             },
                             {
-                                "id": "T1574.002",
-                                "name": "DLL Side-Loading",
-                                "reference": "https://attack.mitre.org/techniques/T1574/002/"
+                                "id": "T1574.001",
+                                "name": "DLL",
+                                "reference": "https://attack.mitre.org/techniques/T1574/001/"
                             }
                         ]
                     }
@@ -124,8 +124,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "c20cd758-07b1-46a1-b03f-fa66158258b8_105",
+    "id": "c20cd758-07b1-46a1-b03f-fa66158258b8_106",
     "type": "security-rule"
 }

@@ -12,7 +12,8 @@
             "winlogbeat-*",
             "logs-endpoint.events.process-*",
             "logs-endpoint.events.network-*",
-            "logs-windows.sysmon_operational-*"
+            "logs-windows.sysmon_operational-*",
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -30,6 +31,10 @@
             {
                 "package": "windows",
                 "version": "^3.0.0"
+            },
+            {
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.0.0"
             }
         ],
         "required_fields": [
@@ -74,7 +79,8 @@
             "Tactic: Execution",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Data Source: SentinelOne"
         ],
         "threat": [
             {
@@ -109,8 +115,8 @@
             }
         ],
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "89f9a4b0-9f8f-4ee0-8823-c4751a6d6696_211",
+    "id": "89f9a4b0-9f8f-4ee0-8823-c4751a6d6696_212",
     "type": "security-rule"
 }

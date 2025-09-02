@@ -6,7 +6,8 @@
         "description": "Identifies executables with names resembling legitimate business applications but lacking signatures from the original developer. Attackers may trick users into downloading malicious executables that masquerade as legitimate applications via malicious ads, forum posts, and tutorials, effectively gaining initial access.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process-*"
+            "logs-endpoint.events.process-*",
+            "endgame-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -70,7 +71,8 @@
             "Tactic: Defense Evasion",
             "Tactic: Initial Access",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Data Source: Elastic Endgame"
         ],
         "threat": [
             {
@@ -140,8 +142,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "feafdc51-c575-4ed2-89dd-8e20badc2d6c_8",
+    "id": "feafdc51-c575-4ed2-89dd-8e20badc2d6c_9",
     "type": "security-rule"
 }
