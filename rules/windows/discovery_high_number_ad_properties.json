@@ -47,10 +47,10 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 73,
+        "risk_score": 21,
         "rule_id": "68ad737b-f90a-4fe5-bda6-a68fa460044e",
         "setup": "The 'Audit Directory Service Changes' logging policy must be configured for (Success, Failure).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nDS Access >\nAudit Directory Service Changes (Success,Failure)\n",
-        "severity": "high",
+        "severity": "low",
         "tags": [
             "Domain: Endpoint",
             "OS: Windows",
@@ -80,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "68ad737b-f90a-4fe5-bda6-a68fa460044e_106",
+    "id": "68ad737b-f90a-4fe5-bda6-a68fa460044e_107",
     "type": "security-rule"
 }

@@ -66,9 +66,9 @@
                 "type": "long"
             }
         ],
-        "risk_score": 73,
+        "risk_score": 21,
         "rule_id": "1397e1b9-0c90-4d24-8d7b-80598eb9bc9a",
-        "severity": "high",
+        "severity": "low",
         "tags": [
             "Domain: Endpoint",
             "OS: Windows",
@@ -125,12 +125,12 @@
                 "host.id",
                 "file.name"
             ],
-            "value": 20
+            "value": 25
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 209
+        "version": 210
     },
-    "id": "1397e1b9-0c90-4d24-8d7b-80598eb9bc9a_209",
+    "id": "1397e1b9-0c90-4d24-8d7b-80598eb9bc9a_210",
     "type": "security-rule"
 }

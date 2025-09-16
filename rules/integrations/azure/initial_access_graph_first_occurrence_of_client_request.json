@@ -12,7 +12,6 @@
         "from": "now-9m",
         "history_window_start": "now-14d",
         "index": [
-            "filebeat-*",
             "logs-azure.graphactivitylogs-*"
         ],
         "language": "kuery",
@@ -104,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "2a3f38a8-204e-11f0-9c1f-f661ea17fbcd_2",
+    "id": "2a3f38a8-204e-11f0-9c1f-f661ea17fbcd_3",
     "type": "security-rule"
 }

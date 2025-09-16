@@ -20,7 +20,7 @@
         "license": "Elastic License v2",
         "name": "Potential File Download via a Headless Browser",
         "note": "## Triage and analysis\n\n### Investigating Potential File Download via a Headless Browser\n\n- Investigate the process execution chain (parent process tree).\n- Investigate the process network and file events.\n- Identify the user account that performed the action and whether it should perform this kind of action.\n- Contact the account owner and confirm whether they are aware of this activity.\n\n### Response and remediation\n\n- Initiate the incident response process based on the outcome of the triage.\n- Isolate the involved host to prevent further post-compromise behavior.\n- If the triage identified malware, search the environment for additional compromised hosts.\n  - Implement temporary network rules, procedures, and segmentation to contain the malware.\n  - Stop suspicious processes.\n  - Immediately block the identified indicators of compromise (IoCs).\n  - Inspect the affected systems for additional malware backdoors like reverse shells, reverse proxies, or droppers that attackers could use to reinfect the system.\n- Remove and block malicious artifacts identified during triage.\n- Investigate credential exposure on systems compromised or used by the attacker to ensure all compromised accounts are identified. Reset passwords for these accounts and other potentially compromised credentials, such as email, business systems, and web services.\n- Run a full antimalware scan. This may reveal additional artifacts left in the system, persistence mechanisms, and malware components.\n- Determine the initial vector abused by the attacker and take action to prevent reinfection through the same vector.\n- Using the incident response data, update logging and audit policies to improve the mean time to detect (MTTD) and the mean time to respond (MTTR).\n",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n process.name : (\"chrome.exe\", \"msedge.exe\", \"brave.exe\", \"browser.exe\", \"dragon.exe\", \"vivaldi.exe\") and\n  (process.args : \"--headless*\" or process.args : \"data:text/html;base64,*\") and\n  process.parent.name :\n     (\"cmd.exe\", \"powershell.exe\", \"wscript.exe\", \"cscript.exe\", \"mshta.exe\", \"conhost.exe\", \"msiexec.exe\",\n      \"explorer.exe\", \"rundll32.exe\", \"winword.exe\", \"excel.exe\", \"onenote.exe\", \"hh.exe\", \"powerpnt.exe\", \"forfiles.exe\",\n      \"pcalua.exe\", \"wmiprvse.exe\")\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.name : (\"chrome.exe\", \"msedge.exe\", \"brave.exe\", \"browser.exe\", \"dragon.exe\", \"vivaldi.exe\") and\n  process.args : \"--headless*\" and\n  process.args : (\"--disable-gpu\", \"--dump-dom\", \"*http*\", \"data:text/html;base64,*\") and\n  process.parent.name :\n     (\"cmd.exe\", \"powershell.exe\", \"wscript.exe\", \"cscript.exe\", \"mshta.exe\", \"conhost.exe\", \"msiexec.exe\",\n      \"explorer.exe\", \"rundll32.exe\", \"winword.exe\", \"excel.exe\", \"onenote.exe\", \"hh.exe\", \"powerpnt.exe\", \"forfiles.exe\",\n      \"pcalua.exe\", \"wmiprvse.exe\") and\n  not process.executable : (\n        \"?:\\\\inetpub\\\\wwwroot\\\\*\\\\ext\\\\modules\\\\html2pdf\\\\bin\\\\chrome\\\\*\\\\chrome-win64\\\\chrome.exe\",\n        \"\\\\Device\\\\HarddiskVolume*\\\\inetpub\\\\wwwroot\\\\*\\\\ext\\\\modules\\\\html2pdf\\\\bin\\\\chrome\\\\*\\\\chrome-win64\\\\chrome.exe\"\n  )\n",
         "references": [
             "https://lolbas-project.github.io/lolbas/Binaries/Msedge/"
         ],
@@ -64,6 +64,11 @@
             {
                 "ecs": true,
                 "name": "process.args",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.executable",
                 "type": "keyword"
             },
             {
@@ -114,8 +119,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 206
+        "version": 207
     },
-    "id": "5f2f463e-6997-478c-8405-fb41cc283281_206",
+    "id": "5f2f463e-6997-478c-8405-fb41cc283281_207",
     "type": "security-rule"
 }

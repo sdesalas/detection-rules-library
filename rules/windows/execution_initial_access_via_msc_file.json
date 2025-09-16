@@ -17,7 +17,7 @@
         "license": "Elastic License v2",
         "name": "Unusual Execution via Microsoft Common Console File",
         "note": "## Triage and analysis\n\n### Investigating Unusual Execution via Microsoft Common Console File\n\n- Investigate the source of the MSC file.\n- Investigate the process execution chain (all spawned child processes and their descendants).\n- Investigate the process and it's descendants network and file events.\n- Identify the user account that performed the action and whether it should perform this kind of action.\n- Contact the account owner and confirm whether they are aware of this activity.\n\n### Response and remediation\n- Initiate the incident response process based on the outcome of the triage.\n- Isolate the involved host to prevent further post-compromise behavior.\n- If the triage identified malware, search the environment for additional compromised hosts.\n  - Implement temporary network rules, procedures, and segmentation to contain the malware.\n  - Stop suspicious processes.\n  - Immediately block the identified indicators of compromise (IoCs).\n  - Inspect the affected systems for additional malware backdoors like reverse shells, reverse proxies, or droppers that attackers could use to reinfect the system.\n- Remove and block malicious artifacts identified during triage.\n- Investigate credential exposure on systems compromised or used by the attacker to ensure all compromised accounts are identified. Reset passwords for these accounts and other potentially compromised credentials, such as email, business systems, and web services.\n- Run a full antimalware scan. This may reveal additional artifacts left in the system, persistence mechanisms, and malware components.\n- Determine the initial vector abused by the attacker and take action to prevent reinfection through the same vector.\n- Using the incident response data, update logging and audit policies to improve the mean time to detect (MTTD) and the mean time to respond (MTTR).\n",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n process.parent.executable : \"?:\\\\Windows\\\\System32\\\\mmc.exe\" and endswith~(process.parent.args, \".msc\") and\n not process.parent.args : (\"?:\\\\Windows\\\\System32\\\\*.msc\", \"?:\\\\Windows\\\\SysWOW64\\\\*.msc\", \"?:\\\\Program files\\\\*.msc\", \"?:\\\\Program Files (x86)\\\\*.msc\")\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.parent.executable : \"?:\\\\Windows\\\\System32\\\\mmc.exe\" and endswith~(process.parent.args, \".msc\") and\n  not (\n    process.parent.args : (\n      \"?:\\\\Windows\\\\System32\\\\*.msc\",\n      \"?:\\\\Windows\\\\SysWOW64\\\\*.msc\",\n      \"?:\\\\Program files\\\\*.msc\",\n      \"?:\\\\Program Files (x86)\\\\*.msc\"\n    ) or\n    (\n      process.executable : \"?:\\\\Windows\\\\System32\\\\mmc.exe\" and\n      process.command_line : \"\\\"C:\\\\WINDOWS\\\\system32\\\\mmc.exe\\\" \\\"C:\\\\Windows\\\\System32\\\\gpme.msc\\\" /s /gpobject:\\\"LDAP://*\"\n    ) or\n    (\n      process.executable : (\n        \"?:\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\",\n        \"?:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe\",\n        \"?:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\",\n        \"?:\\\\Program Files\\\\internet explorer\\\\iexplore.exe\"\n      ) and\n      process.args : \"http*://go.microsoft.com/fwlink/*\"\n    ) or\n    process.executable : (\n      \"?:\\\\Windows\\\\System32\\\\vmconnect.exe\",\n      \"?:\\\\Windows\\\\System32\\\\WerFault.exe\",\n      \"?:\\\\Windows\\\\System32\\\\wermgr.exe\"\n    )\n  )\n",
         "references": [
             "https://www.genians.co.kr/blog/threat_intelligence/facebook"
         ],
@@ -48,6 +48,21 @@
             {
                 "ecs": true,
                 "name": "host.os.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.args",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.command_line",
+                "type": "wildcard"
+            },
+            {
+                "ecs": true,
+                "name": "process.executable",
                 "type": "keyword"
             },
             {
@@ -130,8 +145,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 204
+        "version": 205
     },
-    "id": "e760c72b-bb1f-44f0-9f0d-37d51744ee75_204",
+    "id": "e760c72b-bb1f-44f0-9f0d-37d51744ee75_205",
     "type": "security-rule"
 }

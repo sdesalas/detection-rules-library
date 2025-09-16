@@ -11,7 +11,6 @@
         "from": "now-15m",
         "history_window_start": "now-14d",
         "index": [
-            "filebeat-*",
             "logs-o365.audit-*"
         ],
         "investigation_fields": {
@@ -135,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "32d3ad0e-6add-11ef-8c7b-f661ea17fbcc_6",
+    "id": "32d3ad0e-6add-11ef-8c7b-f661ea17fbcc_7",
     "type": "security-rule"
 }

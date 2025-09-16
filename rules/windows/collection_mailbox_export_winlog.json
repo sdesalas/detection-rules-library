@@ -29,20 +29,7 @@
                     "wildcard": {
                         "file.path": {
                             "case_insensitive": true,
-                            "value": "?:\\\\Users\\\\*\\\\AppData\\\\Local\\\\Temp\\\\tmp_????????.???\\\\tmp_????????.???.ps?1"
-                        }
-                    }
-                }
-            },
-            {
-                "meta": {
-                    "negate": true
-                },
-                "query": {
-                    "wildcard": {
-                        "file.path": {
-                            "case_insensitive": true,
-                            "value": "?:\\\\Windows\\\\TEMP\\\\tmp_????????.???\\\\tmp_????????.???.ps?1"
+                            "value": "*\\\\tmp_????????.???\\\\tmp_????????.???.ps?1"
                         }
                     }
                 }
@@ -133,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 212
+        "version": 213
     },
-    "id": "54a81f68-5f2a-421e-8eed-f888278bb712_212",
+    "id": "54a81f68-5f2a-421e-8eed-f888278bb712_213",
     "type": "security-rule"
 }
