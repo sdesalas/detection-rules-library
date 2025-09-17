@@ -6,7 +6,6 @@
         "description": "A supervised machine learning model (ProblemChild) has identified a suspicious Windows process event with high probability of it being malicious activity. Alternatively, the model's blocklist identified the event as being malicious.",
         "from": "now-10m",
         "index": [
-            "endgame-*",
             "logs-endpoint.events.process-*",
             "winlogbeat-*"
         ],
@@ -96,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 113
+        "version": 114
     },
-    "id": "994e40aa-8c85-43de-825e-15f665375ee8_113",
+    "id": "994e40aa-8c85-43de-825e-15f665375ee8_114",
     "type": "security-rule"
 }

@@ -11,7 +11,6 @@
         ],
         "from": "now-9m",
         "index": [
-            "filebeat-*",
             "logs-azure.identity_protection-*"
         ],
         "investigation_fields": {
@@ -170,8 +169,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "064a2e08-25da-11f0-b1f1-f661ea17fbcd_2",
+    "id": "064a2e08-25da-11f0-b1f1-f661ea17fbcd_3",
     "type": "security-rule"
 }

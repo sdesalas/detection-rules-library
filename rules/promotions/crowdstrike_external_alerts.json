@@ -75,15 +75,15 @@
             }
         ],
         "tags": [
-            "Data Source: CrowdStrike",
+            "Data Source: Crowdstrike",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
             "Promotion: External Alerts"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "aeebe561-c338-4118-9924-8cb4e478aa58_1",
+    "id": "aeebe561-c338-4118-9924-8cb4e478aa58_2",
     "type": "security-rule"
 }

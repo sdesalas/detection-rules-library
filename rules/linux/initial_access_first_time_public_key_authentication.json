@@ -10,8 +10,7 @@
         "from": "now-9m",
         "history_window_start": "now-10d",
         "index": [
-            "logs-system.auth-*",
-            "filebeat-*"
+            "logs-system.auth-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -85,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "267dace3-a4de-4c94-a7b5-dd6c0f5482e5_3",
+    "id": "267dace3-a4de-4c94-a7b5-dd6c0f5482e5_4",
     "type": "security-rule"
 }
