@@ -7,10 +7,10 @@
         "false_positives": [
             "Access level modifications may be done by a system or network administrator. Verify whether the username, hostname, and/or resource name should be making changes in your environment. Access level modifications from unfamiliar users or hosts should be investigated. If known behavior is causing false positives, it can be exempted from the rule."
         ],
-        "from": "now-25m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-azure*"
+            "logs-azure.activitylogs-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -65,32 +65,47 @@
                 },
                 "technique": [
                     {
-                        "id": "T1526",
-                        "name": "Cloud Service Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1526/"
+                        "id": "T1619",
+                        "name": "Cloud Storage Object Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1619/"
                     }
                 ]
             },
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0001",
-                    "name": "Initial Access",
-                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
                     {
-                        "id": "T1190",
-                        "name": "Exploit Public-Facing Application",
-                        "reference": "https://attack.mitre.org/techniques/T1190/"
+                        "id": "T1222",
+                        "name": "File and Directory Permissions Modification",
+                        "reference": "https://attack.mitre.org/techniques/T1222/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0010",
+                    "name": "Exfiltration",
+                    "reference": "https://attack.mitre.org/tactics/TA0010/"
+                },
+                "technique": [
+                    {
+                        "id": "T1537",
+                        "name": "Transfer Data to Cloud Account",
+                        "reference": "https://attack.mitre.org/techniques/T1537/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "2636aa6c-88b5-4337-9c31-8d0192a8ef45_105",
+    "id": "2636aa6c-88b5-4337-9c31-8d0192a8ef45_106",
     "type": "security-rule"
 }

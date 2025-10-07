@@ -7,10 +7,10 @@
         "false_positives": [
             "Deletion of a resource group may be done by a system or network administrator. Verify whether the username, hostname, and/or resource name should be making changes in your environment. Resource group deletions from unfamiliar users or hosts should be investigated. If known behavior is causing false positives, it can be exempted from the rule."
         ],
-        "from": "now-25m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-azure*"
+            "logs-azure.activitylogs-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -96,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "bb4fe8d2-7ae2-475c-8b5d-55b449e4264f_105",
+    "id": "bb4fe8d2-7ae2-475c-8b5d-55b449e4264f_106",
     "type": "security-rule"
 }

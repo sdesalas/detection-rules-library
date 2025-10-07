@@ -4,10 +4,10 @@
             "Elastic"
         ],
         "description": "Identifies when an Azure Automation webhook is created. Azure Automation runbooks can be configured to execute via a webhook. A webhook uses a custom URL passed to Azure Automation along with a data payload specific to the runbook. An adversary may create a webhook in order to trigger a runbook that contains malicious code.",
-        "from": "now-25m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-azure*"
+            "logs-azure.activitylogs-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -55,10 +55,42 @@
             "Tactic: Persistence",
             "Resources: Investigation Guide"
         ],
+        "threat": [
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0042",
+                    "name": "Resource Development",
+                    "reference": "https://attack.mitre.org/tactics/TA0042/"
+                },
+                "technique": [
+                    {
+                        "id": "T1608",
+                        "name": "Stage Capabilities",
+                        "reference": "https://attack.mitre.org/techniques/T1608/"
+                    }
+                ]
+            }
+        ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "e9ff9c1c-fe36-4d0d-b3fd-9e0bf4853a62_105",
+    "id": "e9ff9c1c-fe36-4d0d-b3fd-9e0bf4853a62_106",
     "type": "security-rule"
 }

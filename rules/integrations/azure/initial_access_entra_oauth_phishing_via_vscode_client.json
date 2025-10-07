@@ -4,7 +4,7 @@
             "Elastic"
         ],
         "description": "Detects potentially suspicious OAuth authorization activity in Microsoft Entra ID where the Visual Studio Code first-party application (client_id = aebc6443-996d-45c2-90f0-388ff96faa56) is used to request access to Microsoft Graph resources. While this client ID is legitimately used by Visual Studio Code, threat actors have been observed abusing it in phishing campaigns to make OAuth requests appear trustworthy. These attacks rely on redirect URIs such as VSCode's Insiders redirect location, prompting victims to return an OAuth authorization code that can be exchanged for access tokens. This rule may help identify unauthorized use of the VS Code OAuth flow as part of social engineering or credential phishing activity.",
-        "from": "now-25m",
+        "from": "now-9m",
         "index": [
             "filebeat-*",
             "logs-azure.signinlogs-*"
@@ -107,12 +107,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0006",
+                    "name": "Credential Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "T1528",
+                        "name": "Steal Application Access Token",
+                        "reference": "https://attack.mitre.org/techniques/T1528/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "14fa0285-fe78-4843-ac8e-f4b481f49da9_3",
+    "id": "14fa0285-fe78-4843-ac8e-f4b481f49da9_4",
     "type": "security-rule"
 }

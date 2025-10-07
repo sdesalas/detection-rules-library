@@ -9,10 +9,10 @@
         "false_positives": [
             "Users and Administrators can create inbox rules for legitimate purposes. Verify if it complies with the company policy and done with the user's consent. Exceptions can be added to this rule to filter expected behavior."
         ],
-        "from": "now-30m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-o365*"
+            "logs-o365.audit-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -110,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 209
+        "version": 210
     },
-    "id": "ec8efb0c-604d-42fa-ac46-ed1cfbc38f78_209",
+    "id": "ec8efb0c-604d-42fa-ac46-ed1cfbc38f78_210",
     "type": "security-rule"
 }

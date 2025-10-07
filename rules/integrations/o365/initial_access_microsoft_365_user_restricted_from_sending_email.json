@@ -7,10 +7,10 @@
         "false_positives": [
             "A user sending emails using personal distribution folders may trigger the event."
         ],
-        "from": "now-30m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-o365*"
+            "logs-o365.audit-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -62,30 +62,24 @@
             "Domain: Cloud",
             "Data Source: Microsoft 365",
             "Use Case: Configuration Audit",
-            "Tactic: Initial Access",
+            "Tactic: Impact",
             "Resources: Investigation Guide"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0001",
-                    "name": "Initial Access",
-                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                    "id": "TA0040",
+                    "name": "Impact",
+                    "reference": "https://attack.mitre.org/tactics/TA0040/"
                 },
-                "technique": [
-                    {
-                        "id": "T1078",
-                        "name": "Valid Accounts",
-                        "reference": "https://attack.mitre.org/techniques/T1078/"
-                    }
-                ]
+                "technique": []
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 209
+        "version": 210
     },
-    "id": "0136b315-b566-482f-866c-1d8e2477ba16_209",
+    "id": "0136b315-b566-482f-866c-1d8e2477ba16_210",
     "type": "security-rule"
 }

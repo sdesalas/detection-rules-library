@@ -4,10 +4,10 @@
             "Elastic"
         ],
         "description": "Azure Active Directory (AD) Privileged Identity Management (PIM) is a service that enables you to manage, control, and monitor access to important resources in an organization. PIM can be used to manage the built-in Azure resource roles such as Global Administrator and Application Administrator. An adversary may add a user to a PIM role in order to maintain persistence in their target's environment or modify a PIM role to weaken their target's security controls.",
-        "from": "now-25m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-azure*"
+            "logs-azure.auditlogs-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -62,9 +62,16 @@
                 },
                 "technique": [
                     {
-                        "id": "T1078",
-                        "name": "Valid Accounts",
-                        "reference": "https://attack.mitre.org/techniques/T1078/"
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.003",
+                                "name": "Additional Cloud Roles",
+                                "reference": "https://attack.mitre.org/techniques/T1098/003/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -86,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "7882cebf-6cf1-4de3-9662-213aa13e8b80_107",
+    "id": "7882cebf-6cf1-4de3-9662-213aa13e8b80_108",
     "type": "security-rule"
 }

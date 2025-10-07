@@ -7,10 +7,10 @@
         "false_positives": [
             "Suppression Rules can be created legitimately by a system administrator. Verify whether the user identity, user agent, and/or hostname should be making changes in your environment. Suppression Rules created by unfamiliar users should be investigated. If known behavior is causing false positives, it can be exempted from the rule."
         ],
-        "from": "now-25m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-azure*"
+            "logs-azure.activitylogs-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -75,8 +75,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "f0bc081a-2346-4744-a6a4-81514817e888_105",
+    "id": "f0bc081a-2346-4744-a6a4-81514817e888_106",
     "type": "security-rule"
 }

@@ -7,10 +7,10 @@
         "false_positives": [
             "Pods may be deleted by a system administrator. Verify whether the user identity, user agent, and/or hostname should be making changes in your environment. Pods deletions by unfamiliar users or hosts should be investigated. If known behavior is causing false positives, it can be exempted from the rule."
         ],
-        "from": "now-25m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-azure*"
+            "logs-azure.activitylogs-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -63,13 +63,24 @@
                     "name": "Impact",
                     "reference": "https://attack.mitre.org/tactics/TA0040/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1489",
+                        "name": "Service Stop",
+                        "reference": "https://attack.mitre.org/techniques/T1489/"
+                    },
+                    {
+                        "id": "T1529",
+                        "name": "System Shutdown/Reboot",
+                        "reference": "https://attack.mitre.org/techniques/T1529/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "83a1931d-8136-46fc-b7b9-2db4f639e014_105",
+    "id": "83a1931d-8136-46fc-b7b9-2db4f639e014_106",
     "type": "security-rule"
 }

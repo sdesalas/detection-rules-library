@@ -7,10 +7,10 @@
         "false_positives": [
             "Guest user invitations may be sent out by a system or network administrator. Verify whether the username, hostname, and/or resource name should be making changes in your environment. Guest user invitations from unfamiliar users or hosts should be investigated. If known behavior is causing false positives, it can be exempted from the rule."
         ],
-        "from": "now-25m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-azure*"
+            "logs-azure.auditlogs-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -93,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "141e9b3a-ff37-4756-989d-05d7cbf35b0e_105",
+    "id": "141e9b3a-ff37-4756-989d-05d7cbf35b0e_106",
     "type": "security-rule"
 }

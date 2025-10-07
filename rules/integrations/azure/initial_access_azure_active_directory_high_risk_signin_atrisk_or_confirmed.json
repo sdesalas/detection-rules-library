@@ -4,10 +4,10 @@
             "Austin Songer"
         ],
         "description": "Identifies high risk Azure Active Directory (AD) sign-ins by leveraging Microsoft Identity Protection machine learning and heuristics.",
-        "from": "now-25m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-azure*"
+            "logs-azure.signinlogs-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -66,15 +66,22 @@
                     {
                         "id": "T1078",
                         "name": "Valid Accounts",
-                        "reference": "https://attack.mitre.org/techniques/T1078/"
+                        "reference": "https://attack.mitre.org/techniques/T1078/",
+                        "subtechnique": [
+                            {
+                                "id": "T1078.004",
+                                "name": "Cloud Accounts",
+                                "reference": "https://attack.mitre.org/techniques/T1078/004/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "26edba02-6979-4bce-920a-70b080a7be81_107",
+    "id": "26edba02-6979-4bce-920a-70b080a7be81_108",
     "type": "security-rule"
 }

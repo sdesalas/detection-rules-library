@@ -7,10 +7,10 @@
         "false_positives": [
             "If Cloud App Security identifies, for example, a high rate of file uploads or file deletion activities it may represent an adverse encryption process."
         ],
-        "from": "now-30m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-o365*"
+            "logs-o365.audit-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -84,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 209
+        "version": 210
     },
-    "id": "721999d0-7ab2-44bf-b328-6e63367b9b29_209",
+    "id": "721999d0-7ab2-44bf-b328-6e63367b9b29_210",
     "type": "security-rule"
 }

@@ -150,6 +150,21 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
+                    "id": "TA0006",
+                    "name": "Credential Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "T1528",
+                        "name": "Steal Application Access Token",
+                        "reference": "https://attack.mitre.org/techniques/T1528/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
                     "id": "TA0001",
                     "name": "Initial Access",
                     "reference": "https://attack.mitre.org/tactics/TA0001/"
@@ -159,8 +174,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "40e60816-5122-11f0-9caa-f661ea17fbcd_1",
+    "id": "40e60816-5122-11f0-9caa-f661ea17fbcd_2",
     "type": "security-rule"
 }

@@ -4,10 +4,10 @@
             "Elastic"
         ],
         "description": "Identifies when an Azure Automation runbook is created or modified. An adversary may create or modify an Azure Automation runbook to execute malicious code and maintain persistence in their target's environment.",
-        "from": "now-25m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-azure*"
+            "logs-azure.activitylogs-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -52,13 +52,30 @@
             "Domain: Cloud",
             "Data Source: Azure",
             "Use Case: Configuration Audit",
-            "Tactic: Persistence",
+            "Tactic: Execution",
             "Resources: Investigation Guide"
+        ],
+        "threat": [
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1648",
+                        "name": "Serverless Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1648/"
+                    }
+                ]
+            }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "16280f1e-57e6-4242-aa21-bb4d16f13b2f_105",
+    "id": "16280f1e-57e6-4242-aa21-bb4d16f13b2f_106",
     "type": "security-rule"
 }
