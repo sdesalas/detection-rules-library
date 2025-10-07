@@ -5,8 +5,8 @@
         ],
         "description": "Identifies a new or modified federation domain, which can be used to create a trust between O365 and an external identity provider.",
         "index": [
-            "filebeat-*",
-            "logs-o365*"
+            "logs-o365.audit-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -91,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 210
+        "version": 211
     },
-    "id": "684554fc-0777-47ce-8c9b-3d01f198d7f8_210",
+    "id": "684554fc-0777-47ce-8c9b-3d01f198d7f8_211",
     "type": "security-rule"
 }

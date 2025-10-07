@@ -7,10 +7,10 @@
         "false_positives": [
             "Authorization rule additions or modifications may be done by a system or network administrator. Verify whether the username, hostname, and/or resource name should be making changes in your environment. Authorization rule additions or modifications from unfamiliar users or hosts should be investigated. If known behavior is causing false positives, it can be exempted from the rule."
         ],
-        "from": "now-25m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-azure*"
+            "logs-azure.activitylogs-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -52,45 +52,52 @@
             "Domain: Cloud",
             "Data Source: Azure",
             "Use Case: Log Auditing",
-            "Tactic: Collection",
+            "Tactic: Persistence",
             "Resources: Investigation Guide"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0009",
-                    "name": "Collection",
-                    "reference": "https://attack.mitre.org/tactics/TA0009/"
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
                 },
                 "technique": [
                     {
-                        "id": "T1530",
-                        "name": "Data from Cloud Storage",
-                        "reference": "https://attack.mitre.org/techniques/T1530/"
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/"
                     }
                 ]
             },
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0010",
-                    "name": "Exfiltration",
-                    "reference": "https://attack.mitre.org/tactics/TA0010/"
+                    "id": "TA0006",
+                    "name": "Credential Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0006/"
                 },
                 "technique": [
                     {
-                        "id": "T1537",
-                        "name": "Transfer Data to Cloud Account",
-                        "reference": "https://attack.mitre.org/techniques/T1537/"
+                        "id": "T1552",
+                        "name": "Unsecured Credentials",
+                        "reference": "https://attack.mitre.org/techniques/T1552/",
+                        "subtechnique": [
+                            {
+                                "id": "T1552.005",
+                                "name": "Cloud Instance Metadata API",
+                                "reference": "https://attack.mitre.org/techniques/T1552/005/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 107
     },
-    "id": "b6dce542-2b75-4ffb-b7d6-38787298ba9d_106",
+    "id": "b6dce542-2b75-4ffb-b7d6-38787298ba9d_107",
     "type": "security-rule"
 }

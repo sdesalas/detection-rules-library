@@ -16,7 +16,7 @@
             "process.parent.executable"
         ],
         "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Suspicious Path Invocation from Command Line\n\nIn Linux environments, shell processes like bash or zsh execute commands, often using the PATH variable to locate executables. Adversaries may manipulate PATH to run malicious scripts from non-standard directories, evading detection. The detection rule identifies unusual PATH assignments in command lines, signaling potential unauthorized actions by monitoring specific shell invocations and command patterns.\n\n### Possible investigation steps\n\n- Review the command line details captured in the alert to identify the specific PATH assignment and the command being executed. This can provide insight into whether the command is expected or potentially malicious.\n- Check the process tree to understand the parent process and any child processes spawned by the suspicious shell invocation. This can help determine the context in which the command was executed.\n- Investigate the user account associated with the process to determine if the activity aligns with the user's typical behavior or if the account may have been compromised.\n- Examine the directory from which the command is being executed to verify if it is a non-standard or suspicious location. Look for any unusual files or scripts in that directory.\n- Cross-reference the event with other security logs or alerts to identify any correlated activities that might indicate a broader attack or compromise.\n- Assess the system's recent changes or updates to determine if they could have inadvertently caused the PATH modification or if it was intentionally altered by an adversary.\n\n### False positive analysis\n\n- System administrators or developers may intentionally modify the PATH variable for legitimate purposes, such as testing scripts or applications in development environments. To handle this, create exceptions for known users or specific directories commonly used for development.\n- Automated scripts or configuration management tools might alter the PATH variable as part of their normal operation. Identify these scripts and exclude their execution paths or user accounts from triggering alerts.\n- Some software installations or updates may temporarily change the PATH variable to include non-standard directories. Monitor installation processes and whitelist these activities when performed by trusted sources.\n- Custom shell configurations or user profiles might include PATH modifications for convenience or performance reasons. Review and document these configurations, and exclude them from detection if they are verified as non-threatening.\n- Educational or training environments where users experiment with shell commands may frequently trigger this rule. Consider excluding specific user groups or environments dedicated to learning and experimentation.\n\n### Response and remediation\n\n- Immediately isolate the affected system from the network to prevent potential lateral movement or data exfiltration.\n- Terminate any suspicious processes identified by the alert to stop any ongoing unauthorized actions.\n- Review the command history and PATH variable changes on the affected system to identify any unauthorized modifications or scripts executed from non-standard directories.\n- Restore the PATH variable to its default state to ensure that only trusted directories are used for command execution.\n- Conduct a thorough scan of the system using updated antivirus or endpoint detection tools to identify and remove any malicious scripts or files.\n- Escalate the incident to the security operations center (SOC) or incident response team for further analysis and to determine if additional systems are affected.\n- Implement monitoring for similar PATH manipulation attempts across the network to enhance detection and prevent recurrence.",
-        "query": "event.category:process and host.os.type:linux and event.type:start and event.action:exec and\nprocess.name:(bash or csh or dash or fish or ksh or sh or tcsh or zsh) and process.args:-c and\nprocess.command_line:(*PATH=* and not sh*/run/motd.dynamic.new)\n",
+        "query": "event.category:process and host.os.type:linux and event.type:start and event.action:exec and\nprocess.name:(bash or csh or dash or fish or ksh or sh or tcsh or zsh) and process.args:-c and\nprocess.command_line:*PATH=* and\nnot (\n  process.command_line:(*_PATH=* or *PYTHONPATH=* or sh*/run/motd.dynamic.new) or\n  process.parent.executable:(\n    \"/opt/puppetlabs/puppet/bin/puppet\" or /var/lib/docker/overlay2/* or /vz/root/*/dovecot or\n    \"/usr/libexec/dovecot/auth\" or /home/*/.local/share/containers/* or /vz/root/*/dovecot/auth\n  ) or\n  process.parent.command_line:\"runc init\"\n)\n",
         "references": [
             "https://blog.exatrack.com/Perfctl-using-portainer-and-new-persistences/"
         ],
@@ -60,6 +60,16 @@
             {
                 "ecs": true,
                 "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.command_line",
+                "type": "wildcard"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.executable",
                 "type": "keyword"
             }
         ],
@@ -117,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "82f842c2-7c36-438c-b562-5afe54ab11f4_4",
+    "id": "82f842c2-7c36-438c-b562-5afe54ab11f4_5",
     "type": "security-rule"
 }

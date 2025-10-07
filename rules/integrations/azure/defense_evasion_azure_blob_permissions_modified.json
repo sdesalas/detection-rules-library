@@ -7,9 +7,10 @@
         "false_positives": [
             "Blob permissions may be modified by system administrators. Verify that the configuration change was expected. Exceptions can be added to this rule to filter expected behavior."
         ],
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-azure*"
+            "logs-azure.activitylogs-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -73,8 +74,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "d79c4b2a-6134-4edd-86e6-564a92a933f9_107",
+    "id": "d79c4b2a-6134-4edd-86e6-564a92a933f9_108",
     "type": "security-rule"
 }

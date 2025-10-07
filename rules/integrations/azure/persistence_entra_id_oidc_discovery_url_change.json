@@ -5,6 +5,7 @@
         ],
         "description": "Detects a change to the OpenID Connect (OIDC) discovery URL in the Entra ID Authentication Methods Policy. This behavior may indicate an attempt to federate Entra ID with an attacker-controlled identity provider, enabling bypass of multi-factor authentication (MFA) and unauthorized access through bring-your-own IdP (BYOIDP) methods.",
         "from": "now-9m",
+        "interval": "8m",
         "language": "esql",
         "license": "Elastic License v2",
         "name": "OIDC Discovery URL Changed in Entra ID",
@@ -52,8 +53,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "498e4094-60e7-11f0-8847-f661ea17fbcd_3",
+    "id": "498e4094-60e7-11f0-8847-f661ea17fbcd_4",
     "type": "security-rule"
 }

@@ -7,10 +7,10 @@
         "false_positives": [
             "Sign-ins using PowerShell may be done by a system or network administrator. Verify whether the username, hostname, and/or resource name should be signing into your environment. Sign-ins from unfamiliar users or hosts should be investigated. If known behavior is causing false positives, it can be exempted from the rule."
         ],
-        "from": "now-25m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-azure*"
+            "logs-azure.signinlogs-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -82,12 +82,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.001",
+                                "name": "PowerShell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "a605c51a-73ad-406d-bf3a-f24cc41d5c97_107",
+    "id": "a605c51a-73ad-406d-bf3a-f24cc41d5c97_108",
     "type": "security-rule"
 }

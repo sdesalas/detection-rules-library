@@ -8,6 +8,7 @@
             "Legitimate users may download files from OneDrive using OAuth authentication. Ensure that the downloads are authorized and the user is known before taking action."
         ],
         "from": "now-9m",
+        "interval": "8m",
         "language": "esql",
         "license": "Elastic License v2",
         "name": "M365 OneDrive Excessive File Downloads with OAuth Token",
@@ -58,8 +59,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "0e524fa6-eed3-11ef-82b4-f661ea17fbce_3",
+    "id": "0e524fa6-eed3-11ef-82b4-f661ea17fbce_4",
     "type": "security-rule"
 }

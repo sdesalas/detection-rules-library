@@ -7,10 +7,10 @@
         "false_positives": [
             "Custom applications may be allowed by a system or network administrator. Verify that the configuration change was expected. Exceptions can be added to this rule to filter expected behavior."
         ],
-        "from": "now-30m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-o365*"
+            "logs-o365.audit-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -71,24 +71,30 @@
             "Domain: Cloud",
             "Data Source: Microsoft 365",
             "Use Case: Configuration Audit",
-            "Tactic: Persistence",
+            "Tactic: Defense Evasion",
             "Resources: Investigation Guide"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0003",
-                    "name": "Persistence",
-                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1562",
+                        "name": "Impair Defenses",
+                        "reference": "https://attack.mitre.org/techniques/T1562/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 210
+        "version": 211
     },
-    "id": "bbd1a775-8267-41fa-9232-20e5582596ac_210",
+    "id": "bbd1a775-8267-41fa-9232-20e5582596ac_211",
     "type": "security-rule"
 }

@@ -8,8 +8,8 @@
             "Global administrator additions may be done by a system or network administrator. Verify whether the username, hostname, and/or resource name should be making changes in your environment. Global administrator additions from unfamiliar users or hosts should be investigated. If known behavior is causing false positives, it can be exempted from the rule."
         ],
         "index": [
-            "filebeat-*",
-            "logs-azure*"
+            "logs-azure.auditlogs-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -75,15 +75,22 @@
                     {
                         "id": "T1098",
                         "name": "Account Manipulation",
-                        "reference": "https://attack.mitre.org/techniques/T1098/"
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.003",
+                                "name": "Additional Cloud Roles",
+                                "reference": "https://attack.mitre.org/techniques/T1098/003/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "ed9ecd27-e3e6-4fd9-8586-7754803f7fc8_105",
+    "id": "ed9ecd27-e3e6-4fd9-8586-7754803f7fc8_106",
     "type": "security-rule"
 }

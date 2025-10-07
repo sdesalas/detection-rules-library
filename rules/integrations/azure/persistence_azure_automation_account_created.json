@@ -4,10 +4,10 @@
             "Elastic"
         ],
         "description": "Identifies when an Azure Automation account is created. Azure Automation accounts can be used to automate management tasks and orchestrate actions across systems. An adversary may create an Automation account in order to maintain persistence in their target's environment.",
-        "from": "now-25m",
+        "from": "now-9m",
         "index": [
-            "filebeat-*",
-            "logs-azure*"
+            "logs-azure.activitylogs-*",
+            "filebeat-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -89,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "df26fd74-1baa-4479-b42e-48da84642330_105",
+    "id": "df26fd74-1baa-4479-b42e-48da84642330_106",
     "type": "security-rule"
 }

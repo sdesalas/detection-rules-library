@@ -7,7 +7,7 @@
         "from": "now-9m",
         "history_window_start": "now-14d",
         "index": [
-            "logs-o365**"
+            "logs-o365.audit-*"
         ],
         "investigation_fields": {
             "field_names": [
@@ -125,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "0c3c80de-08c2-11f0-bd11-f661ea17fbcc_4",
+    "id": "0c3c80de-08c2-11f0-bd11-f661ea17fbcc_5",
     "type": "security-rule"
 }

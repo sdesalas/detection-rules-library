@@ -8,7 +8,7 @@
         "history_window_start": "now-14d",
         "index": [
             "filebeat-*",
-            "logs-azure*"
+            "logs-azure.auditlogs-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -84,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 106
+        "version": 107
     },
-    "id": "bc48bba7-4a23-4232-b551-eca3ca1e3f20_106",
+    "id": "bc48bba7-4a23-4232-b551-eca3ca1e3f20_107",
     "type": "security-rule"
 }
