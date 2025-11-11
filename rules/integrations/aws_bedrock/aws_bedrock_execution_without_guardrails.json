@@ -20,6 +20,24 @@
             "https://atlas.mitre.org/techniques/AML.T0054",
             "https://www.elastic.co/security-labs/elastic-advances-llm-security"
         ],
+        "related_integrations": [
+            {
+                "package": "aws_bedrock",
+                "version": "^1.0.0"
+            }
+        ],
+        "required_fields": [
+            {
+                "ecs": false,
+                "name": "Esql.ml_invocations_no_guardrails_count",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "user.id",
+                "type": "keyword"
+            }
+        ],
         "risk_score": 47,
         "rule_id": "f2c653b7-7daf-4774-86f2-34cdbd1fc528",
         "setup": "## Setup\n\nThis rule requires that guardrails are configured in AWS Bedrock. For more information, see the AWS Bedrock documentation:\n\nhttps://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-create.html\n",
@@ -35,8 +53,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "f2c653b7-7daf-4774-86f2-34cdbd1fc528_3",
+    "id": "f2c653b7-7daf-4774-86f2-34cdbd1fc528_4",
     "type": "security-rule"
 }

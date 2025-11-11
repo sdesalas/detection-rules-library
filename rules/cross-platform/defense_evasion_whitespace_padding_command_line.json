@@ -40,6 +40,38 @@
                 "version": "^1.0.0"
             }
         ],
+        "required_fields": [
+            {
+                "ecs": true,
+                "name": "host.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "host.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.command_line",
+                "type": "wildcard"
+            },
+            {
+                "ecs": true,
+                "name": "process.executable",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.executable",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "user.name",
+                "type": "keyword"
+            }
+        ],
         "risk_score": 47,
         "rule_id": "5a876e0d-d39a-49b9-8ad8-19c9b622203b",
         "severity": "medium",
@@ -99,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "5a876e0d-d39a-49b9-8ad8-19c9b622203b_1",
+    "id": "5a876e0d-d39a-49b9-8ad8-19c9b622203b_2",
     "type": "security-rule"
 }

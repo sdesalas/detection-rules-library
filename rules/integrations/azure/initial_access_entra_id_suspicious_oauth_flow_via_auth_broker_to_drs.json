@@ -25,6 +25,163 @@
                 "version": "^1.0.0"
             }
         ],
+        "required_fields": [
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_app_display_name_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_app_id_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_app_owner_tenant_id_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_authentication_protocol_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_authentication_requirement_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_conditional_access_status_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_device_detail_browser_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_device_detail_operating_system_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_incoming_token_type_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_is_interactive_values",
+                "type": "boolean"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_resource_display_name_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_resource_id_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_resource_owner_tenant_id_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_risk_level_aggregated_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_risk_state_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_session_id_count_distinct",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_session_id_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_token_protection_status_details_sign_in_session_status_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_unique_token_identifier_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.event_count",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.is_browser_case_max",
+                "type": "integer"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_address_count_distinct",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_address_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_as_organization_name_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_geo_city_name_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_geo_country_name_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_geo_region_name_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.time_window_date_trunc",
+                "type": "date"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.user_agent_original_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql_priv.azure_signinlogs_properties_user_display_name_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql_priv.azure_signinlogs_properties_user_principal_name_values",
+                "type": "keyword"
+            }
+        ],
         "risk_score": 73,
         "rule_id": "375132c6-25d5-11f0-8745-f661ea17fbcd",
         "setup": "#### Required Microsoft Entra ID Sign-In Logs\nThis rule requires the Microsoft Entra ID Sign-In Logs integration be enabled and configured to collect sign-in logs. In Entra ID, sign-in logs must be enabled and streaming to the Event Hub used for the Azure integration.\n",
@@ -93,8 +250,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "375132c6-25d5-11f0-8745-f661ea17fbcd_4",
+    "id": "375132c6-25d5-11f0-8745-f661ea17fbcd_5",
     "type": "security-rule"
 }

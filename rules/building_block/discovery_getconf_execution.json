@@ -10,13 +10,14 @@
             "logs-endpoint.events.process*",
             "endgame-*",
             "auditbeat-*",
-            "logs-auditd_manager.auditd-*"
+            "logs-auditd_manager.auditd-*",
+            "logs-crowdstrike.fdr*"
         ],
         "interval": "60m",
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Linux System Information Discovery via Getconf",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\") and\nprocess.name == \"getconf\"\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\", \"ProcessRollup2\") and\nprocess.name == \"getconf\"\n",
         "references": [
             "https://blog.exatrack.com/Perfctl-using-portainer-and-new-persistences/"
         ],
@@ -28,6 +29,10 @@
             {
                 "package": "auditd_manager",
                 "version": "^1.0.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -63,7 +68,8 @@
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
-            "Data Source: Auditd Manager"
+            "Data Source: Auditd Manager",
+            "Data Source: Crowdstrike"
         ],
         "threat": [
             {
@@ -84,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "90e5976d-ed8c-489a-a293-bfc57ff8ba89_3",
+    "id": "90e5976d-ed8c-489a-a293-bfc57ff8ba89_4",
     "type": "security-rule"
 }

@@ -193,7 +193,7 @@
                         "subtechnique": [
                             {
                                 "id": "T1497.003",
-                                "name": "Time Based Evasion",
+                                "name": "Time Based Checks",
                                 "reference": "https://attack.mitre.org/techniques/T1497/003/"
                             }
                         ]
@@ -202,8 +202,8 @@
             }
         ],
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "e00b8d49-632f-4dc6-94a5-76153a481915_6",
+    "id": "e00b8d49-632f-4dc6-94a5-76153a481915_7",
     "type": "security-rule"
 }

@@ -19,6 +19,39 @@
             "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
             "https://www.elastic.co/security-labs/elastic-advances-llm-security"
         ],
+        "related_integrations": [
+            {
+                "package": "aws_bedrock",
+                "version": "^1.0.0"
+            }
+        ],
+        "required_fields": [
+            {
+                "ecs": false,
+                "name": "Esql.ml_invocations_total_count",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.ml_risk_score",
+                "type": "double"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.ml_usage_completion_tokens_avg",
+                "type": "double"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.ml_usage_prompt_tokens_max",
+                "type": "integer"
+            },
+            {
+                "ecs": true,
+                "name": "user.id",
+                "type": "keyword"
+            }
+        ],
         "risk_score": 47,
         "rule_id": "b1773d05-f349-45fb-9850-287b8f92f02d",
         "setup": "## Setup\n\nThis rule requires that guardrails are configured in AWS Bedrock. For more information, see the AWS Bedrock documentation:\n\nhttps://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-create.html\n",
@@ -35,8 +68,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "b1773d05-f349-45fb-9850-287b8f92f02d_5",
+    "id": "b1773d05-f349-45fb-9850-287b8f92f02d_6",
     "type": "security-rule"
 }

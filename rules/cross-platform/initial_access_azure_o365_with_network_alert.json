@@ -23,6 +23,53 @@
                 "version": "^2.0.0"
             }
         ],
+        "required_fields": [
+            {
+                "ecs": false,
+                "name": "Esql.event_category_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.event_count",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.event_dataset_count_distinct",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.event_dataset_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.kibana_alert_rule_name_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_ip",
+                "type": "ip"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_ip_azure_signin_case_count_distinct",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_ip_mail_access_case_count_distinct",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_ip_network_alert_case_count_distinct",
+                "type": "long"
+            }
+        ],
         "risk_score": 73,
         "rule_id": "f0cc239b-67fa-46fc-89d4-f861753a40f5",
         "setup": "The Azure Fleet integration, Office 365 Logs Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
@@ -60,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "f0cc239b-67fa-46fc-89d4-f861753a40f5_3",
+    "id": "f0cc239b-67fa-46fc-89d4-f861753a40f5_4",
     "type": "security-rule"
 }

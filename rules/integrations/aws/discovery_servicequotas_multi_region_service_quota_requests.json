@@ -14,6 +14,28 @@
             "https://www.sentinelone.com/labs/exploring-fbot-python-based-malware-targeting-cloud-and-payment-services/",
             "https://docs.aws.amazon.com/servicequotas/2019-06-24/apireference/API_GetServiceQuota.html"
         ],
+        "required_fields": [
+            {
+                "ecs": false,
+                "name": "Esql.cloud_region_count_distinct",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.event_count",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.time_window_date_trunc",
+                "type": "date"
+            },
+            {
+                "ecs": false,
+                "name": "aws.cloudtrail.user_identity.arn",
+                "type": "keyword"
+            }
+        ],
         "risk_score": 21,
         "rule_id": "19be0164-63d2-11ef-8e38-f661ea17fbce",
         "severity": "low",
@@ -45,8 +67,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "19be0164-63d2-11ef-8e38-f661ea17fbce_4",
+    "id": "19be0164-63d2-11ef-8e38-f661ea17fbce_5",
     "type": "security-rule"
 }

@@ -21,9 +21,55 @@
         ],
         "related_integrations": [
             {
+                "package": "aws",
+                "version": "^4.0.0"
+            },
+            {
                 "integration": "cloudtrail",
                 "package": "aws",
                 "version": "^4.0.0"
+            }
+        ],
+        "required_fields": [
+            {
+                "ecs": true,
+                "name": "@timestamp",
+                "type": "date"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.aws_cloudtrail_request_parameters_kms_key_account_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.aws_cloudtrail_request_parameters_kms_key_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.aws_cloudtrail_request_parameters_target_bucket_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.aws_cloudtrail_request_parameters_target_object_key",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "aws.cloudtrail.user_identity.arn",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "cloud.account.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.action",
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -59,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 6
+        "version": 7
     },
-    "id": "ab8f074c-5565-4bc4-991c-d49770e19fc9_6",
+    "id": "ab8f074c-5565-4bc4-991c-d49770e19fc9_7",
     "type": "security-rule"
 }

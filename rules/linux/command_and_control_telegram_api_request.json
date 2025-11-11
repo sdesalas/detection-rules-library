@@ -6,17 +6,22 @@
         "description": "This rule detects when a process executes the curl or wget command with an argument that includes the api.telegram.org domain. This may indicate command and control behavior.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.process*"
+            "logs-endpoint.events.process*",
+            "logs-crowdstrike.fdr*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Linux Telegram API Request",
         "note": " ## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Linux Telegram API Request\n\nTelegram's API allows applications to interact with its messaging platform, often used for legitimate automation and communication tasks. However, adversaries may exploit this by using commands like `curl` or `wget` to communicate with Telegram's API for command and control purposes. The detection rule identifies such suspicious activity by monitoring for these commands accessing the Telegram API, indicating potential misuse.\n\n### Possible investigation steps\n\n- Review the process details to confirm the execution of the curl or wget command with the api.telegram.org domain in the command line, as indicated by the process.command_line field.\n- Investigate the user account associated with the process to determine if the activity aligns with expected behavior or if the account may be compromised.\n- Check the network activity logs to identify any additional connections to api.telegram.org or other suspicious domains, which may indicate further command and control communication.\n- Analyze the parent process of the detected curl or wget command to understand how the process was initiated and if it was triggered by another suspicious activity.\n- Examine the system for any other indicators of compromise, such as unusual file modifications or additional unauthorized processes, to assess the scope of potential malicious activity.\n\n### False positive analysis\n\n- Legitimate automation scripts or applications may use curl or wget to interact with Telegram's API for non-malicious purposes. Review the context and purpose of these scripts to determine if they are authorized.\n- System administrators or developers might use curl or wget for testing or maintenance tasks involving Telegram's API. Verify if these activities are part of routine operations and consider excluding them if they are deemed safe.\n- Monitoring tools or integrations that rely on Telegram for notifications could trigger this rule. Identify these tools and add exceptions for their known processes to prevent unnecessary alerts.\n- If a specific user or service account frequently triggers this rule due to legitimate use, consider creating an exception for that account to reduce noise while maintaining security oversight.\n\n### Response and remediation\n\n- Immediately isolate the affected system from the network to prevent further communication with the Telegram API and potential data exfiltration.\n- Terminate any suspicious processes identified as using curl or wget to interact with api.telegram.org to halt ongoing malicious activities.\n- Conduct a thorough review of the affected system's process logs and network connections to identify any additional indicators of compromise or related malicious activity.\n- Remove any unauthorized scripts or binaries that may have been used to automate the interaction with the Telegram API.\n- Reset credentials and review access permissions for any accounts that were active on the affected system to prevent unauthorized access.\n- Update and patch the affected system to the latest security standards to mitigate vulnerabilities that could be exploited in similar attacks.\n- Escalate the incident to the security operations center (SOC) or incident response team for further investigation and to determine if additional systems are affected.\n",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action == \"exec\" and\nprocess.name in (\"curl\", \"wget\") and process.command_line like \"*api.telegram.org*\"\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"ProcessRollup2\") and\nprocess.name in (\"curl\", \"wget\") and process.command_line like \"*api.telegram.org*\"\n",
         "related_integrations": [
             {
                 "package": "endpoint",
                 "version": "^8.2.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -56,7 +61,8 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Data Source: Crowdstrike"
         ],
         "threat": [
             {
@@ -84,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "af1e36fe-0abd-4463-b5ec-4e276dec0b26_2",
+    "id": "af1e36fe-0abd-4463-b5ec-4e276dec0b26_3",
     "type": "security-rule"
 }
