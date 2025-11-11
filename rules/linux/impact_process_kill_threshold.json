@@ -9,7 +9,8 @@
             "logs-endpoint.events.*",
             "endgame-*",
             "auditbeat-*",
-            "logs-auditd_manager.auditd-*"
+            "logs-auditd_manager.auditd-*",
+            "logs-crowdstrike.fdr*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -24,6 +25,10 @@
             {
                 "package": "auditd_manager",
                 "version": "^1.18.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -65,7 +70,8 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: Auditd Manager"
+            "Data Source: Auditd Manager",
+            "Data Source: Crowdstrike"
         ],
         "threat": [
             {
@@ -94,8 +100,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 114
+        "version": 115
     },
-    "id": "67f8443a-4ff3-4a70-916d-3cfa3ae9f02b_114",
+    "id": "67f8443a-4ff3-4a70-916d-3cfa3ae9f02b_115",
     "type": "security-rule"
 }

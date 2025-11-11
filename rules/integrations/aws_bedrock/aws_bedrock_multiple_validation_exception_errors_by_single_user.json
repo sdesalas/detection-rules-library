@@ -28,6 +28,34 @@
             "https://atlas.mitre.org/techniques/AML.T0046",
             "https://www.elastic.co/security-labs/elastic-advances-llm-security"
         ],
+        "related_integrations": [
+            {
+                "package": "aws_bedrock",
+                "version": "^1.1.0"
+            }
+        ],
+        "required_fields": [
+            {
+                "ecs": false,
+                "name": "Esql.ml_response_validation_error_count",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.time_window_date_trunc",
+                "type": "date"
+            },
+            {
+                "ecs": true,
+                "name": "cloud.account.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "user.id",
+                "type": "keyword"
+            }
+        ],
         "risk_score": 73,
         "rule_id": "725a048a-88c5-4fc7-8677-a44fc0031822",
         "setup": "## Setup\n\nThis rule requires that AWS Bedrock Integration be configured. For more information, see the AWS Bedrock integration documentation:\n\nhttps://www.elastic.co/docs/current/integrations/aws_bedrock\n",
@@ -45,8 +73,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "725a048a-88c5-4fc7-8677-a44fc0031822_5",
+    "id": "725a048a-88c5-4fc7-8677-a44fc0031822_6",
     "type": "security-rule"
 }

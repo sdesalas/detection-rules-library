@@ -88,7 +88,7 @@
             {
                 "ecs": false,
                 "name": "o365.audit.OperationCount",
-                "type": "unknown"
+                "type": "integer"
             },
             {
                 "ecs": false,
@@ -139,8 +139,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "7fc95782-4bd1-11f0-9838-f661ea17fbcd_1",
+    "id": "7fc95782-4bd1-11f0-9838-f661ea17fbcd_2",
     "type": "security-rule"
 }

@@ -26,6 +26,23 @@
                 "version": "^3.5.0"
             }
         ],
+        "required_fields": [
+            {
+                "ecs": false,
+                "name": "Esql.client_geo_country_name_count_distinct",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "okta.actor.alternate_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "okta.actor.id",
+                "type": "keyword"
+            }
+        ],
         "risk_score": 47,
         "rule_id": "2e56e1bc-867a-11ee-b13e-f661ea17fbcd",
         "setup": "The Okta Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.\n",
@@ -62,8 +79,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 308
+        "version": 309
     },
-    "id": "2e56e1bc-867a-11ee-b13e-f661ea17fbcd_308",
+    "id": "2e56e1bc-867a-11ee-b13e-f661ea17fbcd_309",
     "type": "security-rule"
 }

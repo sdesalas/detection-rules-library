@@ -7,7 +7,8 @@
         "from": "now-9m",
         "history_window_start": "now-10d",
         "index": [
-            "logs-endpoint.events.process-*"
+            "logs-endpoint.events.process-*",
+            "logs-crowdstrike.fdr*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -24,6 +25,10 @@
             {
                 "package": "endpoint",
                 "version": "^9.0.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -57,7 +62,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Data Source: Crowdstrike"
         ],
         "threat": [
             {
@@ -78,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "349276c0-5fcf-11ef-b1a9-f661ea17fbce_4",
+    "id": "349276c0-5fcf-11ef-b1a9-f661ea17fbce_5",
     "type": "security-rule"
 }

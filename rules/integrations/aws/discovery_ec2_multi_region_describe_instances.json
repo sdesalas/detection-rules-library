@@ -28,9 +28,35 @@
         ],
         "related_integrations": [
             {
+                "package": "aws",
+                "version": "^4.0.0"
+            },
+            {
                 "integration": "cloudtrail",
                 "package": "aws",
                 "version": "^4.0.0"
+            }
+        ],
+        "required_fields": [
+            {
+                "ecs": false,
+                "name": "Esql.cloud_region_count_distinct",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.event_count",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.time_window_date_trunc",
+                "type": "date"
+            },
+            {
+                "ecs": false,
+                "name": "aws.cloudtrail.user_identity.arn",
+                "type": "keyword"
             }
         ],
         "risk_score": 21,
@@ -63,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "393ef120-63d1-11ef-8e38-f661ea17fbce_5",
+    "id": "393ef120-63d1-11ef-8e38-f661ea17fbce_6",
     "type": "security-rule"
 }

@@ -21,13 +21,120 @@
         ],
         "related_integrations": [
             {
-                "integration": "graphactivitylogs",
                 "package": "azure",
                 "version": "^1.22.0"
             },
             {
+                "integration": "graphactivitylogs",
                 "package": "azure",
                 "version": "^1.22.0"
+            }
+        ],
+        "required_fields": [
+            {
+                "ecs": false,
+                "name": "Esql.azure_graphactivitylogs_properties_scopes_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_app_id_coalesce",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_app_id_coalesce_count_distinct",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_app_id_coalesce_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_session_id_coalesce",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_session_id_coalesce_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_user_id_coalesce",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_signinlogs_properties_user_id_coalesce_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.event_count",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.event_signin_to_graph_delay_days_date_diff",
+                "type": "integer"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.event_signin_to_graph_delay_minutes_date_diff",
+                "type": "integer"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.event_type_case_count_distinct",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.event_type_case_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.graph_time_min",
+                "type": "date"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.signin_time_min",
+                "type": "date"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_as_organization_name_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_ip_count_distinct",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_ip_values",
+                "type": "ip"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.url_original_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.user_agent_original_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql_priv.azure_signinlogs_properties_user_principal_name_values",
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -97,8 +204,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "0d3d2254-2b4a-11f0-a019-f661ea17fbcc_5",
+    "id": "0d3d2254-2b4a-11f0-a019-f661ea17fbcc_6",
     "type": "security-rule"
 }

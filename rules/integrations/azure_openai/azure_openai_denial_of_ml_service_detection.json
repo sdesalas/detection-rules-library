@@ -19,6 +19,34 @@
             "https://genai.owasp.org/llmrisk/llm04-model-denial-of-service",
             "https://atlas.mitre.org/techniques/AML.T0029"
         ],
+        "related_integrations": [
+            {
+                "package": "azure_openai",
+                "version": "^1.5.0"
+            }
+        ],
+        "required_fields": [
+            {
+                "ecs": false,
+                "name": "Esql.azure_open_ai_properties_request_length_avg",
+                "type": "double"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.event_count",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.time_window_date_trunc",
+                "type": "date"
+            },
+            {
+                "ecs": false,
+                "name": "azure.resource.name",
+                "type": "keyword"
+            }
+        ],
         "risk_score": 47,
         "rule_id": "b0450411-46e5-46d2-9b35-8b5dd9ba763e",
         "setup": "## Setup\n\nFor more information on streaming events, see the Azure OpenAI documentation:\n\nhttps://learn.microsoft.com/en-us/azure/azure-monitor/essentials/stream-monitoring-data-event-hubs\n",
@@ -33,8 +61,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "b0450411-46e5-46d2-9b35-8b5dd9ba763e_3",
+    "id": "b0450411-46e5-46d2-9b35-8b5dd9ba763e_4",
     "type": "security-rule"
 }

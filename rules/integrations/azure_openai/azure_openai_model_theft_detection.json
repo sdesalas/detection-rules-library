@@ -19,6 +19,34 @@
             "https://genai.owasp.org/llmrisk/llm10-model-theft",
             "https://atlas.mitre.org/techniques/AML.T0044"
         ],
+        "related_integrations": [
+            {
+                "package": "azure_openai",
+                "version": "^1.5.0"
+            }
+        ],
+        "required_fields": [
+            {
+                "ecs": false,
+                "name": "Esql.azure_open_ai_properties_response_length_max",
+                "type": "double"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.event_count",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "azure.resource.group",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.resource.name",
+                "type": "keyword"
+            }
+        ],
         "risk_score": 47,
         "rule_id": "4021e78d-5293-48d3-adee-a70fa4c18fab",
         "setup": "## Setup\n\nFor more information on\nstreaming events, see the Azure OpenAI documentation:\n\nhttps://learn.microsoft.com/en-us/azure/azure-monitor/essentials/stream-monitoring-data-event-hubs\n",
@@ -33,8 +61,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "4021e78d-5293-48d3-adee-a70fa4c18fab_3",
+    "id": "4021e78d-5293-48d3-adee-a70fa4c18fab_4",
     "type": "security-rule"
 }

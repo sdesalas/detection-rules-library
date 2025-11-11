@@ -22,6 +22,43 @@
                 "version": "^2.11.0"
             }
         ],
+        "required_fields": [
+            {
+                "ecs": false,
+                "name": "Esql.o365_audit_ApplicationId_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.oauth_authorize_count_distinct",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.oauth_token_count_distinct",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_as_organization_name_values",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_ip_count_distinct",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.source_ip_values",
+                "type": "ip"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.time_window_date_trunc",
+                "type": "date"
+            }
+        ],
         "risk_score": 73,
         "rule_id": "36188365-f88f-4f70-8c1d-0b9554186b9c",
         "setup": "## Setup\n\nThe Office 365 Logs Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.\n",
@@ -100,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "36188365-f88f-4f70-8c1d-0b9554186b9c_4",
+    "id": "36188365-f88f-4f70-8c1d-0b9554186b9c_5",
     "type": "security-rule"
 }

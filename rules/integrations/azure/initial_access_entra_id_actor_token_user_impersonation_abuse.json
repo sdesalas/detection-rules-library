@@ -18,6 +18,769 @@
             "https://dirkjanm.io/obtaining-global-admin-in-every-entra-id-tenant-with-actor-tokens/",
             "https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2025-55241"
         ],
+        "related_integrations": [
+            {
+                "package": "azure",
+                "version": "^1.22.0"
+            }
+        ],
+        "required_fields": [
+            {
+                "ecs": true,
+                "name": "@timestamp",
+                "type": "date"
+            },
+            {
+                "ecs": false,
+                "name": "_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.category",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.identity",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.level",
+                "type": "double"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.operation_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.operation_version",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.activity_datetime",
+                "type": "date"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.activity_display_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.additional_details.key",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.additional_details.user_agent",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.additional_details.value",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.authentication_protocol",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.category",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.correlation_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.initiated_by.app.appId",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.initiated_by.app.displayName",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.initiated_by.app.servicePrincipalId",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.initiated_by.app.servicePrincipalName",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.initiated_by.user.displayName",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.initiated_by.user.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.initiated_by.user.ipAddress",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.initiated_by.user.roles",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.initiated_by.user.userPrincipalName",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.logged_by_service",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.operation_type",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.result",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.result_reason",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.*.display_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.*.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.*.ip_address",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.*.modified_properties.*.display_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.*.modified_properties.*.new_value",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.*.modified_properties.*.old_value",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.*.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.*.user_principal_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.0.modified_properties.0.new_value",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.0.modified_properties.0.old_value",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.0.modified_properties.1.display_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.0.modified_properties.1.new_value",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.0.modified_properties.2.new_value",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.0.modified_properties.3.new_value",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.result_description",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.result_signature",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.tenant_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.correlation_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.resource.authorization_rule",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.resource.group",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.resource.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.resource.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.resource.namespace",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.resource.provider",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.subscription_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.tenant_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.address",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.as.number",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "client.as.organization.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.bytes",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "client.domain",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.geo.city_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.geo.continent_code",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.geo.continent_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.geo.country_iso_code",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.geo.country_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.geo.location",
+                "type": "geo_point"
+            },
+            {
+                "ecs": true,
+                "name": "client.geo.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.geo.postal_code",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.geo.region_iso_code",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.geo.region_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.geo.timezone",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.ip",
+                "type": "ip"
+            },
+            {
+                "ecs": true,
+                "name": "client.mac",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.nat.ip",
+                "type": "ip"
+            },
+            {
+                "ecs": true,
+                "name": "client.nat.port",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "client.packets",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "client.port",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "client.registered_domain",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.subdomain",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.top_level_domain",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.user.domain",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.user.email",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.user.full_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.user.group.domain",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.user.group.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.user.group.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.user.hash",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.user.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.user.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "client.user.roles",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.agent_id_status",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.category",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.code",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.created",
+                "type": "date"
+            },
+            {
+                "ecs": true,
+                "name": "event.dataset",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.duration",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "event.end",
+                "type": "date"
+            },
+            {
+                "ecs": true,
+                "name": "event.hash",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.ingested",
+                "type": "date"
+            },
+            {
+                "ecs": true,
+                "name": "event.kind",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.module",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.original",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.outcome",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.provider",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.reason",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.reference",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.risk_score",
+                "type": "float"
+            },
+            {
+                "ecs": true,
+                "name": "event.risk_score_norm",
+                "type": "float"
+            },
+            {
+                "ecs": true,
+                "name": "event.sequence",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "event.severity",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "event.start",
+                "type": "date"
+            },
+            {
+                "ecs": true,
+                "name": "event.timezone",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.url",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.address",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.as.number",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "source.as.organization.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.bytes",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "source.domain",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.geo.city_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.geo.continent_code",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.geo.continent_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.geo.country_iso_code",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.geo.country_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.geo.location",
+                "type": "geo_point"
+            },
+            {
+                "ecs": true,
+                "name": "source.geo.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.geo.postal_code",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.geo.region_iso_code",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.geo.region_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.geo.timezone",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.ip",
+                "type": "ip"
+            },
+            {
+                "ecs": true,
+                "name": "source.mac",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.nat.ip",
+                "type": "ip"
+            },
+            {
+                "ecs": true,
+                "name": "source.nat.port",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "source.packets",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "source.port",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "source.registered_domain",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.subdomain",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.top_level_domain",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.user.domain",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.user.email",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.user.full_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.user.group.domain",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.user.group.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.user.group.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.user.hash",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.user.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.user.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.user.roles",
+                "type": "keyword"
+            }
+        ],
         "risk_score": 47,
         "rule_id": "8e7a4f2c-9b3d-4e5a-a1b6-c2d8f7e9b3a5",
         "severity": "medium",
@@ -74,8 +837,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "8e7a4f2c-9b3d-4e5a-a1b6-c2d8f7e9b3a5_1",
+    "id": "8e7a4f2c-9b3d-4e5a-a1b6-c2d8f7e9b3a5_2",
     "type": "security-rule"
 }

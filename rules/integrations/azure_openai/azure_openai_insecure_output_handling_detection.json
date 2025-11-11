@@ -17,6 +17,24 @@
         "references": [
             "https://genai.owasp.org/llmrisk/llm02-insecure-output-handling"
         ],
+        "related_integrations": [
+            {
+                "package": "azure_openai",
+                "version": "^1.5.0"
+            }
+        ],
+        "required_fields": [
+            {
+                "ecs": false,
+                "name": "Esql.event_count",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "azure.resource.name",
+                "type": "keyword"
+            }
+        ],
         "risk_score": 21,
         "rule_id": "fb16f9ef-cb03-4234-adc2-44641f3b71ee",
         "setup": "## Setup\n\nFor more information on streaming events, see the Azure OpenAI documentation:\n\nhttps://learn.microsoft.com/en-us/azure/azure-monitor/essentials/stream-monitoring-data-event-hubs\n",
@@ -30,8 +48,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "fb16f9ef-cb03-4234-adc2-44641f3b71ee_3",
+    "id": "fb16f9ef-cb03-4234-adc2-44641f3b71ee_4",
     "type": "security-rule"
 }

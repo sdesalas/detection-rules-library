@@ -8,7 +8,8 @@
         "index": [
             "auditbeat-*",
             "logs-endpoint.events.*",
-            "endgame-*"
+            "endgame-*",
+            "logs-crowdstrike.fdr*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -19,6 +20,10 @@
             {
                 "package": "endpoint",
                 "version": "^9.0.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -59,7 +64,8 @@
             "Tactic: Execution",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Data Source: Crowdstrike"
         ],
         "threat": [
             {
@@ -80,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 111
+        "version": 112
     },
-    "id": "05e5a668-7b51-4a67-93ab-e9af405c9ef3_111",
+    "id": "05e5a668-7b51-4a67-93ab-e9af405c9ef3_112",
     "type": "security-rule"
 }

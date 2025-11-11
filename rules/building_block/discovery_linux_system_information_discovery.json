@@ -10,13 +10,14 @@
             "logs-endpoint.events.*",
             "endgame-*",
             "auditbeat-*",
-            "logs-auditd_manager.auditd-*"
+            "logs-auditd_manager.auditd-*",
+            "logs-crowdstrike.fdr*"
         ],
         "interval": "60m",
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Linux System Information Discovery",
-        "query": "process where event.type == \"start\" and event.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\") and (\n  process.name: \"uname\" or (\n  process.name: (\"cat\", \"more\", \"less\") and process.args: (\"*issue*\", \"*version*\", \"*profile*\", \"*services*\", \"*cpuinfo*\")\n  )\n)\n",
+        "query": "process where event.type == \"start\" and event.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\", \"ProcessRollup2\") and (\n  process.name: \"uname\" or (\n  process.name: (\"cat\", \"more\", \"less\") and process.args: (\"*issue*\", \"*version*\", \"*profile*\", \"*services*\", \"*cpuinfo*\")\n  )\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -25,6 +26,10 @@
             {
                 "package": "auditd_manager",
                 "version": "^1.18.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -60,7 +65,8 @@
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
-            "Data Source: Auditd Manager"
+            "Data Source: Auditd Manager",
+            "Data Source: Crowdstrike"
         ],
         "threat": [
             {
@@ -81,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "b81bd314-db5b-4d97-82e8-88e3e5fc9de5_5",
+    "id": "b81bd314-db5b-4d97-82e8-88e3e5fc9de5_6",
     "type": "security-rule"
 }

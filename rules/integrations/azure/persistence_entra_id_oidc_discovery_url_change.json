@@ -14,6 +14,89 @@
         "references": [
             "https://dirkjanm.io/persisting-with-federated-credentials-entra-apps-managed-identities/"
         ],
+        "related_integrations": [
+            {
+                "package": "azure",
+                "version": "^1.22.0"
+            }
+        ],
+        "required_fields": [
+            {
+                "ecs": true,
+                "name": "@timestamp",
+                "type": "date"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_auditlogs_properties_auth_oidc_discovery_url_new",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "Esql.azure_auditlogs_properties_auth_oidc_discovery_url_old",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.activity_datetime",
+                "type": "date"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.initiated_by.user.displayName",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.initiated_by.user.ipAddress",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.initiated_by.user.userPrincipalName",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.operation_type",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.correlation_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.tenant_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.outcome",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.geo.city_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.geo.country_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.geo.region_name",
+                "type": "keyword"
+            }
+        ],
         "risk_score": 73,
         "rule_id": "498e4094-60e7-11f0-8847-f661ea17fbcd",
         "severity": "high",
@@ -53,8 +136,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "498e4094-60e7-11f0-8847-f661ea17fbcd_4",
+    "id": "498e4094-60e7-11f0-8847-f661ea17fbcd_5",
     "type": "security-rule"
 }
