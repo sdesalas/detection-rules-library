@@ -107,6 +107,18 @@
                                 "reference": "https://attack.mitre.org/techniques/T1568/002/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1090",
+                        "name": "Proxy",
+                        "reference": "https://attack.mitre.org/techniques/T1090/",
+                        "subtechnique": [
+                            {
+                                "id": "T1090.002",
+                                "name": "External Proxy",
+                                "reference": "https://attack.mitre.org/techniques/T1090/002/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -140,8 +152,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 122
+        "version": 123
     },
-    "id": "66883649-f908-4a5b-a1e0-54090a1d3a32_122",
+    "id": "66883649-f908-4a5b-a1e0-54090a1d3a32_123",
     "type": "security-rule"
 }
