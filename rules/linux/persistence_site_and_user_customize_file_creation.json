@@ -67,7 +67,14 @@
                     {
                         "id": "T1546",
                         "name": "Event Triggered Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1546/"
+                        "reference": "https://attack.mitre.org/techniques/T1546/",
+                        "subtechnique": [
+                            {
+                                "id": "T1546.018",
+                                "name": "Python Startup Hooks",
+                                "reference": "https://attack.mitre.org/techniques/T1546/018/"
+                            }
+                        ]
                     },
                     {
                         "id": "T1574",
@@ -110,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "d788313c-9e0b-4c5a-8c4b-c3f05a47d5a8_3",
+    "id": "d788313c-9e0b-4c5a-8c4b-c3f05a47d5a8_4",
     "type": "security-rule"
 }
