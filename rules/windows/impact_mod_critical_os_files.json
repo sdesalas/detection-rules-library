@@ -11,14 +11,13 @@
             "logs-windows.sysmon_operational-*",
             "endgame-*",
             "logs-m365_defender.event-*",
-            "logs-sentinel_one_cloud_funnel.*",
-            "logs-crowdstrike.fdr*"
+            "logs-sentinel_one_cloud_funnel.*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential System Tampering via File Modification",
         "note": "## Triage and analysis\n\n### Investigating Potential System Tampering via File Modification\n\nThis rule identifies attempts to delete or modify critical files used during the boot process to prevent the system from booting.\n\n#### Possible investigation steps\n\n- Investigate the process execution chain (parent process tree) for unknown processes.\n- Assess all deleted or modified system critical files and perform a complete recovery of those files to prevent system booting issues.\n- Investigate other alerts associated with the user/host during the past 48 hours.\n- Identify the user account that performed the action and whether it should perform this kind of action, if not immedialy disable the account.\n\n### False positive analysis\n\n- Analysts can dismiss the alert if the administrator is aware of the activity, no other suspicious activity was identified, and there are justifications for the execution.\n\n### Response and remediation\n\n- Initiate the incident response process based on the outcome of the triage.\n  - Prioritize cases involving critical servers and users.\n- Isolate the involved hosts to prevent further post-compromise behavior.\n- Investigate credential exposure on systems compromised or used by the attacker to ensure all compromised accounts are identified. Reset passwords for these accounts and other potentially compromised credentials, such as email, business systems, and web services.\n- If important data was encrypted, deleted, or modified, activate your data recovery plan.\n    - Perform data recovery locally or restore the backups from replicated copies (cloud, other servers, etc.).\n- Run a full antimalware scan. This may reveal additional artifacts left in the system, persistence mechanisms, and malware components.\n- Determine the initial vector abused by the attacker and take action to prevent reinfection through the same vector.\n- Review the privileges assigned to the user to ensure that the least privilege principle is being followed.\n- Using the incident response data, update logging and audit policies to improve the mean time to detect (MTTD) and the mean time to respond (MTTR).\n",
-        "query": "file where host.os.type == \"windows\" and event.type in (\"change\", \"deletion\") and\n file.name : (\"winload.exe\", \"winlod.efi\", \"ntoskrnl.exe\", \"bootmgr\") and\n file.path : (\"?:\\\\Windows\\\\*\", \"\\\\Device\\\\HarddiskVolume*\\\\Windows\\\\*\") and\n not process.executable : (\"?:\\\\Windows\\\\System32\\\\poqexec.exe\", \"\\\\Device\\\\HarddiskVolume*\\\\Windows\\\\System32\\\\poqexec.exe\")\n",
+        "query": "file where host.os.type == \"windows\" and event.type in (\"change\", \"deletion\") and\n  file.name : (\"winload.exe\", \"winlod.efi\", \"ntoskrnl.exe\", \"bootmgr\") and\n  file.path : (\"?:\\\\Windows\\\\*\", \"\\\\Device\\\\HarddiskVolume*\\\\Windows\\\\*\") and\n  not process.executable : (\n    \"?:\\\\Windows\\\\System32\\\\poqexec.exe\",\n    \"?:\\\\Windows\\\\WinSxS\\\\amd64_microsoft-windows-servicingstack_*\\\\tiworker.exe\"\n  ) and\n  not file.path : (\n    \"?:\\\\Windows\\\\WinSxS\\\\Temp\\\\InFlight\\\\*\",\n    \"?:\\\\Windows\\\\SoftwareDistribution\\\\Download*\",\n    \"?:\\\\Windows\\\\WinSxS\\\\amd64_microsoft-windows*\",\n    \"?:\\\\Windows\\\\SystemTemp\\\\*\",\n    \"?:\\\\Windows\\\\Temp\\\\????????.???\\\\*\",\n    \"?:\\\\Windows\\\\Temp\\\\*\\\\amd64_microsoft-windows-*\"\n  )\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -35,10 +34,6 @@
             {
                 "package": "sentinel_one_cloud_funnel",
                 "version": "^1.9.0"
-            },
-            {
-                "package": "crowdstrike",
-                "version": "^2.0.0"
             }
         ],
         "required_fields": [
@@ -109,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "1a3f2a4c-12d0-4b88-961a-2711ee295637_2",
+    "id": "1a3f2a4c-12d0-4b88-961a-2711ee295637_3",
     "type": "security-rule"
 }

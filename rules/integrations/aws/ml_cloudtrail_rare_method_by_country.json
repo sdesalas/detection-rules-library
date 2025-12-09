@@ -35,9 +35,33 @@
             "Rule Type: Machine Learning",
             "Resources: Investigation Guide"
         ],
+        "threat": [
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0001",
+                    "name": "Initial Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                },
+                "technique": [
+                    {
+                        "id": "T1078",
+                        "name": "Valid Accounts",
+                        "reference": "https://attack.mitre.org/techniques/T1078/",
+                        "subtechnique": [
+                            {
+                                "id": "T1078.004",
+                                "name": "Cloud Accounts",
+                                "reference": "https://attack.mitre.org/techniques/T1078/004/"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
         "type": "machine_learning",
-        "version": 211
+        "version": 212
     },
-    "id": "dca28dee-c999-400f-b640-50a081cc0fd1_211",
+    "id": "dca28dee-c999-400f-b640-50a081cc0fd1_212",
     "type": "security-rule"
 }
