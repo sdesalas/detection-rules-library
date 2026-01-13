@@ -3,7 +3,7 @@
         "author": [
             "Elastic"
         ],
-        "description": "This rule monitors the syslog log file for messages related to instances of a program using the `bpf_probe_write_user` helper. The `bpf_probe_write_user` helper is used to write data to user space from a BPF program. Unauthorized use of this helper can be indicative of an eBPF rootkit or other malicious activity.",
+        "description": "This rule monitors the syslog log file for messages related to instances of a program using the \"bpf_probe_write_user\" helper. The \"bpf_probe_write_user\" helper is used to write data to user space from a BPF program. Unauthorized use of this helper can be indicative of an eBPF rootkit or other malicious activity.",
         "from": "now-9m",
         "index": [
             "logs-system.syslog-*"
@@ -41,10 +41,10 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 21,
+        "risk_score": 73,
         "rule_id": "c37ffc64-da75-447e-ad1c-cbc64727b3b8",
         "setup": "## Setup\n\nThis rule requires data coming in from one of the following integrations:\n- Filebeat\n\n### Filebeat Setup\nFilebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on your servers, Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.\n\n#### The following steps should be executed in order to add the Filebeat for the Linux System:\n- Elastic provides repositories available for APT and YUM-based distributions. Note that we provide binary packages, but no source packages.\n- To install the APT and YUM repositories follow the setup instructions in this [helper guide](https://www.elastic.co/guide/en/beats/filebeat/current/setup-repositories.html).\n- To run Filebeat on Docker follow the setup instructions in the [helper guide](https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html).\n- To run Filebeat on Kubernetes follow the setup instructions in the [helper guide](https://www.elastic.co/guide/en/beats/filebeat/current/running-on-kubernetes.html).\n- For quick start information for Filebeat refer to the [helper guide](https://www.elastic.co/guide/en/beats/filebeat/8.11/filebeat-installation-configuration.html).\n- For complete Setup and Run Filebeat information refer to the [helper guide](https://www.elastic.co/guide/en/beats/filebeat/current/setting-up-and-running.html).\n\n#### Rule Specific Setup Note\n- This rule requires the Filebeat System Module to be enabled.\n- The system module collects and parses logs created by the system logging service of common Unix/Linux based distributions.\n- To run the system module of Filebeat on Linux follow the setup instructions in the [helper guide](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-module-system.html).\n",
-        "severity": "low",
+        "severity": "high",
         "tags": [
             "Domain: Endpoint",
             "OS: Linux",
@@ -94,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "c37ffc64-da75-447e-ad1c-cbc64727b3b8_3",
+    "id": "c37ffc64-da75-447e-ad1c-cbc64727b3b8_4",
     "type": "security-rule"
 }

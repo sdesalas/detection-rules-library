@@ -6,7 +6,8 @@
         "description": "Detects the loading of a Linux kernel module by a non-root user through system calls. Threat actors may leverage Linux kernel modules to load a rootkit on a system providing them with complete control and the ability to hide from security products. As other rules monitor for the addition of Linux kernel modules through system utilities or .ko files, this rule covers the gap that evasive rootkits leverage by monitoring for kernel module additions on the lowest level through auditd_manager.",
         "from": "now-9m",
         "index": [
-            "logs-auditd_manager.auditd-*"
+            "logs-auditd_manager.auditd-*",
+            "auditbeat-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -95,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "ba81c182-4287-489d-af4d-8ae834b06040_6",
+    "id": "ba81c182-4287-489d-af4d-8ae834b06040_7",
     "type": "security-rule"
 }

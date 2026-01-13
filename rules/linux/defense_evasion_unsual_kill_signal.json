@@ -46,10 +46,10 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "cf307a5a-d503-44a4-8158-db196d99c9df",
         "setup": "## Setup\n\nThis rule requires the use of the `auditd_manager` integration. `Auditd_manager` is a tool designed to simplify and enhance the management of the audit subsystem in Linux systems. It provides a user-friendly interface and automation capabilities for configuring and monitoring system auditing through the auditd daemon. With `auditd_manager`, administrators can easily define audit rules, track system events, and generate comprehensive audit reports, improving overall security and compliance in the system. The following steps should be executed in order to install and deploy `auditd_manager` on a Linux system.\n```\nKibana -->\nManagement -->\nIntegrations -->\nAuditd Manager -->\nAdd Auditd Manager\n```\n`Auditd_manager` subscribes to the kernel and receives events as they occur without any additional configuration. However, if more advanced configuration is required to detect specific behavior, audit rules can be added to the integration in either the \"audit rules\" configuration box or the \"auditd rule files\" box by specifying a file to read the audit rules from.\nFor this detection rule to trigger, the following additional audit rules are required to be added to the integration:\n```\n-a always,exit -F arch=b64 -S kill\n```\nAdd the newly installed `auditd manager` to an agent policy, and deploy the agent on a Linux system from which auditd log files are desirable.\n",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Endpoint",
             "OS: Linux",
@@ -77,8 +77,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "cf307a5a-d503-44a4-8158-db196d99c9df_1",
+    "id": "cf307a5a-d503-44a4-8158-db196d99c9df_2",
     "type": "security-rule"
 }

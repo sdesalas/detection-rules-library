@@ -23,7 +23,7 @@
             },
             {
                 "package": "crowdstrike",
-                "version": "^2.0.0"
+                "version": "^3.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
@@ -57,9 +57,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 21,
+        "risk_score": 47,
         "rule_id": "e0cc3807-e108-483c-bf66-5a4fbe0d7e89",
-        "severity": "low",
+        "severity": "medium",
         "tags": [
             "Domain: Endpoint",
             "OS: Linux",
@@ -90,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "e0cc3807-e108-483c-bf66-5a4fbe0d7e89_109",
+    "id": "e0cc3807-e108-483c-bf66-5a4fbe0d7e89_110",
     "type": "security-rule"
 }

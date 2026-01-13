@@ -6,7 +6,7 @@
         "building_block_type": "default",
         "description": "Detects a new private repo interaction for a GitHub user not seen in the last 14 days.",
         "from": "now-9m",
-        "history_window_start": "now-14d",
+        "history_window_start": "now-5d",
         "index": [
             "logs-github.audit-*"
         ],
@@ -81,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 206
+        "version": 207
     },
-    "id": "01c49712-25bc-49d2-a27d-d7ce52f5dc49_206",
+    "id": "01c49712-25bc-49d2-a27d-d7ce52f5dc49_207",
     "type": "security-rule"
 }

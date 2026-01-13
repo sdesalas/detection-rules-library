@@ -8,7 +8,7 @@
             "Some CI/CD pipelines or administrative users may use session tokens. Review user context, IP, and timing to validate. Console login sessions result in temporary \"ASIA\" credentials and can typically be ignored for this alert. This can be verified in \"event.original\" as \"sessionCredentialFromConsole: true\""
         ],
         "from": "now-6m",
-        "history_window_start": "now-14d",
+        "history_window_start": "now-7d",
         "index": [
             "filebeat-*",
             "logs-aws.cloudtrail-*"
@@ -117,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "c70d9f0d-8cb6-4cfc-85df-a95c1ccf4eab_4",
+    "id": "c70d9f0d-8cb6-4cfc-85df-a95c1ccf4eab_5",
     "type": "security-rule"
 }

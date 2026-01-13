@@ -17,7 +17,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Kubectl Configuration Discovery",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\nevent.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\", \"ProcessRollup2\") and\nprocess.name == \"kubectl\" and process.args in (\"get\", \"describe\") and process.args in (\"configmap\", \"configmaps\")\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\nevent.action in (\"exec\", \"exec_event\", \"executed\", \"process_started\", \"ProcessRollup2\") and\nprocess.name == \"kubectl\" and process.args in (\"get\", \"describe\") and process.args in (\"configmap\", \"configmaps\") and\nnot ?process.parent.args in (\n  \"/hooks/schedule_sync_configmap.sh\", \"/service-fabric/generate-support-bundle.sh\", \"/hooks/onstartup_sync_configmap.sh\"\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -29,7 +29,7 @@
             },
             {
                 "package": "crowdstrike",
-                "version": "^2.0.0"
+                "version": "^3.0.0"
             }
         ],
         "required_fields": [
@@ -56,6 +56,11 @@
             {
                 "ecs": true,
                 "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.args",
                 "type": "keyword"
             }
         ],
@@ -94,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "98ac2919-f8b3-4d2d-b85b-e1c13ac0c68b_2",
+    "id": "98ac2919-f8b3-4d2d-b85b-e1c13ac0c68b_3",
     "type": "security-rule"
 }

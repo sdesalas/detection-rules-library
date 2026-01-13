@@ -6,15 +6,15 @@
         "building_block_type": "default",
         "description": "Identifies instances where a binary is granted the CAP_SYS_ADMIN capability. In Linux, the CAP_SYS_ADMIN capability is a powerful and broad capability that allows a process to perform a range of system administration operations, such as mounting and unmounting filesystems, configuring network interfaces, and accessing hardware devices. Attackers may leverage a misconfiguration for exploitation in order to escalate their privileges to root. The rule identifies previously unknown processes executing with CAP_SYS_ADMIN capabilities through the use of the new terms rule type.",
         "from": "now-9m",
-        "history_window_start": "now-14d",
+        "history_window_start": "now-5d",
         "index": [
             "logs-endpoint.events.*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
-        "name": "CAP_SYS_ADMIN Assigned to Binary",
+        "name": "Deprecated - CAP_SYS_ADMIN Assigned to Binary",
         "new_terms_fields": [
-            "host.id",
+            "agent.id",
             "user.id",
             "process.executable"
         ],
@@ -92,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "a577e524-c2ee-47bd-9c5b-e917d01d3276_4",
+    "id": "a577e524-c2ee-47bd-9c5b-e917d01d3276_5",
     "type": "security-rule"
 }

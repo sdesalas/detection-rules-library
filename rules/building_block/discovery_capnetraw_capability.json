@@ -5,11 +5,12 @@
         ],
         "building_block_type": "default",
         "description": "Identifies the ability of a process to be able to create RAW and PACKET socket types for the available network namespaces by a non-root user. A malicious process with this capability may exploit routing between hosts, bypass network access controls, and otherwise tamper with host networking if a firewall is not in place to limit the packet types and contents. The CAP_NET_RAW capability allows the process to bind to any address within the available namespaces, which allows network traffic sniffing by a non root user. The rule identifies previously unknown processes executing with CAP_NET_RAW capabilities through the use of the new terms rule type.",
-        "from": "now-9m",
-        "history_window_start": "now-14d",
+        "from": "now-119m",
+        "history_window_start": "now-5d",
         "index": [
             "logs-endpoint.events.*"
         ],
+        "interval": "60m",
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Network Traffic Capture via CAP_NET_RAW",
@@ -96,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "e28b8093-833b-4eda-b877-0873d134cf3c_6",
+    "id": "e28b8093-833b-4eda-b877-0873d134cf3c_7",
     "type": "security-rule"
 }

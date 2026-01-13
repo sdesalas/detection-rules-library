@@ -9,12 +9,11 @@
             "AWS administrators or automated processes might regularly assume roles for legitimate administrative purposes. AWS services might assume roles to access AWS resources as part of their standard operations. Automated workflows might assume roles to perform periodic tasks such as data backups, updates, or deployments."
         ],
         "from": "now-6m",
-        "history_window_start": "now-10d",
+        "history_window_start": "now-5d",
         "index": [
             "filebeat-*",
             "logs-aws.cloudtrail-*"
         ],
-        "interval": "5m",
         "investigation_fields": {
             "field_names": [
                 "@timestamp",
@@ -139,8 +138,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 213
+        "version": 214
     },
-    "id": "93075852-b0f5-4b8b-89c3-a226efae5726_213",
+    "id": "93075852-b0f5-4b8b-89c3-a226efae5726_214",
     "type": "security-rule"
 }

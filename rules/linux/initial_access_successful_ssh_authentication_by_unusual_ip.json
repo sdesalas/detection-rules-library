@@ -3,9 +3,9 @@
         "author": [
             "Elastic"
         ],
-        "description": "This rule leverages the new_terms rule type to detect successful SSH authentications by an IP- address that has not been authenticated in the last 10 days. This behavior may indicate an attacker attempting to gain access to the system using a valid account.",
+        "description": "This rule leverages the new_terms rule type to detect successful SSH authentications by an IP- address that has not been authenticated in the last 5 days. This behavior may indicate an attacker attempting to gain access to the system using a valid account.",
         "from": "now-9m",
-        "history_window_start": "now-10d",
+        "history_window_start": "now-5d",
         "index": [
             "logs-system.auth-*",
             "filebeat-*"
@@ -77,8 +77,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "5c495612-9992-49a7-afe3-0f647671fb60_3",
+    "id": "5c495612-9992-49a7-afe3-0f647671fb60_4",
     "type": "security-rule"
 }

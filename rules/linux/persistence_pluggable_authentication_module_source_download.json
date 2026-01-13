@@ -3,7 +3,7 @@
         "author": [
             "Elastic"
         ],
-        "description": "This rule detects the usage of `curl` or `wget` to download the source code of a Pluggable Authentication Module (PAM) shared object file. Attackers may download the source code of a PAM shared object file to create a backdoor in the authentication process.",
+        "description": "This rule detects the usage of \"curl\" or \"wget\" to download the source code of a Pluggable Authentication Module (PAM) shared object file. Attackers may download the source code of a PAM shared object file to create a backdoor in the authentication process.",
         "false_positives": [
             "Trusted system module updates or allowed Pluggable Authentication Module (PAM) daemon configuration changes."
         ],
@@ -31,7 +31,7 @@
             },
             {
                 "package": "crowdstrike",
-                "version": "^2.0.0"
+                "version": "^3.0.0"
             }
         ],
         "required_fields": [
@@ -61,9 +61,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 21,
+        "risk_score": 47,
         "rule_id": "53ef31ea-1f8a-493b-9614-df23d8277232",
-        "severity": "low",
+        "severity": "medium",
         "tags": [
             "Domain: Endpoint",
             "OS: Linux",
@@ -109,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "53ef31ea-1f8a-493b-9614-df23d8277232_5",
+    "id": "53ef31ea-1f8a-493b-9614-df23d8277232_6",
     "type": "security-rule"
 }
