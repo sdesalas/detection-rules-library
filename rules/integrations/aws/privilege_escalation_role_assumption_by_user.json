@@ -8,12 +8,11 @@
             "AWS administrators or automated processes might regularly assume roles for legitimate administrative purposes. Applications integrated with AWS might assume roles to access AWS resources. Automated workflows might assume roles to perform periodic tasks such as data backups, updates, or deployments."
         ],
         "from": "now-6m",
-        "history_window_start": "now-10d",
+        "history_window_start": "now-5d",
         "index": [
             "filebeat-*",
             "logs-aws.cloudtrail-*"
         ],
-        "interval": "5m",
         "investigation_fields": {
             "field_names": [
                 "@timestamp",
@@ -52,7 +51,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^4.0.0"
+                "version": "^5.0.0"
             }
         ],
         "required_fields": [
@@ -136,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "288a198e-9b9b-11ef-a0a8-f661ea17fbcd_5",
+    "id": "288a198e-9b9b-11ef-a0a8-f661ea17fbcd_6",
     "type": "security-rule"
 }

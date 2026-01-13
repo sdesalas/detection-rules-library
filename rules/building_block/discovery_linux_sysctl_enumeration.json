@@ -6,7 +6,7 @@
         "building_block_type": "default",
         "description": "Monitors file events on sysctl configuration files (e.g., /etc/sysctl.conf, /etc/sysctl.d/*.conf) to identify potential unauthorized access or manipulation of system-level configuration settings. Attackers may tamper with the sysctl configuration files to modify kernel parameters, potentially compromising system stability, performance, or security.",
         "from": "now-119m",
-        "history_window_start": "now-14d",
+        "history_window_start": "now-5d",
         "index": [
             "auditbeat-*",
             "logs-auditd_manager.auditd-*"
@@ -18,7 +18,7 @@
         "new_terms_fields": [
             "process.executable"
         ],
-        "query": "host.os.type:linux and event.category:file and event.action:(\"opened-file\" or \"read-file\" or \"wrote-to-file\") and\nfile.path : (\"/etc/sysctl.conf\" or \"/etc/sysctl.d\" or /etc/sysctl.d/*) and not process.name:(\n  dpkg or dockerd or unattended-upg or systemd-sysctl or python* or auditbeat or dpkg or pool*\n)\n",
+        "query": "host.os.type:linux and event.category:file and event.action:(\"opened-file\" or \"read-file\" or \"wrote-to-file\") and\nfile.path : (\"/etc/sysctl.conf\" or \"/etc/sysctl.d\" or /etc/sysctl.d/*) and not (\n  process.name:(\n    dpkg or dockerd or unattended-upg or systemd-sysctl or python* or auditbeat or dpkg or pool*\n  ) or\n  process.executable:(\n    /opt/sophos-spl/plugins/av/bin/* or /usr/bin/pacman or \"/usr/lib/dracut/dracut-install\" or /var/lib/elastic-agent/*\n  )\n)\n",
         "related_integrations": [
             {
                 "package": "auditd_manager",
@@ -44,6 +44,11 @@
             {
                 "ecs": true,
                 "name": "host.os.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.executable",
                 "type": "keyword"
             },
             {
@@ -82,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 110
+        "version": 111
     },
-    "id": "7592c127-89fb-4209-a8f6-f9944dfd7e02_110",
+    "id": "7592c127-89fb-4209-a8f6-f9944dfd7e02_111",
     "type": "security-rule"
 }

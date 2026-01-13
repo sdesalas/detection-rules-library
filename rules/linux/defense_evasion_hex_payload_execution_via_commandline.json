@@ -6,22 +6,34 @@
         "description": "This rule detects when a process executes a command line containing hexadecimal characters. Malware authors may use hexadecimal encoding to obfuscate their payload and evade detection.",
         "from": "now-9m",
         "index": [
+            "auditbeat-*",
+            "endgame-*",
+            "logs-crowdstrike.fdr*",
             "logs-endpoint.events.process*",
-            "logs-crowdstrike.fdr*"
+            "logs-sentinel_one_cloud_funnel.*",
+            "logs-auditd_manager.auditd-*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Potential Hex Payload Execution via Command-Line",
         "note": " ## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Potential Hex Payload Execution via Command-Line\n\nIn Linux environments, command-line interfaces are pivotal for executing processes and scripts. Adversaries exploit this by embedding payloads in hexadecimal format to obfuscate their actions, evading detection. The detection rule identifies processes with lengthy command lines containing multiple hex patterns, signaling potential obfuscation. This approach targets defense evasion tactics, leveraging Elastic Defend to flag suspicious executions.\n\n### Possible investigation steps\n\n- Review the process.command_line field to identify the specific hexadecimal patterns and assess if they correspond to known malicious payloads or commands.\n- Examine the process.parent.executable to determine the parent process that initiated the execution, which may provide context on whether the execution is expected or suspicious.\n- Check the user account associated with the process execution to verify if the activity aligns with typical user behavior or if it indicates potential compromise.\n- Investigate the host where the alert was triggered to identify any other related suspicious activities or anomalies that might indicate a broader compromise.\n- Correlate the event with other logs or alerts from the same host or user to identify patterns or repeated attempts at obfuscation and execution.\n\n### False positive analysis\n\n- Legitimate software installations or updates may use hexadecimal encoding in command lines for legitimate purposes. Users can create exceptions for known software update processes by identifying their parent executable paths and excluding them from the rule.\n- System administration scripts or tools that utilize hexadecimal encoding for configuration or data processing might trigger the rule. Review and whitelist these scripts by verifying their source and purpose, then exclude them based on their command line patterns or parent processes.\n- Security tools or monitoring software that perform regular scans or data collection using hexadecimal encoding could be flagged. Confirm these tools' legitimacy and add them to an exception list by specifying their executable paths or command line characteristics.\n- Custom applications developed in-house that use hexadecimal encoding for data handling or communication may be mistakenly identified. Document these applications and exclude them by their unique command line signatures or parent process identifiers.\n\n### Response and remediation\n\n- Isolate the affected system from the network to prevent further spread of the potential threat and to contain any malicious activity.\n- Terminate the suspicious process identified by the detection rule to halt any ongoing malicious execution.\n- Conduct a forensic analysis of the affected system to identify any additional indicators of compromise, such as modified files or unauthorized user accounts.\n- Remove any identified malicious files or scripts from the system to ensure the threat is eradicated.\n- Restore the system from a known good backup if any critical system files or configurations have been altered.\n- Update and patch the system to close any vulnerabilities that may have been exploited by the adversary.\n- Escalate the incident to the security operations center (SOC) or incident response team for further investigation and to determine if additional systems are affected.\n",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and event.action in (\"exec\", \"ProcessRollup2\") and\n?process.parent.executable != null and\nprocess.command_line : \"*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\" and\nlength(process.command_line) > 50\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\nevent.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\", \"executed\", \"process_started\") and\n?process.parent.executable != null and\nprocess.command_line : \"*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\\\\x*\" and\nlength(process.command_line) > 50 and\nnot process.name in (\"snap\", \"printf\", \"sed\")\n",
         "related_integrations": [
+            {
+                "package": "auditd_manager",
+                "version": "^1.18.0"
+            },
+            {
+                "package": "crowdstrike",
+                "version": "^3.0.0"
+            },
             {
                 "package": "endpoint",
                 "version": "^9.0.0"
             },
             {
-                "package": "crowdstrike",
-                "version": "^2.0.0"
+                "package": "sentinel_one_cloud_funnel",
+                "version": "^1.9.0"
             }
         ],
         "required_fields": [
@@ -47,6 +59,11 @@
             },
             {
                 "ecs": true,
+                "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "process.parent.executable",
                 "type": "keyword"
             }
@@ -61,9 +78,12 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Tactic: Execution",
+            "Data Source: Auditd Manager",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide",
-            "Data Source: Crowdstrike"
+            "Data Source: Elastic Endgame",
+            "Data Source: Crowdstrike",
+            "Data Source: SentinelOne",
+            "Resources: Investigation Guide"
         ],
         "threat": [
             {
@@ -123,8 +143,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "1d0027d4-6717-4a37-bad8-531d8e9fe53f_3",
+    "id": "1d0027d4-6717-4a37-bad8-531d8e9fe53f_4",
     "type": "security-rule"
 }

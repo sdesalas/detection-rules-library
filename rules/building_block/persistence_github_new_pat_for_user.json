@@ -6,7 +6,7 @@
         "building_block_type": "default",
         "description": "A new PAT was used for a GitHub user not previously seen in the last 14 days.",
         "from": "now-9m",
-        "history_window_start": "now-14d",
+        "history_window_start": "now-5d",
         "index": [
             "logs-github.audit-*"
         ],
@@ -88,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 206
+        "version": 207
     },
-    "id": "f94e898e-94f1-4545-8923-03e4b2866211_206",
+    "id": "f94e898e-94f1-4545-8923-03e4b2866211_207",
     "type": "security-rule"
 }

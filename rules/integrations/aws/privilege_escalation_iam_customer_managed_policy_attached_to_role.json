@@ -8,7 +8,7 @@
             "Legitimate IAM administrators may attach customer-managed policies to roles for various reasons, such as granting temporary permissions or updating existing policies. Ensure that the user attaching the policy is authorized to do so and that the action is expected."
         ],
         "from": "now-6m",
-        "history_window_start": "now-14d",
+        "history_window_start": "now-7d",
         "index": [
             "logs-aws.cloudtrail-*"
         ],
@@ -45,7 +45,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^4.0.0"
+                "version": "^5.0.0"
             }
         ],
         "required_fields": [
@@ -113,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "f6d07a70-9ad0-11ef-954f-f661ea17fbcd_6",
+    "id": "f6d07a70-9ad0-11ef-954f-f661ea17fbcd_7",
     "type": "security-rule"
 }

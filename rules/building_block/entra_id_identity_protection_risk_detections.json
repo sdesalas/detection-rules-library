@@ -11,7 +11,7 @@
         ],
         "language": "kuery",
         "license": "Elastic License v2",
-        "name": "Microsoft Entra ID Protection - Risk Detections",
+        "name": "Entra ID Protection - Risk Detection",
         "query": "event.dataset: \"azure.identity_protection\"\n",
         "references": [
             "https://learn.microsoft.com/en-us/entra/id-protection/concept-identity-protection-risks#risk-types-and-detection"
@@ -45,8 +45,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "da0d4bae-33ee-11f0-a59f-f661ea17fbcd_1",
+    "id": "da0d4bae-33ee-11f0-a59f-f661ea17fbcd_2",
     "type": "security-rule"
 }

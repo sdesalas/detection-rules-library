@@ -6,7 +6,7 @@
         "building_block_type": "default",
         "description": "Detects an interaction with a private GitHub repository from a new IP address not seen in the last 14 days.",
         "from": "now-9m",
-        "history_window_start": "now-14d",
+        "history_window_start": "now-5d",
         "index": [
             "logs-github.audit-*"
         ],
@@ -81,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 206
+        "version": 207
     },
-    "id": "0294f105-d7af-4a02-ae90-35f56763ffa2_206",
+    "id": "0294f105-d7af-4a02-ae90-35f56763ffa2_207",
     "type": "security-rule"
 }

@@ -3,7 +3,7 @@
         "author": [
             "Elastic"
         ],
-        "description": "This rule leverages the `auditd_manager` integration to detect user or group creation or modification events on Linux systems. Threat actors may attempt to create or modify users or groups to establish persistence on the system.",
+        "description": "This rule leverages the \"auditd_manager\" integration to detect user or group creation or modification events on Linux systems. Threat actors may attempt to create or modify users or groups to establish persistence on the system.",
         "from": "now-9m",
         "index": [
             "auditbeat-*",
@@ -88,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "fcf733d5-7801-4eb0-92ac-8ffacf3658f2_6",
+    "id": "fcf733d5-7801-4eb0-92ac-8ffacf3658f2_7",
     "type": "security-rule"
 }

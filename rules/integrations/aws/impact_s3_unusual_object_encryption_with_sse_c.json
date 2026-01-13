@@ -8,7 +8,7 @@
             "Legitimate use of Server-Side Encryption with Customer-Provided Keys (SSE-C) to encrypt objects in an S3 bucket."
         ],
         "from": "now-6m",
-        "history_window_start": "now-14d",
+        "history_window_start": "now-7d",
         "index": [
             "filebeat-*",
             "logs-aws.cloudtrail-*"
@@ -48,7 +48,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^4.0.0"
+                "version": "^5.0.0"
             }
         ],
         "required_fields": [
@@ -110,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "c1a9ed70-d349-11ef-841c-f661ea17fbcd_4",
+    "id": "c1a9ed70-d349-11ef-841c-f661ea17fbcd_5",
     "type": "security-rule"
 }

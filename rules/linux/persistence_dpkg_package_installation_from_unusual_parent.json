@@ -5,7 +5,7 @@
         ],
         "description": "This rule detects the installation of a Debian package (dpkg) by an unusual parent process. The dpkg command is used to install, remove, and manage Debian packages on a Linux system. Attackers can abuse the dpkg command to install malicious packages on a system.",
         "from": "now-9m",
-        "history_window_start": "now-7d",
+        "history_window_start": "now-5d",
         "index": [
             "logs-endpoint.events.*"
         ],
@@ -128,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "f4d1c0ac-aedb-4063-9fa6-cc651eb5e6ee_5",
+    "id": "f4d1c0ac-aedb-4063-9fa6-cc651eb5e6ee_6",
     "type": "security-rule"
 }

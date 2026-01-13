@@ -3,7 +3,7 @@
         "author": [
             "Elastic"
         ],
-        "description": "Identify activity related where adversaries can add the 'hidden' flag to files to hide them from the user in an attempt to evade detection.",
+        "description": "Identify activity related where adversaries can add the 'hidden' flag to files to hide them from the user in an attempt to evade detection. This behavior is often observed in attempts to conceal malicious files or maintain persistence on a compromised system.",
         "from": "now-9m",
         "index": [
             "auditbeat-*",
@@ -48,9 +48,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 21,
+        "risk_score": 47,
         "rule_id": "5124e65f-df97-4471-8dcb-8e3953b3ea97",
-        "severity": "low",
+        "severity": "medium",
         "tags": [
             "Domain: Endpoint",
             "OS: Linux",
@@ -89,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "5124e65f-df97-4471-8dcb-8e3953b3ea97_107",
+    "id": "5124e65f-df97-4471-8dcb-8e3953b3ea97_108",
     "type": "security-rule"
 }

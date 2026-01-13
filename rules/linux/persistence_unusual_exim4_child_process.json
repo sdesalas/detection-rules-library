@@ -5,7 +5,7 @@
         ],
         "description": "This rule detects the execution of unusual commands via a descendant process of exim4. Attackers may use descendant processes of exim4 to evade detection and establish persistence or execute post-exploitation commands on a target system.",
         "from": "now-9m",
-        "history_window_start": "now-14d",
+        "history_window_start": "now-5d",
         "index": [
             "logs-endpoint.events.process*"
         ],
@@ -89,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "6eb862bb-013d-4d4f-a14b-341433ca1a1f_2",
+    "id": "6eb862bb-013d-4d4f-a14b-341433ca1a1f_3",
     "type": "security-rule"
 }

@@ -12,7 +12,7 @@
         "license": "Elastic License v2",
         "name": "Kubernetes Sensitive Configuration File Activity",
         "note": " ## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Kubernetes Sensitive Configuration File Activity\n\nKubernetes relies on configuration files to manage cluster operations, including manifests and PKI files. These files are crucial for defining the desired state and security of the cluster. Adversaries may exploit these files to gain persistence or deploy unauthorized containers. The detection rule monitors for unauthorized changes to these files, excluding legitimate processes, to identify potential security threats.\n\n### Possible investigation steps\n\n- Review the alert details to identify the specific file path that triggered the alert, focusing on paths like \"/etc/kubernetes/manifests/*\", \"/etc/kubernetes/pki/*\", or \"/etc/kubernetes/*.conf\".\n- Check the process that attempted to modify the file by examining the process name and compare it against the list of excluded legitimate processes (\"kubeadm\", \"kubelet\", \"dpkg\", \"sed\") to determine if it is suspicious.\n- Investigate the user account associated with the process that made the change to assess if the account has the necessary permissions and if it has been compromised.\n- Analyze recent activity on the host to identify any other unusual or unauthorized actions that might correlate with the file modification, such as unexpected network connections or process executions.\n- Review the history of changes to the affected file to determine if there have been other unauthorized modifications or if this is an isolated incident.\n- Consult Kubernetes audit logs, if available, to gather additional context on the actions performed around the time of the alert, focusing on any anomalies or unauthorized access attempts.\n\n### False positive analysis\n\n- Routine updates or maintenance activities by system administrators can trigger alerts. To manage this, consider excluding processes or users known to perform regular maintenance from the rule.\n- Automated scripts or configuration management tools like Ansible or Puppet may modify configuration files as part of their normal operation. Identify these tools and add them to the exclusion list to prevent unnecessary alerts.\n- Scheduled backups or system snapshots might access or modify configuration files. Ensure that these processes are recognized and excluded if they are part of a regular, non-threatening operation.\n- Legitimate software updates or patches may alter configuration files. Monitor update schedules and exclude these processes during known update windows to reduce false positives.\n- Custom scripts developed in-house for cluster management might not be recognized by default. Review these scripts and add them to the exclusion list if they are verified as safe and necessary for operations.\n\n### Response and remediation\n\n- Immediately isolate the affected node or container to prevent further unauthorized access or changes to the Kubernetes configuration files.\n- Review the modified configuration files to identify unauthorized changes and revert them to their last known good state using backups or version control systems.\n- Conduct a thorough investigation to identify the source of the unauthorized changes, focusing on process names and user accounts involved in the modification.\n- Escalate the incident to the security operations team for further analysis and to determine if additional systems or nodes have been compromised.\n- Implement additional access controls and monitoring on the affected systems to prevent recurrence, such as restricting write permissions to sensitive directories and files.\n- Update and patch the Kubernetes environment and related components to address any vulnerabilities that may have been exploited.\n- Enhance detection capabilities by ensuring that alerts are configured to notify the security team of any future unauthorized changes to critical Kubernetes configuration files.\n",
-        "query": "file where host.os.type == \"linux\" and event.type != \"deletion\" and file.path like (\n  \"/etc/kubernetes/manifests/*\",\n  \"/etc/kubernetes/pki/*\",\n  \"/etc/kubernetes/*.conf\"\n) and not process.name in (\"kubeadm\", \"kubelet\", \"dpkg\", \"sed\")\n",
+        "query": "file where host.os.type == \"linux\" and event.type != \"deletion\" and file.path like (\n  \"/etc/kubernetes/manifests/*\",\n  \"/etc/kubernetes/pki/*\",\n  \"/etc/kubernetes/*.conf\"\n) and not (\n  process.name in (\"kubeadm\", \"kubelet\", \"dpkg\", \"sed\") or\n  (process.name in (\"vi\", \"vim\", \"vim.basic\") and file.extension in (\"swx\", \"swp\"))\n)\n",
         "related_integrations": [
             {
                 "package": "endpoint",
@@ -23,6 +23,11 @@
             {
                 "ecs": true,
                 "name": "event.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "file.extension",
                 "type": "keyword"
             },
             {
@@ -93,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "0fe2290a-2664-4c9c-8263-b88904f12f0d_1",
+    "id": "0fe2290a-2664-4c9c-8263-b88904f12f0d_2",
     "type": "security-rule"
 }

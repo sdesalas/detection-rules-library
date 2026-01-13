@@ -6,7 +6,7 @@
         "building_block_type": "default",
         "description": "Detects a new IP address used for a GitHub PAT not previously seen in the last 14 days.",
         "from": "now-9m",
-        "history_window_start": "now-14d",
+        "history_window_start": "now-5d",
         "index": [
             "logs-github.audit-*"
         ],
@@ -88,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 206
+        "version": 207
     },
-    "id": "fc909baa-fb34-4c46-9691-be276ef4234c_206",
+    "id": "fc909baa-fb34-4c46-9691-be276ef4234c_207",
     "type": "security-rule"
 }

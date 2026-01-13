@@ -6,7 +6,7 @@
         "building_block_type": "default",
         "description": "Detects a first occurrence event for a personal access token (PAT) not seen in the last 14 days.",
         "from": "now-9m",
-        "history_window_start": "now-14d",
+        "history_window_start": "now-5d",
         "index": [
             "logs-github.audit-*"
         ],
@@ -81,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 206
+        "version": 207
     },
-    "id": "ce08b55a-f67d-4804-92b5-617b0fe5a5b5_206",
+    "id": "ce08b55a-f67d-4804-92b5-617b0fe5a5b5_207",
     "type": "security-rule"
 }

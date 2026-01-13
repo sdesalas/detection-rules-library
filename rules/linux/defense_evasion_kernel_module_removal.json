@@ -18,7 +18,7 @@
         "license": "Elastic License v2",
         "name": "Kernel Module Removal",
         "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Kernel Module Removal\n\nKernel modules dynamically extend a Linux kernel's capabilities without rebooting. Adversaries may exploit this by removing modules to disable security features or hide malicious activities. The detection rule identifies suspicious module removal attempts by monitoring processes like `rmmod` or `modprobe` with removal arguments, especially when initiated by common shell environments, indicating potential defense evasion tactics.\n\n### Possible investigation steps\n\n- Review the process details to confirm the execution of `rmmod` or `modprobe` with removal arguments. Check the command line arguments to ensure they match the suspicious activity criteria.\n- Identify the parent process of the suspicious activity, focusing on shell environments like `sudo`, `bash`, `dash`, `ash`, `sh`, `tcsh`, `csh`, `zsh`, `ksh`, or `fish`, to understand the context in which the module removal was initiated.\n- Investigate the user account associated with the process to determine if the activity aligns with expected behavior or if it indicates potential unauthorized access.\n- Check system logs and audit logs for any preceding or subsequent suspicious activities that might correlate with the module removal attempt, such as privilege escalation or other defense evasion tactics.\n- Assess the impact of the module removal on system security features and functionality, and determine if any critical security modules were targeted.\n- Review recent changes or updates to the system that might explain the module removal, such as legitimate maintenance or updates, to rule out false positives.\n\n### False positive analysis\n\n- Routine administrative tasks may trigger the rule when system administrators use `rmmod` or `modprobe` for legitimate maintenance. To handle this, create exceptions for specific user accounts or scripts known to perform these tasks regularly.\n- Automated scripts or configuration management tools that manage kernel modules might cause false positives. Identify these tools and exclude their processes from the rule to prevent unnecessary alerts.\n- Some Linux distributions or custom setups might use shell scripts that invoke `rmmod` or `modprobe` during system updates or package installations. Monitor these activities and whitelist the associated parent processes if they are verified as non-threatening.\n- Development environments where kernel module testing is frequent can generate alerts. Exclude specific development machines or user accounts involved in module testing to reduce noise.\n- Security tools that perform regular checks or updates on kernel modules might inadvertently trigger the rule. Verify these tools and add them to the exception list to avoid false positives.\n\n### Response and remediation\n\n- Immediately isolate the affected system from the network to prevent further unauthorized access or potential lateral movement by the adversary.\n- Terminate any suspicious processes identified as attempting to remove kernel modules, such as those initiated by `rmmod` or `modprobe` with removal arguments.\n- Conduct a thorough review of user accounts and privileges on the affected system to ensure no unauthorized access or privilege escalation has occurred.\n- Restore any disabled security features or kernel modules to their original state to ensure the system's defenses are intact.\n- Analyze system logs and audit trails to identify any additional indicators of compromise or related malicious activities.\n- Escalate the incident to the security operations center (SOC) or incident response team for further investigation and to determine if the threat is part of a larger attack campaign.\n- Implement enhanced monitoring and alerting for similar activities across the network to detect and respond to future attempts promptly.",
-        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\n  event.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\") and\n  (\n    process.name == \"rmmod\" or\n    (process.name == \"modprobe\" and process.args in (\"--remove\", \"-r\"))\n  ) and\n  process.parent.name in (\"sudo\", \"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\")\n",
+        "query": "process where host.os.type == \"linux\" and event.type == \"start\" and\nevent.action in (\"exec\", \"exec_event\", \"start\", \"ProcessRollup2\") and\n(\n  process.name == \"rmmod\" or\n  (process.name == \"modprobe\" and process.args in (\"--remove\", \"-r\"))\n) and\nprocess.parent.name in (\"sudo\", \"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\") and\nnot (\n  ?process.parent.args like \"/var/tmp/rpm-tmp*\" or\n  ?process.working_directory like~ (\"/tmp/makeself*NVIDIA-Linux*\", \"/tmp/self*NVIDIA-Linux*\")\n)\n",
         "references": [
             "http://man7.org/linux/man-pages/man8/modprobe.8.html"
         ],
@@ -29,7 +29,7 @@
             },
             {
                 "package": "crowdstrike",
-                "version": "^2.0.0"
+                "version": "^3.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
@@ -64,14 +64,24 @@
             },
             {
                 "ecs": true,
+                "name": "process.parent.args",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "process.parent.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.working_directory",
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 21,
         "rule_id": "cd66a5af-e34b-4bb0-8931-57d0a043f2ef",
         "setup": "## Setup\n\nThis rule requires data coming in from Elastic Defend.\n\n### Elastic Defend Integration Setup\nElastic Defend is integrated into the Elastic Agent using Fleet. Upon configuration, the integration allows the Elastic Agent to monitor events on your host and send data to the Elastic Security app.\n\n#### Prerequisite Requirements:\n- Fleet is required for Elastic Defend.\n- To configure Fleet Server refer to the [documentation](https://www.elastic.co/guide/en/fleet/current/fleet-server.html).\n\n#### The following steps should be executed in order to add the Elastic Defend integration on a Linux System:\n- Go to the Kibana home page and click \"Add integrations\".\n- In the query bar, search for \"Elastic Defend\" and select the integration to see more details about it.\n- Click \"Add Elastic Defend\".\n- Configure the integration name and optionally add a description.\n- Select the type of environment you want to protect, either \"Traditional Endpoints\" or \"Cloud Workloads\".\n- Select a configuration preset. Each preset comes with different default settings for Elastic Agent, you can further customize these later by configuring the Elastic Defend integration policy. [Helper guide](https://www.elastic.co/guide/en/security/current/configure-endpoint-integration-policy.html).\n- We suggest selecting \"Complete EDR (Endpoint Detection and Response)\" as a configuration setting, that provides \"All events; all preventions\"\n- Enter a name for the agent policy in \"New agent policy name\". If other agent policies already exist, you can click the \"Existing hosts\" tab and select an existing policy instead.\nFor more details on Elastic Agent configuration settings, refer to the [helper guide](https://www.elastic.co/guide/en/fleet/8.10/agent-policy.html).\n- Click \"Save and Continue\".\n- To complete the integration, select \"Add Elastic Agent to your hosts\" and continue to the next section to install the Elastic Agent on your hosts.\nFor more details on Elastic Defend refer to the [helper guide](https://www.elastic.co/guide/en/security/current/install-endpoint.html).\n",
-        "severity": "medium",
+        "severity": "low",
         "tags": [
             "Domain: Endpoint",
             "OS: Linux",
@@ -131,8 +141,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "cd66a5af-e34b-4bb0-8931-57d0a043f2ef_214",
+    "id": "cd66a5af-e34b-4bb0-8931-57d0a043f2ef_215",
     "type": "security-rule"
 }
