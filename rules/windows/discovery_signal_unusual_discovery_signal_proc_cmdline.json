@@ -5,7 +5,7 @@
         ],
         "description": "This rule leverages alert data from various Discovery building block rules to alert on signals with unusual unique host.id, user.id and process.command_line entries.",
         "from": "now-9m",
-        "history_window_start": "now-14d",
+        "history_window_start": "now-5d",
         "index": [
             ".alerts-security.*"
         ],
@@ -60,8 +60,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "29ef5686-9b93-433e-91b5-683911094698_2",
+    "id": "29ef5686-9b93-433e-91b5-683911094698_3",
     "type": "security-rule"
 }

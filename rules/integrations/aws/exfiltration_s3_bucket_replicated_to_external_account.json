@@ -24,7 +24,6 @@
                 "aws.cloudtrail.user_identity.access_key_id",
                 "aws.cloudtrail.resources.arn",
                 "aws.cloudtrail.resources.type",
-                "target.entity.id",
                 "event.action",
                 "event.outcome",
                 "cloud.account.id",
@@ -101,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "d488f026-7907-4f56-ad51-742feb3db01c_5",
+    "id": "d488f026-7907-4f56-ad51-742feb3db01c_6",
     "type": "security-rule"
 }
