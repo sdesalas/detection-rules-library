@@ -59,6 +59,11 @@
             },
             {
                 "ecs": false,
+                "name": "powershell.file.script_block_entropy_normalized",
+                "type": "double"
+            },
+            {
+                "ecs": false,
                 "name": "powershell.file.script_block_hash",
                 "type": "keyword"
             },
@@ -156,8 +161,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 7
+        "version": 8
     },
-    "id": "f38633f4-3b31-4c80-b13d-e77c70ce8254_7",
+    "id": "f38633f4-3b31-4c80-b13d-e77c70ce8254_8",
     "type": "security-rule"
 }
