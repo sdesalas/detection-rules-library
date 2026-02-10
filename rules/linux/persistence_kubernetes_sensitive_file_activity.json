@@ -6,7 +6,8 @@
         "description": "This rule detects the creation or modification of sensitive Kubernetes configuration files on Linux systems. These files include Kubernetes manifests, PKI files, and configuration files that are critical for the operation of Kubernetes clusters. Monitoring these files helps identify potential unauthorized changes or misconfigurations that could lead to security vulnerabilities in Kubernetes environments. Attackers may attempt to modify these files to gain persistence or to deploy malicious containers within the Kubernetes cluster.",
         "from": "now-9m",
         "index": [
-            "logs-endpoint.events.file*"
+            "logs-endpoint.events.file*",
+            "logs-cloud_defend.file*"
         ],
         "language": "eql",
         "license": "Elastic License v2",
@@ -17,6 +18,10 @@
             {
                 "package": "endpoint",
                 "version": "^9.0.0"
+            },
+            {
+                "package": "cloud_defend",
+                "version": "^1.4.0"
             }
         ],
         "required_fields": [
@@ -58,6 +63,7 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
+            "Data Source: Elastic Defend for Containers",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -98,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 102
     },
-    "id": "0fe2290a-2664-4c9c-8263-b88904f12f0d_2",
+    "id": "0fe2290a-2664-4c9c-8263-b88904f12f0d_102",
     "type": "security-rule"
 }

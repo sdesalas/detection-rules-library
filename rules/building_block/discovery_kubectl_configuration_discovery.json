@@ -11,7 +11,8 @@
             "endgame-*",
             "auditbeat-*",
             "logs-auditd_manager.auditd-*",
-            "logs-crowdstrike.fdr*"
+            "logs-crowdstrike.fdr*",
+            "logs-cloud_defend.process*"
         ],
         "interval": "60m",
         "language": "eql",
@@ -30,6 +31,10 @@
             {
                 "package": "crowdstrike",
                 "version": "^3.0.0"
+            },
+            {
+                "package": "cloud_defend",
+                "version": "^1.4.0"
             }
         ],
         "required_fields": [
@@ -78,7 +83,8 @@
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
             "Data Source: Auditd Manager",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Data Source: Elastic Defend for Containers"
         ],
         "threat": [
             {
@@ -99,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 103
     },
-    "id": "98ac2919-f8b3-4d2d-b85b-e1c13ac0c68b_3",
+    "id": "98ac2919-f8b3-4d2d-b85b-e1c13ac0c68b_103",
     "type": "security-rule"
 }
