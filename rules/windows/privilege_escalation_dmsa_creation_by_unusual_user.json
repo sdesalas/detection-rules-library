@@ -5,7 +5,7 @@
         ],
         "description": "Detects the creation of a delegated Managed Service Account by an unusual subject account. Attackers can abuse the dMSA account migration feature to elevate privileges abusing weak persmission allowing users child objects rights or msDS-DelegatedManagedServiceAccount rights.",
         "from": "now-9m",
-        "history_window_start": "now-10d",
+        "history_window_start": "now-7d",
         "index": [
             "winlogbeat-*",
             "logs-system.security*",
@@ -93,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "f0dbff4c-1aa7-4458-9ed5-ada472f64970_2",
+    "id": "f0dbff4c-1aa7-4458-9ed5-ada472f64970_3",
     "type": "security-rule"
 }

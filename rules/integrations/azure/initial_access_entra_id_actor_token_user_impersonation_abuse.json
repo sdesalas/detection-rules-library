@@ -222,6 +222,11 @@
             },
             {
                 "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.0.modified_properties.0.display_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
                 "name": "azure.auditlogs.properties.target_resources.0.modified_properties.0.new_value",
                 "type": "keyword"
             },
@@ -847,8 +852,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "8e7a4f2c-9b3d-4e5a-a1b6-c2d8f7e9b3a5_3",
+    "id": "8e7a4f2c-9b3d-4e5a-a1b6-c2d8f7e9b3a5_4",
     "type": "security-rule"
 }

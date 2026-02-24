@@ -6,7 +6,7 @@
         "building_block_type": "default",
         "description": "This rule identifies the execution of unsigned executables via service control manager (SCM). Adversaries may abuse SCM to execute malware or escalate privileges.",
         "from": "now-9m",
-        "history_window_start": "now-14d",
+        "history_window_start": "now-5d",
         "index": [
             "logs-endpoint.events.process-*"
         ],
@@ -122,8 +122,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 107
+        "version": 108
     },
-    "id": "56fdfcf1-ca7c-4fd9-951d-e215ee26e404_107",
+    "id": "56fdfcf1-ca7c-4fd9-951d-e215ee26e404_108",
     "type": "security-rule"
 }
