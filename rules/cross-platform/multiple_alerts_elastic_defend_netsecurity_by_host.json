@@ -123,6 +123,7 @@
         ],
         "risk_score": 73,
         "rule_id": "0bca7e73-e1b5-4fb2-801b-9b5f5be20dfe",
+        "setup": "## Setup\n\nThis rule requires the `host.ip` field to be populated.\nFor **Elastic Defend** events on versions **8.18 and above**, this field is **disabled by default**.\n\nIf you are using **Elastic Defend**, ensure host IP collection is enabled by following the configuration steps in the\n[helper guide](https://www.elastic.co/docs/solutions/security/configure-elastic-defend/configure-data-volume-for-elastic-endpoint#host-fields).\n",
         "severity": "high",
         "tags": [
             "Use Case: Threat Detection",
@@ -134,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "0bca7e73-e1b5-4fb2-801b-9b5f5be20dfe_4",
+    "id": "0bca7e73-e1b5-4fb2-801b-9b5f5be20dfe_5",
     "type": "security-rule"
 }

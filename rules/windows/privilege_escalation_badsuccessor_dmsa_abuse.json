@@ -5,7 +5,7 @@
         ],
         "description": "Detects modifications in the msDS-ManagedAccountPrecededByLink attribute of a delegated managed service account by an unusual subject account. Attackers can abuse this attribute to take over the permission of a target account and inherit it's permissions allowing them to further elevate privileges.",
         "from": "now-9m",
-        "history_window_start": "now-10d",
+        "history_window_start": "now-7d",
         "index": [
             "winlogbeat-*",
             "logs-system.security*",
@@ -93,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "2c74e26b-dfe3-4644-b62b-d0482f124210_2",
+    "id": "2c74e26b-dfe3-4644-b62b-d0482f124210_3",
     "type": "security-rule"
 }
