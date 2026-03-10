@@ -92,7 +92,7 @@
         ],
         "threshold": {
             "field": [
-                "agent.id",
+                "host.id",
                 "process.executable",
                 "user.name"
             ],
@@ -100,8 +100,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 116
+        "version": 117
     },
-    "id": "67f8443a-4ff3-4a70-916d-3cfa3ae9f02b_116",
+    "id": "67f8443a-4ff3-4a70-916d-3cfa3ae9f02b_117",
     "type": "security-rule"
 }

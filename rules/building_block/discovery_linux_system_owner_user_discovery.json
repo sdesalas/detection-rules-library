@@ -19,7 +19,7 @@
         "new_terms_fields": [
             "process.parent.executable",
             "process.command_line",
-            "agent.id"
+            "host.id"
         ],
         "query": "event.category:process and host.os.type:linux and event.type:start and event.action:(exec or exec_event or start) and\nprocess.name:(\"whoami\" or \"w\" or \"who\" or \"users\" or \"id\" or \"groups\")\n",
         "related_integrations": [
@@ -96,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "bf8c007c-7dee-4842-8e9a-ee534c09d205_7",
+    "id": "bf8c007c-7dee-4842-8e9a-ee534c09d205_8",
     "type": "security-rule"
 }

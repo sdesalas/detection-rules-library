@@ -18,7 +18,7 @@
         "new_terms_fields": [
             "process.parent.executable",
             "process.command_line",
-            "agent.id"
+            "host.id"
         ],
         "query": "event.category:process and host.os.type:(linux or macos) and event.type:start and event.action:(exec or exec_event) and\nprocess.name:(\"ps\" or \"pstree\" or \"htop\" or \"pgrep\") and not (\n  process.parent.name:(\"amazon-ssm-agent\" or \"snap\") or\n  process.parent.args:(\"/usr/local/ASR/Vx/bin/status\" or \"/usr/sbin/ksmtuned\") or\n  process.parent.executable:(\n    \"/usr/bin/check_mk_agent\" or /opt/gitlab/* or \"/usr/bin/pmlogctl\" or \"/usr/libexec/pcp/bin/pmlogger_daily\" or\n    \"/usr/libexec/pcp/bin/pmlogger_check\"\n  )\n)\n",
         "related_integrations": [
@@ -113,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "3f4d7734-2151-4481-b394-09d7c6c91f75_6",
+    "id": "3f4d7734-2151-4481-b394-09d7c6c91f75_7",
     "type": "security-rule"
 }

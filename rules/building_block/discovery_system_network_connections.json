@@ -17,7 +17,7 @@
         "new_terms_fields": [
             "process.parent.executable",
             "process.command_line",
-            "agent.id"
+            "host.id"
         ],
         "query": "event.category:process and host.os.type:(linux or macos) and event.type:start and event.action:exec and\nprocess.name:(\"netstat\" or \"lsof\" or \"ss\" or \"iftop\" or \"ip\" or \"nmcli\" or \"arp\" or \"route\" or \"ifconfig\" or \"netcfg\" or \"networksetup\") and\nnot (\n  process.parent.executable:(\n    /Library/Elastic/Agent/* or \"/Applications/Docker.app/Contents/MacOS/com.docker.backend\" or\n    \"/opt/NinjaRMMAgent/programfiles/ninjarmm-linagent\" or \"/usr/local/ASR/Vx/bin/svagents\"\n  ) or\n  process.working_directory:(\"/var/ossec\" or \"/usr/lib/check_mk_agent/plugins\" or \"/opt/microsoft/mdatp/sbin\")\n)\n",
         "related_integrations": [
@@ -94,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "e2dc8f8c-5f16-42fa-b49e-0eb8057f7444_6",
+    "id": "e2dc8f8c-5f16-42fa-b49e-0eb8057f7444_7",
     "type": "security-rule"
 }

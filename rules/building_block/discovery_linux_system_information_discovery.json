@@ -19,7 +19,7 @@
         "new_terms_fields": [
             "process.parent.executable",
             "process.command_line",
-            "agent.id"
+            "host.id"
         ],
         "query": "event.category:process and host.os.type:linux and event.type:start and event.action:(exec or exec_event or start) and\nprocess.name:(\"cat\" or \"more\" or \"less\" or \"nano\" or \"vi\" or \"vim\" or \"vim.basic\" or \"emacs\") and\nprocess.args:(\n  \"/etc/issue\" or \"/etc/os-release\" or \"/proc/version\" or \"/etc/profile\" or \"/proc/cpuinfo\" or \"/etc/services\" or\n  \"/etc/lsb-release\" or \"/etc/redhat-release\" or \"/etc/debian_version\" or \"/etc/hostname\"\n) and\nnot process.parent.executable:(\"/usr/local/jamf/bin/jamf\" or \"/etc/cp/watchdog/cp-nano-watchdog\")\n",
         "related_integrations": [
@@ -101,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "b81bd314-db5b-4d97-82e8-88e3e5fc9de5_7",
+    "id": "b81bd314-db5b-4d97-82e8-88e3e5fc9de5_8",
     "type": "security-rule"
 }
