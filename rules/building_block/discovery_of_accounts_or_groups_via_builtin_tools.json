@@ -17,7 +17,7 @@
         "new_terms_fields": [
             "process.parent.executable",
             "process.command_line",
-            "agent.id"
+            "host.id"
         ],
         "query": "event.category:process and host.os.type:(linux or macos) and event.action:exec and (\n  (process.name:\"dscl\" and process.args:(/Active*Directory/* or /Users* or /Groups*)) or\n  (process.name:\"dscacheutil\" and process.args:(\"user\" or \"group\")) or\n  (process.name:\"getent\" and process.args:(\"passwd\" or \"group\") and process.args_count >= 3)\n) and not (\n  process.parent.executable:(\n    \"/usr/lib/ocf/resource.d/cyanconnode/mysql\" or /snap/* or \"/usr/bin/check_mk_agent\" or \"/usr/bin/cloudflared\" or\n    /opt/puppetlabs/* or /var/lib/snapd/* or \"/usr/lib/google/guest_agent/core_plugin\" or \"/opt/rudder/bin/cf-agent\" or\n    \"/opt/NinjaRMMAgent/programfiles/ninjarmm-linagent\"\n  ) or\n  process.working_directory:(\n    /var/snap/* or  \"/Applications/NinjaRMMAgent/programfiles/ninjarmm-macagent\" or \"/var/lib/nanitor/agent\" or\n    \"/var/ossec\" or /opt/rapid7/* or \"/opt/Tanium/TaniumClient\"\n  )\n)\n",
         "related_integrations": [
@@ -128,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "f638a66d-3bbf-46b1-a52c-ef6f39fb6caf_6",
+    "id": "f638a66d-3bbf-46b1-a52c-ef6f39fb6caf_7",
     "type": "security-rule"
 }
