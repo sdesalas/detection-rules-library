@@ -16,7 +16,7 @@
         "license": "Elastic License v2",
         "name": "Potential Notepad Markdown RCE Exploitation",
         "note": "## Triage and analysis\n\n### Investigating Potential Notepad Markdown RCE Exploitation\n\nThis rule detects a new child process launched by `notepad.exe` when Notepad was opened with a Markdown (`.md`) file.\nThis behavior can indicate exploitation of a Notepad remote code execution vulnerability where crafted Markdown content\ntriggers unintended process execution.\n\n### Possible investigation steps\n\n- Validate the parent-child relationship and confirm `notepad.exe` is the direct parent of the suspicious process.\n- Review the full command line of both parent and child processes, including the Markdown file path in `process.parent.args`.\n- Identify the Markdown file source (email attachment, browser download, chat client, removable media, or network share).\n- Inspect process ancestry and descendants for additional payload execution, script interpreters, or LOLBIN activity.\n- Correlate with file, registry, and network events around the same timestamp to identify follow-on behavior.\n- Determine whether the child process and its execution path are expected in your environment.\n\n### False positive analysis\n\n- Legitimate automation or editor extensions may occasionally spawn helper processes from Notepad workflows.\n- User-driven workflows that invoke external tools from Markdown previews can trigger this behavior.\n- If benign, tune by excluding known-safe child process names, hashes, signed binaries, and approved file paths.\n\n### Response and remediation\n\n- Isolate affected endpoints until scope is understood.\n- Terminate suspicious child and descendant processes initiated from `notepad.exe`.\n- Quarantine and preserve the triggering Markdown file for forensic analysis.\n- Run endpoint malware scans and collect volatile artifacts (running processes, network connections, autoruns).\n- Patch Windows/Notepad to the latest security update level addressing the vulnerability.\n- Hunt for the same parent-child pattern across other hosts to identify additional impacted systems.\n",
-        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.parent.name : \"notepad.exe\" and process.parent.args : \"*.md\"\n",
+        "query": "process where host.os.type == \"windows\" and event.type == \"start\" and\n  process.parent.name : \"notepad.exe\" and process.parent.args : \"*.md\" and\n  not process.executable : \"C:\\\\Program Files\\\\WindowsApps\\\\Microsoft.WindowsNotepad_*\\\\Notepad\\\\Notepad.exe\"\n",
         "references": [
             "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20841"
         ],
@@ -47,6 +47,11 @@
             {
                 "ecs": true,
                 "name": "host.os.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.executable",
                 "type": "keyword"
             },
             {
@@ -94,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "7f3521dd-fb80-4548-a7eb-8db37b898dc2_1",
+    "id": "7f3521dd-fb80-4548-a7eb-8db37b898dc2_2",
     "type": "security-rule"
 }

@@ -9,7 +9,8 @@
         "index": [
             "logs-nginx.access-*",
             "logs-apache.access-*",
-            "logs-apache_tomcat.access-*"
+            "logs-apache_tomcat.access-*",
+            "logs-traefik.access-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -37,6 +38,7 @@
             "Data Source: Nginx",
             "Data Source: Apache",
             "Data Source: Apache Tomcat",
+            "Data Source: Traefik",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -65,8 +67,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "9797d2c8-8ec9-48e6-a022-350cdfbf2d5e_1",
+    "id": "9797d2c8-8ec9-48e6-a022-350cdfbf2d5e_2",
     "type": "security-rule"
 }
