@@ -10,7 +10,8 @@
             "logs-nginx.access-*",
             "logs-apache.access-*",
             "logs-apache_tomcat.access-*",
-            "logs-iis.access-*"
+            "logs-iis.access-*",
+            "logs-traefik.access-*"
         ],
         "interval": "10m",
         "language": "eql",
@@ -39,6 +40,7 @@
             "Data Source: Apache",
             "Data Source: Apache Tomcat",
             "Data Source: IIS",
+            "Data Source: Traefik",
             "Rule Type: BBR"
         ],
         "threat": [
@@ -124,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "7f7a0ee1-7b6f-466a-85b4-110fb105f5e2_1",
+    "id": "7f7a0ee1-7b6f-466a-85b4-110fb105f5e2_2",
     "type": "security-rule"
 }
