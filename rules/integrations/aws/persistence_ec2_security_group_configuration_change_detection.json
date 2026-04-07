@@ -92,7 +92,13 @@
                     "name": "Persistence",
                     "reference": "https://attack.mitre.org/tactics/TA0003/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1133",
+                        "name": "External Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1133/"
+                    }
+                ]
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -113,14 +119,41 @@
                                 "reference": "https://attack.mitre.org/techniques/T1562/007/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1578",
+                        "name": "Modify Cloud Compute Infrastructure",
+                        "reference": "https://attack.mitre.org/techniques/T1578/",
+                        "subtechnique": [
+                            {
+                                "id": "T1578.005",
+                                "name": "Modify Cloud Compute Configurations",
+                                "reference": "https://attack.mitre.org/techniques/T1578/005/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0001",
+                    "name": "Initial Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                },
+                "technique": [
+                    {
+                        "id": "T1133",
+                        "name": "External Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1133/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 212
+        "version": 213
     },
-    "id": "29052c19-ff3e-42fd-8363-7be14d7c5469_212",
+    "id": "29052c19-ff3e-42fd-8363-7be14d7c5469_213",
     "type": "security-rule"
 }

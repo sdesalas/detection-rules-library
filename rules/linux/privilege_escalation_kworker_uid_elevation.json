@@ -91,14 +91,26 @@
                         "id": "T1014",
                         "name": "Rootkit",
                         "reference": "https://attack.mitre.org/techniques/T1014/"
+                    },
+                    {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.004",
+                                "name": "Masquerade Task or Service",
+                                "reference": "https://attack.mitre.org/techniques/T1036/004/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "7dfaaa17-425c-4fe7-bd36-83705fde7c2b_6",
+    "id": "7dfaaa17-425c-4fe7-bd36-83705fde7c2b_7",
     "type": "security-rule"
 }

@@ -96,12 +96,52 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0007",
+                    "name": "Discovery",
+                    "reference": "https://attack.mitre.org/tactics/TA0007/"
+                },
+                "technique": [
+                    {
+                        "id": "T1016",
+                        "name": "System Network Configuration Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1016/"
+                    },
+                    {
+                        "id": "T1033",
+                        "name": "System Owner/User Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1033/"
+                    },
+                    {
+                        "id": "T1049",
+                        "name": "System Network Connections Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1049/"
+                    },
+                    {
+                        "id": "T1057",
+                        "name": "Process Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1057/"
+                    },
+                    {
+                        "id": "T1082",
+                        "name": "System Information Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1082/"
+                    },
+                    {
+                        "id": "T1083",
+                        "name": "File and Directory Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1083/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 111
+        "version": 112
     },
-    "id": "e9001ee6-2d00-4d2f-849e-b8b1fb05234c_111",
+    "id": "e9001ee6-2d00-4d2f-849e-b8b1fb05234c_112",
     "type": "security-rule"
 }

@@ -138,12 +138,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0009",
+                    "name": "Collection",
+                    "reference": "https://attack.mitre.org/tactics/TA0009/"
+                },
+                "technique": [
+                    {
+                        "id": "T1114",
+                        "name": "Email Collection",
+                        "reference": "https://attack.mitre.org/techniques/T1114/",
+                        "subtechnique": [
+                            {
+                                "id": "T1114.002",
+                                "name": "Remote Email Collection",
+                                "reference": "https://attack.mitre.org/techniques/T1114/002/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 315
+        "version": 316
     },
-    "id": "ce64d965-6cb0-466d-b74f-8d2c76f47f05_315",
+    "id": "ce64d965-6cb0-466d-b74f-8d2c76f47f05_316",
     "type": "security-rule"
 }

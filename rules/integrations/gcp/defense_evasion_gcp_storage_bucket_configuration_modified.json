@@ -67,15 +67,22 @@
                     {
                         "id": "T1578",
                         "name": "Modify Cloud Compute Infrastructure",
-                        "reference": "https://attack.mitre.org/techniques/T1578/"
+                        "reference": "https://attack.mitre.org/techniques/T1578/",
+                        "subtechnique": [
+                            {
+                                "id": "T1578.005",
+                                "name": "Modify Cloud Compute Configurations",
+                                "reference": "https://attack.mitre.org/techniques/T1578/005/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "97359fd8-757d-4b1d-9af1-ef29e4a8680e_107",
+    "id": "97359fd8-757d-4b1d-9af1-ef29e4a8680e_108",
     "type": "security-rule"
 }

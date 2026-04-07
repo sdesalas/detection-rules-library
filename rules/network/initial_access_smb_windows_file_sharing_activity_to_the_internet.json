@@ -71,6 +71,7 @@
         "severity": "medium",
         "tags": [
             "Tactic: Initial Access",
+            "Tactic: Exfiltration",
             "Domain: Network",
             "Use Case: Threat Detection",
             "Data Source: PAN-OS",
@@ -110,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 108
+        "version": 109
     },
-    "id": "c82b2bd8-d701-420c-ba43-f11a155b681a_108",
+    "id": "c82b2bd8-d701-420c-ba43-f11a155b681a_109",
     "type": "security-rule"
 }

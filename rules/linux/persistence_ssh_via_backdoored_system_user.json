@@ -79,6 +79,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1078",
+                        "name": "Valid Accounts",
+                        "reference": "https://attack.mitre.org/techniques/T1078/",
+                        "subtechnique": [
+                            {
+                                "id": "T1078.003",
+                                "name": "Local Accounts",
+                                "reference": "https://attack.mitre.org/techniques/T1078/003/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1098",
                         "name": "Account Manipulation",
                         "reference": "https://attack.mitre.org/techniques/T1098/",
@@ -113,12 +125,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0001",
+                    "name": "Initial Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                },
+                "technique": [
+                    {
+                        "id": "T1078",
+                        "name": "Valid Accounts",
+                        "reference": "https://attack.mitre.org/techniques/T1078/",
+                        "subtechnique": [
+                            {
+                                "id": "T1078.003",
+                                "name": "Local Accounts",
+                                "reference": "https://attack.mitre.org/techniques/T1078/003/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "428e9109-dc13-4ae9-84cb-100464d4c6fa_6",
+    "id": "428e9109-dc13-4ae9-84cb-100464d4c6fa_7",
     "type": "security-rule"
 }

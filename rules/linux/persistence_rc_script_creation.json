@@ -101,12 +101,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1037",
+                        "name": "Boot or Logon Initialization Scripts",
+                        "reference": "https://attack.mitre.org/techniques/T1037/",
+                        "subtechnique": [
+                            {
+                                "id": "T1037.004",
+                                "name": "RC Scripts",
+                                "reference": "https://attack.mitre.org/techniques/T1037/004/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 119
+        "version": 120
     },
-    "id": "0f4d35e4-925e-4959-ab24-911be207ee6f_119",
+    "id": "0f4d35e4-925e-4959-ab24-911be207ee6f_120",
     "type": "security-rule"
 }

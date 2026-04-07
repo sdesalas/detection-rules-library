@@ -92,7 +92,14 @@
                     {
                         "id": "T1027",
                         "name": "Obfuscated Files or Information",
-                        "reference": "https://attack.mitre.org/techniques/T1027/"
+                        "reference": "https://attack.mitre.org/techniques/T1027/",
+                        "subtechnique": [
+                            {
+                                "id": "T1027.013",
+                                "name": "Encrypted/Encoded File",
+                                "reference": "https://attack.mitre.org/techniques/T1027/013/"
+                            }
+                        ]
                     },
                     {
                         "id": "T1140",
@@ -100,12 +107,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1140/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0040",
+                    "name": "Impact",
+                    "reference": "https://attack.mitre.org/tactics/TA0040/"
+                },
+                "technique": [
+                    {
+                        "id": "T1486",
+                        "name": "Data Encrypted for Impact",
+                        "reference": "https://attack.mitre.org/techniques/T1486/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 112
+        "version": 113
     },
-    "id": "1d9aeb0b-9549-46f6-a32d-05e2a001b7fd_112",
+    "id": "1d9aeb0b-9549-46f6-a32d-05e2a001b7fd_113",
     "type": "security-rule"
 }

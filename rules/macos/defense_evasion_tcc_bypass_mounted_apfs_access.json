@@ -72,12 +72,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1006/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0009",
+                    "name": "Collection",
+                    "reference": "https://attack.mitre.org/tactics/TA0009/"
+                },
+                "technique": [
+                    {
+                        "id": "T1005",
+                        "name": "Data from Local System",
+                        "reference": "https://attack.mitre.org/techniques/T1005/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "b00bcd89-000c-4425-b94c-716ef67762f6_110",
+    "id": "b00bcd89-000c-4425-b94c-716ef67762f6_111",
     "type": "security-rule"
 }

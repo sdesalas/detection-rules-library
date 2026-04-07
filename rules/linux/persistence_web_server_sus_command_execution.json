@@ -147,12 +147,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1071/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0001",
+                    "name": "Initial Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                },
+                "technique": [
+                    {
+                        "id": "T1190",
+                        "name": "Exploit Public-Facing Application",
+                        "reference": "https://attack.mitre.org/techniques/T1190/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 9
+        "version": 10
     },
-    "id": "8a7933b4-9d0a-4c1c-bda5-e39fb045ff1d_9",
+    "id": "8a7933b4-9d0a-4c1c-bda5-e39fb045ff1d_10",
     "type": "security-rule"
 }

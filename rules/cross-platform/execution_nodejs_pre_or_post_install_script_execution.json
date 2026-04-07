@@ -115,6 +115,11 @@
                                 "id": "T1059.004",
                                 "name": "Unix Shell",
                                 "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            },
+                            {
+                                "id": "T1059.007",
+                                "name": "JavaScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/007/"
                             }
                         ]
                     },
@@ -160,11 +165,33 @@
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": []
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0001",
+                    "name": "Initial Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                },
+                "technique": [
+                    {
+                        "id": "T1195",
+                        "name": "Supply Chain Compromise",
+                        "reference": "https://attack.mitre.org/techniques/T1195/",
+                        "subtechnique": [
+                            {
+                                "id": "T1195.001",
+                                "name": "Compromise Software Dependencies and Development Tools",
+                                "reference": "https://attack.mitre.org/techniques/T1195/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "0871a5d8-6b5f-4a12-a568-fd7bc05bd8db_3",
+    "id": "0871a5d8-6b5f-4a12-a568-fd7bc05bd8db_4",
     "type": "security-rule"
 }

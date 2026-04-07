@@ -121,7 +121,14 @@
                     {
                         "id": "T1021",
                         "name": "Remote Services",
-                        "reference": "https://attack.mitre.org/techniques/T1021/"
+                        "reference": "https://attack.mitre.org/techniques/T1021/",
+                        "subtechnique": [
+                            {
+                                "id": "T1021.003",
+                                "name": "Distributed Component Object Model",
+                                "reference": "https://attack.mitre.org/techniques/T1021/003/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -142,8 +149,8 @@
             }
         ],
         "type": "eql",
-        "version": 215
+        "version": 216
     },
-    "id": "f3475224-b179-4f78-8877-c2bd64c26b88_215",
+    "id": "f3475224-b179-4f78-8877-c2bd64c26b88_216",
     "type": "security-rule"
 }

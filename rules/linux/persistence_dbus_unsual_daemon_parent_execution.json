@@ -143,14 +143,19 @@
                                 "reference": "https://attack.mitre.org/techniques/T1059/004/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1559",
+                        "name": "Inter-Process Communication",
+                        "reference": "https://attack.mitre.org/techniques/T1559/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "9705b458-689a-4ec6-afe8-b4648d090612_5",
+    "id": "9705b458-689a-4ec6-afe8-b4648d090612_6",
     "type": "security-rule"
 }

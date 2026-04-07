@@ -63,15 +63,22 @@
                     {
                         "id": "T1562",
                         "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/"
+                        "reference": "https://attack.mitre.org/techniques/T1562/",
+                        "subtechnique": [
+                            {
+                                "id": "T1562.007",
+                                "name": "Disable or Modify Cloud Firewall",
+                                "reference": "https://attack.mitre.org/techniques/T1562/007/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "ff9b571e-61d6-4f6c-9561-eb4cca3bafe1_107",
+    "id": "ff9b571e-61d6-4f6c-9561-eb4cca3bafe1_108",
     "type": "security-rule"
 }

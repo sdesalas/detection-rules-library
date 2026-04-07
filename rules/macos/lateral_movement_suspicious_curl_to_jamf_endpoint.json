@@ -98,6 +98,28 @@
                 },
                 "technique": [
                     {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.002",
+                                "name": "AppleScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/002/"
+                            },
+                            {
+                                "id": "T1059.006",
+                                "name": "Python",
+                                "reference": "https://attack.mitre.org/techniques/T1059/006/"
+                            },
+                            {
+                                "id": "T1059.007",
+                                "name": "JavaScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/007/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1072",
                         "name": "Software Deployment Tools",
                         "reference": "https://attack.mitre.org/techniques/T1072/"
@@ -107,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "a8256685-9736-465b-b159-f25a172d08e8_1",
+    "id": "a8256685-9736-465b-b159-f25a172d08e8_2",
     "type": "security-rule"
 }

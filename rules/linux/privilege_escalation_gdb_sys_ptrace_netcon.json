@@ -145,11 +145,33 @@
                         "reference": "https://attack.mitre.org/techniques/T1071/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1055",
+                        "name": "Process Injection",
+                        "reference": "https://attack.mitre.org/techniques/T1055/",
+                        "subtechnique": [
+                            {
+                                "id": "T1055.008",
+                                "name": "Ptrace System Calls",
+                                "reference": "https://attack.mitre.org/techniques/T1055/008/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "28bc620d-b2f7-4132-b372-f77953881d05_6",
+    "id": "28bc620d-b2f7-4132-b372-f77953881d05_7",
     "type": "security-rule"
 }

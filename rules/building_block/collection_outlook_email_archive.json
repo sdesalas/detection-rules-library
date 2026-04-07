@@ -78,6 +78,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1005",
+                        "name": "Data from Local System",
+                        "reference": "https://attack.mitre.org/techniques/T1005/"
+                    },
+                    {
                         "id": "T1114",
                         "name": "Email Collection",
                         "reference": "https://attack.mitre.org/techniques/T1114/",
@@ -94,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "2e311539-cd88-4a85-a301-04f38795007c_108",
+    "id": "2e311539-cd88-4a85-a301-04f38795007c_109",
     "type": "security-rule"
 }

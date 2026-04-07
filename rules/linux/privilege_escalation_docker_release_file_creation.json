@@ -66,17 +66,37 @@
                 },
                 "technique": [
                     {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/"
+                    },
+                    {
                         "id": "T1611",
                         "name": "Escape to Host",
                         "reference": "https://attack.mitre.org/techniques/T1611/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "4d4cda2b-9aad-4702-a0a2-75952bd6a77c_3",
+    "id": "4d4cda2b-9aad-4702-a0a2-75952bd6a77c_4",
     "type": "security-rule"
 }

@@ -93,19 +93,14 @@
                 },
                 "technique": [
                     {
-                        "id": "T1102",
-                        "name": "Web Service",
-                        "reference": "https://attack.mitre.org/techniques/T1102/"
-                    },
-                    {
-                        "id": "T1568",
-                        "name": "Dynamic Resolution",
-                        "reference": "https://attack.mitre.org/techniques/T1568/",
+                        "id": "T1071",
+                        "name": "Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1071/",
                         "subtechnique": [
                             {
-                                "id": "T1568.002",
-                                "name": "Domain Generation Algorithms",
-                                "reference": "https://attack.mitre.org/techniques/T1568/002/"
+                                "id": "T1071.001",
+                                "name": "Web Protocols",
+                                "reference": "https://attack.mitre.org/techniques/T1071/001/"
                             }
                         ]
                     },
@@ -118,6 +113,35 @@
                                 "id": "T1090.002",
                                 "name": "External Proxy",
                                 "reference": "https://attack.mitre.org/techniques/T1090/002/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1102",
+                        "name": "Web Service",
+                        "reference": "https://attack.mitre.org/techniques/T1102/",
+                        "subtechnique": [
+                            {
+                                "id": "T1102.001",
+                                "name": "Dead Drop Resolver",
+                                "reference": "https://attack.mitre.org/techniques/T1102/001/"
+                            },
+                            {
+                                "id": "T1102.002",
+                                "name": "Bidirectional Communication",
+                                "reference": "https://attack.mitre.org/techniques/T1102/002/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1568",
+                        "name": "Dynamic Resolution",
+                        "reference": "https://attack.mitre.org/techniques/T1568/",
+                        "subtechnique": [
+                            {
+                                "id": "T1568.002",
+                                "name": "Domain Generation Algorithms",
+                                "reference": "https://attack.mitre.org/techniques/T1568/002/"
                             }
                         ]
                     }
@@ -145,6 +169,11 @@
                                 "id": "T1567.002",
                                 "name": "Exfiltration to Cloud Storage",
                                 "reference": "https://attack.mitre.org/techniques/T1567/002/"
+                            },
+                            {
+                                "id": "T1567.003",
+                                "name": "Exfiltration to Text Storage Sites",
+                                "reference": "https://attack.mitre.org/techniques/T1567/003/"
                             }
                         ]
                     }
@@ -153,8 +182,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 128
+        "version": 129
     },
-    "id": "66883649-f908-4a5b-a1e0-54090a1d3a32_128",
+    "id": "66883649-f908-4a5b-a1e0-54090a1d3a32_129",
     "type": "security-rule"
 }

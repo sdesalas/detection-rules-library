@@ -83,6 +83,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1021/",
                         "subtechnique": [
                             {
+                                "id": "T1021.003",
+                                "name": "Distributed Component Object Model",
+                                "reference": "https://attack.mitre.org/techniques/T1021/003/"
+                            },
+                            {
                                 "id": "T1021.006",
                                 "name": "Windows Remote Management",
                                 "reference": "https://attack.mitre.org/techniques/T1021/006/"
@@ -109,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "f59668de-caa0-4b84-94c1-3a1549e1e798_110",
+    "id": "f59668de-caa0-4b84-94c1-3a1549e1e798_111",
     "type": "security-rule"
 }

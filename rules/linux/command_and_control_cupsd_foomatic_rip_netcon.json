@@ -100,6 +100,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.004",
+                                "name": "Unix Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1203",
                         "name": "Exploitation for Client Execution",
                         "reference": "https://attack.mitre.org/techniques/T1203/"
@@ -126,8 +138,8 @@
             }
         ],
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "e80ee207-9505-49ab-8ca8-bc57d80e2cab_5",
+    "id": "e80ee207-9505-49ab-8ca8-bc57d80e2cab_6",
     "type": "security-rule"
 }

@@ -115,6 +115,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1114/",
                         "subtechnique": [
                             {
+                                "id": "T1114.001",
+                                "name": "Local Email Collection",
+                                "reference": "https://attack.mitre.org/techniques/T1114/001/"
+                            },
+                            {
                                 "id": "T1114.002",
                                 "name": "Remote Email Collection",
                                 "reference": "https://attack.mitre.org/techniques/T1114/002/"
@@ -148,8 +153,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 420
+        "version": 421
     },
-    "id": "6aace640-e631-4870-ba8e-5fdda09325db_420",
+    "id": "6aace640-e631-4870-ba8e-5fdda09325db_421",
     "type": "security-rule"
 }

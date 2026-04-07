@@ -101,6 +101,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1059/",
                         "subtechnique": [
                             {
+                                "id": "T1059.004",
+                                "name": "Unix Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            },
+                            {
                                 "id": "T1059.006",
                                 "name": "Python",
                                 "reference": "https://attack.mitre.org/techniques/T1059/006/"
@@ -112,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 215
+        "version": 216
     },
-    "id": "d76b02ef-fc95-4001-9297-01cb7412232f_215",
+    "id": "d76b02ef-fc95-4001-9297-01cb7412232f_216",
     "type": "security-rule"
 }

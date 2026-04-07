@@ -102,11 +102,33 @@
                         "reference": "https://attack.mitre.org/techniques/T1005/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/",
+                        "subtechnique": [
+                            {
+                                "id": "T1548.006",
+                                "name": "TCC Manipulation",
+                                "reference": "https://attack.mitre.org/techniques/T1548/006/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "ffd8b5e9-aa63-42b3-aead-6fdb170da9a3_2",
+    "id": "ffd8b5e9-aa63-42b3-aead-6fdb170da9a3_3",
     "type": "security-rule"
 }

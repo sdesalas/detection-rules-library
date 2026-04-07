@@ -109,15 +109,27 @@
                     {
                         "id": "T1048",
                         "name": "Exfiltration Over Alternative Protocol",
-                        "reference": "https://attack.mitre.org/techniques/T1048/"
+                        "reference": "https://attack.mitre.org/techniques/T1048/",
+                        "subtechnique": [
+                            {
+                                "id": "T1048.001",
+                                "name": "Exfiltration Over Symmetric Encrypted Non-C2 Protocol",
+                                "reference": "https://attack.mitre.org/techniques/T1048/001/"
+                            },
+                            {
+                                "id": "T1048.003",
+                                "name": "Exfiltration Over Unencrypted Non-C2 Protocol",
+                                "reference": "https://attack.mitre.org/techniques/T1048/003/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "be70614d-4295-473c-a953-582aef41c865_6",
+    "id": "be70614d-4295-473c-a953-582aef41c865_7",
     "type": "security-rule"
 }

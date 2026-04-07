@@ -125,12 +125,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1542",
+                        "name": "Pre-OS Boot",
+                        "reference": "https://attack.mitre.org/techniques/T1542/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "834ee026-f9f9-4ec7-b5e0-7fbfe84765f4_6",
+    "id": "834ee026-f9f9-4ec7-b5e0-7fbfe84765f4_7",
     "type": "security-rule"
 }

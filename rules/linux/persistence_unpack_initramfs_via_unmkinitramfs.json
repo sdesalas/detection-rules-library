@@ -96,7 +96,14 @@
                     {
                         "id": "T1542",
                         "name": "Pre-OS Boot",
-                        "reference": "https://attack.mitre.org/techniques/T1542/"
+                        "reference": "https://attack.mitre.org/techniques/T1542/",
+                        "subtechnique": [
+                            {
+                                "id": "T1542.003",
+                                "name": "Bootkit",
+                                "reference": "https://attack.mitre.org/techniques/T1542/003/"
+                            }
+                        ]
                     },
                     {
                         "id": "T1543",
@@ -139,13 +146,26 @@
                     "name": "Defense Evasion",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1542",
+                        "name": "Pre-OS Boot",
+                        "reference": "https://attack.mitre.org/techniques/T1542/",
+                        "subtechnique": [
+                            {
+                                "id": "T1542.003",
+                                "name": "Bootkit",
+                                "reference": "https://attack.mitre.org/techniques/T1542/003/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "c5fc788c-7576-4a02-b3d6-d2c016eb85a6_5",
+    "id": "c5fc788c-7576-4a02-b3d6-d2c016eb85a6_6",
     "type": "security-rule"
 }

@@ -66,7 +66,14 @@
                     {
                         "id": "T1059",
                         "name": "Command and Scripting Interpreter",
-                        "reference": "https://attack.mitre.org/techniques/T1059/"
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.007",
+                                "name": "JavaScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/007/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -88,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "35330ba2-c859-4c98-8b7f-c19159ea0e58_110",
+    "id": "35330ba2-c859-4c98-8b7f-c19159ea0e58_111",
     "type": "security-rule"
 }

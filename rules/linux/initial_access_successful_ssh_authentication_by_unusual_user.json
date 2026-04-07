@@ -73,14 +73,41 @@
                         "id": "T1078",
                         "name": "Valid Accounts",
                         "reference": "https://attack.mitre.org/techniques/T1078/"
+                    },
+                    {
+                        "id": "T1133",
+                        "name": "External Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1133/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
+                },
+                "technique": [
+                    {
+                        "id": "T1021",
+                        "name": "Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1021/",
+                        "subtechnique": [
+                            {
+                                "id": "T1021.004",
+                                "name": "SSH",
+                                "reference": "https://attack.mitre.org/techniques/T1021/004/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "5b8d7b94-23c6-4e3f-baed-3a4d0da4f19d_4",
+    "id": "5b8d7b94-23c6-4e3f-baed-3a4d0da4f19d_5",
     "type": "security-rule"
 }

@@ -88,6 +88,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1069",
+                        "name": "Permission Groups Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1069/",
+                        "subtechnique": [
+                            {
+                                "id": "T1069.003",
+                                "name": "Cloud Groups",
+                                "reference": "https://attack.mitre.org/techniques/T1069/003/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1613",
                         "name": "Container and Resource Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1613/"
@@ -97,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 209
+        "version": 210
     },
-    "id": "12a2f15d-597e-4334-88ff-38a02cb1330b_209",
+    "id": "12a2f15d-597e-4334-88ff-38a02cb1330b_210",
     "type": "security-rule"
 }

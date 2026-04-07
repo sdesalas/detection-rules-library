@@ -110,12 +110,44 @@
                         "reference": "https://attack.mitre.org/techniques/T1071/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0007",
+                    "name": "Discovery",
+                    "reference": "https://attack.mitre.org/tactics/TA0007/"
+                },
+                "technique": [
+                    {
+                        "id": "T1016",
+                        "name": "System Network Configuration Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1016/"
+                    },
+                    {
+                        "id": "T1082",
+                        "name": "System Information Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1082/"
+                    },
+                    {
+                        "id": "T1087",
+                        "name": "Account Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1087/",
+                        "subtechnique": [
+                            {
+                                "id": "T1087.001",
+                                "name": "Local Account",
+                                "reference": "https://attack.mitre.org/techniques/T1087/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 11
+        "version": 12
     },
-    "id": "5c895b4f-9133-4e68-9e23-59902175355c_11",
+    "id": "5c895b4f-9133-4e68-9e23-59902175355c_12",
     "type": "security-rule"
 }

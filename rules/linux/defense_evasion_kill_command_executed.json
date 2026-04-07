@@ -88,6 +88,23 @@
                 },
                 "technique": [
                     {
+                        "id": "T1562",
+                        "name": "Impair Defenses",
+                        "reference": "https://attack.mitre.org/techniques/T1562/",
+                        "subtechnique": [
+                            {
+                                "id": "T1562.001",
+                                "name": "Disable or Modify Tools",
+                                "reference": "https://attack.mitre.org/techniques/T1562/001/"
+                            },
+                            {
+                                "id": "T1562.006",
+                                "name": "Indicator Blocking",
+                                "reference": "https://attack.mitre.org/techniques/T1562/006/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1564",
                         "name": "Hide Artifacts",
                         "reference": "https://attack.mitre.org/techniques/T1564/",
@@ -96,18 +113,6 @@
                                 "id": "T1564.001",
                                 "name": "Hidden Files and Directories",
                                 "reference": "https://attack.mitre.org/techniques/T1564/001/"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "T1562",
-                        "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/",
-                        "subtechnique": [
-                            {
-                                "id": "T1562.006",
-                                "name": "Indicator Blocking",
-                                "reference": "https://attack.mitre.org/techniques/T1562/006/"
                             }
                         ]
                     }
@@ -134,12 +139,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0040",
+                    "name": "Impact",
+                    "reference": "https://attack.mitre.org/tactics/TA0040/"
+                },
+                "technique": [
+                    {
+                        "id": "T1489",
+                        "name": "Service Stop",
+                        "reference": "https://attack.mitre.org/techniques/T1489/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "f391d3fd-219b-42a3-9ba9-2f66eb0155aa_5",
+    "id": "f391d3fd-219b-42a3-9ba9-2f66eb0155aa_6",
     "type": "security-rule"
 }

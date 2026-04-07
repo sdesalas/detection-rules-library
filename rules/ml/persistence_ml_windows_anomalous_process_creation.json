@@ -57,11 +57,43 @@
                         "reference": "https://attack.mitre.org/techniques/T1543/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/"
+                    },
+                    {
+                        "id": "T1203",
+                        "name": "Exploitation for Client Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1203/"
+                    },
+                    {
+                        "id": "T1204",
+                        "name": "User Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1204/",
+                        "subtechnique": [
+                            {
+                                "id": "T1204.002",
+                                "name": "Malicious File",
+                                "reference": "https://attack.mitre.org/techniques/T1204/002/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "machine_learning",
-        "version": 211
+        "version": 212
     },
-    "id": "0b29cab4-dbbd-4a3f-9e8e-1287c7c11ae5_211",
+    "id": "0b29cab4-dbbd-4a3f-9e8e-1287c7c11ae5_212",
     "type": "security-rule"
 }

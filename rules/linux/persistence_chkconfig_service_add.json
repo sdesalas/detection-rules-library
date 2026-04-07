@@ -93,14 +93,19 @@
                         "id": "T1037",
                         "name": "Boot or Logon Initialization Scripts",
                         "reference": "https://attack.mitre.org/techniques/T1037/"
+                    },
+                    {
+                        "id": "T1543",
+                        "name": "Create or Modify System Process",
+                        "reference": "https://attack.mitre.org/techniques/T1543/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 218
+        "version": 219
     },
-    "id": "b910f25a-2d44-47f2-a873-aabdc0d355e6_218",
+    "id": "b910f25a-2d44-47f2-a873-aabdc0d355e6_219",
     "type": "security-rule"
 }

@@ -53,13 +53,18 @@
                         "id": "T1078",
                         "name": "Valid Accounts",
                         "reference": "https://attack.mitre.org/techniques/T1078/"
+                    },
+                    {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/"
                     }
                 ]
             }
         ],
         "type": "machine_learning",
-        "version": 3
+        "version": 4
     },
-    "id": "5eac16ab-6d4f-427b-9715-f33e1b745fc7_3",
+    "id": "5eac16ab-6d4f-427b-9715-f33e1b745fc7_4",
     "type": "security-rule"
 }

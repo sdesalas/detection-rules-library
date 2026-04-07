@@ -89,12 +89,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1059/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 115
+        "version": 116
     },
-    "id": "3f3f9fe2-d095-11ec-95dc-f661ea17fbce_115",
+    "id": "3f3f9fe2-d095-11ec-95dc-f661ea17fbce_116",
     "type": "security-rule"
 }

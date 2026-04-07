@@ -222,6 +222,16 @@
             },
             {
                 "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.0.display_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.0.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
                 "name": "azure.auditlogs.properties.target_resources.0.modified_properties.0.display_name",
                 "type": "keyword"
             },
@@ -253,6 +263,16 @@
             {
                 "ecs": false,
                 "name": "azure.auditlogs.properties.target_resources.0.modified_properties.3.new_value",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.0.modified_properties.4.new_value",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.auditlogs.properties.target_resources.0.modified_properties.5.new_value",
                 "type": "keyword"
             },
             {
@@ -848,12 +868,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1548/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1550",
+                        "name": "Use Alternate Authentication Material",
+                        "reference": "https://attack.mitre.org/techniques/T1550/",
+                        "subtechnique": [
+                            {
+                                "id": "T1550.001",
+                                "name": "Application Access Token",
+                                "reference": "https://attack.mitre.org/techniques/T1550/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "8e7a4f2c-9b3d-4e5a-a1b6-c2d8f7e9b3a5_5",
+    "id": "8e7a4f2c-9b3d-4e5a-a1b6-c2d8f7e9b3a5_6",
     "type": "security-rule"
 }

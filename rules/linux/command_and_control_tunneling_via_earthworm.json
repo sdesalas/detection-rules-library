@@ -88,6 +88,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1090",
+                        "name": "Proxy",
+                        "reference": "https://attack.mitre.org/techniques/T1090/"
+                    },
+                    {
                         "id": "T1572",
                         "name": "Protocol Tunneling",
                         "reference": "https://attack.mitre.org/techniques/T1572/"
@@ -97,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 215
+        "version": 216
     },
-    "id": "9f1c4ca3-44b5-481d-ba42-32dc215a2769_215",
+    "id": "9f1c4ca3-44b5-481d-ba42-32dc215a2769_216",
     "type": "security-rule"
 }

@@ -106,6 +106,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1071",
+                        "name": "Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1071/",
+                        "subtechnique": [
+                            {
+                                "id": "T1071.001",
+                                "name": "Web Protocols",
+                                "reference": "https://attack.mitre.org/techniques/T1071/001/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1105",
                         "name": "Ingress Tool Transfer",
                         "reference": "https://attack.mitre.org/techniques/T1105/"
@@ -145,8 +157,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "79f0a1f7-ed6b-471c-8eb1-23abd6470b1c_214",
+    "id": "79f0a1f7-ed6b-471c-8eb1-23abd6470b1c_215",
     "type": "security-rule"
 }

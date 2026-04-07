@@ -70,6 +70,7 @@
         "severity": "high",
         "tags": [
             "Tactic: Command and Control",
+            "Tactic: Initial Access",
             "Domain: Endpoint",
             "Use Case: Threat Detection",
             "Data Source: PAN-OS",
@@ -100,6 +101,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1133",
+                        "name": "External Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1133/"
+                    },
+                    {
                         "id": "T1190",
                         "name": "Exploit Public-Facing Application",
                         "reference": "https://attack.mitre.org/techniques/T1190/"
@@ -109,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "5700cb81-df44-46aa-a5d7-337798f53eb8_109",
+    "id": "5700cb81-df44-46aa-a5d7-337798f53eb8_110",
     "type": "security-rule"
 }

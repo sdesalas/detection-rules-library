@@ -93,6 +93,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/",
+                        "subtechnique": [
+                            {
+                                "id": "T1548.001",
+                                "name": "Setuid and Setgid",
+                                "reference": "https://attack.mitre.org/techniques/T1548/001/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1574",
                         "name": "Hijack Execution Flow",
                         "reference": "https://attack.mitre.org/techniques/T1574/",
@@ -124,8 +136,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "7787362c-90ff-4b1a-b313-8808b1020e64_8",
+    "id": "7787362c-90ff-4b1a-b313-8808b1020e64_9",
     "type": "security-rule"
 }

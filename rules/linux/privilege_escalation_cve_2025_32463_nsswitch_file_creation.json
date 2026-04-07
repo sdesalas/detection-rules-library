@@ -92,14 +92,26 @@
                         "id": "T1068",
                         "name": "Exploitation for Privilege Escalation",
                         "reference": "https://attack.mitre.org/techniques/T1068/"
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.006",
+                                "name": "Dynamic Linker Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1574/006/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "163a8f2f-c8a0-4b7e-9c4a-1184310eb7f3_2",
+    "id": "163a8f2f-c8a0-4b7e-9c4a-1184310eb7f3_3",
     "type": "security-rule"
 }

@@ -96,6 +96,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1580",
+                        "name": "Cloud Infrastructure Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1580/"
+                    },
+                    {
                         "id": "T1619",
                         "name": "Cloud Storage Object Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1619/"
@@ -134,8 +139,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 7
+        "version": 8
     },
-    "id": "5f0234fd-7f21-42af-8391-511d5fd11d5c_7",
+    "id": "5f0234fd-7f21-42af-8391-511d5fd11d5c_8",
     "type": "security-rule"
 }

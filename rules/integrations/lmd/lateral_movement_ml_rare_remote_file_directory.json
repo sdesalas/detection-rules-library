@@ -51,13 +51,18 @@
                         "id": "T1210",
                         "name": "Exploitation of Remote Services",
                         "reference": "https://attack.mitre.org/techniques/T1210/"
+                    },
+                    {
+                        "id": "T1570",
+                        "name": "Lateral Tool Transfer",
+                        "reference": "https://attack.mitre.org/techniques/T1570/"
                     }
                 ]
             }
         ],
         "type": "machine_learning",
-        "version": 8
+        "version": 9
     },
-    "id": "be4c5aed-90f5-4221-8bd5-7ab3a4334751_8",
+    "id": "be4c5aed-90f5-4221-8bd5-7ab3a4334751_9",
     "type": "security-rule"
 }

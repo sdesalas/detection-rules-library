@@ -94,7 +94,14 @@
                     {
                         "id": "T1036",
                         "name": "Masquerading",
-                        "reference": "https://attack.mitre.org/techniques/T1036/"
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.004",
+                                "name": "Masquerade Task or Service",
+                                "reference": "https://attack.mitre.org/techniques/T1036/004/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -116,8 +123,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 9
+        "version": 10
     },
-    "id": "25d917c4-aa3c-4111-974c-286c0312ff95_9",
+    "id": "25d917c4-aa3c-4111-974c-286c0312ff95_10",
     "type": "security-rule"
 }

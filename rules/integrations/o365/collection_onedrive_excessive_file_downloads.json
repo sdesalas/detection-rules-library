@@ -180,13 +180,24 @@
                     "name": "Exfiltration",
                     "reference": "https://attack.mitre.org/tactics/TA0010/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1020",
+                        "name": "Automated Exfiltration",
+                        "reference": "https://attack.mitre.org/techniques/T1020/"
+                    },
+                    {
+                        "id": "T1567",
+                        "name": "Exfiltration Over Web Service",
+                        "reference": "https://attack.mitre.org/techniques/T1567/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 7
+        "version": 8
     },
-    "id": "0e524fa6-eed3-11ef-82b4-f661ea17fbce_7",
+    "id": "0e524fa6-eed3-11ef-82b4-f661ea17fbce_8",
     "type": "security-rule"
 }

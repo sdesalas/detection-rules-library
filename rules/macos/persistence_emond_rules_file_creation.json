@@ -74,12 +74,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/",
+                        "subtechnique": [
+                            {
+                                "id": "T1546.014",
+                                "name": "Emond",
+                                "reference": "https://attack.mitre.org/techniques/T1546/014/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "a6bf4dd4-743e-4da8-8c03-3ebd753a6c90_112",
+    "id": "a6bf4dd4-743e-4da8-8c03-3ebd753a6c90_113",
     "type": "security-rule"
 }

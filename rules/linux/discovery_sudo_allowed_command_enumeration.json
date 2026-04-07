@@ -95,14 +95,48 @@
                         "id": "T1033",
                         "name": "System Owner/User Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1033/"
+                    },
+                    {
+                        "id": "T1069",
+                        "name": "Permission Groups Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1069/",
+                        "subtechnique": [
+                            {
+                                "id": "T1069.001",
+                                "name": "Local Groups",
+                                "reference": "https://attack.mitre.org/techniques/T1069/001/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/",
+                        "subtechnique": [
+                            {
+                                "id": "T1548.003",
+                                "name": "Sudo and Sudo Caching",
+                                "reference": "https://attack.mitre.org/techniques/T1548/003/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "28d39238-0c01-420a-b77a-24e5a7378663_110",
+    "id": "28d39238-0c01-420a-b77a-24e5a7378663_111",
     "type": "security-rule"
 }

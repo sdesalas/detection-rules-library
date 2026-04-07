@@ -88,12 +88,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0040",
+                    "name": "Impact",
+                    "reference": "https://attack.mitre.org/tactics/TA0040/"
+                },
+                "technique": [
+                    {
+                        "id": "T1486",
+                        "name": "Data Encrypted for Impact",
+                        "reference": "https://attack.mitre.org/techniques/T1486/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 12
+        "version": 13
     },
-    "id": "97db8b42-69d8-4bf3-9fd4-c69a1d895d68_12",
+    "id": "97db8b42-69d8-4bf3-9fd4-c69a1d895d68_13",
     "type": "security-rule"
 }

@@ -99,7 +99,14 @@
                     {
                         "id": "T1071",
                         "name": "Application Layer Protocol",
-                        "reference": "https://attack.mitre.org/techniques/T1071/"
+                        "reference": "https://attack.mitre.org/techniques/T1071/",
+                        "subtechnique": [
+                            {
+                                "id": "T1071.004",
+                                "name": "DNS",
+                                "reference": "https://attack.mitre.org/techniques/T1071/004/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -124,11 +131,38 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1218",
+                        "name": "System Binary Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1218/",
+                        "subtechnique": [
+                            {
+                                "id": "T1218.010",
+                                "name": "Regsvr32",
+                                "reference": "https://attack.mitre.org/techniques/T1218/010/"
+                            },
+                            {
+                                "id": "T1218.011",
+                                "name": "Rundll32",
+                                "reference": "https://attack.mitre.org/techniques/T1218/011/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "acd611f3-2b93-47b3-a0a3-7723bcc46f6d_109",
+    "id": "acd611f3-2b93-47b3-a0a3-7723bcc46f6d_110",
     "type": "security-rule"
 }

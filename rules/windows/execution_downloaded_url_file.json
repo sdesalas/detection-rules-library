@@ -64,7 +64,14 @@
                     {
                         "id": "T1204",
                         "name": "User Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1204/"
+                        "reference": "https://attack.mitre.org/techniques/T1204/",
+                        "subtechnique": [
+                            {
+                                "id": "T1204.002",
+                                "name": "Malicious File",
+                                "reference": "https://attack.mitre.org/techniques/T1204/002/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -98,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "cd82e3d6-1346-4afd-8f22-38388bbf34cb_7",
+    "id": "cd82e3d6-1346-4afd-8f22-38388bbf34cb_8",
     "type": "security-rule"
 }

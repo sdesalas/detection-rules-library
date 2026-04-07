@@ -88,6 +88,16 @@
                 },
                 "technique": [
                     {
+                        "id": "T1037",
+                        "name": "Boot or Logon Initialization Scripts",
+                        "reference": "https://attack.mitre.org/techniques/T1037/"
+                    },
+                    {
+                        "id": "T1176",
+                        "name": "Software Extensions",
+                        "reference": "https://attack.mitre.org/techniques/T1176/"
+                    },
+                    {
                         "id": "T1546",
                         "name": "Event Triggered Execution",
                         "reference": "https://attack.mitre.org/techniques/T1546/",
@@ -96,6 +106,11 @@
                                 "id": "T1546.002",
                                 "name": "Screensaver",
                                 "reference": "https://attack.mitre.org/techniques/T1546/002/"
+                            },
+                            {
+                                "id": "T1546.012",
+                                "name": "Image File Execution Options Injection",
+                                "reference": "https://attack.mitre.org/techniques/T1546/012/"
                             }
                         ]
                     },
@@ -108,6 +123,11 @@
                                 "id": "T1547.001",
                                 "name": "Registry Run Keys / Startup Folder",
                                 "reference": "https://attack.mitre.org/techniques/T1547/001/"
+                            },
+                            {
+                                "id": "T1547.014",
+                                "name": "Active Setup",
+                                "reference": "https://attack.mitre.org/techniques/T1547/014/"
                             }
                         ]
                     }
@@ -133,8 +153,8 @@
         "timeline_title": "Comprehensive Registry Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 215
+        "version": 216
     },
-    "id": "54902e45-3467-49a4-8abc-529f2c8cfb80_215",
+    "id": "54902e45-3467-49a4-8abc-529f2c8cfb80_216",
     "type": "security-rule"
 }

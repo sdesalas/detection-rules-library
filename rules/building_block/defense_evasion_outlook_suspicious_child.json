@@ -115,12 +115,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1554/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1203",
+                        "name": "Exploitation for Client Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1203/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "6cf17149-a8e3-44ec-9ec9-fdc8535547a1_4",
+    "id": "6cf17149-a8e3-44ec-9ec9-fdc8535547a1_5",
     "type": "security-rule"
 }

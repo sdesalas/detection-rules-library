@@ -93,12 +93,39 @@
                         "reference": "https://attack.mitre.org/techniques/T1059/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.005",
+                                "name": "Match Legitimate Resource Name or Location",
+                                "reference": "https://attack.mitre.org/techniques/T1036/005/"
+                            },
+                            {
+                                "id": "T1036.008",
+                                "name": "Masquerade File Type",
+                                "reference": "https://attack.mitre.org/techniques/T1036/008/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 114
+        "version": 115
     },
-    "id": "3688577a-d196-11ec-90b0-f661ea17fbce_114",
+    "id": "3688577a-d196-11ec-90b0-f661ea17fbce_115",
     "type": "security-rule"
 }

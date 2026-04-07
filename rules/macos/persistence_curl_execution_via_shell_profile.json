@@ -115,11 +115,33 @@
                         "reference": "https://attack.mitre.org/techniques/T1105/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.004",
+                                "name": "Unix Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "afdca1e0-0f8a-4fcf-9e1e-95e09791e3cd_1",
+    "id": "afdca1e0-0f8a-4fcf-9e1e-95e09791e3cd_2",
     "type": "security-rule"
 }

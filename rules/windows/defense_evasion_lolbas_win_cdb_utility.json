@@ -107,6 +107,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.005",
+                                "name": "Match Legitimate Resource Name or Location",
+                                "reference": "https://attack.mitre.org/techniques/T1036/005/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1218",
                         "name": "System Binary Proxy Execution",
                         "reference": "https://attack.mitre.org/techniques/T1218/"
@@ -116,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "bdfaddc4-4438-48b4-bc43-9f5cf8151c46_108",
+    "id": "bdfaddc4-4438-48b4-bc43-9f5cf8151c46_109",
     "type": "security-rule"
 }

@@ -57,14 +57,21 @@
                     {
                         "id": "T1078",
                         "name": "Valid Accounts",
-                        "reference": "https://attack.mitre.org/techniques/T1078/"
+                        "reference": "https://attack.mitre.org/techniques/T1078/",
+                        "subtechnique": [
+                            {
+                                "id": "T1078.002",
+                                "name": "Domain Accounts",
+                                "reference": "https://attack.mitre.org/techniques/T1078/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "type": "machine_learning",
-        "version": 3
+        "version": 4
     },
-    "id": "097ef0b8-fb21-4e45-ad89-d81666349c6a_3",
+    "id": "097ef0b8-fb21-4e45-ad89-d81666349c6a_4",
     "type": "security-rule"
 }

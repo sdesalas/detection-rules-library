@@ -103,11 +103,87 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1127",
+                        "name": "Trusted Developer Utilities Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1127/",
+                        "subtechnique": [
+                            {
+                                "id": "T1127.001",
+                                "name": "MSBuild",
+                                "reference": "https://attack.mitre.org/techniques/T1127/001/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1218",
+                        "name": "System Binary Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1218/",
+                        "subtechnique": [
+                            {
+                                "id": "T1218.004",
+                                "name": "InstallUtil",
+                                "reference": "https://attack.mitre.org/techniques/T1218/004/"
+                            },
+                            {
+                                "id": "T1218.005",
+                                "name": "Mshta",
+                                "reference": "https://attack.mitre.org/techniques/T1218/005/"
+                            },
+                            {
+                                "id": "T1218.009",
+                                "name": "Regsvcs/Regasm",
+                                "reference": "https://attack.mitre.org/techniques/T1218/009/"
+                            },
+                            {
+                                "id": "T1218.010",
+                                "name": "Regsvr32",
+                                "reference": "https://attack.mitre.org/techniques/T1218/010/"
+                            },
+                            {
+                                "id": "T1218.011",
+                                "name": "Rundll32",
+                                "reference": "https://attack.mitre.org/techniques/T1218/011/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.001",
+                                "name": "PowerShell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 210
+        "version": 211
     },
-    "id": "e7125cea-9fe1-42a5-9a05-b0792cf86f5a_210",
+    "id": "e7125cea-9fe1-42a5-9a05-b0792cf86f5a_211",
     "type": "security-rule"
 }

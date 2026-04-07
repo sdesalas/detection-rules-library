@@ -126,11 +126,26 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0011",
+                    "name": "Command and Control",
+                    "reference": "https://attack.mitre.org/tactics/TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "T1105",
+                        "name": "Ingress Tool Transfer",
+                        "reference": "https://attack.mitre.org/techniques/T1105/"
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "1d306bf0-7bcf-4acd-83fd-042f5711acc9_1",
+    "id": "1d306bf0-7bcf-4acd-83fd-042f5711acc9_2",
     "type": "security-rule"
 }

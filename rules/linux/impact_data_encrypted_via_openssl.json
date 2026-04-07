@@ -97,11 +97,26 @@
                         "reference": "https://attack.mitre.org/techniques/T1486/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/"
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 11
+        "version": 12
     },
-    "id": "f530ca17-153b-4a7a-8cd3-98dd4b4ddf73_11",
+    "id": "f530ca17-153b-4a7a-8cd3-98dd4b4ddf73_12",
     "type": "security-rule"
 }

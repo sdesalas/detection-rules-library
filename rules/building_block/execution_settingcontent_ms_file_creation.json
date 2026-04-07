@@ -74,6 +74,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1203",
+                        "name": "Exploitation for Client Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1203/"
+                    },
+                    {
                         "id": "T1204",
                         "name": "User Execution",
                         "reference": "https://attack.mitre.org/techniques/T1204/",
@@ -108,12 +113,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1218",
+                        "name": "System Binary Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1218/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "1e6363a6-3af5-41d4-b7ea-d475389c0ceb_108",
+    "id": "1e6363a6-3af5-41d4-b7ea-d475389c0ceb_109",
     "type": "security-rule"
 }

@@ -99,12 +99,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1572/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
+                },
+                "technique": [
+                    {
+                        "id": "T1021",
+                        "name": "Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1021/",
+                        "subtechnique": [
+                            {
+                                "id": "T1021.004",
+                                "name": "SSH",
+                                "reference": "https://attack.mitre.org/techniques/T1021/004/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "29f0cf93-d17c-4b12-b4f3-a433800539fa_108",
+    "id": "29f0cf93-d17c-4b12-b4f3-a433800539fa_109",
     "type": "security-rule"
 }

@@ -114,7 +114,14 @@
                     {
                         "id": "T1027",
                         "name": "Obfuscated Files or Information",
-                        "reference": "https://attack.mitre.org/techniques/T1027/"
+                        "reference": "https://attack.mitre.org/techniques/T1027/",
+                        "subtechnique": [
+                            {
+                                "id": "T1027.015",
+                                "name": "Compression",
+                                "reference": "https://attack.mitre.org/techniques/T1027/015/"
+                            }
+                        ]
                     },
                     {
                         "id": "T1140",
@@ -126,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "dc0b7782-0df0-47ff-8337-db0d678bdb66_110",
+    "id": "dc0b7782-0df0-47ff-8337-db0d678bdb66_111",
     "type": "security-rule"
 }

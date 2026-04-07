@@ -105,14 +105,19 @@
                                 "reference": "https://attack.mitre.org/techniques/T1021/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1570",
+                        "name": "Lateral Tool Transfer",
+                        "reference": "https://attack.mitre.org/techniques/T1570/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 317
+        "version": 318
     },
-    "id": "4fe9d835-40e1-452d-8230-17c147cafad8_317",
+    "id": "4fe9d835-40e1-452d-8230-17c147cafad8_318",
     "type": "security-rule"
 }

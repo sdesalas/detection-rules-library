@@ -115,12 +115,25 @@
                     "name": "Execution",
                     "reference": "https://attack.mitre.org/tactics/TA0002/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.003",
+                                "name": "Windows Command Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/003/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "fec7ccb7-6ed9-4f98-93ab-d6b366b063a0_4",
+    "id": "fec7ccb7-6ed9-4f98-93ab-d6b366b063a0_5",
     "type": "security-rule"
 }

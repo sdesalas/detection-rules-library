@@ -104,21 +104,26 @@
                 },
                 "technique": [
                     {
+                        "id": "T1553",
+                        "name": "Subvert Trust Controls",
+                        "reference": "https://attack.mitre.org/techniques/T1553/"
+                    },
+                    {
                         "id": "T1562",
                         "name": "Impair Defenses",
                         "reference": "https://attack.mitre.org/techniques/T1562/",
                         "subtechnique": [
+                            {
+                                "id": "T1562.001",
+                                "name": "Disable or Modify Tools",
+                                "reference": "https://attack.mitre.org/techniques/T1562/001/"
+                            },
                             {
                                 "id": "T1562.006",
                                 "name": "Indicator Blocking",
                                 "reference": "https://attack.mitre.org/techniques/T1562/006/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1553",
-                        "name": "Subvert Trust Controls",
-                        "reference": "https://attack.mitre.org/techniques/T1553/"
                     }
                 ]
             },
@@ -140,8 +145,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "3aff6ab1-18bd-427e-9d4c-c5732110c261_4",
+    "id": "3aff6ab1-18bd-427e-9d4c-c5732110c261_5",
     "type": "security-rule"
 }

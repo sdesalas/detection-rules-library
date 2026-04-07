@@ -79,6 +79,7 @@
         "tags": [
             "Use Case: Threat Detection",
             "Tactic: Persistence",
+            "Tactic: Initial Access",
             "Resources: Investigation Guide",
             "Domain: Network",
             "Domain: Identity",
@@ -107,12 +108,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0001",
+                    "name": "Initial Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                },
+                "technique": [
+                    {
+                        "id": "T1190",
+                        "name": "Exploit Public-Facing Application",
+                        "reference": "https://attack.mitre.org/techniques/T1190/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "e3a7b1c2-5d9f-4e8a-b6c3-2f1d4e5a6b7c_1",
+    "id": "e3a7b1c2-5d9f-4e8a-b6c3-2f1d4e5a6b7c_2",
     "type": "security-rule"
 }

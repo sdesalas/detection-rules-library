@@ -111,12 +111,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1562/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/",
+                        "subtechnique": [
+                            {
+                                "id": "T1546.015",
+                                "name": "Component Object Model Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1546/015/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "c18975f5-676c-4091-b626-81e8938aa2ee_4",
+    "id": "c18975f5-676c-4091-b626-81e8938aa2ee_5",
     "type": "security-rule"
 }

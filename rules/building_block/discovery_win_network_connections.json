@@ -72,6 +72,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1016",
+                        "name": "System Network Configuration Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1016/"
+                    },
+                    {
                         "id": "T1049",
                         "name": "System Network Connections Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1049/"
@@ -80,14 +85,19 @@
                         "id": "T1082",
                         "name": "System Information Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1082/"
+                    },
+                    {
+                        "id": "T1087",
+                        "name": "Account Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1087/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "c4e9ed3e-55a2-4309-a012-bc3c78dad10a_6",
+    "id": "c4e9ed3e-55a2-4309-a012-bc3c78dad10a_7",
     "type": "security-rule"
 }

@@ -107,6 +107,38 @@
                                 "reference": "https://attack.mitre.org/techniques/T1027/004/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1127",
+                        "name": "Trusted Developer Utilities Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1127/"
+                    },
+                    {
+                        "id": "T1218",
+                        "name": "System Binary Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1218/",
+                        "subtechnique": [
+                            {
+                                "id": "T1218.003",
+                                "name": "CMSTP",
+                                "reference": "https://attack.mitre.org/techniques/T1218/003/"
+                            },
+                            {
+                                "id": "T1218.005",
+                                "name": "Mshta",
+                                "reference": "https://attack.mitre.org/techniques/T1218/005/"
+                            },
+                            {
+                                "id": "T1218.010",
+                                "name": "Regsvr32",
+                                "reference": "https://attack.mitre.org/techniques/T1218/010/"
+                            },
+                            {
+                                "id": "T1218.011",
+                                "name": "Rundll32",
+                                "reference": "https://attack.mitre.org/techniques/T1218/011/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -119,6 +151,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1047",
+                        "name": "Windows Management Instrumentation",
+                        "reference": "https://attack.mitre.org/techniques/T1047/"
+                    },
+                    {
                         "id": "T1059",
                         "name": "Command and Scripting Interpreter",
                         "reference": "https://attack.mitre.org/techniques/T1059/",
@@ -127,6 +164,11 @@
                                 "id": "T1059.005",
                                 "name": "Visual Basic",
                                 "reference": "https://attack.mitre.org/techniques/T1059/005/"
+                            },
+                            {
+                                "id": "T1059.007",
+                                "name": "JavaScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/007/"
                             }
                         ]
                     }
@@ -135,8 +177,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 316
+        "version": 317
     },
-    "id": "201200f1-a99b-43fb-88ed-f65a45c4972c_316",
+    "id": "201200f1-a99b-43fb-88ed-f65a45c4972c_317",
     "type": "security-rule"
 }

@@ -109,6 +109,11 @@
                                 "id": "T1136.001",
                                 "name": "Local Account",
                                 "reference": "https://attack.mitre.org/techniques/T1136/001/"
+                            },
+                            {
+                                "id": "T1136.002",
+                                "name": "Domain Account",
+                                "reference": "https://attack.mitre.org/techniques/T1136/002/"
                             }
                         ]
                     }
@@ -117,8 +122,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 314
+        "version": 315
     },
-    "id": "1aa9181a-492b-4c01-8b16-fa0735786b2b_314",
+    "id": "1aa9181a-492b-4c01-8b16-fa0735786b2b_315",
     "type": "security-rule"
 }

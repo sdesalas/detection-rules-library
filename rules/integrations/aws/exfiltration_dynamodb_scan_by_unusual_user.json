@@ -110,6 +110,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1213",
+                        "name": "Data from Information Repositories",
+                        "reference": "https://attack.mitre.org/techniques/T1213/"
+                    },
+                    {
                         "id": "T1530",
                         "name": "Data from Cloud Storage",
                         "reference": "https://attack.mitre.org/techniques/T1530/"
@@ -119,8 +124,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "96b2a03e-003b-11f0-8541-f661ea17fbcd_4",
+    "id": "96b2a03e-003b-11f0-8541-f661ea17fbcd_5",
     "type": "security-rule"
 }

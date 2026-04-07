@@ -118,6 +118,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1485/"
                     },
                     {
+                        "id": "T1486",
+                        "name": "Data Encrypted for Impact",
+                        "reference": "https://attack.mitre.org/techniques/T1486/"
+                    },
+                    {
                         "id": "T1490",
                         "name": "Inhibit System Recovery",
                         "reference": "https://attack.mitre.org/techniques/T1490/"
@@ -149,8 +154,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "02bab13d-fb14-4d7c-b6fe-4a28874d37c5_6",
+    "id": "02bab13d-fb14-4d7c-b6fe-4a28874d37c5_7",
     "type": "security-rule"
 }

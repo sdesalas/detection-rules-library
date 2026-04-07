@@ -97,6 +97,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1133",
+                        "name": "External Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1133/"
+                    },
+                    {
                         "id": "T1190",
                         "name": "Exploit Public-Facing Application",
                         "reference": "https://attack.mitre.org/techniques/T1190/"
@@ -106,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 108
+        "version": 109
     },
-    "id": "143cb236-0956-4f42-a706-814bcaa0cf5a_108",
+    "id": "143cb236-0956-4f42-a706-814bcaa0cf5a_109",
     "type": "security-rule"
 }

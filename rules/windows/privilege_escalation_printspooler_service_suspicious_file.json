@@ -194,14 +194,26 @@
                         "id": "T1068",
                         "name": "Exploitation for Privilege Escalation",
                         "reference": "https://attack.mitre.org/techniques/T1068/"
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.001",
+                                "name": "DLL",
+                                "reference": "https://attack.mitre.org/techniques/T1574/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 320
+        "version": 321
     },
-    "id": "5bb4a95d-5a08-48eb-80db-4c3a63ec78a8_320",
+    "id": "5bb4a95d-5a08-48eb-80db-4c3a63ec78a8_321",
     "type": "security-rule"
 }

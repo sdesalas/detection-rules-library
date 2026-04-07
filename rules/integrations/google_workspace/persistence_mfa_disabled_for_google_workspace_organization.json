@@ -82,12 +82,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1556/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 208
+        "version": 209
     },
-    "id": "e555105c-ba6d-481f-82bb-9b633e7b4827_208",
+    "id": "e555105c-ba6d-481f-82bb-9b633e7b4827_209",
     "type": "security-rule"
 }

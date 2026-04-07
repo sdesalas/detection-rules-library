@@ -97,6 +97,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1133",
+                        "name": "External Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1133/"
+                    },
+                    {
                         "id": "T1556",
                         "name": "Modify Authentication Process",
                         "reference": "https://attack.mitre.org/techniques/T1556/",
@@ -122,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "9efb3f79-b77b-466a-9fa0-3645d22d1e7f_7",
+    "id": "9efb3f79-b77b-466a-9fa0-3645d22d1e7f_8",
     "type": "security-rule"
 }

@@ -89,14 +89,19 @@
                         "id": "T1124",
                         "name": "System Time Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1124/"
+                    },
+                    {
+                        "id": "T1614",
+                        "name": "System Location Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1614/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 113
+        "version": 114
     },
-    "id": "06568a02-af29-4f20-929c-f3af281e41aa_113",
+    "id": "06568a02-af29-4f20-929c-f3af281e41aa_114",
     "type": "security-rule"
 }

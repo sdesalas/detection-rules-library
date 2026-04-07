@@ -70,12 +70,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1648/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1053",
+                        "name": "Scheduled Task/Job",
+                        "reference": "https://attack.mitre.org/techniques/T1053/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 107
     },
-    "id": "16280f1e-57e6-4242-aa21-bb4d16f13b2f_106",
+    "id": "16280f1e-57e6-4242-aa21-bb4d16f13b2f_107",
     "type": "security-rule"
 }

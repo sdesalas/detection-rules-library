@@ -120,6 +120,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1202",
+                        "name": "Indirect Command Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1202/"
+                    },
+                    {
                         "id": "T1218",
                         "name": "System Binary Proxy Execution",
                         "reference": "https://attack.mitre.org/techniques/T1218/"
@@ -155,7 +160,13 @@
                     "name": "Command and Control",
                     "reference": "https://attack.mitre.org/tactics/TA0011/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1105",
+                        "name": "Ingress Tool Transfer",
+                        "reference": "https://attack.mitre.org/techniques/T1105/"
+                    }
+                ]
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -168,8 +179,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "d1ee711a-a3ba-4d73-b5ab-84cab5b37fb3_1",
+    "id": "d1ee711a-a3ba-4d73-b5ab-84cab5b37fb3_2",
     "type": "security-rule"
 }

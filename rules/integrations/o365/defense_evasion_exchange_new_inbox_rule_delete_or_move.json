@@ -109,12 +109,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1137",
+                        "name": "Office Application Startup",
+                        "reference": "https://attack.mitre.org/techniques/T1137/",
+                        "subtechnique": [
+                            {
+                                "id": "T1137.005",
+                                "name": "Outlook Rules",
+                                "reference": "https://attack.mitre.org/techniques/T1137/005/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "40fe11c2-376e-11f0-9a82-f661ea17fbcd_3",
+    "id": "40fe11c2-376e-11f0-9a82-f661ea17fbcd_4",
     "type": "security-rule"
 }

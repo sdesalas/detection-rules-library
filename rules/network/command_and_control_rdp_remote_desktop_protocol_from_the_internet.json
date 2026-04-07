@@ -70,6 +70,8 @@
         "severity": "medium",
         "tags": [
             "Tactic: Command and Control",
+            "Tactic: Lateral Movement",
+            "Tactic: Initial Access",
             "Domain: Endpoint",
             "Use Case: Threat Detection",
             "Data Source: PAN-OS",
@@ -96,7 +98,14 @@
                     {
                         "id": "T1021",
                         "name": "Remote Services",
-                        "reference": "https://attack.mitre.org/techniques/T1021/"
+                        "reference": "https://attack.mitre.org/techniques/T1021/",
+                        "subtechnique": [
+                            {
+                                "id": "T1021.001",
+                                "name": "Remote Desktop Protocol",
+                                "reference": "https://attack.mitre.org/techniques/T1021/001/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -109,6 +118,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1133",
+                        "name": "External Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1133/"
+                    },
+                    {
                         "id": "T1190",
                         "name": "Exploit Public-Facing Application",
                         "reference": "https://attack.mitre.org/techniques/T1190/"
@@ -120,8 +134,8 @@
         "timeline_title": "Comprehensive Network Timeline",
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "8c1bdde8-4204-45c0-9e0c-c85ca3902488_107",
+    "id": "8c1bdde8-4204-45c0-9e0c-c85ca3902488_108",
     "type": "security-rule"
 }

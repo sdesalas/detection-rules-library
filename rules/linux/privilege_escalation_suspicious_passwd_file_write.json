@@ -110,11 +110,33 @@
                         "reference": "https://attack.mitre.org/techniques/T1068/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1136",
+                        "name": "Create Account",
+                        "reference": "https://attack.mitre.org/techniques/T1136/",
+                        "subtechnique": [
+                            {
+                                "id": "T1136.001",
+                                "name": "Local Account",
+                                "reference": "https://attack.mitre.org/techniques/T1136/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "71d6a53d-abbd-40df-afee-c21fff6aafb0_7",
+    "id": "71d6a53d-abbd-40df-afee-c21fff6aafb0_8",
     "type": "security-rule"
 }

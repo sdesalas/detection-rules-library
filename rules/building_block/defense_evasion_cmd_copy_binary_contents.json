@@ -79,6 +79,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1027",
+                        "name": "Obfuscated Files or Information",
+                        "reference": "https://attack.mitre.org/techniques/T1027/"
+                    },
+                    {
                         "id": "T1140",
                         "name": "Deobfuscate/Decode Files or Information",
                         "reference": "https://attack.mitre.org/techniques/T1140/"
@@ -110,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "53dedd83-1be7-430f-8026-363256395c8b_109",
+    "id": "53dedd83-1be7-430f-8026-363256395c8b_110",
     "type": "security-rule"
 }

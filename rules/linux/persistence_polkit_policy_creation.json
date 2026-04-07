@@ -89,6 +89,11 @@
                         "id": "T1543",
                         "name": "Create or Modify System Process",
                         "reference": "https://attack.mitre.org/techniques/T1543/"
+                    },
+                    {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/"
                     }
                 ]
             },
@@ -106,12 +111,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1556/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "0f54e947-9ab3-4dff-9e8d-fb42493eaa2f_106",
+    "id": "0f54e947-9ab3-4dff-9e8d-fb42493eaa2f_107",
     "type": "security-rule"
 }

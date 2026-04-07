@@ -80,12 +80,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0040",
+                    "name": "Impact",
+                    "reference": "https://attack.mitre.org/tactics/TA0040/"
+                },
+                "technique": [
+                    {
+                        "id": "T1531",
+                        "name": "Account Access Removal",
+                        "reference": "https://attack.mitre.org/techniques/T1531/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "3c216ace-2633-4911-9aac-b61d4dc320e8_5",
+    "id": "3c216ace-2633-4911-9aac-b61d4dc320e8_6",
     "type": "security-rule"
 }

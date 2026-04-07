@@ -83,6 +83,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/",
+                        "subtechnique": [
+                            {
+                                "id": "T1548.006",
+                                "name": "TCC Manipulation",
+                                "reference": "https://attack.mitre.org/techniques/T1548/006/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1562",
                         "name": "Impair Defenses",
                         "reference": "https://attack.mitre.org/techniques/T1562/",
@@ -99,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "eea82229-b002-470e-a9e1-00be38b14d32_112",
+    "id": "eea82229-b002-470e-a9e1-00be38b14d32_113",
     "type": "security-rule"
 }

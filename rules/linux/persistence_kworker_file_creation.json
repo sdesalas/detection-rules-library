@@ -90,14 +90,26 @@
                         "id": "T1014",
                         "name": "Rootkit",
                         "reference": "https://attack.mitre.org/techniques/T1014/"
+                    },
+                    {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.005",
+                                "name": "Match Legitimate Resource Name or Location",
+                                "reference": "https://attack.mitre.org/techniques/T1036/005/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "ae343298-97bc-47bc-9ea2-5f2ad831c16e_110",
+    "id": "ae343298-97bc-47bc-9ea2-5f2ad831c16e_111",
     "type": "security-rule"
 }

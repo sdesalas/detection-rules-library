@@ -107,6 +107,11 @@
                         "id": "T1609",
                         "name": "Container Administration Command",
                         "reference": "https://attack.mitre.org/techniques/T1609/"
+                    },
+                    {
+                        "id": "T1610",
+                        "name": "Deploy Container",
+                        "reference": "https://attack.mitre.org/techniques/T1610/"
                     }
                 ]
             },
@@ -128,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "d1f310cb-5921-4d37-bbdf-cfdab7a6df9c_1",
+    "id": "d1f310cb-5921-4d37-bbdf-cfdab7a6df9c_2",
     "type": "security-rule"
 }

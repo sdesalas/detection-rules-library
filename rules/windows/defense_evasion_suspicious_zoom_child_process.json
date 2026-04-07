@@ -117,6 +117,23 @@
                 },
                 "technique": [
                     {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.001",
+                                "name": "PowerShell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/001/"
+                            },
+                            {
+                                "id": "T1059.003",
+                                "name": "Windows Command Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/003/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1203",
                         "name": "Exploitation for Client Execution",
                         "reference": "https://attack.mitre.org/techniques/T1203/"
@@ -126,8 +143,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 420
+        "version": 421
     },
-    "id": "97aba1ef-6034-4bd3-8c1a-1e0996b27afa_420",
+    "id": "97aba1ef-6034-4bd3-8c1a-1e0996b27afa_421",
     "type": "security-rule"
 }

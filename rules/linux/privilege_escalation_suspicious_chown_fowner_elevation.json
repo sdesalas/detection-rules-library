@@ -109,13 +109,40 @@
                         "id": "T1068",
                         "name": "Exploitation for Privilege Escalation",
                         "reference": "https://attack.mitre.org/techniques/T1068/"
+                    },
+                    {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1222",
+                        "name": "File and Directory Permissions Modification",
+                        "reference": "https://attack.mitre.org/techniques/T1222/",
+                        "subtechnique": [
+                            {
+                                "id": "T1222.002",
+                                "name": "Linux and Mac File and Directory Permissions Modification",
+                                "reference": "https://attack.mitre.org/techniques/T1222/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "d55abdfb-5384-402b-add4-6c401501b0c3_7",
+    "id": "d55abdfb-5384-402b-add4-6c401501b0c3_8",
     "type": "security-rule"
 }

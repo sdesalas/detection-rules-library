@@ -122,18 +122,6 @@
                         "reference": "https://attack.mitre.org/techniques/T1112/"
                     },
                     {
-                        "id": "T1548",
-                        "name": "Abuse Elevation Control Mechanism",
-                        "reference": "https://attack.mitre.org/techniques/T1548/",
-                        "subtechnique": [
-                            {
-                                "id": "T1548.002",
-                                "name": "Bypass User Account Control",
-                                "reference": "https://attack.mitre.org/techniques/T1548/002/"
-                            }
-                        ]
-                    },
-                    {
                         "id": "T1562",
                         "name": "Impair Defenses",
                         "reference": "https://attack.mitre.org/techniques/T1562/",
@@ -150,8 +138,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 315
+        "version": 316
     },
-    "id": "d31f183a-e5b1-451b-8534-ba62bca0b404_315",
+    "id": "d31f183a-e5b1-451b-8534-ba62bca0b404_316",
     "type": "security-rule"
 }

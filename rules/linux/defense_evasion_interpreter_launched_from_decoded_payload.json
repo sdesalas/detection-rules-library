@@ -133,6 +133,16 @@
                                 "id": "T1059.004",
                                 "name": "Unix Shell",
                                 "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            },
+                            {
+                                "id": "T1059.006",
+                                "name": "Python",
+                                "reference": "https://attack.mitre.org/techniques/T1059/006/"
+                            },
+                            {
+                                "id": "T1059.011",
+                                "name": "Lua",
+                                "reference": "https://attack.mitre.org/techniques/T1059/011/"
                             }
                         ]
                     },
@@ -153,8 +163,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "5bdad1d5-5001-4a13-ae99-fa8619500f1a_6",
+    "id": "5bdad1d5-5001-4a13-ae99-fa8619500f1a_7",
     "type": "security-rule"
 }

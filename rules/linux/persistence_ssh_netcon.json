@@ -155,12 +155,18 @@
                     "name": "Command and Control",
                     "reference": "https://attack.mitre.org/tactics/TA0011/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1095",
+                        "name": "Non-Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1095/"
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "63431796-f813-43af-820b-492ee2efec8e_8",
+    "id": "63431796-f813-43af-820b-492ee2efec8e_9",
     "type": "security-rule"
 }

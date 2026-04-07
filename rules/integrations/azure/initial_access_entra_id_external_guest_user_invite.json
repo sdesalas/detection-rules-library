@@ -87,14 +87,26 @@
                         "id": "T1078",
                         "name": "Valid Accounts",
                         "reference": "https://attack.mitre.org/techniques/T1078/"
+                    },
+                    {
+                        "id": "T1136",
+                        "name": "Create Account",
+                        "reference": "https://attack.mitre.org/techniques/T1136/",
+                        "subtechnique": [
+                            {
+                                "id": "T1136.003",
+                                "name": "Cloud Account",
+                                "reference": "https://attack.mitre.org/techniques/T1136/003/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "141e9b3a-ff37-4756-989d-05d7cbf35b0e_107",
+    "id": "141e9b3a-ff37-4756-989d-05d7cbf35b0e_108",
     "type": "security-rule"
 }

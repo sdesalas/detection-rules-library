@@ -138,6 +138,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1491",
+                        "name": "Defacement",
+                        "reference": "https://attack.mitre.org/techniques/T1491/",
+                        "subtechnique": [
+                            {
+                                "id": "T1491.002",
+                                "name": "External Defacement",
+                                "reference": "https://attack.mitre.org/techniques/T1491/002/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1565",
                         "name": "Data Manipulation",
                         "reference": "https://attack.mitre.org/techniques/T1565/",
@@ -154,8 +166,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "16acac42-b2f9-4802-9290-d6c30914db6e_5",
+    "id": "16acac42-b2f9-4802-9290-d6c30914db6e_6",
     "type": "security-rule"
 }

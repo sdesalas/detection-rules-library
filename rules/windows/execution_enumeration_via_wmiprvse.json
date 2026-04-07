@@ -121,6 +121,16 @@
                 },
                 "technique": [
                     {
+                        "id": "T1007",
+                        "name": "System Service Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1007/"
+                    },
+                    {
+                        "id": "T1012",
+                        "name": "Query Registry",
+                        "reference": "https://attack.mitre.org/techniques/T1012/"
+                    },
+                    {
                         "id": "T1016",
                         "name": "System Network Configuration Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1016/",
@@ -138,9 +148,24 @@
                         "reference": "https://attack.mitre.org/techniques/T1018/"
                     },
                     {
+                        "id": "T1033",
+                        "name": "System Owner/User Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1033/"
+                    },
+                    {
+                        "id": "T1049",
+                        "name": "System Network Connections Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1049/"
+                    },
+                    {
                         "id": "T1057",
                         "name": "Process Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1057/"
+                    },
+                    {
+                        "id": "T1082",
+                        "name": "System Information Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1082/"
                     },
                     {
                         "id": "T1087",
@@ -151,14 +176,19 @@
                         "id": "T1518",
                         "name": "Software Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1518/"
+                    },
+                    {
+                        "id": "T1615",
+                        "name": "Group Policy Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1615/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 318
+        "version": 319
     },
-    "id": "770e0c4d-b998-41e5-a62e-c7901fd7f470_318",
+    "id": "770e0c4d-b998-41e5-a62e-c7901fd7f470_319",
     "type": "security-rule"
 }

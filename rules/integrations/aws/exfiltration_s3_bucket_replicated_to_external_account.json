@@ -94,14 +94,26 @@
                         "id": "T1537",
                         "name": "Transfer Data to Cloud Account",
                         "reference": "https://attack.mitre.org/techniques/T1537/"
+                    },
+                    {
+                        "id": "T1567",
+                        "name": "Exfiltration Over Web Service",
+                        "reference": "https://attack.mitre.org/techniques/T1567/",
+                        "subtechnique": [
+                            {
+                                "id": "T1567.002",
+                                "name": "Exfiltration to Cloud Storage",
+                                "reference": "https://attack.mitre.org/techniques/T1567/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "d488f026-7907-4f56-ad51-742feb3db01c_6",
+    "id": "d488f026-7907-4f56-ad51-742feb3db01c_7",
     "type": "security-rule"
 }

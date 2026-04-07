@@ -119,12 +119,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.002",
+                                "name": "Additional Email Delegate Permissions",
+                                "reference": "https://attack.mitre.org/techniques/T1098/002/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 212
+        "version": 213
     },
-    "id": "0ce6487d-8069-4888-9ddd-61b52490cebc_212",
+    "id": "0ce6487d-8069-4888-9ddd-61b52490cebc_213",
     "type": "security-rule"
 }

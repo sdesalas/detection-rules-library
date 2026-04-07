@@ -134,12 +134,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1202",
+                        "name": "Indirect Command Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1202/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 118
+        "version": 119
     },
-    "id": "52376a86-ee86-4967-97ae-1a05f55816f0_118",
+    "id": "52376a86-ee86-4967-97ae-1a05f55816f0_119",
     "type": "security-rule"
 }

@@ -110,14 +110,29 @@
                         "reference": "https://attack.mitre.org/techniques/T1218/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1129",
+                        "name": "Shared Modules",
+                        "reference": "https://attack.mitre.org/techniques/T1129/"
+                    }
+                ]
             }
         ],
         "timeline_id": "e70679c2-6cde-4510-9764-4823df18f7db",
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 318
+        "version": 319
     },
-    "id": "edf8ee23-5ea7-4123-ba19-56b41e424ae3_318",
+    "id": "edf8ee23-5ea7-4123-ba19-56b41e424ae3_319",
     "type": "security-rule"
 }

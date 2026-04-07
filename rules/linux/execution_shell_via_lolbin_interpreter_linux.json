@@ -105,6 +105,11 @@
                                 "id": "T1059.004",
                                 "name": "Unix Shell",
                                 "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            },
+                            {
+                                "id": "T1059.006",
+                                "name": "Python",
+                                "reference": "https://attack.mitre.org/techniques/T1059/006/"
                             }
                         ]
                     }
@@ -122,13 +127,18 @@
                         "id": "T1071",
                         "name": "Application Layer Protocol",
                         "reference": "https://attack.mitre.org/techniques/T1071/"
+                    },
+                    {
+                        "id": "T1095",
+                        "name": "Non-Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1095/"
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 14
+        "version": 15
     },
-    "id": "76e4d92b-61c1-4a95-ab61-5fd94179a1ee_14",
+    "id": "76e4d92b-61c1-4a95-ab61-5fd94179a1ee_15",
     "type": "security-rule"
 }

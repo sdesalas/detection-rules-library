@@ -99,12 +99,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/",
+                        "subtechnique": [
+                            {
+                                "id": "T1548.006",
+                                "name": "TCC Manipulation",
+                                "reference": "https://attack.mitre.org/techniques/T1548/006/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "e26c0f76-2e80-445b-9e98-ab5532ccc46f_1",
+    "id": "e26c0f76-2e80-445b-9e98-ab5532ccc46f_2",
     "type": "security-rule"
 }

@@ -110,12 +110,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1203/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1068",
+                        "name": "Exploitation for Privilege Escalation",
+                        "reference": "https://attack.mitre.org/techniques/T1068/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 315
+        "version": 316
     },
-    "id": "e94262f2-c1e9-4d3f-a907-aeab16712e1a_315",
+    "id": "e94262f2-c1e9-4d3f-a907-aeab16712e1a_316",
     "type": "security-rule"
 }

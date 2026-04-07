@@ -67,7 +67,14 @@
                     {
                         "id": "T1098",
                         "name": "Account Manipulation",
-                        "reference": "https://attack.mitre.org/techniques/T1098/"
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.003",
+                                "name": "Additional Cloud Roles",
+                                "reference": "https://attack.mitre.org/techniques/T1098/003/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -96,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "b6dce542-2b75-4ffb-b7d6-38787298ba9d_107",
+    "id": "b6dce542-2b75-4ffb-b7d6-38787298ba9d_108",
     "type": "security-rule"
 }

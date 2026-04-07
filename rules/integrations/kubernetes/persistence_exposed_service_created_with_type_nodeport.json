@@ -78,12 +78,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1133/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0001",
+                    "name": "Initial Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                },
+                "technique": [
+                    {
+                        "id": "T1133",
+                        "name": "External Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1133/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 207
+        "version": 208
     },
-    "id": "65f9bccd-510b-40df-8263-334f03174fed_207",
+    "id": "65f9bccd-510b-40df-8263-334f03174fed_208",
     "type": "security-rule"
 }

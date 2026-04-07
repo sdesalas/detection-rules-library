@@ -72,6 +72,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1005",
+                        "name": "Data from Local System",
+                        "reference": "https://attack.mitre.org/techniques/T1005/"
+                    },
+                    {
                         "id": "T1074",
                         "name": "Data Staged",
                         "reference": "https://attack.mitre.org/techniques/T1074/",
@@ -101,8 +106,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "a0fbd7a9-1923-4e05-92df-b484168f17bc_1",
+    "id": "a0fbd7a9-1923-4e05-92df-b484168f17bc_2",
     "type": "security-rule"
 }

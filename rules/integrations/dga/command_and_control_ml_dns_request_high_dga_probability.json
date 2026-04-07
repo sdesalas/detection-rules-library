@@ -64,6 +64,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1071",
+                        "name": "Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1071/",
+                        "subtechnique": [
+                            {
+                                "id": "T1071.004",
+                                "name": "DNS",
+                                "reference": "https://attack.mitre.org/techniques/T1071/004/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1568",
                         "name": "Dynamic Resolution",
                         "reference": "https://attack.mitre.org/techniques/T1568/",
@@ -80,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 8
+        "version": 9
     },
-    "id": "da7f5803-1cd4-42fd-a890-0173ae80ac69_8",
+    "id": "da7f5803-1cd4-42fd-a890-0173ae80ac69_9",
     "type": "security-rule"
 }

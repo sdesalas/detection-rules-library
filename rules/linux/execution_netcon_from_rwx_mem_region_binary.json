@@ -110,6 +110,11 @@
                                 "reference": "https://attack.mitre.org/techniques/T1059/004/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1106",
+                        "name": "Native API",
+                        "reference": "https://attack.mitre.org/techniques/T1106/"
                     }
                 ]
             },
@@ -127,12 +132,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1071/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1620",
+                        "name": "Reflective Code Loading",
+                        "reference": "https://attack.mitre.org/techniques/T1620/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "32300431-c2d5-432d-8ec8-0e03f9924756_8",
+    "id": "32300431-c2d5-432d-8ec8-0e03f9924756_9",
     "type": "security-rule"
 }

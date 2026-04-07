@@ -102,12 +102,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1140/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0011",
+                    "name": "Command and Control",
+                    "reference": "https://attack.mitre.org/tactics/TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "T1132",
+                        "name": "Data Encoding",
+                        "reference": "https://attack.mitre.org/techniques/T1132/",
+                        "subtechnique": [
+                            {
+                                "id": "T1132.001",
+                                "name": "Standard Encoding",
+                                "reference": "https://attack.mitre.org/techniques/T1132/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 215
+        "version": 216
     },
-    "id": "debff20a-46bc-4a4d-bae5-5cdd14222795_215",
+    "id": "debff20a-46bc-4a4d-bae5-5cdd14222795_216",
     "type": "security-rule"
 }

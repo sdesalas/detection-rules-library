@@ -72,22 +72,22 @@
                 },
                 "technique": [
                     {
-                        "id": "T1082",
-                        "name": "System Information Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1082/"
-                    },
-                    {
                         "id": "T1016",
                         "name": "System Network Configuration Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1016/"
+                    },
+                    {
+                        "id": "T1082",
+                        "name": "System Information Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1082/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "6e5189c4-d3a5-4114-8cb3-bd3a65713f19_1",
+    "id": "6e5189c4-d3a5-4114-8cb3-bd3a65713f19_2",
     "type": "security-rule"
 }

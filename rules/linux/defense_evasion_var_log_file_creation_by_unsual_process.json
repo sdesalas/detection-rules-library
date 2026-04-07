@@ -93,6 +93,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1070",
+                        "name": "Indicator Removal",
+                        "reference": "https://attack.mitre.org/techniques/T1070/",
+                        "subtechnique": [
+                            {
+                                "id": "T1070.002",
+                                "name": "Clear Linux or Mac System Logs",
+                                "reference": "https://attack.mitre.org/techniques/T1070/002/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1564",
                         "name": "Hide Artifacts",
                         "reference": "https://attack.mitre.org/techniques/T1564/",
@@ -140,8 +152,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "ddf26e25-3e30-42b2-92db-bde8eb82ad67_4",
+    "id": "ddf26e25-3e30-42b2-92db-bde8eb82ad67_5",
     "type": "security-rule"
 }

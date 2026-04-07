@@ -73,6 +73,18 @@
                                 "reference": "https://attack.mitre.org/techniques/T1078/004/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.006",
+                                "name": "Additional Container Cluster Roles",
+                                "reference": "https://attack.mitre.org/techniques/T1098/006/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -87,15 +99,22 @@
                     {
                         "id": "T1098",
                         "name": "Account Manipulation",
-                        "reference": "https://attack.mitre.org/techniques/T1098/"
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.006",
+                                "name": "Additional Container Cluster Roles",
+                                "reference": "https://attack.mitre.org/techniques/T1098/006/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "1c966416-60c1-436b-bfd0-e002fddbfd89_107",
+    "id": "1c966416-60c1-436b-bfd0-e002fddbfd89_108",
     "type": "security-rule"
 }

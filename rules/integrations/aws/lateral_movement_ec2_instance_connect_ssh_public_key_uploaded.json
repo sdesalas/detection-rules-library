@@ -128,12 +128,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.004",
+                                "name": "SSH Authorized Keys",
+                                "reference": "https://attack.mitre.org/techniques/T1098/004/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 7
+        "version": 8
     },
-    "id": "873b5452-074e-11ef-852e-f661ea17fbcc_7",
+    "id": "873b5452-074e-11ef-852e-f661ea17fbcc_8",
     "type": "security-rule"
 }

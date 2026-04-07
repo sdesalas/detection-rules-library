@@ -77,14 +77,26 @@
                                 "reference": "https://attack.mitre.org/techniques/T1078/003/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.007",
+                                "name": "Additional Local or Domain Groups",
+                                "reference": "https://attack.mitre.org/techniques/T1098/007/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "04e65517-16e9-4fc4-b7f1-94dc21ecea0d_4",
+    "id": "04e65517-16e9-4fc4-b7f1-94dc21ecea0d_5",
     "type": "security-rule"
 }

@@ -129,11 +129,33 @@
                         "reference": "https://attack.mitre.org/techniques/T1021/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1569",
+                        "name": "System Services",
+                        "reference": "https://attack.mitre.org/techniques/T1569/",
+                        "subtechnique": [
+                            {
+                                "id": "T1569.002",
+                                "name": "Service Execution",
+                                "reference": "https://attack.mitre.org/techniques/T1569/002/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 216
+        "version": 217
     },
-    "id": "aa9a274d-6b53-424d-ac5e-cb8ca4251650_216",
+    "id": "aa9a274d-6b53-424d-ac5e-cb8ca4251650_217",
     "type": "security-rule"
 }

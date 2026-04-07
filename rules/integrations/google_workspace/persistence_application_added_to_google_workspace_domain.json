@@ -70,13 +70,26 @@
                     "name": "Persistence",
                     "reference": "https://attack.mitre.org/tactics/TA0003/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.001",
+                                "name": "Additional Cloud Credentials",
+                                "reference": "https://attack.mitre.org/techniques/T1098/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 208
+        "version": 209
     },
-    "id": "785a404b-75aa-4ffd-8be5-3334a5a544dd_208",
+    "id": "785a404b-75aa-4ffd-8be5-3334a5a544dd_209",
     "type": "security-rule"
 }

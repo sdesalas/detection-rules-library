@@ -93,15 +93,22 @@
                     {
                         "id": "T1485",
                         "name": "Data Destruction",
-                        "reference": "https://attack.mitre.org/techniques/T1485/"
+                        "reference": "https://attack.mitre.org/techniques/T1485/",
+                        "subtechnique": [
+                            {
+                                "id": "T1485.001",
+                                "name": "Lifecycle-Triggered Deletion",
+                                "reference": "https://attack.mitre.org/techniques/T1485/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 111
+        "version": 112
     },
-    "id": "6951f15e-533c-4a60-8014-a3c3ab851a1b_111",
+    "id": "6951f15e-533c-4a60-8014-a3c3ab851a1b_112",
     "type": "security-rule"
 }

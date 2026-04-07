@@ -111,11 +111,50 @@
                         "reference": "https://attack.mitre.org/techniques/T1220/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.005",
+                                "name": "Visual Basic",
+                                "reference": "https://attack.mitre.org/techniques/T1059/005/"
+                            },
+                            {
+                                "id": "T1059.007",
+                                "name": "JavaScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/007/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1559",
+                        "name": "Inter-Process Communication",
+                        "reference": "https://attack.mitre.org/techniques/T1559/",
+                        "subtechnique": [
+                            {
+                                "id": "T1559.001",
+                                "name": "Component Object Model",
+                                "reference": "https://attack.mitre.org/techniques/T1559/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "48f657ee-de4f-477c-aa99-ed88ee7af97a_6",
+    "id": "48f657ee-de4f-477c-aa99-ed88ee7af97a_7",
     "type": "security-rule"
 }

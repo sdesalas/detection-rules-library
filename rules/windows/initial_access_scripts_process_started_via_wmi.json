@@ -148,6 +148,11 @@
                                 "id": "T1059.005",
                                 "name": "Visual Basic",
                                 "reference": "https://attack.mitre.org/techniques/T1059/005/"
+                            },
+                            {
+                                "id": "T1059.007",
+                                "name": "JavaScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/007/"
                             }
                         ]
                     }
@@ -155,8 +160,8 @@
             }
         ],
         "type": "eql",
-        "version": 213
+        "version": 214
     },
-    "id": "b64b183e-1a76-422d-9179-7b389513e74d_213",
+    "id": "b64b183e-1a76-422d-9179-7b389513e74d_214",
     "type": "security-rule"
 }

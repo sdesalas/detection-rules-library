@@ -101,6 +101,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1071",
+                        "name": "Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1071/"
+                    },
+                    {
                         "id": "T1105",
                         "name": "Ingress Tool Transfer",
                         "reference": "https://attack.mitre.org/techniques/T1105/"
@@ -109,8 +114,8 @@
             }
         ],
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "47f76567-d58a-4fed-b32b-21f571e28910_112",
+    "id": "47f76567-d58a-4fed-b32b-21f571e28910_113",
     "type": "security-rule"
 }

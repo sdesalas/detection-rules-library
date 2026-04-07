@@ -126,14 +126,26 @@
                                 "reference": "https://attack.mitre.org/techniques/T1053/005/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1543",
+                        "name": "Create or Modify System Process",
+                        "reference": "https://attack.mitre.org/techniques/T1543/",
+                        "subtechnique": [
+                            {
+                                "id": "T1543.003",
+                                "name": "Windows Service",
+                                "reference": "https://attack.mitre.org/techniques/T1543/003/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 313
+        "version": 314
     },
-    "id": "c0429aa8-9974-42da-bfb6-53a0a515a145_313",
+    "id": "c0429aa8-9974-42da-bfb6-53a0a515a145_314",
     "type": "security-rule"
 }

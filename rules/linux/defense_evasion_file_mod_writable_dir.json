@@ -104,15 +104,22 @@
                     {
                         "id": "T1222",
                         "name": "File and Directory Permissions Modification",
-                        "reference": "https://attack.mitre.org/techniques/T1222/"
+                        "reference": "https://attack.mitre.org/techniques/T1222/",
+                        "subtechnique": [
+                            {
+                                "id": "T1222.002",
+                                "name": "Linux and Mac File and Directory Permissions Modification",
+                                "reference": "https://attack.mitre.org/techniques/T1222/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 215
+        "version": 216
     },
-    "id": "9f9a2a82-93a8-4b1a-8778-1780895626d4_215",
+    "id": "9f9a2a82-93a8-4b1a-8778-1780895626d4_216",
     "type": "security-rule"
 }

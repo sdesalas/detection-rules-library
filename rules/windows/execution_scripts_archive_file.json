@@ -109,14 +109,26 @@
                         "reference": "https://attack.mitre.org/techniques/T1059/",
                         "subtechnique": [
                             {
-                                "id": "T1059.007",
-                                "name": "JavaScript",
-                                "reference": "https://attack.mitre.org/techniques/T1059/007/"
-                            },
-                            {
                                 "id": "T1059.005",
                                 "name": "Visual Basic",
                                 "reference": "https://attack.mitre.org/techniques/T1059/005/"
+                            },
+                            {
+                                "id": "T1059.007",
+                                "name": "JavaScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/007/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1204",
+                        "name": "User Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1204/",
+                        "subtechnique": [
+                            {
+                                "id": "T1204.002",
+                                "name": "Malicious File",
+                                "reference": "https://attack.mitre.org/techniques/T1204/002/"
                             }
                         ]
                     }
@@ -125,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "30f9d940-7d55-4fff-a8b9-4715d20eb204_1",
+    "id": "30f9d940-7d55-4fff-a8b9-4715d20eb204_2",
     "type": "security-rule"
 }

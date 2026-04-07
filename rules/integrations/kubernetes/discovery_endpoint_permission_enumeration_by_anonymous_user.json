@@ -165,12 +165,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1613/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0043",
+                    "name": "Reconnaissance",
+                    "reference": "https://attack.mitre.org/tactics/TA0043/"
+                },
+                "technique": [
+                    {
+                        "id": "T1595",
+                        "name": "Active Scanning",
+                        "reference": "https://attack.mitre.org/techniques/T1595/",
+                        "subtechnique": [
+                            {
+                                "id": "T1595.003",
+                                "name": "Wordlist Scanning",
+                                "reference": "https://attack.mitre.org/techniques/T1595/003/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "2dd0d4fd-0cc9-4d18-8b46-1a507e28bbc0_2",
+    "id": "2dd0d4fd-0cc9-4d18-8b46-1a507e28bbc0_3",
     "type": "security-rule"
 }

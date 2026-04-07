@@ -78,12 +78,18 @@
                     "name": "Command and Control",
                     "reference": "https://attack.mitre.org/tactics/TA0011/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1071",
+                        "name": "Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1071/"
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "da4f56b8-9bc5-4003-a46c-d23616fbc691_1",
+    "id": "da4f56b8-9bc5-4003-a46c-d23616fbc691_2",
     "type": "security-rule"
 }

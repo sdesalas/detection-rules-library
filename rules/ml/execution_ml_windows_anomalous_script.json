@@ -65,11 +65,33 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1027",
+                        "name": "Obfuscated Files or Information",
+                        "reference": "https://attack.mitre.org/techniques/T1027/",
+                        "subtechnique": [
+                            {
+                                "id": "T1027.010",
+                                "name": "Command Obfuscation",
+                                "reference": "https://attack.mitre.org/techniques/T1027/010/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "machine_learning",
-        "version": 210
+        "version": 211
     },
-    "id": "1781d055-5c66-4adf-9d60-fc0fa58337b6_210",
+    "id": "1781d055-5c66-4adf-9d60-fc0fa58337b6_211",
     "type": "security-rule"
 }

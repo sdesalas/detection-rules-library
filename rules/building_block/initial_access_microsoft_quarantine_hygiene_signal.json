@@ -64,15 +64,27 @@
                     {
                         "id": "T1566",
                         "name": "Phishing",
-                        "reference": "https://attack.mitre.org/techniques/T1566/"
+                        "reference": "https://attack.mitre.org/techniques/T1566/",
+                        "subtechnique": [
+                            {
+                                "id": "T1566.001",
+                                "name": "Spearphishing Attachment",
+                                "reference": "https://attack.mitre.org/techniques/T1566/001/"
+                            },
+                            {
+                                "id": "T1566.002",
+                                "name": "Spearphishing Link",
+                                "reference": "https://attack.mitre.org/techniques/T1566/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "4bae6c34-57be-403a-a556-e48f9ecef0b7_1",
+    "id": "4bae6c34-57be-403a-a556-e48f9ecef0b7_2",
     "type": "security-rule"
 }

@@ -94,6 +94,11 @@
                                 "id": "T1070.002",
                                 "name": "Clear Linux or Mac System Logs",
                                 "reference": "https://attack.mitre.org/techniques/T1070/002/"
+                            },
+                            {
+                                "id": "T1070.004",
+                                "name": "File Deletion",
+                                "reference": "https://attack.mitre.org/techniques/T1070/004/"
                             }
                         ]
                     }
@@ -102,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 217
+        "version": 218
     },
-    "id": "aa895aea-b69c-4411-b110-8d7599634b30_217",
+    "id": "aa895aea-b69c-4411-b110-8d7599634b30_218",
     "type": "security-rule"
 }

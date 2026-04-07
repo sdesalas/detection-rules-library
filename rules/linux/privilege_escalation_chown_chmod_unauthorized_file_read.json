@@ -120,12 +120,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1222",
+                        "name": "File and Directory Permissions Modification",
+                        "reference": "https://attack.mitre.org/techniques/T1222/",
+                        "subtechnique": [
+                            {
+                                "id": "T1222.002",
+                                "name": "Linux and Mac File and Directory Permissions Modification",
+                                "reference": "https://attack.mitre.org/techniques/T1222/002/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "4a99ac6f-9a54-4ba5-a64f-6eb65695841b_110",
+    "id": "4a99ac6f-9a54-4ba5-a64f-6eb65695841b_111",
     "type": "security-rule"
 }

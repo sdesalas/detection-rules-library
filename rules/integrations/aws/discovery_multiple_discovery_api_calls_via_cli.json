@@ -147,6 +147,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1526",
+                        "name": "Cloud Service Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1526/"
+                    },
+                    {
                         "id": "T1580",
                         "name": "Cloud Infrastructure Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1580/"
@@ -156,8 +161,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 6
+        "version": 7
     },
-    "id": "74f45152-9aee-11ef-b0a5-f661ea17fbcd_6",
+    "id": "74f45152-9aee-11ef-b0a5-f661ea17fbcd_7",
     "type": "security-rule"
 }

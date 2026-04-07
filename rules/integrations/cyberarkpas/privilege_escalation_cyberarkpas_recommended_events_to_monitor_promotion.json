@@ -79,12 +79,42 @@
                     "reference": "https://attack.mitre.org/tactics/TA0001/"
                 },
                 "technique": []
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0006",
+                    "name": "Credential Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "T1555",
+                        "name": "Credentials from Password Stores",
+                        "reference": "https://attack.mitre.org/techniques/T1555/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "c5f81243-56e0-47f9-b5bb-55a5ed89ba57_105",
+    "id": "c5f81243-56e0-47f9-b5bb-55a5ed89ba57_106",
     "type": "security-rule"
 }

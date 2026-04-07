@@ -96,6 +96,23 @@
                 },
                 "technique": [
                     {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.003",
+                                "name": "Rename Legitimate Utilities",
+                                "reference": "https://attack.mitre.org/techniques/T1036/003/"
+                            },
+                            {
+                                "id": "T1036.005",
+                                "name": "Match Legitimate Resource Name or Location",
+                                "reference": "https://attack.mitre.org/techniques/T1036/005/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1574",
                         "name": "Hijack Execution Flow",
                         "reference": "https://attack.mitre.org/techniques/T1574/",
@@ -112,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 216
+        "version": 217
     },
-    "id": "053a0387-f3b5-4ba5-8245-8002cca2bd08_216",
+    "id": "053a0387-f3b5-4ba5-8245-8002cca2bd08_217",
     "type": "security-rule"
 }

@@ -135,14 +135,19 @@
                         "id": "T1112",
                         "name": "Modify Registry",
                         "reference": "https://attack.mitre.org/techniques/T1112/"
+                    },
+                    {
+                        "id": "T1564",
+                        "name": "Hide Artifacts",
+                        "reference": "https://attack.mitre.org/techniques/T1564/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 213
+        "version": 214
     },
-    "id": "a9b05c3b-b304-4bf9-970d-acdfaef2944c_213",
+    "id": "a9b05c3b-b304-4bf9-970d-acdfaef2944c_214",
     "type": "security-rule"
 }

@@ -178,6 +178,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.004",
+                                "name": "Unix Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1651",
                         "name": "Cloud Administration Command",
                         "reference": "https://attack.mitre.org/techniques/T1651/"
@@ -202,8 +214,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "a8b3e2f0-8c7d-11ef-b4c6-f661ea17fbcd_2",
+    "id": "a8b3e2f0-8c7d-11ef-b4c6-f661ea17fbcd_3",
     "type": "security-rule"
 }

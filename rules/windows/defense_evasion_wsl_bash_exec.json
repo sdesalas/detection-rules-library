@@ -146,12 +146,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0006",
+                    "name": "Credential Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "T1003",
+                        "name": "OS Credential Dumping",
+                        "reference": "https://attack.mitre.org/techniques/T1003/",
+                        "subtechnique": [
+                            {
+                                "id": "T1003.008",
+                                "name": "/etc/passwd and /etc/shadow",
+                                "reference": "https://attack.mitre.org/techniques/T1003/008/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 210
+        "version": 211
     },
-    "id": "3e0eeb75-16e8-4f2f-9826-62461ca128b7_210",
+    "id": "3e0eeb75-16e8-4f2f-9826-62461ca128b7_211",
     "type": "security-rule"
 }

@@ -95,6 +95,11 @@
                         "id": "T1485",
                         "name": "Data Destruction",
                         "reference": "https://attack.mitre.org/techniques/T1485/"
+                    },
+                    {
+                        "id": "T1486",
+                        "name": "Data Encrypted for Impact",
+                        "reference": "https://attack.mitre.org/techniques/T1486/"
                     }
                 ]
             },
@@ -117,14 +122,19 @@
                                 "reference": "https://attack.mitre.org/techniques/T1021/002/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1570",
+                        "name": "Lateral Tool Transfer",
+                        "reference": "https://attack.mitre.org/techniques/T1570/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 213
+        "version": 214
     },
-    "id": "1397e1b9-0c90-4d24-8d7b-80598eb9bc9a_213",
+    "id": "1397e1b9-0c90-4d24-8d7b-80598eb9bc9a_214",
     "type": "security-rule"
 }

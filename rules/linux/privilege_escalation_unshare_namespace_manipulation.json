@@ -99,14 +99,19 @@
                         "id": "T1543",
                         "name": "Create or Modify System Process",
                         "reference": "https://attack.mitre.org/techniques/T1543/"
+                    },
+                    {
+                        "id": "T1611",
+                        "name": "Escape to Host",
+                        "reference": "https://attack.mitre.org/techniques/T1611/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 114
+        "version": 115
     },
-    "id": "d00f33e7-b57d-4023-9952-2db91b1767c4_114",
+    "id": "d00f33e7-b57d-4023-9952-2db91b1767c4_115",
     "type": "security-rule"
 }

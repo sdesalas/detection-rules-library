@@ -91,14 +91,51 @@
                                 "reference": "https://attack.mitre.org/techniques/T1071/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1102",
+                        "name": "Web Service",
+                        "reference": "https://attack.mitre.org/techniques/T1102/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0010",
+                    "name": "Exfiltration",
+                    "reference": "https://attack.mitre.org/tactics/TA0010/"
+                },
+                "technique": [
+                    {
+                        "id": "T1567",
+                        "name": "Exfiltration Over Web Service",
+                        "reference": "https://attack.mitre.org/techniques/T1567/",
+                        "subtechnique": [
+                            {
+                                "id": "T1567.002",
+                                "name": "Exfiltration to Cloud Storage",
+                                "reference": "https://attack.mitre.org/techniques/T1567/002/"
+                            },
+                            {
+                                "id": "T1567.003",
+                                "name": "Exfiltration to Text Storage Sites",
+                                "reference": "https://attack.mitre.org/techniques/T1567/003/"
+                            },
+                            {
+                                "id": "T1567.004",
+                                "name": "Exfiltration Over Webhook",
+                                "reference": "https://attack.mitre.org/techniques/T1567/004/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "b07f0fba-0a78-11f0-8311-b66272739ecb_5",
+    "id": "b07f0fba-0a78-11f0-8311-b66272739ecb_6",
     "type": "security-rule"
 }

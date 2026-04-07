@@ -56,12 +56,42 @@
                         "reference": "https://attack.mitre.org/techniques/T1072/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0001",
+                    "name": "Initial Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                },
+                "technique": [
+                    {
+                        "id": "T1199",
+                        "name": "Trusted Relationship",
+                        "reference": "https://attack.mitre.org/techniques/T1199/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 207
+        "version": 208
     },
-    "id": "1ca62f14-4787-4913-b7af-df11745a49da_207",
+    "id": "1ca62f14-4787-4913-b7af-df11745a49da_208",
     "type": "security-rule"
 }

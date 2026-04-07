@@ -92,6 +92,11 @@
                         "id": "T1082",
                         "name": "System Information Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1082/"
+                    },
+                    {
+                        "id": "T1083",
+                        "name": "File and Directory Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1083/"
                     }
                 ]
             },
@@ -113,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "fb542346-1624-4cf2-bcc7-c68abaab261b_1",
+    "id": "fb542346-1624-4cf2-bcc7-c68abaab261b_2",
     "type": "security-rule"
 }

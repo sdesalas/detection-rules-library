@@ -61,7 +61,23 @@
                     "name": "Collection",
                     "reference": "https://attack.mitre.org/tactics/TA0009/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1005",
+                        "name": "Data from Local System",
+                        "reference": "https://attack.mitre.org/techniques/T1005/"
+                    },
+                    {
+                        "id": "T1114",
+                        "name": "Email Collection",
+                        "reference": "https://attack.mitre.org/techniques/T1114/"
+                    },
+                    {
+                        "id": "T1530",
+                        "name": "Data from Cloud Storage",
+                        "reference": "https://attack.mitre.org/techniques/T1530/"
+                    }
+                ]
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -70,13 +86,26 @@
                     "name": "Exfiltration",
                     "reference": "https://attack.mitre.org/tactics/TA0010/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1567",
+                        "name": "Exfiltration Over Web Service",
+                        "reference": "https://attack.mitre.org/techniques/T1567/",
+                        "subtechnique": [
+                            {
+                                "id": "T1567.002",
+                                "name": "Exfiltration to Cloud Storage",
+                                "reference": "https://attack.mitre.org/techniques/T1567/002/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "b8f54e38-7a1d-4c9b-9e2f-3a4b5c6d7e8f_1",
+    "id": "b8f54e38-7a1d-4c9b-9e2f-3a4b5c6d7e8f_2",
     "type": "security-rule"
 }

@@ -69,6 +69,18 @@
                         "id": "T1068",
                         "name": "Exploitation for Privilege Escalation",
                         "reference": "https://attack.mitre.org/techniques/T1068/"
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.006",
+                                "name": "Dynamic Linker Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1574/006/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -86,6 +98,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1574/",
                         "subtechnique": [
                             {
+                                "id": "T1574.006",
+                                "name": "Dynamic Linker Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1574/006/"
+                            },
+                            {
                                 "id": "T1574.007",
                                 "name": "Path Interception by PATH Environment Variable",
                                 "reference": "https://attack.mitre.org/techniques/T1574/007/"
@@ -97,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "8da41fc9-7735-4b24-9cc6-c78dfc9fc9c9_212",
+    "id": "8da41fc9-7735-4b24-9cc6-c78dfc9fc9c9_213",
     "type": "security-rule"
 }

@@ -54,13 +54,47 @@
                         "id": "T1078",
                         "name": "Valid Accounts",
                         "reference": "https://attack.mitre.org/techniques/T1078/"
+                    },
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.007",
+                                "name": "Additional Local or Domain Groups",
+                                "reference": "https://attack.mitre.org/techniques/T1098/007/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.007",
+                                "name": "Additional Local or Domain Groups",
+                                "reference": "https://attack.mitre.org/techniques/T1098/007/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "type": "machine_learning",
-        "version": 3
+        "version": 4
     },
-    "id": "aa28f01d-bc93-4c8f-bc01-6f67f2a0a833_3",
+    "id": "aa28f01d-bc93-4c8f-bc01-6f67f2a0a833_4",
     "type": "security-rule"
 }

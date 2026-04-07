@@ -84,14 +84,26 @@
                         "id": "T1543",
                         "name": "Create or Modify System Process",
                         "reference": "https://attack.mitre.org/techniques/T1543/"
+                    },
+                    {
+                        "id": "T1547",
+                        "name": "Boot or Logon Autostart Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1547/",
+                        "subtechnique": [
+                            {
+                                "id": "T1547.009",
+                                "name": "Shortcut Modification",
+                                "reference": "https://attack.mitre.org/techniques/T1547/009/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "c81cefcb-82b9-4408-a533-3c3df549e62d_111",
+    "id": "c81cefcb-82b9-4408-a533-3c3df549e62d_112",
     "type": "security-rule"
 }

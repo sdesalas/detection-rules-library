@@ -98,15 +98,22 @@
                     {
                         "id": "T1137",
                         "name": "Office Application Startup",
-                        "reference": "https://attack.mitre.org/techniques/T1137/"
+                        "reference": "https://attack.mitre.org/techniques/T1137/",
+                        "subtechnique": [
+                            {
+                                "id": "T1137.001",
+                                "name": "Office Template Macros",
+                                "reference": "https://attack.mitre.org/techniques/T1137/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 311
+        "version": 312
     },
-    "id": "397945f3-d39a-4e6f-8bcb-9656c2031438_311",
+    "id": "397945f3-d39a-4e6f-8bcb-9656c2031438_312",
     "type": "security-rule"
 }

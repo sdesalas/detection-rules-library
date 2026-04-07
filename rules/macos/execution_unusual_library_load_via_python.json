@@ -81,14 +81,19 @@
                                 "reference": "https://attack.mitre.org/techniques/T1059/006/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1129",
+                        "name": "Shared Modules",
+                        "reference": "https://attack.mitre.org/techniques/T1129/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "ab9a334a-f2c3-4f49-879f-480de71020d3_1",
+    "id": "ab9a334a-f2c3-4f49-879f-480de71020d3_2",
     "type": "security-rule"
 }

@@ -98,6 +98,18 @@
                         "id": "T1543",
                         "name": "Create or Modify System Process",
                         "reference": "https://attack.mitre.org/techniques/T1543/"
+                    },
+                    {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/",
+                        "subtechnique": [
+                            {
+                                "id": "T1556.003",
+                                "name": "Pluggable Authentication Modules",
+                                "reference": "https://attack.mitre.org/techniques/T1556/003/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -115,11 +127,26 @@
                         "reference": "https://attack.mitre.org/techniques/T1556/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/"
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "96f29282-ffcc-4ce7-834b-b17aee905568_3",
+    "id": "96f29282-ffcc-4ce7-834b-b17aee905568_4",
     "type": "security-rule"
 }

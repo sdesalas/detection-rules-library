@@ -134,6 +134,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1557",
+                        "name": "Adversary-in-the-Middle",
+                        "reference": "https://attack.mitre.org/techniques/T1557/"
+                    },
+                    {
                         "id": "T1558",
                         "name": "Steal or Forge Kerberos Tickets",
                         "reference": "https://attack.mitre.org/techniques/T1558/"
@@ -142,8 +147,8 @@
             }
         ],
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "e4e31051-ee01-4307-a6ee-b21b186958f4_212",
+    "id": "e4e31051-ee01-4307-a6ee-b21b186958f4_213",
     "type": "security-rule"
 }

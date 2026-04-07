@@ -85,6 +85,18 @@
                         "id": "T1078",
                         "name": "Valid Accounts",
                         "reference": "https://attack.mitre.org/techniques/T1078/"
+                    },
+                    {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/",
+                        "subtechnique": [
+                            {
+                                "id": "T1548.004",
+                                "name": "Elevated Execution with Prompt",
+                                "reference": "https://attack.mitre.org/techniques/T1548/004/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -99,15 +111,22 @@
                     {
                         "id": "T1059",
                         "name": "Command and Scripting Interpreter",
-                        "reference": "https://attack.mitre.org/techniques/T1059/"
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.002",
+                                "name": "AppleScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "827f8d8f-4117-4ae4-b551-f56d54b9da6b_212",
+    "id": "827f8d8f-4117-4ae4-b551-f56d54b9da6b_213",
     "type": "security-rule"
 }

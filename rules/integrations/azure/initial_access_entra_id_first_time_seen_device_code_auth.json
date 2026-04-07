@@ -99,18 +99,6 @@
                 },
                 "technique": [
                     {
-                        "id": "T1566",
-                        "name": "Phishing",
-                        "reference": "https://attack.mitre.org/techniques/T1566/",
-                        "subtechnique": [
-                            {
-                                "id": "T1566.002",
-                                "name": "Spearphishing Link",
-                                "reference": "https://attack.mitre.org/techniques/T1566/002/"
-                            }
-                        ]
-                    },
-                    {
                         "id": "T1078",
                         "name": "Valid Accounts",
                         "reference": "https://attack.mitre.org/techniques/T1078/",
@@ -121,14 +109,48 @@
                                 "reference": "https://attack.mitre.org/techniques/T1078/004/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1566",
+                        "name": "Phishing",
+                        "reference": "https://attack.mitre.org/techniques/T1566/",
+                        "subtechnique": [
+                            {
+                                "id": "T1566.002",
+                                "name": "Spearphishing Link",
+                                "reference": "https://attack.mitre.org/techniques/T1566/002/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1550",
+                        "name": "Use Alternate Authentication Material",
+                        "reference": "https://attack.mitre.org/techniques/T1550/",
+                        "subtechnique": [
+                            {
+                                "id": "T1550.001",
+                                "name": "Application Access Token",
+                                "reference": "https://attack.mitre.org/techniques/T1550/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "af22d970-7106-45b4-b5e3-460d15333727_8",
+    "id": "af22d970-7106-45b4-b5e3-460d15333727_9",
     "type": "security-rule"
 }

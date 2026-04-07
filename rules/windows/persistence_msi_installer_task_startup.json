@@ -97,6 +97,18 @@
                                 "reference": "https://attack.mitre.org/techniques/T1053/005/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1547",
+                        "name": "Boot or Logon Autostart Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1547/",
+                        "subtechnique": [
+                            {
+                                "id": "T1547.001",
+                                "name": "Registry Run Keys / Startup Folder",
+                                "reference": "https://attack.mitre.org/techniques/T1547/001/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -125,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "1719ee47-89b8-4407-9d55-6dff2629dd4c_5",
+    "id": "1719ee47-89b8-4407-9d55-6dff2629dd4c_6",
     "type": "security-rule"
 }

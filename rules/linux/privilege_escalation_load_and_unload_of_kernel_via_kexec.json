@@ -143,6 +143,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1014",
+                        "name": "Rootkit",
+                        "reference": "https://attack.mitre.org/techniques/T1014/"
+                    },
+                    {
                         "id": "T1601",
                         "name": "Modify System Image",
                         "reference": "https://attack.mitre.org/techniques/T1601/",
@@ -159,8 +164,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "4d4c35f4-414e-4d0c-bb7e-6db7c80a6957_112",
+    "id": "4d4c35f4-414e-4d0c-bb7e-6db7c80a6957_113",
     "type": "security-rule"
 }

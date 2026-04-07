@@ -166,7 +166,14 @@
                     {
                         "id": "T1027",
                         "name": "Obfuscated Files or Information",
-                        "reference": "https://attack.mitre.org/techniques/T1027/"
+                        "reference": "https://attack.mitre.org/techniques/T1027/",
+                        "subtechnique": [
+                            {
+                                "id": "T1027.010",
+                                "name": "Command Obfuscation",
+                                "reference": "https://attack.mitre.org/techniques/T1027/010/"
+                            }
+                        ]
                     },
                     {
                         "id": "T1140",
@@ -200,8 +207,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 10
+        "version": 11
     },
-    "id": "b0c98cfb-0745-4513-b6f9-08dddb033490_10",
+    "id": "b0c98cfb-0745-4513-b6f9-08dddb033490_11",
     "type": "security-rule"
 }

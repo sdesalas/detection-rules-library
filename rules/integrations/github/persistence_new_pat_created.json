@@ -67,6 +67,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.001",
+                                "name": "Additional Cloud Credentials",
+                                "reference": "https://attack.mitre.org/techniques/T1098/001/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1136",
                         "name": "Create Account",
                         "reference": "https://attack.mitre.org/techniques/T1136/",
@@ -98,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "214d4e03-90b0-4813-9ab6-672b47158590_1",
+    "id": "214d4e03-90b0-4813-9ab6-672b47158590_2",
     "type": "security-rule"
 }
