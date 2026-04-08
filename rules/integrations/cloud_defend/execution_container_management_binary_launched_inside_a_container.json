@@ -107,12 +107,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1609/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0007",
+                    "name": "Discovery",
+                    "reference": "https://attack.mitre.org/tactics/TA0007/"
+                },
+                "technique": [
+                    {
+                        "id": "T1613",
+                        "name": "Container and Resource Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1613/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "6c6bb7ea-0636-44ca-b541-201478ef6b50_104",
+    "id": "6c6bb7ea-0636-44ca-b541-201478ef6b50_105",
     "type": "security-rule"
 }

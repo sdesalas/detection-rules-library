@@ -100,7 +100,14 @@
                     {
                         "id": "T1496",
                         "name": "Resource Hijacking",
-                        "reference": "https://attack.mitre.org/techniques/T1496/"
+                        "reference": "https://attack.mitre.org/techniques/T1496/",
+                        "subtechnique": [
+                            {
+                                "id": "T1496.001",
+                                "name": "Compute Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1496/001/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -129,8 +136,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "5e4023e7-6357-4061-ae1c-9df33e78c674_107",
+    "id": "5e4023e7-6357-4061-ae1c-9df33e78c674_108",
     "type": "security-rule"
 }

@@ -116,14 +116,26 @@
                         "id": "T1068",
                         "name": "Exploitation for Privilege Escalation",
                         "reference": "https://attack.mitre.org/techniques/T1068/"
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.007",
+                                "name": "Path Interception by PATH Environment Variable",
+                                "reference": "https://attack.mitre.org/techniques/T1574/007/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "c5da2519-160c-4cc9-bf69-b0223e99d0db_2",
+    "id": "c5da2519-160c-4cc9-bf69-b0223e99d0db_3",
     "type": "security-rule"
 }

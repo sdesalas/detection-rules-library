@@ -113,12 +113,46 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.009",
+                                "name": "Break Process Trees",
+                                "reference": "https://attack.mitre.org/techniques/T1036/009/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1134",
+                        "name": "Access Token Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1134/",
+                        "subtechnique": [
+                            {
+                                "id": "T1134.004",
+                                "name": "Parent PID Spoofing",
+                                "reference": "https://attack.mitre.org/techniques/T1134/004/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 319
+        "version": 320
     },
-    "id": "35df0dd8-092d-4a83-88c1-5151a804f31b_319",
+    "id": "35df0dd8-092d-4a83-88c1-5151a804f31b_320",
     "type": "security-rule"
 }

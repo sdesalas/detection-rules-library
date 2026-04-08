@@ -84,12 +84,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "38f384e0-aef8-11ed-9a38-f661ea17fbcc_5",
+    "id": "38f384e0-aef8-11ed-9a38-f661ea17fbcc_6",
     "type": "security-rule"
 }

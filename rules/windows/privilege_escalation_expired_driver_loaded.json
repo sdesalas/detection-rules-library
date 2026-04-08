@@ -86,14 +86,26 @@
                                 "reference": "https://attack.mitre.org/techniques/T1036/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1553",
+                        "name": "Subvert Trust Controls",
+                        "reference": "https://attack.mitre.org/techniques/T1553/",
+                        "subtechnique": [
+                            {
+                                "id": "T1553.002",
+                                "name": "Code Signing",
+                                "reference": "https://attack.mitre.org/techniques/T1553/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "d12bac54-ab2a-4159-933f-d7bcefa7b61d_8",
+    "id": "d12bac54-ab2a-4159-933f-d7bcefa7b61d_9",
     "type": "security-rule"
 }

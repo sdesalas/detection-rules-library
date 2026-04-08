@@ -49,14 +49,21 @@
                     {
                         "id": "T1052",
                         "name": "Exfiltration Over Physical Medium",
-                        "reference": "https://attack.mitre.org/techniques/T1052/"
+                        "reference": "https://attack.mitre.org/techniques/T1052/",
+                        "subtechnique": [
+                            {
+                                "id": "T1052.001",
+                                "name": "Exfiltration over USB",
+                                "reference": "https://attack.mitre.org/techniques/T1052/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "type": "machine_learning",
-        "version": 7
+        "version": 8
     },
-    "id": "4b95ecea-7225-4690-9938-2a2c0bad9c99_7",
+    "id": "4b95ecea-7225-4690-9938-2a2c0bad9c99_8",
     "type": "security-rule"
 }

@@ -90,14 +90,56 @@
                         "id": "T1055",
                         "name": "Process Injection",
                         "reference": "https://attack.mitre.org/techniques/T1055/"
+                    },
+                    {
+                        "id": "T1218",
+                        "name": "System Binary Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1218/",
+                        "subtechnique": [
+                            {
+                                "id": "T1218.003",
+                                "name": "CMSTP",
+                                "reference": "https://attack.mitre.org/techniques/T1218/003/"
+                            },
+                            {
+                                "id": "T1218.005",
+                                "name": "Mshta",
+                                "reference": "https://attack.mitre.org/techniques/T1218/005/"
+                            },
+                            {
+                                "id": "T1218.010",
+                                "name": "Regsvr32",
+                                "reference": "https://attack.mitre.org/techniques/T1218/010/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1620",
+                        "name": "Reflective Code Loading",
+                        "reference": "https://attack.mitre.org/techniques/T1620/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1047",
+                        "name": "Windows Management Instrumentation",
+                        "reference": "https://attack.mitre.org/techniques/T1047/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 312
+        "version": 313
     },
-    "id": "acf738b5-b5b2-4acc-bad9-1e18ee234f40_312",
+    "id": "acf738b5-b5b2-4acc-bad9-1e18ee234f40_313",
     "type": "security-rule"
 }

@@ -90,6 +90,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1046",
+                        "name": "Network Service Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1046/"
+                    },
+                    {
                         "id": "T1082",
                         "name": "System Information Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1082/"
@@ -99,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "90169566-2260-4824-b8e4-8615c3b4ed52_212",
+    "id": "90169566-2260-4824-b8e4-8615c3b4ed52_213",
     "type": "security-rule"
 }

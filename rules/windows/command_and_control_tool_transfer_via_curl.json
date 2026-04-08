@@ -119,17 +119,44 @@
                 },
                 "technique": [
                     {
+                        "id": "T1071",
+                        "name": "Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1071/",
+                        "subtechnique": [
+                            {
+                                "id": "T1071.001",
+                                "name": "Web Protocols",
+                                "reference": "https://attack.mitre.org/techniques/T1071/001/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1105",
                         "name": "Ingress Tool Transfer",
                         "reference": "https://attack.mitre.org/techniques/T1105/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0010",
+                    "name": "Exfiltration",
+                    "reference": "https://attack.mitre.org/tactics/TA0010/"
+                },
+                "technique": [
+                    {
+                        "id": "T1567",
+                        "name": "Exfiltration Over Web Service",
+                        "reference": "https://attack.mitre.org/techniques/T1567/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "2e0051cb-51f8-492f-9d90-174e16b5e96b_5",
+    "id": "2e0051cb-51f8-492f-9d90-174e16b5e96b_6",
     "type": "security-rule"
 }

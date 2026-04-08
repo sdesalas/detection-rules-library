@@ -62,6 +62,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/"
+                    },
+                    {
                         "id": "T1562",
                         "name": "Impair Defenses",
                         "reference": "https://attack.mitre.org/techniques/T1562/",
@@ -78,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 414
+        "version": 415
     },
-    "id": "cc92c835-da92-45c9-9f29-b4992ad621a0_414",
+    "id": "cc92c835-da92-45c9-9f29-b4992ad621a0_415",
     "type": "security-rule"
 }

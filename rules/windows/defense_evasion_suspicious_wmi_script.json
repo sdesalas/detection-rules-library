@@ -106,6 +106,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1218",
+                        "name": "System Binary Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1218/"
+                    },
+                    {
                         "id": "T1220",
                         "name": "XSL Script Processing",
                         "reference": "https://attack.mitre.org/techniques/T1220/"
@@ -129,8 +134,8 @@
             }
         ],
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "7f370d54-c0eb-4270-ac5a-9a6020585dc6_212",
+    "id": "7f370d54-c0eb-4270-ac5a-9a6020585dc6_213",
     "type": "security-rule"
 }

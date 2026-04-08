@@ -105,14 +105,26 @@
                                 "reference": "https://attack.mitre.org/techniques/T1036/005/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1055",
+                        "name": "Process Injection",
+                        "reference": "https://attack.mitre.org/techniques/T1055/",
+                        "subtechnique": [
+                            {
+                                "id": "T1055.012",
+                                "name": "Process Hollowing",
+                                "reference": "https://attack.mitre.org/techniques/T1055/012/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 319
+        "version": 320
     },
-    "id": "b41a13c6-ba45-4bab-a534-df53d0cfed6a_319",
+    "id": "b41a13c6-ba45-4bab-a534-df53d0cfed6a_320",
     "type": "security-rule"
 }

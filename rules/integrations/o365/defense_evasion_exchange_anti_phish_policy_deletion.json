@@ -75,6 +75,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1484",
+                        "name": "Domain or Tenant Policy Modification",
+                        "reference": "https://attack.mitre.org/techniques/T1484/"
+                    },
+                    {
                         "id": "T1562",
                         "name": "Impair Defenses",
                         "reference": "https://attack.mitre.org/techniques/T1562/",
@@ -91,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 211
+        "version": 212
     },
-    "id": "d68eb1b5-5f1c-4b6d-9e63-5b6b145cd4aa_211",
+    "id": "d68eb1b5-5f1c-4b6d-9e63-5b6b145cd4aa_212",
     "type": "security-rule"
 }

@@ -71,18 +71,6 @@
                 },
                 "technique": [
                     {
-                        "id": "T1098",
-                        "name": "Account Manipulation",
-                        "reference": "https://attack.mitre.org/techniques/T1098/",
-                        "subtechnique": [
-                            {
-                                "id": "T1098.005",
-                                "name": "Device Registration",
-                                "reference": "https://attack.mitre.org/techniques/T1098/005/"
-                            }
-                        ]
-                    },
-                    {
                         "id": "T1078",
                         "name": "Valid Accounts",
                         "reference": "https://attack.mitre.org/techniques/T1078/",
@@ -93,14 +81,26 @@
                                 "reference": "https://attack.mitre.org/techniques/T1078/004/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.005",
+                                "name": "Device Registration",
+                                "reference": "https://attack.mitre.org/techniques/T1098/005/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "a6d4e070-b9b9-4294-b028-d9e21ad47413_2",
+    "id": "a6d4e070-b9b9-4294-b028-d9e21ad47413_3",
     "type": "security-rule"
 }

@@ -125,6 +125,11 @@
                                 "reference": "https://attack.mitre.org/techniques/T1059/004/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1609",
+                        "name": "Container Administration Command",
+                        "reference": "https://attack.mitre.org/techniques/T1609/"
                     }
                 ]
             },
@@ -146,8 +151,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "5d1c962d-5d2a-48d4-bdcf-e980e3914947_1",
+    "id": "5d1c962d-5d2a-48d4-bdcf-e980e3914947_2",
     "type": "security-rule"
 }

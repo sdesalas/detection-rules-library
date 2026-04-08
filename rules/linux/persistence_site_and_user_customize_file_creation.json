@@ -100,6 +100,11 @@
                                 "id": "T1059.004",
                                 "name": "Unix Shell",
                                 "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            },
+                            {
+                                "id": "T1059.006",
+                                "name": "Python",
+                                "reference": "https://attack.mitre.org/techniques/T1059/006/"
                             }
                         ]
                     }
@@ -113,12 +118,34 @@
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": []
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/",
+                        "subtechnique": [
+                            {
+                                "id": "T1546.018",
+                                "name": "Python Startup Hooks",
+                                "reference": "https://attack.mitre.org/techniques/T1546/018/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "d788313c-9e0b-4c5a-8c4b-c3f05a47d5a8_6",
+    "id": "d788313c-9e0b-4c5a-8c4b-c3f05a47d5a8_7",
     "type": "security-rule"
 }

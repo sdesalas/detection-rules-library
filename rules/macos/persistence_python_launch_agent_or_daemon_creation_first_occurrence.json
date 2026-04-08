@@ -75,6 +75,11 @@
                                 "id": "T1543.001",
                                 "name": "Launch Agent",
                                 "reference": "https://attack.mitre.org/techniques/T1543/001/"
+                            },
+                            {
+                                "id": "T1543.004",
+                                "name": "Launch Daemon",
+                                "reference": "https://attack.mitre.org/techniques/T1543/004/"
                             }
                         ]
                     }
@@ -83,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "25368123-b7b8-4344-9fd4-df28051b4c6e_1",
+    "id": "25368123-b7b8-4344-9fd4-df28051b4c6e_2",
     "type": "security-rule"
 }

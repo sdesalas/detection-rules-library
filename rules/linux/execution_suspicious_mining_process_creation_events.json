@@ -94,12 +94,49 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0040",
+                    "name": "Impact",
+                    "reference": "https://attack.mitre.org/tactics/TA0040/"
+                },
+                "technique": [
+                    {
+                        "id": "T1496",
+                        "name": "Resource Hijacking",
+                        "reference": "https://attack.mitre.org/techniques/T1496/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1543",
+                        "name": "Create or Modify System Process",
+                        "reference": "https://attack.mitre.org/techniques/T1543/",
+                        "subtechnique": [
+                            {
+                                "id": "T1543.002",
+                                "name": "Systemd Service",
+                                "reference": "https://attack.mitre.org/techniques/T1543/002/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "e2258f48-ba75-4248-951b-7c885edf18c2_111",
+    "id": "e2258f48-ba75-4248-951b-7c885edf18c2_112",
     "type": "security-rule"
 }

@@ -67,12 +67,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1098/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.003",
+                                "name": "Additional Cloud Roles",
+                                "reference": "https://attack.mitre.org/techniques/T1098/003/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 412
+        "version": 413
     },
-    "id": "b8075894-0b62-46e5-977c-31275da34419_412",
+    "id": "b8075894-0b62-46e5-977c-31275da34419_413",
     "type": "security-rule"
 }

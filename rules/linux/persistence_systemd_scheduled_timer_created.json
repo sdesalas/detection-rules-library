@@ -100,12 +100,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1053",
+                        "name": "Scheduled Task/Job",
+                        "reference": "https://attack.mitre.org/techniques/T1053/",
+                        "subtechnique": [
+                            {
+                                "id": "T1053.006",
+                                "name": "Systemd Timers",
+                                "reference": "https://attack.mitre.org/techniques/T1053/006/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 19
+        "version": 20
     },
-    "id": "7fb500fa-8e24-4bd1-9480-2a819352602c_19",
+    "id": "7fb500fa-8e24-4bd1-9480-2a819352602c_20",
     "type": "security-rule"
 }

@@ -81,32 +81,37 @@
                 },
                 "technique": [
                     {
-                        "id": "T1018",
-                        "name": "Remote System Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1018/"
-                    },
-                    {
-                        "id": "T1613",
-                        "name": "Container and Resource Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1613/"
-                    },
-                    {
                         "id": "T1016",
                         "name": "System Network Configuration Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1016/"
                     },
                     {
+                        "id": "T1018",
+                        "name": "Remote System Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1018/"
+                    },
+                    {
+                        "id": "T1046",
+                        "name": "Network Service Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1046/"
+                    },
+                    {
                         "id": "T1049",
                         "name": "System Network Connections Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1049/"
+                    },
+                    {
+                        "id": "T1613",
+                        "name": "Container and Resource Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1613/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "74ee9a2d-5ed3-40c8-9e6c-523d2e6a17ef_1",
+    "id": "74ee9a2d-5ed3-40c8-9e6c-523d2e6a17ef_2",
     "type": "security-rule"
 }

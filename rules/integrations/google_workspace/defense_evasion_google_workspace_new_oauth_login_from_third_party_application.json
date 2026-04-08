@@ -111,12 +111,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1078",
+                        "name": "Valid Accounts",
+                        "reference": "https://attack.mitre.org/techniques/T1078/",
+                        "subtechnique": [
+                            {
+                                "id": "T1078.004",
+                                "name": "Cloud Accounts",
+                                "reference": "https://attack.mitre.org/techniques/T1078/004/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 9
+        "version": 10
     },
-    "id": "21bafdf0-cf17-11ed-bd57-f661ea17fbcc_9",
+    "id": "21bafdf0-cf17-11ed-bd57-f661ea17fbcc_10",
     "type": "security-rule"
 }

@@ -73,15 +73,22 @@
                     {
                         "id": "T1574",
                         "name": "Hijack Execution Flow",
-                        "reference": "https://attack.mitre.org/techniques/T1574/"
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.001",
+                                "name": "DLL",
+                                "reference": "https://attack.mitre.org/techniques/T1574/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "e7357fec-6e9c-41b9-b93d-6e4fc40c7d47_4",
+    "id": "e7357fec-6e9c-41b9-b93d-6e4fc40c7d47_5",
     "type": "security-rule"
 }

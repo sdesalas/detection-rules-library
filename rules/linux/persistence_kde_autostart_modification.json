@@ -90,15 +90,22 @@
                     {
                         "id": "T1547",
                         "name": "Boot or Logon Autostart Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1547/"
+                        "reference": "https://attack.mitre.org/techniques/T1547/",
+                        "subtechnique": [
+                            {
+                                "id": "T1547.013",
+                                "name": "XDG Autostart Entries",
+                                "reference": "https://attack.mitre.org/techniques/T1547/013/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 219
+        "version": 220
     },
-    "id": "e3e904b3-0a8e-4e68-86a8-977a163e21d3_219",
+    "id": "e3e904b3-0a8e-4e68-86a8-977a163e21d3_220",
     "type": "security-rule"
 }

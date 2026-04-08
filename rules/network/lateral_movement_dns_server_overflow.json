@@ -67,6 +67,7 @@
         "tags": [
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
+            "Tactic: Impact",
             "Resources: Investigation Guide",
             "Use Case: Vulnerability"
         ],
@@ -85,12 +86,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1210/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0040",
+                    "name": "Impact",
+                    "reference": "https://attack.mitre.org/tactics/TA0040/"
+                },
+                "technique": [
+                    {
+                        "id": "T1499",
+                        "name": "Endpoint Denial of Service",
+                        "reference": "https://attack.mitre.org/techniques/T1499/",
+                        "subtechnique": [
+                            {
+                                "id": "T1499.004",
+                                "name": "Application or System Exploitation",
+                                "reference": "https://attack.mitre.org/techniques/T1499/004/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "11013227-0301-4a8c-b150-4db924484475_107",
+    "id": "11013227-0301-4a8c-b150-4db924484475_108",
     "type": "security-rule"
 }

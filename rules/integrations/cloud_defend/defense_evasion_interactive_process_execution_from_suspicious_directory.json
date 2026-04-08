@@ -74,6 +74,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1564",
+                        "name": "Hide Artifacts",
+                        "reference": "https://attack.mitre.org/techniques/T1564/",
+                        "subtechnique": [
+                            {
+                                "id": "T1564.001",
+                                "name": "Hidden Files and Directories",
+                                "reference": "https://attack.mitre.org/techniques/T1564/001/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1620",
                         "name": "Reflective Code Loading",
                         "reference": "https://attack.mitre.org/techniques/T1620/"
@@ -120,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "279e272a-91d9-4780-878c-bfcac76e6e31_2",
+    "id": "279e272a-91d9-4780-878c-bfcac76e6e31_3",
     "type": "security-rule"
 }

@@ -70,7 +70,14 @@
                     {
                         "id": "T1127",
                         "name": "Trusted Developer Utilities Proxy Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1127/"
+                        "reference": "https://attack.mitre.org/techniques/T1127/",
+                        "subtechnique": [
+                            {
+                                "id": "T1127.002",
+                                "name": "ClickOnce",
+                                "reference": "https://attack.mitre.org/techniques/T1127/002/"
+                            }
+                        ]
                     },
                     {
                         "id": "T1218",
@@ -88,8 +95,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "5297b7f1-bccd-4611-93fa-ea342a01ff84_3",
+    "id": "5297b7f1-bccd-4611-93fa-ea342a01ff84_4",
     "type": "security-rule"
 }

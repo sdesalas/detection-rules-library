@@ -93,15 +93,22 @@
                     {
                         "id": "T1564",
                         "name": "Hide Artifacts",
-                        "reference": "https://attack.mitre.org/techniques/T1564/"
+                        "reference": "https://attack.mitre.org/techniques/T1564/",
+                        "subtechnique": [
+                            {
+                                "id": "T1564.001",
+                                "name": "Hidden Files and Directories",
+                                "reference": "https://attack.mitre.org/techniques/T1564/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 114
+        "version": 115
     },
-    "id": "dc71c186-9fe4-4437-a4d0-85ebb32b8204_114",
+    "id": "dc71c186-9fe4-4437-a4d0-85ebb32b8204_115",
     "type": "security-rule"
 }

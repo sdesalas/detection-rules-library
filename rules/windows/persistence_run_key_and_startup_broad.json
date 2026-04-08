@@ -103,14 +103,29 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1112",
+                        "name": "Modify Registry",
+                        "reference": "https://attack.mitre.org/techniques/T1112/"
+                    }
+                ]
             }
         ],
         "timeline_id": "3e47ef71-ebfc-4520-975c-cb27fc090799",
         "timeline_title": "Comprehensive Registry Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 118
+        "version": 119
     },
-    "id": "97fc44d3-8dae-4019-ae83-298c3015600f_118",
+    "id": "97fc44d3-8dae-4019-ae83-298c3015600f_119",
     "type": "security-rule"
 }

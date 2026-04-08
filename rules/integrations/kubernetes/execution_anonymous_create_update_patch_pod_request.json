@@ -62,13 +62,19 @@
                     "name": "Execution",
                     "reference": "https://attack.mitre.org/tactics/TA0002/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1610",
+                        "name": "Deploy Container",
+                        "reference": "https://attack.mitre.org/techniques/T1610/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "3a01e5c6-ce01-46d7-ac9f-52dc349695fb_1",
+    "id": "3a01e5c6-ce01-46d7-ac9f-52dc349695fb_2",
     "type": "security-rule"
 }

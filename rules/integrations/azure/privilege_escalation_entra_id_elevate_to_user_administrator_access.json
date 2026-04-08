@@ -87,12 +87,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.003",
+                                "name": "Additional Cloud Roles",
+                                "reference": "https://attack.mitre.org/techniques/T1098/003/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "8d9c4128-372a-11f0-9d8f-f661ea17fbcd_3",
+    "id": "8d9c4128-372a-11f0-9d8f-f661ea17fbcd_4",
     "type": "security-rule"
 }

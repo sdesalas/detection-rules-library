@@ -106,6 +106,16 @@
                 },
                 "technique": [
                     {
+                        "id": "T1016",
+                        "name": "System Network Configuration Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1016/"
+                    },
+                    {
+                        "id": "T1033",
+                        "name": "System Owner/User Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1033/"
+                    },
+                    {
                         "id": "T1082",
                         "name": "System Information Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1082/"
@@ -114,8 +124,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "60da1bd7-c0b9-4ba2-b487-50a672274c04_1",
+    "id": "60da1bd7-c0b9-4ba2-b487-50a672274c04_2",
     "type": "security-rule"
 }

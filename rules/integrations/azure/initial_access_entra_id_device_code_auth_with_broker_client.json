@@ -85,18 +85,6 @@
                 },
                 "technique": [
                     {
-                        "id": "T1566",
-                        "name": "Phishing",
-                        "reference": "https://attack.mitre.org/techniques/T1566/",
-                        "subtechnique": [
-                            {
-                                "id": "T1566.002",
-                                "name": "Spearphishing Link",
-                                "reference": "https://attack.mitre.org/techniques/T1566/002/"
-                            }
-                        ]
-                    },
-                    {
                         "id": "T1078",
                         "name": "Valid Accounts",
                         "reference": "https://attack.mitre.org/techniques/T1078/",
@@ -105,6 +93,18 @@
                                 "id": "T1078.004",
                                 "name": "Cloud Accounts",
                                 "reference": "https://attack.mitre.org/techniques/T1078/004/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1566",
+                        "name": "Phishing",
+                        "reference": "https://attack.mitre.org/techniques/T1566/",
+                        "subtechnique": [
+                            {
+                                "id": "T1566.002",
+                                "name": "Spearphishing Link",
+                                "reference": "https://attack.mitre.org/techniques/T1566/002/"
                             }
                         ]
                     }
@@ -118,6 +118,18 @@
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
+                    {
+                        "id": "T1078",
+                        "name": "Valid Accounts",
+                        "reference": "https://attack.mitre.org/techniques/T1078/",
+                        "subtechnique": [
+                            {
+                                "id": "T1078.004",
+                                "name": "Cloud Accounts",
+                                "reference": "https://attack.mitre.org/techniques/T1078/004/"
+                            }
+                        ]
+                    },
                     {
                         "id": "T1550",
                         "name": "Use Alternate Authentication Material",
@@ -135,8 +147,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 6
+        "version": 7
     },
-    "id": "a83b3dac-325a-11ef-b3e6-f661ea17fbce_6",
+    "id": "a83b3dac-325a-11ef-b3e6-f661ea17fbce_7",
     "type": "security-rule"
 }

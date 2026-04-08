@@ -49,14 +49,21 @@
                     {
                         "id": "T1011",
                         "name": "Exfiltration Over Other Network Medium",
-                        "reference": "https://attack.mitre.org/techniques/T1011/"
+                        "reference": "https://attack.mitre.org/techniques/T1011/",
+                        "subtechnique": [
+                            {
+                                "id": "T1011.001",
+                                "name": "Exfiltration Over Bluetooth",
+                                "reference": "https://attack.mitre.org/techniques/T1011/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "type": "machine_learning",
-        "version": 7
+        "version": 8
     },
-    "id": "e92c99b6-c547-4bb6-b244-2f27394bc849_7",
+    "id": "e92c99b6-c547-4bb6-b244-2f27394bc849_8",
     "type": "security-rule"
 }

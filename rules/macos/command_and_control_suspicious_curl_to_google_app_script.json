@@ -77,9 +77,16 @@
                 },
                 "technique": [
                     {
-                        "id": "T1105",
-                        "name": "Ingress Tool Transfer",
-                        "reference": "https://attack.mitre.org/techniques/T1105/"
+                        "id": "T1071",
+                        "name": "Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1071/",
+                        "subtechnique": [
+                            {
+                                "id": "T1071.001",
+                                "name": "Web Protocols",
+                                "reference": "https://attack.mitre.org/techniques/T1071/001/"
+                            }
+                        ]
                     },
                     {
                         "id": "T1102",
@@ -92,13 +99,18 @@
                                 "reference": "https://attack.mitre.org/techniques/T1102/002/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1105",
+                        "name": "Ingress Tool Transfer",
+                        "reference": "https://attack.mitre.org/techniques/T1105/"
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "6b82a0ce-10ac-4cb7-8a66-0ba4d24540cf_1",
+    "id": "6b82a0ce-10ac-4cb7-8a66-0ba4d24540cf_2",
     "type": "security-rule"
 }

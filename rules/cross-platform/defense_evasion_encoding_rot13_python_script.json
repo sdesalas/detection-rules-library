@@ -88,11 +88,6 @@
                 },
                 "technique": [
                     {
-                        "id": "T1140",
-                        "name": "Deobfuscate/Decode Files or Information",
-                        "reference": "https://attack.mitre.org/techniques/T1140/"
-                    },
-                    {
                         "id": "T1027",
                         "name": "Obfuscated Files or Information",
                         "reference": "https://attack.mitre.org/techniques/T1027/",
@@ -103,13 +98,40 @@
                                 "reference": "https://attack.mitre.org/techniques/T1027/013/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1140",
+                        "name": "Deobfuscate/Decode Files or Information",
+                        "reference": "https://attack.mitre.org/techniques/T1140/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.006",
+                                "name": "Python",
+                                "reference": "https://attack.mitre.org/techniques/T1059/006/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "5ab49127-b1b3-46e6-8a38-9e8512a2a363_5",
+    "id": "5ab49127-b1b3-46e6-8a38-9e8512a2a363_6",
     "type": "security-rule"
 }

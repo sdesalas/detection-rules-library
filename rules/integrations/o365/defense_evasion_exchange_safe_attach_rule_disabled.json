@@ -76,15 +76,22 @@
                     {
                         "id": "T1562",
                         "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/"
+                        "reference": "https://attack.mitre.org/techniques/T1562/",
+                        "subtechnique": [
+                            {
+                                "id": "T1562.001",
+                                "name": "Disable or Modify Tools",
+                                "reference": "https://attack.mitre.org/techniques/T1562/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 211
+        "version": 212
     },
-    "id": "03024bd9-d23f-4ec1-8674-3cf1a21e130b_211",
+    "id": "03024bd9-d23f-4ec1-8674-3cf1a21e130b_212",
     "type": "security-rule"
 }

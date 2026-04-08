@@ -103,12 +103,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.005",
+                                "name": "Device Registration",
+                                "reference": "https://attack.mitre.org/techniques/T1098/005/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "90efea04-5675-11f0-8f80-f661ea17fbcd_3",
+    "id": "90efea04-5675-11f0-8f80-f661ea17fbcd_4",
     "type": "security-rule"
 }

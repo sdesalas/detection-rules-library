@@ -139,14 +139,26 @@
                         "id": "T1218",
                         "name": "System Binary Proxy Execution",
                         "reference": "https://attack.mitre.org/techniques/T1218/"
+                    },
+                    {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/",
+                        "subtechnique": [
+                            {
+                                "id": "T1548.001",
+                                "name": "Setuid and Setgid",
+                                "reference": "https://attack.mitre.org/techniques/T1548/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "341c6e18-9ef1-437e-bf18-b513f3ae2130_2",
+    "id": "341c6e18-9ef1-437e-bf18-b513f3ae2130_3",
     "type": "security-rule"
 }

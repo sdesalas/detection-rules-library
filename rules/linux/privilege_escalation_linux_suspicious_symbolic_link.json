@@ -92,6 +92,11 @@
                         "id": "T1548",
                         "name": "Abuse Elevation Control Mechanism",
                         "reference": "https://attack.mitre.org/techniques/T1548/"
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/"
                     }
                 ]
             },
@@ -116,12 +121,42 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "8a024633-c444-45c0-a4fe-78128d8c1ab6_10",
+    "id": "8a024633-c444-45c0-a4fe-78128d8c1ab6_11",
     "type": "security-rule"
 }

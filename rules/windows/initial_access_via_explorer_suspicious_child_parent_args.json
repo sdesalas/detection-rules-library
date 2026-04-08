@@ -142,6 +142,18 @@
                                 "reference": "https://attack.mitre.org/techniques/T1059/005/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1559",
+                        "name": "Inter-Process Communication",
+                        "reference": "https://attack.mitre.org/techniques/T1559/",
+                        "subtechnique": [
+                            {
+                                "id": "T1559.001",
+                                "name": "Component Object Model",
+                                "reference": "https://attack.mitre.org/techniques/T1559/001/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -156,15 +168,32 @@
                     {
                         "id": "T1218",
                         "name": "System Binary Proxy Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1218/"
+                        "reference": "https://attack.mitre.org/techniques/T1218/",
+                        "subtechnique": [
+                            {
+                                "id": "T1218.005",
+                                "name": "Mshta",
+                                "reference": "https://attack.mitre.org/techniques/T1218/005/"
+                            },
+                            {
+                                "id": "T1218.010",
+                                "name": "Regsvr32",
+                                "reference": "https://attack.mitre.org/techniques/T1218/010/"
+                            },
+                            {
+                                "id": "T1218.011",
+                                "name": "Rundll32",
+                                "reference": "https://attack.mitre.org/techniques/T1218/011/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 312
+        "version": 313
     },
-    "id": "9a5b4e31-6cde-4295-9ff7-6be1b8567e1b_312",
+    "id": "9a5b4e31-6cde-4295-9ff7-6be1b8567e1b_313",
     "type": "security-rule"
 }

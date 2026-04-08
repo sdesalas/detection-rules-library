@@ -94,14 +94,19 @@
                         "id": "T1057",
                         "name": "Process Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1057/"
+                    },
+                    {
+                        "id": "T1083",
+                        "name": "File and Directory Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1083/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "d74d6506-427a-4790-b170-0c2a6ddac799_108",
+    "id": "d74d6506-427a-4790-b170-0c2a6ddac799_109",
     "type": "security-rule"
 }

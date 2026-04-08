@@ -109,6 +109,18 @@
                                 "reference": "https://attack.mitre.org/techniques/T1543/003/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.011",
+                                "name": "Services Registry Permissions Weakness",
+                                "reference": "https://attack.mitre.org/techniques/T1574/011/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -130,8 +142,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 315
+        "version": 316
     },
-    "id": "403ef0d3-8259-40c9-a5b6-d48354712e49_315",
+    "id": "403ef0d3-8259-40c9-a5b6-d48354712e49_316",
     "type": "security-rule"
 }

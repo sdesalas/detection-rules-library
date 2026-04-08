@@ -121,12 +121,42 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0011",
+                    "name": "Command and Control",
+                    "reference": "https://attack.mitre.org/tactics/TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "T1105",
+                        "name": "Ingress Tool Transfer",
+                        "reference": "https://attack.mitre.org/techniques/T1105/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1027",
+                        "name": "Obfuscated Files or Information",
+                        "reference": "https://attack.mitre.org/techniques/T1027/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "ff18d24b-2ba6-4691-a17f-75c4380d0965_1",
+    "id": "ff18d24b-2ba6-4691-a17f-75c4380d0965_2",
     "type": "security-rule"
 }

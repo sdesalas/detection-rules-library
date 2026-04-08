@@ -81,14 +81,41 @@
                         "id": "T1082",
                         "name": "System Information Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1082/"
+                    },
+                    {
+                        "id": "T1083",
+                        "name": "File and Directory Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1083/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1547",
+                        "name": "Boot or Logon Autostart Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1547/",
+                        "subtechnique": [
+                            {
+                                "id": "T1547.006",
+                                "name": "Kernel Modules and Extensions",
+                                "reference": "https://attack.mitre.org/techniques/T1547/006/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 111
+        "version": 112
     },
-    "id": "40ddbcc8-6561-44d9-afc8-eefdbfe0cccd_111",
+    "id": "40ddbcc8-6561-44d9-afc8-eefdbfe0cccd_112",
     "type": "security-rule"
 }

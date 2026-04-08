@@ -87,6 +87,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1102/",
                         "subtechnique": [
                             {
+                                "id": "T1102.001",
+                                "name": "Dead Drop Resolver",
+                                "reference": "https://attack.mitre.org/techniques/T1102/001/"
+                            },
+                            {
                                 "id": "T1102.002",
                                 "name": "Bidirectional Communication",
                                 "reference": "https://attack.mitre.org/techniques/T1102/002/"
@@ -109,6 +114,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1059/",
                         "subtechnique": [
                             {
+                                "id": "T1059.002",
+                                "name": "AppleScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/002/"
+                            },
+                            {
                                 "id": "T1059.004",
                                 "name": "Unix Shell",
                                 "reference": "https://attack.mitre.org/techniques/T1059/004/"
@@ -129,8 +139,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "bba8c7d1-172b-435d-9034-02ed9289c628_1",
+    "id": "bba8c7d1-172b-435d-9034-02ed9289c628_2",
     "type": "security-rule"
 }

@@ -119,12 +119,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1595/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0006",
+                    "name": "Credential Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "T1040",
+                        "name": "Network Sniffing",
+                        "reference": "https://attack.mitre.org/techniques/T1040/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "1a289854-5b78-49fe-9440-8a8096b1ab50_104",
+    "id": "1a289854-5b78-49fe-9440-8a8096b1ab50_105",
     "type": "security-rule"
 }

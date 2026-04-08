@@ -84,7 +84,14 @@
                     {
                         "id": "T1027",
                         "name": "Obfuscated Files or Information",
-                        "reference": "https://attack.mitre.org/techniques/T1027/"
+                        "reference": "https://attack.mitre.org/techniques/T1027/",
+                        "subtechnique": [
+                            {
+                                "id": "T1027.010",
+                                "name": "Command Obfuscation",
+                                "reference": "https://attack.mitre.org/techniques/T1027/010/"
+                            }
+                        ]
                     },
                     {
                         "id": "T1140",
@@ -110,6 +117,16 @@
                                 "id": "T1059.004",
                                 "name": "Unix Shell",
                                 "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            },
+                            {
+                                "id": "T1059.006",
+                                "name": "Python",
+                                "reference": "https://attack.mitre.org/techniques/T1059/006/"
+                            },
+                            {
+                                "id": "T1059.011",
+                                "name": "Lua",
+                                "reference": "https://attack.mitre.org/techniques/T1059/011/"
                             }
                         ]
                     },
@@ -130,8 +147,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "0fb83aa0-3d17-41e9-b09c-56397bf7a7d9_1",
+    "id": "0fb83aa0-3d17-41e9-b09c-56397bf7a7d9_2",
     "type": "security-rule"
 }

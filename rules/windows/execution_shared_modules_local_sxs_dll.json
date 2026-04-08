@@ -92,12 +92,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1129/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.001",
+                                "name": "DLL",
+                                "reference": "https://attack.mitre.org/techniques/T1574/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 312
+        "version": 313
     },
-    "id": "a3ea12f3-0d4e-4667-8b44-4230c63f3c75_312",
+    "id": "a3ea12f3-0d4e-4667-8b44-4230c63f3c75_313",
     "type": "security-rule"
 }

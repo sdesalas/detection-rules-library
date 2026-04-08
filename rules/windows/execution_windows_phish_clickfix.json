@@ -112,6 +112,23 @@
                                 "reference": "https://attack.mitre.org/techniques/T1059/003/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1204",
+                        "name": "User Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1204/",
+                        "subtechnique": [
+                            {
+                                "id": "T1204.002",
+                                "name": "Malicious File",
+                                "reference": "https://attack.mitre.org/techniques/T1204/002/"
+                            },
+                            {
+                                "id": "T1204.004",
+                                "name": "Malicious Copy and Paste",
+                                "reference": "https://attack.mitre.org/techniques/T1204/004/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -154,6 +171,11 @@
                                 "id": "T1566.001",
                                 "name": "Spearphishing Attachment",
                                 "reference": "https://attack.mitre.org/techniques/T1566/001/"
+                            },
+                            {
+                                "id": "T1566.002",
+                                "name": "Spearphishing Link",
+                                "reference": "https://attack.mitre.org/techniques/T1566/002/"
                             }
                         ]
                     }
@@ -162,8 +184,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "7dc45430-7407-4790-b89e-c857c3f6bf23_1",
+    "id": "7dc45430-7407-4790-b89e-c857c3f6bf23_2",
     "type": "security-rule"
 }

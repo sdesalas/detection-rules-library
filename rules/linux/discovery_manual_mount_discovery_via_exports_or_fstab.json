@@ -92,14 +92,19 @@
                         "id": "T1082",
                         "name": "System Information Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1082/"
+                    },
+                    {
+                        "id": "T1135",
+                        "name": "Network Share Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1135/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "bd18f4a3-c4c6-43b9-a1e4-b05e09998110_3",
+    "id": "bd18f4a3-c4c6-43b9-a1e4-b05e09998110_4",
     "type": "security-rule"
 }

@@ -111,6 +111,11 @@
                         "id": "T1609",
                         "name": "Container Administration Command",
                         "reference": "https://attack.mitre.org/techniques/T1609/"
+                    },
+                    {
+                        "id": "T1610",
+                        "name": "Deploy Container",
+                        "reference": "https://attack.mitre.org/techniques/T1610/"
                     }
                 ]
             },
@@ -122,6 +127,30 @@
                     "reference": "https://attack.mitre.org/tactics/TA0004/"
                 },
                 "technique": [
+                    {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/",
+                        "subtechnique": [
+                            {
+                                "id": "T1548.003",
+                                "name": "Sudo and Sudo Caching",
+                                "reference": "https://attack.mitre.org/techniques/T1548/003/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.006",
+                                "name": "Dynamic Linker Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1574/006/"
+                            }
+                        ]
+                    },
                     {
                         "id": "T1611",
                         "name": "Escape to Host",
@@ -138,6 +167,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1037",
+                        "name": "Boot or Logon Initialization Scripts",
+                        "reference": "https://attack.mitre.org/techniques/T1037/",
+                        "subtechnique": [
+                            {
+                                "id": "T1037.004",
+                                "name": "RC Scripts",
+                                "reference": "https://attack.mitre.org/techniques/T1037/004/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1053",
                         "name": "Scheduled Task/Job",
                         "reference": "https://attack.mitre.org/techniques/T1053/",
@@ -153,14 +194,62 @@
                                 "reference": "https://attack.mitre.org/techniques/T1053/003/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.004",
+                                "name": "SSH Authorized Keys",
+                                "reference": "https://attack.mitre.org/techniques/T1098/004/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/",
+                        "subtechnique": [
+                            {
+                                "id": "T1546.004",
+                                "name": "Unix Shell Configuration Modification",
+                                "reference": "https://attack.mitre.org/techniques/T1546/004/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1547",
+                        "name": "Boot or Logon Autostart Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1547/",
+                        "subtechnique": [
+                            {
+                                "id": "T1547.013",
+                                "name": "XDG Autostart Entries",
+                                "reference": "https://attack.mitre.org/techniques/T1547/013/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.006",
+                                "name": "Dynamic Linker Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1574/006/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "c595363f-52a6-49e1-9257-0e08ae043dbd_1",
+    "id": "c595363f-52a6-49e1-9257-0e08ae043dbd_2",
     "type": "security-rule"
 }

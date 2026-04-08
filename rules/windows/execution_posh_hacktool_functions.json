@@ -115,12 +115,213 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0006",
+                    "name": "Credential Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "T1003",
+                        "name": "OS Credential Dumping",
+                        "reference": "https://attack.mitre.org/techniques/T1003/",
+                        "subtechnique": [
+                            {
+                                "id": "T1003.001",
+                                "name": "LSASS Memory",
+                                "reference": "https://attack.mitre.org/techniques/T1003/001/"
+                            },
+                            {
+                                "id": "T1003.006",
+                                "name": "DCSync",
+                                "reference": "https://attack.mitre.org/techniques/T1003/006/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1552",
+                        "name": "Unsecured Credentials",
+                        "reference": "https://attack.mitre.org/techniques/T1552/",
+                        "subtechnique": [
+                            {
+                                "id": "T1552.006",
+                                "name": "Group Policy Preferences",
+                                "reference": "https://attack.mitre.org/techniques/T1552/006/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1558",
+                        "name": "Steal or Forge Kerberos Tickets",
+                        "reference": "https://attack.mitre.org/techniques/T1558/",
+                        "subtechnique": [
+                            {
+                                "id": "T1558.003",
+                                "name": "Kerberoasting",
+                                "reference": "https://attack.mitre.org/techniques/T1558/003/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1055",
+                        "name": "Process Injection",
+                        "reference": "https://attack.mitre.org/techniques/T1055/"
+                    },
+                    {
+                        "id": "T1134",
+                        "name": "Access Token Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1134/"
+                    },
+                    {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/",
+                        "subtechnique": [
+                            {
+                                "id": "T1548.002",
+                                "name": "Bypass User Account Control",
+                                "reference": "https://attack.mitre.org/techniques/T1548/002/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0007",
+                    "name": "Discovery",
+                    "reference": "https://attack.mitre.org/tactics/TA0007/"
+                },
+                "technique": [
+                    {
+                        "id": "T1046",
+                        "name": "Network Service Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1046/"
+                    },
+                    {
+                        "id": "T1087",
+                        "name": "Account Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1087/"
+                    },
+                    {
+                        "id": "T1482",
+                        "name": "Domain Trust Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1482/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0010",
+                    "name": "Exfiltration",
+                    "reference": "https://attack.mitre.org/tactics/TA0010/"
+                },
+                "technique": [
+                    {
+                        "id": "T1567",
+                        "name": "Exfiltration Over Web Service",
+                        "reference": "https://attack.mitre.org/techniques/T1567/",
+                        "subtechnique": [
+                            {
+                                "id": "T1567.001",
+                                "name": "Exfiltration to Code Repository",
+                                "reference": "https://attack.mitre.org/techniques/T1567/001/"
+                            },
+                            {
+                                "id": "T1567.002",
+                                "name": "Exfiltration to Cloud Storage",
+                                "reference": "https://attack.mitre.org/techniques/T1567/002/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1053",
+                        "name": "Scheduled Task/Job",
+                        "reference": "https://attack.mitre.org/techniques/T1053/",
+                        "subtechnique": [
+                            {
+                                "id": "T1053.005",
+                                "name": "Scheduled Task",
+                                "reference": "https://attack.mitre.org/techniques/T1053/005/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1547",
+                        "name": "Boot or Logon Autostart Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1547/",
+                        "subtechnique": [
+                            {
+                                "id": "T1547.005",
+                                "name": "Security Support Provider",
+                                "reference": "https://attack.mitre.org/techniques/T1547/005/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
+                },
+                "technique": [
+                    {
+                        "id": "T1021",
+                        "name": "Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1021/",
+                        "subtechnique": [
+                            {
+                                "id": "T1021.002",
+                                "name": "SMB/Windows Admin Shares",
+                                "reference": "https://attack.mitre.org/techniques/T1021/002/"
+                            },
+                            {
+                                "id": "T1021.003",
+                                "name": "Distributed Component Object Model",
+                                "reference": "https://attack.mitre.org/techniques/T1021/003/"
+                            },
+                            {
+                                "id": "T1021.006",
+                                "name": "Windows Remote Management",
+                                "reference": "https://attack.mitre.org/techniques/T1021/006/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 220
+        "version": 221
     },
-    "id": "cde1bafa-9f01-4f43-a872-605b678968b0_220",
+    "id": "cde1bafa-9f01-4f43-a872-605b678968b0_221",
     "type": "security-rule"
 }

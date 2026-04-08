@@ -79,6 +79,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1027",
+                        "name": "Obfuscated Files or Information",
+                        "reference": "https://attack.mitre.org/techniques/T1027/",
+                        "subtechnique": [
+                            {
+                                "id": "T1027.013",
+                                "name": "Encrypted/Encoded File",
+                                "reference": "https://attack.mitre.org/techniques/T1027/013/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1112",
                         "name": "Modify Registry",
                         "reference": "https://attack.mitre.org/techniques/T1112/"
@@ -93,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 416
+        "version": 417
     },
-    "id": "93c1ce76-494c-4f01-8167-35edfb52f7b1_416",
+    "id": "93c1ce76-494c-4f01-8167-35edfb52f7b1_417",
     "type": "security-rule"
 }

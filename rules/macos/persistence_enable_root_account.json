@@ -78,12 +78,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1078",
+                        "name": "Valid Accounts",
+                        "reference": "https://attack.mitre.org/techniques/T1078/",
+                        "subtechnique": [
+                            {
+                                "id": "T1078.003",
+                                "name": "Local Accounts",
+                                "reference": "https://attack.mitre.org/techniques/T1078/003/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "cc2fd2d0-ba3a-4939-b87f-2901764ed036_110",
+    "id": "cc2fd2d0-ba3a-4939-b87f-2901764ed036_111",
     "type": "security-rule"
 }

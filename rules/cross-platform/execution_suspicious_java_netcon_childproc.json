@@ -102,6 +102,16 @@
                         "reference": "https://attack.mitre.org/techniques/T1059/",
                         "subtechnique": [
                             {
+                                "id": "T1059.004",
+                                "name": "Unix Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            },
+                            {
+                                "id": "T1059.006",
+                                "name": "Python",
+                                "reference": "https://attack.mitre.org/techniques/T1059/006/"
+                            },
+                            {
                                 "id": "T1059.007",
                                 "name": "JavaScript",
                                 "reference": "https://attack.mitre.org/techniques/T1059/007/"
@@ -114,11 +124,26 @@
                         "reference": "https://attack.mitre.org/techniques/T1203/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0001",
+                    "name": "Initial Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                },
+                "technique": [
+                    {
+                        "id": "T1190",
+                        "name": "Exploit Public-Facing Application",
+                        "reference": "https://attack.mitre.org/techniques/T1190/"
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "c3f5e1d8-910e-43b4-8d44-d748e498ca86_107",
+    "id": "c3f5e1d8-910e-43b4-8d44-d748e498ca86_108",
     "type": "security-rule"
 }

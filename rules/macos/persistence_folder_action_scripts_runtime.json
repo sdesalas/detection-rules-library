@@ -75,6 +75,11 @@
                         "id": "T1037",
                         "name": "Boot or Logon Initialization Scripts",
                         "reference": "https://attack.mitre.org/techniques/T1037/"
+                    },
+                    {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/"
                     }
                 ]
             },
@@ -96,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "c292fa52-4115-408a-b897-e14f684b3cb7_112",
+    "id": "c292fa52-4115-408a-b897-e14f684b3cb7_113",
     "type": "security-rule"
 }

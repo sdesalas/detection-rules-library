@@ -85,12 +85,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1497",
+                        "name": "Virtualization/Sandbox Evasion",
+                        "reference": "https://attack.mitre.org/techniques/T1497/",
+                        "subtechnique": [
+                            {
+                                "id": "T1497.001",
+                                "name": "System Checks",
+                                "reference": "https://attack.mitre.org/techniques/T1497/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "1615230f-beb7-48d8-9b3f-6d10674703bf_1",
+    "id": "1615230f-beb7-48d8-9b3f-6d10674703bf_2",
     "type": "security-rule"
 }

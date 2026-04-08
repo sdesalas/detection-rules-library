@@ -89,12 +89,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0011",
+                    "name": "Command and Control",
+                    "reference": "https://attack.mitre.org/tactics/TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "T1095",
+                        "name": "Non-Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1095/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "9c0f61fa-abf4-4b11-8d9d-5978c09182dd_1",
+    "id": "9c0f61fa-abf4-4b11-8d9d-5978c09182dd_2",
     "type": "security-rule"
 }

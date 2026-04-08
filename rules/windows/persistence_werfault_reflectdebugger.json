@@ -88,7 +88,14 @@
                     {
                         "id": "T1546",
                         "name": "Event Triggered Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1546/"
+                        "reference": "https://attack.mitre.org/techniques/T1546/",
+                        "subtechnique": [
+                            {
+                                "id": "T1546.012",
+                                "name": "Image File Execution Options Injection",
+                                "reference": "https://attack.mitre.org/techniques/T1546/012/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -110,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 206
+        "version": 207
     },
-    "id": "205b52c4-9c28-4af4-8979-935f3278d61a_206",
+    "id": "205b52c4-9c28-4af4-8979-935f3278d61a_207",
     "type": "security-rule"
 }

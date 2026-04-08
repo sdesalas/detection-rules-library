@@ -126,14 +126,26 @@
                         "id": "T1564",
                         "name": "Hide Artifacts",
                         "reference": "https://attack.mitre.org/techniques/T1564/"
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.007",
+                                "name": "Path Interception by PATH Environment Variable",
+                                "reference": "https://attack.mitre.org/techniques/T1574/007/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "82f842c2-7c36-438c-b562-5afe54ab11f4_6",
+    "id": "82f842c2-7c36-438c-b562-5afe54ab11f4_7",
     "type": "security-rule"
 }

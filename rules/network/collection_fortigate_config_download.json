@@ -49,6 +49,7 @@
         "tags": [
             "Use Case: Threat Detection",
             "Tactic: Collection",
+            "Tactic: Credential Access",
             "Resources: Investigation Guide",
             "Domain: Network",
             "Data Source: Fortinet",
@@ -76,12 +77,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0006",
+                    "name": "Credential Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "T1552",
+                        "name": "Unsecured Credentials",
+                        "reference": "https://attack.mitre.org/techniques/T1552/",
+                        "subtechnique": [
+                            {
+                                "id": "T1552.001",
+                                "name": "Credentials In Files",
+                                "reference": "https://attack.mitre.org/techniques/T1552/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "b7e2a04d-4f8a-4e12-8c9a-1d5e6f7a8b9c_1",
+    "id": "b7e2a04d-4f8a-4e12-8c9a-1d5e6f7a8b9c_2",
     "type": "security-rule"
 }

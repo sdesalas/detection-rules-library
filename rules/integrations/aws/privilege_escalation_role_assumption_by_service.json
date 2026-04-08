@@ -109,7 +109,14 @@
                     {
                         "id": "T1548",
                         "name": "Abuse Elevation Control Mechanism",
-                        "reference": "https://attack.mitre.org/techniques/T1548/"
+                        "reference": "https://attack.mitre.org/techniques/T1548/",
+                        "subtechnique": [
+                            {
+                                "id": "T1548.005",
+                                "name": "Temporary Elevated Cloud Access",
+                                "reference": "https://attack.mitre.org/techniques/T1548/005/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -138,8 +145,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 214
+        "version": 215
     },
-    "id": "93075852-b0f5-4b8b-89c3-a226efae5726_214",
+    "id": "93075852-b0f5-4b8b-89c3-a226efae5726_215",
     "type": "security-rule"
 }

@@ -80,15 +80,22 @@
                     {
                         "id": "T1560",
                         "name": "Archive Collected Data",
-                        "reference": "https://attack.mitre.org/techniques/T1560/"
+                        "reference": "https://attack.mitre.org/techniques/T1560/",
+                        "subtechnique": [
+                            {
+                                "id": "T1560.002",
+                                "name": "Archive via Library",
+                                "reference": "https://attack.mitre.org/techniques/T1560/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "d197478e-39f0-4347-a22f-ba654718b148_5",
+    "id": "d197478e-39f0-4347-a22f-ba654718b148_6",
     "type": "security-rule"
 }

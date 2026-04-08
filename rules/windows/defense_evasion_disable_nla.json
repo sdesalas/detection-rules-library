@@ -103,15 +103,44 @@
                     {
                         "id": "T1562",
                         "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/"
+                        "reference": "https://attack.mitre.org/techniques/T1562/",
+                        "subtechnique": [
+                            {
+                                "id": "T1562.010",
+                                "name": "Downgrade Attack",
+                                "reference": "https://attack.mitre.org/techniques/T1562/010/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
+                },
+                "technique": [
+                    {
+                        "id": "T1021",
+                        "name": "Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1021/",
+                        "subtechnique": [
+                            {
+                                "id": "T1021.001",
+                                "name": "Remote Desktop Protocol",
+                                "reference": "https://attack.mitre.org/techniques/T1021/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 207
+        "version": 208
     },
-    "id": "db65f5ba-d1ef-4944-b9e8-7e51060c2b42_207",
+    "id": "db65f5ba-d1ef-4944-b9e8-7e51060c2b42_208",
     "type": "security-rule"
 }

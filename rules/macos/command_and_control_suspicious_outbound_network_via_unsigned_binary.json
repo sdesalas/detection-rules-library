@@ -103,11 +103,33 @@
                         "reference": "https://attack.mitre.org/techniques/T1571/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1553",
+                        "name": "Subvert Trust Controls",
+                        "reference": "https://attack.mitre.org/techniques/T1553/",
+                        "subtechnique": [
+                            {
+                                "id": "T1553.001",
+                                "name": "Gatekeeper Bypass",
+                                "reference": "https://attack.mitre.org/techniques/T1553/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "e7e0588b-2b55-4f88-afd1-cf98e95e0f58_1",
+    "id": "e7e0588b-2b55-4f88-afd1-cf98e95e0f58_2",
     "type": "security-rule"
 }

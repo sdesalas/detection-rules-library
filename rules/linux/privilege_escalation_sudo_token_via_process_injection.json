@@ -110,11 +110,45 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1055",
+                        "name": "Process Injection",
+                        "reference": "https://attack.mitre.org/techniques/T1055/",
+                        "subtechnique": [
+                            {
+                                "id": "T1055.008",
+                                "name": "Ptrace System Calls",
+                                "reference": "https://attack.mitre.org/techniques/T1055/008/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/",
+                        "subtechnique": [
+                            {
+                                "id": "T1548.003",
+                                "name": "Sudo and Sudo Caching",
+                                "reference": "https://attack.mitre.org/techniques/T1548/003/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "ff9bc8b9-f03b-4283-be58-ee0a16f5a11b_111",
+    "id": "ff9bc8b9-f03b-4283-be58-ee0a16f5a11b_112",
     "type": "security-rule"
 }

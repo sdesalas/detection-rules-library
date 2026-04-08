@@ -62,6 +62,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/",
+                        "subtechnique": [
+                            {
+                                "id": "T1556.006",
+                                "name": "Multi-Factor Authentication",
+                                "reference": "https://attack.mitre.org/techniques/T1556/006/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1562",
                         "name": "Impair Defenses",
                         "reference": "https://attack.mitre.org/techniques/T1562/",
@@ -74,12 +86,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0006",
+                    "name": "Credential Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/",
+                        "subtechnique": [
+                            {
+                                "id": "T1556.006",
+                                "name": "Multi-Factor Authentication",
+                                "reference": "https://attack.mitre.org/techniques/T1556/006/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 413
+        "version": 414
     },
-    "id": "b4bb1440-0fcb-4ed1-87e5-b06d58efc5e9_413",
+    "id": "b4bb1440-0fcb-4ed1-87e5-b06d58efc5e9_414",
     "type": "security-rule"
 }

@@ -57,11 +57,33 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1078",
+                        "name": "Valid Accounts",
+                        "reference": "https://attack.mitre.org/techniques/T1078/",
+                        "subtechnique": [
+                            {
+                                "id": "T1078.004",
+                                "name": "Cloud Accounts",
+                                "reference": "https://attack.mitre.org/techniques/T1078/004/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "machine_learning",
-        "version": 1
+        "version": 2
     },
-    "id": "76de17b9-af25-49a0-9378-02888b6bb3a2_1",
+    "id": "76de17b9-af25-49a0-9378-02888b6bb3a2_2",
     "type": "security-rule"
 }

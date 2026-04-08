@@ -148,11 +148,33 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1559",
+                        "name": "Inter-Process Communication",
+                        "reference": "https://attack.mitre.org/techniques/T1559/",
+                        "subtechnique": [
+                            {
+                                "id": "T1559.001",
+                                "name": "Component Object Model",
+                                "reference": "https://attack.mitre.org/techniques/T1559/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "51ce96fb-9e52-4dad-b0ba-99b54440fc9a_211",
+    "id": "51ce96fb-9e52-4dad-b0ba-99b54440fc9a_212",
     "type": "security-rule"
 }

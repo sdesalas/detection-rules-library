@@ -107,6 +107,21 @@
                 },
                 "technique": [
                     {
+                        "id": "T1007",
+                        "name": "System Service Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1007/"
+                    },
+                    {
+                        "id": "T1016",
+                        "name": "System Network Configuration Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1016/"
+                    },
+                    {
+                        "id": "T1033",
+                        "name": "System Owner/User Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1033/"
+                    },
+                    {
                         "id": "T1069",
                         "name": "Permission Groups Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1069/",
@@ -115,8 +130,18 @@
                                 "id": "T1069.001",
                                 "name": "Local Groups",
                                 "reference": "https://attack.mitre.org/techniques/T1069/001/"
+                            },
+                            {
+                                "id": "T1069.002",
+                                "name": "Domain Groups",
+                                "reference": "https://attack.mitre.org/techniques/T1069/002/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1082",
+                        "name": "System Information Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1082/"
                     },
                     {
                         "id": "T1087",
@@ -127,6 +152,11 @@
                                 "id": "T1087.001",
                                 "name": "Local Account",
                                 "reference": "https://attack.mitre.org/techniques/T1087/001/"
+                            },
+                            {
+                                "id": "T1087.002",
+                                "name": "Domain Account",
+                                "reference": "https://attack.mitre.org/techniques/T1087/002/"
                             }
                         ]
                     },
@@ -134,6 +164,11 @@
                         "id": "T1135",
                         "name": "Network Share Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1135/"
+                    },
+                    {
+                        "id": "T1201",
+                        "name": "Password Policy Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1201/"
                     },
                     {
                         "id": "T1482",
@@ -187,8 +222,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 319
+        "version": 320
     },
-    "id": "61ac3638-40a3-44b2-855a-985636ca985e_319",
+    "id": "61ac3638-40a3-44b2-855a-985636ca985e_320",
     "type": "security-rule"
 }

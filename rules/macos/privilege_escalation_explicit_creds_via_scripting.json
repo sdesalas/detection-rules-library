@@ -97,15 +97,37 @@
                     {
                         "id": "T1059",
                         "name": "Command and Scripting Interpreter",
-                        "reference": "https://attack.mitre.org/techniques/T1059/"
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.001",
+                                "name": "PowerShell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/001/"
+                            },
+                            {
+                                "id": "T1059.002",
+                                "name": "AppleScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/002/"
+                            },
+                            {
+                                "id": "T1059.004",
+                                "name": "Unix Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            },
+                            {
+                                "id": "T1059.006",
+                                "name": "Python",
+                                "reference": "https://attack.mitre.org/techniques/T1059/006/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "f0eb70e9-71e9-40cd-813f-bf8e8c812cb1_110",
+    "id": "f0eb70e9-71e9-40cd-813f-bf8e8c812cb1_111",
     "type": "security-rule"
 }

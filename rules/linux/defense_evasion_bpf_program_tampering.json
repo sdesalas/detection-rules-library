@@ -94,6 +94,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1014",
+                        "name": "Rootkit",
+                        "reference": "https://attack.mitre.org/techniques/T1014/"
+                    },
+                    {
                         "id": "T1562",
                         "name": "Impair Defenses",
                         "reference": "https://attack.mitre.org/techniques/T1562/",
@@ -104,19 +109,14 @@
                                 "reference": "https://attack.mitre.org/techniques/T1562/001/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1014",
-                        "name": "Rootkit",
-                        "reference": "https://attack.mitre.org/techniques/T1014/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "1b65429e-bd92-44c0-aff8-e8065869d860_1",
+    "id": "1b65429e-bd92-44c0-aff8-e8065869d860_2",
     "type": "security-rule"
 }

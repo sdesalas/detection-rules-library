@@ -65,6 +65,21 @@
                 },
                 "technique": [
                     {
+                        "id": "T1529",
+                        "name": "System Shutdown/Reboot",
+                        "reference": "https://attack.mitre.org/techniques/T1529/"
+                    },
+                    {
+                        "id": "T1490",
+                        "name": "Inhibit System Recovery",
+                        "reference": "https://attack.mitre.org/techniques/T1490/"
+                    },
+                    {
+                        "id": "T1489",
+                        "name": "Service Stop",
+                        "reference": "https://attack.mitre.org/techniques/T1489/"
+                    },
+                    {
                         "id": "T1485",
                         "name": "Data Destruction",
                         "reference": "https://attack.mitre.org/techniques/T1485/"
@@ -96,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "bb4fe8d2-7ae2-475c-8b5d-55b449e4264f_107",
+    "id": "bb4fe8d2-7ae2-475c-8b5d-55b449e4264f_108",
     "type": "security-rule"
 }

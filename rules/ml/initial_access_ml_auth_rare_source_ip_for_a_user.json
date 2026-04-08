@@ -58,11 +58,26 @@
                         "reference": "https://attack.mitre.org/techniques/T1078/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
+                },
+                "technique": [
+                    {
+                        "id": "T1021",
+                        "name": "Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1021/"
+                    }
+                ]
             }
         ],
         "type": "machine_learning",
-        "version": 107
+        "version": 108
     },
-    "id": "d4b73fa0-9d43-465e-b8bf-50230da6718b_107",
+    "id": "d4b73fa0-9d43-465e-b8bf-50230da6718b_108",
     "type": "security-rule"
 }

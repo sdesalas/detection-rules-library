@@ -118,13 +118,19 @@
                     "name": "Defense Evasion",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "0b15bcad-aff1-4250-a5be-5d1b7eb56d07_9",
+    "id": "0b15bcad-aff1-4250-a5be-5d1b7eb56d07_10",
     "type": "security-rule"
 }

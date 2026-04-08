@@ -108,6 +108,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1072",
+                        "name": "Software Deployment Tools",
+                        "reference": "https://attack.mitre.org/techniques/T1072/"
+                    },
+                    {
                         "id": "T1210",
                         "name": "Exploitation of Remote Services",
                         "reference": "https://attack.mitre.org/techniques/T1210/"
@@ -117,8 +122,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 210
+        "version": 211
     },
-    "id": "8e2485b6-a74f-411b-bf7f-38b819f3a846_210",
+    "id": "8e2485b6-a74f-411b-bf7f-38b819f3a846_211",
     "type": "security-rule"
 }

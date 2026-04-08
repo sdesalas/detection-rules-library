@@ -81,6 +81,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1574/",
                         "subtechnique": [
                             {
+                                "id": "T1574.006",
+                                "name": "Dynamic Linker Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1574/006/"
+                            },
+                            {
                                 "id": "T1574.007",
                                 "name": "Path Interception by PATH Environment Variable",
                                 "reference": "https://attack.mitre.org/techniques/T1574/007/"
@@ -92,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 210
+        "version": 211
     },
-    "id": "7453e19e-3dbf-4e4e-9ae0-33d6c6ed15e1_210",
+    "id": "7453e19e-3dbf-4e4e-9ae0-33d6c6ed15e1_211",
     "type": "security-rule"
 }

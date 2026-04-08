@@ -78,15 +78,39 @@
                     {
                         "id": "T1069",
                         "name": "Permission Groups Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1069/"
+                        "reference": "https://attack.mitre.org/techniques/T1069/",
+                        "subtechnique": [
+                            {
+                                "id": "T1069.002",
+                                "name": "Domain Groups",
+                                "reference": "https://attack.mitre.org/techniques/T1069/002/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1087",
+                        "name": "Account Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1087/",
+                        "subtechnique": [
+                            {
+                                "id": "T1087.002",
+                                "name": "Domain Account",
+                                "reference": "https://attack.mitre.org/techniques/T1087/002/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1482",
+                        "name": "Domain Trust Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1482/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "68ad737b-f90a-4fe5-bda6-a68fa460044e_108",
+    "id": "68ad737b-f90a-4fe5-bda6-a68fa460044e_109",
     "type": "security-rule"
 }

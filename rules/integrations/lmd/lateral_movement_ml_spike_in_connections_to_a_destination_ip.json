@@ -48,6 +48,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1021",
+                        "name": "Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1021/",
+                        "subtechnique": [
+                            {
+                                "id": "T1021.001",
+                                "name": "Remote Desktop Protocol",
+                                "reference": "https://attack.mitre.org/techniques/T1021/001/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1210",
                         "name": "Exploitation of Remote Services",
                         "reference": "https://attack.mitre.org/techniques/T1210/"
@@ -56,8 +68,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 8
+        "version": 9
     },
-    "id": "18a5dd9a-e3fa-4996-99b1-ae533b8f27fc_8",
+    "id": "18a5dd9a-e3fa-4996-99b1-ae533b8f27fc_9",
     "type": "security-rule"
 }

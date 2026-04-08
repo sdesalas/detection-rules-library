@@ -60,13 +60,19 @@
                     "name": "Execution",
                     "reference": "https://attack.mitre.org/tactics/TA0002/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1203",
+                        "name": "Exploitation for Client Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1203/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "5c81fc9d-1eae-437f-ba07-268472967013_3",
+    "id": "5c81fc9d-1eae-437f-ba07-268472967013_4",
     "type": "security-rule"
 }

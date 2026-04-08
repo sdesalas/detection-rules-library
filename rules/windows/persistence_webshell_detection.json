@@ -228,6 +228,11 @@
                                 "id": "T1059.005",
                                 "name": "Visual Basic",
                                 "reference": "https://attack.mitre.org/techniques/T1059/005/"
+                            },
+                            {
+                                "id": "T1059.007",
+                                "name": "JavaScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/007/"
                             }
                         ]
                     }
@@ -236,8 +241,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 421
+        "version": 422
     },
-    "id": "2917d495-59bd-4250-b395-c29409b76086_421",
+    "id": "2917d495-59bd-4250-b395-c29409b76086_422",
     "type": "security-rule"
 }

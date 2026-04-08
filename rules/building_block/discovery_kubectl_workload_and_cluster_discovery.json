@@ -91,22 +91,22 @@
                 },
                 "technique": [
                     {
-                        "id": "T1613",
-                        "name": "Container and Resource Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1613/"
-                    },
-                    {
                         "id": "T1069",
                         "name": "Permission Groups Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1069/"
+                    },
+                    {
+                        "id": "T1613",
+                        "name": "Container and Resource Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1613/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "74e5241e-c1a1-4e70-844e-84ee3d73eb7d_102",
+    "id": "74e5241e-c1a1-4e70-844e-84ee3d73eb7d_103",
     "type": "security-rule"
 }

@@ -111,6 +111,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1543/"
                     },
                     {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/"
+                    },
+                    {
                         "id": "T1574",
                         "name": "Hijack Execution Flow",
                         "reference": "https://attack.mitre.org/techniques/T1574/"
@@ -150,8 +155,8 @@
             }
         ],
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "dc61f382-dc0c-4cc0-a845-069f2a071704_107",
+    "id": "dc61f382-dc0c-4cc0-a845-069f2a071704_108",
     "type": "security-rule"
 }

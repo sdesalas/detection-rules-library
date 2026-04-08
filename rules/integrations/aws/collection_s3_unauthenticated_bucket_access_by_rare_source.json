@@ -133,14 +133,26 @@
                         "id": "T1485",
                         "name": "Data Destruction",
                         "reference": "https://attack.mitre.org/techniques/T1485/"
+                    },
+                    {
+                        "id": "T1565",
+                        "name": "Data Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1565/",
+                        "subtechnique": [
+                            {
+                                "id": "T1565.001",
+                                "name": "Stored Data Manipulation",
+                                "reference": "https://attack.mitre.org/techniques/T1565/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "59bf26c2-bcbe-11ef-a215-f661ea17fbce_7",
+    "id": "59bf26c2-bcbe-11ef-a215-f661ea17fbce_8",
     "type": "security-rule"
 }

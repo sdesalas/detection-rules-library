@@ -95,14 +95,19 @@
                                 "reference": "https://attack.mitre.org/techniques/T1078/002/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 213
+        "version": 214
     },
-    "id": "6bed021a-0afb-461c-acbe-ffdb9574d3f3_213",
+    "id": "6bed021a-0afb-461c-acbe-ffdb9574d3f3_214",
     "type": "security-rule"
 }

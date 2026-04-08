@@ -95,12 +95,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1550",
+                        "name": "Use Alternate Authentication Material",
+                        "reference": "https://attack.mitre.org/techniques/T1550/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "d121f0a8-4875-11f0-bb2b-f661ea17fbcd_2",
+    "id": "d121f0a8-4875-11f0-bb2b-f661ea17fbcd_3",
     "type": "security-rule"
 }

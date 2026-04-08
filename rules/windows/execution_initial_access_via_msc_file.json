@@ -141,12 +141,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1218",
+                        "name": "System Binary Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1218/",
+                        "subtechnique": [
+                            {
+                                "id": "T1218.014",
+                                "name": "MMC",
+                                "reference": "https://attack.mitre.org/techniques/T1218/014/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 205
+        "version": 206
     },
-    "id": "e760c72b-bb1f-44f0-9f0d-37d51744ee75_205",
+    "id": "e760c72b-bb1f-44f0-9f0d-37d51744ee75_206",
     "type": "security-rule"
 }

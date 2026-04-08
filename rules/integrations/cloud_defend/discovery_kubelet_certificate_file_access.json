@@ -99,12 +99,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1613/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0006",
+                    "name": "Credential Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "T1552",
+                        "name": "Unsecured Credentials",
+                        "reference": "https://attack.mitre.org/techniques/T1552/",
+                        "subtechnique": [
+                            {
+                                "id": "T1552.004",
+                                "name": "Private Keys",
+                                "reference": "https://attack.mitre.org/techniques/T1552/004/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "42de0740-8ed8-4b8b-995c-635b56a8bbf4_1",
+    "id": "42de0740-8ed8-4b8b-995c-635b56a8bbf4_2",
     "type": "security-rule"
 }

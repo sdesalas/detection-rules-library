@@ -103,14 +103,21 @@
                     {
                         "id": "T1059",
                         "name": "Command and Scripting Interpreter",
-                        "reference": "https://attack.mitre.org/techniques/T1059/"
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.006",
+                                "name": "Python",
+                                "reference": "https://attack.mitre.org/techniques/T1059/006/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "aba3bc11-e02f-4a03-8889-d86ea1a44f76_1",
+    "id": "aba3bc11-e02f-4a03-8889-d86ea1a44f76_2",
     "type": "security-rule"
 }

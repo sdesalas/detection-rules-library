@@ -87,7 +87,14 @@
                     {
                         "id": "T1021",
                         "name": "Remote Services",
-                        "reference": "https://attack.mitre.org/techniques/T1021/"
+                        "reference": "https://attack.mitre.org/techniques/T1021/",
+                        "subtechnique": [
+                            {
+                                "id": "T1021.002",
+                                "name": "SMB/Windows Admin Shares",
+                                "reference": "https://attack.mitre.org/techniques/T1021/002/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -137,8 +144,8 @@
             }
         ],
         "type": "eql",
-        "version": 210
+        "version": 211
     },
-    "id": "d61cbcf8-1bc1-4cff-85ba-e7b21c5beedc_210",
+    "id": "d61cbcf8-1bc1-4cff-85ba-e7b21c5beedc_211",
     "type": "security-rule"
 }

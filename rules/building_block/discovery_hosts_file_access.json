@@ -78,6 +78,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1016",
+                        "name": "System Network Configuration Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1016/"
+                    },
+                    {
                         "id": "T1018",
                         "name": "Remote System Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1018/"
@@ -87,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "f75f65cf-ed04-48df-a7ff-b02a8bfe636e_6",
+    "id": "f75f65cf-ed04-48df-a7ff-b02a8bfe636e_7",
     "type": "security-rule"
 }

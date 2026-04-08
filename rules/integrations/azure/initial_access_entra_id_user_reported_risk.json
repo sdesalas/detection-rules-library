@@ -85,12 +85,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0006",
+                    "name": "Credential Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "T1621",
+                        "name": "Multi-Factor Authentication Request Generation",
+                        "reference": "https://attack.mitre.org/techniques/T1621/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 4
+        "version": 5
     },
-    "id": "caaa8b78-367c-11f0-beb8-f661ea17fbcd_4",
+    "id": "caaa8b78-367c-11f0-beb8-f661ea17fbcd_5",
     "type": "security-rule"
 }

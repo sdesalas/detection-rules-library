@@ -77,21 +77,31 @@
                                 "id": "T1562.001",
                                 "name": "Disable or Modify Tools",
                                 "reference": "https://attack.mitre.org/techniques/T1562/001/"
-                            },
-                            {
-                                "id": "T1562.008",
-                                "name": "Disable or Modify Cloud Logs",
-                                "reference": "https://attack.mitre.org/techniques/T1562/008/"
                             }
                         ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 211
+        "version": 212
     },
-    "id": "675239ea-c1bc-4467-a6d3-b9e2cc7f676d_211",
+    "id": "675239ea-c1bc-4467-a6d3-b9e2cc7f676d_212",
     "type": "security-rule"
 }

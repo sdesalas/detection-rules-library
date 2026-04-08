@@ -66,7 +66,14 @@
                     {
                         "id": "T1547",
                         "name": "Boot or Logon Autostart Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1547/"
+                        "reference": "https://attack.mitre.org/techniques/T1547/",
+                        "subtechnique": [
+                            {
+                                "id": "T1547.015",
+                                "name": "Login Items",
+                                "reference": "https://attack.mitre.org/techniques/T1547/015/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -110,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 113
+        "version": 114
     },
-    "id": "f24bcae1-8980-4b30-b5dd-f851b055c9e7_113",
+    "id": "f24bcae1-8980-4b30-b5dd-f851b055c9e7_114",
     "type": "security-rule"
 }

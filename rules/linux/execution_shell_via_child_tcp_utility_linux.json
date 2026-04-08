@@ -122,13 +122,18 @@
                         "id": "T1071",
                         "name": "Application Layer Protocol",
                         "reference": "https://attack.mitre.org/techniques/T1071/"
+                    },
+                    {
+                        "id": "T1095",
+                        "name": "Non-Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1095/"
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "2138bb70-5a5e-42fd-be5e-b38edf6a6777_8",
+    "id": "2138bb70-5a5e-42fd-be5e-b38edf6a6777_9",
     "type": "security-rule"
 }

@@ -81,6 +81,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1027",
+                        "name": "Obfuscated Files or Information",
+                        "reference": "https://attack.mitre.org/techniques/T1027/",
+                        "subtechnique": [
+                            {
+                                "id": "T1027.010",
+                                "name": "Command Obfuscation",
+                                "reference": "https://attack.mitre.org/techniques/T1027/010/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1562",
                         "name": "Impair Defenses",
                         "reference": "https://attack.mitre.org/techniques/T1562/",
@@ -119,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 116
+        "version": 117
     },
-    "id": "1f0a69c0-3392-4adf-b7d5-6012fd292da8_116",
+    "id": "1f0a69c0-3392-4adf-b7d5-6012fd292da8_117",
     "type": "security-rule"
 }

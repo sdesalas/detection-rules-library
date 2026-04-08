@@ -94,14 +94,26 @@
                     {
                         "id": "T1059",
                         "name": "Command and Scripting Interpreter",
-                        "reference": "https://attack.mitre.org/techniques/T1059/"
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.002",
+                                "name": "AppleScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/002/"
+                            },
+                            {
+                                "id": "T1059.004",
+                                "name": "Unix Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "d461fac0-43e8-49e2-85ea-3a58fe120b4f_112",
+    "id": "d461fac0-43e8-49e2-85ea-3a58fe120b4f_113",
     "type": "security-rule"
 }

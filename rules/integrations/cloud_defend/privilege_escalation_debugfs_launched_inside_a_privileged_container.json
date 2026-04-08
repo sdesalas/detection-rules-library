@@ -93,12 +93,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1611/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1006",
+                        "name": "Direct Volume Access",
+                        "reference": "https://attack.mitre.org/techniques/T1006/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "97697a52-4a76-4f0a-aa4f-25c178aae6eb_103",
+    "id": "97697a52-4a76-4f0a-aa4f-25c178aae6eb_104",
     "type": "security-rule"
 }

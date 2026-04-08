@@ -93,6 +93,11 @@
                                 "reference": "https://attack.mitre.org/techniques/T1543/002/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/"
                     }
                 ]
             },
@@ -115,14 +120,19 @@
                                 "reference": "https://attack.mitre.org/techniques/T1543/002/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "39c06367-b700-4380-848a-cab06e7afede_7",
+    "id": "39c06367-b700-4380-848a-cab06e7afede_8",
     "type": "security-rule"
 }

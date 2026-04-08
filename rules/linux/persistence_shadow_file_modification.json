@@ -90,6 +90,18 @@
                         "id": "T1098",
                         "name": "Account Manipulation",
                         "reference": "https://attack.mitre.org/techniques/T1098/"
+                    },
+                    {
+                        "id": "T1136",
+                        "name": "Create Account",
+                        "reference": "https://attack.mitre.org/techniques/T1136/",
+                        "subtechnique": [
+                            {
+                                "id": "T1136.001",
+                                "name": "Local Account",
+                                "reference": "https://attack.mitre.org/techniques/T1136/001/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -111,8 +123,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "cdf1a39b-1ca5-4e2a-9739-17fc4d026029_6",
+    "id": "cdf1a39b-1ca5-4e2a-9739-17fc4d026029_7",
     "type": "security-rule"
 }

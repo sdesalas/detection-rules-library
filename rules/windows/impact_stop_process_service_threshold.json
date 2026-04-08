@@ -96,6 +96,28 @@
                         "reference": "https://attack.mitre.org/techniques/T1489/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1562",
+                        "name": "Impair Defenses",
+                        "reference": "https://attack.mitre.org/techniques/T1562/",
+                        "subtechnique": [
+                            {
+                                "id": "T1562.001",
+                                "name": "Disable or Modify Tools",
+                                "reference": "https://attack.mitre.org/techniques/T1562/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "threshold": {
@@ -106,8 +128,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 216
+        "version": 217
     },
-    "id": "035889c4-2686-4583-a7df-67f89c292f2c_216",
+    "id": "035889c4-2686-4583-a7df-67f89c292f2c_217",
     "type": "security-rule"
 }

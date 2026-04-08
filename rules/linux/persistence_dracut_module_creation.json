@@ -133,13 +133,19 @@
                     "name": "Defense Evasion",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1542",
+                        "name": "Pre-OS Boot",
+                        "reference": "https://attack.mitre.org/techniques/T1542/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "dc765fb2-0c99-4e57-8c11-dafdf1992b66_5",
+    "id": "dc765fb2-0c99-4e57-8c11-dafdf1992b66_6",
     "type": "security-rule"
 }

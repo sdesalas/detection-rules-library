@@ -111,6 +111,11 @@
                                 "id": "T1059.004",
                                 "name": "Unix Shell",
                                 "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            },
+                            {
+                                "id": "T1059.006",
+                                "name": "Python",
+                                "reference": "https://attack.mitre.org/techniques/T1059/006/"
                             }
                         ]
                     }
@@ -127,15 +132,22 @@
                     {
                         "id": "T1071",
                         "name": "Application Layer Protocol",
-                        "reference": "https://attack.mitre.org/techniques/T1071/"
+                        "reference": "https://attack.mitre.org/techniques/T1071/",
+                        "subtechnique": [
+                            {
+                                "id": "T1071.001",
+                                "name": "Web Protocols",
+                                "reference": "https://attack.mitre.org/techniques/T1071/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "183f3cd2-4cc6-44c0-917c-c5d29ecdcf74_6",
+    "id": "183f3cd2-4cc6-44c0-917c-c5d29ecdcf74_7",
     "type": "security-rule"
 }

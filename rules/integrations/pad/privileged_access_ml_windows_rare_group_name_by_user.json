@@ -58,6 +58,18 @@
                         "id": "T1078",
                         "name": "Valid Accounts",
                         "reference": "https://attack.mitre.org/techniques/T1078/"
+                    },
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.007",
+                                "name": "Additional Local or Domain Groups",
+                                "reference": "https://attack.mitre.org/techniques/T1098/007/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -75,11 +87,33 @@
                         "reference": "https://attack.mitre.org/techniques/T1069/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.007",
+                                "name": "Additional Local or Domain Groups",
+                                "reference": "https://attack.mitre.org/techniques/T1098/007/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "machine_learning",
-        "version": 3
+        "version": 4
     },
-    "id": "fb5d91d0-3b94-4f91-bf20-b6fbc4b2480a_3",
+    "id": "fb5d91d0-3b94-4f91-bf20-b6fbc4b2480a_4",
     "type": "security-rule"
 }

@@ -81,22 +81,27 @@
                 },
                 "technique": [
                     {
-                        "id": "T1613",
-                        "name": "Container and Resource Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1613/"
+                        "id": "T1033",
+                        "name": "System Owner/User Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1033/"
                     },
                     {
                         "id": "T1082",
                         "name": "System Information Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1082/"
+                    },
+                    {
+                        "id": "T1613",
+                        "name": "Container and Resource Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1613/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "737626a2-4dca-4195-8ecd-68ef96fd1bad_1",
+    "id": "737626a2-4dca-4195-8ecd-68ef96fd1bad_2",
     "type": "security-rule"
 }

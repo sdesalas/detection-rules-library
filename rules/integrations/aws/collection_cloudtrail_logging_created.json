@@ -94,12 +94,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1530/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1562",
+                        "name": "Impair Defenses",
+                        "reference": "https://attack.mitre.org/techniques/T1562/",
+                        "subtechnique": [
+                            {
+                                "id": "T1562.008",
+                                "name": "Disable or Modify Cloud Logs",
+                                "reference": "https://attack.mitre.org/techniques/T1562/008/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 212
+        "version": 213
     },
-    "id": "594e0cbf-86cc-45aa-9ff7-ff27db27d3ed_212",
+    "id": "594e0cbf-86cc-45aa-9ff7-ff27db27d3ed_213",
     "type": "security-rule"
 }

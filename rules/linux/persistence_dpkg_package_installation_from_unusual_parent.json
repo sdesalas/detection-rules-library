@@ -124,12 +124,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/",
+                        "subtechnique": [
+                            {
+                                "id": "T1546.016",
+                                "name": "Installer Packages",
+                                "reference": "https://attack.mitre.org/techniques/T1546/016/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "f4d1c0ac-aedb-4063-9fa6-cc651eb5e6ee_6",
+    "id": "f4d1c0ac-aedb-4063-9fa6-cc651eb5e6ee_7",
     "type": "security-rule"
 }

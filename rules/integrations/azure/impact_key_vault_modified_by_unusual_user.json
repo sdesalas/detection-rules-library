@@ -71,12 +71,34 @@
                     "reference": "https://attack.mitre.org/tactics/TA0040/"
                 },
                 "technique": []
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1578",
+                        "name": "Modify Cloud Compute Infrastructure",
+                        "reference": "https://attack.mitre.org/techniques/T1578/",
+                        "subtechnique": [
+                            {
+                                "id": "T1578.005",
+                                "name": "Modify Cloud Compute Configurations",
+                                "reference": "https://attack.mitre.org/techniques/T1578/005/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 107
+        "version": 108
     },
-    "id": "792dd7a6-7e00-4a0a-8a9a-a7c24720b5ec_107",
+    "id": "792dd7a6-7e00-4a0a-8a9a-a7c24720b5ec_108",
     "type": "security-rule"
 }

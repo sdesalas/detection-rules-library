@@ -67,6 +67,7 @@
         "severity": "high",
         "tags": [
             "Tactic: Initial Access",
+            "Tactic: Lateral Movement",
             "Domain: Endpoint",
             "Use Case: Threat Detection",
             "Data Source: PAN-OS",
@@ -87,12 +88,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1190/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
+                },
+                "technique": [
+                    {
+                        "id": "T1021",
+                        "name": "Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1021/",
+                        "subtechnique": [
+                            {
+                                "id": "T1021.003",
+                                "name": "Distributed Component Object Model",
+                                "reference": "https://attack.mitre.org/techniques/T1021/003/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "32923416-763a-4531-bb35-f33b9232ecdb_107",
+    "id": "32923416-763a-4531-bb35-f33b9232ecdb_108",
     "type": "security-rule"
 }

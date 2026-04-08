@@ -113,12 +113,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
+                },
+                "technique": [
+                    {
+                        "id": "T1021",
+                        "name": "Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1021/",
+                        "subtechnique": [
+                            {
+                                "id": "T1021.001",
+                                "name": "Remote Desktop Protocol",
+                                "reference": "https://attack.mitre.org/techniques/T1021/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 315
+        "version": 316
     },
-    "id": "074464f9-f30d-4029-8c03-0ed237fffec7_315",
+    "id": "074464f9-f30d-4029-8c03-0ed237fffec7_316",
     "type": "security-rule"
 }

@@ -97,6 +97,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1083",
+                        "name": "File and Directory Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1083/"
+                    },
+                    {
                         "id": "T1518",
                         "name": "Software Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1518/"
@@ -106,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "33a6752b-da5e-45f8-b13a-5f094c09522f_112",
+    "id": "33a6752b-da5e-45f8-b13a-5f094c09522f_113",
     "type": "security-rule"
 }

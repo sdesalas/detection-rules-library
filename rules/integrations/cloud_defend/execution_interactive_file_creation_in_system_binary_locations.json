@@ -110,6 +110,11 @@
                         "id": "T1071",
                         "name": "Application Layer Protocol",
                         "reference": "https://attack.mitre.org/techniques/T1071/"
+                    },
+                    {
+                        "id": "T1105",
+                        "name": "Ingress Tool Transfer",
+                        "reference": "https://attack.mitre.org/techniques/T1105/"
                     }
                 ]
             },
@@ -120,13 +125,26 @@
                     "name": "Defense Evasion",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.005",
+                                "name": "Match Legitimate Resource Name or Location",
+                                "reference": "https://attack.mitre.org/techniques/T1036/005/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "05a50000-9886-4695-ad33-3f990dc142e2_1",
+    "id": "05a50000-9886-4695-ad33-3f990dc142e2_2",
     "type": "security-rule"
 }

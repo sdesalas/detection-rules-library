@@ -82,6 +82,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1033",
+                        "name": "System Owner/User Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1033/"
+                    },
+                    {
                         "id": "T1069",
                         "name": "Permission Groups Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1069/",
@@ -125,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "089db1af-740d-4d84-9a5b-babd6de143b0_7",
+    "id": "089db1af-740d-4d84-9a5b-babd6de143b0_8",
     "type": "security-rule"
 }

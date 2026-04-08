@@ -110,12 +110,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1547/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1037",
+                        "name": "Boot or Logon Initialization Scripts",
+                        "reference": "https://attack.mitre.org/techniques/T1037/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "16fac1a1-21ee-4ca6-b720-458e3855d046_214",
+    "id": "16fac1a1-21ee-4ca6-b720-458e3855d046_215",
     "type": "security-rule"
 }

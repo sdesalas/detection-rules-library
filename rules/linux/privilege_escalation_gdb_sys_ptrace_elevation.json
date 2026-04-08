@@ -103,13 +103,18 @@
                         "id": "T1068",
                         "name": "Exploitation for Privilege Escalation",
                         "reference": "https://attack.mitre.org/techniques/T1068/"
+                    },
+                    {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/"
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "c296f888-eac6-4543-8da5-b6abb0d3304f_6",
+    "id": "c296f888-eac6-4543-8da5-b6abb0d3304f_7",
     "type": "security-rule"
 }

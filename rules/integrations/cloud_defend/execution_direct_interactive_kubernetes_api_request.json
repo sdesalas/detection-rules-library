@@ -92,6 +92,11 @@
                                 "reference": "https://attack.mitre.org/techniques/T1059/004/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1609",
+                        "name": "Container Administration Command",
+                        "reference": "https://attack.mitre.org/techniques/T1609/"
                     }
                 ]
             },
@@ -109,12 +114,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1613/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
+                },
+                "technique": [
+                    {
+                        "id": "T1550",
+                        "name": "Use Alternate Authentication Material",
+                        "reference": "https://attack.mitre.org/techniques/T1550/",
+                        "subtechnique": [
+                            {
+                                "id": "T1550.001",
+                                "name": "Application Access Token",
+                                "reference": "https://attack.mitre.org/techniques/T1550/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "26a989d2-010e-4dae-b46b-689d03cc22b3_1",
+    "id": "26a989d2-010e-4dae-b46b-689d03cc22b3_2",
     "type": "security-rule"
 }

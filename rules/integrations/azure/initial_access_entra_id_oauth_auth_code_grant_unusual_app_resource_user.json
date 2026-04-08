@@ -123,6 +123,11 @@
                                 "reference": "https://attack.mitre.org/techniques/T1566/002/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1199",
+                        "name": "Trusted Relationship",
+                        "reference": "https://attack.mitre.org/techniques/T1199/"
                     }
                 ]
             },
@@ -140,12 +145,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1528/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1550",
+                        "name": "Use Alternate Authentication Material",
+                        "reference": "https://attack.mitre.org/techniques/T1550/",
+                        "subtechnique": [
+                            {
+                                "id": "T1550.001",
+                                "name": "Application Access Token",
+                                "reference": "https://attack.mitre.org/techniques/T1550/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "c8e5f6a2-1234-4d5e-9f8a-b7c6d5e4f3a2_2",
+    "id": "c8e5f6a2-1234-4d5e-9f8a-b7c6d5e4f3a2_3",
     "type": "security-rule"
 }

@@ -92,12 +92,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1210/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0001",
+                    "name": "Initial Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                },
+                "technique": [
+                    {
+                        "id": "T1190",
+                        "name": "Exploit Public-Facing Application",
+                        "reference": "https://attack.mitre.org/techniques/T1190/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 216
+        "version": 217
     },
-    "id": "c7ce36c0-32ff-4f9a-bfc2-dcb242bf99f9_216",
+    "id": "c7ce36c0-32ff-4f9a-bfc2-dcb242bf99f9_217",
     "type": "security-rule"
 }

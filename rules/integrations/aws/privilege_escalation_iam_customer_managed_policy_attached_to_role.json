@@ -97,6 +97,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/"
+                    },
+                    {
                         "id": "T1548",
                         "name": "Abuse Elevation Control Mechanism",
                         "reference": "https://attack.mitre.org/techniques/T1548/",
@@ -109,12 +114,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0003",
+                    "name": "Persistence",
+                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                },
+                "technique": [
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 107
+        "version": 108
     },
-    "id": "f6d07a70-9ad0-11ef-954f-f661ea17fbcd_107",
+    "id": "f6d07a70-9ad0-11ef-954f-f661ea17fbcd_108",
     "type": "security-rule"
 }

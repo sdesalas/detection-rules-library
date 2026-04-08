@@ -106,14 +106,19 @@
                                 "reference": "https://attack.mitre.org/techniques/T1098/003/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "71de53ea-ff3b-11ee-b572-f661ea17fbce_7",
+    "id": "71de53ea-ff3b-11ee-b572-f661ea17fbce_8",
     "type": "security-rule"
 }

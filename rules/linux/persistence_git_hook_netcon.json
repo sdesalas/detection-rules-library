@@ -110,6 +110,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1543/"
                     },
                     {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/"
+                    },
+                    {
                         "id": "T1574",
                         "name": "Hijack Execution Flow",
                         "reference": "https://attack.mitre.org/techniques/T1574/"
@@ -146,11 +151,26 @@
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": []
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0011",
+                    "name": "Command and Control",
+                    "reference": "https://attack.mitre.org/tactics/TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "T1071",
+                        "name": "Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1071/"
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "9822c5a1-1494-42de-b197-487197bb540c_6",
+    "id": "9822c5a1-1494-42de-b197-487197bb540c_7",
     "type": "security-rule"
 }

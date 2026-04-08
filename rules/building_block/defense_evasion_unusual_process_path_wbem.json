@@ -79,15 +79,22 @@
                     {
                         "id": "T1036",
                         "name": "Masquerading",
-                        "reference": "https://attack.mitre.org/techniques/T1036/"
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.005",
+                                "name": "Match Legitimate Resource Name or Location",
+                                "reference": "https://attack.mitre.org/techniques/T1036/005/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "1f460f12-a3cf-4105-9ebb-f788cc63f365_107",
+    "id": "1f460f12-a3cf-4105-9ebb-f788cc63f365_108",
     "type": "security-rule"
 }

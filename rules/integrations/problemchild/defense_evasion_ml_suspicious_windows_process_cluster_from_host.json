@@ -54,13 +54,18 @@
                         "id": "T1036",
                         "name": "Masquerading",
                         "reference": "https://attack.mitre.org/techniques/T1036/"
+                    },
+                    {
+                        "id": "T1218",
+                        "name": "System Binary Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1218/"
                     }
                 ]
             }
         ],
         "type": "machine_learning",
-        "version": 110
+        "version": 111
     },
-    "id": "bdfebe11-e169-42e3-b344-c5d2015533d3_110",
+    "id": "bdfebe11-e169-42e3-b344-c5d2015533d3_111",
     "type": "security-rule"
 }

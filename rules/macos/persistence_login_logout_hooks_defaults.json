@@ -69,15 +69,22 @@
                     {
                         "id": "T1037",
                         "name": "Boot or Logon Initialization Scripts",
-                        "reference": "https://attack.mitre.org/techniques/T1037/"
+                        "reference": "https://attack.mitre.org/techniques/T1037/",
+                        "subtechnique": [
+                            {
+                                "id": "T1037.002",
+                                "name": "Login Hook",
+                                "reference": "https://attack.mitre.org/techniques/T1037/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "5d0265bf-dea9-41a9-92ad-48a8dcd05080_111",
+    "id": "5d0265bf-dea9-41a9-92ad-48a8dcd05080_112",
     "type": "security-rule"
 }

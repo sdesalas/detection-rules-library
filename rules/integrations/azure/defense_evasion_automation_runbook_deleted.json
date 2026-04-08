@@ -64,12 +64,27 @@
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": []
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0040",
+                    "name": "Impact",
+                    "reference": "https://attack.mitre.org/tactics/TA0040/"
+                },
+                "technique": [
+                    {
+                        "id": "T1485",
+                        "name": "Data Destruction",
+                        "reference": "https://attack.mitre.org/techniques/T1485/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 107
     },
-    "id": "8ddab73b-3d15-4e5d-9413-47f05553c1d7_106",
+    "id": "8ddab73b-3d15-4e5d-9413-47f05553c1d7_107",
     "type": "security-rule"
 }

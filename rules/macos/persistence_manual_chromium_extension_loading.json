@@ -74,7 +74,14 @@
                     {
                         "id": "T1176",
                         "name": "Software Extensions",
-                        "reference": "https://attack.mitre.org/techniques/T1176/"
+                        "reference": "https://attack.mitre.org/techniques/T1176/",
+                        "subtechnique": [
+                            {
+                                "id": "T1176.001",
+                                "name": "Browser Extensions",
+                                "reference": "https://attack.mitre.org/techniques/T1176/001/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -92,12 +99,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1539/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0009",
+                    "name": "Collection",
+                    "reference": "https://attack.mitre.org/tactics/TA0009/"
+                },
+                "technique": [
+                    {
+                        "id": "T1185",
+                        "name": "Browser Session Hijacking",
+                        "reference": "https://attack.mitre.org/techniques/T1185/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "f1f3070e-045c-4e03-ae58-d11d43d2ee51_1",
+    "id": "f1f3070e-045c-4e03-ae58-d11d43d2ee51_2",
     "type": "security-rule"
 }

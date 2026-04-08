@@ -140,11 +140,33 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/",
+                        "subtechnique": [
+                            {
+                                "id": "T1548.001",
+                                "name": "Setuid and Setgid",
+                                "reference": "https://attack.mitre.org/techniques/T1548/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "9b80cb26-9966-44b5-abbf-764fbdbc3586_9",
+    "id": "9b80cb26-9966-44b5-abbf-764fbdbc3586_10",
     "type": "security-rule"
 }

@@ -101,6 +101,11 @@
                                 "id": "T1069.001",
                                 "name": "Local Groups",
                                 "reference": "https://attack.mitre.org/techniques/T1069/001/"
+                            },
+                            {
+                                "id": "T1069.002",
+                                "name": "Domain Groups",
+                                "reference": "https://attack.mitre.org/techniques/T1069/002/"
                             }
                         ]
                     },
@@ -113,6 +118,11 @@
                                 "id": "T1087.001",
                                 "name": "Local Account",
                                 "reference": "https://attack.mitre.org/techniques/T1087/001/"
+                            },
+                            {
+                                "id": "T1087.002",
+                                "name": "Domain Account",
+                                "reference": "https://attack.mitre.org/techniques/T1087/002/"
                             }
                         ]
                     }
@@ -121,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "6e9b351e-a531-4bdc-b73e-7034d6eed7ff_212",
+    "id": "6e9b351e-a531-4bdc-b73e-7034d6eed7ff_213",
     "type": "security-rule"
 }

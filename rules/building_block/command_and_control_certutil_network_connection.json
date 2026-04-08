@@ -82,12 +82,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1105/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1218",
+                        "name": "System Binary Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1218/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 218
+        "version": 219
     },
-    "id": "3838e0e3-1850-4850-a411-2e8c5ba40ba8_218",
+    "id": "3838e0e3-1850-4850-a411-2e8c5ba40ba8_219",
     "type": "security-rule"
 }

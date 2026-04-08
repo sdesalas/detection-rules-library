@@ -89,15 +89,22 @@
                     {
                         "id": "T1546",
                         "name": "Event Triggered Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1546/"
+                        "reference": "https://attack.mitre.org/techniques/T1546/",
+                        "subtechnique": [
+                            {
+                                "id": "T1546.002",
+                                "name": "Screensaver",
+                                "reference": "https://attack.mitre.org/techniques/T1546/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "e6e8912f-283f-4d0d-8442-e0dcaf49944b_112",
+    "id": "e6e8912f-283f-4d0d-8442-e0dcaf49944b_113",
     "type": "security-rule"
 }

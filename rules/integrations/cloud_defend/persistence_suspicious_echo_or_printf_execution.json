@@ -78,9 +78,9 @@
                 },
                 "technique": [
                     {
-                        "id": "T1543",
-                        "name": "Create or Modify System Process",
-                        "reference": "https://attack.mitre.org/techniques/T1543/"
+                        "id": "T1037",
+                        "name": "Boot or Logon Initialization Scripts",
+                        "reference": "https://attack.mitre.org/techniques/T1037/"
                     },
                     {
                         "id": "T1053",
@@ -95,9 +95,28 @@
                         ]
                     },
                     {
-                        "id": "T1037",
-                        "name": "Boot or Logon Initialization Scripts",
-                        "reference": "https://attack.mitre.org/techniques/T1037/"
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.004",
+                                "name": "SSH Authorized Keys",
+                                "reference": "https://attack.mitre.org/techniques/T1098/004/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1543",
+                        "name": "Create or Modify System Process",
+                        "reference": "https://attack.mitre.org/techniques/T1543/",
+                        "subtechnique": [
+                            {
+                                "id": "T1543.004",
+                                "name": "Launch Daemon",
+                                "reference": "https://attack.mitre.org/techniques/T1543/004/"
+                            }
+                        ]
                     },
                     {
                         "id": "T1546",
@@ -108,6 +127,18 @@
                                 "id": "T1546.004",
                                 "name": "Unix Shell Configuration Modification",
                                 "reference": "https://attack.mitre.org/techniques/T1546/004/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.006",
+                                "name": "Dynamic Linker Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1574/006/"
                             }
                         ]
                     }
@@ -122,11 +153,6 @@
                 },
                 "technique": [
                     {
-                        "id": "T1543",
-                        "name": "Create or Modify System Process",
-                        "reference": "https://attack.mitre.org/techniques/T1543/"
-                    },
-                    {
                         "id": "T1053",
                         "name": "Scheduled Task/Job",
                         "reference": "https://attack.mitre.org/techniques/T1053/",
@@ -135,6 +161,54 @@
                                 "id": "T1053.003",
                                 "name": "Cron",
                                 "reference": "https://attack.mitre.org/techniques/T1053/003/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.004",
+                                "name": "SSH Authorized Keys",
+                                "reference": "https://attack.mitre.org/techniques/T1098/004/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1543",
+                        "name": "Create or Modify System Process",
+                        "reference": "https://attack.mitre.org/techniques/T1543/",
+                        "subtechnique": [
+                            {
+                                "id": "T1543.004",
+                                "name": "Launch Daemon",
+                                "reference": "https://attack.mitre.org/techniques/T1543/004/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1548",
+                        "name": "Abuse Elevation Control Mechanism",
+                        "reference": "https://attack.mitre.org/techniques/T1548/",
+                        "subtechnique": [
+                            {
+                                "id": "T1548.003",
+                                "name": "Sudo and Sudo Caching",
+                                "reference": "https://attack.mitre.org/techniques/T1548/003/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.006",
+                                "name": "Dynamic Linker Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1574/006/"
                             }
                         ]
                     }
@@ -159,14 +233,41 @@
                                 "reference": "https://attack.mitre.org/techniques/T1053/003/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.004",
+                                "name": "Unix Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1140",
+                        "name": "Deobfuscate/Decode Files or Information",
+                        "reference": "https://attack.mitre.org/techniques/T1140/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "d9bfa475-270d-4b07-93cb-b1f49abe13da_2",
+    "id": "d9bfa475-270d-4b07-93cb-b1f49abe13da_3",
     "type": "security-rule"
 }

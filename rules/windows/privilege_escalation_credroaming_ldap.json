@@ -84,14 +84,19 @@
                         "id": "T1068",
                         "name": "Exploitation for Privilege Escalation",
                         "reference": "https://attack.mitre.org/techniques/T1068/"
+                    },
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 118
+        "version": 119
     },
-    "id": "670b3b5a-35e5-42db-bd36-6c5b9b4b7313_118",
+    "id": "670b3b5a-35e5-42db-bd36-6c5b9b4b7313_119",
     "type": "security-rule"
 }

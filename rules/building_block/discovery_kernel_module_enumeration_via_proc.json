@@ -84,14 +84,19 @@
                         "id": "T1082",
                         "name": "System Information Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1082/"
+                    },
+                    {
+                        "id": "T1518",
+                        "name": "Software Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1518/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 110
+        "version": 111
     },
-    "id": "80084fa9-8677-4453-8680-b891d3c0c778_110",
+    "id": "80084fa9-8677-4453-8680-b891d3c0c778_111",
     "type": "security-rule"
 }

@@ -111,12 +111,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1613/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1609",
+                        "name": "Container Administration Command",
+                        "reference": "https://attack.mitre.org/techniques/T1609/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "dd983e79-22e8-44d1-9173-d57dba514cac_104",
+    "id": "dd983e79-22e8-44d1-9173-d57dba514cac_105",
     "type": "security-rule"
 }

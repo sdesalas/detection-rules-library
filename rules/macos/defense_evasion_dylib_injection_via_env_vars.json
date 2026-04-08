@@ -132,11 +132,33 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.006",
+                                "name": "Dynamic Linker Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1574/006/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "fb8790fc-d485-45e2-8d6e-2fb813f4af95_1",
+    "id": "fb8790fc-d485-45e2-8d6e-2fb813f4af95_2",
     "type": "security-rule"
 }

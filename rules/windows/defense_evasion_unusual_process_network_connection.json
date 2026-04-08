@@ -79,13 +79,30 @@
                         "id": "T1127",
                         "name": "Trusted Developer Utilities Proxy Execution",
                         "reference": "https://attack.mitre.org/techniques/T1127/"
+                    },
+                    {
+                        "id": "T1218",
+                        "name": "System Binary Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1218/",
+                        "subtechnique": [
+                            {
+                                "id": "T1218.003",
+                                "name": "CMSTP",
+                                "reference": "https://attack.mitre.org/techniques/T1218/003/"
+                            },
+                            {
+                                "id": "T1218.008",
+                                "name": "Odbcconf",
+                                "reference": "https://attack.mitre.org/techniques/T1218/008/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "610949a1-312f-4e04-bb55-3a79b8c95267_211",
+    "id": "610949a1-312f-4e04-bb55-3a79b8c95267_212",
     "type": "security-rule"
 }

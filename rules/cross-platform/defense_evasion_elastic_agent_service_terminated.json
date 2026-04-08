@@ -82,12 +82,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0040",
+                    "name": "Impact",
+                    "reference": "https://attack.mitre.org/tactics/TA0040/"
+                },
+                "technique": [
+                    {
+                        "id": "T1489",
+                        "name": "Service Stop",
+                        "reference": "https://attack.mitre.org/techniques/T1489/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 113
+        "version": 114
     },
-    "id": "b627cd12-dac4-11ec-9582-f661ea17fbcd_113",
+    "id": "b627cd12-dac4-11ec-9582-f661ea17fbcd_114",
     "type": "security-rule"
 }

@@ -97,14 +97,19 @@
                         "id": "T1648",
                         "name": "Serverless Execution",
                         "reference": "https://attack.mitre.org/techniques/T1648/"
+                    },
+                    {
+                        "id": "T1651",
+                        "name": "Cloud Administration Command",
+                        "reference": "https://attack.mitre.org/techniques/T1651/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "0415258b-a7b2-48a6-891a-3367cd9d4d31_6",
+    "id": "0415258b-a7b2-48a6-891a-3367cd9d4d31_7",
     "type": "security-rule"
 }

@@ -81,14 +81,19 @@
                                 "reference": "https://attack.mitre.org/techniques/T1562/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1647",
+                        "name": "Plist File Modification",
+                        "reference": "https://attack.mitre.org/techniques/T1647/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "6482255d-f468-45ea-a5b3-d3a7de1331ae_111",
+    "id": "6482255d-f468-45ea-a5b3-d3a7de1331ae_112",
     "type": "security-rule"
 }

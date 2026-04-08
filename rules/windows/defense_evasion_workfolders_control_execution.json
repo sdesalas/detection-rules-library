@@ -101,17 +101,41 @@
                 },
                 "technique": [
                     {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.005",
+                                "name": "Match Legitimate Resource Name or Location",
+                                "reference": "https://attack.mitre.org/techniques/T1036/005/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1218",
                         "name": "System Binary Proxy Execution",
                         "reference": "https://attack.mitre.org/techniques/T1218/"
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.008",
+                                "name": "Path Interception by Search Order Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1574/008/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 314
+        "version": 315
     },
-    "id": "ad0d2742-9a49-11ec-8d6b-acde48001122_314",
+    "id": "ad0d2742-9a49-11ec-8d6b-acde48001122_315",
     "type": "security-rule"
 }

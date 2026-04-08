@@ -51,16 +51,35 @@
                 },
                 "technique": [
                     {
+                        "id": "T1071",
+                        "name": "Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1071/",
+                        "subtechnique": [
+                            {
+                                "id": "T1071.004",
+                                "name": "DNS",
+                                "reference": "https://attack.mitre.org/techniques/T1071/004/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1568",
                         "name": "Dynamic Resolution",
-                        "reference": "https://attack.mitre.org/techniques/T1568/"
+                        "reference": "https://attack.mitre.org/techniques/T1568/",
+                        "subtechnique": [
+                            {
+                                "id": "T1568.002",
+                                "name": "Domain Generation Algorithms",
+                                "reference": "https://attack.mitre.org/techniques/T1568/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "type": "machine_learning",
-        "version": 8
+        "version": 9
     },
-    "id": "ff0d807d-869b-4a0d-a493-52bc46d2f1b1_8",
+    "id": "ff0d807d-869b-4a0d-a493-52bc46d2f1b1_9",
     "type": "security-rule"
 }

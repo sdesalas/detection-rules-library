@@ -100,8 +100,18 @@
                                 "id": "T1021.001",
                                 "name": "Remote Desktop Protocol",
                                 "reference": "https://attack.mitre.org/techniques/T1021/001/"
+                            },
+                            {
+                                "id": "T1021.002",
+                                "name": "SMB/Windows Admin Shares",
+                                "reference": "https://attack.mitre.org/techniques/T1021/002/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1570",
+                        "name": "Lateral Tool Transfer",
+                        "reference": "https://attack.mitre.org/techniques/T1570/"
                     }
                 ]
             },
@@ -130,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 312
+        "version": 313
     },
-    "id": "25224a80-5a4a-4b8a-991e-6ab390465c4f_312",
+    "id": "25224a80-5a4a-4b8a-991e-6ab390465c4f_313",
     "type": "security-rule"
 }

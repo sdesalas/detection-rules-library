@@ -112,14 +112,26 @@
                         "id": "T1486",
                         "name": "Data Encrypted for Impact",
                         "reference": "https://attack.mitre.org/techniques/T1486/"
+                    },
+                    {
+                        "id": "T1565",
+                        "name": "Data Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1565/",
+                        "subtechnique": [
+                            {
+                                "id": "T1565.001",
+                                "name": "Stored Data Manipulation",
+                                "reference": "https://attack.mitre.org/techniques/T1565/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "7fda9bb2-fd28-11ee-85f9-f661ea17fbce_10",
+    "id": "7fda9bb2-fd28-11ee-85f9-f661ea17fbce_11",
     "type": "security-rule"
 }

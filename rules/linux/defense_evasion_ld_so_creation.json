@@ -76,6 +76,18 @@
                         "id": "T1218",
                         "name": "System Binary Proxy Execution",
                         "reference": "https://attack.mitre.org/techniques/T1218/"
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.006",
+                                "name": "Dynamic Linker Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1574/006/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -126,8 +138,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "06d555e4-c8ce-4d90-90e1-ec7f66df5a6a_106",
+    "id": "06d555e4-c8ce-4d90-90e1-ec7f66df5a6a_107",
     "type": "security-rule"
 }

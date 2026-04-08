@@ -102,14 +102,24 @@
                         "id": "T1082",
                         "name": "System Information Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1082/"
+                    },
+                    {
+                        "id": "T1083",
+                        "name": "File and Directory Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1083/"
+                    },
+                    {
+                        "id": "T1518",
+                        "name": "Software Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1518/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "78390eb5-c838-4c1d-8240-69dd7397cfb7_107",
+    "id": "78390eb5-c838-4c1d-8240-69dd7397cfb7_108",
     "type": "security-rule"
 }

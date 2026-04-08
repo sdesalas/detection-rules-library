@@ -92,14 +92,26 @@
                         ]
                     },
                     {
-                        "id": "T1547",
-                        "name": "Boot or Logon Autostart Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1547/",
+                        "id": "T1053",
+                        "name": "Scheduled Task/Job",
+                        "reference": "https://attack.mitre.org/techniques/T1053/",
                         "subtechnique": [
                             {
-                                "id": "T1547.006",
-                                "name": "Kernel Modules and Extensions",
-                                "reference": "https://attack.mitre.org/techniques/T1547/006/"
+                                "id": "T1053.002",
+                                "name": "At",
+                                "reference": "https://attack.mitre.org/techniques/T1053/002/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/",
+                        "subtechnique": [
+                            {
+                                "id": "T1098.004",
+                                "name": "SSH Authorized Keys",
+                                "reference": "https://attack.mitre.org/techniques/T1098/004/"
                             }
                         ]
                     },
@@ -124,6 +136,40 @@
                                 "id": "T1543.002",
                                 "name": "Systemd Service",
                                 "reference": "https://attack.mitre.org/techniques/T1543/002/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1546",
+                        "name": "Event Triggered Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1546/",
+                        "subtechnique": [
+                            {
+                                "id": "T1546.004",
+                                "name": "Unix Shell Configuration Modification",
+                                "reference": "https://attack.mitre.org/techniques/T1546/004/"
+                            },
+                            {
+                                "id": "T1546.017",
+                                "name": "Udev Rules",
+                                "reference": "https://attack.mitre.org/techniques/T1546/017/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1547",
+                        "name": "Boot or Logon Autostart Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1547/",
+                        "subtechnique": [
+                            {
+                                "id": "T1547.006",
+                                "name": "Kernel Modules and Extensions",
+                                "reference": "https://attack.mitre.org/techniques/T1547/006/"
+                            },
+                            {
+                                "id": "T1547.013",
+                                "name": "XDG Autostart Entries",
+                                "reference": "https://attack.mitre.org/techniques/T1547/013/"
                             }
                         ]
                     },
@@ -213,8 +259,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "192657ba-ab0e-4901-89a2-911d611eee98_10",
+    "id": "192657ba-ab0e-4901-89a2-911d611eee98_11",
     "type": "security-rule"
 }

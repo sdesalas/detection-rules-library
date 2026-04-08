@@ -114,14 +114,24 @@
                         "id": "T1007",
                         "name": "System Service Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1007/"
+                    },
+                    {
+                        "id": "T1057",
+                        "name": "Process Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1057/"
+                    },
+                    {
+                        "id": "T1135",
+                        "name": "Network Share Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1135/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 113
+        "version": 114
     },
-    "id": "e0881d20-54ac-457f-8733-fe0bc5d44c55_113",
+    "id": "e0881d20-54ac-457f-8733-fe0bc5d44c55_114",
     "type": "security-rule"
 }

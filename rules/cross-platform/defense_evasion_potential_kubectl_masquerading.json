@@ -113,15 +113,57 @@
                     {
                         "id": "T1564",
                         "name": "Hide Artifacts",
-                        "reference": "https://attack.mitre.org/techniques/T1564/"
+                        "reference": "https://attack.mitre.org/techniques/T1564/",
+                        "subtechnique": [
+                            {
+                                "id": "T1564.001",
+                                "name": "Hidden Files and Directories",
+                                "reference": "https://attack.mitre.org/techniques/T1564/001/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0007",
+                    "name": "Discovery",
+                    "reference": "https://attack.mitre.org/tactics/TA0007/"
+                },
+                "technique": [
+                    {
+                        "id": "T1613",
+                        "name": "Container and Resource Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1613/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1609",
+                        "name": "Container Administration Command",
+                        "reference": "https://attack.mitre.org/techniques/T1609/"
+                    },
+                    {
+                        "id": "T1610",
+                        "name": "Deploy Container",
+                        "reference": "https://attack.mitre.org/techniques/T1610/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "2388c687-cb2c-4b7b-be8f-6864a2385048_103",
+    "id": "2388c687-cb2c-4b7b-be8f-6864a2385048_104",
     "type": "security-rule"
 }

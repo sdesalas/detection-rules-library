@@ -98,6 +98,11 @@
                                 "reference": "https://attack.mitre.org/techniques/T1548/003/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/"
                     }
                 ]
             },
@@ -115,12 +120,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1574/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0006",
+                    "name": "Credential Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "T1056",
+                        "name": "Input Capture",
+                        "reference": "https://attack.mitre.org/techniques/T1056/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "88fdcb8c-60e5-46ee-9206-2663adf1b1ce_111",
+    "id": "88fdcb8c-60e5-46ee-9206-2663adf1b1ce_112",
     "type": "security-rule"
 }

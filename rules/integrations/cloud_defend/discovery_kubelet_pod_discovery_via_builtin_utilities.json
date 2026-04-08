@@ -99,6 +99,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1083",
+                        "name": "File and Directory Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1083/"
+                    },
+                    {
                         "id": "T1613",
                         "name": "Container and Resource Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1613/"
@@ -108,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "f596175f-b8fd-43ac-b9e9-ea2a96bb55d8_1",
+    "id": "f596175f-b8fd-43ac-b9e9-ea2a96bb55d8_2",
     "type": "security-rule"
 }

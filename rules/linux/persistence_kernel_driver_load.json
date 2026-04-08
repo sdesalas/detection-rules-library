@@ -87,12 +87,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1014/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1547",
+                        "name": "Boot or Logon Autostart Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1547/",
+                        "subtechnique": [
+                            {
+                                "id": "T1547.006",
+                                "name": "Kernel Modules and Extensions",
+                                "reference": "https://attack.mitre.org/techniques/T1547/006/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "3e12a439-d002-4944-bc42-171c0dcb9b96_7",
+    "id": "3e12a439-d002-4944-bc42-171c0dcb9b96_8",
     "type": "security-rule"
 }

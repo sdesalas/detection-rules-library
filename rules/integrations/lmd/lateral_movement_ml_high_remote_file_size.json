@@ -51,13 +51,33 @@
                         "id": "T1210",
                         "name": "Exploitation of Remote Services",
                         "reference": "https://attack.mitre.org/techniques/T1210/"
+                    },
+                    {
+                        "id": "T1570",
+                        "name": "Lateral Tool Transfer",
+                        "reference": "https://attack.mitre.org/techniques/T1570/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0009",
+                    "name": "Collection",
+                    "reference": "https://attack.mitre.org/tactics/TA0009/"
+                },
+                "technique": [
+                    {
+                        "id": "T1039",
+                        "name": "Data from Network Shared Drive",
+                        "reference": "https://attack.mitre.org/techniques/T1039/"
                     }
                 ]
             }
         ],
         "type": "machine_learning",
-        "version": 8
+        "version": 9
     },
-    "id": "0678bc9c-b71a-433b-87e6-2f664b6b3131_8",
+    "id": "0678bc9c-b71a-433b-87e6-2f664b6b3131_9",
     "type": "security-rule"
 }

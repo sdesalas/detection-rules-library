@@ -83,9 +83,9 @@
                 },
                 "technique": [
                     {
-                        "id": "T1543",
-                        "name": "Create or Modify System Process",
-                        "reference": "https://attack.mitre.org/techniques/T1543/"
+                        "id": "T1037",
+                        "name": "Boot or Logon Initialization Scripts",
+                        "reference": "https://attack.mitre.org/techniques/T1037/"
                     },
                     {
                         "id": "T1053",
@@ -93,16 +93,33 @@
                         "reference": "https://attack.mitre.org/techniques/T1053/",
                         "subtechnique": [
                             {
+                                "id": "T1053.002",
+                                "name": "At",
+                                "reference": "https://attack.mitre.org/techniques/T1053/002/"
+                            },
+                            {
                                 "id": "T1053.003",
                                 "name": "Cron",
                                 "reference": "https://attack.mitre.org/techniques/T1053/003/"
+                            },
+                            {
+                                "id": "T1053.006",
+                                "name": "Systemd Timers",
+                                "reference": "https://attack.mitre.org/techniques/T1053/006/"
                             }
                         ]
                     },
                     {
-                        "id": "T1037",
-                        "name": "Boot or Logon Initialization Scripts",
-                        "reference": "https://attack.mitre.org/techniques/T1037/"
+                        "id": "T1543",
+                        "name": "Create or Modify System Process",
+                        "reference": "https://attack.mitre.org/techniques/T1543/",
+                        "subtechnique": [
+                            {
+                                "id": "T1543.002",
+                                "name": "Systemd Service",
+                                "reference": "https://attack.mitre.org/techniques/T1543/002/"
+                            }
+                        ]
                     },
                     {
                         "id": "T1546",
@@ -127,19 +144,36 @@
                 },
                 "technique": [
                     {
-                        "id": "T1543",
-                        "name": "Create or Modify System Process",
-                        "reference": "https://attack.mitre.org/techniques/T1543/"
-                    },
-                    {
                         "id": "T1053",
                         "name": "Scheduled Task/Job",
                         "reference": "https://attack.mitre.org/techniques/T1053/",
                         "subtechnique": [
                             {
+                                "id": "T1053.002",
+                                "name": "At",
+                                "reference": "https://attack.mitre.org/techniques/T1053/002/"
+                            },
+                            {
                                 "id": "T1053.003",
                                 "name": "Cron",
                                 "reference": "https://attack.mitre.org/techniques/T1053/003/"
+                            },
+                            {
+                                "id": "T1053.006",
+                                "name": "Systemd Timers",
+                                "reference": "https://attack.mitre.org/techniques/T1053/006/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1543",
+                        "name": "Create or Modify System Process",
+                        "reference": "https://attack.mitre.org/techniques/T1543/",
+                        "subtechnique": [
+                            {
+                                "id": "T1543.002",
+                                "name": "Systemd Service",
+                                "reference": "https://attack.mitre.org/techniques/T1543/002/"
                             }
                         ]
                     },
@@ -171,9 +205,19 @@
                         "reference": "https://attack.mitre.org/techniques/T1053/",
                         "subtechnique": [
                             {
+                                "id": "T1053.002",
+                                "name": "At",
+                                "reference": "https://attack.mitre.org/techniques/T1053/002/"
+                            },
+                            {
                                 "id": "T1053.003",
                                 "name": "Cron",
                                 "reference": "https://attack.mitre.org/techniques/T1053/003/"
+                            },
+                            {
+                                "id": "T1053.006",
+                                "name": "Systemd Timers",
+                                "reference": "https://attack.mitre.org/techniques/T1053/006/"
                             }
                         ]
                     }
@@ -182,8 +226,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "f246e70e-5e20-4006-8460-d72b023d6adf_1",
+    "id": "f246e70e-5e20-4006-8460-d72b023d6adf_2",
     "type": "security-rule"
 }

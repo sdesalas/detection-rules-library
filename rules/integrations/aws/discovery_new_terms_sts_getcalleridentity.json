@@ -98,6 +98,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1033",
+                        "name": "System Owner/User Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1033/"
+                    },
+                    {
                         "id": "T1087",
                         "name": "Account Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1087/",
@@ -114,8 +119,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "30fbf4db-c502-4e68-a239-2e99af0f70da_7",
+    "id": "30fbf4db-c502-4e68-a239-2e99af0f70da_8",
     "type": "security-rule"
 }

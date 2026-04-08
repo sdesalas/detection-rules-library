@@ -92,6 +92,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/"
+                    },
+                    {
                         "id": "T1136",
                         "name": "Create Account",
                         "reference": "https://attack.mitre.org/techniques/T1136/",
@@ -104,12 +109,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1098",
+                        "name": "Account Manipulation",
+                        "reference": "https://attack.mitre.org/techniques/T1098/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 113
+        "version": 114
     },
-    "id": "494ebba4-ecb7-4be4-8c6f-654c686549ad_113",
+    "id": "494ebba4-ecb7-4be4-8c6f-654c686549ad_114",
     "type": "security-rule"
 }

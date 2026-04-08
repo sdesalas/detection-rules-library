@@ -101,11 +101,26 @@
                         "reference": "https://attack.mitre.org/techniques/T1218/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0011",
+                    "name": "Command and Control",
+                    "reference": "https://attack.mitre.org/tactics/TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "T1071",
+                        "name": "Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1071/"
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "c7894234-7814-44c2-92a9-f7d851ea246a_211",
+    "id": "c7894234-7814-44c2-92a9-f7d851ea246a_212",
     "type": "security-rule"
 }

@@ -86,6 +86,11 @@
                                 "id": "T1059.004",
                                 "name": "Unix Shell",
                                 "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            },
+                            {
+                                "id": "T1059.006",
+                                "name": "Python",
+                                "reference": "https://attack.mitre.org/techniques/T1059/006/"
                             }
                         ]
                     }
@@ -103,6 +108,11 @@
                         "id": "T1071",
                         "name": "Application Layer Protocol",
                         "reference": "https://attack.mitre.org/techniques/T1071/"
+                    },
+                    {
+                        "id": "T1105",
+                        "name": "Ingress Tool Transfer",
+                        "reference": "https://attack.mitre.org/techniques/T1105/"
                     }
                 ]
             },
@@ -118,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "a750bbcc-863f-41ef-9924-fd8224e23694_2",
+    "id": "a750bbcc-863f-41ef-9924-fd8224e23694_3",
     "type": "security-rule"
 }

@@ -155,6 +155,18 @@
                                 "reference": "https://attack.mitre.org/techniques/T1059/005/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1569",
+                        "name": "System Services",
+                        "reference": "https://attack.mitre.org/techniques/T1569/",
+                        "subtechnique": [
+                            {
+                                "id": "T1569.002",
+                                "name": "Service Execution",
+                                "reference": "https://attack.mitre.org/techniques/T1569/002/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -172,6 +184,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1218/",
                         "subtechnique": [
                             {
+                                "id": "T1218.005",
+                                "name": "Mshta",
+                                "reference": "https://attack.mitre.org/techniques/T1218/005/"
+                            },
+                            {
                                 "id": "T1218.010",
                                 "name": "Regsvr32",
                                 "reference": "https://attack.mitre.org/techniques/T1218/010/"
@@ -188,8 +205,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 217
+        "version": 218
     },
-    "id": "e8571d5f-bea1-46c2-9f56-998de2d3ed95_217",
+    "id": "e8571d5f-bea1-46c2-9f56-998de2d3ed95_218",
     "type": "security-rule"
 }

@@ -106,14 +106,48 @@
                                 "reference": "https://attack.mitre.org/techniques/T1098/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/",
+                        "subtechnique": [
+                            {
+                                "id": "T1556.007",
+                                "name": "Hybrid Identity",
+                                "reference": "https://attack.mitre.org/techniques/T1556/007/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/",
+                        "subtechnique": [
+                            {
+                                "id": "T1556.007",
+                                "name": "Hybrid Identity",
+                                "reference": "https://attack.mitre.org/techniques/T1556/007/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "1cfb39e1-4b6c-4dc7-85fe-733e4a1a33ca_1",
+    "id": "1cfb39e1-4b6c-4dc7-85fe-733e4a1a33ca_2",
     "type": "security-rule"
 }

@@ -116,6 +116,23 @@
                 },
                 "technique": [
                     {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.001",
+                                "name": "PowerShell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/001/"
+                            },
+                            {
+                                "id": "T1059.004",
+                                "name": "Unix Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1651",
                         "name": "Cloud Administration Command",
                         "reference": "https://attack.mitre.org/techniques/T1651/"
@@ -125,8 +142,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "c371e9fc-6a10-11ef-a0ac-f661ea17fbcc_6",
+    "id": "c371e9fc-6a10-11ef-a0ac-f661ea17fbcc_7",
     "type": "security-rule"
 }

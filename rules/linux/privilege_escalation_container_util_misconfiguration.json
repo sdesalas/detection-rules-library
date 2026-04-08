@@ -98,12 +98,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1611/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1610",
+                        "name": "Deploy Container",
+                        "reference": "https://attack.mitre.org/techniques/T1610/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "afe6b0eb-dd9d-4922-b08a-1910124d524d_10",
+    "id": "afe6b0eb-dd9d-4922-b08a-1910124d524d_11",
     "type": "security-rule"
 }

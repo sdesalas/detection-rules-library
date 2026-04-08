@@ -76,14 +76,48 @@
                                 "reference": "https://attack.mitre.org/techniques/T1078/003/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1136",
+                        "name": "Create Account",
+                        "reference": "https://attack.mitre.org/techniques/T1136/",
+                        "subtechnique": [
+                            {
+                                "id": "T1136.001",
+                                "name": "Local Account",
+                                "reference": "https://attack.mitre.org/techniques/T1136/001/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1564",
+                        "name": "Hide Artifacts",
+                        "reference": "https://attack.mitre.org/techniques/T1564/",
+                        "subtechnique": [
+                            {
+                                "id": "T1564.002",
+                                "name": "Hidden Users",
+                                "reference": "https://attack.mitre.org/techniques/T1564/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "41b638a1-8ab6-4f8e-86d9-466317ef2db5_110",
+    "id": "41b638a1-8ab6-4f8e-86d9-466317ef2db5_111",
     "type": "security-rule"
 }

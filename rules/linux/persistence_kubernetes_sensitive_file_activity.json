@@ -76,18 +76,6 @@
                 },
                 "technique": [
                     {
-                        "id": "T1543",
-                        "name": "Create or Modify System Process",
-                        "reference": "https://attack.mitre.org/techniques/T1543/",
-                        "subtechnique": [
-                            {
-                                "id": "T1543.005",
-                                "name": "Container Service",
-                                "reference": "https://attack.mitre.org/techniques/T1543/005/"
-                            }
-                        ]
-                    },
-                    {
                         "id": "T1053",
                         "name": "Scheduled Task/Job",
                         "reference": "https://attack.mitre.org/techniques/T1053/",
@@ -98,14 +86,63 @@
                                 "reference": "https://attack.mitre.org/techniques/T1053/007/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1543",
+                        "name": "Create or Modify System Process",
+                        "reference": "https://attack.mitre.org/techniques/T1543/",
+                        "subtechnique": [
+                            {
+                                "id": "T1543.005",
+                                "name": "Container Service",
+                                "reference": "https://attack.mitre.org/techniques/T1543/005/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1610",
+                        "name": "Deploy Container",
+                        "reference": "https://attack.mitre.org/techniques/T1610/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1543",
+                        "name": "Create or Modify System Process",
+                        "reference": "https://attack.mitre.org/techniques/T1543/",
+                        "subtechnique": [
+                            {
+                                "id": "T1543.005",
+                                "name": "Container Service",
+                                "reference": "https://attack.mitre.org/techniques/T1543/005/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 102
+        "version": 103
     },
-    "id": "0fe2290a-2664-4c9c-8263-b88904f12f0d_102",
+    "id": "0fe2290a-2664-4c9c-8263-b88904f12f0d_103",
     "type": "security-rule"
 }

@@ -127,6 +127,11 @@
                         ]
                     },
                     {
+                        "id": "T1140",
+                        "name": "Deobfuscate/Decode Files or Information",
+                        "reference": "https://attack.mitre.org/techniques/T1140/"
+                    },
+                    {
                         "id": "T1620",
                         "name": "Reflective Code Loading",
                         "reference": "https://attack.mitre.org/techniques/T1620/"
@@ -158,8 +163,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 321
+        "version": 322
     },
-    "id": "e26f042e-c590-4e82-8e05-41e81bd822ad_321",
+    "id": "e26f042e-c590-4e82-8e05-41e81bd822ad_322",
     "type": "security-rule"
 }

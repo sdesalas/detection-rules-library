@@ -99,14 +99,26 @@
                                 "reference": "https://attack.mitre.org/techniques/T1071/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1102",
+                        "name": "Web Service",
+                        "reference": "https://attack.mitre.org/techniques/T1102/",
+                        "subtechnique": [
+                            {
+                                "id": "T1102.002",
+                                "name": "Bidirectional Communication",
+                                "reference": "https://attack.mitre.org/techniques/T1102/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "af1e36fe-0abd-4463-b5ec-4e276dec0b26_4",
+    "id": "af1e36fe-0abd-4463-b5ec-4e276dec0b26_5",
     "type": "security-rule"
 }

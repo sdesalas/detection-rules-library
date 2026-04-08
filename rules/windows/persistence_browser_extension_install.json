@@ -90,15 +90,22 @@
                     {
                         "id": "T1176",
                         "name": "Software Extensions",
-                        "reference": "https://attack.mitre.org/techniques/T1176/"
+                        "reference": "https://attack.mitre.org/techniques/T1176/",
+                        "subtechnique": [
+                            {
+                                "id": "T1176.001",
+                                "name": "Browser Extensions",
+                                "reference": "https://attack.mitre.org/techniques/T1176/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 207
+        "version": 208
     },
-    "id": "f97504ac-1053-498f-aeaa-c6d01e76b379_207",
+    "id": "f97504ac-1053-498f-aeaa-c6d01e76b379_208",
     "type": "security-rule"
 }

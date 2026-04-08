@@ -128,12 +128,39 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.005",
+                                "name": "Visual Basic",
+                                "reference": "https://attack.mitre.org/techniques/T1059/005/"
+                            },
+                            {
+                                "id": "T1059.007",
+                                "name": "JavaScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/007/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 207
+        "version": 208
     },
-    "id": "181f6b23-3799-445e-9589-0018328a9e46_207",
+    "id": "181f6b23-3799-445e-9589-0018328a9e46_208",
     "type": "security-rule"
 }

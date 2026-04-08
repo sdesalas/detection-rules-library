@@ -115,6 +115,18 @@
                         "id": "T1059",
                         "name": "Command and Scripting Interpreter",
                         "reference": "https://attack.mitre.org/techniques/T1059/"
+                    },
+                    {
+                        "id": "T1569",
+                        "name": "System Services",
+                        "reference": "https://attack.mitre.org/techniques/T1569/",
+                        "subtechnique": [
+                            {
+                                "id": "T1569.002",
+                                "name": "Service Execution",
+                                "reference": "https://attack.mitre.org/techniques/T1569/002/"
+                            }
+                        ]
                     }
                 ]
             }
@@ -123,8 +135,8 @@
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 425
+        "version": 426
     },
-    "id": "fd7a6052-58fa-4397-93c3-4795249ccfa2_425",
+    "id": "fd7a6052-58fa-4397-93c3-4795249ccfa2_426",
     "type": "security-rule"
 }

@@ -98,6 +98,21 @@
                         "reference": "https://attack.mitre.org/techniques/T1059/",
                         "subtechnique": [
                             {
+                                "id": "T1059.002",
+                                "name": "AppleScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/002/"
+                            },
+                            {
+                                "id": "T1059.004",
+                                "name": "Unix Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            },
+                            {
+                                "id": "T1059.006",
+                                "name": "Python",
+                                "reference": "https://attack.mitre.org/techniques/T1059/006/"
+                            },
+                            {
                                 "id": "T1059.007",
                                 "name": "JavaScript",
                                 "reference": "https://attack.mitre.org/techniques/T1059/007/"
@@ -125,13 +140,18 @@
                                 "reference": "https://attack.mitre.org/techniques/T1071/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1105",
+                        "name": "Ingress Tool Transfer",
+                        "reference": "https://attack.mitre.org/techniques/T1105/"
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "99239e7d-b0d4-46e3-8609-acafcf99f68c_112",
+    "id": "99239e7d-b0d4-46e3-8609-acafcf99f68c_113",
     "type": "security-rule"
 }

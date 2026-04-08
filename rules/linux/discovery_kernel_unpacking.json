@@ -110,14 +110,19 @@
                         "id": "T1014",
                         "name": "Rootkit",
                         "reference": "https://attack.mitre.org/techniques/T1014/"
+                    },
+                    {
+                        "id": "T1140",
+                        "name": "Deobfuscate/Decode Files or Information",
+                        "reference": "https://attack.mitre.org/techniques/T1140/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "4f725dc5-ae44-46c1-9ac5-99f6f7a70d8a_6",
+    "id": "4f725dc5-ae44-46c1-9ac5-99f6f7a70d8a_7",
     "type": "security-rule"
 }

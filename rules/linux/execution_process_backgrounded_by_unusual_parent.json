@@ -99,7 +99,14 @@
                     {
                         "id": "T1059",
                         "name": "Command and Scripting Interpreter",
-                        "reference": "https://attack.mitre.org/techniques/T1059/"
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.004",
+                                "name": "Unix Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -112,6 +119,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.009",
+                                "name": "Break Process Trees",
+                                "reference": "https://attack.mitre.org/techniques/T1036/009/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1564",
                         "name": "Hide Artifacts",
                         "reference": "https://attack.mitre.org/techniques/T1564/"
@@ -121,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "63153282-12da-415f-bad8-c60c9b36cbe3_4",
+    "id": "63153282-12da-415f-bad8-c60c9b36cbe3_5",
     "type": "security-rule"
 }

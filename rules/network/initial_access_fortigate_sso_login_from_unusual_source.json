@@ -71,6 +71,7 @@
         "tags": [
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
+            "Tactic: Credential Access",
             "Resources: Investigation Guide",
             "Domain: Network",
             "Domain: Identity",
@@ -97,14 +98,41 @@
                                 "reference": "https://attack.mitre.org/techniques/T1078/004/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1190",
+                        "name": "Exploit Public-Facing Application",
+                        "reference": "https://attack.mitre.org/techniques/T1190/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0006",
+                    "name": "Credential Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "T1606",
+                        "name": "Forge Web Credentials",
+                        "reference": "https://attack.mitre.org/techniques/T1606/",
+                        "subtechnique": [
+                            {
+                                "id": "T1606.002",
+                                "name": "SAML Tokens",
+                                "reference": "https://attack.mitre.org/techniques/T1606/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "618a219d-a363-4ab1-ba30-870d7c22facd_2",
+    "id": "618a219d-a363-4ab1-ba30-870d7c22facd_3",
     "type": "security-rule"
 }

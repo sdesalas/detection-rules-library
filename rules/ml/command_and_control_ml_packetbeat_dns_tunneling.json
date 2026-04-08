@@ -48,16 +48,43 @@
                 },
                 "technique": [
                     {
+                        "id": "T1071",
+                        "name": "Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1071/",
+                        "subtechnique": [
+                            {
+                                "id": "T1071.004",
+                                "name": "DNS",
+                                "reference": "https://attack.mitre.org/techniques/T1071/004/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1572",
                         "name": "Protocol Tunneling",
                         "reference": "https://attack.mitre.org/techniques/T1572/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0010",
+                    "name": "Exfiltration",
+                    "reference": "https://attack.mitre.org/tactics/TA0010/"
+                },
+                "technique": [
+                    {
+                        "id": "T1041",
+                        "name": "Exfiltration Over C2 Channel",
+                        "reference": "https://attack.mitre.org/techniques/T1041/"
+                    }
+                ]
             }
         ],
         "type": "machine_learning",
-        "version": 107
+        "version": 108
     },
-    "id": "91f02f01-969f-4167-8f66-07827ac3bdd9_107",
+    "id": "91f02f01-969f-4167-8f66-07827ac3bdd9_108",
     "type": "security-rule"
 }

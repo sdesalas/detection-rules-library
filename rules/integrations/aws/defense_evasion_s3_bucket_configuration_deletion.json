@@ -105,6 +105,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1562/",
                         "subtechnique": [
                             {
+                                "id": "T1562.001",
+                                "name": "Disable or Modify Tools",
+                                "reference": "https://attack.mitre.org/techniques/T1562/001/"
+                            },
+                            {
                                 "id": "T1562.008",
                                 "name": "Disable or Modify Cloud Logs",
                                 "reference": "https://attack.mitre.org/techniques/T1562/008/"
@@ -131,8 +136,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 212
+        "version": 213
     },
-    "id": "227dc608-e558-43d9-b521-150772250bae_212",
+    "id": "227dc608-e558-43d9-b521-150772250bae_213",
     "type": "security-rule"
 }

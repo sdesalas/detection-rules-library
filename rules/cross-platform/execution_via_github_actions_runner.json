@@ -120,7 +120,39 @@
                     {
                         "id": "T1059",
                         "name": "Command and Scripting Interpreter",
-                        "reference": "https://attack.mitre.org/techniques/T1059/"
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.001",
+                                "name": "PowerShell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/001/"
+                            },
+                            {
+                                "id": "T1059.002",
+                                "name": "AppleScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/002/"
+                            },
+                            {
+                                "id": "T1059.003",
+                                "name": "Windows Command Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/003/"
+                            },
+                            {
+                                "id": "T1059.004",
+                                "name": "Unix Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            },
+                            {
+                                "id": "T1059.006",
+                                "name": "Python",
+                                "reference": "https://attack.mitre.org/techniques/T1059/006/"
+                            },
+                            {
+                                "id": "T1059.007",
+                                "name": "JavaScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/007/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -145,12 +177,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1218",
+                        "name": "System Binary Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1218/",
+                        "subtechnique": [
+                            {
+                                "id": "T1218.011",
+                                "name": "Rundll32",
+                                "reference": "https://attack.mitre.org/techniques/T1218/011/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "a640ef5b-e1da-4b17-8391-468fdbd1b517_1",
+    "id": "a640ef5b-e1da-4b17-8391-468fdbd1b517_2",
     "type": "security-rule"
 }

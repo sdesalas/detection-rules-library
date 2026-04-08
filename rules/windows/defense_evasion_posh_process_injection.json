@@ -121,6 +121,16 @@
                                 "id": "T1055.002",
                                 "name": "Portable Executable Injection",
                                 "reference": "https://attack.mitre.org/techniques/T1055/002/"
+                            },
+                            {
+                                "id": "T1055.003",
+                                "name": "Thread Execution Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1055/003/"
+                            },
+                            {
+                                "id": "T1055.004",
+                                "name": "Asynchronous Procedure Call",
+                                "reference": "https://attack.mitre.org/techniques/T1055/004/"
                             }
                         ]
                     }
@@ -156,8 +166,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 217
+        "version": 218
     },
-    "id": "2e29e96a-b67c-455a-afe4-de6183431d0d_217",
+    "id": "2e29e96a-b67c-455a-afe4-de6183431d0d_218",
     "type": "security-rule"
 }

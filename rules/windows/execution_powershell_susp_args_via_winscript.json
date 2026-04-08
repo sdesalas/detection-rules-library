@@ -133,6 +133,33 @@
                                 "id": "T1059.005",
                                 "name": "Visual Basic",
                                 "reference": "https://attack.mitre.org/techniques/T1059/005/"
+                            },
+                            {
+                                "id": "T1059.007",
+                                "name": "JavaScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/007/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1218",
+                        "name": "System Binary Proxy Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1218/",
+                        "subtechnique": [
+                            {
+                                "id": "T1218.005",
+                                "name": "Mshta",
+                                "reference": "https://attack.mitre.org/techniques/T1218/005/"
                             }
                         ]
                     }
@@ -141,8 +168,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 208
+        "version": 209
     },
-    "id": "2d62889e-e758-4c5e-b57e-c735914ee32a_208",
+    "id": "2d62889e-e758-4c5e-b57e-c735914ee32a_209",
     "type": "security-rule"
 }

@@ -63,6 +63,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.005",
+                                "name": "Match Legitimate Resource Name or Location",
+                                "reference": "https://attack.mitre.org/techniques/T1036/005/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1497",
                         "name": "Virtualization/Sandbox Evasion",
                         "reference": "https://attack.mitre.org/techniques/T1497/"
@@ -72,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "d22a85c6-d2ad-4cc4-bf7b-54787473669a_110",
+    "id": "d22a85c6-d2ad-4cc4-bf7b-54787473669a_111",
     "type": "security-rule"
 }

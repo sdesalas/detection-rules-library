@@ -64,15 +64,44 @@
                     {
                         "id": "T1556",
                         "name": "Modify Authentication Process",
-                        "reference": "https://attack.mitre.org/techniques/T1556/"
+                        "reference": "https://attack.mitre.org/techniques/T1556/",
+                        "subtechnique": [
+                            {
+                                "id": "T1556.009",
+                                "name": "Conditional Access Policies",
+                                "reference": "https://attack.mitre.org/techniques/T1556/009/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/",
+                        "subtechnique": [
+                            {
+                                "id": "T1556.009",
+                                "name": "Conditional Access Policies",
+                                "reference": "https://attack.mitre.org/techniques/T1556/009/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 413
+        "version": 414
     },
-    "id": "cd16fb10-0261-46e8-9932-a0336278cdbe_413",
+    "id": "cd16fb10-0261-46e8-9932-a0336278cdbe_414",
     "type": "security-rule"
 }

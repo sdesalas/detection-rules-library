@@ -71,15 +71,22 @@
                     {
                         "id": "T1134",
                         "name": "Access Token Manipulation",
-                        "reference": "https://attack.mitre.org/techniques/T1134/"
+                        "reference": "https://attack.mitre.org/techniques/T1134/",
+                        "subtechnique": [
+                            {
+                                "id": "T1134.001",
+                                "name": "Token Impersonation/Theft",
+                                "reference": "https://attack.mitre.org/techniques/T1134/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 210
+        "version": 211
     },
-    "id": "76ddb638-abf7-42d5-be22-4a70b0bf7241_210",
+    "id": "76ddb638-abf7-42d5-be22-4a70b0bf7241_211",
     "type": "security-rule"
 }

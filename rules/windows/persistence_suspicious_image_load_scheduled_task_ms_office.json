@@ -109,14 +109,14 @@
                 },
                 "technique": [
                     {
-                        "id": "T1053",
-                        "name": "Scheduled Task/Job",
-                        "reference": "https://attack.mitre.org/techniques/T1053/",
+                        "id": "T1559",
+                        "name": "Inter-Process Communication",
+                        "reference": "https://attack.mitre.org/techniques/T1559/",
                         "subtechnique": [
                             {
-                                "id": "T1053.005",
-                                "name": "Scheduled Task",
-                                "reference": "https://attack.mitre.org/techniques/T1053/005/"
+                                "id": "T1559.001",
+                                "name": "Component Object Model",
+                                "reference": "https://attack.mitre.org/techniques/T1559/001/"
                             }
                         ]
                     }
@@ -125,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "baa5d22c-5e1c-4f33-bfc9-efa73bb53022_212",
+    "id": "baa5d22c-5e1c-4f33-bfc9-efa73bb53022_213",
     "type": "security-rule"
 }

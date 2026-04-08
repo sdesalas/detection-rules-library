@@ -50,6 +50,11 @@
                         "id": "T1041",
                         "name": "Exfiltration Over C2 Channel",
                         "reference": "https://attack.mitre.org/techniques/T1041/"
+                    },
+                    {
+                        "id": "T1048",
+                        "name": "Exfiltration Over Alternative Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1048/"
                     }
                 ]
             },
@@ -94,14 +99,21 @@
                     {
                         "id": "T1595",
                         "name": "Active Scanning",
-                        "reference": "https://attack.mitre.org/techniques/T1595/"
+                        "reference": "https://attack.mitre.org/techniques/T1595/",
+                        "subtechnique": [
+                            {
+                                "id": "T1595.001",
+                                "name": "Scanning IP Blocks",
+                                "reference": "https://attack.mitre.org/techniques/T1595/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "type": "machine_learning",
-        "version": 109
+        "version": 110
     },
-    "id": "c7db5533-ca2a-41f6-a8b0-ee98abe0f573_109",
+    "id": "c7db5533-ca2a-41f6-a8b0-ee98abe0f573_110",
     "type": "security-rule"
 }

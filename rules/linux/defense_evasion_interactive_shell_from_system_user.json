@@ -115,6 +115,18 @@
                 },
                 "technique": [
                     {
+                        "id": "T1078",
+                        "name": "Valid Accounts",
+                        "reference": "https://attack.mitre.org/techniques/T1078/",
+                        "subtechnique": [
+                            {
+                                "id": "T1078.003",
+                                "name": "Local Accounts",
+                                "reference": "https://attack.mitre.org/techniques/T1078/003/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1564",
                         "name": "Hide Artifacts",
                         "reference": "https://attack.mitre.org/techniques/T1564/",
@@ -127,12 +139,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.004",
+                                "name": "Unix Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "9c5b2382-19d2-4b5d-8f14-9e1631a3acdb_5",
+    "id": "9c5b2382-19d2-4b5d-8f14-9e1631a3acdb_6",
     "type": "security-rule"
 }

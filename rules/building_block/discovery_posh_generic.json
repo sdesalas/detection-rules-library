@@ -195,6 +195,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1012/"
                     },
                     {
+                        "id": "T1016",
+                        "name": "System Network Configuration Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1016/"
+                    },
+                    {
                         "id": "T1049",
                         "name": "System Network Connections Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1049/"
@@ -205,9 +210,21 @@
                         "reference": "https://attack.mitre.org/techniques/T1057/"
                     },
                     {
-                        "id": "T1082",
-                        "name": "System Information Discovery",
-                        "reference": "https://attack.mitre.org/techniques/T1082/"
+                        "id": "T1069",
+                        "name": "Permission Groups Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1069/",
+                        "subtechnique": [
+                            {
+                                "id": "T1069.001",
+                                "name": "Local Groups",
+                                "reference": "https://attack.mitre.org/techniques/T1069/001/"
+                            },
+                            {
+                                "id": "T1069.002",
+                                "name": "Domain Groups",
+                                "reference": "https://attack.mitre.org/techniques/T1069/002/"
+                            }
+                        ]
                     },
                     {
                         "id": "T1082",
@@ -295,8 +312,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 214
+        "version": 215
     },
-    "id": "1e0a3f7c-21e7-4bb1-98c7-2036612fb1be_214",
+    "id": "1e0a3f7c-21e7-4bb1-98c7-2036612fb1be_215",
     "type": "security-rule"
 }

@@ -55,11 +55,26 @@
                         "reference": "https://attack.mitre.org/techniques/T1078/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1027",
+                        "name": "Obfuscated Files or Information",
+                        "reference": "https://attack.mitre.org/techniques/T1027/"
+                    }
+                ]
             }
         ],
         "type": "machine_learning",
-        "version": 3
+        "version": 4
     },
-    "id": "0cbbb5e0-f93a-47fe-ab72-8213366c38f1_3",
+    "id": "0cbbb5e0-f93a-47fe-ab72-8213366c38f1_4",
     "type": "security-rule"
 }

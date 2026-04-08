@@ -117,12 +117,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0009",
+                    "name": "Collection",
+                    "reference": "https://attack.mitre.org/tactics/TA0009/"
+                },
+                "technique": [
+                    {
+                        "id": "T1557",
+                        "name": "Adversary-in-the-Middle",
+                        "reference": "https://attack.mitre.org/techniques/T1557/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 211
+        "version": 212
     },
-    "id": "e3c27562-709a-42bd-82f2-3ed926cced19_211",
+    "id": "e3c27562-709a-42bd-82f2-3ed926cced19_212",
     "type": "security-rule"
 }

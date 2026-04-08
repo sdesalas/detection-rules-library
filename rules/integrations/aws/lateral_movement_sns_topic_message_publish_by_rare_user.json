@@ -144,12 +144,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0011",
+                    "name": "Command and Control",
+                    "reference": "https://attack.mitre.org/tactics/TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "T1102",
+                        "name": "Web Service",
+                        "reference": "https://attack.mitre.org/techniques/T1102/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "2112ecce-cd34-11ef-873f-f661ea17fbcd_4",
+    "id": "2112ecce-cd34-11ef-873f-f661ea17fbcd_5",
     "type": "security-rule"
 }

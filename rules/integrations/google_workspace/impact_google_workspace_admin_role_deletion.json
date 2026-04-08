@@ -77,12 +77,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1531/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1484",
+                        "name": "Domain or Tenant Policy Modification",
+                        "reference": "https://attack.mitre.org/techniques/T1484/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 208
+        "version": 209
     },
-    "id": "93e63c3e-4154-4fc6-9f86-b411e0987bbf_208",
+    "id": "93e63c3e-4154-4fc6-9f86-b411e0987bbf_209",
     "type": "security-rule"
 }

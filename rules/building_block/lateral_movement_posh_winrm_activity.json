@@ -139,6 +139,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1047",
+                        "name": "Windows Management Instrumentation",
+                        "reference": "https://attack.mitre.org/techniques/T1047/"
+                    },
+                    {
                         "id": "T1059",
                         "name": "Command and Scripting Interpreter",
                         "reference": "https://attack.mitre.org/techniques/T1059/",
@@ -155,8 +160,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 212
+        "version": 213
     },
-    "id": "0abf0c5b-62dd-48d2-ac4e-6b43fe3a6e83_212",
+    "id": "0abf0c5b-62dd-48d2-ac4e-6b43fe3a6e83_213",
     "type": "security-rule"
 }

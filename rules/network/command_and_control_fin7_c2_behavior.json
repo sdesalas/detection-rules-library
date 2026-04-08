@@ -46,7 +46,14 @@
                     {
                         "id": "T1071",
                         "name": "Application Layer Protocol",
-                        "reference": "https://attack.mitre.org/techniques/T1071/"
+                        "reference": "https://attack.mitre.org/techniques/T1071/",
+                        "subtechnique": [
+                            {
+                                "id": "T1071.001",
+                                "name": "Web Protocols",
+                                "reference": "https://attack.mitre.org/techniques/T1071/001/"
+                            }
+                        ]
                     },
                     {
                         "id": "T1568",
@@ -65,8 +72,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "4a4e23cf-78a2-449c-bac3-701924c269d3_107",
+    "id": "4a4e23cf-78a2-449c-bac3-701924c269d3_108",
     "type": "security-rule"
 }

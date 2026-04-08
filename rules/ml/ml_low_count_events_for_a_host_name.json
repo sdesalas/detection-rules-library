@@ -58,6 +58,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1489",
+                        "name": "Service Stop",
+                        "reference": "https://attack.mitre.org/techniques/T1489/"
+                    },
+                    {
                         "id": "T1499",
                         "name": "Endpoint Denial of Service",
                         "reference": "https://attack.mitre.org/techniques/T1499/"
@@ -66,8 +71,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 4
+        "version": 5
     },
-    "id": "ad66db2e-1cc7-4a2c-8fa5-5f3895e44a18_4",
+    "id": "ad66db2e-1cc7-4a2c-8fa5-5f3895e44a18_5",
     "type": "security-rule"
 }

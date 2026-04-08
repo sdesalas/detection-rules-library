@@ -103,15 +103,44 @@
                     {
                         "id": "T1114",
                         "name": "Email Collection",
-                        "reference": "https://attack.mitre.org/techniques/T1114/"
+                        "reference": "https://attack.mitre.org/techniques/T1114/",
+                        "subtechnique": [
+                            {
+                                "id": "T1114.002",
+                                "name": "Remote Email Collection",
+                                "reference": "https://attack.mitre.org/techniques/T1114/002/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1550",
+                        "name": "Use Alternate Authentication Material",
+                        "reference": "https://attack.mitre.org/techniques/T1550/",
+                        "subtechnique": [
+                            {
+                                "id": "T1550.001",
+                                "name": "Application Access Token",
+                                "reference": "https://attack.mitre.org/techniques/T1550/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "e882e934-2aaa-11f0-8272-f661ea17fbcc_4",
+    "id": "e882e934-2aaa-11f0-8272-f661ea17fbcc_5",
     "type": "security-rule"
 }

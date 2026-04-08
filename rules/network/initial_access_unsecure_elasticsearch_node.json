@@ -29,6 +29,7 @@
         "tags": [
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
+            "Tactic: Reconnaissance",
             "Domain: Endpoint",
             "Resources: Investigation Guide"
         ],
@@ -47,12 +48,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1190/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0043",
+                    "name": "Reconnaissance",
+                    "reference": "https://attack.mitre.org/tactics/TA0043/"
+                },
+                "technique": [
+                    {
+                        "id": "T1595",
+                        "name": "Active Scanning",
+                        "reference": "https://attack.mitre.org/techniques/T1595/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "31295df3-277b-4c56-a1fb-84e31b4222a9_105",
+    "id": "31295df3-277b-4c56-a1fb-84e31b4222a9_106",
     "type": "security-rule"
 }

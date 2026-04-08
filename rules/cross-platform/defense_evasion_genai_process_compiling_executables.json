@@ -117,12 +117,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0042",
+                    "name": "Resource Development",
+                    "reference": "https://attack.mitre.org/tactics/TA0042/"
+                },
+                "technique": [
+                    {
+                        "id": "T1587",
+                        "name": "Develop Capabilities",
+                        "reference": "https://attack.mitre.org/techniques/T1587/",
+                        "subtechnique": [
+                            {
+                                "id": "T1587.001",
+                                "name": "Malware",
+                                "reference": "https://attack.mitre.org/techniques/T1587/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "b2c3d4e5-f6a7-8901-bcde-f123456789ab_1",
+    "id": "b2c3d4e5-f6a7-8901-bcde-f123456789ab_2",
     "type": "security-rule"
 }

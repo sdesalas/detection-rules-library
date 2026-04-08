@@ -93,6 +93,11 @@
                                 "id": "T1036.004",
                                 "name": "Masquerade Task or Service",
                                 "reference": "https://attack.mitre.org/techniques/T1036/004/"
+                            },
+                            {
+                                "id": "T1036.005",
+                                "name": "Match Legitimate Resource Name or Location",
+                                "reference": "https://attack.mitre.org/techniques/T1036/005/"
                             }
                         ]
                     },
@@ -106,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "202829f6-0271-4e88-b882-11a655c590d4_108",
+    "id": "202829f6-0271-4e88-b882-11a655c590d4_109",
     "type": "security-rule"
 }

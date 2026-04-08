@@ -91,6 +91,18 @@
                         "reference": "https://attack.mitre.org/techniques/T1005/"
                     },
                     {
+                        "id": "T1074",
+                        "name": "Data Staged",
+                        "reference": "https://attack.mitre.org/techniques/T1074/",
+                        "subtechnique": [
+                            {
+                                "id": "T1074.001",
+                                "name": "Local Data Staging",
+                                "reference": "https://attack.mitre.org/techniques/T1074/001/"
+                            }
+                        ]
+                    },
+                    {
                         "id": "T1114",
                         "name": "Email Collection",
                         "reference": "https://attack.mitre.org/techniques/T1114/",
@@ -112,8 +124,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 214
+        "version": 215
     },
-    "id": "54a81f68-5f2a-421e-8eed-f888278bb712_214",
+    "id": "54a81f68-5f2a-421e-8eed-f888278bb712_215",
     "type": "security-rule"
 }

@@ -69,7 +69,20 @@
                     "name": "Persistence",
                     "reference": "https://attack.mitre.org/tactics/TA0003/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1205",
+                        "name": "Traffic Signaling",
+                        "reference": "https://attack.mitre.org/techniques/T1205/",
+                        "subtechnique": [
+                            {
+                                "id": "T1205.001",
+                                "name": "Port Knocking",
+                                "reference": "https://attack.mitre.org/techniques/T1205/001/"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -88,8 +101,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 108
+        "version": 109
     },
-    "id": "3c7e32e6-6104-46d9-a06e-da0f8b5795a0_108",
+    "id": "3c7e32e6-6104-46d9-a06e-da0f8b5795a0_109",
     "type": "security-rule"
 }

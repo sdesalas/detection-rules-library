@@ -128,6 +128,21 @@
                                 "id": "T1059.004",
                                 "name": "Unix Shell",
                                 "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            },
+                            {
+                                "id": "T1059.006",
+                                "name": "Python",
+                                "reference": "https://attack.mitre.org/techniques/T1059/006/"
+                            },
+                            {
+                                "id": "T1059.007",
+                                "name": "JavaScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/007/"
+                            },
+                            {
+                                "id": "T1059.011",
+                                "name": "Lua",
+                                "reference": "https://attack.mitre.org/techniques/T1059/011/"
                             }
                         ]
                     }
@@ -147,12 +162,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1071/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0001",
+                    "name": "Initial Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                },
+                "technique": [
+                    {
+                        "id": "T1190",
+                        "name": "Exploit Public-Facing Application",
+                        "reference": "https://attack.mitre.org/techniques/T1190/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 9
+        "version": 10
     },
-    "id": "976b2391-413f-4a94-acb4-7911f3803346_9",
+    "id": "976b2391-413f-4a94-acb4-7911f3803346_10",
     "type": "security-rule"
 }

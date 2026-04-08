@@ -77,6 +77,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1018",
+                        "name": "Remote System Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1018/"
+                    },
+                    {
                         "id": "T1046",
                         "name": "Network Service Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1046/"
@@ -95,6 +100,11 @@
                         "id": "T1590",
                         "name": "Gather Victim Network Information",
                         "reference": "https://attack.mitre.org/techniques/T1590/"
+                    },
+                    {
+                        "id": "T1595",
+                        "name": "Active Scanning",
+                        "reference": "https://attack.mitre.org/techniques/T1595/"
                     }
                 ]
             },
@@ -120,8 +130,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 108
+        "version": 109
     },
-    "id": "eaa77d63-9679-4ce3-be25-3ba8b795e5fa_108",
+    "id": "eaa77d63-9679-4ce3-be25-3ba8b795e5fa_109",
     "type": "security-rule"
 }

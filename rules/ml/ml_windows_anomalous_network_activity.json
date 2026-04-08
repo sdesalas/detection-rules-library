@@ -64,7 +64,13 @@
                     "name": "Lateral Movement",
                     "reference": "https://attack.mitre.org/tactics/TA0008/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1021",
+                        "name": "Remote Services",
+                        "reference": "https://attack.mitre.org/techniques/T1021/"
+                    }
+                ]
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -102,13 +108,18 @@
                         "id": "T1041",
                         "name": "Exfiltration Over C2 Channel",
                         "reference": "https://attack.mitre.org/techniques/T1041/"
+                    },
+                    {
+                        "id": "T1048",
+                        "name": "Exfiltration Over Alternative Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1048/"
                     }
                 ]
             }
         ],
         "type": "machine_learning",
-        "version": 210
+        "version": 211
     },
-    "id": "ba342eb2-583c-439f-b04d-1fdd7c1417cc_210",
+    "id": "ba342eb2-583c-439f-b04d-1fdd7c1417cc_211",
     "type": "security-rule"
 }

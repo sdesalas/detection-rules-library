@@ -112,14 +112,48 @@
                         "id": "T1048",
                         "name": "Exfiltration Over Alternative Protocol",
                         "reference": "https://attack.mitre.org/techniques/T1048/"
+                    },
+                    {
+                        "id": "T1567",
+                        "name": "Exfiltration Over Web Service",
+                        "reference": "https://attack.mitre.org/techniques/T1567/",
+                        "subtechnique": [
+                            {
+                                "id": "T1567.002",
+                                "name": "Exfiltration to Cloud Storage",
+                                "reference": "https://attack.mitre.org/techniques/T1567/002/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.003",
+                                "name": "Rename Legitimate Utilities",
+                                "reference": "https://attack.mitre.org/techniques/T1036/003/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "3f4c2b18-9d2e-4b7a-a3c1-8e6d9f2b5c7e_1",
+    "id": "3f4c2b18-9d2e-4b7a-a3c1-8e6d9f2b5c7e_2",
     "type": "security-rule"
 }

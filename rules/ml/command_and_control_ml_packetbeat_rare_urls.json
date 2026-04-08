@@ -58,13 +58,33 @@
                                 "reference": "https://attack.mitre.org/techniques/T1071/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1102",
+                        "name": "Web Service",
+                        "reference": "https://attack.mitre.org/techniques/T1102/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0001",
+                    "name": "Initial Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                },
+                "technique": [
+                    {
+                        "id": "T1189",
+                        "name": "Drive-by Compromise",
+                        "reference": "https://attack.mitre.org/techniques/T1189/"
                     }
                 ]
             }
         ],
         "type": "machine_learning",
-        "version": 107
+        "version": 108
     },
-    "id": "91f02f01-969f-4167-8f55-07827ac3acc9_107",
+    "id": "91f02f01-969f-4167-8f55-07827ac3acc9_108",
     "type": "security-rule"
 }

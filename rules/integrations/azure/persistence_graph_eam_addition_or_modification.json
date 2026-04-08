@@ -85,12 +85,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Defense Evasion",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/",
+                        "subtechnique": [
+                            {
+                                "id": "T1556.009",
+                                "name": "Conditional Access Policies",
+                                "reference": "https://attack.mitre.org/techniques/T1556/009/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "42c97e6e-60c3-11f0-832a-f661ea17fbcd_2",
+    "id": "42c97e6e-60c3-11f0-832a-f661ea17fbcd_3",
     "type": "security-rule"
 }

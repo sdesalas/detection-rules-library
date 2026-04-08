@@ -65,6 +65,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1119",
+                        "name": "Automated Collection",
+                        "reference": "https://attack.mitre.org/techniques/T1119/"
+                    },
+                    {
                         "id": "T1530",
                         "name": "Data from Cloud Storage",
                         "reference": "https://attack.mitre.org/techniques/T1530/"
@@ -74,8 +79,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 108
+        "version": 109
     },
-    "id": "d62b64a8-a7c9-43e5-aee3-15a725a794e7_108",
+    "id": "d62b64a8-a7c9-43e5-aee3-15a725a794e7_109",
     "type": "security-rule"
 }

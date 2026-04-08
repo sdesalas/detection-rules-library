@@ -93,14 +93,26 @@
                         "id": "T1203",
                         "name": "Exploitation for Client Execution",
                         "reference": "https://attack.mitre.org/techniques/T1203/"
+                    },
+                    {
+                        "id": "T1204",
+                        "name": "User Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1204/",
+                        "subtechnique": [
+                            {
+                                "id": "T1204.002",
+                                "name": "Malicious File",
+                                "reference": "https://attack.mitre.org/techniques/T1204/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "7f3521dd-fb80-4548-a7eb-8db37b898dc2_2",
+    "id": "7f3521dd-fb80-4548-a7eb-8db37b898dc2_3",
     "type": "security-rule"
 }

@@ -65,6 +65,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1018",
+                        "name": "Remote System Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1018/"
+                    },
+                    {
                         "id": "T1046",
                         "name": "Network Service Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1046/"
@@ -108,8 +113,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 14
+        "version": 15
     },
-    "id": "781f8746-2180-4691-890c-4c96d11ca91d_14",
+    "id": "781f8746-2180-4691-890c-4c96d11ca91d_15",
     "type": "security-rule"
 }

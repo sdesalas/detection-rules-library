@@ -115,6 +115,18 @@
                                 "reference": "https://attack.mitre.org/techniques/T1543/003/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.011",
+                                "name": "Services Registry Permissions Weakness",
+                                "reference": "https://attack.mitre.org/techniques/T1574/011/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -130,19 +142,14 @@
                         "id": "T1068",
                         "name": "Exploitation for Privilege Escalation",
                         "reference": "https://attack.mitre.org/techniques/T1068/"
-                    },
-                    {
-                        "id": "T1574",
-                        "name": "Hijack Execution Flow",
-                        "reference": "https://attack.mitre.org/techniques/T1574/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 316
+        "version": 317
     },
-    "id": "265db8f5-fc73-4d0d-b434-6483b56372e2_316",
+    "id": "265db8f5-fc73-4d0d-b434-6483b56372e2_317",
     "type": "security-rule"
 }

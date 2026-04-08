@@ -65,15 +65,27 @@
                     {
                         "id": "T1499",
                         "name": "Endpoint Denial of Service",
-                        "reference": "https://attack.mitre.org/techniques/T1499/"
+                        "reference": "https://attack.mitre.org/techniques/T1499/",
+                        "subtechnique": [
+                            {
+                                "id": "T1499.002",
+                                "name": "Service Exhaustion Flood",
+                                "reference": "https://attack.mitre.org/techniques/T1499/002/"
+                            },
+                            {
+                                "id": "T1499.003",
+                                "name": "Application Exhaustion Flood",
+                                "reference": "https://attack.mitre.org/techniques/T1499/003/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 412
+        "version": 413
     },
-    "id": "e6e3ecff-03dd-48ec-acbd-54a04de10c68_412",
+    "id": "e6e3ecff-03dd-48ec-acbd-54a04de10c68_413",
     "type": "security-rule"
 }

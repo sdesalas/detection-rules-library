@@ -132,14 +132,61 @@
                         "id": "T1071",
                         "name": "Application Layer Protocol",
                         "reference": "https://attack.mitre.org/techniques/T1071/"
+                    },
+                    {
+                        "id": "T1095",
+                        "name": "Non-Application Layer Protocol",
+                        "reference": "https://attack.mitre.org/techniques/T1095/"
+                    },
+                    {
+                        "id": "T1105",
+                        "name": "Ingress Tool Transfer",
+                        "reference": "https://attack.mitre.org/techniques/T1105/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0006",
+                    "name": "Credential Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "T1552",
+                        "name": "Unsecured Credentials",
+                        "reference": "https://attack.mitre.org/techniques/T1552/",
+                        "subtechnique": [
+                            {
+                                "id": "T1552.001",
+                                "name": "Credentials In Files",
+                                "reference": "https://attack.mitre.org/techniques/T1552/001/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0001",
+                    "name": "Initial Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0001/"
+                },
+                "technique": [
+                    {
+                        "id": "T1190",
+                        "name": "Exploit Public-Facing Application",
+                        "reference": "https://attack.mitre.org/techniques/T1190/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "497a7091-0ebd-44d7-88c4-367ab4d4d852_2",
+    "id": "497a7091-0ebd-44d7-88c4-367ab4d4d852_3",
     "type": "security-rule"
 }

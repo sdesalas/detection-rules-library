@@ -112,6 +112,11 @@
                         "reference": "https://attack.mitre.org/techniques/T1059/",
                         "subtechnique": [
                             {
+                                "id": "T1059.005",
+                                "name": "Visual Basic",
+                                "reference": "https://attack.mitre.org/techniques/T1059/005/"
+                            },
+                            {
                                 "id": "T1059.006",
                                 "name": "Python",
                                 "reference": "https://attack.mitre.org/techniques/T1059/006/"
@@ -127,8 +132,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "aa1e007a-2997-4247-b048-dd9344742560_1",
+    "id": "aa1e007a-2997-4247-b048-dd9344742560_2",
     "type": "security-rule"
 }

@@ -98,12 +98,61 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.002",
+                                "name": "AppleScript",
+                                "reference": "https://attack.mitre.org/techniques/T1059/002/"
+                            },
+                            {
+                                "id": "T1059.004",
+                                "name": "Unix Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            },
+                            {
+                                "id": "T1059.006",
+                                "name": "Python",
+                                "reference": "https://attack.mitre.org/techniques/T1059/006/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1203",
+                        "name": "Exploitation for Client Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1203/"
+                    },
+                    {
+                        "id": "T1204",
+                        "name": "User Execution",
+                        "reference": "https://attack.mitre.org/techniques/T1204/",
+                        "subtechnique": [
+                            {
+                                "id": "T1204.002",
+                                "name": "Malicious File",
+                                "reference": "https://attack.mitre.org/techniques/T1204/002/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "66da12b1-ac83-40eb-814c-07ed1d82b7b9_211",
+    "id": "66da12b1-ac83-40eb-814c-07ed1d82b7b9_212",
     "type": "security-rule"
 }

@@ -96,14 +96,26 @@
                         "id": "T1018",
                         "name": "Remote System Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1018/"
+                    },
+                    {
+                        "id": "T1069",
+                        "name": "Permission Groups Discovery",
+                        "reference": "https://attack.mitre.org/techniques/T1069/",
+                        "subtechnique": [
+                            {
+                                "id": "T1069.002",
+                                "name": "Domain Groups",
+                                "reference": "https://attack.mitre.org/techniques/T1069/002/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 216
+        "version": 217
     },
-    "id": "0635c542-1b96-4335-9b47-126582d2c19a_216",
+    "id": "0635c542-1b96-4335-9b47-126582d2c19a_217",
     "type": "security-rule"
 }

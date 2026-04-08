@@ -78,6 +78,18 @@
                         "id": "T1112",
                         "name": "Modify Registry",
                         "reference": "https://attack.mitre.org/techniques/T1112/"
+                    },
+                    {
+                        "id": "T1562",
+                        "name": "Impair Defenses",
+                        "reference": "https://attack.mitre.org/techniques/T1562/",
+                        "subtechnique": [
+                            {
+                                "id": "T1562.001",
+                                "name": "Disable or Modify Tools",
+                                "reference": "https://attack.mitre.org/techniques/T1562/001/"
+                            }
+                        ]
                     }
                 ]
             },
@@ -99,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "75dcb176-a575-4e33-a020-4a52aaa1b593_5",
+    "id": "75dcb176-a575-4e33-a020-4a52aaa1b593_6",
     "type": "security-rule"
 }
