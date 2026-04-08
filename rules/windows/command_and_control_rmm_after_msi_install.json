@@ -19,7 +19,7 @@
         "license": "Elastic License v2",
         "name": "Remote Management Access Launch After MSI Install",
         "note": "## Triage and analysis\n\n### Investigating Remote Management Access Launch After MSI Install\n\nThis rule fires when the same host runs msiexec with an install argument (/i) and within one minute starts a pre-configured RMM software.\n\n### Possible investigation steps\n\n- Confirm the sequence on the host: first event should be msiexec.exe with process.args containing \"/i\"; second should be a remote management software.\n- Review the source of the MSI file using file events.\n- Check whether use of RMM software is approved for this host.\n- Check network events to validate which remote host the RMM software connects to.\n- Correlate with other alerts for the same host (initial access, persistence, C2).\n\n### False positive analysis\n\n- Legitimate IT/MSP deployment of RMM for support.\n\n### Response and remediation\n\n- If unauthorized RMM use or abuse is confirmed: isolate the host, terminate the ScreenConnect client, remove or block the installation, and investigate how the MSI was delivered and who operates the relay.\n",
-        "query": "sequence by host.id with maxspan=1m\n [process where host.os.type == \"windows\" and event.type == \"start\" and process.name : \"msiexec.exe\" and process.args : (\"/i*\", \"-i*\")]\n [process where host.os.type == \"windows\" and event.type == \"start\" and\n  (\n   (process.name : \"ScreenConnect.ClientService.exe\" and process.command_line : \"*?e=Access&y=Guest&h*&k=*\") or\n   (process.name : \"Syncro.Installer.exe\" and process.args : \"--config-json\" and process.args : \"--key\") or \n    process.name : (\"tvnserver.exe\", \"winvnc.exe\") \n  )\n  ]\n",
+        "query": "sequence by host.id with maxspan=1m\n [process where host.os.type == \"windows\" and event.type == \"start\" and process.name : \"msiexec.exe\" and \n  process.args : (\"/i*\", \"-i*\") and process.parent.name : (\"explorer.exe\", \"sihost.exe\")]\n [process where host.os.type == \"windows\" and event.type == \"start\" and\n  (\n   (process.name : \"ScreenConnect.ClientService.exe\" and process.command_line : \"*?e=Access&y=Guest&h*&k=*\") or\n   (process.name : \"Syncro.Installer.exe\" and process.args : \"--config-json\" and process.args : \"--key\") or \n    process.name : (\"tvnserver.exe\", \"winvnc.exe\") \n  )]\n",
         "references": [
             "https://attack.mitre.org/techniques/T1219/"
         ],
@@ -79,6 +79,11 @@
                 "ecs": true,
                 "name": "process.name",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.name",
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -124,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "1b5e9d4a-7c2f-4e8b-a3d6-0f9c8e2b1a4d_1",
+    "id": "1b5e9d4a-7c2f-4e8b-a3d6-0f9c8e2b1a4d_2",
     "type": "security-rule"
 }
