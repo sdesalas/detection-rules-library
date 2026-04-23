@@ -16,7 +16,7 @@
             "source.ip",
             "github.repo"
         ],
-        "query": "event.dataset:\"github.audit\" and event.action:(\"git.push\" or \"git.clone\") and github.repository_public:false\n",
+        "query": "data_stream.dataset:\"github.audit\" and event.action:(\"git.push\" or \"git.clone\") and github.repository_public:false\n",
         "references": [
             "https://www.wiz.io/blog/shai-hulud-2-0-ongoing-supply-chain-attack",
             "https://trigger.dev/blog/shai-hulud-postmortem",
@@ -31,12 +31,12 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.action",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
-                "name": "event.dataset",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
@@ -141,8 +141,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "daf2e0e0-0bab-4672-bfa1-62db0ee5ec22_2",
+    "id": "daf2e0e0-0bab-4672-bfa1-62db0ee5ec22_3",
     "type": "security-rule"
 }

@@ -32,7 +32,7 @@
         "license": "Elastic License v2",
         "name": "AWS IAM Group Deletion",
         "note": "## Triage and analysis\n\n### Investigating AWS IAM Group Deletion\n\nAttackers sometimes remove groups to erase evidence, disrupt operations, or prevent users from receiving needed permissions (Impact). Deletion can also follow malicious cleanup after attaching policies and using the group briefly. This alert fires on `DeleteGroup` API call. Consider intentional disruption or covering tracks, particularly if the group was privileged or recently modified.\n\n### Possible investigation steps\n\n- **Identify the actor and environment**  \n  - Review `aws.cloudtrail.user_identity.arn`, `aws.cloudtrail.user_identity.access_key_id`.  \n  - Check `source.ip`, `user_agent.original`, `cloud.account.id`, `cloud.region` for atypical activity.\n\n- **Determine what was lost**\n  - From `aws.cloudtrail.request_parameters`, capture `groupName`.  \n  - Use history or logs to identify existing members and attached policies prior to deletion (ex: `GetGroup`, `ListAttachedGroupPolicies`).  \n  - Determine if the group contained privileged roles/policies that could have been weaponized.\n\n- **Correlate with related activity**\n  - Look in the prior 1\u201324h for `DetachGroupPolicy`, `RemoveUserFromGroup`, `DeleteGroupPolicy`, which often precede deletion in adversary cleanup workflows.  \n  - After deletion, monitor for creation of new similarly-named groups, or re-attachment of policies to other groups/roles.\n\n### False positive analysis\n\n- Projects & services that are being decommissioned often require group deletion. Confirm through internal inventory and change control.  \n- Sandbox or dev accounts frequently create and delete groups; ensure the environment context is understood.\n\n### Response and remediation\n\n- **Containment**: If deletion was unauthorized, restrict the actor\u2019s IAM privileges and block further configuration changes.  \n- **Investigation and scoping**: Recover details of the deleted group (members, policies) from logs or AWS Config, and determine the impact of the deletion (which users lost membership, service account disruption).  \n- **Recovery and hardening**: Recreate the group if necessary, restore intended policies and memberships, enforce change-control for group deletions, restrict `iam:DeleteGroup` privileges, and create alerts for destructive IAM operations.\n\n### Additional information\n[AWS Security Best Practices](https://aws.amazon.com/premiumsupport/knowledge-center/security-best-practices/)\n",
-        "query": "event.dataset: aws.cloudtrail and \n    event.provider: iam.amazonaws.com and \n    event.action: DeleteGroup and \n    event.outcome: success\n",
+        "query": "data_stream.dataset: aws.cloudtrail and \n    event.provider: iam.amazonaws.com and \n    event.action: DeleteGroup and \n    event.outcome: success\n",
         "references": [
             "https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-group.html",
             "https://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteGroup.html"
@@ -47,12 +47,12 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.action",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
-                "name": "event.dataset",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
@@ -96,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 211
+        "version": 212
     },
-    "id": "867616ec-41e5-4edc-ada2-ab13ab45de8a_211",
+    "id": "867616ec-41e5-4edc-ada2-ab13ab45de8a_212",
     "type": "security-rule"
 }

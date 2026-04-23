@@ -8,7 +8,7 @@
         "from": "now-2h",
         "interval": "15m",
         "license": "Elastic License v2",
-        "machine_learning_job_id": "ded_high_bytes_written_to_external_device_airdrop",
+        "machine_learning_job_id": "ded_high_bytes_written_to_external_device_airdrop_ea",
         "name": "Spike in Bytes Sent to an External Device via Airdrop",
         "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating Spike in Bytes Sent to an External Device via Airdrop\n\nAirdrop facilitates seamless file sharing between Apple devices, leveraging Bluetooth and Wi-Fi. While convenient, adversaries can exploit it for unauthorized data exfiltration by transferring large volumes of sensitive data. The detection rule employs machine learning to identify anomalies in data transfer patterns, flagging unusual spikes in bytes sent as potential exfiltration attempts, thus aiding in early threat detection.\n\n### Possible investigation steps\n\n- Review the alert details to identify the specific device and user involved in the data transfer. Check for any known associations with previous incidents or suspicious activities.\n- Analyze the volume of data transferred and compare it to typical usage patterns for the device and user. Determine if the spike is significantly higher than usual.\n- Investigate the time and context of the data transfer. Correlate with other logs or alerts to identify any concurrent suspicious activities or anomalies.\n- Check the destination device's details to verify if it is a recognized and authorized device within the organization. Investigate any unknown or unauthorized devices.\n- Contact the user associated with the alert to verify the legitimacy of the data transfer. Gather information on the nature of the files transferred and the purpose of the transfer.\n- Review any recent changes in the user's access privileges or roles that might explain the increased data transfer activity.\n\n### False positive analysis\n\n- Regular large file transfers for legitimate business purposes, such as media companies transferring video files, can trigger false positives. Users can create exceptions for specific devices or user accounts known to perform these tasks regularly.\n- Software updates or backups that involve transferring large amounts of data to external devices may be misidentified as exfiltration attempts. Users should whitelist these activities by identifying the associated processes or applications.\n- Educational institutions or creative teams often share large files for collaborative projects. Establishing a baseline for expected data transfer volumes and excluding these from alerts can reduce false positives.\n- Devices used for testing or development purposes might frequently send large data volumes. Users can exclude these devices from monitoring by adding them to an exception list.\n- Personal use of Airdrop for transferring large media files, such as photos or videos, can be mistaken for suspicious activity. Users can mitigate this by setting thresholds that account for typical personal use patterns.\n\n### Response and remediation\n\n- Immediately isolate the affected device from the network to prevent further data exfiltration.\n- Verify the identity and permissions of the user associated with the anomalous Airdrop activity to ensure they are authorized to transfer data.\n- Conduct a forensic analysis of the device to identify any unauthorized applications or processes that may have facilitated the data transfer.\n- Review and revoke any unnecessary permissions or access rights for the user or device involved in the incident.\n- Escalate the incident to the security operations center (SOC) for further investigation and to determine if the activity is part of a larger threat campaign.\n- Implement additional monitoring on the affected device and similar devices to detect any further anomalous Airdrop activities.\n- Update security policies and controls to restrict Airdrop usage to only trusted devices and networks, reducing the risk of future unauthorized data transfers.",
         "references": [
@@ -19,7 +19,7 @@
         "related_integrations": [
             {
                 "package": "ded",
-                "version": "^2.3.0"
+                "version": "^3.0.0"
             },
             {
                 "package": "endpoint",
@@ -62,8 +62,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 8
+        "version": 108
     },
-    "id": "e92c99b6-c547-4bb6-b244-2f27394bc849_8",
+    "id": "e92c99b6-c547-4bb6-b244-2f27394bc849_108",
     "type": "security-rule"
 }

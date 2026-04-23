@@ -35,7 +35,7 @@
             "azure.resource.group"
         ],
         "note": "## Triage and analysis\n\n### Investigating Azure Compute Snapshot Deletion by Unusual User and Resource Group\n\nAzure disk snapshots provide point-in-time copies of managed disks, serving as critical components for backup strategies, disaster recovery plans, and forensic investigations. Snapshots enable organizations to restore data and reconstruct system states after security incidents. Adversaries aware of backup strategies may delete snapshots to prevent recovery, eliminate forensic evidence, or maximize impact before executing ransomware attacks. This detection monitors for snapshot deletion operations to identify potential attempts to compromise backup and recovery capabilities. This is a New Terms rule that looks for this behavior by a user and resource group that has not been seen in the last 7 days.\n\n### Possible investigation steps\n\n- Review the Azure activity logs to identify the user or service principal that initiated the snapshot deletion by examining the principal ID, UPN and user agent fields.\n- Check the specific snapshot name in `azure.resource.name` to understand which backup was deleted and assess the potential impact on recovery capabilities.\n- Investigate the timing of the event to correlate with any other suspicious activities, such as unusual login patterns, privilege escalation attempts, or other resource deletions.\n- Examine the user's recent activity history to identify any other snapshots, disks, or Azure resources that were deleted or modified by the same principal.\n- Verify if the snapshot deletion aligns with approved change requests, maintenance windows, or data retention policies in your organization.\n- Check if other backup-related resources (backup vaults, recovery services) were accessed or modified around the same time.\n- Review any related alerts or activities such as data encryption, VM modifications, or access policy changes that occurred before the deletion.\n- Investigate if the account was recently compromised by checking for suspicious authentication events or privilege escalations.\n\n### False positive analysis\n\n- Legitimate cleanup of expired snapshots according to data retention policies may trigger this alert. Document approved retention management processes and consider creating exceptions for automated retention tools or scheduled cleanup activities.\n- DevOps automation tools might delete temporary snapshots created during deployment or testing processes. Identify service principals used by CI/CD pipelines and consider time-based exceptions during deployment windows.\n- Storage optimization initiatives may involve deleting old or redundant snapshots to reduce costs. Coordinate with infrastructure teams to understand planned optimization activities and create exceptions during documented maintenance windows.\n- Disaster recovery testing may involve creating and deleting test snapshots. Work with business continuity teams to identify these patterns and create exceptions during scheduled DR testing periods.\n\n### Response and remediation\n\n- Immediately investigate whether the deletion was authorized by verifying with the account owner, backup administrators, or relevant stakeholders.\n- If the deletion was unauthorized, disable the compromised user account or service principal immediately to prevent further damage.\n- Check if the snapshot can be recovered through Azure backup services or soft-delete capabilities if enabled.\n- Create new snapshots of critical disks immediately if the deleted snapshot was part of your backup strategy.\n- Review and audit all Azure RBAC permissions to identify how the attacker gained snapshot deletion capabilities.\n- Conduct a full security assessment to identify the initial access vector and any other compromised accounts or resources.\n- Implement Azure Resource Locks on critical snapshots to prevent accidental or malicious deletion.\n- Configure Azure Policy to restrict snapshot deletion permissions to only authorized backup administrators.\n- Enable Azure Activity Log alerts to notify security teams immediately when snapshots are deleted.\n- Review backup and disaster recovery procedures to ensure redundant backup mechanisms exist beyond Azure snapshots.\n- Document the incident and update security policies and procedures to prevent similar incidents in the future.\n",
-        "query": "event.dataset: azure.activitylogs and\n    azure.activitylogs.operation_name: \"MICROSOFT.COMPUTE/SNAPSHOTS/DELETE\" and\n    azure.activitylogs.properties.status_code: \"Accepted\" and\n    azure.activitylogs.identity.claims_initiated_by_user.name: *\n",
+        "query": "data_stream.dataset: azure.activitylogs and\n    azure.activitylogs.operation_name: \"MICROSOFT.COMPUTE/SNAPSHOTS/DELETE\" and\n    azure.activitylogs.properties.status_code: \"Accepted\" and\n    azure.activitylogs.identity.claims_initiated_by_user.name: *\n",
         "references": [
             "https://www.microsoft.com/en-us/security/blog/2025/08/27/storm-0501s-evolving-techniques-lead-to-cloud-based-ransomware/"
         ],
@@ -64,8 +64,8 @@
             },
             {
                 "ecs": true,
-                "name": "event.dataset",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             }
         ],
         "risk_score": 21,
@@ -104,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f_1",
+    "id": "c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f_2",
     "type": "security-rule"
 }

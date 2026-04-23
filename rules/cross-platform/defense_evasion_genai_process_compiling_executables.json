@@ -89,7 +89,7 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Data Source: Auditd Manager",
-            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
             "Domain: LLM",
@@ -143,8 +143,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "b2c3d4e5-f6a7-8901-bcde-f123456789ab_2",
+    "id": "b2c3d4e5-f6a7-8901-bcde-f123456789ab_3",
     "type": "security-rule"
 }

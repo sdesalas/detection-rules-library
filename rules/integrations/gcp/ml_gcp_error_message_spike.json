@@ -11,7 +11,7 @@
         "from": "now-60m",
         "interval": "15m",
         "license": "Elastic License v2",
-        "machine_learning_job_id": "gcp_audit_high_distinct_count_error_message",
+        "machine_learning_job_id": "gcp_audit_high_distinct_count_error_message_ea",
         "name": "Spike in GCP Audit Failed Messages",
         "references": [
             "https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html"
@@ -76,8 +76,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 1
+        "version": 101
     },
-    "id": "a4b740e4-be17-4048-9aa4-1e6f42b455b1_1",
+    "id": "a4b740e4-be17-4048-9aa4-1e6f42b455b1_101",
     "type": "security-rule"
 }

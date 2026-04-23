@@ -39,7 +39,7 @@
             "user.name"
         ],
         "note": "## Triage and Analysis\n\n### Investigating AWS API Activity from Uncommon S3 Client by Rare User\n\nS3 Browser and Cyberduck are graphical clients for Amazon S3 that allow users to browse, upload, download, and manage S3 objects. While legitimate tools, they are uncommonly used in enterprise environments where organizations typically standardize on AWS CLI, SDKs, or console access. The presence of these tools may indicate unauthorized data access or exfiltration activity.\n\nThis is a [New Terms](https://www.elastic.co/guide/en/security/current/rules-ui-create.html#create-new-terms-rule) rule that identifies the first time a specific user within an account makes API calls using S3 Browser or Cyberduck user agent strings. Threat actors have been observed using these tools for their intuitive interface and bulk data transfer capabilities during post-compromise data theft operations.\n\n### Possible investigation steps\n\n- **Identify the actor**\n  - Review `aws.cloudtrail.user_identity.arn` and `aws.cloudtrail.user_identity.access_key_id` to determine which IAM principal was used.\n  - Check whether this principal normally accesses S3 and whether usage of these desktop clients is expected or authorized.\n\n- **Review accessed resources**\n  - Examine `aws.cloudtrail.resources.arn` to identify which S3 buckets and objects were accessed.\n  - Determine whether the accessed data is sensitive, confidential, or subject to data protection policies.\n  - Look for patterns indicating bulk downloads or systematic enumeration of bucket contents.\n\n- **Analyze the actions performed**\n  - Review `event.action` to understand what operations were performed (e.g., `GetObject`, `ListBucket`, `PutObject`).\n  - High volumes of `GetObject` calls may indicate data exfiltration.\n  - `PutObject` calls to external buckets could indicate data staging for exfiltration.\n\n- **Inspect source network context**\n  - Review `source.ip` and `source.geo` fields to determine the origin of the request.\n  - Check whether the IP belongs to corporate infrastructure, VPN, or an unexpected external location.\n  - External IPs combined with these desktop client tools are high-risk indicators.\n\n- **Correlate with surrounding activity**\n  - Search for additional CloudTrail events from the same access key or session.\n  - Look for preceding credential theft indicators such as `GetSecretValue`, `CreateAccessKey`, or console logins.\n  - Check for cross-account transfers or `CreateBucket` calls in external accounts.\n\n### False positive analysis\n\n- **Authorized data migration or backup activities** may use these tools. Confirm with data engineering or IT teams.\n- **Developer testing** in non-production environments may occasionally involve these clients. Validate the environment and data sensitivity.\n- **Third-party integrations** using Cyberduck libraries may generate this user agent. Verify the automation context.\n\n### Response and remediation\n\n- **If unauthorized**, immediately revoke or rotate the affected access keys and invalidate active sessions.\n- **Assess data exposure** by reviewing which objects were accessed and determining if sensitive data was compromised.\n- **Notify security operations** and initiate incident response procedures if exfiltration is confirmed.\n- **Implement preventive controls** such as S3 bucket policies restricting access by user agent or requiring VPC endpoints.\n\n### Additional information\n- **[AWS IR Playbooks](https://github.com/aws-samples/aws-incident-response-playbooks/blob/c151b0dc091755fffd4d662a8f29e2f6794da52c/playbooks/)**\n- **[AWS Customer Playbook Framework](https://github.com/aws-samples/aws-customer-playbook-framework/tree/a8c7b313636b406a375952ac00b2d68e89a991f2/docs)**\n- **[AWS Knowledge Center \u2013 Security Best Practices](https://aws.amazon.com/premiumsupport/knowledge-center/security-best-practices/)**\n",
-        "query": "event.dataset: \"aws.cloudtrail\"\n    and user_agent.original: (*S3 Browser* or *Cyberduck*)\n    and event.outcome: \"success\"\n",
+        "query": "data_stream.dataset: \"aws.cloudtrail\"\n    and user_agent.original: (*S3 Browser* or *Cyberduck*)\n    and event.outcome: \"success\"\n",
         "references": [
             "https://s3browser.com/",
             "https://cyberduck.io/",
@@ -56,8 +56,8 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.dataset",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
@@ -124,8 +124,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "73344d2d-9cfb-4daf-b3c5-1d40a8182b86_2",
+    "id": "73344d2d-9cfb-4daf-b3c5-1d40a8182b86_3",
     "type": "security-rule"
 }

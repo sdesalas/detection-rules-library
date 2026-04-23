@@ -15,7 +15,7 @@
         "license": "Elastic License v2",
         "name": "React2Shell Network Security Alert",
         "note": "## Triage and analysis\n\n### Investigating React2Shell Network Security Alert\n\nThis rule detects exploitation attempts targeting CVE-2025-55182, a critical remote code execution vulnerability in React's Flight protocol used by Next.js and other RSC implementations. The vulnerability stems from insecure prototype chain traversal in the Flight deserializer, allowing attackers to access `__proto__`, `constructor`, and ultimately the `Function` constructor to execute arbitrary code.\n\n### Possible investigation steps\n\n- Examine the full HTTP request body to identify the specific attack payload and command being executed.\n- Check the response body for `E{\"digest\":\"...\"}` patterns which contain command output from successful exploitation.\n- Identify the target application and verify if it runs vulnerable React (< 19.1.0) or Next.js (< 15.3.2) versions.\n- Review the source IP for other reconnaissance or exploitation attempts against web applications.\n- Check for the `Next-Action` header which is required for the exploit to work.\n- Correlate with process execution logs to identify if child processes (e.g., shell commands) were spawned by the Node.js process.\n\n### False positive analysis\n\n- Legitimate React Server Components traffic will NOT contain `__proto__`, `constructor:constructor`, or code execution patterns.\n- Security scanning tools like react2shell-scanner may trigger this rule during authorized penetration testing.\n- The combination of prototype pollution patterns with RSC-specific syntax is highly indicative of malicious activity.\n\n### Response and remediation\n\n- Immediately update affected applications: React >= 19.1.0, Next.js >= 15.3.2.\n- Block the source IP at the WAF/reverse proxy if exploitation is confirmed.\n- If HTTP 500 or 303 responses with `digest` output were observed, assume successful code execution and investigate for compromise.\n- Review server logs for evidence of command execution (file creation, network connections, process spawning).\n- Implement WAF rules to block requests containing `__proto__` or `constructor:constructor` in POST bodies.\n",
-        "query": "(event.dataset:\"cisco_ftd.log\" and message:\"SERVER-WEBAPP React Server Components remote code execution attempt\") or\n(event.dataset:\"fortinet_fortigate.log\" and message:\"applications3: React.Server.Components.react-flight.Remote.Code.Execution\") or\n(event.dataset:\"panw.panos\" and event.action:\"exploit_detected\" and event.original :*React*Server*) or\n(event.dataset:(\"suricata_corelight\" or \"suricata.eve\") and rule.name:*CVE-2025-55182*)\n",
+        "query": "(data_stream.dataset:\"cisco_ftd.log\" and message:\"SERVER-WEBAPP React Server Components remote code execution attempt\") or\n(data_stream.dataset:\"fortinet_fortigate.log\" and message:\"applications3: React.Server.Components.react-flight.Remote.Code.Execution\") or\n(data_stream.dataset:\"panw.panos\" and event.action:\"exploit_detected\" and event.original :*React*Server*) or\n(data_stream.dataset:(\"suricata_corelight\" or \"suricata.eve\") and rule.name:*CVE-2025-55182*)\n",
         "references": [
             "https://www.wiz.io/blog/critical-vulnerability-in-react-cve-2025-55182",
             "https://github.com/assetnote/react2shell-scanner",
@@ -43,12 +43,12 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.action",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
-                "name": "event.dataset",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
@@ -125,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "1aefed68-eecd-47cc-9044-4a394b60061d_1",
+    "id": "1aefed68-eecd-47cc-9044-4a394b60061d_2",
     "type": "security-rule"
 }

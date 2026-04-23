@@ -18,7 +18,7 @@
         "license": "Elastic License v2",
         "name": "Entra ID Sign-in BloodHound Suite User-Agent Detected",
         "note": "## Triage and analysis\n\nThis rule identifies potential enumeration activity using AzureHound, SharpHound, or BloodHound across Microsoft cloud services. These tools are often used by red teamers and adversaries to map users, groups, roles, applications, and access relationships within Microsoft Entra ID (Azure AD) and Microsoft 365.\n\nThe detection is based on known enumeration patterns, particularly the presence of suspicious user agent strings (e.g., `azurehound/`, `sharphound/`, `bloodhound/`) in various Azure and M365 logs. The rule monitors multiple log sources, including:\n\n- Azure Graph API Activity Logs\n- Microsoft 365 Audit Logs\n- Entra ID Sign-in Logs\n- Entra ID Audit Logs\n- Azure Activity Logs\n\nThis ensures broader detection of credential abuse, token misuse, or unauthorized identity discovery activity from both interactive and non-interactive (API) sessions.\n\n### Possible investigation steps\n\n- Confirm the tool used via `user_agent.original`. Look for:\n    - `azurehound/x.y.z`\n    - `bloodhound/1.0`\n    - `sharphound/1.0`\n- Examine `url.original` or `url.path` to determine which APIs were accessed if Graph API activity logs. For example:\n    - `/v1.0/organization`, `/v1.0/users`, `/v1.0/groups` may indicate user/group/tenant discovery.\n- Identify the `user.id`, `user.name`, or `azure.auditlogs.properties.initiated_by.user.user_principal_name` fields to determine which identity executed the API request.\n- Review `app_id`, `app_display_name`, or `client_id` to identify the application context (e.g., Azure CLI, Graph Explorer, unauthorized app).\n- Check `http.request.method`, `http.response.status_code`, and `event.action` for enumeration patterns (many successful GETs in a short period) if Graph API activity logs.\n- Investigate correlated sign-ins (`azure.signinlogs`) by the same user, IP, or app immediately preceding the API calls. Was MFA used? Is the location suspicious?\n- Review `source.ip`, `client.geo.*`, and `network.*` fields to determine the origin of the requests. Flag unexpected IPs or ISPs.\n- If the event originates in M365 Audit Logs, investigate cross-service activity: Exchange Online, Teams, SharePoint, or role escalations via Unified Audit.\n\n### False positive analysis\n\n- This activity may be benign if performed by red teams, internal security auditors, or known security tools under authorization.\n- Automated monitoring solutions, cloud posture scanners, or legitimate Azure/M365 integrations may generate similar traffic. Review the `app_id` and user context.\n- Developer activity in test tenants may include tool usage for learning or validation purposes.\n\n### Response and remediation\n\n- If confirmed malicious:\n    - Revoke active sessions or tokens associated with the identified user/app.\n    - Disable the account or rotate credentials immediately.\n    - Review the role assignments (`Directory.Read.All`, `AuditLog.Read.All`, `Directory.AccessAsUser.All`) and remove excessive privileges.\n    - Conduct historical analysis to determine how long enumeration has been occurring and what objects were queried.\n    - Enable Conditional Access policies to require MFA for API and CLI-based access.\n    - Validate audit logging and alerting is enabled across Microsoft Graph, Azure Activity Logs, and M365 workloads.\n\n- If legitimate:\n    - Document the source (e.g., red team operation, security tool).\n    - Add appropriate allowlist conditions for service principal, user, source address or device if policy allows.\n\n",
-        "query": "any where event.dataset : (\n    \"azure.activitylogs\",\n    \"azure.graphactivitylogs\",\n    \"azure.auditlogs\",\n    \"azure.signinlogs\",\n    \"o365.audit\"\n) and user_agent.original regex~ \"(azure|sharp|blood)(hound)/.*\"\n",
+        "query": "any where data_stream.dataset : (\n    \"azure.activitylogs\",\n    \"azure.graphactivitylogs\",\n    \"azure.auditlogs\",\n    \"azure.signinlogs\",\n    \"o365.audit\"\n) and user_agent.original regex~ \"(azure|sharp|blood)(hound)/.*\"\n",
         "references": [
             "https://specterops.io/bloodhound-overview/",
             "https://github.com/SpecterOps/AzureHound",
@@ -27,8 +27,8 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.dataset",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
@@ -118,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "c28750fa-4092-11f0-aca6-f661ea17fbcd_2",
+    "id": "c28750fa-4092-11f0-aca6-f661ea17fbcd_3",
     "type": "security-rule"
 }

@@ -38,7 +38,7 @@
             "user.name"
         ],
         "note": "## Triage and analysis\n\n### Investigating AWS IAM OIDC Provider Created by Rare User\n\nOpenID Connect (OIDC) providers in AWS IAM enable web identity federation, allowing external identity providers to authenticate users who then assume IAM roles. Common legitimate use cases include GitHub Actions accessing AWS resources, Kubernetes pods authenticating to AWS, and web applications using social login.\n\nThis rule detects the first time a specific user or role creates an OIDC provider within an account. While OIDC provider creation is common in some environments, a new user creating one for the first time warrants validation to ensure it's authorized.\n\n### Possible investigation steps\n\n- **Identify the actor**\n  - Review `aws.cloudtrail.user_identity.arn` to determine who created the OIDC provider.\n  - Check if this user has created OIDC providers before in other accounts.\n\n- **Review the OIDC provider details**\n  - Examine `aws.cloudtrail.request_parameters` for the provider URL and client IDs.\n  - Identify the external IdP (e.g., GitHub, Google, custom provider).\n\n- **Validate business justification**\n  - Confirm with DevOps or platform teams whether this aligns with CI/CD pipeline setup.\n  - Check for related change tickets or infrastructure-as-code deployments.\n\n- **Check for follow-on activity**\n  - Search for `CreateRole` or `UpdateAssumeRolePolicy` calls that trust the new OIDC provider.\n  - Look for `AssumeRoleWithWebIdentity` calls using the newly created provider.\n\n- **Correlate with other suspicious activity**\n  - Check for preceding privilege escalation or credential access events.\n  - Look for other persistence mechanisms being established concurrently.\n\n### False positive analysis\n\n- **CI/CD pipeline integration**\n  - GitHub Actions, GitLab CI, and other CI/CD systems commonly use OIDC for AWS authentication.\n  - Validate against known DevOps workflows.\n\n- **Kubernetes federation**\n  - EKS and self-managed Kubernetes clusters may use OIDC providers for pod identity.\n  - Confirm with platform engineering teams.\n\n- **Infrastructure-as-code deployments**\n  - Terraform, CloudFormation, or other IaC tools may create OIDC providers.\n  - Verify via CI/CD logs.\n\n### Response and remediation\n\n- **Immediate containment**\n  - If unauthorized, delete the OIDC provider using `DeleteOpenIDConnectProvider`.\n  - Review and remove any IAM roles that trust the rogue provider.\n\n- **Investigation**\n  - Audit CloudTrail for any `AssumeRoleWithWebIdentity` calls using this provider.\n  - Review all IAM roles with web identity trust relationships.\n\n- **Hardening**\n  - Restrict `iam:CreateOpenIDConnectProvider` permissions to authorized roles.\n  - Implement SCPs to control OIDC provider creation in member accounts.\n  - Enable AWS Config rules to monitor identity provider configurations.\n\n### Additional information\n- **[AWS IAM OIDC Providers Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html)**\n- **[AWS IR Playbooks](https://github.com/aws-samples/aws-incident-response-playbooks/blob/c151b0dc091755fffd4d662a8f29e2f6794da52c/playbooks/)**\n- **[AWS Customer Playbook Framework](https://github.com/aws-samples/aws-customer-playbook-framework/tree/a8c7b313636b406a375952ac00b2d68e89a991f2/docs)**\n",
-        "query": "event.dataset: \"aws.cloudtrail\"\n    and event.provider: \"iam.amazonaws.com\"\n    and event.action: \"CreateOpenIDConnectProvider\"\n    and event.outcome: \"success\"\n",
+        "query": "data_stream.dataset: \"aws.cloudtrail\"\n    and event.provider: \"iam.amazonaws.com\"\n    and event.action: \"CreateOpenIDConnectProvider\"\n    and event.outcome: \"success\"\n",
         "references": [
             "https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateOpenIDConnectProvider.html",
             "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html",
@@ -54,12 +54,12 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.action",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
-                "name": "event.dataset",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
@@ -155,8 +155,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "47403d72-3ee2-4752-a676-19dc8ff2b9d6_2",
+    "id": "47403d72-3ee2-4752-a676-19dc8ff2b9d6_3",
     "type": "security-rule"
 }

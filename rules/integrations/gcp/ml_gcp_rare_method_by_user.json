@@ -11,7 +11,7 @@
         "from": "now-2h",
         "interval": "15m",
         "license": "Elastic License v2",
-        "machine_learning_job_id": "gcp_audit_rare_method_for_a_client_user_email",
+        "machine_learning_job_id": "gcp_audit_rare_method_for_a_user_email_ea",
         "name": "Unusual GCP Event for a User",
         "references": [
             "https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html"
@@ -141,8 +141,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 2
+        "version": 102
     },
-    "id": "2e08f34c-691c-497e-87de-5d794a1b2a53_2",
+    "id": "2e08f34c-691c-497e-87de-5d794a1b2a53_102",
     "type": "security-rule"
 }

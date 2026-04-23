@@ -11,7 +11,7 @@
         "from": "now-2h",
         "interval": "15m",
         "license": "Elastic License v2",
-        "machine_learning_job_id": "gcp_audit_rare_method_for_a_country",
+        "machine_learning_job_id": "gcp_audit_rare_method_for_a_country_ea",
         "name": "Unusual Country For a GCP Event",
         "references": [
             "https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html"
@@ -104,8 +104,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 2
+        "version": 102
     },
-    "id": "dcbd07f8-bd6e-4bb4-ac5d-cec1927ea88f_2",
+    "id": "dcbd07f8-bd6e-4bb4-ac5d-cec1927ea88f_102",
     "type": "security-rule"
 }

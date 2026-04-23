@@ -19,7 +19,7 @@
             "azure.resource.name"
         ],
         "note": "## Triage and analysis\n\n### Investigating Azure Storage Account Blob Public Access Enabled\n\nAzure Storage Accounts provide cloud storage solutions with various access control mechanisms. The public access setting, when enabled, allows anonymous internet access to blob containers, bypassing authentication requirements. Adversaries exploit this feature to expose sensitive data for exfiltration or to establish persistent external access. This detection monitors for successful modifications that enable public blob access, a technique notably used in STORM-0501 cloud ransom-based campaigns.\n\n### Possible investigation steps\n\n- Review the Azure activity logs to identify the user or service principal that initiated the storage account modification by examining the principal ID, UPN and user agent fields.\n- Check the specific storage account name in `azure.resource.name` to understand which storage resources were affected and assess the sensitivity of data stored there.\n- Investigate the timing of the event to correlate with any other suspicious activities, such as unusual login patterns or privilege escalation attempts.\n- Examine the request or response body details to understand the full scope of changes made to the storage account configuration beyond public access settings.\n- Review access logs for the affected storage account to identify any subsequent data access or exfiltration attempts following the public access enablement.\n- Verify if the storage account modification aligns with approved change requests or maintenance windows in your organization.\n- Check for other storage accounts modified by the same principal to identify potential lateral movement or widespread configuration changes.\n- Pivot into related activity for the storage account and/or container such as data deletion, encryption or further permission changes.\n\n### False positive analysis\n\n- Legitimate CDN integration or public website hosting may require enabling public blob access. Document approved storage accounts used for public content delivery and create exceptions for these specific resources.\n- DevOps automation tools might temporarily enable public access during deployment processes. Identify service principals used by CI/CD pipelines and consider time-based exceptions during deployment windows.\n- Testing and development environments may have different access requirements. Consider filtering out non-production storage accounts if public access is acceptable in those environments.\n- Migration activities might require temporary public access. Coordinate with infrastructure teams to understand planned migrations and create temporary exceptions with defined expiration dates.\n\n### Response and remediation\n\n- Immediately disable public blob access on the affected storage account using Azure Portal IaC, or Azure CLI command.\n- Audit all blob containers within the affected storage account to identify which data may have been exposed and assess the potential impact of the exposure.\n- Review Azure Activity Logs and storage access logs to determine if any data was accessed or exfiltrated while public access was enabled.\n- Rotate any credentials, keys, or sensitive data that may have been stored in the exposed blob containers.\n- If unauthorized modification is confirmed, disable the compromised user account or service principal and investigate how the credentials were obtained.\n- Implement Azure Policy to prevent enabling public blob access on storage accounts containing sensitive data, using built-in policy definitions for storage account public access restrictions.\n- Consider implementing private endpoints for storage accounts that should never be publicly accessible, ensuring network-level isolation.\n",
-        "query": "event.dataset: \"azure.activitylogs\" and\nevent.action: \"MICROSOFT.STORAGE/STORAGEACCOUNTS/WRITE\" and\nevent.outcome: \"success\" and\nazure.activitylogs.properties.responseBody: *\\\"allowBlobPublicAccess\\\"\\:true*\n",
+        "query": "data_stream.dataset: \"azure.activitylogs\" and\nevent.action: \"MICROSOFT.STORAGE/STORAGEACCOUNTS/WRITE\" and\nevent.outcome: \"success\" and\nazure.activitylogs.properties.responseBody: *\\\"allowBlobPublicAccess\\\"\\:true*\n",
         "references": [
             "https://www.microsoft.com/en-us/security/blog/2025/08/27/storm-0501s-evolving-techniques-lead-to-cloud-based-ransomware/",
             "https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-configure"
@@ -39,12 +39,12 @@
             },
             {
                 "ecs": true,
-                "name": "event.action",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
-                "name": "event.dataset",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
@@ -84,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "4c5a4e8b-3f2d-4a6e-9b5c-7d8f9e0a1b2c_1",
+    "id": "4c5a4e8b-3f2d-4a6e-9b5c-7d8f9e0a1b2c_2",
     "type": "security-rule"
 }

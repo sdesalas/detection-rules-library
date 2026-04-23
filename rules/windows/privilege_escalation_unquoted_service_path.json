@@ -71,7 +71,7 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend",
-            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
             "Data Source: Elastic Endgame",
             "Data Source: Sysmon",
@@ -105,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 209
+        "version": 210
     },
-    "id": "12de29d4-bbb0-4eef-b687-857e8a163870_209",
+    "id": "12de29d4-bbb0-4eef-b687-857e8a163870_210",
     "type": "security-rule"
 }

@@ -76,7 +76,7 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
-            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Microsoft Defender XDR",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -98,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 416
+        "version": 417
     },
-    "id": "3b47900d-e793-49e8-968f-c90dc3526aa1_416",
+    "id": "3b47900d-e793-49e8-968f-c90dc3526aa1_417",
     "type": "security-rule"
 }

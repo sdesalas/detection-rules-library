@@ -11,7 +11,7 @@
         "from": "now-2h",
         "interval": "15m",
         "license": "Elastic License v2",
-        "machine_learning_job_id": "gcp_audit_rare_error_code",
+        "machine_learning_job_id": "gcp_audit_rare_error_code_ea",
         "name": "Rare GCP Audit Failure Event Code",
         "references": [
             "https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html"
@@ -103,8 +103,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 1
+        "version": 101
     },
-    "id": "5378a829-30c2-435a-a0f2-e3d794bd6f80_1",
+    "id": "5378a829-30c2-435a-a0f2-e3d794bd6f80_101",
     "type": "security-rule"
 }

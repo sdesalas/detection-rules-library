@@ -11,7 +11,7 @@
         "from": "now-2h",
         "interval": "15m",
         "license": "Elastic License v2",
-        "machine_learning_job_id": "gcp_audit_rare_method_for_a_city",
+        "machine_learning_job_id": "gcp_audit_rare_method_for_a_city_ea",
         "name": "Unusual City For a GCP Event",
         "references": [
             "https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html"
@@ -82,8 +82,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 2
+        "version": 102
     },
-    "id": "f20d1782-e783-4ed0-a0c4-946899a98a7c_2",
+    "id": "f20d1782-e783-4ed0-a0c4-946899a98a7c_102",
     "type": "security-rule"
 }

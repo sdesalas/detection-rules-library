@@ -12,7 +12,7 @@
         "interval": "15m",
         "license": "Elastic License v2",
         "machine_learning_job_id": [
-            "v3_windows_rare_user_type10_remote_login"
+            "v3_windows_rare_user_type10_remote_login_ea"
         ],
         "name": "Unusual Windows Remote User",
         "note": "## Triage and analysis\n\n### Investigating Unusual Windows Remote User\nDetection alerts from this rule indicate activity for a rare and unusual Windows RDP (remote desktop) user. Here are some possible avenues of investigation:\n- Consider the user as identified by the username field. Is the user part of a group who normally logs into Windows hosts using RDP (remote desktop protocol)? Is this logon activity part of an expected workflow for the user?\n- Consider the source of the login. If the source is remote, could this be related to occasional troubleshooting or support activity by a vendor or an employee working remotely?",
@@ -82,8 +82,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 210
+        "version": 310
     },
-    "id": "1781d055-5c66-4adf-9e93-fc0fa69550c9_210",
+    "id": "1781d055-5c66-4adf-9e93-fc0fa69550c9_310",
     "type": "security-rule"
 }

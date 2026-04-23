@@ -43,7 +43,7 @@
             "source.as.number"
         ],
         "note": "## Triage and analysis\n\n### Investigating Entra ID Service Principal with Unusual Source ASN\n\nThis rule matches successful **ServicePrincipalSignInLogs** events where `azure.signinlogs.properties.service_principal_id`\nand `source.as.number` together have not appeared in the rule history window. It is a first-seen network path signal for\nthe workload identity, not proof of compromise by itself.\n\n#### Possible investigation steps\n\n- Confirm the event is **ServicePrincipalSignInLogs** with a successful outcome and review `azure.signinlogs.properties.status.error_code` on the source document if needed.\n- Identify the application using `azure.signinlogs.properties.app_display_name`, `azure.signinlogs.properties.app_id`, and `azure.signinlogs.properties.service_principal_id`. In Entra ID, review the enterprise application or app registration (first-party, partner, or internal automation).\n- Review `source.ip`, `source.as.organization.name`, `source.as.number`, and `source.geo.*` against the owning team\u2019s expected regions, cloud subscriptions, and CI/CD or automation footprint.\n- Compare `@timestamp` to maintenance windows, releases, and planned infrastructure changes.\n- Where possible, enrich `source.ip` with internal CMDB, cloud asset inventory, or threat intelligence (residential or low-reputation ASNs warrant more scrutiny than a known cloud provider already used by this app).\n- In Entra sign-in logs, pivot on the same `service_principal_id` or `app_id` and review prior successful sign-ins for typical ASNs and egress patterns; a one-off path may be a new pipeline or stolen credentials used from a new host.\n- Review Entra audit logs for recent changes to this application: client secrets, certificates, federated credentials, owners, API permissions, or app role assignments, especially shortly before the alert.\n- Query Azure Activity, Microsoft Graph, or workload-specific logs after the sign-in time using `azure.signinlogs.properties.correlation_id` or `session_id` when present to see what resources the identity accessed (subscriptions, Key Vault, mail, privileged roles).\n- Search for related alerts in the same time window involving the same `app_id` or `source.ip` (for example OAuth abuse, consent, Arc or Kubernetes access, or directory role changes).\n- Note that the rule query excludes Microsoft-labeled `source.as.organization.name` values; high-value investigations should also review raw sign-in data for suspicious activity that only appears under those labels.\n\n### False positive analysis\n\n- New regions, subscriptions, GitHub Actions or Azure DevOps pools, DR exercises, or vendor migrations can produce a legitimate first-seen ASN for the service principal. Validate with the owner and document expected paths before excluding.\n- Amazon- and Google-labeled ASNs are in scope by design; adversaries may egress through AWS or GCP. Expect more noise from legitimate automation in those clouds and prefer allowlisting reviewed `app_id` or automation accounts over disabling the rule.\n- GeoIP or ASN enrichment updates can occasionally produce a one-time new tuple; compare to historical events for the same IP if available.\n\n### Response and remediation\n\n- If the path is unexpected and risky audit activity preceded the sign-in, treat as a potential credential incident: rotate application secrets and certificates, revoke sessions or tokens as applicable, and review Conditional Access and workload identity policies for the application.\n- Review and reduce API permissions, OAuth scopes, and directory or subscription roles granted to the application; remove unused access.\n- Document approved automation and network baselines so repeat first-seen ASN alerts can be triaged faster.\n",
-        "query": "event.dataset:azure.signinlogs\n    and azure.signinlogs.category:ServicePrincipalSignInLogs\n    and azure.signinlogs.properties.status.error_code:0\n    and azure.signinlogs.properties.service_principal_id:*\n    and source.as.number:*\n    and not source.as.organization.name:(*MICROSOFT* or *Microsoft*)\n    and not azure.signinlogs.properties.app_owner_tenant_id:(72f988bf-86f1-41af-91ab-2d7cd011db47 or f8cdef31-a31e-4b4a-93e4-5f571e91255a)\n",
+        "query": "data_stream.dataset:azure.signinlogs\n    and azure.signinlogs.category:ServicePrincipalSignInLogs\n    and azure.signinlogs.properties.status.error_code:0\n    and azure.signinlogs.properties.service_principal_id:*\n    and source.as.number:*\n    and not source.as.organization.name:(*MICROSOFT* or *Microsoft*)\n    and not azure.signinlogs.properties.app_owner_tenant_id:(72f988bf-86f1-41af-91ab-2d7cd011db47 or f8cdef31-a31e-4b4a-93e4-5f571e91255a)\n",
         "references": [
             "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-sign-ins",
             "https://learn.microsoft.com/en-us/entra/identity/conditional-access/workload-identities",
@@ -79,8 +79,8 @@
             },
             {
                 "ecs": true,
-                "name": "event.dataset",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
@@ -155,8 +155,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "db97a2aa-3ba5-4fa5-b8b9-bf42284edb5f_2",
+    "id": "db97a2aa-3ba5-4fa5-b8b9-bf42284edb5f_3",
     "type": "security-rule"
 }

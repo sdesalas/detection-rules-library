@@ -33,7 +33,7 @@
         "license": "Elastic License v2",
         "name": "AWS EC2 Export Task",
         "note": "## Triage and analysis\n\n### Investigating AWS EC2 Export Task\n\nThe APIs `CreateInstanceExportTask`, `ExportImage`, and `CreateStoreImageTask` allow the export of a running or stopped EC2 instance (or its AMI/image) to external storage (e.g., S3) or image formats. While often used for migration, cloning or backup, adversaries can leverage these actions to copy full VM state or images out of the environment for exfiltration.\n\n#### Possible investigation steps\n\n**Identify the actor and context**  \n   - Check `aws.cloudtrail.user_identity.arn`, `aws.cloudtrail.user_identity.type`, `aws.cloudtrail.user_identity.access_key_id` to identify who made the call.  \n   - Verify `user_agent.original`, `source.ip` and `@timestamp` to determine whether the action is by known automation, trusted operator, or an unexpected identity or location.  \n   - Confirm `cloud.account.id` and `cloud.region` match the expected account/region for export tasks.\n\n**Examine the specific export/image task details**  \n   - Review `aws.cloudtrail.request_parameters` for details such as the `InstanceId`, `TargetEnvironment`, `S3Bucket`, `S3Key`, `DiskImageFormat`, `ContainerFormat`. \n   - Check `aws.cloudtrail.response_elements` for the resulting export task ID and status.  \n   - Determine whether the exported instance or image contained sensitive workloads (e.g., production databases, critical systems) via instance tags or asset inventory.\n\n**Pivot to related API calls/events**  \n   - Look for follow-on tasks such as:  \n     - S3 bucket writes or cross-account bucket ACL changes (`PutBucketAcl`/`PutBucketPolicy`) referencing the export S3 bucket or key.  \n     - `CopyImage`, `ModifyImageAttribute`, or `ShareImage` events if the exported image is copied or shared.  \n     - Network or usage anomalies in the region or from the S3 bucket (large downloads from the exported object).  \n   - Check for preceding suspicious actions that could indicate compromise: `AssumeRole`, `CreateAccessKey`, `AttachUserPolicy`, or unusual `Describe*` operations.\n\n**Assess legitimacy and risk**  \n   - Confirm whether this export was authorized (via change ticket or migration workflow) and whether the principal has a documented justification for VM export.  \n   - If unauthorized, assess what was exported, where it is stored, how it may be transferred or used externally, and the data risk exposure.\n\n### False positive analysis\n\n- Legitimate migration or backup workflows may trigger these export/image APIs.  \n- Development/test environments may export VM images or instances for sandbox cloning.  \n- Known automation tools may create exports at scheduled times.  \n\n### Response and remediation\n\n- Immediately identify and disable or isolate any object/resource created by the export (e.g., the S3 bucket/object, image ID) that is suspected of unauthorized use.  \n- Revoke the access credentials (`aws.cloudtrail.user_identity.access_key_id`) used if they show unusual activity.  \n- Rotate keys, enforce MFA, and review IAM permissions for the principal.  \n- Audit the exported VM/image: review its contents if possible, check whether it has been moved off-account.  \n- Strengthen monitoring: set alerts for subsequent large data transfers from the S3 export location, cross-account sharing of exported images, or anomalous AMI imports.  \n- Update policy: restrict who can perform exports, monitor export actions via AWS Config or CloudTrail, tag and track export tasks and their destinations.\n",
-        "query": "event.dataset: \"aws.cloudtrail\" and \n    event.provider: \"ec2.amazonaws.com\" and \n    event.action: (\"CreateInstanceExportTask\" or \"ExportImage\" or \"CreateStoreImageTask\") and \n    event.outcome: \"success\"\n",
+        "query": "data_stream.dataset: \"aws.cloudtrail\" and \n    event.provider: \"ec2.amazonaws.com\" and \n    event.action: (\"CreateInstanceExportTask\" or \"ExportImage\" or \"CreateStoreImageTask\") and \n    event.outcome: \"success\"\n",
         "references": [
             "https://docs.aws.amazon.com/vm-import/latest/userguide/vmexport.html",
             "https://docs.aws.amazon.com/vm-import/latest/userguide/vmexport_image.html",
@@ -49,12 +49,12 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.action",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
-                "name": "event.dataset",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
@@ -137,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "deee5856-25ba-438d-ae53-09d66f41b127_3",
+    "id": "deee5856-25ba-438d-ae53-09d66f41b127_4",
     "type": "security-rule"
 }

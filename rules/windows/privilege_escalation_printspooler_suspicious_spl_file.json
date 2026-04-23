@@ -77,7 +77,7 @@
             "Data Source: Elastic Endgame",
             "Use Case: Vulnerability",
             "Data Source: Elastic Defend",
-            "Data Source: Microsoft Defender for Endpoint"
+            "Data Source: Microsoft Defender XDR"
         ],
         "threat": [
             {
@@ -98,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 116
+        "version": 117
     },
-    "id": "a7ccae7b-9d2c-44b2-a061-98e5946971fa_116",
+    "id": "a7ccae7b-9d2c-44b2-a061-98e5946971fa_117",
     "type": "security-rule"
 }

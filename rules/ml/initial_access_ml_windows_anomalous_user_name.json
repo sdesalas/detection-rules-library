@@ -12,7 +12,7 @@
         "interval": "15m",
         "license": "Elastic License v2",
         "machine_learning_job_id": [
-            "v3_windows_anomalous_user_name"
+            "v3_windows_anomalous_user_name_ea"
         ],
         "name": "Unusual Windows Username",
         "note": "## Triage and analysis\n\n### Investigating Unusual Windows Username\nDetection alerts from this rule indicate activity for a Windows user name that is rare and unusual. Here are some possible avenues of investigation:\n- Consider the user as identified by the username field. Is this program part of an expected workflow for the user who ran this program on this host? Could this be related to occasional troubleshooting or support activity?\n- Examine the history of user activity. If this user only manifested recently, it might be a service account for a new software package. If it has a consistent cadence (for example if it runs monthly or quarterly), it might be part of a monthly or quarterly business process.\n- Examine the process arguments, title and working directory. These may provide indications as to the source of the program or the nature of the tasks that the user is performing.\n- Consider the same for the parent process. If the parent process is a legitimate system utility or service, this could be related to software updates or system management. If the parent process is something user-facing like an Office application, this process could be more suspicious.",
@@ -72,8 +72,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 210
+        "version": 310
     },
-    "id": "1781d055-5c66-4adf-9c59-fc0fa58336a5_210",
+    "id": "1781d055-5c66-4adf-9c59-fc0fa58336a5_310",
     "type": "security-rule"
 }
