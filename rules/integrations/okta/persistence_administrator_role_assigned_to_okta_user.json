@@ -14,7 +14,7 @@
         "license": "Elastic License v2",
         "name": "Okta User Assigned Administrator Role",
         "note": "## Triage and analysis\n\n### Investigating Okta User Assigned Administrator Role\n\nOkta administrator roles provide elevated permissions to manage users, applications, policies, and security settings within the Okta environment. Adversaries who compromise Okta accounts may assign administrator privileges to establish persistence and maintain control over the identity infrastructure. This rule detects when administrator roles are granted to users or groups, which can indicate privilege escalation or persistence techniques.\n\n#### Possible investigation steps:\n- Identify the actor who performed the privilege grant by examining the `okta.actor.id`, `okta.actor.type`, `okta.actor.alternate_id`, and `okta.actor.display_name` fields.\n- Determine the target user or group that received administrator privileges by reviewing the `okta.target` fields.\n- Review the specific administrator role granted by examining the `okta.debug_context.debug_data.flattened.privilegeGranted` field.\n- Determine the client used by the actor. Review the `okta.client.ip`, `okta.client.user_agent.raw_user_agent`, `okta.client.zone`, `okta.client.device`, and `okta.client.id` fields.\n- Check if the source IP is associated with known malicious activity, VPN/proxy services, or unusual geolocations.\n- Examine the `okta.request.ip_chain` field to determine if the actor used a proxy or VPN.\n- Review the actor's recent authentication history and session activity for suspicious patterns.\n- Verify whether the privilege grant was part of a legitimate change request or administrative workflow.\n- Check for any other suspicious activities performed by the actor or target account around the same time.\n- Review audit logs for any administrative actions performed after the privilege grant.\n\n### False positive analysis:\n- Legitimate administrators may assign roles during normal IT operations such as onboarding, role changes, or incident response.\n- Automated provisioning systems or service accounts may assign administrator roles as part of authorized workflows.\n- During organizational changes or access certification processes, multiple role assignments may occur.\n- Create exceptions for known administrators, service accounts, or specific groups that regularly perform legitimate role assignments.\n\n### Response and remediation:\n- If the privilege grant is unauthorized, immediately revoke the administrator role from the affected user or group.\n- Reset credentials and revoke active sessions for both the actor and target accounts if compromise is suspected.\n- Enforce multi-factor authentication (MFA) re-enrollment for affected accounts.\n- Review all administrative actions performed by the target account after the privilege grant.\n- Check for other indicators of compromise such as unauthorized MFA device registrations, policy modifications, or suspicious authentication patterns.\n- Alert security leadership and identity management teams about the unauthorized privilege escalation.\n- Review and strengthen privileged access management controls, including requiring approval workflows for administrator role assignments.\n- Consider implementing anomaly detection for administrator role assignments from unusual sources or at unusual times.\n- If broader compromise is suspected, conduct a comprehensive security investigation including forensic analysis of Okta audit logs.\n",
-        "query": "event.dataset:okta.system\n    and event.action: (user.account.privilege.grant or group.privilege.grant)\n    and okta.debug_context.debug_data.flattened.privilegeGranted: *administrator*\n",
+        "query": "data_stream.dataset:okta.system\n    and event.action: (user.account.privilege.grant or group.privilege.grant)\n    and okta.debug_context.debug_data.flattened.privilegeGranted: *administrator*\n",
         "references": [
             "https://help.okta.com/en/prod/Content/Topics/Security/administrators-admin-comparison.htm",
             "https://developer.okta.com/docs/reference/api/system-log/",
@@ -34,12 +34,12 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.action",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
-                "name": "event.dataset",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
@@ -107,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 414
+        "version": 415
     },
-    "id": "f06414a6-f2a4-466d-8eba-10f85e8abf71_414",
+    "id": "f06414a6-f2a4-466d-8eba-10f85e8abf71_415",
     "type": "security-rule"
 }

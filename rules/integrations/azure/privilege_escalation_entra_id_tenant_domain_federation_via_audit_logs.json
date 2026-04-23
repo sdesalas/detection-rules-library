@@ -13,7 +13,7 @@
         "license": "Elastic License v2",
         "name": "Entra ID Domain Federation Configuration Change",
         "note": "## Triage and analysis\n\n### Investigating Entra ID Domain Federation Configuration Change\n\nThis rule detects when domain federation settings are added or modified in an Entra ID tenant. Domain federation allows organizations to delegate authentication for a UPN domain suffix to an external Identity Provider (IdP). While this is a legitimate feature for organizations using external IdPs like Okta or ADFS, adversaries can abuse it to establish persistent access by federating a domain to an attacker-controlled IdP.\n\nThis is the highest blast radius federation abuse technique, unlike app-level federated identity credentials (which affect a single service principal), domain federation affects all users whose UPN matches the federated domain.\n\nBoth events share the same `correlation_id` but neither includes the federation configuration details (issuer URI, signing certificate) in the event properties.\n\n### Possible investigation steps\n\n- Review `azure.auditlogs.properties.initiated_by.user.userPrincipalName` and `ipAddress` to identify who made the change and from where.\n- For `\"Set domain authentication\"` events, check `azure.auditlogs.properties.target_resources.0.display_name` to identify which domain was federated.\n- Use `azure.correlation_id` to correlate the companion `\"Set federation settings on domain\"` event and establish the full context.\n- Query the Graph API to retrieve the actual federation configuration details, since they are not logged in the audit event: `Get-MgDomainFederationConfiguration -DomainId \"<domain>\"`.\n- Review the configured issuer URI and signing certificate to determine if the external IdP is legitimate or attacker-controlled.\n- Check for precursor events with the same actor: `\"Add unverified domain\"` and `\"Verify domain\"` events targeting the same domain would indicate the full attack chain.\n- Review Azure sign-in logs for any authentication activity from users under the newly federated domain.\n- Investigate whether the domain was recently added to the tenant or was a pre-existing domain whose authentication type was changed.\n- Review the `user_agent.original` field for the actor to determine if the change was made via the Azure Portal, Microsoft Graph API, or PowerShell, which may provide additional context on whether this was a manual or scripted action.\n\n### False positive analysis\n\n- Legitimate domain federation changes by IT administrators during initial tenant setup or IdP migrations (e.g., migrating from ADFS to Okta).\n- Organizational restructuring such as mergers or acquisitions where new domains are federated.\n- Scheduled maintenance or updates to federation certificates or IdP endpoints.\n- Validate with the Global Administrator or identity team before dismissing.\n\n### Response and remediation\n\n- If the federation change is unauthorized, immediately remove the federation configuration: `Remove-MgDomainFederationConfiguration -DomainId \"<domain>\" -InternalDomainFederationId \"<id>\"`.\n- Revert the domain authentication type to managed if it should not be federated.\n- Revoke all active sessions and tokens for users under the affected domain.\n- Audit recent sign-in activity for users under the federated domain to identify unauthorized access.\n- Investigate how the adversary obtained Global Administrator privileges to perform this action.\n- Review and restrict who has Domain Administrator or Global Administrator roles using PIM (Privileged Identity Management).\n- Implement alerts on domain management operations and restrict domain federation changes via conditional access policies.\n",
-        "query": "event.dataset: azure.auditlogs\n    and azure.auditlogs.properties.category: DirectoryManagement\n    and event.action: (\"Set domain authentication\" or \"Set federation settings on domain\")\n    and event.outcome: success\n",
+        "query": "data_stream.dataset: azure.auditlogs\n    and azure.auditlogs.properties.category: DirectoryManagement\n    and event.action: (\"Set domain authentication\" or \"Set federation settings on domain\")\n    and event.outcome: success\n",
         "references": [
             "https://cloud.google.com/blog/topics/threat-intelligence/unc2452-merged-into-apt29",
             "https://learn.microsoft.com/en-us/graph/api/domain-post-federationconfiguration",
@@ -35,12 +35,12 @@
             },
             {
                 "ecs": true,
-                "name": "event.action",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
-                "name": "event.dataset",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
@@ -146,8 +146,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "1cfb39e1-4b6c-4dc7-85fe-733e4a1a33ca_2",
+    "id": "1cfb39e1-4b6c-4dc7-85fe-733e4a1a33ca_3",
     "type": "security-rule"
 }

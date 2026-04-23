@@ -10,7 +10,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "Kubernetes Anonymous User Create/Update/Patch Pods Request",
-        "query": "any where event.dataset == \"kubernetes.audit_logs\" and (\n    kubernetes.audit.user.username in (\"system:anonymous\", \"system:unauthenticated\") or\n    kubernetes.audit.user.username == null or\n    kubernetes.audit.user.username == \"\"\n  ) and kubernetes.audit.level in (\"RequestResponse\", \"ResponseComplete\", \"Request\") and kubernetes.audit.verb in (\"create\", \"update\", \"patch\") and\nkubernetes.audit.objectRef.resource == \"pods\"\n\n",
+        "query": "any where data_stream.dataset == \"kubernetes.audit_logs\" and (\n    kubernetes.audit.user.username in (\"system:anonymous\", \"system:unauthenticated\") or\n    kubernetes.audit.user.username == null or\n    kubernetes.audit.user.username == \"\"\n  ) and kubernetes.audit.level in (\"RequestResponse\", \"ResponseComplete\", \"Request\") and kubernetes.audit.verb in (\"create\", \"update\", \"patch\") and\nkubernetes.audit.objectRef.resource == \"pods\"\n\n",
         "related_integrations": [
             {
                 "package": "kubernetes",
@@ -20,8 +20,8 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.dataset",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": false,
@@ -73,8 +73,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "3a01e5c6-ce01-46d7-ac9f-52dc349695fb_2",
+    "id": "3a01e5c6-ce01-46d7-ac9f-52dc349695fb_3",
     "type": "security-rule"
 }

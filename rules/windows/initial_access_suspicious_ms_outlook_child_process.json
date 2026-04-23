@@ -83,7 +83,7 @@
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
-            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Microsoft Defender XDR",
             "Data Source: Windows Security Event Logs",
             "Data Source: Crowdstrike",
             "Data Source: Sysmon"
@@ -200,8 +200,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 420
+        "version": 421
     },
-    "id": "32f4675e-6c49-4ace-80f9-97c9259dca2e_420",
+    "id": "32f4675e-6c49-4ace-80f9-97c9259dca2e_421",
     "type": "security-rule"
 }

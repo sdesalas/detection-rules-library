@@ -7,7 +7,7 @@
         "from": "now-9m",
         "history_window_start": "now-7d",
         "index": [
-            "logs-endpoint.events.persistence-*"
+            "logs-endpoint.events.file-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -88,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "25368123-b7b8-4344-9fd4-df28051b4c6e_2",
+    "id": "25368123-b7b8-4344-9fd4-df28051b4c6e_3",
     "type": "security-rule"
 }

@@ -82,7 +82,7 @@
             "Data Source: Sysmon",
             "Resources: Investigation Guide",
             "Data Source: SentinelOne",
-            "Data Source: Microsoft Defender for Endpoint"
+            "Data Source: Microsoft Defender XDR"
         ],
         "threat": [
             {
@@ -122,8 +122,8 @@
             }
         ],
         "type": "eql",
-        "version": 213
+        "version": 214
     },
-    "id": "bd7eefee-f671-494e-98df-f01daf9e5f17_213",
+    "id": "bd7eefee-f671-494e-98df-f01daf9e5f17_214",
     "type": "security-rule"
 }

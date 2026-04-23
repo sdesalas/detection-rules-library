@@ -33,7 +33,7 @@
         "license": "Elastic License v2",
         "name": "AWS IAM SAML Provider Created",
         "note": "## Triage and analysis\n\n### Investigating AWS IAM SAML Provider Created\n\nSAML (Security Assertion Markup Language) providers in AWS IAM enable federated authentication, allowing users from external identity providers to access AWS resources without separate AWS credentials. Creating a SAML provider establishes a trust relationship between AWS and the external IdP.\n\nThis rule detects successful `CreateSAMLProvider` API calls. In most environments, SAML provider creation is extremely rare\u2014typically only occurring during initial SSO setup or major infrastructure changes. An unauthorized SAML provider creation could enable an attacker to maintain persistent access by forging SAML assertions from an IdP they control.\n\n### Possible investigation steps\n\n- **Identify the actor**\n  - Review `aws.cloudtrail.user_identity.arn` to determine who created the SAML provider.\n  - Verify whether this principal is authorized to manage identity federation.\n\n- **Review the SAML provider details**\n  - Examine `aws.cloudtrail.request_parameters` for the SAML provider name and metadata document.\n  - Identify the external IdP URL and signing certificate in the metadata.\n\n- **Validate business justification**\n  - Confirm with identity management or platform teams whether this aligns with planned SSO integration.\n  - Check for related change tickets or infrastructure-as-code deployments.\n\n- **Check for follow-on activity**\n  - Search for `CreateRole` or `UpdateAssumeRolePolicy` calls that reference the new SAML provider.\n  - Look for `AssumeRoleWithSAML` calls using the newly created provider.\n\n- **Correlate with other suspicious activity**\n  - Check for preceding privilege escalation or credential access events.\n  - Look for other persistence mechanisms being established concurrently.\n\n### False positive analysis\n\n- **Planned SSO integration**\n  - SAML providers are created during initial setup of identity federation with Okta, Azure AD, or other IdPs.\n  - Validate against documented SSO integration projects.\n\n- **Infrastructure-as-code deployments**\n  - Terraform, CloudFormation, or other IaC tools may create SAML providers as part of automated deployments.\n  - Confirm via CI/CD logs.\n\n### Response and remediation\n\n- **Immediate containment**\n  - If unauthorized, delete the SAML provider using `DeleteSAMLProvider`.\n  - Review and remove any IAM roles that trust the rogue provider.\n\n- **Investigation**\n  - Audit CloudTrail for any `AssumeRoleWithSAML` calls using this provider.\n  - Review all IAM roles with SAML trust relationships.\n\n- **Hardening**\n  - Restrict `iam:CreateSAMLProvider` permissions to a limited set of administrative roles.\n  - Implement SCPs to control SAML provider creation in member accounts.\n  - Enable AWS Config rules to monitor identity provider configurations.\n\n### Additional information\n- **[AWS IAM SAML Providers Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_saml.html)**\n- **[AWS IR Playbooks](https://github.com/aws-samples/aws-incident-response-playbooks/blob/c151b0dc091755fffd4d662a8f29e2f6794da52c/playbooks/)**\n- **[AWS Customer Playbook Framework](https://github.com/aws-samples/aws-customer-playbook-framework/tree/a8c7b313636b406a375952ac00b2d68e89a991f2/docs)**\n",
-        "query": "event.dataset: \"aws.cloudtrail\"\n    and event.provider: \"iam.amazonaws.com\"\n    and event.action: \"CreateSAMLProvider\"\n    and event.outcome: \"success\"\n",
+        "query": "data_stream.dataset: \"aws.cloudtrail\"\n    and event.provider: \"iam.amazonaws.com\"\n    and event.action: \"CreateSAMLProvider\"\n    and event.outcome: \"success\"\n",
         "references": [
             "https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateSAMLProvider.html",
             "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_saml.html",
@@ -49,12 +49,12 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.action",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
-                "name": "event.dataset",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
@@ -140,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "a80ffc40-a256-475a-a86a-74361930cdb1_2",
+    "id": "a80ffc40-a256-475a-a86a-74361930cdb1_3",
     "type": "security-rule"
 }

@@ -177,7 +177,7 @@
             "Use Case: Vulnerability",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
-            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide"
         ],
@@ -212,8 +212,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 321
+        "version": 322
     },
-    "id": "5bb4a95d-5a08-48eb-80db-4c3a63ec78a8_321",
+    "id": "5bb4a95d-5a08-48eb-80db-4c3a63ec78a8_322",
     "type": "security-rule"
 }

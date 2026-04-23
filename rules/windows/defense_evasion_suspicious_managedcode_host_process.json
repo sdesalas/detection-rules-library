@@ -71,7 +71,7 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
-            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
             "Data Source: Elastic Endgame",
             "Data Source: Crowdstrike",
@@ -138,8 +138,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 313
+        "version": 314
     },
-    "id": "acf738b5-b5b2-4acc-bad9-1e18ee234f40_313",
+    "id": "acf738b5-b5b2-4acc-bad9-1e18ee234f40_314",
     "type": "security-rule"
 }

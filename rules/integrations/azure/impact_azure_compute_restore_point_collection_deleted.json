@@ -21,7 +21,7 @@
             "azure.resource.group"
         ],
         "note": "## Triage and analysis\n\n### Investigating Azure Compute Restore Point Collection Deleted by Unusual User\n\nAzure Compute Restore Point Collections are critical components for disaster recovery, containing snapshots that enable point-in-time\nrecovery of virtual machines. Deletion of these collections can severely impact an organization's ability to recover from\nincidents, making them attractive targets for adversaries conducting ransomware attacks or attempting to cover their tracks.\n\nThis rule detects when a user who has not previously deleted Restore Point Collections performs this operation, which may\nindicate unauthorized activity or a compromised account.\n\n### Possible investigation steps\n\n- Review the `azure.activitylogs.identity.claims_initiated_by_user.name` field to identify the specific user who performed the deletion operation.\n- Investigate the `azure.resource.id` or `azure.resource.name` fields to identify which Restore Point Collection was deleted and assess its criticality to business operations.\n- Review the timeline of the deletion event and correlate it with other security events or user activities to identify any suspicious patterns or related activities.\n- Verify whether the user account has legitimate access to perform this operation and whether this deletion was authorized through change management processes.\n- Check for any other unusual activities by the same user account around the time of the deletion, such as privilege escalation attempts or access to other sensitive resources.\n- Investigate whether there are any active alerts or indicators of compromise related to ransomware activity in the environment.\n\n### False positive analysis\n\n- Routine administrative activities by infrastructure teams may trigger this alert when team members rotate or new administrators are onboarded. Create exceptions for known administrative accounts after verification.\n- Automated cleanup scripts or Azure policies that periodically remove old restore points may cause alerts. Identify and exclude service accounts used for these automated operations.\n- Planned decommissioning activities or migration projects may involve legitimate deletion of restore point collections. Document these activities and create temporary exceptions during known maintenance windows.\n- Testing and development environments may see frequent creation and deletion of resources. Consider excluding these environments from monitoring or adjusting the rule to focus on production resources only.\n\n### Response and remediation\n\n- Immediately verify the legitimacy of the deletion operation with the user or their manager. If the activity is unauthorized, proceed with incident response procedures.\n- If unauthorized deletion is confirmed, immediately isolate the affected user account to prevent further malicious activity. Reset credentials and review account permissions.\n- Check if the deleted Restore Point Collection can be recovered through Azure backup services or other recovery mechanisms.\n- Review and audit all recent activities performed by the affected user account to identify other potentially malicious actions.\n- Assess the impact on disaster recovery capabilities and inform relevant stakeholders about potential recovery limitations.\n- Review access controls and permissions for Restore Point Collection management, implementing principle of least privilege where necessary.\n- If ransomware activity is suspected, escalate to the security incident response team and implement broader containment measures, including checking for other indicators of ransomware such as deletion of Recovery Services vaults or backup fabric containers.\n- Document the incident and update detection rules or procedures based on lessons learned.\n",
-        "query": "event.dataset: azure.activitylogs and\n    event.action: \"MICROSOFT.COMPUTE/RESTOREPOINTCOLLECTIONS/DELETE\" and\n    event.outcome: (Success or success)\n",
+        "query": "data_stream.dataset: azure.activitylogs and\n    event.action: \"MICROSOFT.COMPUTE/RESTOREPOINTCOLLECTIONS/DELETE\" and\n    event.outcome: (Success or success)\n",
         "references": [
             "https://www.microsoft.com/en-us/security/blog/2023/07/25/storm-0501-ransomware-attacks-expanding-to-hybrid-cloud-environments/"
         ],
@@ -35,12 +35,12 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.action",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
-                "name": "event.dataset",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
@@ -80,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "c1a3e2f0-8a1b-11ef-9b4a-f661ea17fbce_1",
+    "id": "c1a3e2f0-8a1b-11ef-9b4a-f661ea17fbce_2",
     "type": "security-rule"
 }

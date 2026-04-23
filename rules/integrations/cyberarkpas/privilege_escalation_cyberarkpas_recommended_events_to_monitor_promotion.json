@@ -16,7 +16,7 @@
         "license": "Elastic License v2",
         "name": "CyberArk Privileged Access Security Recommended Monitor",
         "note": "## Triage and analysis\n\nThis is a promotion rule for CyberArk events, which the vendor recommends should be monitored.\nConsult vendor documentation on interpreting specific events.",
-        "query": "event.dataset:cyberarkpas.audit and\n  event.code:(4 or 22 or 24 or 31 or 38 or 57 or 60 or 130 or 295 or 300 or 302 or\n              308 or 319 or 344 or 346 or 359 or 361 or 378 or 380 or 411) and\n  not event.type:error\n",
+        "query": "data_stream.dataset:cyberarkpas.audit and\n  event.code:(4 or 22 or 24 or 31 or 38 or 57 or 60 or 130 or 295 or 300 or 302 or\n              308 or 319 or 344 or 346 or 359 or 361 or 378 or 380 or 411) and\n  not event.type:error\n",
         "references": [
             "https://docs.cyberark.com/Product-Doc/OnlineHelp/PAS/Latest/en/Content/PASREF/Vault%20Audit%20Action%20Codes.htm?tocpath=Administration%7CReferences%7C_____3#RecommendedActionCodesforMonitoring"
         ],
@@ -29,12 +29,12 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "event.code",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
-                "name": "event.dataset",
+                "name": "event.code",
                 "type": "keyword"
             },
             {
@@ -113,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 107
     },
-    "id": "c5f81243-56e0-47f9-b5bb-55a5ed89ba57_106",
+    "id": "c5f81243-56e0-47f9-b5bb-55a5ed89ba57_107",
     "type": "security-rule"
 }

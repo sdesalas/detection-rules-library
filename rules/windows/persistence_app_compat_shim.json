@@ -73,7 +73,7 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
-            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
             "Data Source: Elastic Endgame",
             "Data Source: Crowdstrike",
@@ -105,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 313
+        "version": 314
     },
-    "id": "c5ce48a6-7f57-4ee8-9313-3d0024caee10_313",
+    "id": "c5ce48a6-7f57-4ee8-9313-3d0024caee10_314",
     "type": "security-rule"
 }

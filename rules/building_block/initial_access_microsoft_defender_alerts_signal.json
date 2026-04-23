@@ -48,7 +48,7 @@
             "Domain: Endpoint",
             "Data Source: Microsoft 365",
             "Data Source: Microsoft 365 Audit Logs",
-            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Microsoft Defender XDR",
             "Data Source: Microsoft Defender for Cloud Apps",
             "Data Source: Microsoft Defender for Identity",
             "Use Case: Threat Detection",
@@ -88,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "054853f3-2ce0-41f3-a6eb-4a4867f39cdc_1",
+    "id": "054853f3-2ce0-41f3-a6eb-4a4867f39cdc_2",
     "type": "security-rule"
 }

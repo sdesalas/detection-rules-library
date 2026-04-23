@@ -65,7 +65,7 @@
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Data Source: Microsoft Defender for Endpoint",
+            "Data Source: Microsoft Defender XDR",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -126,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "8f3e91c7-d791-4704-80a1-42c160d7aa27_111",
+    "id": "8f3e91c7-d791-4704-80a1-42c160d7aa27_112",
     "type": "security-rule"
 }
