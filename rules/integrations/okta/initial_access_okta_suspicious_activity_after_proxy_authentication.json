@@ -17,7 +17,7 @@
         "license": "Elastic License v2",
         "name": "Okta Alerts Following Unusual Proxy Authentication",
         "note": "## Triage and analysis\n\n### Investigating Okta Alerts Following Unusual Proxy Authentication\n\nThis rule correlates the first occurrences of authentication behind a proxy followed by an alert with subsequent Okta security alerts for the same user. Attackers frequently use proxy infrastructure (VPNs, Tor, residential proxies) to mask their origin when using stolen credentials, and their post-authentication activity often triggers additional detection rules.\n\nBy correlating the proxy alert with other Okta alerts using an EQL sequence, this rule identifies users whose proxy-based authentication was followed by suspicious activity within a 1-hour window.\n\n#### Possible investigation steps\n- Identify the affected user and review the correlated security alerts to understand what suspicious activity was detected after the proxy authentication.\n- Examine the proxy source IP addresses and cross-reference with threat intelligence feeds for known malicious infrastructure.\n- Review the time gap between the proxy authentication and subsequent alert generation.\n- Review the user's recent Okta activity for signs of account takeover (MFA changes, new devices, unusual app access).\n- Verify with the user whether they intentionally used a proxy or VPN during this session.\n\n### False positive analysis\n- Users who legitimately use VPN services for privacy or remote work may trigger this rule if they also trigger unrelated alerts.\n- Security testing or red team exercises using proxy infrastructure combined with testing that triggers alerts.\n- Corporate VPN egress points that Okta classifies as proxy infrastructure.\n\n### Response and remediation\n- If account compromise is suspected, immediately revoke all active sessions for the user.\n- Reset the user's password and MFA factors.\n- Review and revoke any OAuth tokens or API keys associated with the account.\n- Block the source proxy IP at the network perimeter if confirmed malicious.\n- Review the user's access to sensitive applications and data during the suspicious session.\n",
-        "query": "sequence by user.name with maxspan=30m\n    [any where data_stream.dataset == \"okta.system\" and\n        kibana.alert.rule.rule_id == \"6f1bb4b2-7dc8-11ee-92b2-f661ea17fbcd\"]\n    [any where data_stream.dataset == \"okta.system\" and\n        kibana.alert.rule.rule_id != null and\n        kibana.alert.severity != \"low\" and\n        kibana.alert.rule.rule_id not in  (\n            \"6f1bb4b2-7dc8-11ee-92b2-f661ea17fbcd\",\n            \"af2d8e4c-3b7c-4e91-8f5a-6c9d0e1f2a3b\"\n        )\n    ]\n",
+        "query": "sequence by user.name with maxspan=30m\n    [any where event.dataset == \"okta.system\" and\n        kibana.alert.rule.rule_id == \"6f1bb4b2-7dc8-11ee-92b2-f661ea17fbcd\"]\n    [any where event.dataset == \"okta.system\" and\n        kibana.alert.rule.rule_id != null and\n        kibana.alert.severity != \"low\" and\n        kibana.alert.rule.rule_id not in  (\n            \"6f1bb4b2-7dc8-11ee-92b2-f661ea17fbcd\",\n            \"af2d8e4c-3b7c-4e91-8f5a-6c9d0e1f2a3b\"\n        )\n    ]\n",
         "references": [
             "https://developer.okta.com/docs/reference/api/system-log/",
             "https://developer.okta.com/docs/reference/api/event-types/",
@@ -35,8 +35,8 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "data_stream.dataset",
-                "type": "constant_keyword"
+                "name": "event.dataset",
+                "type": "keyword"
             },
             {
                 "ecs": false,
@@ -94,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "af2d8e4c-3b7c-4e91-8f5a-6c9d0e1f2a3b_2",
+    "id": "af2d8e4c-3b7c-4e91-8f5a-6c9d0e1f2a3b_3",
     "type": "security-rule"
 }
