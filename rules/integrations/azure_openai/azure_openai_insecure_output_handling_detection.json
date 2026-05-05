@@ -26,11 +26,6 @@
         "required_fields": [
             {
                 "ecs": false,
-                "name": "Esql.event_count",
-                "type": "long"
-            },
-            {
-                "ecs": false,
                 "name": "azure.resource.name",
                 "type": "keyword"
             }
@@ -48,8 +43,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "fb16f9ef-cb03-4234-adc2-44641f3b71ee_4",
+    "id": "fb16f9ef-cb03-4234-adc2-44641f3b71ee_5",
     "type": "security-rule"
 }

@@ -46,71 +46,6 @@
         "required_fields": [
             {
                 "ecs": false,
-                "name": "Esql.aws_cloudtrail_user_identity_access_key_id_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.aws_cloudtrail_user_identity_type_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.cloud_account_id_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.cloud_region_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.data_stream_namespace_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_action_count_distinct",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_action_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_provider_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_timestamp_values",
-                "type": "date"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.source_as_organization_name_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.source_ip_values",
-                "type": "ip"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.time_window_date_trunc",
-                "type": "date"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.user_agent_name_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
                 "name": "aws.cloudtrail.user_identity.arn",
                 "type": "keyword"
             }
@@ -161,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 8
+        "version": 9
     },
-    "id": "74f45152-9aee-11ef-b0a5-f661ea17fbcd_8",
+    "id": "74f45152-9aee-11ef-b0a5-f661ea17fbcd_9",
     "type": "security-rule"
 }

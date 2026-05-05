@@ -28,16 +28,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.ml_policy_violations_mv_count",
-                "type": "integer"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.ml_policy_violations_total_unique_requests_count",
-                "type": "long"
-            },
-            {
                 "ecs": true,
                 "name": "cloud.account.id",
                 "type": "keyword"
@@ -68,8 +58,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 6
+        "version": 7
     },
-    "id": "f4c2515a-18bb-47ce-a768-1dc4e7b0fe6c_6",
+    "id": "f4c2515a-18bb-47ce-a768-1dc4e7b0fe6c_7",
     "type": "security-rule"
 }

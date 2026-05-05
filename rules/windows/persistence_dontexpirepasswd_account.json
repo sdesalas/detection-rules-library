@@ -81,6 +81,7 @@
         ],
         "risk_score": 47,
         "rule_id": "62a70f6f-3c37-43df-a556-f64fa475fba2",
+        "setup": "## Setup\n\nThe following Windows audit policies must be enabled to generate the events used by this rule:\n- [Audit User Account Management](https://ela.st/audit-user-account-management)\n- [Audit Directory Service Changes](https://ela.st/audit-directory-service-changes)\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -111,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 216
+        "version": 217
     },
-    "id": "62a70f6f-3c37-43df-a556-f64fa475fba2_216",
+    "id": "62a70f6f-3c37-43df-a556-f64fa475fba2_217",
     "type": "security-rule"
 }

@@ -21,48 +21,6 @@
                 "version": "^1.0.0"
             }
         ],
-        "required_fields": [
-            {
-                "ecs": false,
-                "name": "Esql.alerts_count",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_action_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_module_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.host_id_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.message_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.rule_name_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.source_user_name",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.target_user_name",
-                "type": "keyword"
-            }
-        ],
         "risk_score": 73,
         "rule_id": "c562a800-cf97-464e-9d6f-84db91e86e10",
         "severity": "high",
@@ -77,8 +35,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "c562a800-cf97-464e-9d6f-84db91e86e10_3",
+    "id": "c562a800-cf97-464e-9d6f-84db91e86e10_4",
     "type": "security-rule"
 }

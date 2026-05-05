@@ -71,6 +71,7 @@
         ],
         "risk_score": 47,
         "rule_id": "daafdf96-e7b1-4f14-b494-27e0d24b11f6",
+        "setup": "## Setup\n\nAudit Logon must be enabled to generate the events used by this rule.\nSetup instructions: https://ela.st/audit-logon\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -106,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 110
+        "version": 111
     },
-    "id": "daafdf96-e7b1-4f14-b494-27e0d24b11f6_110",
+    "id": "daafdf96-e7b1-4f14-b494-27e0d24b11f6_111",
     "type": "security-rule"
 }

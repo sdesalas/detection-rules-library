@@ -56,14 +56,13 @@
         ],
         "risk_score": 47,
         "rule_id": "92d3a04e-6487-4b62-892d-70e640a590dc",
-        "setup": "## Setup\n\nThe 'Filtering Platform Connection' logging policy must be configured for (Success, Failure).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nObject Access >\nFiltering Platform Connection (Success,Failure)\n```\n",
+        "setup": "## Setup\n\nThe following Windows audit policies must be enabled to generate the events used by this rule:\n- [Audit Filtering Platform Connection](https://ela.st/audit-filtering-platform-connection)\n- [Audit Filtering Platform Packet Drop](https://ela.st/audit-filtering-platform-packet-drop)\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Data Source: Elastic Defend",
             "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide"
         ],
@@ -97,8 +96,8 @@
             }
         ],
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "92d3a04e-6487-4b62-892d-70e640a590dc_110",
+    "id": "92d3a04e-6487-4b62-892d-70e640a590dc_111",
     "type": "security-rule"
 }

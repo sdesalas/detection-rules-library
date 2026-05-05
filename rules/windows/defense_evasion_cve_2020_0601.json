@@ -43,6 +43,7 @@
         ],
         "risk_score": 21,
         "rule_id": "56557cde-d923-4b88-adee-c61b3f3b5dc3",
+        "setup": "## Setup\n\nAudit Process Creation and Command Line must be enabled to generate the events used by this rule.\nSetup instructions: https://ela.st/audit-process-creation\n",
         "severity": "low",
         "tags": [
             "Domain: Endpoint",
@@ -79,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 211
+        "version": 212
     },
-    "id": "56557cde-d923-4b88-adee-c61b3f3b5dc3_211",
+    "id": "56557cde-d923-4b88-adee-c61b3f3b5dc3_212",
     "type": "security-rule"
 }

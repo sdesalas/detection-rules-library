@@ -61,26 +61,6 @@
             },
             {
                 "ecs": false,
-                "name": "Esql.aws_cloudtrail_request_parameters_kms_key_account_id",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.aws_cloudtrail_request_parameters_kms_key_id",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.aws_cloudtrail_request_parameters_target_bucket_name",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.aws_cloudtrail_request_parameters_target_object_key",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
                 "name": "_id",
                 "type": "keyword"
             },
@@ -203,8 +183,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 11
+        "version": 12
     },
-    "id": "ab8f074c-5565-4bc4-991c-d49770e19fc9_11",
+    "id": "ab8f074c-5565-4bc4-991c-d49770e19fc9_12",
     "type": "security-rule"
 }

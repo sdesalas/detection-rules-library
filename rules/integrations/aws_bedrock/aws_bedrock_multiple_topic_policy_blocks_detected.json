@@ -29,11 +29,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.ml_policy_blocked_topic_count",
-                "type": "long"
-            },
-            {
                 "ecs": true,
                 "name": "user.id",
                 "type": "keyword"
@@ -54,8 +49,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "266bbea8-fcf9-4b0e-ba7b-fc00f6b1dc73_4",
+    "id": "266bbea8-fcf9-4b0e-ba7b-fc00f6b1dc73_5",
     "type": "security-rule"
 }

@@ -71,6 +71,7 @@
         ],
         "risk_score": 47,
         "rule_id": "1d9aeb0b-9549-46f6-a32d-05e2a001b7fd",
+        "setup": "## Setup\n\nPowerShell Script Block Logging must be enabled to generate the events used by this rule (e.g., 4104).\nSetup instructions: https://ela.st/powershell-logging-setup\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -126,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 113
+        "version": 114
     },
-    "id": "1d9aeb0b-9549-46f6-a32d-05e2a001b7fd_113",
+    "id": "1d9aeb0b-9549-46f6-a32d-05e2a001b7fd_114",
     "type": "security-rule"
 }

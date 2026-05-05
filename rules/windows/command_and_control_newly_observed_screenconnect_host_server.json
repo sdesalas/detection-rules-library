@@ -34,21 +34,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.first_time_seen",
-                "type": "date"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.screenconnect_server",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.user_name_values",
-                "type": "keyword"
-            },
-            {
                 "ecs": true,
                 "name": "host.id",
                 "type": "keyword"
@@ -107,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "a8b2c4d6-e8f0-12a4-b6c8-d0e2f4a6b8c0_2",
+    "id": "a8b2c4d6-e8f0-12a4-b6c8-d0e2f4a6b8c0_3",
     "type": "security-rule"
 }

@@ -28,11 +28,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.ml_invocations_no_guardrails_count",
-                "type": "long"
-            },
-            {
                 "ecs": true,
                 "name": "user.id",
                 "type": "keyword"
@@ -53,8 +48,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "f2c653b7-7daf-4774-86f2-34cdbd1fc528_4",
+    "id": "f2c653b7-7daf-4774-86f2-34cdbd1fc528_5",
     "type": "security-rule"
 }

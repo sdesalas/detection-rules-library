@@ -53,118 +53,6 @@
                 "version": "^4.0.0"
             }
         ],
-        "required_fields": [
-            {
-                "ecs": false,
-                "name": "Esql.activity_fidelity_score",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.activity_type",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.aws_cloudtrail_user_identity_access_key_id_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.aws_cloudtrail_user_identity_arn_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.data_stream_namespace_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_action_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_count",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_provider_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.source_geo_city_name_count_distinct",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.source_geo_city_name_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.source_ip_city_pair_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.source_ip_count_distinct",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.source_ip_network_pair_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.source_ip_user_agent_pair_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.source_ip_values",
-                "type": "ip"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.source_network_org_name_count_distinct",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.source_network_org_name_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.time_window_date_trunc",
-                "type": "date"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.timestamp_first_seen",
-                "type": "date"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.timestamp_last_seen",
-                "type": "date"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.user_agent_original_count_distinct",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.user_agent_original_values",
-                "type": "keyword"
-            }
-        ],
         "risk_score": 47,
         "rule_id": "0d92d30a-5f3e-4b71-bc3d-4a0c4914b7e0",
         "severity": "medium",
@@ -204,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 106
+        "version": 107
     },
-    "id": "0d92d30a-5f3e-4b71-bc3d-4a0c4914b7e0_106",
+    "id": "0d92d30a-5f3e-4b71-bc3d-4a0c4914b7e0_107",
     "type": "security-rule"
 }

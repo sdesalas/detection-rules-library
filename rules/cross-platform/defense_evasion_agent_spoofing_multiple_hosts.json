@@ -21,21 +21,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.count_distinct_host_ids",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.host_id_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.user_id_values_user_id",
-                "type": "keyword"
-            },
-            {
                 "ecs": true,
                 "name": "agent.id",
                 "type": "keyword"
@@ -90,8 +75,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 106
+        "version": 107
     },
-    "id": "493834ca-f861-414c-8602-150d5505b777_106",
+    "id": "493834ca-f861-414c-8602-150d5505b777_107",
     "type": "security-rule"
 }

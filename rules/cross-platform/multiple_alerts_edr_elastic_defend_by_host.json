@@ -16,76 +16,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.alerts_count",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.dll_hash_sha256_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.dll_path_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_code_distinct_count",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_code_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.file_hash_sha256_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.file_path_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.message_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.process_command_line_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.process_executable_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.process_hash_sha256_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.process_parent_executable_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.rule_name_distinct_count",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.rule_name_values",
-                "type": "keyword"
-            },
-            {
                 "ecs": true,
                 "name": "agent.id",
                 "type": "keyword"
@@ -102,8 +32,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "ab25369e-ea5e-46f1-9cd5-478a0a4a131a_1",
+    "id": "ab25369e-ea5e-46f1-9cd5-478a0a4a131a_2",
     "type": "security-rule"
 }

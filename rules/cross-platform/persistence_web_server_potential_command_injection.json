@@ -35,111 +35,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.agent_id_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.agent_name_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.any_payload_keyword_max",
-                "type": "integer"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.contains_base64_cmd_values",
-                "type": "integer"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.contains_devtcp_values",
-                "type": "integer"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.contains_downloader_values",
-                "type": "integer"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.contains_file_read_keywords_values",
-                "type": "integer"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.contains_helpers_values",
-                "type": "integer"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.contains_interpreter_values",
-                "type": "integer"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.contains_nc_values",
-                "type": "integer"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.contains_privileges_values",
-                "type": "integer"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.contains_shell_values",
-                "type": "integer"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.contains_sus_cli_values",
-                "type": "integer"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.contains_suspicious_path_values",
-                "type": "integer"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.data_stream_dataset_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.data_stream_namespace_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_count",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.http.response.status_code_values",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.url_path_count_distinct",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.url_path_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.user_agent_original_values",
-                "type": "keyword"
-            },
-            {
                 "ecs": true,
                 "name": "agent.id",
                 "type": "keyword"
@@ -337,8 +232,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "f3ac6734-7e52-4a0d-90b7-6847bf4308f2_5",
+    "id": "f3ac6734-7e52-4a0d-90b7-6847bf4308f2_6",
     "type": "security-rule"
 }
