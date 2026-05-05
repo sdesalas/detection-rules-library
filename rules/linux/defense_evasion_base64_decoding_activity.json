@@ -19,46 +19,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.agent_id_count_distinct",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.agent_id_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.data_stream_dataset_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.data_stream_namespace_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_count",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.host_name_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.process_parent_command_line_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.process_parent_name_values",
-                "type": "keyword"
-            },
-            {
                 "ecs": true,
                 "name": "agent.id",
                 "type": "keyword"
@@ -154,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 10
+        "version": 11
     },
-    "id": "c5637438-e32d-4bb3-bc13-bd7932b3289f_10",
+    "id": "c5637438-e32d-4bb3-bc13-bd7932b3289f_11",
     "type": "security-rule"
 }

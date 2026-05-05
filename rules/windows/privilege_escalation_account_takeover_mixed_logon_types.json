@@ -26,36 +26,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.count_distinct_logon_types",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.host_name_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.logon_type_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.max_logon",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.min_logon",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.unique_host_count",
-                "type": "long"
-            },
-            {
                 "ecs": true,
                 "name": "host.name",
                 "type": "keyword"
@@ -78,6 +48,7 @@
         ],
         "risk_score": 47,
         "rule_id": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+        "setup": "## Setup\n\nAudit Logon must be enabled to generate the events used by this rule.\nSetup instructions: https://ela.st/audit-logon\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -106,8 +77,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e_2",
+    "id": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e_3",
     "type": "security-rule"
 }

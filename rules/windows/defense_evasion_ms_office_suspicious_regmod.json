@@ -60,6 +60,7 @@
         ],
         "risk_score": 47,
         "rule_id": "feeed87c-5e95-4339-aef1-47fd79bcfbe3",
+        "setup": "## Setup\n\nThis rule requires telemetry from one of the configured source integrations to be enabled and ingested.\n\n### Supported data sources\n\nThis rule can use the following data sources. For setup instructions, refer to the links below:\n\n- [CrowdStrike](https://ela.st/crowdstrike-integration)\n- [Microsoft Defender XDR](https://ela.st/m365-defender)\n- [SentinelOne Cloud Funnel](https://ela.st/sentinel-one-cloud-funnel)\n- [Sysmon Registry Events](https://ela.st/sysmon-event-reg-setup)\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -114,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 312
+        "version": 313
     },
-    "id": "feeed87c-5e95-4339-aef1-47fd79bcfbe3_312",
+    "id": "feeed87c-5e95-4339-aef1-47fd79bcfbe3_313",
     "type": "security-rule"
 }

@@ -101,7 +101,7 @@
         ],
         "risk_score": 47,
         "rule_id": "291a0de9-937a-4189-94c0-3e847c8b13e4",
-        "setup": "## Setup\n\nThe 'Audit Security Group Management' audit policy must be configured (Success).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nAccount Management >\nAudit Security Group Management (Success)\n```\n\nMicrosoft introduced the [event used](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4799) in this detection rule on Windows 10 and Windows Server 2016 or later operating systems.\n",
+        "setup": "## Setup\n\nAudit Security Group Management must be enabled to generate the events used by this rule.\nSetup instructions: https://ela.st/audit-security-group-management\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -137,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 420
+        "version": 421
     },
-    "id": "291a0de9-937a-4189-94c0-3e847c8b13e4_420",
+    "id": "291a0de9-937a-4189-94c0-3e847c8b13e4_421",
     "type": "security-rule"
 }

@@ -8,9 +8,8 @@
             "Environments that leverage DNS responses over 60k bytes will result in false positives - if this traffic is predictable and expected, it should be filtered out. Additionally, this detection rule could be triggered by an authorized vulnerability scan or compromise assessment."
         ],
         "index": [
-            "packetbeat-*",
-            "filebeat-*",
-            "logs-network_traffic.*"
+            "logs-network_traffic.*",
+            "logs-panw.panos*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -27,6 +26,10 @@
             {
                 "package": "network_traffic",
                 "version": "^1.33.0"
+            },
+            {
+                "package": "panw",
+                "version": "^5.2.0"
             }
         ],
         "required_fields": [
@@ -69,7 +72,9 @@
             "Tactic: Lateral Movement",
             "Tactic: Impact",
             "Resources: Investigation Guide",
-            "Use Case: Vulnerability"
+            "Use Case: Vulnerability",
+            "Data Source: PAN-OS",
+            "Data Source: Network Traffic"
         ],
         "threat": [
             {
@@ -112,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "11013227-0301-4a8c-b150-4db924484475_109",
+    "id": "11013227-0301-4a8c-b150-4db924484475_110",
     "type": "security-rule"
 }

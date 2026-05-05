@@ -54,7 +54,7 @@
         ],
         "risk_score": 21,
         "rule_id": "68ad737b-f90a-4fe5-bda6-a68fa460044e",
-        "setup": "The 'Audit Directory Service Changes' logging policy must be configured for (Success, Failure).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nDS Access >\nAudit Directory Service Changes (Success,Failure)\n",
+        "setup": "## Setup\n\nAudit Directory Service Access must be enabled to generate the events used by this rule.\nSetup instructions: https://ela.st/audit-directory-service-access\n",
         "severity": "low",
         "tags": [
             "Domain: Endpoint",
@@ -109,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "68ad737b-f90a-4fe5-bda6-a68fa460044e_109",
+    "id": "68ad737b-f90a-4fe5-bda6-a68fa460044e_110",
     "type": "security-rule"
 }

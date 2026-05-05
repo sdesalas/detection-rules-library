@@ -28,21 +28,6 @@
         "required_fields": [
             {
                 "ecs": false,
-                "name": "Esql.azure_open_ai_properties_request_length_avg",
-                "type": "double"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_count",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.time_window_date_trunc",
-                "type": "date"
-            },
-            {
-                "ecs": false,
                 "name": "azure.resource.name",
                 "type": "keyword"
             }
@@ -61,8 +46,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "b0450411-46e5-46d2-9b35-8b5dd9ba763e_4",
+    "id": "b0450411-46e5-46d2-9b35-8b5dd9ba763e_5",
     "type": "security-rule"
 }

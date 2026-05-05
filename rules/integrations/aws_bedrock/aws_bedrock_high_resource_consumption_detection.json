@@ -27,26 +27,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.ml_invocations_total_count",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.ml_risk_score",
-                "type": "double"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.ml_usage_completion_tokens_avg",
-                "type": "double"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.ml_usage_prompt_tokens_max",
-                "type": "integer"
-            },
-            {
                 "ecs": true,
                 "name": "user.id",
                 "type": "keyword"
@@ -68,8 +48,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 6
+        "version": 7
     },
-    "id": "b1773d05-f349-45fb-9850-287b8f92f02d_6",
+    "id": "b1773d05-f349-45fb-9850-287b8f92f02d_7",
     "type": "security-rule"
 }

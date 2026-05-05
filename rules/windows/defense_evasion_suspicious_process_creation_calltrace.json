@@ -79,6 +79,7 @@
         ],
         "risk_score": 47,
         "rule_id": "3ed032b2-45d8-4406-bc79-7ad1eabb2c72",
+        "setup": "## Setup\n\nThis rule requires Sysmon telemetry to be enabled and ingested.\n\nSetup instructions (enable the Sysmon events used by this rule):\n- [Sysmon Event ID 1 - Process Creation](https://ela.st/sysmon-event-1-setup)\n- [Sysmon Event ID 10 - Process Access](https://ela.st/sysmon-event-10-setup)\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -113,8 +114,8 @@
             }
         ],
         "type": "eql",
-        "version": 311
+        "version": 312
     },
-    "id": "3ed032b2-45d8-4406-bc79-7ad1eabb2c72_311",
+    "id": "3ed032b2-45d8-4406-bc79-7ad1eabb2c72_312",
     "type": "security-rule"
 }

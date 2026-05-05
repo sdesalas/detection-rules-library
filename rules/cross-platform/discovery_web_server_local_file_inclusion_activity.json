@@ -35,51 +35,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.agent_id_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.agent_name_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.data_stream_dataset_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.data_stream_namespace_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_count",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.http_request_method_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.http_response_status_code_values",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.url_original_url_decoded_to_lower_count_distinct",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.url_original_url_decoded_to_lower_values",
-                "type": "keyword"
-            },
-            {
                 "ecs": true,
                 "name": "source.ip",
                 "type": "ip"
@@ -170,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "90e4ceab-79a5-4f8e-879b-513cac7fcad9_4",
+    "id": "90e4ceab-79a5-4f8e-879b-513cac7fcad9_5",
     "type": "security-rule"
 }

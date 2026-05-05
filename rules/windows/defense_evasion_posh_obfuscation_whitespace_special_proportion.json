@@ -38,26 +38,6 @@
         "required_fields": [
             {
                 "ecs": false,
-                "name": "Esql.script_block_count",
-                "type": "integer"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.script_block_length",
-                "type": "integer"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.script_block_ratio",
-                "type": "double"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.script_block_tmp",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
                 "name": "_id",
                 "type": "keyword"
             },
@@ -149,7 +129,7 @@
         ],
         "risk_score": 47,
         "rule_id": "6ddb6c33-00ce-4acd-832a-24b251512023",
-        "setup": "## Setup\n\nPowerShell Script Block Logging must be enabled to generate the events used by this rule (e.g., 4104).\nSetup instructions: https://ela.st/powershell-logging-setup\n\nThis rule uses the following fields that require the Windows Integration v3.3.0 and up: `powershell.file.script_block_unique_symbols`.\n",
+        "setup": "## Setup\n\nPowerShell Script Block Logging must be enabled to generate the events used by this rule (e.g., 4104).\nSetup instructions: https://ela.st/powershell-logging-setup\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -212,8 +192,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 11
+        "version": 12
     },
-    "id": "6ddb6c33-00ce-4acd-832a-24b251512023_11",
+    "id": "6ddb6c33-00ce-4acd-832a-24b251512023_12",
     "type": "security-rule"
 }

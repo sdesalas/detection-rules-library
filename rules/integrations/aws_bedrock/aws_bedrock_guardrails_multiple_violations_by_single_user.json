@@ -28,11 +28,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.ml_violations_count",
-                "type": "long"
-            },
-            {
                 "ecs": true,
                 "name": "cloud.account.id",
                 "type": "keyword"
@@ -63,8 +58,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 7
+        "version": 8
     },
-    "id": "0cd2f3e6-41da-40e6-b28b-466f688f00a6_7",
+    "id": "0cd2f3e6-41da-40e6-b28b-466f688f00a6_8",
     "type": "security-rule"
 }

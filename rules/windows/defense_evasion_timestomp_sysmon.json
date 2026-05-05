@@ -73,7 +73,7 @@
         ],
         "risk_score": 47,
         "rule_id": "166727ab-6768-4e26-b80c-948b228ffc06",
-        "setup": "## Setup\n\nSysmon must be installed and configured to generate the events used by this rule (Event ID 2).\nSetup instructions: https://ela.st/sysmon-event-2-setup\n",
+        "setup": "## Setup\n\nThis rule requires Sysmon telemetry to be enabled and ingested.\n\nSetup instructions: https://ela.st/sysmon-event-2-setup\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -109,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "166727ab-6768-4e26-b80c-948b228ffc06_110",
+    "id": "166727ab-6768-4e26-b80c-948b228ffc06_111",
     "type": "security-rule"
 }

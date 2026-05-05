@@ -63,7 +63,7 @@
         ],
         "risk_score": 47,
         "rule_id": "97020e61-e591-4191-8a3b-2861a2b887cd",
-        "setup": "## Setup\n\nWindows Event 4703 logs Token Privileges changes and need to be configured (Enable).\n\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nDetailed Tracking >\nToken Right Adjusted Events (Success)\n```\n",
+        "setup": "## Setup\n\nAudit Token Right Adjusted Events must be enabled to generate the events used by this rule.\nSetup instructions: https://ela.st/audit-token-right-adjusted-events\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -92,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 113
+        "version": 114
     },
-    "id": "97020e61-e591-4191-8a3b-2861a2b887cd_113",
+    "id": "97020e61-e591-4191-8a3b-2861a2b887cd_114",
     "type": "security-rule"
 }

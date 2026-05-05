@@ -6,9 +6,6 @@
         "description": "This rule detects network events that may indicate the use of RPC traffic to the Internet. RPC is commonly used by system administrators to remotely control a system for maintenance or to use shared resources. It should almost never be directly exposed to the Internet, as it is frequently targeted and exploited by threat actors as an initial access or backdoor vector.",
         "from": "now-9m",
         "index": [
-            "packetbeat-*",
-            "auditbeat-*",
-            "filebeat-*",
             "logs-network_traffic.*",
             "logs-panw.panos*"
         ],
@@ -71,6 +68,7 @@
             "Domain: Endpoint",
             "Use Case: Threat Detection",
             "Data Source: PAN-OS",
+            "Data Source: Network Traffic",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -114,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "32923416-763a-4531-bb35-f33b9232ecdb_109",
+    "id": "32923416-763a-4531-bb35-f33b9232ecdb_110",
     "type": "security-rule"
 }

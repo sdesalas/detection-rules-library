@@ -32,16 +32,6 @@
             },
             {
                 "ecs": false,
-                "name": "Esql.time_window",
-                "type": "date"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.winlog_AuditPolicyChangesDescription_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
                 "name": "_id",
                 "type": "keyword"
             },
@@ -10038,7 +10028,7 @@
         ],
         "risk_score": 47,
         "rule_id": "0ef5d3eb-67ef-43ab-93b7-305cfa5a21f6",
-        "setup": "## Setup\n\nThe 'Audit Audit Policy Change' logging policy must be configured for (Success, Failure).\nSteps to implement the logging policy with Advanced Audit Configuration:\n\n```\nComputer Configuration >\nPolicies >\nWindows Settings >\nSecurity Settings >\nAdvanced Audit Policies Configuration >\nAudit Policies >\nPolicy Change >\nAudit Audit Policy Change (Success,Failure)\n```\n",
+        "setup": "## Setup\n\nAudit Policy Change must be enabled to generate the events used by this rule.\nSetup instructions: https://ela.st/audit-policy-change\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -10091,8 +10081,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 106
+        "version": 107
     },
-    "id": "0ef5d3eb-67ef-43ab-93b7-305cfa5a21f6_106",
+    "id": "0ef5d3eb-67ef-43ab-93b7-305cfa5a21f6_107",
     "type": "security-rule"
 }

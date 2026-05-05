@@ -19,36 +19,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.agent_id_count_distinct",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.agent_id_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.data_stream_dataset_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.data_stream_namespace_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_count",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.host_name_values",
-                "type": "keyword"
-            },
-            {
                 "ecs": true,
                 "name": "agent.id",
                 "type": "keyword"
@@ -181,8 +151,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 11
+        "version": 12
     },
-    "id": "976b2391-413f-4a94-acb4-7911f3803346_11",
+    "id": "976b2391-413f-4a94-acb4-7911f3803346_12",
     "type": "security-rule"
 }

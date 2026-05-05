@@ -49,6 +49,7 @@
         ],
         "risk_score": 47,
         "rule_id": "6f024bde-7085-489b-8250-5957efdf1caf",
+        "setup": "## Setup\n\nAudit Security Group Management must be enabled to generate the events used by this rule.\nSetup instructions: https://ela.st/audit-security-group-management\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -94,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "6f024bde-7085-489b-8250-5957efdf1caf_107",
+    "id": "6f024bde-7085-489b-8250-5957efdf1caf_108",
     "type": "security-rule"
 }

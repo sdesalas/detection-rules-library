@@ -50,6 +50,7 @@
         ],
         "risk_score": 47,
         "rule_id": "da87eee1-129c-4661-a7aa-57d0b9645fad",
+        "setup": "## Setup\n\nAudit Security System Extension must be enabled to generate the events used by this rule.\nSetup instructions: https://ela.st/audit-security-system-extension\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -86,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 116
+        "version": 117
     },
-    "id": "da87eee1-129c-4661-a7aa-57d0b9645fad_116",
+    "id": "da87eee1-129c-4661-a7aa-57d0b9645fad_117",
     "type": "security-rule"
 }

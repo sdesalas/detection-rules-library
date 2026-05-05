@@ -36,16 +36,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.ml_response_validation_error_count",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.time_window_date_trunc",
-                "type": "date"
-            },
-            {
                 "ecs": true,
                 "name": "cloud.account.id",
                 "type": "keyword"
@@ -73,8 +63,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 6
+        "version": 7
     },
-    "id": "725a048a-88c5-4fc7-8677-a44fc0031822_6",
+    "id": "725a048a-88c5-4fc7-8677-a44fc0031822_7",
     "type": "security-rule"
 }

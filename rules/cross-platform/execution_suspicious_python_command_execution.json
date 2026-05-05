@@ -18,46 +18,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.agent_id_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.data_stream_dataset_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.data_stream_namespace_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.host_name_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.patterns_count_distinct",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.process_command_line_count_distinct",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.process_command_line_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.time_window_date_trunc",
-                "type": "date"
-            },
-            {
                 "ecs": true,
                 "name": "agent.id",
                 "type": "keyword"
@@ -110,8 +70,8 @@
             }
         ],
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "b42e4b88-fc4a-417b-a45e-4d4a3db9fd41_3",
+    "id": "b42e4b88-fc4a-417b-a45e-4d4a3db9fd41_4",
     "type": "security-rule"
 }

@@ -10,12 +10,13 @@
         "from": "now-6m",
         "investigation_fields": {
             "field_names": [
-                "Esql.bucket_arn_count_distinct",
+                "Esql.aws_cloudtrail_resources_arn_count_distinct",
                 "Esql.time_window_date_trunc",
                 "aws.cloudtrail.user_identity.arn",
                 "source.ip",
                 "Esql.aws_cloudtrail_resources_arn_values",
                 "Esql.event_action_values",
+                "Esql.timestamp_values",
                 "Esql.aws_cloudtrail_user_identity_type_values",
                 "Esql.aws_cloudtrail_user_identity_access_key_id_values",
                 "Esql.cloud_account_id_values",
@@ -28,8 +29,8 @@
         "language": "esql",
         "license": "Elastic License v2",
         "name": "AWS S3 Rapid Bucket Posture API Calls from a Single Principal",
-        "note": "## Triage and analysis\n\n### Investigating AWS S3 Rapid Bucket Posture API Calls from a Single Principal\n\nThis rule detects when the same AWS principal (`aws.cloudtrail.user_identity.arn`), from the same `source.ip`, successfully invokes read-only S3 control-plane APIs that reveal bucket posture across more than 15 distinct `aws.cloudtrail.resources.arn` values within a 10-second window.\n\nSecurity scanners, compliance tools, and post-compromise reconnaissance often walk many buckets quickly to map public access, policies, and versioning. Bursts of distinct buckets in seconds are less typical of one-off console administration or single-bucket troubleshooting. This could be indicative of reconnaissance as seen by threat actors like Team PCP. \n\n### Possible investigation steps\n\n**Identify the actor and session context**\n- **Actor ARN (`aws.cloudtrail.user_identity.arn`)**: Determine which IAM user, role, or federated principal performed the reads. Confirm whether this identity is approved for broad S3 read or security auditing. Unusual types or unfamiliar roles may warrant deeper review.\n- **Access key (`Esql.aws_cloudtrail_user_identity_access_key_id_values`)**: Identify which access key or temporary credential was used. Correlate with IAM last-used metadata for the key or role session.\n\n**Characterize the bucket sweep**\n- **Distinct bucket count (`Esql.bucket_arn_count_distinct`)**: Compare to normal baselines for this identity; values at or just above the threshold may still warrant review for new automation.\n- **Bucket ARNs (`Esql.aws_cloudtrail_resources_arn_values`)**: Identify which buckets were touched. Prioritize buckets that store logs, backups, credentials, or regulated data. Search the same time range for write or policy-change APIs (`PutBucket*`, `DeleteBucket*`) on the same buckets.\n\n**Analyze source and client**\n- **Source IP (`Esql.source_ip_values`)**: Map to corporate egress, a known runner or bastion, an EC2 instance, or an unfamiliar ASN. Compare with VPC Flow Logs or proxy logs when available.\n- **User agent (`Esql.user_agent_original_values`, `Esql.user_agent_name_values`)**: Identify the AWS CLI, Boto3, a specific scanner, or custom scripts. Unusual or minimal user agents may align with tooling and require investigation.\n\n**Correlate in time**\n- Query CloudTrail for the same `aws.cloudtrail.user_identity.arn` and `source.ip` within approximately \u00b130 minutes for follow-on patterns: `ListBuckets`, `GetObject`, `PutBucketPolicy`, `AssumeRole`, or IAM changes.\n- Check for overlapping alerts related to credential access, unusual geolocation, or new external bucket policy grants.\n\n### False positive analysis\n\nLegitimate causes can include:\n- **Security and compliance scanners** (for example CSPM or assessment tools) using API credentials with `s3:Get*` permissions across many buckets.\n- **Inventory or backup catalog tools** that enumerate bucket metadata for reporting.\n- **CI/CD or infrastructure-as-code validation** jobs that verify bucket settings across environments.\n\nValidate whether the principal is a documented service account, the IP belongs to known infrastructure, and the timing matches scheduled jobs. If behavior is expected, consider raising the distinct-bucket threshold, adding `user_agent` filters, or documenting exception identities.\n\n### Response and remediation\n\n**Contain**\n- If activity is unexpected, rotate or disable keys for the affected identity, revoke active role sessions where possible, and restrict the source IP at the network layer if it is not authorized.\n\n**Investigate**\n- Export CloudTrail for the window around `Esql.time_window_date_trunc` and review all S3 and IAM events for the same actor.\n- Review IAM policies attached to the principal for excessive `s3:Get*` or `s3:List*` scope.\n\n**Harden**\n- Enforce least privilege on S3 read APIs; use permission boundaries or service control policies where appropriate.\n- Ensure sensitive buckets are not unnecessarily reachable from the observed network context.\n- Document approved scanning accounts and tune the rule to reduce noise from those identities.\n\n### Additional information\n\n- [AWS Security Incident Response Guide](https://docs.aws.amazon.com/whitepapers/latest/aws-security-incident-response-guide/aws-security-incident-response-guide.pdf)\n- [AWS Incident Response Playbooks](https://github.com/aws-samples/aws-incident-response-playbooks/)\n- [AWS Customer Playbook Framework](https://github.com/aws-samples/aws-customer-playbook-framework)\n\n",
-        "query": "from logs-aws.cloudtrail-* metadata _id, _version, _index\n| eval Esql.time_window_date_trunc = date_trunc(10 seconds, @timestamp)\n\n| where\n    data_stream.dataset == \"aws.cloudtrail\"\n    and event.provider == \"s3.amazonaws.com\"\n    and event.outcome == \"success\"\n    and event.action in (\n      \"GetBucketAcl\",\n      \"GetBucketPublicAccessBlock\",\n      \"GetBucketPolicy\",\n      \"GetBucketPolicyStatus\",\n      \"GetBucketVersioning\"\n    )\n    and aws.cloudtrail.user_identity.type != \"AWSService\"\n    and source.ip IS NOT NULL\n    and aws.cloudtrail.resources.arn IS NOT NULL\n    and aws.cloudtrail.user_identity.arn IS NOT NULL\n    and aws.cloudtrail.session_credential_from_console IS NULL\n\n| keep\n    @timestamp,\n    Esql.time_window_date_trunc,\n    event.action,\n    aws.cloudtrail.user_identity.arn,\n    aws.cloudtrail.user_identity.type,\n    aws.cloudtrail.user_identity.access_key_id,\n    source.ip,\n    aws.cloudtrail.resources.arn,\n    cloud.account.id,\n    cloud.region,\n    user_agent.original,\n    source.as.organization.name,\n    data_stream.namespace\n\n| stats\n    Esql.bucket_arn_count_distinct = count_distinct(aws.cloudtrail.resources.arn),\n    Esql.aws_cloudtrail_resources_arn_values = VALUES(aws.cloudtrail.resources.arn),\n    Esql.event_action_values = VALUES(event.action),\n    Esql.timestamp_values = VALUES(@timestamp),\n    Esql.aws_cloudtrail_user_identity_type_values = VALUES(aws.cloudtrail.user_identity.type),\n    Esql.aws_cloudtrail_user_identity_access_key_id_values = VALUES(aws.cloudtrail.user_identity.access_key_id),\n    Esql.cloud_account_id_values = VALUES(cloud.account.id),\n    Esql.cloud_region_values = VALUES(cloud.region),\n    Esql.user_agent_original_values = VALUES(user_agent.original),\n    Esql.source_as_organization_name_values = VALUES(source.as.organization.name),\n    Esql.data_stream_namespace_values = VALUES(data_stream.namespace)\n  by Esql.time_window_date_trunc, aws.cloudtrail.user_identity.arn, source.ip\n\n| where Esql.bucket_arn_count_distinct > 15\n",
+        "note": "## Triage and analysis\n\n### Investigating AWS S3 Rapid Bucket Posture API Calls from a Single Principal\n\nThis rule detects when the same AWS principal (`aws.cloudtrail.user_identity.arn`), from the same `source.ip`, successfully invokes read-only S3 control-plane APIs that reveal bucket posture across more than 15 distinct `aws.cloudtrail.resources.arn` values within a 10-second window.\n\nSecurity scanners, compliance tools, and post-compromise reconnaissance often walk many buckets quickly to map public access, policies, and versioning. Bursts of distinct buckets in seconds are less typical of one-off console administration or single-bucket troubleshooting. This could be indicative of reconnaissance as seen by threat actors like Team PCP. \n\n### Possible investigation steps\n\n**Identify the actor and session context**\n- **Actor ARN (`aws.cloudtrail.user_identity.arn`)**: Determine which IAM user, role, or federated principal performed the reads. Confirm whether this identity is approved for broad S3 read or security auditing. Unusual types or unfamiliar roles may warrant deeper review.\n- **Access key (`Esql.aws_cloudtrail_user_identity_access_key_id_values`)**: Identify which access key or temporary credential was used. Correlate with IAM last-used metadata for the key or role session.\n\n**Characterize the bucket sweep**\n- **Distinct bucket count (`Esql.aws_cloudtrail_resources_arn_count_distinct`)**: Compare to normal baselines for this identity; values at or just above the threshold may still warrant review for new automation.\n- **Bucket ARNs (`Esql.aws_cloudtrail_resources_arn_values`)**: Identify which buckets were touched. Prioritize buckets that store logs, backups, credentials, or regulated data. Search the same time range for write or policy-change APIs (`PutBucket*`, `DeleteBucket*`) on the same buckets.\n\n**Analyze source and client**\n- **Source IP (`Esql.source_ip_values`)**: Map to corporate egress, a known runner or bastion, an EC2 instance, or an unfamiliar ASN. Compare with VPC Flow Logs or proxy logs when available.\n- **User agent (`Esql.user_agent_original_values`, `Esql.user_agent_name_values`)**: Identify the AWS CLI, Boto3, a specific scanner, or custom scripts. Unusual or minimal user agents may align with tooling and require investigation.\n\n**Correlate in time**\n- Query CloudTrail for the same `aws.cloudtrail.user_identity.arn` and `source.ip` within approximately \u00b130 minutes for follow-on patterns: `ListBuckets`, `GetObject`, `PutBucketPolicy`, `AssumeRole`, or IAM changes.\n- Check for overlapping alerts related to credential access, unusual geolocation, or new external bucket policy grants.\n\n### False positive analysis\n\nLegitimate causes can include:\n- **Security and compliance scanners** (for example CSPM or assessment tools) using API credentials with `s3:Get*` permissions across many buckets.\n- **Inventory or backup catalog tools** that enumerate bucket metadata for reporting.\n- **CI/CD or infrastructure-as-code validation** jobs that verify bucket settings across environments.\n\nValidate whether the principal is a documented service account, the IP belongs to known infrastructure, and the timing matches scheduled jobs. If behavior is expected, consider raising the distinct-bucket threshold, adding `user_agent` filters, or documenting exception identities.\n\n### Response and remediation\n\n**Contain**\n- If activity is unexpected, rotate or disable keys for the affected identity, revoke active role sessions where possible, and restrict the source IP at the network layer if it is not authorized.\n\n**Investigate**\n- Export CloudTrail for the window around `Esql.time_window_date_trunc` and review all S3 and IAM events for the same actor.\n- Review IAM policies attached to the principal for excessive `s3:Get*` or `s3:List*` scope.\n\n**Harden**\n- Enforce least privilege on S3 read APIs; use permission boundaries or service control policies where appropriate.\n- Ensure sensitive buckets are not unnecessarily reachable from the observed network context.\n- Document approved scanning accounts and tune the rule to reduce noise from those identities.\n\n### Additional information\n\n- [AWS Security Incident Response Guide](https://docs.aws.amazon.com/whitepapers/latest/aws-security-incident-response-guide/aws-security-incident-response-guide.pdf)\n- [AWS Incident Response Playbooks](https://github.com/aws-samples/aws-incident-response-playbooks/)\n- [AWS Customer Playbook Framework](https://github.com/aws-samples/aws-customer-playbook-framework)\n\n",
+        "query": "from logs-aws.cloudtrail-* metadata _id, _version, _index\n| eval Esql.time_window_date_trunc = date_trunc(10 seconds, @timestamp)\n\n| where\n    data_stream.dataset == \"aws.cloudtrail\"\n    and event.provider == \"s3.amazonaws.com\"\n    and event.outcome == \"success\"\n    and event.action in (\n      \"GetBucketAcl\",\n      \"GetBucketPublicAccessBlock\",\n      \"GetBucketPolicy\",\n      \"GetBucketPolicyStatus\",\n      \"GetBucketVersioning\"\n    )\n    and aws.cloudtrail.user_identity.type != \"AWSService\"\n    and source.ip IS NOT NULL\n    and aws.cloudtrail.resources.arn IS NOT NULL\n    and aws.cloudtrail.user_identity.arn IS NOT NULL\n    and aws.cloudtrail.session_credential_from_console IS NULL\n\n| keep\n    @timestamp,\n    Esql.time_window_date_trunc,\n    event.action,\n    aws.cloudtrail.user_identity.arn,\n    aws.cloudtrail.user_identity.type,\n    aws.cloudtrail.user_identity.access_key_id,\n    source.ip,\n    aws.cloudtrail.resources.arn,\n    cloud.account.id,\n    cloud.region,\n    user_agent.original,\n    source.as.organization.name,\n    data_stream.namespace\n\n| stats\n    Esql.aws_cloudtrail_resources_arn_count_distinct = count_distinct(aws.cloudtrail.resources.arn),\n    Esql.aws_cloudtrail_resources_arn_values = VALUES(aws.cloudtrail.resources.arn),\n    Esql.event_action_values = VALUES(event.action),\n    Esql.timestamp_values = VALUES(@timestamp),\n    Esql.aws_cloudtrail_user_identity_type_values = VALUES(aws.cloudtrail.user_identity.type),\n    Esql.aws_cloudtrail_user_identity_access_key_id_values = VALUES(aws.cloudtrail.user_identity.access_key_id),\n    Esql.cloud_account_id_values = VALUES(cloud.account.id),\n    Esql.cloud_region_values = VALUES(cloud.region),\n    Esql.user_agent_original_values = VALUES(user_agent.original),\n    Esql.source_as_organization_name_values = VALUES(source.as.organization.name),\n    Esql.data_stream_namespace_values = VALUES(data_stream.namespace)\n  by Esql.time_window_date_trunc, aws.cloudtrail.user_identity.arn, source.ip\n\n| where Esql.aws_cloudtrail_resources_arn_count_distinct > 15\n\n| keep\n    aws.cloudtrail.user_identity.arn,\n    source.ip,\n    Esql.time_window_date_trunc,\n    Esql.aws_cloudtrail_resources_arn_count_distinct,\n    Esql.aws_cloudtrail_resources_arn_values,\n    Esql.event_action_values,\n    Esql.timestamp_values,\n    Esql.aws_cloudtrail_user_identity_type_values,\n    Esql.aws_cloudtrail_user_identity_access_key_id_values,\n    Esql.cloud_account_id_values,\n    Esql.cloud_region_values,\n    Esql.user_agent_original_values,\n    Esql.source_as_organization_name_values,\n    Esql.data_stream_namespace_values\n",
         "references": [
             "https://kudelskisecurity.com/research/investigating-two-variants-of-the-trivy-supply-chain-compromise"
         ],
@@ -45,66 +46,6 @@
             }
         ],
         "required_fields": [
-            {
-                "ecs": false,
-                "name": "Esql.aws_cloudtrail_resources_arn_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.aws_cloudtrail_user_identity_access_key_id_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.aws_cloudtrail_user_identity_type_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.bucket_arn_count_distinct",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.cloud_account_id_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.cloud_region_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.data_stream_namespace_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.event_action_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.source_as_organization_name_values",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.time_window_date_trunc",
-                "type": "date"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.timestamp_values",
-                "type": "date"
-            },
-            {
-                "ecs": false,
-                "name": "Esql.user_agent_original_values",
-                "type": "keyword"
-            },
             {
                 "ecs": false,
                 "name": "aws.cloudtrail.user_identity.arn",
@@ -174,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "a7577205-88a1-4a08-85d4-7b72a9a2e969_2",
+    "id": "a7577205-88a1-4a08-85d4-7b72a9a2e969_3",
     "type": "security-rule"
 }

@@ -29,11 +29,6 @@
         "required_fields": [
             {
                 "ecs": false,
-                "name": "Esql.client_geo_country_name_count_distinct",
-                "type": "long"
-            },
-            {
-                "ecs": false,
                 "name": "okta.actor.alternate_id",
                 "type": "keyword"
             },
@@ -79,8 +74,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 310
+        "version": 311
     },
-    "id": "2e56e1bc-867a-11ee-b13e-f661ea17fbcd_310",
+    "id": "2e56e1bc-867a-11ee-b13e-f661ea17fbcd_311",
     "type": "security-rule"
 }

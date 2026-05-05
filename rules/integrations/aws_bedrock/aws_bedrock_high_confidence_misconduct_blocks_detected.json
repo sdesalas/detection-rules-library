@@ -29,11 +29,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.ml_policy_blocked_violation_total_count",
-                "type": "long"
-            },
-            {
                 "ecs": true,
                 "name": "user.id",
                 "type": "keyword"
@@ -54,8 +49,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 8
+        "version": 9
     },
-    "id": "4f855297-c8e0-4097-9d97-d653f7e471c4_8",
+    "id": "4f855297-c8e0-4097-9d97-d653f7e471c4_9",
     "type": "security-rule"
 }

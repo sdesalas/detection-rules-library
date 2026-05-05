@@ -60,6 +60,7 @@
         ],
         "risk_score": 47,
         "rule_id": "81ff45f8-f8c2-4e28-992e-5a0e8d98e0fe",
+        "setup": "## Setup\n\nAudit Other Object Access Events must be enabled to generate the events used by this rule.\nSetup instructions: https://ela.st/audit-other-object-access-events\n",
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
@@ -117,8 +118,8 @@
             }
         ],
         "type": "eql",
-        "version": 113
+        "version": 114
     },
-    "id": "81ff45f8-f8c2-4e28-992e-5a0e8d98e0fe_113",
+    "id": "81ff45f8-f8c2-4e28-992e-5a0e8d98e0fe_114",
     "type": "security-rule"
 }

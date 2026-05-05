@@ -36,11 +36,6 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "Esql.ml_response_access_denied_count",
-                "type": "long"
-            },
-            {
                 "ecs": true,
                 "name": "cloud.account.id",
                 "type": "keyword"
@@ -71,8 +66,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 6
+        "version": 7
     },
-    "id": "17261da3-a6d0-463c-aac8-ea1718afcd20_6",
+    "id": "17261da3-a6d0-463c-aac8-ea1718afcd20_7",
     "type": "security-rule"
 }
