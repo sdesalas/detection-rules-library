@@ -64,9 +64,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 21,
+        "risk_score": 73,
         "rule_id": "2572f7e0-7647-4c68-a42b-d3b1973deaae",
-        "severity": "low",
+        "severity": "high",
         "tags": [
             "Data Source: Elastic Defend for Containers",
             "Domain: Container",
@@ -122,8 +122,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "2572f7e0-7647-4c68-a42b-d3b1973deaae_2",
+    "id": "2572f7e0-7647-4c68-a42b-d3b1973deaae_3",
     "type": "security-rule"
 }

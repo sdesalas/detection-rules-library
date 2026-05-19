@@ -17,7 +17,7 @@
         "license": "Elastic License v2",
         "name": "Curl or Wget Execution from Container Context",
         "note": "## Triage and analysis\n\n### Investigating Curl or Wget Execution from Container Context\n\nThe rule matches Auditd-backed process events where `process.title` is `runc init` and the executed program is\ncurl/wget (by `process.name`) or the argument vector suggests curl or wget paths. Use it to spot ingress tool \ntransfer or scripted downloads from inside a container as seen at the host audit layer.\n\n### Possible investigation steps\n\n- Reconstruct the full command line from `process.args` / `process.command_line` and identify URLs, output paths, and\n  flags such as `-O`, `--post-file`, or TLS bypass (`-k`).\n- Map the event to the container: cgroup, `container.id`, `kubernetes.pod.*`, or runtime metadata if present on the\n  document; identify the image, namespace, and workload owner.\n- Review egress from the host or pod network policy logs for destinations contacted shortly after the execution.\n- Compare against recent image or manifest changes for the workload to rule out intentional startup scripts.\n\n### False positive analysis\n\n- Package managers and bootstrap scripts in official images may run curl/wget once at start; document and exclude when\n  verified.\n- Security scanners or health checks running in sidecars could match; validate agent type and schedule.\n\n### Response and remediation\n\n- If unauthorized, isolate the node or workload, revoke credentials available to the container, inspect for dropped\n  binaries or cron/systemd additions, and rotate any secrets the container could reach.\n",
-        "query": "host.os.type:linux and \ndata_stream.dataset:\"auditd_manager.auditd\" and\nevent.action:(\"executed\" or \"exec\") and\nprocess.title:\"runc init\" and\n(\n  process.name:(curl or wget) or\n  process.args:(* curl* or */bin/curl* or *wget*)\n)\n",
+        "query": "host.os.type:linux and \ndata_stream.dataset:\"auditd_manager.auditd\" and\nevent.action:(\"executed\" or \"exec\") and\nprocess.title:\"runc init\" and\n(\n  process.name:(curl or wget) or\n  process.args:(* curl* or */bin/curl* or *wget*)\n) and \nnot process.args :(*127.0.0.1* or *localhost* or \"wget --no-verbose --tries=1 --spider --no-check-certificate http://${WEB_HOST}:${WEB_PORT}/api/ping || exit 1\")\n",
         "references": [
             "https://attack.mitre.org/techniques/T1105/",
             "https://gtfobins.github.io/gtfobins/curl/",
@@ -99,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "e7b2c3d4-5a6b-4e8f-9c0d-1a2b3e4f5a6b_1",
+    "id": "e7b2c3d4-5a6b-4e8f-9c0d-1a2b3e4f5a6b_2",
     "type": "security-rule"
 }
