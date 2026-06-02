@@ -17,7 +17,7 @@
         "license": "Elastic License v2",
         "name": "Kubernetes Static Pod Manifest File Access",
         "note": "## Triage and analysis\n\n### Investigating Kubernetes Static Pod Manifest File Access\n\nReview the full command line (process.args, process.command_line), user.id, user.name, process.parent, and whether the\nsession was interactive. Confirm if the host is a Kubernetes node or admin jump host where manifest edits are expected.\n\n### Possible investigation steps\n\n- Compare activity to change windows and identity baselines; prioritize events without matching change tickets.\n- Inspect subsequent process and file events on the same host for writes under /etc/kubernetes/manifests or kubelet\n  restarts.\n- Correlate with Kubernetes audit logs and node/agent telemetry for related compromise indicators.\n\n### Response and remediation\n\n- If unauthorized, restore manifests from known-good sources, isolate the host, and review cluster integrity per incident\n  policy.\n",
-        "query": "host.os.type:linux and event.category:process and event.action:(exec or executed) and \nprocess.name:(\n  bash or sh or dash or zsh or \n  cat or cp or mv or touch or tee or dd or\n  sed or awk or \n  curl or wget or scp or\n  vi or vim or nano or echo or\n  busybox or\n  python* or perl* or ruby* or node or lua* or\n  openssl or base64 or xxd or\n  .*) and \n  process.args:(*/etc/kubernetes/manifests/* and not (/etc/kubernetes/manifests/etcd* or /etc/kubernetes/manifests/kube-apiserver* or /etc/kubernetes/manifests/kube-scheduler* or /etc/kubernetes/manifests/kube-controller-manager*))\n",
+        "query": "host.os.type:linux and event.category:process and event.action:(exec or executed) and \nprocess.name:(\n  bash or sh or dash or zsh or \n  cat or cp or mv or touch or tee or dd or\n  sed or awk or \n  curl or wget or scp or\n  vi or vim or nano or echo or\n  busybox or\n  python* or perl* or ruby* or node or lua* or\n  openssl or base64 or xxd or\n  .*) and \n  process.args:(*/etc/kubernetes/manifests/* and not (/etc/kubernetes/manifests/etcd* or /etc/kubernetes/manifests/kube-apiserver* or /etc/kubernetes/manifests/kube-scheduler* or /etc/kubernetes/manifests/kube-controller-manager*)) and \n  not (process.args :printf* and process.working_directory :/home/*-svc-nessus) and \n  not process.parent.executable :(\"/opt/nessus/sbin/nessusd\" or \"/opt/nessus_agent/sbin/nessus-agent-module\")\n",
         "references": [
             "https://kubernetes.io/docs/tasks/configure-pod-container/static-pod/",
             "https://attack.mitre.org/techniques/T1053/007/"
@@ -56,6 +56,16 @@
             {
                 "ecs": true,
                 "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.executable",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.working_directory",
                 "type": "keyword"
             }
         ],
@@ -123,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "a698a653-e144-4e40-bade-35135935be45_1",
+    "id": "a698a653-e144-4e40-bade-35135935be45_2",
     "type": "security-rule"
 }
