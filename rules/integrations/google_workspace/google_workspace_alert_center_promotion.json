@@ -5,15 +5,14 @@
         ],
         "description": "Identifies the occurrence of a security alert from the Google Workspace alerts center. Google Workspace's security alert center provides an overview of actionable alerts that may be affecting an organization's domain. An alert is a warning of a potential security issue that Google has detected.",
         "false_positives": [
-            "To tune this rule, add exceptions to exclude any google_workspace.alert.type which should not trigger this rule.",
+            "To tune this rule, add exceptions to exclude any google_workspace.alert.type or rule.name which should not trigger this rule.",
             "For additional tuning, severity exceptions for google_workspace.alert.metadata.severity can be added."
         ],
         "from": "now-130m",
         "index": [
-            "filebeat-*",
-            "logs-google_workspace*"
+            "logs-google_workspace.alert-*"
         ],
-        "interval": "10m",
+        "interval": "5m",
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "Forwarded Google Workspace Security Alert",
@@ -71,8 +70,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 7
+        "version": 8
     },
-    "id": "f1a6d0f4-95b8-11ed-9517-f661ea17fbcc_7",
+    "id": "f1a6d0f4-95b8-11ed-9517-f661ea17fbcc_8",
     "type": "security-rule"
 }

@@ -15,6 +15,25 @@
             "filebeat-*",
             "logs-o365.audit-*"
         ],
+        "investigation_fields": {
+            "field_names": [
+                "@timestamp",
+                "host.id",
+                "host.name",
+                "user.id",
+                "user.name",
+                "user.domain",
+                "source.ip",
+                "source.as.number",
+                "o365.audit.AppAccessContext.AADSessionId",
+                "o365.audit.AppAccessContext.ClientAppName",
+                "o365.audit.AppAccessContext.UniqueTokenId",
+                "o365.audit.EventSource",
+                "user_agent.original",
+                "o365.audit.Site",
+                "o365.audit.ObjectId"
+            ]
+        },
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "M365 SharePoint Site Sharing Policy Weakened",
@@ -156,8 +175,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "632906c6-ba8f-44c0-8386-ec0bbc8518bf_3",
+    "id": "632906c6-ba8f-44c0-8386-ec0bbc8518bf_4",
     "type": "security-rule"
 }
