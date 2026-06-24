@@ -13,7 +13,8 @@
             "auditbeat-*",
             "filebeat-*",
             "logs-network_traffic.*",
-            "logs-panw.panos*"
+            "logs-panw.panos*",
+            "logs-pfsense.log-*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -25,12 +26,16 @@
         ],
         "related_integrations": [
             {
-                "package": "network_traffic",
-                "version": "^1.1.0"
-            },
-            {
                 "package": "panw",
                 "version": "^5.0.0"
+            },
+            {
+                "package": "pfsense",
+                "version": "^1.0.0"
+            },
+            {
+                "package": "network_traffic",
+                "version": "^1.1.0"
             }
         ],
         "required_fields": [
@@ -74,6 +79,7 @@
             "Domain: Endpoint",
             "Use Case: Threat Detection",
             "Data Source: PAN-OS",
+            "Data Source: pfSense",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -115,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 111
+        "version": 112
     },
-    "id": "5700cb81-df44-46aa-a5d7-337798f53eb8_111",
+    "id": "5700cb81-df44-46aa-a5d7-337798f53eb8_112",
     "type": "security-rule"
 }
