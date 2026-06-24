@@ -7,7 +7,10 @@
         "from": "now-9m",
         "index": [
             "logs-network_traffic.*",
-            "logs-panw.panos*"
+            "logs-panw.panos*",
+            "logs-pfsense.log-*",
+            "logs-zeek.*",
+            "logs-corelight.*"
         ],
         "language": "kuery",
         "license": "Elastic License v2",
@@ -19,12 +22,24 @@
         ],
         "related_integrations": [
             {
+                "package": "panw",
+                "version": "^5.2.0"
+            },
+            {
+                "package": "pfsense",
+                "version": "^1.22.0"
+            },
+            {
+                "package": "corelight",
+                "version": "^1.0.0"
+            },
+            {
                 "package": "network_traffic",
                 "version": "^1.33.0"
             },
             {
-                "package": "panw",
-                "version": "^5.2.0"
+                "package": "zeek",
+                "version": "^5.0.0"
             }
         ],
         "required_fields": [
@@ -81,7 +96,11 @@
             "Tactic: Initial Access",
             "Domain: Endpoint",
             "Use Case: Threat Detection",
+            "Data Source: Corelight",
+            "Data Source: Network Traffic",
             "Data Source: PAN-OS",
+            "Data Source: pfSense",
+            "Data Source: Zeek",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -108,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 111
+        "version": 112
     },
-    "id": "143cb236-0956-4f42-a706-814bcaa0cf5a_111",
+    "id": "143cb236-0956-4f42-a706-814bcaa0cf5a_112",
     "type": "security-rule"
 }
