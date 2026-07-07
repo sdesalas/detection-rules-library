@@ -34,7 +34,7 @@
         "license": "Elastic License v2",
         "name": "Entra ID OAuth Device Code Phishing via AiTM",
         "note": "## Triage and analysis\n\n### Investigating Entra ID OAuth Device Code Phishing via AiTM\n\nReview `azure.signinlogs.properties.user_principal_name`, `azure.signinlogs.properties.session_id`, `source.ip`,\n`user_agent.original`, and `azure.signinlogs.properties.resource_display_name` for context around the device code\ncompletion.\n\nConfirm whether the user knowingly entered a device code (for example on a shared or headless device) and whether\nbroker-mediated access to Exchange, Graph, or Yammer is expected for that account.\n\n### Possible investigation steps\n\n- Interview the user about recent links, QR codes, or prompts to approve a device code.\n- Correlate with `azure.signinlogs` and Microsoft 365 audit logs for mailbox, Teams, or file access from the same\n  session or IP shortly after the event.\n- Review conditional access and MFA satisfaction details for the same `session_id`.\n\n### Response and remediation\n\n- If malicious, revoke refresh tokens for the user, reset credentials per policy, and review application consent.\n- Block or monitor the source IP and escalate per incident procedures.\n",
-        "query": "data_stream.dataset:\"azure.signinlogs\" and event.category:\"authentication\" and event.action:\"Sign-in activity\" and\nevent.outcome:success and azure.signinlogs.properties.app_id:\"29d9ed98-a469-4536-ade2-f981bc1d605e\" and\nazure.signinlogs.properties.authentication_protocol:deviceCode and\nazure.signinlogs.properties.resource_id:(\n    \"00000002-0000-0ff1-ce00-000000000000\" or\n    \"00000003-0000-0ff1-ce00-000000000000\" or\n    \"00000005-0000-0ff1-ce00-000000000000\"\n) and azure.signinlogs.properties.is_interactive:true\n",
+        "query": "data_stream.dataset:\"azure.signinlogs\" and event.category:\"authentication\" and event.action:\"Sign-in activity\" and\nevent.outcome:success and azure.signinlogs.properties.app_id:\"29d9ed98-a469-4536-ade2-f981bc1d605e\" and\nazure.signinlogs.properties.authentication_protocol:deviceCode and\nazure.signinlogs.properties.resource_id:(\n    \"00000002-0000-0ff1-ce00-000000000000\" or\n    \"00000003-0000-0ff1-ce00-000000000000\" or\n    \"00000003-0000-0000-c000-000000000000\"\n) and azure.signinlogs.properties.is_interactive:true\n",
         "references": [
             "https://any.run/malware-trends/tycoon/",
             "https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-authentication-flows",
@@ -162,8 +162,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "e5420ced-bc42-4783-a8df-99320567e090_1",
+    "id": "e5420ced-bc42-4783-a8df-99320567e090_2",
     "type": "security-rule"
 }
