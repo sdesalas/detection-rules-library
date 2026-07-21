@@ -22,7 +22,7 @@
         "related_integrations": [
             {
                 "package": "auditd_manager",
-                "version": "^1.18.0"
+                "version": ">=1.18.0"
             }
         ],
         "required_fields": [
@@ -97,7 +97,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Command and Control"
         ],
         "threat": [
             {
@@ -155,8 +156,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 12
+        "version": 13
     },
-    "id": "a5eb21b7-13cc-4b94-9fe2-29bb2914e037_12",
+    "id": "a5eb21b7-13cc-4b94-9fe2-29bb2914e037_13",
     "type": "security-rule"
 }

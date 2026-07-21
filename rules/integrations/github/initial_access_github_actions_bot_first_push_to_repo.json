@@ -28,7 +28,7 @@
         "related_integrations": [
             {
                 "package": "github",
-                "version": "^2.4.0"
+                "version": ">=2.4.0"
             }
         ],
         "required_fields": [
@@ -57,7 +57,9 @@
             "Tactic: Initial Access",
             "Tactic: Persistence",
             "Data Source: Github",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution",
+            "Tactic: Impact"
         ],
         "threat": [
             {
@@ -122,8 +124,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "03245b25-3849-4052-ab48-72de65a82c35_3",
+    "id": "03245b25-3849-4052-ab48-72de65a82c35_4",
     "type": "security-rule"
 }

@@ -27,7 +27,7 @@
         "related_integrations": [
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -63,7 +63,8 @@
             "Data Source: Microsoft Entra ID Audit Logs",
             "Use Case: Identity and Access Audit",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -113,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "8d9c4128-372a-11f0-9d8f-f661ea17fbcd_5",
+    "id": "8d9c4128-372a-11f0-9d8f-f661ea17fbcd_6",
     "type": "security-rule"
 }

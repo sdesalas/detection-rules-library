@@ -46,7 +46,7 @@
         "related_integrations": [
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -104,7 +104,9 @@
             "Use Case: Threat Detection",
             "Use Case: Risk Detection",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Command and Control",
+            "Tactic: Credential Access"
         ],
         "threat": [
             {
@@ -174,8 +176,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 5
+        "version": 6
     },
-    "id": "064a2e08-25da-11f0-b1f1-f661ea17fbcd_5",
+    "id": "064a2e08-25da-11f0-b1f1-f661ea17fbcd_6",
     "type": "security-rule"
 }

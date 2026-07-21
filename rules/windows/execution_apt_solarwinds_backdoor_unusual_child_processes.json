@@ -25,11 +25,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             }
         ],
         "required_fields": [
@@ -76,7 +76,8 @@
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
@@ -119,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "93b22c0a-06a0-4131-b830-b10d5e166ff4_214",
+    "id": "93b22c0a-06a0-4131-b830-b10d5e166ff4_215",
     "type": "security-rule"
 }

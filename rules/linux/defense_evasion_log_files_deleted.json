@@ -23,11 +23,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             }
         ],
         "required_fields": [
@@ -70,18 +70,18 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -91,9 +91,9 @@
                         "reference": "https://attack.mitre.org/techniques/T1070/",
                         "subtechnique": [
                             {
-                                "id": "T1070.002",
+                                "id": "T1685.006",
                                 "name": "Clear Linux or Mac System Logs",
-                                "reference": "https://attack.mitre.org/techniques/T1070/002/"
+                                "reference": "https://attack.mitre.org/techniques/T1685/006/"
                             },
                             {
                                 "id": "T1070.004",
@@ -107,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 218
+        "version": 219
     },
-    "id": "aa895aea-b69c-4411-b110-8d7599634b30_218",
+    "id": "aa895aea-b69c-4411-b110-8d7599634b30_219",
     "type": "security-rule"
 }

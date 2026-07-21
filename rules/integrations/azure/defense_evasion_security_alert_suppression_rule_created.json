@@ -25,7 +25,7 @@
             {
                 "integration": "activitylogs",
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -53,37 +53,30 @@
             "Domain: Cloud",
             "Data Source: Azure",
             "Use Case: Configuration Audit",
-            "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
-                        "id": "T1562",
-                        "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/",
-                        "subtechnique": [
-                            {
-                                "id": "T1562.001",
-                                "name": "Disable or Modify Tools",
-                                "reference": "https://attack.mitre.org/techniques/T1562/001/"
-                            }
-                        ]
+                        "id": "T1685",
+                        "name": "Disable or Modify Tools",
+                        "reference": "https://attack.mitre.org/techniques/T1685/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "f0bc081a-2346-4744-a6a4-81514817e888_109",
+    "id": "f0bc081a-2346-4744-a6a4-81514817e888_110",
     "type": "security-rule"
 }

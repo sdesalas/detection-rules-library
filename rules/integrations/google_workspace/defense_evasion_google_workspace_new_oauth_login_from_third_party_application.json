@@ -43,7 +43,7 @@
         "related_integrations": [
             {
                 "package": "google_workspace",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -75,18 +75,18 @@
         "tags": [
             "Domain: Cloud",
             "Data Source: Google Workspace",
-            "Tactic: Defense Evasion",
             "Tactic: Initial Access",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Lateral Movement"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
                 },
                 "technique": [
                     {
@@ -150,8 +150,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 12
+        "version": 13
     },
-    "id": "21bafdf0-cf17-11ed-bd57-f661ea17fbcc_12",
+    "id": "21bafdf0-cf17-11ed-bd57-f661ea17fbcc_13",
     "type": "security-rule"
 }

@@ -23,7 +23,7 @@
         "related_integrations": [
             {
                 "package": "system",
-                "version": "^2.0.0"
+                "version": ">=2.0.0"
             }
         ],
         "required_fields": [
@@ -63,7 +63,8 @@
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Lateral Movement"
         ],
         "threat": [
             {
@@ -111,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "267dace3-a4de-4c94-a7b5-dd6c0f5482e5_6",
+    "id": "267dace3-a4de-4c94-a7b5-dd6c0f5482e5_7",
     "type": "security-rule"
 }

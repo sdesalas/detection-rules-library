@@ -25,23 +25,23 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "m365_defender",
-                "version": "^5.0.0"
+                "version": ">=5.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -74,7 +74,6 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
             "Tactic: Execution",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
@@ -82,28 +81,22 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
-                        "id": "T1562",
-                        "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/",
-                        "subtechnique": [
-                            {
-                                "id": "T1562.001",
-                                "name": "Disable or Modify Tools",
-                                "reference": "https://attack.mitre.org/techniques/T1562/001/"
-                            }
-                        ]
+                        "id": "T1685",
+                        "name": "Disable or Modify Tools",
+                        "reference": "https://attack.mitre.org/techniques/T1685/"
                     }
                 ]
             },
@@ -132,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 316
+        "version": 317
     },
-    "id": "9aa0e1f6-52ce-42e1-abb3-09657cee2698_316",
+    "id": "9aa0e1f6-52ce-42e1-abb3-09657cee2698_317",
     "type": "security-rule"
 }

@@ -47,19 +47,19 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "m365_defender",
-                "version": "^5.0.0"
+                "version": ">=5.0.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -97,20 +97,20 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Data Source: Microsoft Defender XDR",
             "Data Source: Crowdstrike",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -148,8 +148,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 219
+        "version": 220
     },
-    "id": "053a0387-f3b5-4ba5-8245-8002cca2bd08_219",
+    "id": "053a0387-f3b5-4ba5-8245-8002cca2bd08_220",
     "type": "security-rule"
 }

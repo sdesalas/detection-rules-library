@@ -44,7 +44,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "required_fields": [
@@ -85,8 +85,8 @@
             "Data Source: AWS Backup",
             "Use Case: Threat Detection",
             "Tactic: Impact",
-            "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
@@ -107,23 +107,23 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
-                        "id": "T1562",
-                        "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/"
+                        "id": "T1685",
+                        "name": "Disable or Modify Tools",
+                        "reference": "https://attack.mitre.org/techniques/T1685/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "4ddac6c1-e4be-4e2b-95b5-0654cb8d423c_1",
+    "id": "4ddac6c1-e4be-4e2b-95b5-0654cb8d423c_2",
     "type": "security-rule"
 }

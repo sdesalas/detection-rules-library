@@ -21,19 +21,19 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "auditd_manager",
-                "version": "^1.18.0"
+                "version": ">=1.18.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             }
         ],
         "required_fields": [
@@ -76,20 +76,21 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
             "Data Source: Auditd Manager",
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -99,31 +100,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1070/",
                         "subtechnique": [
                             {
-                                "id": "T1070.002",
+                                "id": "T1685.006",
                                 "name": "Clear Linux or Mac System Logs",
-                                "reference": "https://attack.mitre.org/techniques/T1070/002/"
+                                "reference": "https://attack.mitre.org/techniques/T1685/006/"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
+                },
+                "technique": [
                     {
-                        "id": "T1562",
-                        "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/",
-                        "subtechnique": [
-                            {
-                                "id": "T1562.001",
-                                "name": "Disable or Modify Tools",
-                                "reference": "https://attack.mitre.org/techniques/T1562/001/"
-                            }
-                        ]
+                        "id": "T1685",
+                        "name": "Disable or Modify Tools",
+                        "reference": "https://attack.mitre.org/techniques/T1685/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "09073bf4-a8ea-4bce-9fd5-2bb56b4d31f4_2",
+    "id": "09073bf4-a8ea-4bce-9fd5-2bb56b4d31f4_3",
     "type": "security-rule"
 }

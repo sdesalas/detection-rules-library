@@ -24,19 +24,19 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "auditd_manager",
-                "version": "^1.18.0"
+                "version": ">=1.18.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             }
         ],
         "required_fields": [
@@ -80,7 +80,8 @@
             "Data Source: Auditd Manager",
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -107,7 +108,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -128,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "0369e8a6-0fa7-4e7a-961a-53180a4c966e_108",
+    "id": "0369e8a6-0fa7-4e7a-961a-53180a4c966e_109",
     "type": "security-rule"
 }

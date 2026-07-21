@@ -28,19 +28,19 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "m365_defender",
-                "version": "^5.0.0"
+                "version": ">=5.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             }
         ],
         "required_fields": [
@@ -94,7 +94,8 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Credential Access"
         ],
         "threat": [
             {
@@ -130,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 214
+        "version": 215
     },
-    "id": "f580bf0a-2d23-43bb-b8e1-17548bb947ec_214",
+    "id": "f580bf0a-2d23-43bb-b8e1-17548bb947ec_215",
     "type": "security-rule"
 }

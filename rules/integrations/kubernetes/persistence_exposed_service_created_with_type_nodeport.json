@@ -23,7 +23,7 @@
         "related_integrations": [
             {
                 "package": "kubernetes",
-                "version": "^1.80.0"
+                "version": ">=1.80.0"
             }
         ],
         "required_fields": [
@@ -61,7 +61,8 @@
             "Data Source: Kubernetes",
             "Tactic: Execution",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
@@ -97,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 209
+        "version": 210
     },
-    "id": "65f9bccd-510b-40df-8263-334f03174fed_209",
+    "id": "65f9bccd-510b-40df-8263-334f03174fed_210",
     "type": "security-rule"
 }

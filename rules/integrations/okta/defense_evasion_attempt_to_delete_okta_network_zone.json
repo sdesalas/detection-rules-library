@@ -27,7 +27,7 @@
         "related_integrations": [
             {
                 "package": "okta",
-                "version": "^3.5.0"
+                "version": ">=3.5.0"
             }
         ],
         "required_fields": [
@@ -50,27 +50,27 @@
             "Use Case: Identity and Access Audit",
             "Data Source: Okta",
             "Use Case: Network Security Monitoring",
-            "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
-                        "id": "T1562",
-                        "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/",
+                        "id": "T1685",
+                        "name": "Disable or Modify Tools",
+                        "reference": "https://attack.mitre.org/techniques/T1685/",
                         "subtechnique": [
                             {
-                                "id": "T1562.007",
-                                "name": "Disable or Modify Cloud Firewall",
-                                "reference": "https://attack.mitre.org/techniques/T1562/007/"
+                                "id": "T1686.001",
+                                "name": "Cloud Firewall",
+                                "reference": "https://attack.mitre.org/techniques/T1686/001/"
                             }
                         ]
                     }
@@ -79,8 +79,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 414
+        "version": 415
     },
-    "id": "c749e367-a069-4a73-b1f2-43a3798153ad_414",
+    "id": "c749e367-a069-4a73-b1f2-43a3798153ad_415",
     "type": "security-rule"
 }

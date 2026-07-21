@@ -22,11 +22,11 @@
         "related_integrations": [
             {
                 "package": "auditd_manager",
-                "version": "^1.18.0"
+                "version": ">=1.18.0"
             },
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "risk_score": 21,
@@ -39,7 +39,10 @@
             "Use Case: Threat Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Command and Control",
+            "Tactic: Exfiltration",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -101,8 +104,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 209
+        "version": 210
     },
-    "id": "3c7e32e6-6104-46d9-a06e-da0f8b5795a0_209",
+    "id": "3c7e32e6-6104-46d9-a06e-da0f8b5795a0_210",
     "type": "security-rule"
 }

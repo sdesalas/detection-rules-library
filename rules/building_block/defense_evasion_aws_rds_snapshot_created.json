@@ -22,7 +22,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "required_fields": [
@@ -56,16 +56,16 @@
             "Data Source: Amazon Web Services",
             "Data Source: AWS RDS",
             "Use Case: Asset Visibility",
-            "Tactic: Defense Evasion",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
@@ -85,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "68c5c9d1-38e5-48bb-b1b2-8b5951d39738_3",
+    "id": "68c5c9d1-38e5-48bb-b1b2-8b5951d39738_4",
     "type": "security-rule"
 }

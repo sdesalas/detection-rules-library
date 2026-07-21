@@ -22,7 +22,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -77,7 +77,8 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -127,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 120
+        "version": 121
     },
-    "id": "0f4d35e4-925e-4959-ab24-911be207ee6f_120",
+    "id": "0f4d35e4-925e-4959-ab24-911be207ee6f_121",
     "type": "security-rule"
 }

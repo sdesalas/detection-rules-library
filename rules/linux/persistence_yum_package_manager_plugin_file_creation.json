@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -74,9 +74,10 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -103,7 +104,17 @@
                                 "reference": "https://attack.mitre.org/techniques/T1546/016/"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
                     {
                         "id": "T1574",
                         "name": "Hijack Execution Flow",
@@ -115,7 +126,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -129,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "0b15bcad-aff1-4250-a5be-5d1b7eb56d07_10",
+    "id": "0b15bcad-aff1-4250-a5be-5d1b7eb56d07_11",
     "type": "security-rule"
 }

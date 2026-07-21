@@ -29,11 +29,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -76,7 +76,8 @@
             "Use Case: Vulnerability",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
@@ -112,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 218
+        "version": 219
     },
-    "id": "c7ce36c0-32ff-4f9a-bfc2-dcb242bf99f9_218",
+    "id": "c7ce36c0-32ff-4f9a-bfc2-dcb242bf99f9_219",
     "type": "security-rule"
 }

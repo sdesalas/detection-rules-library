@@ -31,7 +31,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -88,7 +88,8 @@
             "Threat: BPFDoor",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -110,7 +111,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -131,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 219
+        "version": 220
     },
-    "id": "cac91072-d165-11ec-a764-f661ea17fbce_219",
+    "id": "cac91072-d165-11ec-a764-f661ea17fbce_220",
     "type": "security-rule"
 }

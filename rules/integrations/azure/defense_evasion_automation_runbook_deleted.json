@@ -24,7 +24,7 @@
             {
                 "integration": "activitylogs",
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -52,18 +52,18 @@
             "Domain: Cloud",
             "Data Source: Azure",
             "Use Case: Configuration Audit",
-            "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Impact",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -83,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 108
+        "version": 109
     },
-    "id": "8ddab73b-3d15-4e5d-9413-47f05553c1d7_108",
+    "id": "8ddab73b-3d15-4e5d-9413-47f05553c1d7_109",
     "type": "security-rule"
 }

@@ -16,7 +16,7 @@
         "related_integrations": [
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -52,7 +52,9 @@
             "Data Source: Microsoft Entra ID Audit Logs",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Tactic: Credential Access",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
@@ -102,9 +104,9 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
@@ -124,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 111
+        "version": 112
     },
-    "id": "dafa3235-76dc-40e2-9f71-1773b96d24cf_111",
+    "id": "dafa3235-76dc-40e2-9f71-1773b96d24cf_112",
     "type": "security-rule"
 }

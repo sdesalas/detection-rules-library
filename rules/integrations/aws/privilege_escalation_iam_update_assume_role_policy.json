@@ -47,7 +47,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "required_fields": [
@@ -82,7 +82,8 @@
             "Data Source: AWS IAM",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
-            "Tactic: Privilege Escalation"
+            "Tactic: Privilege Escalation",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -144,8 +145,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 317
+        "version": 318
     },
-    "id": "a60326d7-dca7-4fb7-93eb-1ca03a1febbd_317",
+    "id": "a60326d7-dca7-4fb7-93eb-1ca03a1febbd_318",
     "type": "security-rule"
 }

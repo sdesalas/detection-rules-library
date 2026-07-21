@@ -14,23 +14,23 @@
         "related_integrations": [
             {
                 "package": "nginx",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "apache",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "apache_tomcat",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             },
             {
                 "package": "iis",
-                "version": "^1.21.0"
+                "version": ">=1.21.0"
             },
             {
                 "package": "traefik",
-                "version": "^2.5.0"
+                "version": ">=2.5.0"
             }
         ],
         "required_fields": [
@@ -53,7 +53,8 @@
             "Data Source: Apache Tomcat",
             "Data Source: IIS",
             "Data Source: Traefik",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
@@ -77,8 +78,7 @@
                     "id": "TA0011",
                     "name": "Command and Control",
                     "reference": "https://attack.mitre.org/tactics/TA0011/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -98,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "45d099b4-a12e-4913-951c-0129f73efb41_5",
+    "id": "45d099b4-a12e-4913-951c-0129f73efb41_6",
     "type": "security-rule"
 }

@@ -18,15 +18,15 @@
         "related_integrations": [
             {
                 "package": "pad",
-                "version": "^2.0.0"
+                "version": ">=2.0.0"
             },
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "risk_score": 21,
@@ -38,7 +38,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -70,7 +71,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -83,8 +84,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 104
+        "version": 105
     },
-    "id": "6fb2280a-d91a-4e64-a97e-1332284d9391_104",
+    "id": "6fb2280a-d91a-4e64-a97e-1332284d9391_105",
     "type": "security-rule"
 }

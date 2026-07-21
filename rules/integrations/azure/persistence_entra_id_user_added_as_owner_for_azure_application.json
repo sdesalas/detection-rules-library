@@ -17,7 +17,7 @@
         "related_integrations": [
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -46,7 +46,9 @@
             "Data Source: Azure",
             "Use Case: Configuration Audit",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Credential Access",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -97,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "774f5e28-7b75-4a58-b94e-41bf060fdd86_109",
+    "id": "774f5e28-7b75-4a58-b94e-41bf060fdd86_110",
     "type": "security-rule"
 }

@@ -24,27 +24,27 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "system",
-                "version": "^2.0.0"
+                "version": ">=2.0.0"
             },
             {
                 "package": "m365_defender",
-                "version": "^5.0.0"
+                "version": ">=5.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -92,7 +92,6 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
             "Tactic: Persistence",
             "Data Source: Elastic Endgame",
             "Resources: Investigation Guide",
@@ -101,15 +100,17 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Tactic: Defense Impairment",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
@@ -119,11 +120,21 @@
                         "subtechnique": [
                             {
                                 "id": "T1222.001",
-                                "name": "Windows File and Directory Permissions Modification",
+                                "name": "Windows Permissions",
                                 "reference": "https://attack.mitre.org/techniques/T1222/001/"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Stealth",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
                     {
                         "id": "T1564",
                         "name": "Hide Artifacts",
@@ -144,16 +155,15 @@
                     "id": "TA0003",
                     "name": "Persistence",
                     "reference": "https://attack.mitre.org/tactics/TA0003/"
-                },
-                "technique": []
+                }
             }
         ],
         "timeline_id": "e70679c2-6cde-4510-9764-4823df18f7db",
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 321
+        "version": 322
     },
-    "id": "4630d948-40d4-4cef-ac69-4002e29bc3db_321",
+    "id": "4630d948-40d4-4cef-ac69-4002e29bc3db_322",
     "type": "security-rule"
 }

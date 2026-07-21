@@ -50,7 +50,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "required_fields": [
@@ -75,9 +75,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "962a71ae-aac9-11ef-9348-f661ea17fbce",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Data Source: AWS",
@@ -85,7 +85,9 @@
             "Data Source: AWS STS",
             "Resources: Investigation Guide",
             "Use Case: Identity and Access Audit",
-            "Tactic: Privilege Escalation"
+            "Tactic: Privilege Escalation",
+            "Tactic: Persistence",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -148,7 +150,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -169,8 +171,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 10
     },
-    "id": "962a71ae-aac9-11ef-9348-f661ea17fbce_8",
+    "id": "962a71ae-aac9-11ef-9348-f661ea17fbce_10",
     "type": "security-rule"
 }

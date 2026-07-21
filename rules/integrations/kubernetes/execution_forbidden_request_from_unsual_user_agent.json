@@ -19,7 +19,7 @@
         "related_integrations": [
             {
                 "package": "kubernetes",
-                "version": "^1.80.0"
+                "version": ">=1.80.0"
             }
         ],
         "required_fields": [
@@ -52,7 +52,8 @@
             "Domain: Kubernetes",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Discovery"
         ],
         "threat": [
             {
@@ -61,8 +62,7 @@
                     "id": "TA0002",
                     "name": "Execution",
                     "reference": "https://attack.mitre.org/tactics/TA0002/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -82,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "4b77d382-b78e-4aae-85a0-8841b80e4fc4_6",
+    "id": "4b77d382-b78e-4aae-85a0-8841b80e4fc4_7",
     "type": "security-rule"
 }

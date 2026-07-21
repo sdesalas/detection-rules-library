@@ -16,7 +16,7 @@
         "related_integrations": [
             {
                 "package": "github",
-                "version": "^2.4.0"
+                "version": ">=2.4.0"
             }
         ],
         "required_fields": [
@@ -45,7 +45,8 @@
             "Use Case: UEBA",
             "Tactic: Persistence",
             "Data Source: Github",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -107,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "24401eca-ad0b-4ff9-9431-487a8e183af9_211",
+    "id": "24401eca-ad0b-4ff9-9431-487a8e183af9_212",
     "type": "security-rule"
 }

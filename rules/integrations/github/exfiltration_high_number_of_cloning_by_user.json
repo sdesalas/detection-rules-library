@@ -19,7 +19,7 @@
         "related_integrations": [
             {
                 "package": "github",
-                "version": "^2.4.0"
+                "version": ">=2.4.0"
             }
         ],
         "risk_score": 47,
@@ -30,7 +30,8 @@
             "Use Case: Threat Detection",
             "Tactic: Exfiltration",
             "Data Source: Github",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Collection"
         ],
         "threat": [
             {
@@ -85,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "19f3674c-f4a1-43bb-a89c-e4c6212275e0_4",
+    "id": "19f3674c-f4a1-43bb-a89c-e4c6212275e0_5",
     "type": "security-rule"
 }

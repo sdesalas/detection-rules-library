@@ -19,15 +19,15 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             }
         ],
         "required_fields": [
@@ -75,7 +75,8 @@
             "Data Source: Elastic Endgame",
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -84,8 +85,7 @@
                     "id": "TA0003",
                     "name": "Persistence",
                     "reference": "https://attack.mitre.org/tactics/TA0003/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -108,34 +108,12 @@
                         ]
                     }
                 ]
-            },
-            {
-                "framework": "MITRE ATT&CK",
-                "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": [
-                    {
-                        "id": "T1548",
-                        "name": "Abuse Elevation Control Mechanism",
-                        "reference": "https://attack.mitre.org/techniques/T1548/",
-                        "subtechnique": [
-                            {
-                                "id": "T1548.001",
-                                "name": "Setuid and Setgid",
-                                "reference": "https://attack.mitre.org/techniques/T1548/001/"
-                            }
-                        ]
-                    }
-                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "f5c005d3-4e17-48b0-9cd7-444d48857f97_112",
+    "id": "f5c005d3-4e17-48b0-9cd7-444d48857f97_113",
     "type": "security-rule"
 }

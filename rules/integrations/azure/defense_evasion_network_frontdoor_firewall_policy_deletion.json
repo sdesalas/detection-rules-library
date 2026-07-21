@@ -24,7 +24,7 @@
             {
                 "integration": "activitylogs",
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -52,27 +52,27 @@
             "Domain: Cloud",
             "Data Source: Azure",
             "Use Case: Network Security Monitoring",
-            "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
-                        "id": "T1562",
-                        "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/",
+                        "id": "T1685",
+                        "name": "Disable or Modify Tools",
+                        "reference": "https://attack.mitre.org/techniques/T1685/",
                         "subtechnique": [
                             {
-                                "id": "T1562.007",
-                                "name": "Disable or Modify Cloud Firewall",
-                                "reference": "https://attack.mitre.org/techniques/T1562/007/"
+                                "id": "T1686.001",
+                                "name": "Cloud Firewall",
+                                "reference": "https://attack.mitre.org/techniques/T1686/001/"
                             }
                         ]
                     }
@@ -81,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 108
+        "version": 109
     },
-    "id": "09d028a5-dcde-409f-8ae0-557cef1b7082_108",
+    "id": "09d028a5-dcde-409f-8ae0-557cef1b7082_109",
     "type": "security-rule"
 }

@@ -18,15 +18,15 @@
         "related_integrations": [
             {
                 "package": "pad",
-                "version": "^2.0.0"
+                "version": ">=2.0.0"
             },
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "risk_score": 21,
@@ -38,7 +38,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
@@ -73,8 +74,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 104
+        "version": 105
     },
-    "id": "d2703b82-f92c-4489-a4a7-62aa29a62542_104",
+    "id": "d2703b82-f92c-4489-a4a7-62aa29a62542_105",
     "type": "security-rule"
 }

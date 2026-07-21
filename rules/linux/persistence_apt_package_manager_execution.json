@@ -21,15 +21,15 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -114,11 +114,11 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Tactic: Execution",
-            "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -145,11 +145,6 @@
                                 "reference": "https://attack.mitre.org/techniques/T1546/016/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1574",
-                        "name": "Hijack Execution Flow",
-                        "reference": "https://attack.mitre.org/techniques/T1574/"
                     }
                 ]
             },
@@ -161,6 +156,11 @@
                     "reference": "https://attack.mitre.org/tactics/TA0002/"
                 },
                 "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/"
+                    },
                     {
                         "id": "T1059",
                         "name": "Command and Scripting Interpreter",
@@ -184,15 +184,21 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
-                "technique": []
+                "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/"
+                    }
+                ]
             }
         ],
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "ad959eeb-2b7b-4722-ba08-a45f6622f005_111",
+    "id": "ad959eeb-2b7b-4722-ba08-a45f6622f005_112",
     "type": "security-rule"
 }

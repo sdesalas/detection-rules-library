@@ -25,11 +25,11 @@
         "related_integrations": [
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             },
             {
                 "package": "o365",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -61,7 +61,8 @@
             "Threat: Kali365",
             "Tactic: Initial Access",
             "Tactic: Credential Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Lateral Movement"
         ],
         "threat": [
             {
@@ -116,9 +117,9 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
                 },
                 "technique": [
                     {
@@ -138,8 +139,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "4b11dbab-ce37-49c4-bdf1-cdf64b405d96_1",
+    "id": "4b11dbab-ce37-49c4-bdf1-cdf64b405d96_2",
     "type": "security-rule"
 }

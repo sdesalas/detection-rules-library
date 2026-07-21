@@ -17,11 +17,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "network_traffic",
-                "version": "^1.33.0"
+                "version": ">=1.33.0"
             }
         ],
         "required_fields": [
@@ -82,7 +82,8 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Data Source: Network Traffic",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Command and Control"
         ],
         "threat": [
             {
@@ -139,8 +140,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "1d306bf0-7bcf-4acd-83fd-042f5711acc9_3",
+    "id": "1d306bf0-7bcf-4acd-83fd-042f5711acc9_4",
     "type": "security-rule"
 }

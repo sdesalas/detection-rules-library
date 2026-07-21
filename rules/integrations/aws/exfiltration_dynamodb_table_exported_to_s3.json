@@ -47,7 +47,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "required_fields": [
@@ -72,9 +72,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 21,
+        "risk_score": 73,
         "rule_id": "e8ea6f58-0040-11f0-a243-f661ea17fbcd",
-        "severity": "low",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Data Source: AWS",
@@ -82,7 +82,8 @@
             "Data Source: AWS DynamoDB",
             "Resources: Investigation Guide",
             "Use Case: Threat Detection",
-            "Tactic: Exfiltration"
+            "Tactic: Exfiltration",
+            "Tactic: Collection"
         ],
         "threat": [
             {
@@ -125,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 9
     },
-    "id": "e8ea6f58-0040-11f0-a243-f661ea17fbcd_7",
+    "id": "e8ea6f58-0040-11f0-a243-f661ea17fbcd_9",
     "type": "security-rule"
 }

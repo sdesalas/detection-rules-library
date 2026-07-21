@@ -47,7 +47,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "required_fields": [
@@ -77,9 +77,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 21,
+        "risk_score": 73,
         "rule_id": "50a2bdea-9876-11ef-89db-f661ea17fbcd",
-        "severity": "low",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Data Source: AWS",
@@ -109,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "50a2bdea-9876-11ef-89db-f661ea17fbcd_6",
+    "id": "50a2bdea-9876-11ef-89db-f661ea17fbcd_7",
     "type": "security-rule"
 }

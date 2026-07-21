@@ -23,7 +23,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -78,7 +78,8 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution"
         ],
         "threat": [
             {
@@ -132,8 +133,8 @@
             }
         ],
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "082e3f8c-6f80-485c-91eb-5b112cb79b28_112",
+    "id": "082e3f8c-6f80-485c-91eb-5b112cb79b28_113",
     "type": "security-rule"
 }

@@ -22,7 +22,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -98,7 +98,8 @@
             "Tactic: Persistence",
             "Tactic: Lateral Movement",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution"
         ],
         "threat": [
             {
@@ -190,8 +191,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 11
+        "version": 12
     },
-    "id": "7afc6cc9-8800-4c7f-be6b-b688d2dea248_11",
+    "id": "7afc6cc9-8800-4c7f-be6b-b688d2dea248_12",
     "type": "security-rule"
 }

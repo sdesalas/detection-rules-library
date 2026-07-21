@@ -32,19 +32,19 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "auditd_manager",
-                "version": "^1.18.0"
+                "version": ">=1.18.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             }
         ],
         "required_fields": [
@@ -88,7 +88,9 @@
             "Data Source: Elastic Endgame",
             "Data Source: Auditd Manager",
             "Data Source: Crowdstrike",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Tactic: Command and Control",
+            "Tactic: Exfiltration"
         ],
         "threat": [
             {
@@ -153,8 +155,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 216
+        "version": 217
     },
-    "id": "adb961e0-cb74-42a0-af9e-29fc41f88f5f_216",
+    "id": "adb961e0-cb74-42a0-af9e-29fc41f88f5f_217",
     "type": "security-rule"
 }

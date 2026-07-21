@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "github",
-                "version": "^2.4.0"
+                "version": ">=2.4.0"
             }
         ],
         "required_fields": [
@@ -60,7 +60,8 @@
             "Use Case: UEBA",
             "Tactic: Initial Access",
             "Rule Type: BBR",
-            "Data Source: Github"
+            "Data Source: Github",
+            "Tactic: Lateral Movement"
         ],
         "threat": [
             {
@@ -88,9 +89,9 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
                 },
                 "technique": [
                     {
@@ -110,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 208
+        "version": 209
     },
-    "id": "0e4367a0-a483-439d-ad2e-d90500b925fd_208",
+    "id": "0e4367a0-a483-439d-ad2e-d90500b925fd_209",
     "type": "security-rule"
 }

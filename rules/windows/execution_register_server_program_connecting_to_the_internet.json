@@ -25,11 +25,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -93,10 +93,10 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -105,14 +105,13 @@
                     "id": "TA0002",
                     "name": "Execution",
                     "reference": "https://attack.mitre.org/tactics/TA0002/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -137,8 +136,8 @@
             }
         ],
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "fb02b8d3-71ee-4af1-bacd-215d23f17efa_212",
+    "id": "fb02b8d3-71ee-4af1-bacd-215d23f17efa_213",
     "type": "security-rule"
 }

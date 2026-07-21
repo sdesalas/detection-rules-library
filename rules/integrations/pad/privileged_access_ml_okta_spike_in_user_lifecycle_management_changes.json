@@ -18,11 +18,11 @@
         "related_integrations": [
             {
                 "package": "pad",
-                "version": "^2.0.0"
+                "version": ">=2.0.0"
             },
             {
                 "package": "okta",
-                "version": "^3.5.0"
+                "version": ">=3.5.0"
             }
         ],
         "risk_score": 21,
@@ -34,7 +34,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -79,8 +80,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 105
+        "version": 106
     },
-    "id": "178770e0-5c20-4246-b430-e216a2888b23_105",
+    "id": "178770e0-5c20-4246-b430-e216a2888b23_106",
     "type": "security-rule"
 }

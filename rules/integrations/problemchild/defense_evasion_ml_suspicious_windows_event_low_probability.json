@@ -21,11 +21,11 @@
         "related_integrations": [
             {
                 "package": "problemchild",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -85,16 +85,16 @@
             "Use Case: Living off the Land Attack Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -115,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 13
+        "version": 14
     },
-    "id": "13e908b9-7bf0-4235-abc9-b5deb500d0ad_13",
+    "id": "13e908b9-7bf0-4235-abc9-b5deb500d0ad_14",
     "type": "security-rule"
 }

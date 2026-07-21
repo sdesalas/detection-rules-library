@@ -19,7 +19,7 @@
         "related_integrations": [
             {
                 "package": "gcp",
-                "version": "^2.41.0"
+                "version": ">=2.41.0"
             }
         ],
         "risk_score": 21,
@@ -33,7 +33,13 @@
             "Data Source: Google Cloud Platform",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Collection",
+            "Tactic: Discovery",
+            "Tactic: Lateral Movement",
+            "Tactic: Persistence",
+            "Tactic: Privilege Escalation",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -62,17 +68,15 @@
                     "id": "TA0004",
                     "name": "Privilege Escalation",
                     "reference": "https://attack.mitre.org/tactics/TA0004/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -80,8 +84,7 @@
                     "id": "TA0008",
                     "name": "Lateral Movement",
                     "reference": "https://attack.mitre.org/tactics/TA0008/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -89,8 +92,7 @@
                     "id": "TA0003",
                     "name": "Persistence",
                     "reference": "https://attack.mitre.org/tactics/TA0003/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -98,13 +100,12 @@
                     "id": "TA0009",
                     "name": "Collection",
                     "reference": "https://attack.mitre.org/tactics/TA0009/"
-                },
-                "technique": []
+                }
             }
         ],
         "type": "machine_learning",
-        "version": 101
+        "version": 102
     },
-    "id": "5378a829-30c2-435a-a0f2-e3d794bd6f80_101",
+    "id": "5378a829-30c2-435a-a0f2-e3d794bd6f80_102",
     "type": "security-rule"
 }

@@ -23,7 +23,7 @@
             {
                 "integration": "audit",
                 "package": "gcp",
-                "version": "^2.41.0"
+                "version": ">=2.41.0"
             }
         ],
         "required_fields": [
@@ -43,17 +43,19 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "aa8007f0-d1df-49ef-8520-407857594827",
         "setup": "The GCP Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Data Source: GCP",
             "Data Source: Google Cloud Platform",
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Persistence",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -123,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 111
     },
-    "id": "aa8007f0-d1df-49ef-8520-407857594827_109",
+    "id": "aa8007f0-d1df-49ef-8520-407857594827_111",
     "type": "security-rule"
 }

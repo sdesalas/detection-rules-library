@@ -27,7 +27,7 @@
         "related_integrations": [
             {
                 "package": "okta",
-                "version": "^3.5.0"
+                "version": ">=3.5.0"
             }
         ],
         "required_fields": [
@@ -50,7 +50,9 @@
             "Tactic: Persistence",
             "Use Case: Identity and Access Audit",
             "Data Source: Okta",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Credential Access",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
@@ -65,15 +67,49 @@
                         "id": "T1098",
                         "name": "Account Manipulation",
                         "reference": "https://attack.mitre.org/techniques/T1098/"
+                    },
+                    {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/",
+                        "subtechnique": [
+                            {
+                                "id": "T1556.006",
+                                "name": "Multi-Factor Authentication",
+                                "reference": "https://attack.mitre.org/techniques/T1556/006/"
+                            }
+                        ]
                     }
                 ]
             },
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0006",
+                    "name": "Credential Access",
+                    "reference": "https://attack.mitre.org/tactics/TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "T1556",
+                        "name": "Modify Authentication Process",
+                        "reference": "https://attack.mitre.org/techniques/T1556/",
+                        "subtechnique": [
+                            {
+                                "id": "T1556.006",
+                                "name": "Multi-Factor Authentication",
+                                "reference": "https://attack.mitre.org/techniques/T1556/006/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
@@ -93,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 415
+        "version": 416
     },
-    "id": "729aa18d-06a6-41c7-b175-b65b739b1181_415",
+    "id": "729aa18d-06a6-41c7-b175-b65b739b1181_416",
     "type": "security-rule"
 }

@@ -23,7 +23,7 @@
         "related_integrations": [
             {
                 "package": "cloud_defend",
-                "version": "^1.4.0"
+                "version": ">=1.4.0"
             }
         ],
         "required_fields": [
@@ -82,7 +82,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Credential Access"
         ],
         "threat": [
             {
@@ -125,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "42de0740-8ed8-4b8b-995c-635b56a8bbf4_2",
+    "id": "42de0740-8ed8-4b8b-995c-635b56a8bbf4_3",
     "type": "security-rule"
 }

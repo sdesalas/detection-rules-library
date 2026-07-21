@@ -34,41 +34,39 @@
         "tags": [
             "Domain: Web",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
             "Data Source: Nginx",
             "Data Source: Apache",
             "Data Source: Apache Tomcat",
             "Data Source: Traefik",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
-                        "id": "T1562",
-                        "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/",
-                        "subtechnique": [
-                            {
-                                "id": "T1562.010",
-                                "name": "Downgrade Attack",
-                                "reference": "https://attack.mitre.org/techniques/T1562/010/"
-                            }
-                        ]
+                        "id": "T1685",
+                        "name": "Disable or Modify Tools",
+                        "reference": "https://attack.mitre.org/techniques/T1685/"
+                    },
+                    {
+                        "id": "T1689",
+                        "name": "Downgrade Attack",
+                        "reference": "https://attack.mitre.org/techniques/T1689/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "9797d2c8-8ec9-48e6-a022-350cdfbf2d5e_2",
+    "id": "9797d2c8-8ec9-48e6-a022-350cdfbf2d5e_3",
     "type": "security-rule"
 }

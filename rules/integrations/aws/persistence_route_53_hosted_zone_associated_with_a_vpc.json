@@ -42,7 +42,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "required_fields": [
@@ -78,7 +78,8 @@
             "Use Case: Asset Visibility",
             "Tactic: Persistence",
             "Tactic: Resource Development",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Collection"
         ],
         "threat": [
             {
@@ -136,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 213
+        "version": 214
     },
-    "id": "e3c27562-709a-42bd-82f2-3ed926cced19_213",
+    "id": "e3c27562-709a-42bd-82f2-3ed926cced19_214",
     "type": "security-rule"
 }

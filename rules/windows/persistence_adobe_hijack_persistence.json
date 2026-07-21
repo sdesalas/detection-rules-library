@@ -25,23 +25,23 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             },
             {
                 "package": "m365_defender",
-                "version": "^5.0.0"
+                "version": ">=5.0.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -81,7 +81,9 @@
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
             "Data Source: Microsoft Defender XDR",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Tactic: Execution",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -96,7 +98,39 @@
                         "id": "T1554",
                         "name": "Compromise Host Software Binary",
                         "reference": "https://attack.mitre.org/techniques/T1554/"
-                    },
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.010",
+                                "name": "Services File Permissions Weakness",
+                                "reference": "https://attack.mitre.org/techniques/T1574/010/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Stealth",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
                     {
                         "id": "T1574",
                         "name": "Hijack Execution Flow",
@@ -114,8 +148,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 421
+        "version": 422
     },
-    "id": "2bf78aa2-9c56-48de-b139-f169bf99cf86_421",
+    "id": "2bf78aa2-9c56-48de-b139-f169bf99cf86_422",
     "type": "security-rule"
 }

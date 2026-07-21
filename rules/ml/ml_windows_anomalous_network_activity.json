@@ -22,11 +22,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "risk_score": 21,
@@ -39,7 +39,12 @@
             "Use Case: Threat Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Command and Control",
+            "Tactic: Exfiltration",
+            "Tactic: Lateral Movement",
+            "Tactic: Persistence",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -78,14 +83,13 @@
                     "id": "TA0003",
                     "name": "Persistence",
                     "reference": "https://attack.mitre.org/tactics/TA0003/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -118,8 +122,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 311
+        "version": 312
     },
-    "id": "ba342eb2-583c-439f-b04d-1fdd7c1417cc_311",
+    "id": "ba342eb2-583c-439f-b04d-1fdd7c1417cc_312",
     "type": "security-rule"
 }

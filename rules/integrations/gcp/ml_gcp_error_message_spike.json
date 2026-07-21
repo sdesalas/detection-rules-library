@@ -19,7 +19,7 @@
         "related_integrations": [
             {
                 "package": "gcp",
-                "version": "^2.41.0"
+                "version": ">=2.41.0"
             }
         ],
         "risk_score": 21,
@@ -33,7 +33,10 @@
             "Data Source: Google Cloud Platform",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Discovery",
+            "Tactic: Lateral Movement",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -62,8 +65,7 @@
                     "id": "TA0004",
                     "name": "Privilege Escalation",
                     "reference": "https://attack.mitre.org/tactics/TA0004/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -71,13 +73,12 @@
                     "id": "TA0008",
                     "name": "Lateral Movement",
                     "reference": "https://attack.mitre.org/tactics/TA0008/"
-                },
-                "technique": []
+                }
             }
         ],
         "type": "machine_learning",
-        "version": 101
+        "version": 102
     },
-    "id": "a4b740e4-be17-4048-9aa4-1e6f42b455b1_101",
+    "id": "a4b740e4-be17-4048-9aa4-1e6f42b455b1_102",
     "type": "security-rule"
 }

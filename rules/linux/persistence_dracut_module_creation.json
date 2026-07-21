@@ -18,11 +18,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             }
         ],
         "required_fields": [
@@ -72,11 +72,11 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Tactic: Execution",
-            "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
             "Data Source: Elastic Endgame",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -96,11 +96,6 @@
                         "id": "T1543",
                         "name": "Create or Modify System Process",
                         "reference": "https://attack.mitre.org/techniques/T1543/"
-                    },
-                    {
-                        "id": "T1574",
-                        "name": "Hijack Execution Flow",
-                        "reference": "https://attack.mitre.org/techniques/T1574/"
                     }
                 ]
             },
@@ -112,6 +107,11 @@
                     "reference": "https://attack.mitre.org/tactics/TA0002/"
                 },
                 "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/"
+                    },
                     {
                         "id": "T1059",
                         "name": "Command and Scripting Interpreter",
@@ -130,10 +130,15 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/"
+                    },
                     {
                         "id": "T1542",
                         "name": "Pre-OS Boot",
@@ -144,8 +149,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "dc765fb2-0c99-4e57-8c11-dafdf1992b66_6",
+    "id": "dc765fb2-0c99-4e57-8c11-dafdf1992b66_7",
     "type": "security-rule"
 }

@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -65,7 +65,10 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution",
+            "Tactic: Initial Access",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -92,7 +95,32 @@
                                 "reference": "https://attack.mitre.org/techniques/T1546/016/"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Stealth",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
                     {
                         "id": "T1574",
                         "name": "Hijack Execution Flow",
@@ -125,8 +153,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "8cc72fa3-70ae-4ea1-bee2-8e6aaf3c1fcf_6",
+    "id": "8cc72fa3-70ae-4ea1-bee2-8e6aaf3c1fcf_7",
     "type": "security-rule"
 }

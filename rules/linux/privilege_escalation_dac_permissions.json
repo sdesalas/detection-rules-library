@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -100,7 +100,8 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Credential Access"
         ],
         "threat": [
             {
@@ -155,8 +156,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "f7c70f2e-4616-439c-85ac-5b98415042fe_8",
+    "id": "f7c70f2e-4616-439c-85ac-5b98415042fe_9",
     "type": "security-rule"
 }

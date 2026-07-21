@@ -22,7 +22,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -67,7 +67,8 @@
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Command and Control"
         ],
         "threat": [
             {
@@ -115,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "3e528511-7316-4a6e-83da-61b5f1c07fd4_7",
+    "id": "3e528511-7316-4a6e-83da-61b5f1c07fd4_8",
     "type": "security-rule"
 }

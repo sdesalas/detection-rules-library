@@ -43,7 +43,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "required_fields": [
@@ -87,27 +87,28 @@
             "Data Source: Amazon Web Services",
             "Data Source: AWS EC2",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
-                        "id": "T1562",
-                        "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/",
+                        "id": "T1685",
+                        "name": "Disable or Modify Tools",
+                        "reference": "https://attack.mitre.org/techniques/T1685/",
                         "subtechnique": [
                             {
-                                "id": "T1562.007",
-                                "name": "Disable or Modify Cloud Firewall",
-                                "reference": "https://attack.mitre.org/techniques/T1562/007/"
+                                "id": "T1686.001",
+                                "name": "Cloud Firewall",
+                                "reference": "https://attack.mitre.org/techniques/T1686/001/"
                             }
                         ]
                     }
@@ -131,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 7
+        "version": 8
     },
-    "id": "25e7fee6-fc25-11ee-ba0f-f661ea17fbce_7",
+    "id": "25e7fee6-fc25-11ee-ba0f-f661ea17fbce_8",
     "type": "security-rule"
 }

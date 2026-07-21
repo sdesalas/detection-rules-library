@@ -48,14 +48,13 @@
                     "id": "TA0008",
                     "name": "Lateral Movement",
                     "reference": "https://attack.mitre.org/tactics/TA0008/"
-                },
-                "technique": []
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "0e67f4f1-f683-43c0-8d45-c3293cf31e5d_3",
+    "id": "0e67f4f1-f683-43c0-8d45-c3293cf31e5d_4",
     "type": "security-rule"
 }

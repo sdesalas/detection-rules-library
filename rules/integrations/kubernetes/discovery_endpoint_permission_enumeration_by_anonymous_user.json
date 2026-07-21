@@ -15,7 +15,7 @@
         "related_integrations": [
             {
                 "package": "kubernetes",
-                "version": "^1.80.0"
+                "version": ">=1.80.0"
             }
         ],
         "required_fields": [
@@ -38,7 +38,8 @@
             "Domain: Kubernetes",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Reconnaissance"
         ],
         "threat": [
             {
@@ -81,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "2dd0d4fd-0cc9-4d18-8b46-1a507e28bbc0_3",
+    "id": "2dd0d4fd-0cc9-4d18-8b46-1a507e28bbc0_4",
     "type": "security-rule"
 }

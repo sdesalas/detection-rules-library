@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -60,7 +60,8 @@
             "Tactic: Persistence",
             "Tactic: Credential Access",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Collection"
         ],
         "threat": [
             {
@@ -118,8 +119,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "f1f3070e-045c-4e03-ae58-d11d43d2ee51_2",
+    "id": "f1f3070e-045c-4e03-ae58-d11d43d2ee51_3",
     "type": "security-rule"
 }

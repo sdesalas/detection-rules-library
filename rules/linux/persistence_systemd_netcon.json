@@ -17,7 +17,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -87,9 +87,10 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Tactic: Command and Control",
-            "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -111,7 +112,37 @@
                                 "reference": "https://attack.mitre.org/techniques/T1543/002/"
                             }
                         ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/"
                     },
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Stealth",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
                     {
                         "id": "T1574",
                         "name": "Hijack Execution Flow",
@@ -125,37 +156,12 @@
                     "id": "TA0011",
                     "name": "Command and Control",
                     "reference": "https://attack.mitre.org/tactics/TA0011/"
-                },
-                "technique": []
-            },
-            {
-                "framework": "MITRE ATT&CK",
-                "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": []
-            },
-            {
-                "framework": "MITRE ATT&CK",
-                "tactic": {
-                    "id": "TA0002",
-                    "name": "Execution",
-                    "reference": "https://attack.mitre.org/tactics/TA0002/"
-                },
-                "technique": [
-                    {
-                        "id": "T1059",
-                        "name": "Command and Scripting Interpreter",
-                        "reference": "https://attack.mitre.org/techniques/T1059/"
-                    }
-                ]
+                }
             }
         ],
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "f3818c85-2207-4b51-8a28-d70fb156ee87_10",
+    "id": "f3818c85-2207-4b51-8a28-d70fb156ee87_11",
     "type": "security-rule"
 }

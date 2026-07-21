@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -50,7 +50,9 @@
             "Data Source: Azure",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Tactic: Privilege Escalation",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -79,7 +81,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -115,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 111
+        "version": 112
     },
-    "id": "7882cebf-6cf1-4de3-9662-213aa13e8b80_111",
+    "id": "7882cebf-6cf1-4de3-9662-213aa13e8b80_112",
     "type": "security-rule"
 }

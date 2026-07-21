@@ -24,7 +24,7 @@
             {
                 "integration": "activitylogs",
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -53,7 +53,8 @@
             "Data Source: Azure",
             "Use Case: Configuration Audit",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -89,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 108
+        "version": 109
     },
-    "id": "16280f1e-57e6-4242-aa21-bb4d16f13b2f_108",
+    "id": "16280f1e-57e6-4242-aa21-bb4d16f13b2f_109",
     "type": "security-rule"
 }

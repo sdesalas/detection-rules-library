@@ -21,15 +21,15 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "system",
-                "version": "^2.0.0"
+                "version": ">=2.0.0"
             }
         ],
         "required_fields": [
@@ -56,20 +56,22 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Rule Type: BBR",
             "Data Source: Sysmon",
-            "Data Source: Windows Security Event Logs"
+            "Data Source: Windows Security Event Logs",
+            "Tactic: Defense Impairment",
+            "Tactic: Persistence",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
@@ -87,6 +89,11 @@
                     "reference": "https://attack.mitre.org/tactics/TA0003/"
                 },
                 "technique": [
+                    {
+                        "id": "T1112",
+                        "name": "Modify Registry",
+                        "reference": "https://attack.mitre.org/techniques/T1112/"
+                    },
                     {
                         "id": "T1543",
                         "name": "Create or Modify System Process",
@@ -126,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "c5677997-f75b-4cda-b830-a75920514096_109",
+    "id": "c5677997-f75b-4cda-b830-a75920514096_110",
     "type": "security-rule"
 }

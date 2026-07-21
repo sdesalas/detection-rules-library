@@ -49,7 +49,7 @@
         "related_integrations": [
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -120,7 +120,9 @@
             "Data Source: Microsoft Entra ID",
             "Data Source: Microsoft Entra ID Sign-In Logs",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Lateral Movement",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -148,9 +150,9 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
                 },
                 "technique": [
                     {
@@ -164,19 +166,36 @@
                                 "reference": "https://attack.mitre.org/techniques/T1550/001/"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Stealth",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
                     {
-                        "id": "T1656",
-                        "name": "Impersonation",
-                        "reference": "https://attack.mitre.org/techniques/T1656/"
+                        "id": "T1684",
+                        "name": "Social Engineering",
+                        "reference": "https://attack.mitre.org/techniques/T1684/",
+                        "subtechnique": [
+                            {
+                                "id": "T1684.001",
+                                "name": "Impersonation",
+                                "reference": "https://attack.mitre.org/techniques/T1684/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "9563dace-5822-11f0-b1d3-f661ea17fbcd_5",
+    "id": "9563dace-5822-11f0-b1d3-f661ea17fbcd_6",
     "type": "security-rule"
 }

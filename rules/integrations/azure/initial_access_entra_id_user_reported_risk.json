@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -61,7 +61,8 @@
             "Data Source: Microsoft Entra ID Audit Logs",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
-            "Tactic: Initial Access"
+            "Tactic: Initial Access",
+            "Tactic: Credential Access"
         ],
         "threat": [
             {
@@ -104,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 6
+        "version": 7
     },
-    "id": "caaa8b78-367c-11f0-beb8-f661ea17fbcd_6",
+    "id": "caaa8b78-367c-11f0-beb8-f661ea17fbcd_7",
     "type": "security-rule"
 }

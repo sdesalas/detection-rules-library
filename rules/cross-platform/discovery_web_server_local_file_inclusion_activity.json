@@ -14,23 +14,23 @@
         "related_integrations": [
             {
                 "package": "nginx",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "apache",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "apache_tomcat",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             },
             {
                 "package": "iis",
-                "version": "^1.21.0"
+                "version": ">=1.21.0"
             },
             {
                 "package": "traefik",
-                "version": "^2.5.0"
+                "version": ">=2.5.0"
             }
         ],
         "required_fields": [
@@ -52,7 +52,10 @@
             "Data Source: Apache Tomcat",
             "Data Source: IIS",
             "Data Source: Traefik",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Collection",
+            "Tactic: Credential Access",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
@@ -125,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "90e4ceab-79a5-4f8e-879b-513cac7fcad9_5",
+    "id": "90e4ceab-79a5-4f8e-879b-513cac7fcad9_6",
     "type": "security-rule"
 }

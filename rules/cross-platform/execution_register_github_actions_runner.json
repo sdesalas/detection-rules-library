@@ -33,31 +33,31 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "system",
-                "version": "^2.0.0"
+                "version": ">=2.0.0"
             },
             {
                 "package": "m365_defender",
-                "version": "^5.0.0"
+                "version": ">=5.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "auditd_manager",
-                "version": "^1.18.0"
+                "version": ">=1.18.0"
             }
         ],
         "required_fields": [
@@ -101,7 +101,8 @@
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
             "Data Source: Auditd Manager",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Command and Control"
         ],
         "threat": [
             {
@@ -159,8 +160,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "57e118c1-19eb-4c20-93a6-8a6c30a5b48b_3",
+    "id": "57e118c1-19eb-4c20-93a6-8a6c30a5b48b_4",
     "type": "security-rule"
 }

@@ -14,23 +14,23 @@
         "related_integrations": [
             {
                 "package": "nginx",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "apache",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "apache_tomcat",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             },
             {
                 "package": "iis",
-                "version": "^1.21.0"
+                "version": ">=1.21.0"
             },
             {
                 "package": "traefik",
-                "version": "^2.5.0"
+                "version": ">=2.5.0"
             }
         ],
         "required_fields": [
@@ -61,7 +61,9 @@
             "Data Source: Apache Tomcat",
             "Data Source: IIS",
             "Data Source: Traefik",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Initial Access",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -203,7 +205,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -232,8 +234,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 6
+        "version": 7
     },
-    "id": "f3ac6734-7e52-4a0d-90b7-6847bf4308f2_6",
+    "id": "f3ac6734-7e52-4a0d-90b7-6847bf4308f2_7",
     "type": "security-rule"
 }

@@ -17,7 +17,7 @@
         "related_integrations": [
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -1890,7 +1890,8 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
@@ -1940,9 +1941,9 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
@@ -1962,8 +1963,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 209
+        "version": 210
     },
-    "id": "498e4094-60e7-11f0-8847-f661ea17fbcd_209",
+    "id": "498e4094-60e7-11f0-8847-f661ea17fbcd_210",
     "type": "security-rule"
 }

@@ -42,15 +42,15 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "m365_defender",
-                "version": "^5.0.0"
+                "version": ">=5.0.0"
             }
         ],
         "required_fields": [
@@ -98,7 +98,8 @@
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
-            "Data Source: Microsoft Defender XDR"
+            "Data Source: Microsoft Defender XDR",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -148,8 +149,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 218
+        "version": 219
     },
-    "id": "7405ddf1-6c8e-41ce-818f-48bea6bcaed8_218",
+    "id": "7405ddf1-6c8e-41ce-818f-48bea6bcaed8_219",
     "type": "security-rule"
 }

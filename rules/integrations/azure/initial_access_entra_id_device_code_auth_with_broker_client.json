@@ -24,11 +24,11 @@
             {
                 "integration": "activitylogs",
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             },
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -73,7 +73,9 @@
             "Data Source: Microsoft Entra ID",
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Lateral Movement",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -114,7 +116,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -129,7 +131,17 @@
                                 "reference": "https://attack.mitre.org/techniques/T1078/004/"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
+                },
+                "technique": [
                     {
                         "id": "T1550",
                         "name": "Use Alternate Authentication Material",
@@ -147,8 +159,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 8
+        "version": 9
     },
-    "id": "a83b3dac-325a-11ef-b3e6-f661ea17fbce_8",
+    "id": "a83b3dac-325a-11ef-b3e6-f661ea17fbce_9",
     "type": "security-rule"
 }

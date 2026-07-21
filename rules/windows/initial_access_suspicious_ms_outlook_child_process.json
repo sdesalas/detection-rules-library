@@ -24,27 +24,27 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "system",
-                "version": "^2.0.0"
+                "version": ">=2.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             },
             {
                 "package": "m365_defender",
-                "version": "^5.0.0"
+                "version": ">=5.0.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -78,7 +78,6 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
-            "Tactic: Defense Evasion",
             "Tactic: Execution",
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
@@ -87,7 +86,8 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: Windows Security Event Logs",
             "Data Source: Crowdstrike",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -155,7 +155,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -201,8 +201,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 422
+        "version": 423
     },
-    "id": "32f4675e-6c49-4ace-80f9-97c9259dca2e_422",
+    "id": "32f4675e-6c49-4ace-80f9-97c9259dca2e_423",
     "type": "security-rule"
 }

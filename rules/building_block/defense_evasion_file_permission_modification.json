@@ -17,7 +17,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -59,17 +59,17 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
             "Rule Type: BBR",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
@@ -79,7 +79,7 @@
                         "subtechnique": [
                             {
                                 "id": "T1222.001",
-                                "name": "Windows File and Directory Permissions Modification",
+                                "name": "Windows Permissions",
                                 "reference": "https://attack.mitre.org/techniques/T1222/001/"
                             }
                         ]
@@ -89,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "bc9e4f5a-e263-4213-a2ac-1edf9b417ada_4",
+    "id": "bc9e4f5a-e263-4213-a2ac-1edf9b417ada_5",
     "type": "security-rule"
 }

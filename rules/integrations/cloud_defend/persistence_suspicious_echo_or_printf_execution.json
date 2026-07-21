@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "cloud_defend",
-                "version": "^1.4.0"
+                "version": ">=1.4.0"
             }
         ],
         "required_fields": [
@@ -66,7 +66,8 @@
             "Tactic: Persistence",
             "Tactic: Execution",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -129,7 +130,17 @@
                                 "reference": "https://attack.mitre.org/techniques/T1546/004/"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
                     {
                         "id": "T1574",
                         "name": "Hijack Execution Flow",
@@ -141,6 +152,57 @@
                                 "reference": "https://attack.mitre.org/techniques/T1574/006/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1053",
+                        "name": "Scheduled Task/Job",
+                        "reference": "https://attack.mitre.org/techniques/T1053/",
+                        "subtechnique": [
+                            {
+                                "id": "T1053.003",
+                                "name": "Cron",
+                                "reference": "https://attack.mitre.org/techniques/T1053/003/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1059",
+                        "name": "Command and Scripting Interpreter",
+                        "reference": "https://attack.mitre.org/techniques/T1059/",
+                        "subtechnique": [
+                            {
+                                "id": "T1059.004",
+                                "name": "Unix Shell",
+                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Stealth",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.006",
+                                "name": "Dynamic Linker Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1574/006/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1140",
+                        "name": "Deobfuscate/Decode Files or Information",
+                        "reference": "https://attack.mitre.org/techniques/T1140/"
                     }
                 ]
             },
@@ -199,75 +261,14 @@
                                 "reference": "https://attack.mitre.org/techniques/T1548/003/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1574",
-                        "name": "Hijack Execution Flow",
-                        "reference": "https://attack.mitre.org/techniques/T1574/",
-                        "subtechnique": [
-                            {
-                                "id": "T1574.006",
-                                "name": "Dynamic Linker Hijacking",
-                                "reference": "https://attack.mitre.org/techniques/T1574/006/"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "framework": "MITRE ATT&CK",
-                "tactic": {
-                    "id": "TA0002",
-                    "name": "Execution",
-                    "reference": "https://attack.mitre.org/tactics/TA0002/"
-                },
-                "technique": [
-                    {
-                        "id": "T1053",
-                        "name": "Scheduled Task/Job",
-                        "reference": "https://attack.mitre.org/techniques/T1053/",
-                        "subtechnique": [
-                            {
-                                "id": "T1053.003",
-                                "name": "Cron",
-                                "reference": "https://attack.mitre.org/techniques/T1053/003/"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "T1059",
-                        "name": "Command and Scripting Interpreter",
-                        "reference": "https://attack.mitre.org/techniques/T1059/",
-                        "subtechnique": [
-                            {
-                                "id": "T1059.004",
-                                "name": "Unix Shell",
-                                "reference": "https://attack.mitre.org/techniques/T1059/004/"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "framework": "MITRE ATT&CK",
-                "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": [
-                    {
-                        "id": "T1140",
-                        "name": "Deobfuscate/Decode Files or Information",
-                        "reference": "https://attack.mitre.org/techniques/T1140/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "d9bfa475-270d-4b07-93cb-b1f49abe13da_3",
+    "id": "d9bfa475-270d-4b07-93cb-b1f49abe13da_4",
     "type": "security-rule"
 }

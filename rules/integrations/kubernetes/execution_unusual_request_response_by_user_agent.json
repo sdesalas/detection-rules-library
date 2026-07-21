@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "kubernetes",
-                "version": "^1.80.0"
+                "version": ">=1.80.0"
             }
         ],
         "required_fields": [
@@ -60,7 +60,9 @@
             "Domain: Container",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Initial Access",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -69,14 +71,13 @@
                     "id": "TA0002",
                     "name": "Execution",
                     "reference": "https://attack.mitre.org/tactics/TA0002/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -105,8 +106,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "8a1db198-da6f-4500-b985-7fe2457300af_6",
+    "id": "8a1db198-da6f-4500-b985-7fe2457300af_7",
     "type": "security-rule"
 }

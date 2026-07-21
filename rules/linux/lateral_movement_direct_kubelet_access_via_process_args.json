@@ -26,11 +26,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "auditd_manager",
-                "version": "^1.18.0"
+                "version": ">=1.18.0"
             }
         ],
         "required_fields": [
@@ -78,7 +78,8 @@
             "Tactic: Lateral Movement",
             "Data Source: Elastic Defend",
             "Data Source: Auditd Manager",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution"
         ],
         "threat": [
             {
@@ -136,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "6aa52f86-18f1-4a5a-a0ac-e2b5db8af589_1",
+    "id": "6aa52f86-18f1-4a5a-a0ac-e2b5db8af589_2",
     "type": "security-rule"
 }

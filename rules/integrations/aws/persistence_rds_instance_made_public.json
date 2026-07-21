@@ -44,7 +44,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "required_fields": [
@@ -85,7 +85,7 @@
             "Resources: Investigation Guide",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Tactic: Defense Evasion"
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -119,16 +119,15 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": []
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "9efb3f79-b77b-466a-9fa0-3645d22d1e7f_9",
+    "id": "9efb3f79-b77b-466a-9fa0-3645d22d1e7f_10",
     "type": "security-rule"
 }

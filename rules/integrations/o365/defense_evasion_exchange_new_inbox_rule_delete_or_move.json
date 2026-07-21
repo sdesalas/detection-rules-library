@@ -29,7 +29,7 @@
         "related_integrations": [
             {
                 "package": "o365",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -74,9 +74,9 @@
                 "type": "unknown"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "40fe11c2-376e-11f0-9a82-f661ea17fbcd",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Domain: SaaS",
@@ -84,15 +84,16 @@
             "Data Source: Microsoft 365",
             "Data Source: Microsoft 365 Audit Logs",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Persistence",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -135,8 +136,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 7
     },
-    "id": "40fe11c2-376e-11f0-9a82-f661ea17fbcd_5",
+    "id": "40fe11c2-376e-11f0-9a82-f661ea17fbcd_7",
     "type": "security-rule"
 }

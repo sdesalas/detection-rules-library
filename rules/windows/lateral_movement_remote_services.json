@@ -23,11 +23,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -113,7 +113,8 @@
             "Tactic: Lateral Movement",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Tactic: Execution"
         ],
         "threat": [
             {
@@ -155,8 +156,8 @@
             }
         ],
         "type": "eql",
-        "version": 218
+        "version": 219
     },
-    "id": "aa9a274d-6b53-424d-ac5e-cb8ca4251650_218",
+    "id": "aa9a274d-6b53-424d-ac5e-cb8ca4251650_219",
     "type": "security-rule"
 }

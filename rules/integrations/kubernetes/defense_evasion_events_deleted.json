@@ -15,7 +15,7 @@
         "related_integrations": [
             {
                 "package": "kubernetes",
-                "version": "^1.80.0"
+                "version": ">=1.80.0"
             }
         ],
         "required_fields": [
@@ -47,15 +47,15 @@
             "Data Source: Kubernetes",
             "Domain: Kubernetes",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -76,8 +76,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "33c27b4e-8ec6-406f-b8e5-345dc024aa97_3",
+    "id": "33c27b4e-8ec6-406f-b8e5-345dc024aa97_4",
     "type": "security-rule"
 }

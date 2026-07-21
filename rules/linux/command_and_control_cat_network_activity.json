@@ -17,7 +17,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -72,7 +72,9 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Exfiltration",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -94,10 +96,9 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -116,8 +117,8 @@
             }
         ],
         "type": "eql",
-        "version": 12
+        "version": 13
     },
-    "id": "afd04601-12fc-4149-9b78-9c3f8fe45d39_12",
+    "id": "afd04601-12fc-4149-9b78-9c3f8fe45d39_13",
     "type": "security-rule"
 }

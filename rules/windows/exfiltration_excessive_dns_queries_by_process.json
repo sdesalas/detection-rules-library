@@ -30,15 +30,15 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -85,7 +85,8 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
             "Data Source: Crowdstrike",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Tactic: Command and Control"
         ],
         "threat": [
             {
@@ -128,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "882a39ad-a404-45e3-b5d4-bc11d2b09818_1",
+    "id": "882a39ad-a404-45e3-b5d4-bc11d2b09818_2",
     "type": "security-rule"
 }

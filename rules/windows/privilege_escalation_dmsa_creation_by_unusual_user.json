@@ -44,11 +44,11 @@
         "related_integrations": [
             {
                 "package": "system",
-                "version": "^2.0.0"
+                "version": ">=2.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -80,7 +80,8 @@
             "Use Case: Active Directory Monitoring",
             "Data Source: Active Directory",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -135,8 +136,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "f0dbff4c-1aa7-4458-9ed5-ada472f64970_5",
+    "id": "f0dbff4c-1aa7-4458-9ed5-ada472f64970_6",
     "type": "security-rule"
 }

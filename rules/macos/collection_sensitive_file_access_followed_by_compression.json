@@ -16,7 +16,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -60,7 +60,8 @@
             "Use Case: Threat Detection",
             "Tactic: Collection",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Exfiltration"
         ],
         "threat": [
             {
@@ -101,13 +102,12 @@
                     "id": "TA0010",
                     "name": "Exfiltration",
                     "reference": "https://attack.mitre.org/tactics/TA0010/"
-                },
-                "technique": []
+                }
             }
         ],
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "a0fbd7a9-1923-4e05-92df-b484168f17bc_2",
+    "id": "a0fbd7a9-1923-4e05-92df-b484168f17bc_3",
     "type": "security-rule"
 }

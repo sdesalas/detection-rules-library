@@ -31,7 +31,7 @@
             {
                 "integration": "platformlogs",
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -73,7 +73,8 @@
             "Data Source: Azure Storage",
             "Use Case: Threat Detection",
             "Tactic: Exfiltration",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Collection"
         ],
         "threat": [
             {
@@ -116,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "a8b3c4d5-e6f7-8901-a2b3-c4d5e6f78901_3",
+    "id": "a8b3c4d5-e6f7-8901-a2b3-c4d5e6f78901_4",
     "type": "security-rule"
 }

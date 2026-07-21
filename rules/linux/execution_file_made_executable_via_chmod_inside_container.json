@@ -16,7 +16,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -60,9 +60,10 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -83,9 +84,9 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
@@ -95,20 +96,8 @@
                         "subtechnique": [
                             {
                                 "id": "T1222.002",
-                                "name": "Linux and Mac File and Directory Permissions Modification",
+                                "name": "Linux and Mac Permissions",
                                 "reference": "https://attack.mitre.org/techniques/T1222/002/"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "T1548",
-                        "name": "Abuse Elevation Control Mechanism",
-                        "reference": "https://attack.mitre.org/techniques/T1548/",
-                        "subtechnique": [
-                            {
-                                "id": "T1548.001",
-                                "name": "Setuid and Setgid",
-                                "reference": "https://attack.mitre.org/techniques/T1548/001/"
                             }
                         ]
                     }
@@ -139,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "30d94e59-e5c7-4828-bc4f-f5809ad1ffe1_4",
+    "id": "30d94e59-e5c7-4828-bc4f-f5809ad1ffe1_5",
     "type": "security-rule"
 }

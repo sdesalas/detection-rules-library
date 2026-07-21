@@ -30,15 +30,15 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "system",
-                "version": "^2.0.0"
+                "version": ">=2.0.0"
             }
         ],
         "required_fields": [
@@ -76,19 +76,19 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -143,8 +143,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 321
+        "version": 322
     },
-    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae6_321",
+    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae6_322",
     "type": "security-rule"
 }

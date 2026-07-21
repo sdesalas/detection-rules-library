@@ -45,23 +45,23 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             },
             {
                 "package": "m365_defender",
-                "version": "^5.0.0"
+                "version": ">=5.0.0"
             }
         ],
         "required_fields": [
@@ -101,7 +101,10 @@
             "Data Source: Sysmon",
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
-            "Data Source: Microsoft Defender XDR"
+            "Data Source: Microsoft Defender XDR",
+            "Tactic: Defense Impairment",
+            "Tactic: Execution",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -123,6 +126,11 @@
                                 "reference": "https://attack.mitre.org/techniques/T1547/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1112",
+                        "name": "Modify Registry",
+                        "reference": "https://attack.mitre.org/techniques/T1112/"
                     }
                 ]
             },
@@ -144,16 +152,26 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
                         "id": "T1112",
                         "name": "Modify Registry",
                         "reference": "https://attack.mitre.org/techniques/T1112/"
-                    },
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Stealth",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
                     {
                         "id": "T1564",
                         "name": "Hide Artifacts",
@@ -164,8 +182,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 216
+        "version": 217
     },
-    "id": "a9b05c3b-b304-4bf9-970d-acdfaef2944c_216",
+    "id": "a9b05c3b-b304-4bf9-970d-acdfaef2944c_217",
     "type": "security-rule"
 }

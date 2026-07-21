@@ -23,7 +23,7 @@
         "related_integrations": [
             {
                 "package": "cyberarkpas",
-                "version": "^2.27.0"
+                "version": ">=2.27.0"
             }
         ],
         "required_fields": [
@@ -53,7 +53,10 @@
             "Use Case: Log Auditing",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Credential Access",
+            "Tactic: Initial Access",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -77,8 +80,7 @@
                     "id": "TA0001",
                     "name": "Initial Access",
                     "reference": "https://attack.mitre.org/tactics/TA0001/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -113,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "c5f81243-56e0-47f9-b5bb-55a5ed89ba57_107",
+    "id": "c5f81243-56e0-47f9-b5bb-55a5ed89ba57_108",
     "type": "security-rule"
 }

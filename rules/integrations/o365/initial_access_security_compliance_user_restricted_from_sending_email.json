@@ -24,7 +24,7 @@
         "related_integrations": [
             {
                 "package": "o365",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -72,14 +72,13 @@
                     "id": "TA0040",
                     "name": "Impact",
                     "reference": "https://attack.mitre.org/tactics/TA0040/"
-                },
-                "technique": []
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 213
+        "version": 214
     },
-    "id": "0136b315-b566-482f-866c-1d8e2477ba16_213",
+    "id": "0136b315-b566-482f-866c-1d8e2477ba16_214",
     "type": "security-rule"
 }

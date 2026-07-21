@@ -23,7 +23,7 @@
             {
                 "integration": "audit",
                 "package": "gcp",
-                "version": "^2.41.0"
+                "version": ">=2.41.0"
             }
         ],
         "required_fields": [
@@ -52,16 +52,18 @@
             "Data Source: GCP",
             "Data Source: Google Cloud Platform",
             "Use Case: Identity and Access Audit",
-            "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment",
+            "Tactic: Persistence",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
@@ -118,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "2326d1b2-9acf-4dee-bd21-867ea7378b4d_109",
+    "id": "2326d1b2-9acf-4dee-bd21-867ea7378b4d_110",
     "type": "security-rule"
 }

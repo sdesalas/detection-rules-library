@@ -23,7 +23,7 @@
         "related_integrations": [
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -68,7 +68,9 @@
             "Data Source: Microsoft Entra ID Sign-in Logs",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
-            "Tactic: Initial Access"
+            "Tactic: Initial Access",
+            "Tactic: Credential Access",
+            "Tactic: Lateral Movement"
         ],
         "threat": [
             {
@@ -128,9 +130,9 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
                 },
                 "technique": [
                     {
@@ -150,8 +152,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 8
+        "version": 9
     },
-    "id": "14fa0285-fe78-4843-ac8e-f4b481f49da9_8",
+    "id": "14fa0285-fe78-4843-ac8e-f4b481f49da9_9",
     "type": "security-rule"
 }

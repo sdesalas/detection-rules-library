@@ -17,7 +17,7 @@
         "related_integrations": [
             {
                 "package": "cloud_defend",
-                "version": "^1.4.0"
+                "version": ">=1.4.0"
             }
         ],
         "required_fields": [
@@ -72,8 +72,8 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Tactic: Command and Control",
-            "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -122,7 +122,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -143,8 +143,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "05a50000-9886-4695-ad33-3f990dc142e2_2",
+    "id": "05a50000-9886-4695-ad33-3f990dc142e2_3",
     "type": "security-rule"
 }

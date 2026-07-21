@@ -15,7 +15,7 @@
         "related_integrations": [
             {
                 "package": "kubernetes",
-                "version": "^1.80.0"
+                "version": ">=1.80.0"
             }
         ],
         "required_fields": [
@@ -57,14 +57,13 @@
                     "id": "TA0002",
                     "name": "Execution",
                     "reference": "https://attack.mitre.org/tactics/TA0002/"
-                },
-                "technique": []
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "ec81962e-4bc8-48e6-bfb0-545fc97d8f6a_3",
+    "id": "ec81962e-4bc8-48e6-bfb0-545fc97d8f6a_4",
     "type": "security-rule"
 }

@@ -16,7 +16,7 @@
         "related_integrations": [
             {
                 "package": "github",
-                "version": "^2.4.0"
+                "version": ">=2.4.0"
             }
         ],
         "required_fields": [
@@ -91,14 +91,13 @@
                     "id": "TA0040",
                     "name": "Impact",
                     "reference": "https://attack.mitre.org/tactics/TA0040/"
-                },
-                "technique": []
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "8c707e4c-bd20-4ff4-bda5-4dc3b34ce298_3",
+    "id": "8c707e4c-bd20-4ff4-bda5-4dc3b34ce298_4",
     "type": "security-rule"
 }

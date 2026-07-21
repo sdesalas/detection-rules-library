@@ -16,7 +16,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -69,17 +69,17 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
-            "Tactic: Persistence",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -100,31 +100,9 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0003",
-                    "name": "Persistence",
-                    "reference": "https://attack.mitre.org/tactics/TA0003/"
-                },
-                "technique": [
-                    {
-                        "id": "T1574",
-                        "name": "Hijack Execution Flow",
-                        "reference": "https://attack.mitre.org/techniques/T1574/",
-                        "subtechnique": [
-                            {
-                                "id": "T1574.006",
-                                "name": "Dynamic Linker Hijacking",
-                                "reference": "https://attack.mitre.org/techniques/T1574/006/"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "framework": "MITRE ATT&CK",
-                "tactic": {
-                    "id": "TA0004",
-                    "name": "Privilege Escalation",
-                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
                 },
                 "technique": [
                     {
@@ -144,8 +122,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "640f79d1-571d-4f96-a9af-1194fc8cf763_9",
+    "id": "640f79d1-571d-4f96-a9af-1194fc8cf763_10",
     "type": "security-rule"
 }

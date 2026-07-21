@@ -18,11 +18,11 @@
         "related_integrations": [
             {
                 "package": "system",
-                "version": "^2.0.0"
+                "version": ">=2.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -83,7 +83,8 @@
             "Tactic: Lateral Movement",
             "Tactic: Persistence",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution"
         ],
         "threat": [
             {
@@ -154,8 +155,8 @@
             }
         ],
         "type": "eql",
-        "version": 114
+        "version": 115
     },
-    "id": "d33ea3bf-9a11-463e-bd46-f648f2a0f4b1_114",
+    "id": "d33ea3bf-9a11-463e-bd46-f648f2a0f4b1_115",
     "type": "security-rule"
 }

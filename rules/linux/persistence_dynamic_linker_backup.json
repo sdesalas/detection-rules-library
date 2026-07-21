@@ -21,11 +21,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             }
         ],
         "required_fields": [
@@ -78,19 +78,20 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Persistence",
             "Threat: Orbit",
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0003",
-                    "name": "Persistence",
-                    "reference": "https://attack.mitre.org/tactics/TA0003/"
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
                 },
                 "technique": [
                     {
@@ -111,7 +112,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -131,8 +132,8 @@
             }
         ],
         "type": "eql",
-        "version": 216
+        "version": 217
     },
-    "id": "df6f62d9-caab-4b88-affa-044f4395a1e0_216",
+    "id": "df6f62d9-caab-4b88-affa-044f4395a1e0_217",
     "type": "security-rule"
 }

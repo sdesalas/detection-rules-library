@@ -19,11 +19,11 @@
         "related_integrations": [
             {
                 "package": "auditd_manager",
-                "version": "^1.18.0"
+                "version": ">=1.18.0"
             },
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "risk_score": 21,
@@ -43,21 +43,6 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": [
-                    {
-                        "id": "T1548",
-                        "name": "Abuse Elevation Control Mechanism",
-                        "reference": "https://attack.mitre.org/techniques/T1548/"
-                    }
-                ]
-            },
-            {
-                "framework": "MITRE ATT&CK",
-                "tactic": {
                     "id": "TA0004",
                     "name": "Privilege Escalation",
                     "reference": "https://attack.mitre.org/tactics/TA0004/"
@@ -72,8 +57,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 207
+        "version": 208
     },
-    "id": "1e9fc667-9ff1-4b33-9f40-fefca8537eb0_207",
+    "id": "1e9fc667-9ff1-4b33-9f40-fefca8537eb0_208",
     "type": "security-rule"
 }

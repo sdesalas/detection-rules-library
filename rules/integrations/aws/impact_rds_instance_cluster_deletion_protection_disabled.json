@@ -42,7 +42,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "required_fields": [
@@ -82,7 +82,8 @@
             "Data Source: AWS RDS",
             "Resources: Investigation Guide",
             "Use Case: Threat Detection",
-            "Tactic: Impact"
+            "Tactic: Impact",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
@@ -103,9 +104,9 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
@@ -125,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "f6652fb5-cd8e-499c-8311-2ce2bb6cac62_9",
+    "id": "f6652fb5-cd8e-499c-8311-2ce2bb6cac62_10",
     "type": "security-rule"
 }

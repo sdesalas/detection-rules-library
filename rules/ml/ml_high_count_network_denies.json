@@ -20,11 +20,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "network_traffic",
-                "version": "^1.33.0"
+                "version": ">=1.33.0"
             }
         ],
         "risk_score": 21,
@@ -35,7 +35,12 @@
             "Use Case: Threat Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Command and Control",
+            "Tactic: Discovery",
+            "Tactic: Exfiltration",
+            "Tactic: Impact",
+            "Tactic: Reconnaissance"
         ],
         "threat": [
             {
@@ -130,8 +135,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 109
+        "version": 110
     },
-    "id": "eaa77d63-9679-4ce3-be25-3ba8b795e5fa_109",
+    "id": "eaa77d63-9679-4ce3-be25-3ba8b795e5fa_110",
     "type": "security-rule"
 }

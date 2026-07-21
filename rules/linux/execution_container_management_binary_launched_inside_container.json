@@ -19,7 +19,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -84,7 +84,8 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Discovery"
         ],
         "threat": [
             {
@@ -120,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "4b74d3b0-416e-4099-b432-677e1cd098cc_5",
+    "id": "4b74d3b0-416e-4099-b432-677e1cd098cc_6",
     "type": "security-rule"
 }

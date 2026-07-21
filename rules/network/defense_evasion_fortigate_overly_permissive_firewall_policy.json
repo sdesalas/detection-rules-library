@@ -23,7 +23,7 @@
         "related_integrations": [
             {
                 "package": "fortinet_fortigate",
-                "version": "^1.31.0"
+                "version": ">=1.31.0"
             }
         ],
         "required_fields": [
@@ -58,40 +58,38 @@
         "severity": "high",
         "tags": [
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
             "Domain: Network",
             "Data Source: Fortinet",
-            "Data Source: Fortinet FortiGate"
+            "Data Source: Fortinet FortiGate",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
-                        "id": "T1562",
-                        "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/",
-                        "subtechnique": [
-                            {
-                                "id": "T1562.004",
-                                "name": "Disable or Modify System Firewall",
-                                "reference": "https://attack.mitre.org/techniques/T1562/004/"
-                            }
-                        ]
+                        "id": "T1685",
+                        "name": "Disable or Modify Tools",
+                        "reference": "https://attack.mitre.org/techniques/T1685/"
+                    },
+                    {
+                        "id": "T1686",
+                        "name": "Disable or Modify System Firewall",
+                        "reference": "https://attack.mitre.org/techniques/T1686/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "896a0a38-eaa0-42e9-be35-dfcc3e3e90ae_2",
+    "id": "896a0a38-eaa0-42e9-be35-dfcc3e3e90ae_3",
     "type": "security-rule"
 }

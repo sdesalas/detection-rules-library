@@ -24,7 +24,7 @@
         "related_integrations": [
             {
                 "package": "o365",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -63,7 +63,8 @@
             "Data Source: Microsoft 365",
             "Use Case: Identity and Access Audit",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -113,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 213
+        "version": 214
     },
-    "id": "98995807-5b09-4e37-8a54-5cae5dc932d7_213",
+    "id": "98995807-5b09-4e37-8a54-5cae5dc932d7_214",
     "type": "security-rule"
 }

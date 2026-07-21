@@ -48,7 +48,7 @@
             {
                 "integration": "activitylogs",
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -88,7 +88,8 @@
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
@@ -138,8 +139,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "97266eb4-b8c3-4e3e-9417-7d0ace6b3dfe_1",
+    "id": "97266eb4-b8c3-4e3e-9417-7d0ace6b3dfe_2",
     "type": "security-rule"
 }

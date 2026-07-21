@@ -24,7 +24,7 @@
             {
                 "integration": "activitylogs",
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -54,7 +54,8 @@
             "Data Source: Azure Activity Logs",
             "Use Case: Asset Visibility",
             "Tactic: Persistence",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Tactic: Execution"
         ],
         "threat": [
             {
@@ -90,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "56fa718c-a0de-4492-97ff-bbc444b015b8_1",
+    "id": "56fa718c-a0de-4492-97ff-bbc444b015b8_2",
     "type": "security-rule"
 }

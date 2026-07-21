@@ -34,7 +34,7 @@
         "related_integrations": [
             {
                 "package": "google_workspace",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -74,10 +74,10 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "f33e68a4-bd19-11ed-b02f-f661ea17fbcc",
         "setup": "The Google Workspace Fleet integration or similarly structured data is required to be compatible with this rule.",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Data Source: Google Workspace",
@@ -156,8 +156,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 113
+        "version": 213
     },
-    "id": "f33e68a4-bd19-11ed-b02f-f661ea17fbcc_113",
+    "id": "f33e68a4-bd19-11ed-b02f-f661ea17fbcc_213",
     "type": "security-rule"
 }

@@ -21,19 +21,19 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "auditd_manager",
-                "version": "^1.18.0"
+                "version": ">=1.18.0"
             },
             {
                 "package": "crowdstrike",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             }
         ],
         "required_fields": [
@@ -72,7 +72,11 @@
             "Data Source: Auditd Manager",
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Credential Access",
+            "Tactic: Discovery",
+            "Tactic: Initial Access",
+            "Tactic: Reconnaissance"
         ],
         "threat": [
             {
@@ -81,8 +85,7 @@
                     "id": "TA0002",
                     "name": "Execution",
                     "reference": "https://attack.mitre.org/tactics/TA0002/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -181,8 +184,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "1df1152b-610a-4f48-9d7a-504f6ee5d9da_109",
+    "id": "1df1152b-610a-4f48-9d7a-504f6ee5d9da_110",
     "type": "security-rule"
 }

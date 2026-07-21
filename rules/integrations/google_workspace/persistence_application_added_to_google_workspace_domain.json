@@ -36,7 +36,7 @@
         "related_integrations": [
             {
                 "package": "google_workspace",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -51,10 +51,10 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "785a404b-75aa-4ffd-8be5-3334a5a544dd",
         "setup": "The Google Workspace Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Data Source: Google Workspace",
@@ -88,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 211
+        "version": 212
     },
-    "id": "785a404b-75aa-4ffd-8be5-3334a5a544dd_211",
+    "id": "785a404b-75aa-4ffd-8be5-3334a5a544dd_212",
     "type": "security-rule"
 }

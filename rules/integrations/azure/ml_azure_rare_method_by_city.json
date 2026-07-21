@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "risk_score": 21,
@@ -33,7 +33,10 @@
             "Data Source: Azure Activity Logs",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Initial Access",
+            "Tactic: Persistence",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -62,7 +65,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -104,8 +107,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 102
+        "version": 103
     },
-    "id": "ce08cdb8-e6cb-46bb-a7cc-16d17547323f_102",
+    "id": "ce08cdb8-e6cb-46bb-a7cc-16d17547323f_103",
     "type": "security-rule"
 }

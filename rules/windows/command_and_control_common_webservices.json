@@ -22,11 +22,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             }
         ],
         "required_fields": [
@@ -82,7 +82,8 @@
             "Tactic: Command and Control",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Tactic: Exfiltration"
         ],
         "threat": [
             {
@@ -183,8 +184,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 131
+        "version": 132
     },
-    "id": "66883649-f908-4a5b-a1e0-54090a1d3a32_131",
+    "id": "66883649-f908-4a5b-a1e0-54090a1d3a32_132",
     "type": "security-rule"
 }

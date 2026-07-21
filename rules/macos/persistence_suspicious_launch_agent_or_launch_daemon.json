@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -75,7 +75,8 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
@@ -89,14 +90,7 @@
                     {
                         "id": "T1547",
                         "name": "Boot or Logon Autostart Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1547/",
-                        "subtechnique": [
-                            {
-                                "id": "T1547.011",
-                                "name": "Plist Modification",
-                                "reference": "https://attack.mitre.org/techniques/T1547/011/"
-                            }
-                        ]
+                        "reference": "https://attack.mitre.org/techniques/T1547/"
                     },
                     {
                         "id": "T1543",
@@ -116,12 +110,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
+                },
+                "technique": [
+                    {
+                        "id": "T1647",
+                        "name": "Plist File Modification",
+                        "reference": "https://attack.mitre.org/techniques/T1647/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "62ba8542-1246-4647-9b84-98aa1bc0760a_2",
+    "id": "62ba8542-1246-4647-9b84-98aa1bc0760a_3",
     "type": "security-rule"
 }

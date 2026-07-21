@@ -17,11 +17,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "cloud_defend",
-                "version": "^1.4.0"
+                "version": ">=1.4.0"
             }
         ],
         "required_fields": [
@@ -64,7 +64,9 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Defend for Containers",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -141,8 +143,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 103
+        "version": 104
     },
-    "id": "0fe2290a-2664-4c9c-8263-b88904f12f0d_103",
+    "id": "0fe2290a-2664-4c9c-8263-b88904f12f0d_104",
     "type": "security-rule"
 }

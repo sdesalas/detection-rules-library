@@ -16,7 +16,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -69,16 +69,17 @@
             "Data Source: Elastic Defend",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
             "Tactic: Persistence",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Tactic: Defense Impairment",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -98,7 +99,17 @@
                                 "reference": "https://attack.mitre.org/techniques/T1036/005/"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
+                },
+                "technique": [
                     {
                         "id": "T1553",
                         "name": "Subvert Trust Controls",
@@ -131,8 +142,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "79ce2c96-72f7-44f9-88ef-60fa1ac2ce47_9",
+    "id": "79ce2c96-72f7-44f9-88ef-60fa1ac2ce47_10",
     "type": "security-rule"
 }

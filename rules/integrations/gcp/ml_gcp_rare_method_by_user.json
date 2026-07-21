@@ -19,7 +19,7 @@
         "related_integrations": [
             {
                 "package": "gcp",
-                "version": "^2.41.0"
+                "version": ">=2.41.0"
             }
         ],
         "risk_score": 21,
@@ -33,7 +33,12 @@
             "Data Source: Google Cloud Platform",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Exfiltration",
+            "Tactic: Initial Access",
+            "Tactic: Lateral Movement",
+            "Tactic: Persistence",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -121,7 +126,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -141,8 +146,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 102
+        "version": 103
     },
-    "id": "2e08f34c-691c-497e-87de-5d794a1b2a53_102",
+    "id": "2e08f34c-691c-497e-87de-5d794a1b2a53_103",
     "type": "security-rule"
 }

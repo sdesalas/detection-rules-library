@@ -37,7 +37,7 @@
         "related_integrations": [
             {
                 "package": "google_workspace",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -57,19 +57,19 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "cad4500a-abd7-4ef3-b5d3-95524de7cfe1",
         "setup": "The Google Workspace Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Data Source: Google Workspace",
             "Use Case: Configuration Audit",
             "Tactic: Impact",
             "Tactic: Credential Access",
-            "Tactic: Defense Evasion",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
@@ -112,9 +112,9 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
@@ -156,8 +156,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 213
+        "version": 215
     },
-    "id": "cad4500a-abd7-4ef3-b5d3-95524de7cfe1_213",
+    "id": "cad4500a-abd7-4ef3-b5d3-95524de7cfe1_215",
     "type": "security-rule"
 }

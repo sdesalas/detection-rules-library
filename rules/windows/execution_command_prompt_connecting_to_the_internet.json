@@ -36,15 +36,15 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             }
         ],
         "required_fields": [
@@ -101,7 +101,8 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Tactic: Command and Control"
         ],
         "threat": [
             {
@@ -148,8 +149,8 @@
             }
         ],
         "type": "eql",
-        "version": 215
+        "version": 216
     },
-    "id": "89f9a4b0-9f8f-4ee0-8823-c4751a6d6696_215",
+    "id": "89f9a4b0-9f8f-4ee0-8823-c4751a6d6696_216",
     "type": "security-rule"
 }

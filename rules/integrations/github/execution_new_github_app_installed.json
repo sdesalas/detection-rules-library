@@ -16,7 +16,7 @@
         "related_integrations": [
             {
                 "package": "github",
-                "version": "^2.4.0"
+                "version": ">=2.4.0"
             }
         ],
         "required_fields": [
@@ -39,7 +39,9 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: Github",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Initial Access",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -90,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 209
+        "version": 210
     },
-    "id": "1ca62f14-4787-4913-b7af-df11745a49da_209",
+    "id": "1ca62f14-4787-4913-b7af-df11745a49da_210",
     "type": "security-rule"
 }

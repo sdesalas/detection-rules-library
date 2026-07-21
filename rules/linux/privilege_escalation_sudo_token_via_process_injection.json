@@ -19,7 +19,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -74,7 +74,8 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -115,7 +116,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -130,25 +131,13 @@
                                 "reference": "https://attack.mitre.org/techniques/T1055/008/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1548",
-                        "name": "Abuse Elevation Control Mechanism",
-                        "reference": "https://attack.mitre.org/techniques/T1548/",
-                        "subtechnique": [
-                            {
-                                "id": "T1548.003",
-                                "name": "Sudo and Sudo Caching",
-                                "reference": "https://attack.mitre.org/techniques/T1548/003/"
-                            }
-                        ]
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "ff9bc8b9-f03b-4283-be58-ee0a16f5a11b_112",
+    "id": "ff9bc8b9-f03b-4283-be58-ee0a16f5a11b_113",
     "type": "security-rule"
 }

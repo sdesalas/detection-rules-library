@@ -22,7 +22,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -55,7 +55,8 @@
             "Data Source: Elastic Defend",
             "Domain: LLM",
             "Mitre Atlas: T0010.003",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
@@ -103,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "e9a3b2c1-d4f5-6789-0abc-def123456789_2",
+    "id": "e9a3b2c1-d4f5-6789-0abc-def123456789_3",
     "type": "security-rule"
 }

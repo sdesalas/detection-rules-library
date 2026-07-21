@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "o365",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -48,30 +48,24 @@
             "Data Source: Microsoft Purview",
             "Use Case: Threat Detection",
             "Use Case: Configuration Auditing",
-            "Tactic: Defense Evasion",
             "Tactic: Persistence",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Tactic: Defense Impairment",
+            "Tactic: Execution"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
-                        "id": "T1562",
-                        "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/",
-                        "subtechnique": [
-                            {
-                                "id": "T1562.001",
-                                "name": "Disable or Modify Tools",
-                                "reference": "https://attack.mitre.org/techniques/T1562/001/"
-                            }
-                        ]
+                        "id": "T1685",
+                        "name": "Disable or Modify Tools",
+                        "reference": "https://attack.mitre.org/techniques/T1685/"
                     }
                 ]
             },
@@ -115,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "314557e1-a642-4dbc-af43-321bc04b6618_2",
+    "id": "314557e1-a642-4dbc-af43-321bc04b6618_3",
     "type": "security-rule"
 }

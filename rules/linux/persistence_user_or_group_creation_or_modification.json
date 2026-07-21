@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "auditd_manager",
-                "version": "^1.18.0"
+                "version": ">=1.18.0"
             }
         ],
         "required_fields": [
@@ -60,7 +60,8 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Data Source: Auditd Manager",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -115,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "fcf733d5-7801-4eb0-92ac-8ffacf3658f2_8",
+    "id": "fcf733d5-7801-4eb0-92ac-8ffacf3658f2_9",
     "type": "security-rule"
 }

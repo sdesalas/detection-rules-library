@@ -23,7 +23,7 @@
             {
                 "integration": "audit",
                 "package": "gcp",
-                "version": "^2.41.0"
+                "version": ">=2.41.0"
             }
         ],
         "required_fields": [
@@ -52,27 +52,27 @@
             "Data Source: GCP",
             "Data Source: Google Cloud Platform",
             "Use Case: Log Auditing",
-            "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
-                        "id": "T1562",
-                        "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/",
+                        "id": "T1685",
+                        "name": "Disable or Modify Tools",
+                        "reference": "https://attack.mitre.org/techniques/T1685/",
                         "subtechnique": [
                             {
-                                "id": "T1562.008",
-                                "name": "Disable or Modify Cloud Logs",
-                                "reference": "https://attack.mitre.org/techniques/T1562/008/"
+                                "id": "T1685.002",
+                                "name": "Disable or Modify Cloud Log",
+                                "reference": "https://attack.mitre.org/techniques/T1685/002/"
                             }
                         ]
                     }
@@ -81,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "51859fa0-d86b-4214-bf48-ebb30ed91305_109",
+    "id": "51859fa0-d86b-4214-bf48-ebb30ed91305_110",
     "type": "security-rule"
 }

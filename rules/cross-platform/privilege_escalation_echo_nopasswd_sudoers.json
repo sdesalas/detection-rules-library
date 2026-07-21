@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -74,34 +74,12 @@
                         ]
                     }
                 ]
-            },
-            {
-                "framework": "MITRE ATT&CK",
-                "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": [
-                    {
-                        "id": "T1548",
-                        "name": "Abuse Elevation Control Mechanism",
-                        "reference": "https://attack.mitre.org/techniques/T1548/",
-                        "subtechnique": [
-                            {
-                                "id": "T1548.003",
-                                "name": "Sudo and Sudo Caching",
-                                "reference": "https://attack.mitre.org/techniques/T1548/003/"
-                            }
-                        ]
-                    }
-                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 108
+        "version": 109
     },
-    "id": "76152ca1-71d0-4003-9e37-0983e12832da_108",
+    "id": "76152ca1-71d0-4003-9e37-0983e12832da_109",
     "type": "security-rule"
 }

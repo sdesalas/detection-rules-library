@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -85,7 +85,9 @@
             "Tactic: Lateral Movement",
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Tactic: Execution",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
@@ -158,8 +160,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "e74d645b-fec6-431e-bf93-ca64a538e0de_7",
+    "id": "e74d645b-fec6-431e-bf93-ca64a538e0de_8",
     "type": "security-rule"
 }

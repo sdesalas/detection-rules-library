@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -81,7 +81,8 @@
             "Tactic: Privilege Escalation",
             "Domain: Container",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution"
         ],
         "threat": [
             {
@@ -117,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 11
+        "version": 12
     },
-    "id": "afe6b0eb-dd9d-4922-b08a-1910124d524d_11",
+    "id": "afe6b0eb-dd9d-4922-b08a-1910124d524d_12",
     "type": "security-rule"
 }

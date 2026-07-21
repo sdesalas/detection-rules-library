@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "github",
-                "version": "^2.4.0"
+                "version": ">=2.4.0"
             }
         ],
         "required_fields": [
@@ -60,7 +60,8 @@
             "Use Case: UEBA",
             "Tactic: Persistence",
             "Rule Type: BBR",
-            "Data Source: Github"
+            "Data Source: Github",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -89,7 +90,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -110,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 208
+        "version": 209
     },
-    "id": "f94e898e-94f1-4545-8923-03e4b2866211_208",
+    "id": "f94e898e-94f1-4545-8923-03e4b2866211_209",
     "type": "security-rule"
 }

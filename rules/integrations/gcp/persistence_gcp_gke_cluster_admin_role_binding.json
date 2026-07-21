@@ -7,11 +7,26 @@
         "index": [
             "logs-gcp.audit-*"
         ],
+        "investigation_fields": {
+            "field_names": [
+                "@timestamp",
+                "client.user.email",
+                "source.ip",
+                "user_agent.original",
+                "event.action",
+                "event.outcome",
+                "gcp.audit.resource_name",
+                "gcp.audit.request.kind",
+                "gcp.audit.request.roleRef.name",
+                "gcp.audit.request.subjects.name",
+                "data_stream.namespace"
+            ]
+        },
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "GKE Cluster-Admin Role Binding Created or Modified",
-        "note": "## Triage and analysis\n\n### Investigating GKE Cluster-Admin Role Binding Created or Modified\n\nIdentify who created or changed the binding and which subject received cluster-admin.\n\n### Investigation steps\n\n- Review `user.email`, `source.ip`, and `gcp.audit.request` for the bound subject.\n- Hunt for secret reads, privileged pod creation, or webhook changes from the same actor or new subject.\n\n### False positives\n\n- Bootstrap, recovery, or GitOps workflows may recreate cluster-admin bindings during approved changes.",
-        "query": "data_stream.dataset:gcp.audit and service.name:\"k8s.io\" and event.outcome:success and\nevent.action:(\n  \"io.k8s.authorization.rbac.v1.clusterrolebindings.create\" or\n  \"io.k8s.authorization.rbac.v1.clusterrolebindings.patch\" or\n  \"io.k8s.authorization.rbac.v1.clusterrolebindings.update\"\n) and gcp.audit.request.kind:\"ClusterRoleBinding\" and\ngcp.audit.resource_name:\"rbac.authorization.k8s.io/v1/clusterrolebindings/cluster-admin\"\n",
+        "note": "## Triage and analysis\n\n### Investigating GKE Cluster-Admin Role Binding Created or Modified\n\nIdentify who created or changed the binding and which subject received cluster-admin.\n\n### Investigation steps\n\n- Review `client.user.email`, `source.ip`, and `gcp.audit.request` for the bound subject.\n- Hunt for secret reads, privileged pod creation, or webhook changes from the same actor or new subject.\n\n### False positives\n\n- Bootstrap and recovery may recreate cluster-admin bindings via `system:apiserver` during control plane reconciliation (excluded).\n\n",
+        "query": "data_stream.dataset:gcp.audit and service.name:\"k8s.io\" and event.outcome:success and\nevent.action:(\n  \"io.k8s.authorization.rbac.v1.clusterrolebindings.create\" or\n  \"io.k8s.authorization.rbac.v1.clusterrolebindings.patch\" or\n  \"io.k8s.authorization.rbac.v1.clusterrolebindings.update\"\n) and gcp.audit.request.kind:\"ClusterRoleBinding\" and\ngcp.audit.resource_name:\"rbac.authorization.k8s.io/v1/clusterrolebindings/cluster-admin\" and\nnot client.user.email:\"system:apiserver\"\n",
         "references": [
             "https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control",
             "https://heilancoos.github.io/research/2025/12/16/kubernetes.html#overly-permissive-role-based-access-control"
@@ -20,10 +35,15 @@
             {
                 "integration": "audit",
                 "package": "gcp",
-                "version": "^2.41.0"
+                "version": ">=2.41.0"
             }
         ],
         "required_fields": [
+            {
+                "ecs": true,
+                "name": "client.user.email",
+                "type": "keyword"
+            },
             {
                 "ecs": true,
                 "name": "data_stream.dataset",
@@ -117,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "16708afb-4904-4d3c-af78-63640a075cb0_1",
+    "id": "16708afb-4904-4d3c-af78-63640a075cb0_2",
     "type": "security-rule"
 }

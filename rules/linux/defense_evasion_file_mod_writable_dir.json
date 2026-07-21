@@ -25,7 +25,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -88,17 +88,17 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
@@ -108,7 +108,7 @@
                         "subtechnique": [
                             {
                                 "id": "T1222.002",
-                                "name": "Linux and Mac File and Directory Permissions Modification",
+                                "name": "Linux and Mac Permissions",
                                 "reference": "https://attack.mitre.org/techniques/T1222/002/"
                             }
                         ]
@@ -118,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 216
+        "version": 217
     },
-    "id": "9f9a2a82-93a8-4b1a-8778-1780895626d4_216",
+    "id": "9f9a2a82-93a8-4b1a-8778-1780895626d4_217",
     "type": "security-rule"
 }

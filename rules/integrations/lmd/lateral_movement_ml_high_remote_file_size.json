@@ -20,11 +20,11 @@
         "related_integrations": [
             {
                 "package": "lmd",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             },
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "risk_score": 21,
@@ -36,7 +36,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Lateral Movement",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Collection"
         ],
         "threat": [
             {
@@ -76,8 +77,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 109
+        "version": 110
     },
-    "id": "0678bc9c-b71a-433b-87e6-2f664b6b3131_109",
+    "id": "0678bc9c-b71a-433b-87e6-2f664b6b3131_110",
     "type": "security-rule"
 }

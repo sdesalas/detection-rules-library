@@ -24,11 +24,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             }
         ],
         "required_fields": [
@@ -74,7 +74,8 @@
             "Tactic: Lateral Movement",
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Command and Control"
         ],
         "threat": [
             {
@@ -109,8 +110,8 @@
             }
         ],
         "type": "eql",
-        "version": 213
+        "version": 214
     },
-    "id": "e19e64ee-130e-4c07-961f-8a339f0b8362_213",
+    "id": "e19e64ee-130e-4c07-961f-8a339f0b8362_214",
     "type": "security-rule"
 }

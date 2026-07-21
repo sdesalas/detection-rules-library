@@ -81,7 +81,7 @@
         "related_integrations": [
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -126,7 +126,8 @@
             "Use Case: Threat Detection",
             "Tactic: Collection",
             "Data Source: PowerShell Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution"
         ],
         "threat": [
             {
@@ -169,8 +170,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 214
+        "version": 215
     },
-    "id": "92984446-aefb-4d5e-ad12-598042ca80ba_214",
+    "id": "92984446-aefb-4d5e-ad12-598042ca80ba_215",
     "type": "security-rule"
 }

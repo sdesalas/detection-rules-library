@@ -40,7 +40,7 @@
         "related_integrations": [
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -65,9 +65,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "db1271cd-f574-4173-b4e5-7369f3c03d44",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Domain: Identity",
@@ -105,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "db1271cd-f574-4173-b4e5-7369f3c03d44_1",
+    "id": "db1271cd-f574-4173-b4e5-7369f3c03d44_2",
     "type": "security-rule"
 }

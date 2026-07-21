@@ -19,7 +19,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -68,10 +68,10 @@
             "OS: Windows",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Tactic: Defense Evasion",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -93,40 +93,6 @@
                                 "reference": "https://attack.mitre.org/techniques/T1543/003/"
                             }
                         ]
-                    },
-                    {
-                        "id": "T1574",
-                        "name": "Hijack Execution Flow",
-                        "reference": "https://attack.mitre.org/techniques/T1574/",
-                        "subtechnique": [
-                            {
-                                "id": "T1574.011",
-                                "name": "Services Registry Permissions Weakness",
-                                "reference": "https://attack.mitre.org/techniques/T1574/011/"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "framework": "MITRE ATT&CK",
-                "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": [
-                    {
-                        "id": "T1036",
-                        "name": "Masquerading",
-                        "reference": "https://attack.mitre.org/techniques/T1036/",
-                        "subtechnique": [
-                            {
-                                "id": "T1036.001",
-                                "name": "Invalid Code Signature",
-                                "reference": "https://attack.mitre.org/techniques/T1036/001/"
-                            }
-                        ]
                     }
                 ]
             },
@@ -138,6 +104,18 @@
                     "reference": "https://attack.mitre.org/tactics/TA0002/"
                 },
                 "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.011",
+                                "name": "Services Registry Permissions Weakness",
+                                "reference": "https://attack.mitre.org/techniques/T1574/011/"
+                            }
+                        ]
+                    },
                     {
                         "id": "T1569",
                         "name": "System Services",
@@ -151,12 +129,46 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Stealth",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.011",
+                                "name": "Services Registry Permissions Weakness",
+                                "reference": "https://attack.mitre.org/techniques/T1574/011/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.001",
+                                "name": "Invalid Code Signature",
+                                "reference": "https://attack.mitre.org/techniques/T1036/001/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 12
+        "version": 13
     },
-    "id": "78ef0c95-9dc2-40ac-a8da-5deb6293a14e_12",
+    "id": "78ef0c95-9dc2-40ac-a8da-5deb6293a14e_13",
     "type": "security-rule"
 }

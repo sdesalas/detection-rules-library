@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -90,7 +90,8 @@
             "Tactic: Discovery",
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Tactic: Collection"
         ],
         "threat": [
             {
@@ -126,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "035a6f21-4092-471d-9cda-9e379f459b1e_7",
+    "id": "035a6f21-4092-471d-9cda-9e379f459b1e_8",
     "type": "security-rule"
 }

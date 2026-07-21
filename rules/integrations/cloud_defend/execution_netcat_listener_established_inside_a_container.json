@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "cloud_defend",
-                "version": "^1.4.0"
+                "version": ">=1.4.0"
             }
         ],
         "required_fields": [
@@ -70,7 +70,9 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Command and Control",
+            "Tactic: Exfiltration"
         ],
         "threat": [
             {
@@ -135,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "a52a9439-d52c-401c-be37-2785235c6547_105",
+    "id": "a52a9439-d52c-401c-be37-2785235c6547_106",
     "type": "security-rule"
 }

@@ -54,14 +54,13 @@
                     "id": "TA0007",
                     "name": "Discovery",
                     "reference": "https://attack.mitre.org/tactics/TA0007/"
-                },
-                "technique": []
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "72ed9140-fe9d-4a34-a026-75b50e484b17_4",
+    "id": "72ed9140-fe9d-4a34-a026-75b50e484b17_5",
     "type": "security-rule"
 }

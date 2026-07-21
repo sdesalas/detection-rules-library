@@ -22,7 +22,7 @@
         "related_integrations": [
             {
                 "package": "system",
-                "version": "^2.0.0"
+                "version": ">=2.0.0"
             }
         ],
         "required_fields": [
@@ -56,7 +56,8 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -106,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 8
+        "version": 9
     },
-    "id": "69c116bb-d86f-48b0-857d-3648511a6cac_8",
+    "id": "69c116bb-d86f-48b0-857d-3648511a6cac_9",
     "type": "security-rule"
 }

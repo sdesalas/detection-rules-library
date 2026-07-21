@@ -56,7 +56,7 @@
         "related_integrations": [
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -91,7 +91,14 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: PowerShell Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Credential Access",
+            "Tactic: Discovery",
+            "Tactic: Exfiltration",
+            "Tactic: Lateral Movement",
+            "Tactic: Persistence",
+            "Tactic: Privilege Escalation",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -171,7 +178,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -184,7 +191,17 @@
                         "id": "T1134",
                         "name": "Access Token Manipulation",
                         "reference": "https://attack.mitre.org/techniques/T1134/"
-                    },
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
                     {
                         "id": "T1548",
                         "name": "Abuse Elevation Control Mechanism",
@@ -320,8 +337,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 221
+        "version": 222
     },
-    "id": "cde1bafa-9f01-4f43-a872-605b678968b0_221",
+    "id": "cde1bafa-9f01-4f43-a872-605b678968b0_222",
     "type": "security-rule"
 }

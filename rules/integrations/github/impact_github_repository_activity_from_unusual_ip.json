@@ -25,7 +25,7 @@
         "related_integrations": [
             {
                 "package": "github",
-                "version": "^2.4.0"
+                "version": ">=2.4.0"
             }
         ],
         "required_fields": [
@@ -55,7 +55,9 @@
             "Tactic: Initial Access",
             "Tactic: Persistence",
             "Data Source: Github",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Collection",
+            "Tactic: Execution"
         ],
         "threat": [
             {
@@ -64,8 +66,7 @@
                     "id": "TA0040",
                     "name": "Impact",
                     "reference": "https://attack.mitre.org/tactics/TA0040/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -141,8 +142,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "daf2e0e0-0bab-4672-bfa1-62db0ee5ec22_3",
+    "id": "daf2e0e0-0bab-4672-bfa1-62db0ee5ec22_4",
     "type": "security-rule"
 }

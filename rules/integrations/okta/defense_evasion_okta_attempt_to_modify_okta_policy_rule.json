@@ -27,7 +27,7 @@
         "related_integrations": [
             {
                 "package": "okta",
-                "version": "^3.5.0"
+                "version": ">=3.5.0"
             }
         ],
         "required_fields": [
@@ -48,17 +48,18 @@
         "severity": "low",
         "tags": [
             "Use Case: Identity and Access Audit",
-            "Tactic: Defense Evasion",
             "Data Source: Okta",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
@@ -67,24 +68,39 @@
                         "reference": "https://attack.mitre.org/techniques/T1484/"
                     },
                     {
-                        "id": "T1562",
-                        "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/",
+                        "id": "T1685",
+                        "name": "Disable or Modify Tools",
+                        "reference": "https://attack.mitre.org/techniques/T1685/",
                         "subtechnique": [
                             {
-                                "id": "T1562.007",
-                                "name": "Disable or Modify Cloud Firewall",
-                                "reference": "https://attack.mitre.org/techniques/T1562/007/"
+                                "id": "T1686.001",
+                                "name": "Cloud Firewall",
+                                "reference": "https://attack.mitre.org/techniques/T1686/001/"
                             }
                         ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0004",
+                    "name": "Privilege Escalation",
+                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "T1484",
+                        "name": "Domain or Tenant Policy Modification",
+                        "reference": "https://attack.mitre.org/techniques/T1484/"
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 416
+        "version": 417
     },
-    "id": "000047bb-b27a-47ec-8b62-ef1a5d2c9e19_416",
+    "id": "000047bb-b27a-47ec-8b62-ef1a5d2c9e19_417",
     "type": "security-rule"
 }

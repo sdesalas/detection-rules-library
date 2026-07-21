@@ -24,7 +24,7 @@
         "related_integrations": [
             {
                 "package": "kubernetes",
-                "version": "^1.80.0"
+                "version": ">=1.80.0"
             }
         ],
         "required_fields": [
@@ -106,27 +106,12 @@
                         "reference": "https://attack.mitre.org/techniques/T1610/"
                     }
                 ]
-            },
-            {
-                "framework": "MITRE ATT&CK",
-                "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": [
-                    {
-                        "id": "T1610",
-                        "name": "Deploy Container",
-                        "reference": "https://attack.mitre.org/techniques/T1610/"
-                    }
-                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 12
+        "version": 13
     },
-    "id": "7164081a-3930-11ed-a261-0242ac120002_12",
+    "id": "7164081a-3930-11ed-a261-0242ac120002_13",
     "type": "security-rule"
 }

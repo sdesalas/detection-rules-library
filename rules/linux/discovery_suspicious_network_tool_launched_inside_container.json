@@ -22,7 +22,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -69,7 +69,8 @@
             "Tactic: Command and Control",
             "Tactic: Reconnaissance",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Credential Access"
         ],
         "threat": [
             {
@@ -135,8 +136,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "7290be75-2e10-49ec-b387-d4ed55b920ff_4",
+    "id": "7290be75-2e10-49ec-b387-d4ed55b920ff_5",
     "type": "security-rule"
 }

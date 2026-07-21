@@ -26,11 +26,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -113,20 +113,19 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Persistence",
-            "Tactic: Privilege Escalation",
-            "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Tactic: Execution",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0004",
-                    "name": "Privilege Escalation",
-                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
                 },
                 "technique": [
                     {
@@ -147,30 +146,8 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": [
-                    {
-                        "id": "T1036",
-                        "name": "Masquerading",
-                        "reference": "https://attack.mitre.org/techniques/T1036/",
-                        "subtechnique": [
-                            {
-                                "id": "T1036.001",
-                                "name": "Invalid Code Signature",
-                                "reference": "https://attack.mitre.org/techniques/T1036/001/"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "framework": "MITRE ATT&CK",
-                "tactic": {
-                    "id": "TA0003",
-                    "name": "Persistence",
-                    "reference": "https://attack.mitre.org/tactics/TA0003/"
                 },
                 "technique": [
                     {
@@ -184,14 +161,26 @@
                                 "reference": "https://attack.mitre.org/techniques/T1574/001/"
                             }
                         ]
+                    },
+                    {
+                        "id": "T1036",
+                        "name": "Masquerading",
+                        "reference": "https://attack.mitre.org/techniques/T1036/",
+                        "subtechnique": [
+                            {
+                                "id": "T1036.001",
+                                "name": "Invalid Code Signature",
+                                "reference": "https://attack.mitre.org/techniques/T1036/001/"
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 219
+        "version": 220
     },
-    "id": "bfeaf89b-a2a7-48a3-817f-e41829dc61ee_219",
+    "id": "bfeaf89b-a2a7-48a3-817f-e41829dc61ee_220",
     "type": "security-rule"
 }

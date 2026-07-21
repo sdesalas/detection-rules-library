@@ -24,11 +24,11 @@
             {
                 "integration": "graphactivitylogs",
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             },
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "risk_score": 47,
@@ -47,8 +47,8 @@
             "Use Case: Identity and Access Audit",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
-            "Tactic: Defense Evasion",
-            "Tactic: Initial Access"
+            "Tactic: Initial Access",
+            "Tactic: Lateral Movement"
         ],
         "threat": [
             {
@@ -76,9 +76,9 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
                 },
                 "technique": [
                     {
@@ -103,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 11
+        "version": 12
     },
-    "id": "0d3d2254-2b4a-11f0-a019-f661ea17fbcc_11",
+    "id": "0d3d2254-2b4a-11f0-a019-f661ea17fbcc_12",
     "type": "security-rule"
 }

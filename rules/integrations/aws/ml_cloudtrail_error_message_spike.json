@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "risk_score": 21,
@@ -33,7 +33,10 @@
             "Data Source: Amazon Web Services",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Discovery",
+            "Tactic: Lateral Movement",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -62,8 +65,7 @@
                     "id": "TA0004",
                     "name": "Privilege Escalation",
                     "reference": "https://attack.mitre.org/tactics/TA0004/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -71,13 +73,12 @@
                     "id": "TA0008",
                     "name": "Lateral Movement",
                     "reference": "https://attack.mitre.org/tactics/TA0008/"
-                },
-                "technique": []
+                }
             }
         ],
         "type": "machine_learning",
-        "version": 212
+        "version": 213
     },
-    "id": "78d3d8d9-b476-451d-a9e0-7a5addd70670_212",
+    "id": "78d3d8d9-b476-451d-a9e0-7a5addd70670_213",
     "type": "security-rule"
 }

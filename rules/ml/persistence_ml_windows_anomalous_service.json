@@ -22,11 +22,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "risk_score": 21,
@@ -40,7 +40,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution"
         ],
         "threat": [
             {
@@ -89,8 +90,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 310
+        "version": 311
     },
-    "id": "1781d055-5c66-4adf-9c71-fc0fa58338c7_310",
+    "id": "1781d055-5c66-4adf-9c71-fc0fa58338c7_311",
     "type": "security-rule"
 }

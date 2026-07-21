@@ -13,7 +13,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -5355,6 +5355,16 @@
             {
                 "ecs": false,
                 "name": "process.Ext.windows.zone_identifier",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "process.ai_agent.is_descendant",
+                "type": "boolean"
+            },
+            {
+                "ecs": false,
+                "name": "process.ai_agent.name",
                 "type": "keyword"
             },
             {
@@ -11882,17 +11892,17 @@
             "OS: macOS",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -11943,8 +11953,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "74d31cb7-4a2c-44fe-9d1d-f375b9f3cb61_1",
+    "id": "74d31cb7-4a2c-44fe-9d1d-f375b9f3cb61_2",
     "type": "security-rule"
 }

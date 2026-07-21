@@ -25,7 +25,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -69,7 +69,8 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Exfiltration"
         ],
         "threat": [
             {
@@ -134,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "b07f0fba-0a78-11f0-8311-b66272739ecb_6",
+    "id": "b07f0fba-0a78-11f0-8311-b66272739ecb_7",
     "type": "security-rule"
 }

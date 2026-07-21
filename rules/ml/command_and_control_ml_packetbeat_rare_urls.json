@@ -20,11 +20,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "network_traffic",
-                "version": "^1.33.0"
+                "version": ">=1.33.0"
             }
         ],
         "risk_score": 21,
@@ -36,7 +36,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Command and Control",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
@@ -83,8 +84,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 208
+        "version": 209
     },
-    "id": "91f02f01-969f-4167-8f55-07827ac3acc9_208",
+    "id": "91f02f01-969f-4167-8f55-07827ac3acc9_209",
     "type": "security-rule"
 }

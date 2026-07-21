@@ -76,14 +76,13 @@
                     "id": "TA0040",
                     "name": "Impact",
                     "reference": "https://attack.mitre.org/tactics/TA0040/"
-                },
-                "technique": []
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "df9c0e92-5dee-4f1d-a760-3a5c039e4382_4",
+    "id": "df9c0e92-5dee-4f1d-a760-3a5c039e4382_5",
     "type": "security-rule"
 }

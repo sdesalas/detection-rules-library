@@ -50,7 +50,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "required_fields": [
@@ -91,7 +91,8 @@
             "Resources: Investigation Guide",
             "Use Case: Identity and Access Audit",
             "Tactic: Privilege Escalation",
-            "Tactic: Lateral Movement"
+            "Tactic: Lateral Movement",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -147,7 +148,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -168,8 +169,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 9
+        "version": 10
     },
-    "id": "288a198e-9b9b-11ef-a0a8-f661ea17fbcd_9",
+    "id": "288a198e-9b9b-11ef-a0a8-f661ea17fbcd_10",
     "type": "security-rule"
 }

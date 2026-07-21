@@ -25,7 +25,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -67,7 +67,8 @@
             "Tactic: Initial Access",
             "Tactic: Exfiltration",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Lateral Movement"
         ],
         "threat": [
             {
@@ -125,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "483832a8-ffdd-4e11-8e96-e0224f7bda9b_2",
+    "id": "483832a8-ffdd-4e11-8e96-e0224f7bda9b_3",
     "type": "security-rule"
 }

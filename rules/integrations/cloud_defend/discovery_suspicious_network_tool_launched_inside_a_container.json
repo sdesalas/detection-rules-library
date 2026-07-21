@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "cloud_defend",
-                "version": "^1.4.0"
+                "version": ">=1.4.0"
             }
         ],
         "required_fields": [
@@ -72,7 +72,8 @@
             "Tactic: Discovery",
             "Tactic: Command and Control",
             "Tactic: Reconnaissance",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Credential Access"
         ],
         "threat": [
             {
@@ -138,8 +139,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "1a289854-5b78-49fe-9440-8a8096b1ab50_105",
+    "id": "1a289854-5b78-49fe-9440-8a8096b1ab50_106",
     "type": "security-rule"
 }

@@ -25,7 +25,7 @@
         "related_integrations": [
             {
                 "package": "fim",
-                "version": "^1.16.0"
+                "version": ">=1.16.0"
             }
         ],
         "required_fields": [
@@ -66,9 +66,10 @@
             "Tactic: Persistence",
             "Tactic: Credential Access",
             "Tactic: Privilege Escalation",
-            "Tactic: Defense Evasion",
             "Data Source: File Integrity Monitoring",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -177,7 +178,17 @@
                         "id": "T1556",
                         "name": "Modify Authentication Process",
                         "reference": "https://attack.mitre.org/techniques/T1556/"
-                    },
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
+                },
+                "technique": [
                     {
                         "id": "T1574",
                         "name": "Hijack Execution Flow",
@@ -189,6 +200,33 @@
                                 "reference": "https://attack.mitre.org/techniques/T1574/006/"
                             }
                         ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATT&CK",
+                "tactic": {
+                    "id": "TA0005",
+                    "name": "Stealth",
+                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.006",
+                                "name": "Dynamic Linker Hijacking",
+                                "reference": "https://attack.mitre.org/techniques/T1574/006/"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "T1014",
+                        "name": "Rootkit",
+                        "reference": "https://attack.mitre.org/techniques/T1014/"
                     }
                 ]
             },
@@ -240,27 +278,12 @@
                         "reference": "https://attack.mitre.org/techniques/T1556/"
                     }
                 ]
-            },
-            {
-                "framework": "MITRE ATT&CK",
-                "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": [
-                    {
-                        "id": "T1014",
-                        "name": "Rootkit",
-                        "reference": "https://attack.mitre.org/techniques/T1014/"
-                    }
-                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 12
+        "version": 13
     },
-    "id": "192657ba-ab0e-4901-89a2-911d611eee98_12",
+    "id": "192657ba-ab0e-4901-89a2-911d611eee98_13",
     "type": "security-rule"
 }

@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "kubernetes",
-                "version": "^1.80.0"
+                "version": ">=1.80.0"
             }
         ],
         "required_fields": [
@@ -64,7 +64,6 @@
             "Domain: Kubernetes",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Tactic: Defense Evasion",
             "Rule Type: BBR"
         ],
         "threat": [
@@ -87,27 +86,12 @@
                         "reference": "https://attack.mitre.org/techniques/T1609/"
                     }
                 ]
-            },
-            {
-                "framework": "MITRE ATT&CK",
-                "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": [
-                    {
-                        "id": "T1610",
-                        "name": "Deploy Container",
-                        "reference": "https://attack.mitre.org/techniques/T1610/"
-                    }
-                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "93120a05-caf5-47f6-a305-e8abee463fb9_1",
+    "id": "93120a05-caf5-47f6-a305-e8abee463fb9_2",
     "type": "security-rule"
 }

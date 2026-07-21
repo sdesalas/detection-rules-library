@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "cloud_defend",
-                "version": "^1.4.0"
+                "version": ">=1.4.0"
             }
         ],
         "required_fields": [
@@ -61,8 +61,9 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -83,9 +84,9 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
@@ -95,7 +96,7 @@
                         "subtechnique": [
                             {
                                 "id": "T1222.002",
-                                "name": "Linux and Mac File and Directory Permissions Modification",
+                                "name": "Linux and Mac Permissions",
                                 "reference": "https://attack.mitre.org/techniques/T1222/002/"
                             }
                         ]
@@ -127,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "ec604672-bed9-43e1-8871-cf591c052550_107",
+    "id": "ec604672-bed9-43e1-8871-cf591c052550_108",
     "type": "security-rule"
 }

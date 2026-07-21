@@ -27,7 +27,7 @@
         "related_integrations": [
             {
                 "package": "okta",
-                "version": "^3.5.0"
+                "version": ">=3.5.0"
             }
         ],
         "required_fields": [
@@ -59,14 +59,13 @@
                     "id": "TA0040",
                     "name": "Impact",
                     "reference": "https://attack.mitre.org/tactics/TA0040/"
-                },
-                "technique": []
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 413
+        "version": 414
     },
-    "id": "c74fd275-ab2c-4d49-8890-e2943fa65c09_413",
+    "id": "c74fd275-ab2c-4d49-8890-e2943fa65c09_414",
     "type": "security-rule"
 }

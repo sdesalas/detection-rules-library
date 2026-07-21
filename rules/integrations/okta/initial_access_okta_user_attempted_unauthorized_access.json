@@ -24,7 +24,7 @@
         "related_integrations": [
             {
                 "package": "okta",
-                "version": "^3.5.0"
+                "version": ">=3.5.0"
             }
         ],
         "required_fields": [
@@ -47,7 +47,9 @@
             "Tactic: Initial Access",
             "Use Case: Identity and Access Audit",
             "Data Source: Okta",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Persistence",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -78,8 +80,7 @@
                     "id": "TA0003",
                     "name": "Persistence",
                     "reference": "https://attack.mitre.org/tactics/TA0003/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -87,14 +88,13 @@
                     "id": "TA0004",
                     "name": "Privilege Escalation",
                     "reference": "https://attack.mitre.org/tactics/TA0004/"
-                },
-                "technique": []
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 415
+        "version": 416
     },
-    "id": "4edd3e1a-3aa0-499b-8147-4d2ea43b1613_415",
+    "id": "4edd3e1a-3aa0-499b-8147-4d2ea43b1613_416",
     "type": "security-rule"
 }

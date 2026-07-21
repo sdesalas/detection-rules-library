@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "auditd_manager",
-                "version": "^1.18.0"
+                "version": ">=1.18.0"
             }
         ],
         "required_fields": [
@@ -77,7 +77,8 @@
             "Tactic: Lateral Movement",
             "Resources: Investigation Guide",
             "Use Case: Vulnerability",
-            "Data Source: Auditd Manager"
+            "Data Source: Auditd Manager",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -128,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "eb3150eb-e9fb-4a64-a0fc-aa66cdd35632_3",
+    "id": "eb3150eb-e9fb-4a64-a0fc-aa66cdd35632_4",
     "type": "security-rule"
 }

@@ -23,11 +23,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             }
         ],
         "required_fields": [
@@ -75,20 +75,20 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
             "Tactic: Execution",
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
             "Data Source: Elastic Endgame",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -98,9 +98,9 @@
                         "reference": "https://attack.mitre.org/techniques/T1070/",
                         "subtechnique": [
                             {
-                                "id": "T1070.002",
+                                "id": "T1685.006",
                                 "name": "Clear Linux or Mac System Logs",
-                                "reference": "https://attack.mitre.org/techniques/T1070/002/"
+                                "reference": "https://attack.mitre.org/techniques/T1685/006/"
                             }
                         ]
                     },
@@ -146,14 +146,13 @@
                     "id": "TA0003",
                     "name": "Persistence",
                     "reference": "https://attack.mitre.org/tactics/TA0003/"
-                },
-                "technique": []
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "ddf26e25-3e30-42b2-92db-bde8eb82ad67_5",
+    "id": "ddf26e25-3e30-42b2-92db-bde8eb82ad67_6",
     "type": "security-rule"
 }

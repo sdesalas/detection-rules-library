@@ -24,7 +24,7 @@
         "related_integrations": [
             {
                 "package": "o365",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -63,7 +63,8 @@
             "Data Source: Microsoft 365",
             "Use Case: Configuration Audit",
             "Tactic: Exfiltration",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Collection"
         ],
         "threat": [
             {
@@ -106,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 213
+        "version": 214
     },
-    "id": "ff4dd44a-0ac6-44c4-8609-3f81bc820f02_213",
+    "id": "ff4dd44a-0ac6-44c4-8609-3f81bc820f02_214",
     "type": "security-rule"
 }

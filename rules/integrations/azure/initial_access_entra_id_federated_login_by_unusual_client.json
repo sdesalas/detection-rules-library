@@ -48,7 +48,7 @@
         "related_integrations": [
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -83,10 +83,10 @@
                 "type": "constant_keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "616b8d00-05f8-11f1-8f33-f661ea17fbce",
         "setup": "#### Required Microsoft Entra ID Sign-In Logs\nTo use this rule, ensure that Microsoft Entra ID Sign-In Logs are being collected and streamed into the Elastic Stack via the Azure integration.\n",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Domain: Identity",
@@ -95,9 +95,9 @@
             "Data Source: Microsoft Entra ID Sign-In Logs",
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
-            "Tactic: Defense Evasion",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Lateral Movement"
         ],
         "threat": [
             {
@@ -125,9 +125,9 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0008",
+                    "name": "Lateral Movement",
+                    "reference": "https://attack.mitre.org/tactics/TA0008/"
                 },
                 "technique": [
                     {
@@ -169,8 +169,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 5
     },
-    "id": "616b8d00-05f8-11f1-8f33-f661ea17fbce_3",
+    "id": "616b8d00-05f8-11f1-8f33-f661ea17fbce_5",
     "type": "security-rule"
 }

@@ -28,7 +28,7 @@
         "related_integrations": [
             {
                 "package": "okta",
-                "version": "^3.5.0"
+                "version": ">=3.5.0"
             }
         ],
         "required_fields": [
@@ -57,7 +57,8 @@
             "Data Source: Okta System Logs",
             "Use Case: Identity and Access Audit",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -107,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 415
+        "version": 416
     },
-    "id": "f06414a6-f2a4-466d-8eba-10f85e8abf71_415",
+    "id": "f06414a6-f2a4-466d-8eba-10f85e8abf71_416",
     "type": "security-rule"
 }

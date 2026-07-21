@@ -23,7 +23,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -83,7 +83,8 @@
             "Tactic: Credential Access",
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution"
         ],
         "threat": [
             {
@@ -145,8 +146,8 @@
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "96f29282-ffcc-4ce7-834b-b17aee905568_4",
+    "id": "96f29282-ffcc-4ce7-834b-b17aee905568_5",
     "type": "security-rule"
 }

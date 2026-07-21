@@ -20,11 +20,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "network_traffic",
-                "version": "^1.33.0"
+                "version": ">=1.33.0"
             }
         ],
         "risk_score": 21,
@@ -35,7 +35,12 @@
             "Use Case: Threat Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Command and Control",
+            "Tactic: Execution",
+            "Tactic: Exfiltration",
+            "Tactic: Initial Access",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -71,8 +76,7 @@
                     "id": "TA0003",
                     "name": "Persistence",
                     "reference": "https://attack.mitre.org/tactics/TA0003/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -143,8 +147,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 109
+        "version": 110
     },
-    "id": "35f86980-1fb1-4dff-b311-3be941549c8d_109",
+    "id": "35f86980-1fb1-4dff-b311-3be941549c8d_110",
     "type": "security-rule"
 }

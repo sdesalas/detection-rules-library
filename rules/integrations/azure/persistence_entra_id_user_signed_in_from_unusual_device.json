@@ -42,7 +42,7 @@
         "related_integrations": [
             {
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -94,7 +94,8 @@
             "Data Source: Azure",
             "Data Source: Microsoft Entra ID",
             "Data Source: Microsoft Entra ID Sign-in Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
@@ -144,8 +145,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "72c91fc0-4ac0-11f0-811f-f661ea17fbcd_3",
+    "id": "72c91fc0-4ac0-11f0-811f-f661ea17fbcd_4",
     "type": "security-rule"
 }

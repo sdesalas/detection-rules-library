@@ -46,7 +46,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "required_fields": [
@@ -71,9 +71,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "873b5452-074e-11ef-852e-f661ea17fbcc",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Data Source: AWS",
@@ -82,7 +82,8 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Privilege Escalation",
             "Tactic: Lateral Movement",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -154,8 +155,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 9
+        "version": 11
     },
-    "id": "873b5452-074e-11ef-852e-f661ea17fbcc_9",
+    "id": "873b5452-074e-11ef-852e-f661ea17fbcc_11",
     "type": "security-rule"
 }

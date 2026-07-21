@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "cloud_defend",
-                "version": "^1.4.0"
+                "version": ">=1.4.0"
             }
         ],
         "required_fields": [
@@ -70,7 +70,8 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Lateral Movement"
         ],
         "threat": [
             {
@@ -140,8 +141,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "26a989d2-010e-4dae-b46b-689d03cc22b3_2",
+    "id": "26a989d2-010e-4dae-b46b-689d03cc22b3_3",
     "type": "security-rule"
 }

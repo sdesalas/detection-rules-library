@@ -22,7 +22,7 @@
             {
                 "integration": "activitylogs",
                 "package": "azure",
-                "version": "^1.22.0"
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -51,7 +51,8 @@
             "Data Source: Azure",
             "Use Case: Identity and Access Audit",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Persistence"
         ],
         "threat": [
             {
@@ -113,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "1c966416-60c1-436b-bfd0-e002fddbfd89_109",
+    "id": "1c966416-60c1-436b-bfd0-e002fddbfd89_110",
     "type": "security-rule"
 }

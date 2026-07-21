@@ -37,7 +37,7 @@
         "related_integrations": [
             {
                 "package": "google_workspace",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -62,10 +62,10 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "9510add4-3392-11ed-bd01-f661ea17fbce",
         "setup": "The Google Workspace Fleet integration with the Admin data stream (`logs-google_workspace.admin-*`) is required for this rule.",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Data Source: Google Workspace",
@@ -98,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 111
+        "version": 112
     },
-    "id": "9510add4-3392-11ed-bd01-f661ea17fbce_111",
+    "id": "9510add4-3392-11ed-bd01-f661ea17fbce_112",
     "type": "security-rule"
 }

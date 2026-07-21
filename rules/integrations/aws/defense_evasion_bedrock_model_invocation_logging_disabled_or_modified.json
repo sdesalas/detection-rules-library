@@ -44,7 +44,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "required_fields": [
@@ -82,26 +82,26 @@
             "Use Case: Log Auditing",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
-            "Tactic: Defense Evasion"
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
-                        "id": "T1562",
-                        "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/",
+                        "id": "T1685",
+                        "name": "Disable or Modify Tools",
+                        "reference": "https://attack.mitre.org/techniques/T1685/",
                         "subtechnique": [
                             {
-                                "id": "T1562.008",
-                                "name": "Disable or Modify Cloud Logs",
-                                "reference": "https://attack.mitre.org/techniques/T1562/008/"
+                                "id": "T1685.002",
+                                "name": "Disable or Modify Cloud Log",
+                                "reference": "https://attack.mitre.org/techniques/T1685/002/"
                             }
                         ]
                     }
@@ -110,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "fa830742-fd41-4b12-a287-2c57bdf079ef_1",
+    "id": "fa830742-fd41-4b12-a287-2c57bdf079ef_2",
     "type": "security-rule"
 }

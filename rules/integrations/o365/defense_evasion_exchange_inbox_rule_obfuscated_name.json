@@ -35,7 +35,7 @@
         "related_integrations": [
             {
                 "package": "o365",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -130,15 +130,16 @@
             "Data Source: Microsoft 365",
             "Data Source: Microsoft 365 Audit Logs",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Persistence",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -181,8 +182,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "1c3d9346-4591-4894-935c-dad2824850f2_1",
+    "id": "1c3d9346-4591-4894-935c-dad2824850f2_2",
     "type": "security-rule"
 }

@@ -44,8 +44,7 @@
                     "id": "TA0002",
                     "name": "Execution",
                     "reference": "https://attack.mitre.org/tactics/TA0002/"
-                },
-                "technique": []
+                }
             }
         ],
         "threshold": {
@@ -62,8 +61,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 102
+        "version": 103
     },
-    "id": "929223b4-fba3-4a1c-a943-ec4716ad23ec_102",
+    "id": "929223b4-fba3-4a1c-a943-ec4716ad23ec_103",
     "type": "security-rule"
 }

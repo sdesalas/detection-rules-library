@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "o365",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -61,8 +61,7 @@
                     "id": "TA0009",
                     "name": "Collection",
                     "reference": "https://attack.mitre.org/tactics/TA0009/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -70,8 +69,7 @@
                     "id": "TA0010",
                     "name": "Exfiltration",
                     "reference": "https://attack.mitre.org/tactics/TA0010/"
-                },
-                "technique": []
+                }
             },
             {
                 "framework": "MITRE ATT&CK",
@@ -79,14 +77,13 @@
                     "id": "TA0040",
                     "name": "Impact",
                     "reference": "https://attack.mitre.org/tactics/TA0040/"
-                },
-                "technique": []
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "f2c43e8c-ccf2-4eab-9e9a-e335da253773_1",
+    "id": "f2c43e8c-ccf2-4eab-9e9a-e335da253773_2",
     "type": "security-rule"
 }

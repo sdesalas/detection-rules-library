@@ -25,11 +25,11 @@
         "related_integrations": [
             {
                 "package": "system",
-                "version": "^2.0.0"
+                "version": ">=2.0.0"
             },
             {
                 "package": "windows",
-                "version": "^3.0.0"
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -62,42 +62,35 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
-                        "id": "T1562",
-                        "name": "Impair Defenses",
-                        "reference": "https://attack.mitre.org/techniques/T1562/",
-                        "subtechnique": [
-                            {
-                                "id": "T1562.001",
-                                "name": "Disable or Modify Tools",
-                                "reference": "https://attack.mitre.org/techniques/T1562/001/"
-                            },
-                            {
-                                "id": "T1562.004",
-                                "name": "Disable or Modify System Firewall",
-                                "reference": "https://attack.mitre.org/techniques/T1562/004/"
-                            }
-                        ]
+                        "id": "T1685",
+                        "name": "Disable or Modify Tools",
+                        "reference": "https://attack.mitre.org/techniques/T1685/"
+                    },
+                    {
+                        "id": "T1686",
+                        "name": "Disable or Modify System Firewall",
+                        "reference": "https://attack.mitre.org/techniques/T1686/"
                     }
                 ]
             }
         ],
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "92d3a04e-6487-4b62-892d-70e640a590dc_111",
+    "id": "92d3a04e-6487-4b62-892d-70e640a590dc_112",
     "type": "security-rule"
 }

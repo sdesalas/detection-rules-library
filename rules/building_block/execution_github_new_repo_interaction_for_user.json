@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "github",
-                "version": "^2.4.0"
+                "version": ">=2.4.0"
             }
         ],
         "required_fields": [
@@ -60,7 +60,8 @@
             "Use Case: UEBA",
             "Tactic: Execution",
             "Rule Type: BBR",
-            "Data Source: Github"
+            "Data Source: Github",
+            "Tactic: Collection"
         ],
         "threat": [
             {
@@ -103,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 208
+        "version": 209
     },
-    "id": "01c49712-25bc-49d2-a27d-d7ce52f5dc49_208",
+    "id": "01c49712-25bc-49d2-a27d-d7ce52f5dc49_209",
     "type": "security-rule"
 }

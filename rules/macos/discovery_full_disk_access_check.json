@@ -16,7 +16,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -60,7 +60,8 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Privilege Escalation"
         ],
         "threat": [
             {
@@ -75,28 +76,6 @@
                         "id": "T1083",
                         "name": "File and Directory Discovery",
                         "reference": "https://attack.mitre.org/techniques/T1083/"
-                    }
-                ]
-            },
-            {
-                "framework": "MITRE ATT&CK",
-                "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": [
-                    {
-                        "id": "T1548",
-                        "name": "Abuse Elevation Control Mechanism",
-                        "reference": "https://attack.mitre.org/techniques/T1548/",
-                        "subtechnique": [
-                            {
-                                "id": "T1548.006",
-                                "name": "TCC Manipulation",
-                                "reference": "https://attack.mitre.org/techniques/T1548/006/"
-                            }
-                        ]
                     }
                 ]
             },
@@ -125,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "e26c0f76-2e80-445b-9e98-ab5532ccc46f_2",
+    "id": "e26c0f76-2e80-445b-9e98-ab5532ccc46f_3",
     "type": "security-rule"
 }

@@ -19,7 +19,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -58,26 +58,11 @@
             "OS: macOS",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Collection"
         ],
         "threat": [
-            {
-                "framework": "MITRE ATT&CK",
-                "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
-                },
-                "technique": [
-                    {
-                        "id": "T1548",
-                        "name": "Abuse Elevation Control Mechanism",
-                        "reference": "https://attack.mitre.org/techniques/T1548/"
-                    }
-                ]
-            },
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
@@ -111,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 114
+        "version": 115
     },
-    "id": "c02c8b9f-5e1d-463c-a1b0-04edcdfe1a3d_114",
+    "id": "c02c8b9f-5e1d-463c-a1b0-04edcdfe1a3d_115",
     "type": "security-rule"
 }

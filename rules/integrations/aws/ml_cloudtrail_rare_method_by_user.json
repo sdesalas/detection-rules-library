@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "risk_score": 21,
@@ -33,7 +33,12 @@
             "Data Source: Amazon Web Services",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Exfiltration",
+            "Tactic: Initial Access",
+            "Tactic: Lateral Movement",
+            "Tactic: Persistence",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
@@ -121,7 +126,7 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -141,8 +146,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 313
+        "version": 314
     },
-    "id": "ac706eae-d5ec-4b14-b4fd-e8ba8086f0e1_313",
+    "id": "ac706eae-d5ec-4b14-b4fd-e8ba8086f0e1_314",
     "type": "security-rule"
 }

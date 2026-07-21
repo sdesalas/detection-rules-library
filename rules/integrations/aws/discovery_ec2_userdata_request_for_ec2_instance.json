@@ -45,7 +45,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": ">=6.0.0"
             }
         ],
         "required_fields": [
@@ -90,7 +90,8 @@
             "Data Source: Amazon EC2",
             "Resources: Investigation Guide",
             "Use Case: Log Auditing",
-            "Tactic: Discovery"
+            "Tactic: Discovery",
+            "Tactic: Credential Access"
         ],
         "threat": [
             {
@@ -133,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 9
+        "version": 10
     },
-    "id": "c1e79a70-fa6f-11ee-8bc8-f661ea17fbce_9",
+    "id": "c1e79a70-fa6f-11ee-8bc8-f661ea17fbce_10",
     "type": "security-rule"
 }

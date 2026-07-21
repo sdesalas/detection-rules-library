@@ -24,11 +24,11 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             },
             {
                 "package": "sentinel_one_cloud_funnel",
-                "version": "^1.9.0"
+                "version": ">=1.9.0"
             }
         ],
         "required_fields": [
@@ -80,7 +80,8 @@
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Defense Impairment"
         ],
         "threat": [
             {
@@ -144,9 +145,9 @@
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0005",
-                    "name": "Defense Evasion",
-                    "reference": "https://attack.mitre.org/tactics/TA0005/"
+                    "id": "TA0112",
+                    "name": "Defense Impairment",
+                    "reference": "https://attack.mitre.org/tactics/TA0112/"
                 },
                 "technique": [
                     {
@@ -156,7 +157,7 @@
                         "subtechnique": [
                             {
                                 "id": "T1222.002",
-                                "name": "Linux and Mac File and Directory Permissions Modification",
+                                "name": "Linux and Mac Permissions",
                                 "reference": "https://attack.mitre.org/techniques/T1222/002/"
                             }
                         ]
@@ -166,8 +167,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "94418745-529f-4259-8d25-a713a6feb6ae_109",
+    "id": "94418745-529f-4259-8d25-a713a6feb6ae_110",
     "type": "security-rule"
 }

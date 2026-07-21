@@ -17,7 +17,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -50,19 +50,19 @@
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
-            "Tactic: Privilege Escalation",
-            "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Execution",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
-                    "id": "TA0004",
-                    "name": "Privilege Escalation",
-                    "reference": "https://attack.mitre.org/tactics/TA0004/"
+                    "id": "TA0002",
+                    "name": "Execution",
+                    "reference": "https://attack.mitre.org/tactics/TA0002/"
                 },
                 "technique": [
                     {
@@ -83,10 +83,22 @@
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
+                    {
+                        "id": "T1574",
+                        "name": "Hijack Execution Flow",
+                        "reference": "https://attack.mitre.org/techniques/T1574/",
+                        "subtechnique": [
+                            {
+                                "id": "T1574.013",
+                                "name": "KernelCallbackTable",
+                                "reference": "https://attack.mitre.org/techniques/T1574/013/"
+                            }
+                        ]
+                    },
                     {
                         "id": "T1014",
                         "name": "Rootkit",
@@ -109,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "7dfaaa17-425c-4fe7-bd36-83705fde7c2b_7",
+    "id": "7dfaaa17-425c-4fe7-bd36-83705fde7c2b_8",
     "type": "security-rule"
 }

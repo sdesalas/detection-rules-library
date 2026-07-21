@@ -16,7 +16,7 @@
         "related_integrations": [
             {
                 "package": "endpoint",
-                "version": "^9.0.0"
+                "version": ">=9.0.0"
             }
         ],
         "required_fields": [
@@ -31,15 +31,16 @@
         "severity": "high",
         "tags": [
             "Use Case: Threat Detection",
-            "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Impact",
+            "Tactic: Stealth"
         ],
         "threat": [
             {
                 "framework": "MITRE ATT&CK",
                 "tactic": {
                     "id": "TA0005",
-                    "name": "Defense Evasion",
+                    "name": "Stealth",
                     "reference": "https://attack.mitre.org/tactics/TA0005/"
                 },
                 "technique": [
@@ -75,8 +76,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 107
+        "version": 108
     },
-    "id": "493834ca-f861-414c-8602-150d5505b777_107",
+    "id": "493834ca-f861-414c-8602-150d5505b777_108",
     "type": "security-rule"
 }

@@ -17,7 +17,7 @@
         "related_integrations": [
             {
                 "package": "cloud_defend",
-                "version": "^1.4.0"
+                "version": ">=1.4.0"
             }
         ],
         "required_fields": [
@@ -73,7 +73,9 @@
             "Tactic: Persistence",
             "Tactic: Execution",
             "Tactic: Command and Control",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Tactic: Credential Access",
+            "Tactic: Initial Access"
         ],
         "threat": [
             {
@@ -185,8 +187,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "497a7091-0ebd-44d7-88c4-367ab4d4d852_4",
+    "id": "497a7091-0ebd-44d7-88c4-367ab4d4d852_5",
     "type": "security-rule"
 }
