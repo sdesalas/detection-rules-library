@@ -43,10 +43,10 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "aa8007f0-d1df-49ef-8520-407857594827",
         "setup": "The GCP Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Data Source: GCP",
@@ -123,8 +123,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "aa8007f0-d1df-49ef-8520-407857594827_109",
+    "id": "aa8007f0-d1df-49ef-8520-407857594827_110",
     "type": "security-rule"
 }

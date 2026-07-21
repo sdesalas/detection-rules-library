@@ -66,9 +66,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "1aa8fa52-44a7-4dae-b058-f3333b91c8d7",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Data Source: AWS",
@@ -109,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 215
+        "version": 216
     },
-    "id": "1aa8fa52-44a7-4dae-b058-f3333b91c8d7_215",
+    "id": "1aa8fa52-44a7-4dae-b058-f3333b91c8d7_216",
     "type": "security-rule"
 }

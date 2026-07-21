@@ -60,9 +60,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "f541ca3a-5752-11f0-b44b-f661ea17fbcd",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Data Source: Azure",
@@ -160,8 +160,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "f541ca3a-5752-11f0-b44b-f661ea17fbcd_3",
+    "id": "f541ca3a-5752-11f0-b44b-f661ea17fbcd_4",
     "type": "security-rule"
 }

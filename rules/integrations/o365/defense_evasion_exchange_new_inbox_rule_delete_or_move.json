@@ -74,9 +74,9 @@
                 "type": "unknown"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "40fe11c2-376e-11f0-9a82-f661ea17fbcd",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Domain: SaaS",
@@ -135,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "40fe11c2-376e-11f0-9a82-f661ea17fbcd_5",
+    "id": "40fe11c2-376e-11f0-9a82-f661ea17fbcd_6",
     "type": "security-rule"
 }
