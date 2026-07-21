@@ -77,10 +77,10 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "4f95e0f8-18b7-459a-b8b5-b2f5c94bf6eb",
         "setup": "Microsoft Entra ID sign-in logs (`logs-azure.signinlogs-*`) must include `azure.signinlogs.properties.app_id` and\n`azure.signinlogs.properties.resource_id`. Tune the exclusion list for first-party resource identifiers your tenant\nexpects from the Microsoft Authentication Broker.\n",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Domain: Identity",
@@ -139,8 +139,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "4f95e0f8-18b7-459a-b8b5-b2f5c94bf6eb_1",
+    "id": "4f95e0f8-18b7-459a-b8b5-b2f5c94bf6eb_2",
     "type": "security-rule"
 }

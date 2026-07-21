@@ -17,7 +17,7 @@
         "license": "Elastic License v2",
         "name": "Chroot Execution in Container Context on Linux",
         "note": "## Triage and analysis\n\n### Investigating Chroot Execution in Container Context on Linux\n\nThis alert is the host-process analogue to Defend for Containers chroot coverage: it keys on chroot binaries or\narguments plus signals that the execution is tied to a container runtime (runc parent, runc init title, or Elastic\nDefend container session metadata). Review the command line for the target root path, especially host-linked mounts such\nas `/host`, `/proc/1/root`, or unexpected node paths.\n\n### Possible investigation steps\n\n- Confirm whether the workload was expected to use chroot and whether the target directory is an internal build root\n  versus a host filesystem mount.\n- For Elastic Defend events, use session and entry leader context to map the pod or container image; for Auditd\n  Manager events, pivot on `process.parent` and nearby syscall activity on the same host.\n- Hunt for follow-on shell execution, access to the container runtime socket, or kubelet credential paths.\n\n### False positive analysis\n\n- Legitimate image builds and package installs may chroot into a prepared rootfs; tune by parent process, user, or CI\n  agent identity when noise is high.\n\n### Response and remediation\n\n- If unauthorized, isolate the workload and node, preserve artifacts, and rotate credentials exposed to the container.\n",
-        "query": "host.os.type:linux and event.category:process and \nevent.type:start and event.action:(executed or exec) and \n(process.name:\"chroot\" or process.args:(\"chroot\" or \"/bin/chroot\" or \"/usr/bin/chroot\" or \"/usr/local/bin/chroot\")) and \n(process.title:\"runc init\" or process.entry_leader.entry_meta.type:\"container\" or process.parent.name:(\"runc\" or \"containerd-shim-runc-v2\"))\n",
+        "query": "host.os.type:linux and event.category:process and \nevent.type:start and event.action:(executed or exec) and \n(process.name:\"chroot\" or process.args:(\"chroot\" or \"/bin/chroot\" or \"/usr/bin/chroot\" or \"/usr/local/bin/chroot\")) and \n(process.title:\"runc init\" or process.entry_leader.entry_meta.type:\"container\" or process.parent.name:(\"runc\" or \"containerd-shim-runc-v2\")) and\nnot process.args:(apt-get or add-apt-repository or apt-cache* or */var/lib/rancher/agent/tmp* or dpkg)\n",
         "references": [
             "https://some-natalie.dev/container-escapes-chroot/",
             "https://attack.mitre.org/techniques/T1611/"
@@ -112,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "9056d577-4da5-47bf-8c94-6c0b1bb3f8a5_1",
+    "id": "9056d577-4da5-47bf-8c94-6c0b1bb3f8a5_2",
     "type": "security-rule"
 }

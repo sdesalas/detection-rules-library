@@ -70,9 +70,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "0f189343-dac7-4c1b-aca7-be8baa6bd02b",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Domain: Kubernetes",
@@ -109,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "0f189343-dac7-4c1b-aca7-be8baa6bd02b_1",
+    "id": "0f189343-dac7-4c1b-aca7-be8baa6bd02b_2",
     "type": "security-rule"
 }

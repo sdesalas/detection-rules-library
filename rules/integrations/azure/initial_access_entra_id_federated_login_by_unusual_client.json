@@ -83,10 +83,10 @@
                 "type": "constant_keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "616b8d00-05f8-11f1-8f33-f661ea17fbce",
         "setup": "#### Required Microsoft Entra ID Sign-In Logs\nTo use this rule, ensure that Microsoft Entra ID Sign-In Logs are being collected and streamed into the Elastic Stack via the Azure integration.\n",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Domain: Identity",
@@ -169,8 +169,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "616b8d00-05f8-11f1-8f33-f661ea17fbce_3",
+    "id": "616b8d00-05f8-11f1-8f33-f661ea17fbce_4",
     "type": "security-rule"
 }

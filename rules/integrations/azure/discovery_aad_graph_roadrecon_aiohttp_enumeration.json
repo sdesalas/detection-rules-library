@@ -55,10 +55,10 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "80aa6cca-b343-457b-877e-5877cd71a1f8",
         "setup": "#### Azure AD Graph Activity Logs\nRequires Azure AD Graph Activity Logs ingested into `logs-azure.aadgraphactivitylogs-*` via the Elastic Azure integration. Enable the `AzureADGraphActivityLogs` diagnostic-settings category on Entra ID.\n",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Data Source: Azure",
@@ -111,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "80aa6cca-b343-457b-877e-5877cd71a1f8_1",
+    "id": "80aa6cca-b343-457b-877e-5877cd71a1f8_2",
     "type": "security-rule"
 }
