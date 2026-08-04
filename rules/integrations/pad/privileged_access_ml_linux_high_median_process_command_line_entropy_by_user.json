@@ -34,6 +34,8 @@
         "setup": "## Setup\n\nThe rule requires the Privileged Access Detection integration assets to be installed, as well as Linux logs collected by integrations such as Elastic Defend and Sysmon Linux.\n\n### Privileged Access Detection Setup\nThe Privileged Access Detection integration detects privileged access activity by identifying abnormalities in Windows, Linux and Okta events. Anomalies are detected using Elastic's Anomaly Detection feature.\n\n#### Prerequisite Requirements:\n- Fleet is required for Privileged Access Detection.\n- To configure Fleet Server refer to the [documentation](https://www.elastic.co/guide/en/fleet/current/fleet-server.html).\n- Linux events collected by [Elastic Defend](https://docs.elastic.co/en/integrations/endpoint) or [Sysmon Linux](https://docs.elastic.co/en/integrations/sysmon_linux) integration.\n- To install Elastic Defend, refer to the [documentation](https://www.elastic.co/guide/en/security/current/install-endpoint.html).\n- To add Sysmon Linux integration to an Elastic Agent policy, refer to [this](https://www.elastic.co/guide/en/fleet/current/add-integration-to-policy.html) guide.\n\n#### The following steps should be executed to install assets associated with the Privileged Access Detection integration:\n- Go to the Kibana homepage. Under Management, click Integrations.\n- In the query bar, search for Privileged Access Detection and select the integration to see more details about it.\n- Follow the instructions under the **Installation** section.\n- For this rule to work, complete the instructions through **Add preconfigured anomaly detection jobs**.\n",
         "severity": "low",
         "tags": [
+            "Data Source: Elastic Defend",
+            "Data Source: Linux Sysmon Logs",
             "Use Case: Privileged Access Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
@@ -74,8 +76,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 105
+        "version": 106
     },
-    "id": "0cbbb5e0-f93a-47fe-ab72-8213366c38f1_105",
+    "id": "0cbbb5e0-f93a-47fe-ab72-8213366c38f1_106",
     "type": "security-rule"
 }

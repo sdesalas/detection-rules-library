@@ -94,7 +94,8 @@
             "Tactic: Command and Control",
             "Tactic: Exfiltration",
             "Data Source: Auditd Manager",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Resources: LLM"
         ],
         "threat": [
             {
@@ -145,8 +146,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "504e398f-5ad6-42c7-acd2-b2f4ddcdb0cf_1",
+    "id": "504e398f-5ad6-42c7-acd2-b2f4ddcdb0cf_2",
     "type": "security-rule"
 }

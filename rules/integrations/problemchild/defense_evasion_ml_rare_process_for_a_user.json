@@ -33,6 +33,8 @@
         "tags": [
             "Domain: Endpoint",
             "OS: Windows",
+            "Data Source: Elastic Defend",
+            "Data Source: Elastic Endgame",
             "Use Case: Living off the Land Attack Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
@@ -62,8 +64,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 212
+        "version": 213
     },
-    "id": "40155ee4-1e6a-4e4d-a63b-e8ba16980cfb_212",
+    "id": "40155ee4-1e6a-4e4d-a63b-e8ba16980cfb_213",
     "type": "security-rule"
 }
