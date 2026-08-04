@@ -72,12 +72,13 @@
             "Use Case: Threat Detection",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
+            "Resources: LLM",
             "Rule Type: Higher-Order Rule"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 6
+        "version": 7
     },
-    "id": "3dc4e312-346b-4a10-b05f-450e1eeab91c_6",
+    "id": "3dc4e312-346b-4a10-b05f-450e1eeab91c_7",
     "type": "security-rule"
 }

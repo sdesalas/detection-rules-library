@@ -21,19 +21,16 @@
                 "version": "^2.0.0"
             },
             {
-                "package": "endpoint",
-                "version": "^9.0.0"
-            },
-            {
-                "package": "windows",
-                "version": "^3.0.0"
+                "package": "system",
+                "version": "^2.0.0"
             }
         ],
         "risk_score": 21,
         "rule_id": "27569131-560e-441e-b556-0b9180af3332",
-        "setup": "## Setup\n\nThe rule requires the Privileged Access Detection integration assets to be installed, as well as Windows logs collected by integrations such as Elastic Defend and Windows.\n\n### Privileged Access Detection Setup\nThe Privileged Access Detection integration detects privileged access activity by identifying abnormalities in Windows, Linux and Okta events. Anomalies are detected using Elastic's Anomaly Detection feature.\n\n#### Prerequisite Requirements:\n- Fleet is required for Privileged Access Detection.\n- To configure Fleet Server refer to the [documentation](https://www.elastic.co/guide/en/fleet/current/fleet-server.html).\n- Windows events collected by the [Elastic Defend](https://docs.elastic.co/en/integrations/endpoint) and [Windows](https://docs.elastic.co/en/integrations/windows) integration.\n- To install Elastic Defend, refer to the [documentation](https://www.elastic.co/guide/en/security/current/install-endpoint.html).\n- To add the Windows integration to an Elastic Agent policy, refer to [this](https://www.elastic.co/guide/en/fleet/current/add-integration-to-policy.html) guide.\n\n#### The following steps should be executed to install assets associated with the Privileged Access Detection integration:\n- Go to the Kibana homepage. Under Management, click Integrations.\n- In the query bar, search for Privileged Access Detection and select the integration to see more details about it.\n- Follow the instructions under the **Installation** section.\n- For this rule to work, complete the instructions through **Add preconfigured anomaly detection jobs**.\n",
+        "setup": "## Setup\n\nThe rule requires the Privileged Access Detection integration assets to be installed, as well as Windows logs collected by the System integration.\n\n### Privileged Access Detection Setup\nThe Privileged Access Detection integration detects privileged access activity by identifying abnormalities in Windows, Linux and Okta events. Anomalies are detected using Elastic's Anomaly Detection feature.\n\n#### Prerequisite Requirements:\n- Fleet is required for Privileged Access Detection.\n- To configure Fleet Server refer to the [documentation](https://www.elastic.co/guide/en/fleet/current/fleet-server.html).\n- Windows events collected by the [System](https://docs.elastic.co/en/integrations/system) integration.\n- To add the System integration to an Elastic Agent policy, refer to [this](https://www.elastic.co/guide/en/fleet/current/add-integration-to-policy.html) guide.\n\n#### The following steps should be executed to install assets associated with the Privileged Access Detection integration:\n- Go to the Kibana homepage. Under Management, click Integrations.\n- In the query bar, search for Privileged Access Detection and select the integration to see more details about it.\n- Follow the instructions under the **Installation** section.\n- For this rule to work, complete the instructions through **Add preconfigured anomaly detection jobs**.\n",
         "severity": "low",
         "tags": [
+            "Data Source: Windows Security Event Logs",
             "Use Case: Privileged Access Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
@@ -83,8 +80,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 104
+        "version": 105
     },
-    "id": "27569131-560e-441e-b556-0b9180af3332_104",
+    "id": "27569131-560e-441e-b556-0b9180af3332_105",
     "type": "security-rule"
 }

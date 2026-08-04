@@ -32,6 +32,7 @@
         "setup": "## Setup\n\nThis rule requires the `host.ip` field to be populated.\nFor **Elastic Defend** events on versions **8.18 and above**, this field is **disabled by default**.\n\nIf you are using **Elastic Defend**, ensure host IP collection is enabled by following the configuration steps in the\n[helper guide](https://www.elastic.co/docs/solutions/security/configure-elastic-defend/configure-data-volume-for-elastic-endpoint#host-fields).\n\nThe rule requires the Lateral Movement Detection integration assets to be installed, as well as file and Windows RDP process events collected by the Elastic Defend integration.\n\n### Lateral Movement Detection Setup\nThe Lateral Movement Detection integration detects lateral movement activity by identifying abnormalities in file and Windows RDP events. Anomalies are detected using Elastic's Anomaly Detection feature.\n\n#### Prerequisite Requirements:\n- Fleet is required for Lateral Movement Detection.\n- To configure Fleet Server refer to the [documentation](https://www.elastic.co/guide/en/fleet/current/fleet-server.html).\n- File events collected by the [Elastic Defend](https://docs.elastic.co/en/integrations/endpoint) integration.\n- To install Elastic Defend, refer to the [documentation](https://www.elastic.co/guide/en/security/current/install-endpoint.html).\n\n#### The following steps should be executed to install assets associated with the Lateral Movement Detection integration:\n- Go to the Kibana homepage. Under Management, click Integrations.\n- In the query bar, search for Lateral Movement Detection and select the integration to see more details about it.\n- Follow the instructions under the **Installation** section.\n- For this rule to work, complete the instructions through **Add preconfigured anomaly detection jobs**.\n",
         "severity": "low",
         "tags": [
+            "Data Source: Elastic Defend",
             "Use Case: Lateral Movement Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
@@ -61,8 +62,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 109
+        "version": 110
     },
-    "id": "814d96c7-2068-42aa-ba8e-fe0ddd565e2e_109",
+    "id": "814d96c7-2068-42aa-ba8e-fe0ddd565e2e_110",
     "type": "security-rule"
 }

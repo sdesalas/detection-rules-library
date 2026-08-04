@@ -101,7 +101,8 @@
             "Tactic: Command and Control",
             "Tactic: Exfiltration",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Resources: LLM"
         ],
         "threat": [
             {
@@ -152,8 +153,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "d3851f38-ce10-4d13-a056-99fe711e6bcc_1",
+    "id": "d3851f38-ce10-4d13-a056-99fe711e6bcc_2",
     "type": "security-rule"
 }

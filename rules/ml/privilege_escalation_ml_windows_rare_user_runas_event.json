@@ -36,6 +36,8 @@
         "tags": [
             "Domain: Endpoint",
             "OS: Windows",
+            "Data Source: Elastic Defend",
+            "Data Source: Windows Security Event Logs",
             "Use Case: Threat Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
@@ -72,8 +74,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 310
+        "version": 311
     },
-    "id": "1781d055-5c66-4adf-9d82-fc0fa58449c8_310",
+    "id": "1781d055-5c66-4adf-9d82-fc0fa58449c8_311",
     "type": "security-rule"
 }

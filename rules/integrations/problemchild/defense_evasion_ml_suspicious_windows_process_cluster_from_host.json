@@ -31,6 +31,8 @@
         "setup": "## Setup\n\nThe rule requires the Living off the Land (LotL) Attack Detection integration assets to be installed, as well as Windows process events collected by integrations such as Elastic Defend or Winlogbeat.\n\n### LotL Attack Detection Setup\nThe LotL Attack Detection integration detects living-off-the-land activity in Windows process events.\n\n#### Prerequisite Requirements:\n- Fleet is required for LotL Attack Detection.\n- To configure Fleet Server refer to the [documentation](https://www.elastic.co/guide/en/fleet/current/fleet-server.html).\n- Windows process events collected by the [Elastic Defend](https://docs.elastic.co/en/integrations/endpoint) integration or Winlogbeat(https://www.elastic.co/guide/en/beats/winlogbeat/current/_winlogbeat_overview.html).\n- To install Elastic Defend, refer to the [documentation](https://www.elastic.co/guide/en/security/current/install-endpoint.html).\n- To set up and run Winlogbeat, follow [this](https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation-configuration.html) guide.\n\n#### The following steps should be executed to install assets associated with the LotL Attack Detection integration:\n- Go to the Kibana homepage. Under Management, click Integrations.\n- In the query bar, search for Living off the Land Attack Detection and select the integration to see more details about it.\n- Follow the instructions under the **Installation** section.\n- For this rule to work, complete the instructions through **Add preconfigured anomaly detection jobs**.\n",
         "severity": "low",
         "tags": [
+            "Data Source: Elastic Defend",
+            "Data Source: Elastic Endgame",
             "Use Case: Living off the Land Attack Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
@@ -60,8 +62,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 211
+        "version": 212
     },
-    "id": "bdfebe11-e169-42e3-b344-c5d2015533d3_211",
+    "id": "bdfebe11-e169-42e3-b344-c5d2015533d3_212",
     "type": "security-rule"
 }

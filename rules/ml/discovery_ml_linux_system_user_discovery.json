@@ -33,6 +33,8 @@
         "tags": [
             "Domain: Endpoint",
             "OS: Linux",
+            "Data Source: Elastic Defend",
+            "Data Source: Auditd Manager",
             "Use Case: Threat Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
@@ -57,8 +59,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 208
+        "version": 209
     },
-    "id": "59756272-1998-4b8c-be14-e287035c4d10_208",
+    "id": "59756272-1998-4b8c-be14-e287035c4d10_209",
     "type": "security-rule"
 }
