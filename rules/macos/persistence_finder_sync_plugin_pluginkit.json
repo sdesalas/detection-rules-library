@@ -1,7 +1,8 @@
 {
     "attributes": {
         "author": [
-            "Elastic"
+            "Elastic",
+            "Massimo Bertocchi"
         ],
         "description": "Finder Sync plugins enable users to extend Finder\u2019s functionality by modifying the user interface. Adversaries may abuse this feature by adding a rogue Finder Plugin to repeatedly execute malicious payloads for persistence.",
         "false_positives": [
@@ -93,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "37f638ea-909d-4f94-9248-edd21e4a9906_212",
+    "id": "37f638ea-909d-4f94-9248-edd21e4a9906_213",
     "type": "security-rule"
 }

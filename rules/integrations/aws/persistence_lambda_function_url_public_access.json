@@ -34,7 +34,7 @@
         "license": "Elastic License v2",
         "name": "AWS Lambda Function URL Created with Public Access",
         "note": "## Triage and analysis\n\n### Investigating AWS Lambda Function URL Created with Public Access\n\nA Lambda function URL is a dedicated HTTPS endpoint for a function. When configured with `authType=NONE`, anyone on the internet can invoke the function without AWS authentication. Adversaries use this to create a public, persistent entry point for command and control, data exfiltration, or running attacker-controlled code without needing AWS credentials.\n\nThis rule detects successful `CreateFunctionUrlConfig` and `UpdateFunctionUrlConfig` calls where the auth type is set to NONE.\n\n### Possible investigation steps\n\n- Identify the actor in `aws.cloudtrail.user_identity.arn` and `aws.cloudtrail.user_identity.type`, and review `source.ip` and `user_agent.original` to determine how the change was made.\n- Inspect `aws.cloudtrail.request_parameters` for the `functionName` and the auth type, and review `aws.cloudtrail.response_elements` for the resulting `functionUrl`.\n- Determine whether the function is intended to be public and whether the owning team requested an unauthenticated endpoint.\n- Review the function's code, execution role, and recent changes (`UpdateFunctionCode`, `UpdateFunctionConfiguration`, `AddPermission`) for signs of tampering.\n- Correlate with other activity by the same principal, and check the function's invocation and access logs for traffic from unexpected sources after the URL was exposed.\n\n### False positive analysis\n\n- Public webhooks, simple APIs, and front-end integrations sometimes use unauthenticated function URLs intentionally. Confirm the exposure is approved and exclude known public endpoints on `functionName` or `aws.cloudtrail.user_identity.arn` after validation.\n\n### Response and remediation\n\n- If the exposure is unauthorized, change the function URL auth type to `AWS_IAM` or delete the function URL configuration, and review the function code and execution role for compromise.\n- Examine invocation logs for unauthenticated requests received while the URL was public and assess potential impact.\n- Rotate or restrict credentials for the principal if compromise is suspected, and constrain `lambda:CreateFunctionUrlConfig` and `lambda:UpdateFunctionUrlConfig` to trusted roles.\n\n### Additional information\n\n- [Lambda function URLs](https://docs.aws.amazon.com/lambda/latest/dg/lambda-urls.html)\n- [Security and auth model for Lambda function URLs](https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html)\n",
-        "query": "any where data_stream.dataset == \"aws.cloudtrail\"\n    and event.provider == \"lambda.amazonaws.com\"\n    and event.outcome == \"success\"\n    and not (user_agent.original : \"*terraform*\" or user_agent.original : \"*pulumi*\" or user_agent.original : \"*ansible*\")\n    and not (aws.cloudtrail.user_identity.arn : \"*terraform*\" or aws.cloudtrail.user_identity.arn : \"*pulumi*\" or aws.cloudtrail.user_identity.arn : \"*ansible*\")\n    and (event.action : \"CreateFunctionUrlConfig*\" or event.action : \"UpdateFunctionUrlConfig*\")\n    and stringContains(aws.cloudtrail.request_parameters, \"authType=NONE\")\n",
+        "query": "any where data_stream.dataset == \"aws.cloudtrail\"\n    and event.provider == \"lambda.amazonaws.com\"\n    and event.outcome == \"success\"\n    and not (user_agent.original : \"*terraform*\" or user_agent.original : \"*pulumi*\" or user_agent.original : \"*ansible*\")\n    and not (aws.cloudtrail.user_identity.arn : \"*terraform*\" or aws.cloudtrail.user_identity.arn : \"*pulumi*\" or aws.cloudtrail.user_identity.arn : \"*ansible*\")\n    and (event.action : \"CreateFunctionUrlConfig*\" or event.action : \"UpdateFunctionUrlConfig*\")\n    and stringContains(aws.cloudtrail.request_parameters, \"authType=NONE\")\n    and not user_agent.original like~ (\"*Terraform*\", \"*Pulumi*\")\n",
         "references": [
             "https://docs.aws.amazon.com/lambda/latest/dg/lambda-urls.html",
             "https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"
@@ -88,12 +88,12 @@
         "severity": "high",
         "tags": [
             "Domain: Cloud",
-            "Data Source: AWS",
-            "Data Source: Amazon Web Services",
-            "Data Source: AWS Lambda",
-            "Use Case: Threat Detection",
-            "Tactic: Persistence",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS Lambda",
             "Tactic: Defense Evasion",
+            "Tactic: Persistence",
+            "Rule Type: Event Correlation (EQL)",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -137,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "53bb8f53-3550-4805-b6bd-728ded8d5564_2",
+    "id": "53bb8f53-3550-4805-b6bd-728ded8d5564_3",
     "type": "security-rule"
 }

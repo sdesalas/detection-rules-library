@@ -1,7 +1,8 @@
 {
     "attributes": {
         "author": [
-            "Elastic"
+            "Elastic",
+            "Massimo Bertocchi"
         ],
         "description": "Identifies the use of sqlite3 to directly modify the Transparency, Consent, and Control (TCC) SQLite database. This may indicate an attempt to bypass macOS privacy controls, including access to sensitive resources like the system camera, microphone, address book, and calendar.",
         "from": "now-9m",
@@ -111,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 114
+        "version": 115
     },
-    "id": "eea82229-b002-470e-a9e1-00be38b14d32_114",
+    "id": "eea82229-b002-470e-a9e1-00be38b14d32_115",
     "type": "security-rule"
 }

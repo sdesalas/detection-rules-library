@@ -17,7 +17,7 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "AWS RDS DB Snapshot Created",
-        "query": "event.dataset: \"aws.cloudtrail\" and event.provider: \"rds.amazonaws.com\" \n    and event.action: (\"CreateDBSnapshot\" or \"CreateDBClusterSnapshot\") and event.outcome: \"success\" \n",
+        "query": "event.dataset: \"aws.cloudtrail\" and event.provider: \"rds.amazonaws.com\" \n    and event.action: (\"CreateDBSnapshot\" or \"CreateDBClusterSnapshot\") and event.outcome: \"success\" \n    and not user_agent.original: (*Terraform* or *Pulumi*)\n",
         "related_integrations": [
             {
                 "integration": "cloudtrail",
@@ -45,6 +45,11 @@
                 "ecs": true,
                 "name": "event.provider",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "user_agent.original",
+                "type": "keyword"
             }
         ],
         "risk_score": 21,
@@ -52,10 +57,9 @@
         "severity": "low",
         "tags": [
             "Domain: Cloud",
-            "Data Source: AWS",
-            "Data Source: Amazon Web Services",
-            "Data Source: AWS RDS",
-            "Use Case: Asset Visibility",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS RDS",
             "Tactic: Defense Evasion",
             "Rule Type: BBR"
         ],
@@ -85,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "68c5c9d1-38e5-48bb-b1b2-8b5951d39738_3",
+    "id": "68c5c9d1-38e5-48bb-b1b2-8b5951d39738_4",
     "type": "security-rule"
 }
