@@ -34,7 +34,7 @@
         "language": "eql",
         "license": "Elastic License v2",
         "name": "AWS EC2 Instance Interaction with IAM Service",
-        "query": "any where event.dataset == \"aws.cloudtrail\"\n    and event.provider == \"iam.amazonaws.com\"\n    and aws.cloudtrail.user_identity.type == \"AssumedRole\"\n    and stringContains(user.id, \":i-\")\n    and (\n            startsWith(event.action, \"Update\")\n            or startsWith(event.action, \"Attach\")\n            or startsWith(event.action, \"Detach\")\n            or startsWith(event.action, \"Create\")\n            or startsWith(event.action, \"Delete\")\n            or startsWith(event.action, \"Add\")\n            or startsWith(event.action, \"Remove\")\n            or startsWith(event.action, \"Put\")\n            or startsWith(event.action, \"Tag\")\n    )\n",
+        "query": "any where event.dataset == \"aws.cloudtrail\"\n    and event.provider == \"iam.amazonaws.com\"\n    and aws.cloudtrail.user_identity.type == \"AssumedRole\"\n    and stringContains(user.id, \":i-\")\n    and (\n            startsWith(event.action, \"Update\")\n            or startsWith(event.action, \"Attach\")\n            or startsWith(event.action, \"Detach\")\n            or startsWith(event.action, \"Create\")\n            or startsWith(event.action, \"Delete\")\n            or startsWith(event.action, \"Add\")\n            or startsWith(event.action, \"Remove\")\n            or startsWith(event.action, \"Put\")\n            or startsWith(event.action, \"Tag\")\n    )\n    and not user_agent.original like~ (\"*Terraform*\", \"*Pulumi*\", \"*Ansible*\")\n",
         "references": [
             "https://redcanary.com/blog/aws-sts/"
         ],
@@ -70,6 +70,11 @@
                 "ecs": true,
                 "name": "user.id",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "user_agent.original",
+                "type": "keyword"
             }
         ],
         "risk_score": 21,
@@ -77,13 +82,12 @@
         "severity": "low",
         "tags": [
             "Domain: Cloud",
-            "Data Source: AWS",
-            "Data Source: Amazon Web Services",
-            "Data Source: AWS EC2",
-            "Data Source: AWS IAM",
-            "Use Case: Identity and Access Audit",
-            "Tactic: Privilege Escalation",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS EC2",
+            "Service: AWS IAM",
             "Tactic: Persistence",
+            "Tactic: Privilege Escalation",
             "Rule Type: BBR"
         ],
         "threat": [
@@ -137,8 +141,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "a44bcb58-5109-4870-a7c6-11f5fe7dd4b1_5",
+    "id": "a44bcb58-5109-4870-a7c6-11f5fe7dd4b1_6",
     "type": "security-rule"
 }
