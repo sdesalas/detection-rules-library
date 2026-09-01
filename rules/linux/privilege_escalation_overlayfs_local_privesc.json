@@ -1,7 +1,8 @@
 {
     "attributes": {
         "author": [
-            "Elastic"
+            "Elastic",
+            "Massimo Bertocchi"
         ],
         "description": "Identifies potentially suspicious use of unshare to create a user namespace context followed by a UID change event indicating a transition to root. Adversaries may use unshare-based primitives as part of local privilege escalation chains. This rule is intentionally generic and can surface multiple local privesc patterns beyond a single CVE.",
         "from": "now-9m",
@@ -101,8 +102,8 @@
             }
         ],
         "type": "eql",
-        "version": 12
+        "version": 13
     },
-    "id": "b51dbc92-84e2-4af1-ba47-65183fcd0c57_12",
+    "id": "b51dbc92-84e2-4af1-ba47-65183fcd0c57_13",
     "type": "security-rule"
 }

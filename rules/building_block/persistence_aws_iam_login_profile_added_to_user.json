@@ -14,7 +14,7 @@
         "language": "kuery",
         "license": "Elastic License v2",
         "name": "AWS IAM Login Profile Added to User",
-        "query": "event.dataset: aws.cloudtrail and event.provider: \"iam.amazonaws.com\"\n    and event.action: \"CreateLoginProfile\" and event.outcome: success\n",
+        "query": "event.dataset: aws.cloudtrail and event.provider: \"iam.amazonaws.com\"\n    and event.action: \"CreateLoginProfile\" and event.outcome: success\n    and not user_agent.original: (*Terraform* or *Pulumi*)\n",
         "related_integrations": [
             {
                 "integration": "cloudtrail",
@@ -42,6 +42,11 @@
                 "ecs": true,
                 "name": "event.provider",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "user_agent.original",
+                "type": "keyword"
             }
         ],
         "risk_score": 21,
@@ -49,10 +54,9 @@
         "severity": "low",
         "tags": [
             "Domain: Cloud",
-            "Data Source: AWS",
-            "Data Source: Amazon Web Services",
-            "Data Source: AWS IAM",
-            "Use Case: Identity and Access Audit",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS IAM",
             "Tactic: Persistence",
             "Rule Type: BBR"
         ],
@@ -99,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 5
+        "version": 6
     },
-    "id": "10445cf0-0748-11ef-ba75-f661ea17fbcc_5",
+    "id": "10445cf0-0748-11ef-ba75-f661ea17fbcc_6",
     "type": "security-rule"
 }

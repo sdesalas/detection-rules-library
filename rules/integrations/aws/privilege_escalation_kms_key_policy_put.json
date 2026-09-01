@@ -35,7 +35,7 @@
         "license": "Elastic License v2",
         "name": "AWS KMS Key Policy Updated via PutKeyPolicy",
         "note": "## Triage and analysis\n\n### Investigating AWS KMS Key Policy Updated via PutKeyPolicy\n\n`PutKeyPolicy` replaces the entire key policy for a customer managed KMS key (and is used in limited scenarios for AWS\nmanaged keys). Unexpected changes can grant `kms:Decrypt`, `kms:GenerateDataKey`, or administrative actions to new\nidentities.\n\n#### Possible investigation steps\n\n- Identify the key from `aws.cloudtrail.resources.arn` or `aws.cloudtrail.request_parameters.keyId`.\n- Inspect `policy` in `aws.cloudtrail.request_parameters` (or related fields) for new `Principal`, `AWS`, or\n  `kms:CallerAccount` entries and cross-account ARNs.\n- Determine which data stores use the key (S3, EBS, RDS, Secrets Manager, etc.) via CMK aliases or CMDB.\n- Correlate with `iam:AttachRolePolicy`, `sts:AssumeRole`, or data-plane access from newly added principals.\n\n### False positive analysis\n\n- Planned multi-account encryption patterns; confirm recipient accounts are approved.\n\n### Response and remediation\n\n- If unauthorized: restore a known-good policy from backup or IAM/KMS change history, remove rogue principals, and\n  restrict `kms:PutKeyPolicy` to break-glass roles.\n\n### Additional information\n\n- [PutKeyPolicy](https://docs.aws.amazon.com/kms/latest/APIReference/API_PutKeyPolicy.html)\n- [KMS key policies](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html)\n",
-        "query": "event.dataset: \"aws.cloudtrail\"\n    and event.provider: \"kms.amazonaws.com\"\n    and event.action: \"PutKeyPolicy\"\n    and event.outcome: \"success\"\n    and not aws.cloudtrail.user_identity.type: \"AWSService\"\n",
+        "query": "event.dataset: \"aws.cloudtrail\"\n    and event.provider: \"kms.amazonaws.com\"\n    and event.action: \"PutKeyPolicy\"\n    and event.outcome: \"success\"\n    and not aws.cloudtrail.user_identity.type: \"AWSService\"\n    and not user_agent.original: (*Terraform* or *Pulumi*)\n",
         "references": [
             "https://docs.aws.amazon.com/kms/latest/APIReference/API_PutKeyPolicy.html",
             "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html"
@@ -72,6 +72,11 @@
                 "ecs": true,
                 "name": "event.provider",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "user_agent.original",
+                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -79,12 +84,12 @@
         "severity": "medium",
         "tags": [
             "Domain: Cloud",
-            "Data Source: AWS",
-            "Data Source: Amazon Web Services",
-            "Data Source: AWS KMS",
-            "Use Case: Threat Detection",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS KMS",
             "Tactic: Defense Evasion",
             "Tactic: Privilege Escalation",
+            "Rule Type: Custom Query (KQL)",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -128,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "f6a0b2c3-4d5e-4f7a-8b9c-0d1e2f3a4b5c_1",
+    "id": "f6a0b2c3-4d5e-4f7a-8b9c-0d1e2f3a4b5c_2",
     "type": "security-rule"
 }
