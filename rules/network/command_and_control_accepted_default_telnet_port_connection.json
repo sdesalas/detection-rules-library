@@ -1,5 +1,16 @@
 {
     "attributes": {
+        "alert_suppression": {
+            "duration": {
+                "unit": "h",
+                "value": 1
+            },
+            "group_by": [
+                "source.ip",
+                "destination.ip"
+            ],
+            "missing_fields_strategy": "doNotSuppress"
+        },
         "author": [
             "Elastic"
         ],
@@ -164,8 +175,8 @@
         "timeline_title": "Comprehensive Network Timeline",
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 116
+        "version": 117
     },
-    "id": "34fde489-94b0-4500-a76f-b8a157cf9269_116",
+    "id": "34fde489-94b0-4500-a76f-b8a157cf9269_117",
     "type": "security-rule"
 }

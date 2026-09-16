@@ -1,5 +1,11 @@
 {
     "attributes": {
+        "alert_suppression": {
+            "duration": {
+                "unit": "h",
+                "value": 1
+            }
+        },
         "author": [
             "Elastic"
         ],
@@ -114,8 +120,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 14
+        "version": 15
     },
-    "id": "bbaa96b9-f36c-4898-ace2-581acb00a409_14",
+    "id": "bbaa96b9-f36c-4898-ace2-581acb00a409_15",
     "type": "security-rule"
 }
