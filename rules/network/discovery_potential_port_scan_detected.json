@@ -1,5 +1,16 @@
 {
     "attributes": {
+        "alert_suppression": {
+            "duration": {
+                "unit": "h",
+                "value": 1
+            },
+            "group_by": [
+                "source.ip",
+                "destination.ip"
+            ],
+            "missing_fields_strategy": "doNotSuppress"
+        },
         "author": [
             "Elastic"
         ],
@@ -85,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 15
+        "version": 16
     },
-    "id": "0171f283-ade7-4f87-9521-ac346c68cc9b_15",
+    "id": "0171f283-ade7-4f87-9521-ac346c68cc9b_16",
     "type": "security-rule"
 }

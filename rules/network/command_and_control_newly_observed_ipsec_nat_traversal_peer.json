@@ -3,7 +3,7 @@
         "alert_suppression": {
             "duration": {
                 "unit": "h",
-                "value": 1
+                "value": 24
             },
             "group_by": [
                 "destination.ip"
@@ -91,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 113
+        "version": 114
     },
-    "id": "a9cb3641-ff4b-4cdc-a063-b4b8d02a67c7_113",
+    "id": "a9cb3641-ff4b-4cdc-a063-b4b8d02a67c7_114",
     "type": "security-rule"
 }
