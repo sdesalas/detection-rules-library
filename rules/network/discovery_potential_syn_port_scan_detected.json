@@ -64,7 +64,12 @@
             "Tactic: Reconnaissance",
             "Use Case: Network Security Monitoring",
             "Data Source: PAN-OS",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Threshold",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -120,8 +125,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 15
+        "version": 16
     },
-    "id": "bbaa96b9-f36c-4898-ace2-581acb00a409_15",
+    "id": "bbaa96b9-f36c-4898-ace2-581acb00a409_16",
     "type": "security-rule"
 }

@@ -56,7 +56,8 @@
             "Tactic: Initial Access",
             "Tactic: Execution",
             "Data Source: Network Packet Capture",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Event Correlation (EQL)"
         ],
         "threat": [
             {
@@ -99,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "b9c8d7e6-5a4f-3c2b-1d0e-9f8a7b6c5d4e_1",
+    "id": "b9c8d7e6-5a4f-3c2b-1d0e-9f8a7b6c5d4e_2",
     "type": "security-rule"
 }

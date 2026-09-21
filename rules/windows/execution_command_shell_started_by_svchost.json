@@ -101,7 +101,12 @@
             "Data Source: Windows Security Event Logs",
             "Data Source: Microsoft Defender XDR",
             "Data Source: Sysmon",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -136,8 +141,8 @@
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 428
+        "version": 429
     },
-    "id": "fd7a6052-58fa-4397-93c3-4795249ccfa2_428",
+    "id": "fd7a6052-58fa-4397-93c3-4795249ccfa2_429",
     "type": "security-rule"
 }

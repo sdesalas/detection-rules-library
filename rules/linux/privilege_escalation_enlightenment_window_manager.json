@@ -76,7 +76,14 @@
             "Tactic: Privilege Escalation",
             "Use Case: Vulnerability",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Vuln: CVE-2022-37706"
         ],
         "threat": [
             {
@@ -108,8 +115,8 @@
             }
         ],
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "bc0fc359-68db-421e-a435-348ced7a7f92_7",
+    "id": "bc0fc359-68db-421e-a435-348ced7a7f92_8",
     "type": "security-rule"
 }

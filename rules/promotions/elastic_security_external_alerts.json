@@ -78,12 +78,15 @@
             "Data Source: Elastic Security",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
-            "Promotion: External Alerts"
+            "Promotion: External Alerts",
+            "Rule Type: Custom Query (KQL)",
+            "Rule Type: Higher-Order",
+            "Domain: Endpoint"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "720fc1aa-e195-4a1d-81d8-04edfe5313ed_2",
+    "id": "720fc1aa-e195-4a1d-81d8-04edfe5313ed_3",
     "type": "security-rule"
 }

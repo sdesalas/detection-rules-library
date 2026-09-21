@@ -96,7 +96,13 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: Crowdstrike",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -129,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "bdfaddc4-4438-48b4-bc43-9f5cf8151c46_111",
+    "id": "bdfaddc4-4438-48b4-bc43-9f5cf8151c46_112",
     "type": "security-rule"
 }

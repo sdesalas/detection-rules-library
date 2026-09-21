@@ -66,7 +66,9 @@
             "Tactic: Command and Control",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -126,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "54285d96-2b7c-4345-890e-3c40e173f099_1",
+    "id": "54285d96-2b7c-4345-890e-3c40e173f099_2",
     "type": "security-rule"
 }

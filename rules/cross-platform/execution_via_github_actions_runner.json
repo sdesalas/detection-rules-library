@@ -111,7 +111,16 @@
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
             "Data Source: Auditd Manager",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Supply Chain",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -208,8 +217,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "a640ef5b-e1da-4b17-8391-468fdbd1b517_3",
+    "id": "a640ef5b-e1da-4b17-8391-468fdbd1b517_4",
     "type": "security-rule"
 }

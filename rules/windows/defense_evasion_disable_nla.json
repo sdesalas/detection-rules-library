@@ -85,7 +85,11 @@
             "Data Source: SentinelOne",
             "Data Source: Sysmon",
             "Resources: Investigation Guide",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -140,8 +144,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 210
+        "version": 211
     },
-    "id": "db65f5ba-d1ef-4944-b9e8-7e51060c2b42_210",
+    "id": "db65f5ba-d1ef-4944-b9e8-7e51060c2b42_211",
     "type": "security-rule"
 }

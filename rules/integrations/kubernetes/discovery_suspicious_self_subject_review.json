@@ -76,7 +76,14 @@
             "Domain: Kubernetes",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: Kubernetes",
+            "Domain: Containers",
+            "Domain: Cloud"
         ],
         "threat": [
             {
@@ -109,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 211
+        "version": 212
     },
-    "id": "12a2f15d-597e-4334-88ff-38a02cb1330b_211",
+    "id": "12a2f15d-597e-4334-88ff-38a02cb1330b_212",
     "type": "security-rule"
 }

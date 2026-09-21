@@ -71,7 +71,12 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -92,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 114
+        "version": 115
     },
-    "id": "97020e61-e591-4191-8a3b-2861a2b887cd_114",
+    "id": "97020e61-e591-4191-8a3b-2861a2b887cd_115",
     "type": "security-rule"
 }

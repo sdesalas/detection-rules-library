@@ -83,7 +83,13 @@
             "Data Source: AWS DynamoDB",
             "Resources: Investigation Guide",
             "Use Case: Threat Detection",
-            "Tactic: Exfiltration"
+            "Tactic: Exfiltration",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS DynamoDB"
         ],
         "threat": [
             {
@@ -124,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "96b2a03e-003b-11f0-8541-f661ea17fbcd_6",
+    "id": "96b2a03e-003b-11f0-8541-f661ea17fbcd_7",
     "type": "security-rule"
 }

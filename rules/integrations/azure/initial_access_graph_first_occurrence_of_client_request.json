@@ -86,7 +86,14 @@
             "Data Source: Microsoft Graph Activity Logs",
             "Resources: Investigation Guide",
             "Use Case: Identity and Access Audit",
-            "Tactic: Initial Access"
+            "Tactic: Initial Access",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: Entra ID",
+            "Platform: Azure",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -151,8 +158,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "2a3f38a8-204e-11f0-9c1f-f661ea17fbcd_8",
+    "id": "2a3f38a8-204e-11f0-9c1f-f661ea17fbcd_9",
     "type": "security-rule"
 }

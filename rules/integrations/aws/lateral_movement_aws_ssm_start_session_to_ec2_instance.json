@@ -85,7 +85,14 @@
             "Data Source: AWS EC2",
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS EC2",
+            "Service: AWS SSM"
         ],
         "threat": [
             {
@@ -113,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "804a7ac8-fc00-11ee-924b-f661ea17fbce_7",
+    "id": "804a7ac8-fc00-11ee-924b-f661ea17fbce_8",
     "type": "security-rule"
 }

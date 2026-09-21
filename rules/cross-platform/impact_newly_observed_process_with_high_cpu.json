@@ -37,7 +37,12 @@
             "Use Case: Observavility",
             "Resources: Investigation Guide",
             "Domain: Endpoint",
-            "Tactic: Impact"
+            "Tactic: Impact",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Cryptomining",
+            "Rule Type: ES|QL"
         ],
         "threat": [
             {
@@ -65,8 +70,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "f9de0949-94d8-441d-ae9a-8eb1e040acf2_2",
+    "id": "f9de0949-94d8-441d-ae9a-8eb1e040acf2_3",
     "type": "security-rule"
 }

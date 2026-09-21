@@ -95,7 +95,14 @@
             "Tactic: Initial Access",
             "Use Case: Vulnerability",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Web Shell",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -153,8 +160,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 117
+        "version": 118
     },
-    "id": "f16fca20-4d6c-43f9-aec1-20b6de3b0aeb_117",
+    "id": "f16fca20-4d6c-43f9-aec1-20b6de3b0aeb_118",
     "type": "security-rule"
 }

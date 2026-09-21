@@ -85,7 +85,13 @@
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: AiTM Phishing",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID"
         ],
         "threat": [
             {
@@ -157,8 +163,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "3d086f43-5382-493d-a018-bce165c88f9f_1",
+    "id": "3d086f43-5382-493d-a018-bce165c88f9f_2",
     "type": "security-rule"
 }

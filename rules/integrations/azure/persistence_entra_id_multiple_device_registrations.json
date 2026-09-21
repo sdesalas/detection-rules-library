@@ -57,7 +57,11 @@
             "Tactic: Persistence",
             "Tactic: Initial Access",
             "Tactic: Credential Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Entra ID"
         ],
         "threat": [
             {
@@ -122,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "960b1cef-f94d-4150-863d-b1dc311739de_1",
+    "id": "960b1cef-f94d-4150-863d-b1dc311739de_2",
     "type": "security-rule"
 }

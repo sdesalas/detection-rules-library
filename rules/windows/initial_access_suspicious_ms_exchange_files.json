@@ -93,7 +93,15 @@
             "Data Source: Sysmon",
             "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Web Shell",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Vuln: CVE-2021-26858"
         ],
         "threat": [
             {
@@ -151,8 +159,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 314
+        "version": 315
     },
-    "id": "6cd1779c-560f-4b68-a8f1-11009b27fe63_314",
+    "id": "6cd1779c-560f-4b68-a8f1-11009b27fe63_315",
     "type": "security-rule"
 }

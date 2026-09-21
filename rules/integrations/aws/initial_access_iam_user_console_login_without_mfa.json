@@ -89,7 +89,13 @@
             "Data Source: AWS Sign-In",
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS IAM"
         ],
         "threat": [
             {
@@ -117,8 +123,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "f5778acd-80e3-4ca0-a32a-6259386dfb20_1",
+    "id": "f5778acd-80e3-4ca0-a32a-6259386dfb20_2",
     "type": "security-rule"
 }

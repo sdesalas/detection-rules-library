@@ -70,7 +70,11 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: Auditd Manager",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -118,8 +122,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "23bcd283-2bc0-4db2-81d4-273fc051e5c0_8",
+    "id": "23bcd283-2bc0-4db2-81d4-273fc051e5c0_9",
     "type": "security-rule"
 }

@@ -102,7 +102,13 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: Crowdstrike",
             "Data Source: Windows Security Event Logs",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Remote Management Tool Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -130,8 +136,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "1b5e9d4a-7c2f-4e8b-a3d6-0f9c8e2b1a4d_5",
+    "id": "1b5e9d4a-7c2f-4e8b-a3d6-0f9c8e2b1a4d_6",
     "type": "security-rule"
 }

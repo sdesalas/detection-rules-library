@@ -108,9 +108,12 @@
             "Tactic: Persistence",
             "Data Source: Azure",
             "Data Source: Microsoft Entra ID",
-            "Data Source: Microsoft Entra ID Sign-in Logs",
+            "Data Source: Microsoft Entra ID Sign-In Logs",
             "Platform: Entra ID",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms"
         ],
         "threat": [
             {
@@ -160,8 +163,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "72c91fc0-4ac0-11f0-811f-f661ea17fbcd_4",
+    "id": "72c91fc0-4ac0-11f0-811f-f661ea17fbcd_5",
     "type": "security-rule"
 }

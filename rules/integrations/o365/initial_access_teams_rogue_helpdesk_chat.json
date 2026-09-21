@@ -113,7 +113,13 @@
             "Data Source: Microsoft 365 Audit Logs",
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Domain: Email",
+            "Service: Microsoft Teams"
         ],
         "threat": [
             {
@@ -141,8 +147,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "e8e7b6b6-78b0-4015-97fe-c2f28468e0d4_2",
+    "id": "e8e7b6b6-78b0-4015-97fe-c2f28468e0d4_3",
     "type": "security-rule"
 }

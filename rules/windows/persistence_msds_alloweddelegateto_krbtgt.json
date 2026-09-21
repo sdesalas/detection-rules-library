@@ -77,7 +77,11 @@
             "Use Case: Active Directory Monitoring",
             "Data Source: Active Directory",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -113,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "e052c845-48d0-4f46-8a13-7d0aba05df82_214",
+    "id": "e052c845-48d0-4f46-8a13-7d0aba05df82_215",
     "type": "security-rule"
 }

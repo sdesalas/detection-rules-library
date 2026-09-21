@@ -76,7 +76,13 @@
             "Tactic: Persistence",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Supply Chain",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -129,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "0b15bcad-aff1-4250-a5be-5d1b7eb56d07_10",
+    "id": "0b15bcad-aff1-4250-a5be-5d1b7eb56d07_11",
     "type": "security-rule"
 }

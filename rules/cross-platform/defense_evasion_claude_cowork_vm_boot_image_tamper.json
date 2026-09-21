@@ -65,7 +65,11 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
-            "Domain: LLM"
+            "Domain: LLM",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: macOS",
+            "Domain: GenAI"
         ],
         "threat": [
             {
@@ -93,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "a0939500-a817-4ce9-85a9-191133352a9e_1",
+    "id": "a0939500-a817-4ce9-85a9-191133352a9e_2",
     "type": "security-rule"
 }

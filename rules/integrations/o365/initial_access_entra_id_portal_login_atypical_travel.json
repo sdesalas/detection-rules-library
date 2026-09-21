@@ -113,7 +113,14 @@
             "Use Case: Threat Detection",
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Impossible Travel",
+            "Rule Type: New Terms",
+            "Platform: Microsoft 365",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -141,8 +148,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 12
+        "version": 13
     },
-    "id": "32d3ad0e-6add-11ef-8c7b-f661ea17fbcc_12",
+    "id": "32d3ad0e-6add-11ef-8c7b-f661ea17fbcc_13",
     "type": "security-rule"
 }

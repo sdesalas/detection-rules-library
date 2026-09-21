@@ -100,7 +100,13 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Data Source: Crowdstrike",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -127,8 +133,8 @@
             }
         ],
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "f036953a-4615-4707-a1ca-dc53bf69dcd5_214",
+    "id": "f036953a-4615-4707-a1ca-dc53bf69dcd5_215",
     "type": "security-rule"
 }

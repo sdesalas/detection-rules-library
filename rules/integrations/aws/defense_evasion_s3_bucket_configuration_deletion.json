@@ -82,13 +82,18 @@
         "severity": "low",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS S3",
             "Tactic: Defense Evasion",
             "Tactic: Impact",
             "Rule Type: Custom Query (KQL)",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Ransomware"
         ],
         "threat": [
             {
@@ -141,8 +146,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 215
+        "version": 216
     },
-    "id": "227dc608-e558-43d9-b521-150772250bae_215",
+    "id": "227dc608-e558-43d9-b521-150772250bae_216",
     "type": "security-rule"
 }

@@ -47,12 +47,23 @@
             "Data Source: Azure Event Hubs",
             "Use Case: Model Theft",
             "Mitre Atlas: T0044",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Unauthorized AI Usage",
+            "Threat: LLMjacking",
+            "Rule Type: ES|QL",
+            "Platform: Azure",
+            "Domain: Cloud",
+            "Domain: GenAI",
+            "Service: Azure OpenAI",
+            "Service: Azure Event Hubs"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "4021e78d-5293-48d3-adee-a70fa4c18fab_5",
+    "id": "4021e78d-5293-48d3-adee-a70fa4c18fab_6",
     "type": "security-rule"
 }

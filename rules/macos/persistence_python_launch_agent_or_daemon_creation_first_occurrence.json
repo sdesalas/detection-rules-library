@@ -55,7 +55,11 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
-            "Domain: LLM"
+            "Domain: LLM",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -88,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "25368123-b7b8-4344-9fd4-df28051b4c6e_3",
+    "id": "25368123-b7b8-4344-9fd4-df28051b4c6e_4",
     "type": "security-rule"
 }

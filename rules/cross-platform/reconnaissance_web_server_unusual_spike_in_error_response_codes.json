@@ -57,7 +57,16 @@
             "Data Source: Apache Tomcat",
             "Data Source: IIS",
             "Data Source: Traefik",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Threat: Web Application Attack",
+            "Rule Type: ES|QL",
+            "Service: Nginx",
+            "Service: IIS",
+            "Service: Apache Tomcat",
+            "Service: Apache HTTP Server"
         ],
         "threat": [
             {
@@ -90,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "6fa3abe3-9cd8-41de-951b-51ed8f710523_5",
+    "id": "6fa3abe3-9cd8-41de-951b-51ed8f710523_6",
     "type": "security-rule"
 }

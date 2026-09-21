@@ -48,7 +48,12 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Rootkit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -113,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "3e12a439-d002-4944-bc42-171c0dcb9b96_8",
+    "id": "3e12a439-d002-4944-bc42-171c0dcb9b96_9",
     "type": "security-rule"
 }

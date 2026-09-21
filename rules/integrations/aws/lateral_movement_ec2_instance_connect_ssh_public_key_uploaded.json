@@ -82,7 +82,13 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Privilege Escalation",
             "Tactic: Lateral Movement",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS EC2"
         ],
         "threat": [
             {
@@ -154,8 +160,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 10
+        "version": 11
     },
-    "id": "873b5452-074e-11ef-852e-f661ea17fbcc_10",
+    "id": "873b5452-074e-11ef-852e-f661ea17fbcc_11",
     "type": "security-rule"
 }

@@ -91,7 +91,12 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -119,8 +124,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "757371cd-5e9e-4adb-bc4e-d81f0ad0ec4d_1",
+    "id": "757371cd-5e9e-4adb-bc4e-d81f0ad0ec4d_2",
     "type": "security-rule"
 }

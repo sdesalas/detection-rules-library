@@ -90,7 +90,15 @@
             "Tactic: Execution",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Download Tool Abuse",
+            "Threat: Script-Based Execution",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -137,8 +145,8 @@
             }
         ],
         "type": "eql",
-        "version": 216
+        "version": 217
     },
-    "id": "1d276579-3380-4095-ad38-e596a01bc64f_216",
+    "id": "1d276579-3380-4095-ad38-e596a01bc64f_217",
     "type": "security-rule"
 }

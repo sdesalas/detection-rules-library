@@ -94,7 +94,13 @@
             "Data Source: AWS Lambda",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS Lambda"
         ],
         "threat": [
             {
@@ -115,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "c8cc8192-f4f5-4ed3-8368-544ca738d506_1",
+    "id": "c8cc8192-f4f5-4ed3-8368-544ca738d506_2",
     "type": "security-rule"
 }

@@ -119,7 +119,11 @@
             "Use Case: Active Directory Monitoring",
             "Data Source: Active Directory",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -166,8 +170,8 @@
             }
         ],
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "e4e31051-ee01-4307-a6ee-b21b186958f4_214",
+    "id": "e4e31051-ee01-4307-a6ee-b21b186958f4_215",
     "type": "security-rule"
 }

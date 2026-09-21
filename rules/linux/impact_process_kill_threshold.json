@@ -71,7 +71,12 @@
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Data Source: Auditd Manager",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Threshold",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -122,8 +127,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 118
+        "version": 119
     },
-    "id": "67f8443a-4ff3-4a70-916d-3cfa3ae9f02b_118",
+    "id": "67f8443a-4ff3-4a70-916d-3cfa3ae9f02b_119",
     "type": "security-rule"
 }

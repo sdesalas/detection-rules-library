@@ -96,7 +96,13 @@
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: WebDAV Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -173,8 +179,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 317
+        "version": 318
     },
-    "id": "c4210e1c-64f2-4f48-b67e-b5a8ffe3aa14_317",
+    "id": "c4210e1c-64f2-4f48-b67e-b5a8ffe3aa14_318",
     "type": "security-rule"
 }

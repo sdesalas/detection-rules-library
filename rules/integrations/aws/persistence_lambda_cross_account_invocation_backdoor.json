@@ -83,7 +83,13 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS Lambda"
         ],
         "threat": [
             {
@@ -126,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "8f985da6-66e8-4838-a63e-21636eb9adc5_1",
+    "id": "8f985da6-66e8-4838-a63e-21636eb9adc5_2",
     "type": "security-rule"
 }

@@ -53,7 +53,16 @@
             "Data Source: IIS",
             "Data Source: Traefik",
             "Data Source: Zeek",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Web Application Attack",
+            "Rule Type: Event Correlation (EQL)",
+            "Service: Nginx",
+            "Service: IIS",
+            "Service: Apache Tomcat",
+            "Service: Apache HTTP Server"
         ],
         "threat": [
             {
@@ -153,8 +162,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "7f7a0ee1-7b6f-466a-85b4-110fb105f5e2_5",
+    "id": "7f7a0ee1-7b6f-466a-85b4-110fb105f5e2_6",
     "type": "security-rule"
 }

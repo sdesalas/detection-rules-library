@@ -72,7 +72,13 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -116,8 +122,8 @@
             }
         ],
         "type": "eql",
-        "version": 12
+        "version": 13
     },
-    "id": "afd04601-12fc-4149-9b78-9c3f8fe45d39_12",
+    "id": "afd04601-12fc-4149-9b78-9c3f8fe45d39_13",
     "type": "security-rule"
 }

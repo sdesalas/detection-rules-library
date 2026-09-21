@@ -483,7 +483,11 @@
             "Data Source: AWS ECR",
             "Use Case: Threat Detection",
             "Tactic: Exfiltration",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: ES|QL",
+            "Platform: AWS"
         ],
         "threat": [
             {
@@ -504,8 +508,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "699fdfb9-8430-4dcb-b5a9-da67dae64808_1",
+    "id": "699fdfb9-8430-4dcb-b5a9-da67dae64808_2",
     "type": "security-rule"
 }

@@ -67,7 +67,13 @@
             "Domain: Network",
             "Domain: Identity",
             "Data Source: Fortinet",
-            "Data Source: Fortinet FortiGate"
+            "Data Source: Fortinet FortiGate",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: New Terms",
+            "Vuln: CVE-2026-24858"
         ],
         "threat": [
             {
@@ -95,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "d08ba1ed-a0a3-4fe0-9c02-e643b9a25a03_2",
+    "id": "d08ba1ed-a0a3-4fe0-9c02-e643b9a25a03_3",
     "type": "security-rule"
 }

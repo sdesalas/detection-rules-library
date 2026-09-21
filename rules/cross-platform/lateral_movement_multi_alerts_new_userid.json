@@ -44,7 +44,12 @@
             "Use Case: Threat Detection",
             "Rule Type: Higher-Order Rule",
             "Tactic: Lateral Movement",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Windows",
+            "Domain: Endpoint"
         ],
         "threat": [
             {
@@ -59,8 +64,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "e819b7eb-c2d4-4adc-b0c9-658aeb140450_3",
+    "id": "e819b7eb-c2d4-4adc-b0c9-658aeb140450_4",
     "type": "security-rule"
 }

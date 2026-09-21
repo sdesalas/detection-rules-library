@@ -104,7 +104,10 @@
             "Use Case: Vulnerability",
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Rule Type: ES|QL",
+            "Platform: macOS",
+            "Vuln: CVE-2026-65400"
         ],
         "threat": [
             {
@@ -161,8 +164,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "5773cef4-11a5-4d51-a40b-0e0a79d68432_1",
+    "id": "5773cef4-11a5-4d51-a40b-0e0a79d68432_2",
     "type": "security-rule"
 }

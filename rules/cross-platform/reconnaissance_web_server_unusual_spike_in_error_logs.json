@@ -52,7 +52,15 @@
             "Data Source: Apache",
             "Data Source: Apache Tomcat",
             "Data Source: IIS",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: ES|QL",
+            "Service: Nginx",
+            "Service: IIS",
+            "Service: Apache Tomcat",
+            "Service: Apache HTTP Server"
         ],
         "threat": [
             {
@@ -85,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "6631a759-4559-4c33-a392-13f146c8bcc4_4",
+    "id": "6631a759-4559-4c33-a392-13f146c8bcc4_5",
     "type": "security-rule"
 }

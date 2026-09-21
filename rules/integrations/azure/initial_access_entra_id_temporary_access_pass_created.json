@@ -67,7 +67,11 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
             "Tactic: Lateral Movement",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID"
         ],
         "threat": [
             {
@@ -110,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "d0088204-675b-4175-bf07-1665da2d4810_1",
+    "id": "d0088204-675b-4175-bf07-1665da2d4810_2",
     "type": "security-rule"
 }

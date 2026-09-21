@@ -82,7 +82,11 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -146,8 +150,8 @@
             }
         ],
         "type": "eql",
-        "version": 11
+        "version": 12
     },
-    "id": "09bc6c90-7501-494d-b015-5d988dc3f233_11",
+    "id": "09bc6c90-7501-494d-b015-5d988dc3f233_12",
     "type": "security-rule"
 }

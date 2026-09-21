@@ -84,6 +84,8 @@
         "severity": "low",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS SNS",
@@ -91,7 +93,9 @@
             "Tactic: Exfiltration",
             "Tactic: Impact",
             "Rule Type: New Terms",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal"
         ],
         "threat": [
             {
@@ -171,8 +175,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 11
+        "version": 12
     },
-    "id": "3df49ff6-985d-11ef-88a1-f661ea17fbcd_11",
+    "id": "3df49ff6-985d-11ef-88a1-f661ea17fbcd_12",
     "type": "security-rule"
 }

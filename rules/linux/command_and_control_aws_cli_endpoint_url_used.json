@@ -83,7 +83,11 @@
             "Data Source: Elastic Endgame",
             "Data Source: Auditd Manager",
             "Data Source: Crowdstrike",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -111,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "349276c0-5fcf-11ef-b1a9-f661ea17fbce_7",
+    "id": "349276c0-5fcf-11ef-b1a9-f661ea17fbce_8",
     "type": "security-rule"
 }

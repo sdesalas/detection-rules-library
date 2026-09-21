@@ -99,7 +99,11 @@
             "Use Case: Threat Detection",
             "Tactic: Collection",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -148,8 +152,8 @@
             }
         ],
         "type": "eql",
-        "version": 13
+        "version": 14
     },
-    "id": "1dee0500-4aeb-44ca-b24b-4a285d7b6ba1_13",
+    "id": "1dee0500-4aeb-44ca-b24b-4a285d7b6ba1_14",
     "type": "security-rule"
 }

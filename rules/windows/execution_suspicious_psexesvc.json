@@ -73,7 +73,11 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Data Source: Microsoft Defender XDR",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -145,8 +149,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 219
+        "version": 220
     },
-    "id": "e2f9fdf5-8076-45ad-9427-41e0e03dc9c2_219",
+    "id": "e2f9fdf5-8076-45ad-9427-41e0e03dc9c2_220",
     "type": "security-rule"
 }

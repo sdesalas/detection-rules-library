@@ -52,7 +52,10 @@
             "Tactic: Defense Evasion",
             "Tactic: Execution",
             "Rule Type: Higher-Order Rule",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)"
         ],
         "threat": [
             {
@@ -101,8 +104,8 @@
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "fc552f49-8f1c-409b-90f8-6f5b9869b6c4_4",
+    "id": "fc552f49-8f1c-409b-90f8-6f5b9869b6c4_5",
     "type": "security-rule"
 }

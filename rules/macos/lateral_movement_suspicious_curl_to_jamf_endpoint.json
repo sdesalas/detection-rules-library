@@ -71,7 +71,13 @@
             "Tactic: Lateral Movement",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Download Tool Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -129,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "a8256685-9736-465b-b159-f25a172d08e8_2",
+    "id": "a8256685-9736-465b-b159-f25a172d08e8_3",
     "type": "security-rule"
 }

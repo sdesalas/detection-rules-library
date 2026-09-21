@@ -33,12 +33,16 @@
             "Use Case: Threat Detection",
             "Rule Type: Higher-Order Rule",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Domain: Endpoint"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "7306ce7d-5c90-4f42-aa6c-12b0dc2fe3b8_3",
+    "id": "7306ce7d-5c90-4f42-aa6c-12b0dc2fe3b8_4",
     "type": "security-rule"
 }

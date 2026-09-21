@@ -48,7 +48,11 @@
             "Tactic: Defense Evasion",
             "Tactic: Collection",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -112,8 +116,8 @@
             }
         ],
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "ffd8b5e9-aa63-42b3-aead-6fdb170da9a3_3",
+    "id": "ffd8b5e9-aa63-42b3-aead-6fdb170da9a3_4",
     "type": "security-rule"
 }

@@ -67,7 +67,11 @@
             "Tactic: Persistence",
             "Tactic: Defense Evasion",
             "Data Source: System",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -151,8 +155,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "428e9109-dc13-4ae9-84cb-100464d4c6fa_7",
+    "id": "428e9109-dc13-4ae9-84cb-100464d4c6fa_8",
     "type": "security-rule"
 }

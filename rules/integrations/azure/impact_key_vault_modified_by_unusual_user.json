@@ -60,7 +60,12 @@
             "Data Source: Azure Activity Logs",
             "Tactic: Impact",
             "Use Case: Configuration Audit",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: Azure",
+            "Service: Azure Key Vault"
         ],
         "threat": [
             {
@@ -97,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 109
+        "version": 110
     },
-    "id": "792dd7a6-7e00-4a0a-8a9a-a7c24720b5ec_109",
+    "id": "792dd7a6-7e00-4a0a-8a9a-a7c24720b5ec_110",
     "type": "security-rule"
 }

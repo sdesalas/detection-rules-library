@@ -75,7 +75,13 @@
             "Tactic: Command and Control",
             "Tactic: Initial Access",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Slow",
+            "Profile: Aggressive",
+            "Threat: Web Shell",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -155,8 +161,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "9ab15ca6-be79-4718-bae6-5978a3ac6a46_2",
+    "id": "9ab15ca6-be79-4718-bae6-5978a3ac6a46_3",
     "type": "security-rule"
 }

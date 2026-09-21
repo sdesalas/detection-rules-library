@@ -55,7 +55,10 @@
             "Use Case: UEBA",
             "Tactic: Initial Access",
             "Rule Type: BBR",
-            "Data Source: Github"
+            "Data Source: Github",
+            "Rule Type: New Terms",
+            "Platform: GitHub",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -83,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 207
+        "version": 208
     },
-    "id": "3af4cb9b-973f-4c54-be2b-7623c0e21b2b_207",
+    "id": "3af4cb9b-973f-4c54-be2b-7623c0e21b2b_208",
     "type": "security-rule"
 }

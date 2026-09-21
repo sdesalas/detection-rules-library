@@ -53,7 +53,12 @@
             "Data Source: Google Cloud Platform",
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: GCP"
         ],
         "threat": [
             {
@@ -123,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 111
     },
-    "id": "aa8007f0-d1df-49ef-8520-407857594827_110",
+    "id": "aa8007f0-d1df-49ef-8520-407857594827_111",
     "type": "security-rule"
 }

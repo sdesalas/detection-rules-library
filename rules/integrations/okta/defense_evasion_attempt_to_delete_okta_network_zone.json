@@ -51,7 +51,12 @@
             "Data Source: Okta",
             "Use Case: Network Security Monitoring",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Okta",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -79,8 +84,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 414
+        "version": 415
     },
-    "id": "c749e367-a069-4a73-b1f2-43a3798153ad_414",
+    "id": "c749e367-a069-4a73-b1f2-43a3798153ad_415",
     "type": "security-rule"
 }

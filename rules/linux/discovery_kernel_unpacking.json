@@ -80,7 +80,12 @@
             "Tactic: Discovery",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -121,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "4f725dc5-ae44-46c1-9ac5-99f6f7a70d8a_7",
+    "id": "4f725dc5-ae44-46c1-9ac5-99f6f7a70d8a_8",
     "type": "security-rule"
 }

@@ -113,7 +113,13 @@
             "Tactic: Lateral Movement",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -155,8 +161,8 @@
             }
         ],
         "type": "eql",
-        "version": 218
+        "version": 219
     },
-    "id": "aa9a274d-6b53-424d-ac5e-cb8ca4251650_218",
+    "id": "aa9a274d-6b53-424d-ac5e-cb8ca4251650_219",
     "type": "security-rule"
 }

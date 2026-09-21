@@ -84,13 +84,17 @@
         "severity": "medium",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS KMS",
             "Tactic: Defense Evasion",
             "Tactic: Privilege Escalation",
             "Rule Type: Custom Query (KQL)",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast"
         ],
         "threat": [
             {
@@ -133,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "f6a0b2c3-4d5e-4f7a-8b9c-0d1e2f3a4b5c_2",
+    "id": "f6a0b2c3-4d5e-4f7a-8b9c-0d1e2f3a4b5c_3",
     "type": "security-rule"
 }

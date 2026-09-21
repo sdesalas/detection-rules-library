@@ -45,10 +45,11 @@
         "setup": "## Setup\n\nThis rule needs threat intelligence indicators to work.\nThreat intelligence indicators can be collected using an [Elastic Agent integration](https://www.elastic.co/guide/en/security/current/es-threat-intel-integrations.html#agent-ti-integration),\nthe [Threat Intel module](https://www.elastic.co/guide/en/security/current/es-threat-intel-integrations.html#ti-mod-integration),\nor a [custom integration](https://www.elastic.co/guide/en/security/current/es-threat-intel-integrations.html#custom-ti-integration).\n\nMore information can be found [here](https://www.elastic.co/guide/en/security/current/es-threat-intel-integrations.html).\n",
         "severity": "high",
         "tags": [
-            "OS: Windows",
             "Data Source: Elastic Endgame",
             "Rule Type: Threat Match",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Domain: Endpoint",
+            "Resources: Osquery"
         ],
         "threat_filters": [
             {
@@ -203,8 +204,8 @@
         "timeline_title": "Generic Threat Match Timeline",
         "timestamp_override": "event.ingested",
         "type": "threat_match",
-        "version": 10
+        "version": 11
     },
-    "id": "aab184d3-72b3-4639-b242-6597c99d8bca_10",
+    "id": "aab184d3-72b3-4639-b242-6597c99d8bca_11",
     "type": "security-rule"
 }

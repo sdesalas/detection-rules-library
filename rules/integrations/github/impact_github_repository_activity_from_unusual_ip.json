@@ -55,7 +55,15 @@
             "Tactic: Initial Access",
             "Tactic: Persistence",
             "Data Source: Github",
-            "Resources: Investigation Guide"
+            "Data Source: GitHub Audit Logs",
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Threat: Supply Chain",
+            "Rule Type: New Terms",
+            "Platform: GitHub",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -141,8 +149,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "daf2e0e0-0bab-4672-bfa1-62db0ee5ec22_3",
+    "id": "daf2e0e0-0bab-4672-bfa1-62db0ee5ec22_4",
     "type": "security-rule"
 }

@@ -46,7 +46,13 @@
             "Use Case: Identity and Access Audit",
             "Data Source: Okta",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: ES|QL",
+            "Platform: Okta",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -74,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 311
+        "version": 312
     },
-    "id": "2e56e1bc-867a-11ee-b13e-f661ea17fbcd_311",
+    "id": "2e56e1bc-867a-11ee-b13e-f661ea17fbcd_312",
     "type": "security-rule"
 }

@@ -83,7 +83,12 @@
             "Tactic: Credential Access",
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -145,8 +150,8 @@
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "96f29282-ffcc-4ce7-834b-b17aee905568_4",
+    "id": "96f29282-ffcc-4ce7-834b-b17aee905568_5",
     "type": "security-rule"
 }

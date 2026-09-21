@@ -82,7 +82,16 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Data Source: Network Traffic",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Web Shell",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -139,8 +148,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "1d306bf0-7bcf-4acd-83fd-042f5711acc9_3",
+    "id": "1d306bf0-7bcf-4acd-83fd-042f5711acc9_4",
     "type": "security-rule"
 }

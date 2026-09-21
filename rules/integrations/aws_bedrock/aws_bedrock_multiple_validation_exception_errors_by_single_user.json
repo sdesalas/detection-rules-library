@@ -59,12 +59,22 @@
             "Mitre Atlas: T0015",
             "Mitre Atlas: T0034",
             "Mitre Atlas: T0046",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Unauthorized AI Usage",
+            "Rule Type: ES|QL",
+            "Platform: AWS",
+            "Domain: Cloud",
+            "Domain: GenAI",
+            "Service: AWS S3",
+            "Service: AWS Bedrock"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 7
+        "version": 8
     },
-    "id": "725a048a-88c5-4fc7-8677-a44fc0031822_7",
+    "id": "725a048a-88c5-4fc7-8677-a44fc0031822_8",
     "type": "security-rule"
 }

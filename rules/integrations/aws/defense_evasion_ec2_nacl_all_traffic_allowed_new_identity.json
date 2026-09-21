@@ -98,7 +98,13 @@
             "Data Source: AWS EC2",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS EC2"
         ],
         "threat": [
             {
@@ -126,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "5d9a3c71-2b84-4e58-f693-1c7f0a4e8b26_1",
+    "id": "5d9a3c71-2b84-4e58-f693-1c7f0a4e8b26_2",
     "type": "security-rule"
 }

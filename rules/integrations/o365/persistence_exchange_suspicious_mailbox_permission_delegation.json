@@ -95,7 +95,13 @@
             "Data Source: Microsoft 365 Audit Logs",
             "Use Case: Configuration Audit",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Microsoft 365",
+            "Domain: Email",
+            "Service: Microsoft Exchange Online"
         ],
         "threat": [
             {
@@ -145,8 +151,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 214
+        "version": 215
     },
-    "id": "0ce6487d-8069-4888-9ddd-61b52490cebc_214",
+    "id": "0ce6487d-8069-4888-9ddd-61b52490cebc_215",
     "type": "security-rule"
 }

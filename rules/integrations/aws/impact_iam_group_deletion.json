@@ -75,7 +75,13 @@
             "Data Source: Amazon Web Services",
             "Data Source: AWS IAM",
             "Tactic: Impact",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS IAM"
         ],
         "threat": [
             {
@@ -96,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 212
+        "version": 213
     },
-    "id": "867616ec-41e5-4edc-ada2-ab13ab45de8a_212",
+    "id": "867616ec-41e5-4edc-ada2-ab13ab45de8a_213",
     "type": "security-rule"
 }

@@ -74,7 +74,11 @@
             "Data Source: Microsoft Entra ID Sign-In Logs",
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: Entra ID"
         ],
         "threat": [
             {
@@ -124,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "8d696bd0-5756-11f0-8e3b-f661ea17fbcd_5",
+    "id": "8d696bd0-5756-11f0-8e3b-f661ea17fbcd_6",
     "type": "security-rule"
 }

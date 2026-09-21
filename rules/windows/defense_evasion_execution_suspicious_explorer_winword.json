@@ -89,7 +89,13 @@
             "Data Source: Microsoft Defender XDR",
             "Resources: Investigation Guide",
             "Data Source: Crowdstrike",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: DLL Side-Load",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -122,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 219
+        "version": 220
     },
-    "id": "1160dcdb-0a0a-4a79-91d8-9b84616edebd_219",
+    "id": "1160dcdb-0a0a-4a79-91d8-9b84616edebd_220",
     "type": "security-rule"
 }

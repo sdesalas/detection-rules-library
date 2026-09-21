@@ -94,6 +94,7 @@
             "Use Case: Threat Detection",
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
+            "Data Source: SonicWall",
             "Data Source: SonicWall Firewall Logs",
             "Rule Type: New Terms",
             "Resources: Investigation Guide"
@@ -122,8 +123,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "7df97e5b-1722-4305-80c7-7a203f2ff36e_1",
+    "id": "7df97e5b-1722-4305-80c7-7a203f2ff36e_2",
     "type": "security-rule"
 }

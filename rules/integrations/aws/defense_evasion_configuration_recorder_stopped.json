@@ -75,7 +75,12 @@
             "Data Source: Amazon Web Services",
             "Data Source: AWS Config",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail"
         ],
         "threat": [
             {
@@ -108,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 212
+        "version": 213
     },
-    "id": "fbd44836-0d69-4004-a0b4-03c20370c435_212",
+    "id": "fbd44836-0d69-4004-a0b4-03c20370c435_213",
     "type": "security-rule"
 }

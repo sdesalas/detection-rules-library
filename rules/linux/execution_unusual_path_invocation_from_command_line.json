@@ -89,7 +89,11 @@
             "Tactic: Execution",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -144,8 +148,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "82f842c2-7c36-438c-b562-5afe54ab11f4_7",
+    "id": "82f842c2-7c36-438c-b562-5afe54ab11f4_8",
     "type": "security-rule"
 }

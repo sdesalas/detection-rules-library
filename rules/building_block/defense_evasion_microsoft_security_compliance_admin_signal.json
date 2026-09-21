@@ -50,7 +50,10 @@
             "Use Case: Configuration Auditing",
             "Tactic: Defense Evasion",
             "Tactic: Persistence",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Service: Microsoft Purview"
         ],
         "threat": [
             {
@@ -115,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "314557e1-a642-4dbc-af43-321bc04b6618_2",
+    "id": "314557e1-a642-4dbc-af43-321bc04b6618_3",
     "type": "security-rule"
 }

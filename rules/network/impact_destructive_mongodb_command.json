@@ -58,7 +58,10 @@
             "Use Case: Threat Detection",
             "Tactic: Impact",
             "Data Source: Network Packet Capture",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: New Terms"
         ],
         "threat": [
             {
@@ -79,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "0d8a33be-5595-400c-a677-c4474829ed55_1",
+    "id": "0d8a33be-5595-400c-a677-c4474829ed55_2",
     "type": "security-rule"
 }

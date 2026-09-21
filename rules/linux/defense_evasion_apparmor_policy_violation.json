@@ -51,7 +51,11 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: Auditd Manager",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -79,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "02137bc2-5cc2-4f7f-a8e4-c52dc239aa69_1",
+    "id": "02137bc2-5cc2-4f7f-a8e4-c52dc239aa69_2",
     "type": "security-rule"
 }

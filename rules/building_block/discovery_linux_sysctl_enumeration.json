@@ -66,7 +66,10 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: New Terms",
+            "Platform: Linux",
+            "Domain: Endpoint"
         ],
         "threat": [
             {
@@ -124,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 112
+        "version": 113
     },
-    "id": "7592c127-89fb-4209-a8f6-f9944dfd7e02_112",
+    "id": "7592c127-89fb-4209-a8f6-f9944dfd7e02_113",
     "type": "security-rule"
 }

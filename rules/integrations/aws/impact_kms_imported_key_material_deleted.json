@@ -84,7 +84,13 @@
             "Data Source: AWS KMS",
             "Use Case: Threat Detection",
             "Tactic: Impact",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS KMS"
         ],
         "threat": [
             {
@@ -112,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "f6fee40d-8a5e-4cc8-9f73-8688419c6d68_1",
+    "id": "f6fee40d-8a5e-4cc8-9f73-8688419c6d68_2",
     "type": "security-rule"
 }

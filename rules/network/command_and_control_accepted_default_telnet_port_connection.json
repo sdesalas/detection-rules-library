@@ -117,7 +117,14 @@
             "Data Source: pfSense",
             "Data Source: SonicWall",
             "Data Source: Suricata",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Custom Query (KQL)",
+            "Domain: Network",
+            "Data Source: Network Packet Capture",
+            "Data Source: SonicWall Firewall Logs"
         ],
         "threat": [
             {
@@ -175,8 +182,8 @@
         "timeline_title": "Comprehensive Network Timeline",
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 117
+        "version": 118
     },
-    "id": "34fde489-94b0-4500-a76f-b8a157cf9269_117",
+    "id": "34fde489-94b0-4500-a76f-b8a157cf9269_118",
     "type": "security-rule"
 }

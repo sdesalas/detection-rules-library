@@ -74,7 +74,14 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Reverse Shell",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -110,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "a1a0375f-22c2-48c0-81a4-7c2d11cc6856_112",
+    "id": "a1a0375f-22c2-48c0-81a4-7c2d11cc6856_113",
     "type": "security-rule"
 }

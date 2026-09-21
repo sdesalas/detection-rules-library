@@ -83,7 +83,13 @@
             "Tactic: Impact",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Ransomware",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -109,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 217
+        "version": 218
     },
-    "id": "11ea6bec-ebde-4d71-a8e9-784948f8e3e9_217",
+    "id": "11ea6bec-ebde-4d71-a8e9-784948f8e3e9_218",
     "type": "security-rule"
 }

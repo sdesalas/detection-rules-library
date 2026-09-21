@@ -62,7 +62,11 @@
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
             "Resources: Investigation Guide",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -83,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 12
+        "version": 13
     },
-    "id": "6641a5af-fb7e-487a-adc4-9e6503365318_12",
+    "id": "6641a5af-fb7e-487a-adc4-9e6503365318_13",
     "type": "security-rule"
 }

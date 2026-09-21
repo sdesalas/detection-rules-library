@@ -94,7 +94,12 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -188,8 +193,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "65613f5e-0d48-4b55-ad61-2fb9567cb1ad_5",
+    "id": "65613f5e-0d48-4b55-ad61-2fb9567cb1ad_6",
     "type": "security-rule"
 }

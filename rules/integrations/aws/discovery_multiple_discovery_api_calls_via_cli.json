@@ -55,7 +55,7 @@
             "Data Source: AWS EC2",
             "Data Source: AWS IAM",
             "Data Source: AWS S3",
-            "Data Source: AWS Cloudtrail",
+            "Data Source: AWS CloudTrail",
             "Data Source: AWS RDS",
             "Data Source: AWS Lambda",
             "Data Source: AWS STS",
@@ -92,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 9
+        "version": 10
     },
-    "id": "74f45152-9aee-11ef-b0a5-f661ea17fbcd_9",
+    "id": "74f45152-9aee-11ef-b0a5-f661ea17fbcd_10",
     "type": "security-rule"
 }

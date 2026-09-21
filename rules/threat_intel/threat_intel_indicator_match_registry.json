@@ -38,7 +38,10 @@
             "OS: Windows",
             "Data Source: Elastic Endgame",
             "Rule Type: Threat Match",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: Windows",
+            "Domain: Endpoint",
+            "Resources: Osquery"
         ],
         "threat_filters": [
             {
@@ -121,8 +124,8 @@
         "timeline_title": "Generic Threat Match Timeline",
         "timestamp_override": "event.ingested",
         "type": "threat_match",
-        "version": 9
+        "version": 10
     },
-    "id": "a61809f3-fb5b-465c-8bff-23a8a068ac60_9",
+    "id": "a61809f3-fb5b-465c-8bff-23a8a068ac60_10",
     "type": "security-rule"
 }

@@ -64,7 +64,13 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Remote Management Tool Abuse",
+            "Rule Type: ES|QL",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -92,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "a8b2c4d6-e8f0-12a4-b6c8-d0e2f4a6b8c0_3",
+    "id": "a8b2c4d6-e8f0-12a4-b6c8-d0e2f4a6b8c0_4",
     "type": "security-rule"
 }

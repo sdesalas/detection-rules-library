@@ -54,7 +54,12 @@
             "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
             "Data Source: Windows Security Event Logs",
-            "Data Source: Windows System Event Logs"
+            "Data Source: Windows System Event Logs",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -82,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 216
+        "version": 217
     },
-    "id": "45ac4800-840f-414c-b221-53dd36a5aaf7_216",
+    "id": "45ac4800-840f-414c-b221-53dd36a5aaf7_217",
     "type": "security-rule"
 }

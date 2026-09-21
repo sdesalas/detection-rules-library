@@ -42,7 +42,11 @@
             "Tactic: Initial Access",
             "Use Case: Vulnerability",
             "Rule Type: Higher-Order Rule",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Threshold",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -85,8 +89,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 4
+        "version": 5
     },
-    "id": "b7c05aaf-78c2-4558-b069-87fa25973489_4",
+    "id": "b7c05aaf-78c2-4558-b069-87fa25973489_5",
     "type": "security-rule"
 }

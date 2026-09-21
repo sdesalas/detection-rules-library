@@ -81,7 +81,11 @@
             "Tactic: Persistence",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -141,8 +145,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 114
+        "version": 115
     },
-    "id": "70d12c9c-0dbd-4a1a-bc44-1467502c9cf6_114",
+    "id": "70d12c9c-0dbd-4a1a-bc44-1467502c9cf6_115",
     "type": "security-rule"
 }

@@ -69,7 +69,13 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Web Service Abuse",
+            "Rule Type: New Terms",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -134,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "b07f0fba-0a78-11f0-8311-b66272739ecb_7",
+    "id": "b07f0fba-0a78-11f0-8311-b66272739ecb_8",
     "type": "security-rule"
 }

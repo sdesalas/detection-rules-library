@@ -79,9 +79,13 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Domain: Container",
+            "Domain: Containers",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -117,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 11
+        "version": 12
     },
-    "id": "afe6b0eb-dd9d-4922-b08a-1910124d524d_11",
+    "id": "afe6b0eb-dd9d-4922-b08a-1910124d524d_12",
     "type": "security-rule"
 }

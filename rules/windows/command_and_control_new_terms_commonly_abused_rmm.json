@@ -108,7 +108,13 @@
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
             "Data Source: Windows Security Event Logs",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Remote Management Tool Abuse",
+            "Rule Type: New Terms",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -136,8 +142,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 118
+        "version": 119
     },
-    "id": "6e1a2cc4-d260-11ed-8829-f661ea17fbcc_118",
+    "id": "6e1a2cc4-d260-11ed-8829-f661ea17fbcc_119",
     "type": "security-rule"
 }

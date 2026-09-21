@@ -55,7 +55,9 @@
             "Tactic: Initial Access",
             "Tactic: Execution",
             "Tactic: Defense Evasion",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365"
         ],
         "threat": [
             {
@@ -88,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "054853f3-2ce0-41f3-a6eb-4a4867f39cdc_3",
+    "id": "054853f3-2ce0-41f3-a6eb-4a4867f39cdc_4",
     "type": "security-rule"
 }

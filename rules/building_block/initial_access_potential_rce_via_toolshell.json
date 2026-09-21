@@ -74,7 +74,12 @@
             "Use Case: Exploit Detection",
             "Data Source: Network Traffic",
             "Data Source: Network Traffic HTTP Logs",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Data Source: Network Packet Capture",
+            "Service: IIS",
+            "Vuln: CVE-2025-53770",
+            "Vuln: CVE-2025-53771"
         ],
         "threat": [
             {
@@ -95,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "99c9af5a-67cf-11f0-b69e-f661ea17fbcd_1",
+    "id": "99c9af5a-67cf-11f0-b69e-f661ea17fbcd_2",
     "type": "security-rule"
 }

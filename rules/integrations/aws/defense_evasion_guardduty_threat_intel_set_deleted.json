@@ -69,6 +69,8 @@
         "severity": "medium",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS GuardDuty",
@@ -102,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "7ba46fa6-496c-4d62-a811-7c221b3d2dd9_1",
+    "id": "7ba46fa6-496c-4d62-a811-7c221b3d2dd9_2",
     "type": "security-rule"
 }

@@ -54,7 +54,13 @@
             "Data Source: Azure Activity Logs",
             "Use Case: Threat Detection",
             "Tactic: Impact",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Ransomware",
+            "Rule Type: Threshold",
+            "Platform: Azure"
         ],
         "threat": [
             {
@@ -87,8 +93,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 2
+        "version": 3
     },
-    "id": "d8f4e3b0-8a1b-11ef-9b4a-f661ea17fbce_2",
+    "id": "d8f4e3b0-8a1b-11ef-9b4a-f661ea17fbce_3",
     "type": "security-rule"
 }

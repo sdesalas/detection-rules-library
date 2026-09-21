@@ -64,7 +64,7 @@
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
-            "Domain: Container",
+            "Domain: Containers",
             "Domain: Kubernetes",
             "OS: Linux",
             "Use Case: Threat Detection",
@@ -72,7 +72,11 @@
             "Tactic: Discovery",
             "Data Source: Elastic Defend",
             "Data Source: Auditd Manager",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -120,8 +124,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "f7a131f8-44b7-4957-99a4-e6c54d93d816_1",
+    "id": "f7a131f8-44b7-4957-99a4-e6c54d93d816_2",
     "type": "security-rule"
 }

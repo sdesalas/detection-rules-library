@@ -38,7 +38,13 @@
             "Domain: Kubernetes",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Kubernetes",
+            "Domain: Containers",
+            "Domain: Cloud"
         ],
         "threat": [
             {
@@ -59,8 +65,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "a337c3f8-e264-4eb4-9998-22669ca52791_2",
+    "id": "a337c3f8-e264-4eb4-9998-22669ca52791_3",
     "type": "security-rule"
 }

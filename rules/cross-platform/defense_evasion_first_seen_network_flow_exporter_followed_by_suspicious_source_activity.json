@@ -73,7 +73,8 @@
             "Data Source: Elastic Security",
             "Data Source: NetFlow",
             "Data Source: GoFlow2",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Rule Type: ES|QL"
         ],
         "threat": [
             {
@@ -94,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "882c8edc-1e39-4a60-80b2-485491b6c91c_1",
+    "id": "882c8edc-1e39-4a60-80b2-485491b6c91c_2",
     "type": "security-rule"
 }

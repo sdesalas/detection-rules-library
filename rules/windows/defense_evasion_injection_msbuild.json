@@ -55,7 +55,11 @@
             "Tactic: Defense Evasion",
             "Tactic: Privilege Escalation",
             "Data Source: Sysmon",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -103,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae9_212",
+    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae9_213",
     "type": "security-rule"
 }

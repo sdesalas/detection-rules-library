@@ -76,7 +76,11 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -113,8 +117,8 @@
             }
         ],
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "c296f888-eac6-4543-8da5-b6abb0d3304f_7",
+    "id": "c296f888-eac6-4543-8da5-b6abb0d3304f_8",
     "type": "security-rule"
 }

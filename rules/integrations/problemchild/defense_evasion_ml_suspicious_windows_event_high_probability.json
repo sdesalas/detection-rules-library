@@ -92,7 +92,13 @@
             "Rule Type: Machine Learning",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Domain: Endpoint"
         ],
         "threat": [
             {
@@ -120,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 116
+        "version": 117
     },
-    "id": "994e40aa-8c85-43de-825e-15f665375ee8_116",
+    "id": "994e40aa-8c85-43de-825e-15f665375ee8_117",
     "type": "security-rule"
 }

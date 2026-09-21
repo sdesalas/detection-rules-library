@@ -92,7 +92,15 @@
             "Data Source: AWS S3",
             "Use Case: Threat Detection",
             "Tactic: Impact",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Ransomware",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS S3"
         ],
         "threat": [
             {
@@ -130,8 +138,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 13
+        "version": 14
     },
-    "id": "7fda9bb2-fd28-11ee-85f9-f661ea17fbce_13",
+    "id": "7fda9bb2-fd28-11ee-85f9-f661ea17fbce_14",
     "type": "security-rule"
 }

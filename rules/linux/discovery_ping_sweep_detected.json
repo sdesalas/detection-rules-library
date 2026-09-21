@@ -77,7 +77,12 @@
             "Data Source: Auditd Manager",
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Threshold",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -117,8 +122,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 8
+        "version": 9
     },
-    "id": "03c23d45-d3cb-4ad4-ab5d-b361ffe8724a_8",
+    "id": "03c23d45-d3cb-4ad4-ab5d-b361ffe8724a_9",
     "type": "security-rule"
 }

@@ -76,7 +76,12 @@
             "Tactic: Defense Evasion",
             "Threat: Rootkit",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -141,8 +146,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "d54b649d-46d0-4b4c-a9a7-1bc9fc458d3c_3",
+    "id": "d54b649d-46d0-4b4c-a9a7-1bc9fc458d3c_4",
     "type": "security-rule"
 }

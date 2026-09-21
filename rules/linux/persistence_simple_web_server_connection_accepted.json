@@ -69,7 +69,12 @@
             "Tactic: Execution",
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Web Shell",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -146,8 +151,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "183f3cd2-4cc6-44c0-917c-c5d29ecdcf74_7",
+    "id": "183f3cd2-4cc6-44c0-917c-c5d29ecdcf74_8",
     "type": "security-rule"
 }

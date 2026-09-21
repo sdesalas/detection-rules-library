@@ -83,7 +83,14 @@
             "Data Source: AWS EC2",
             "Resources: Investigation Guide",
             "Use Case: Threat Detection",
-            "Tactic: Discovery"
+            "Tactic: Discovery",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS EC2"
         ],
         "threat": [
             {
@@ -104,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 8
+        "version": 9
     },
-    "id": "264c641e-c202-11ef-993e-f661ea17fbce_8",
+    "id": "264c641e-c202-11ef-993e-f661ea17fbce_9",
     "type": "security-rule"
 }

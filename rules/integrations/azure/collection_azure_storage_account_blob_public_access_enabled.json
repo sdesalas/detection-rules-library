@@ -63,7 +63,12 @@
             "Data Source: Azure Activity Logs",
             "Use Case: Threat Detection",
             "Tactic: Collection",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: Azure",
+            "Service: Azure Storage"
         ],
         "threat": [
             {
@@ -84,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "4c5a4e8b-3f2d-4a6e-9b5c-7d8f9e0a1b2c_2",
+    "id": "4c5a4e8b-3f2d-4a6e-9b5c-7d8f9e0a1b2c_3",
     "type": "security-rule"
 }

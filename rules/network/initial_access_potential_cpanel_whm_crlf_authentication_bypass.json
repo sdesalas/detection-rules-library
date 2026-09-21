@@ -108,7 +108,13 @@
             "Data Source: Network Packet Capture",
             "Data Source: Network Traffic",
             "Data Source: Zeek",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Custom Query (KQL)",
+            "Vuln: CVE-2026-41940"
         ],
         "threat": [
             {
@@ -129,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "2449be9d-2fdf-4126-a85b-f05e4058df9f_3",
+    "id": "2449be9d-2fdf-4126-a85b-f05e4058df9f_4",
     "type": "security-rule"
 }

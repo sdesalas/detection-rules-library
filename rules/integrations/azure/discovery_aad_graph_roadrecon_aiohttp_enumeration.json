@@ -60,7 +60,12 @@
             "Data Source: Azure AD Graph Activity Logs",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: ES|QL",
+            "Platform: Entra ID",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -105,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "80aa6cca-b343-457b-877e-5877cd71a1f8_2",
+    "id": "80aa6cca-b343-457b-877e-5877cd71a1f8_3",
     "type": "security-rule"
 }

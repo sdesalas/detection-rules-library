@@ -68,7 +68,10 @@
             "Use Case: Network Security Monitoring",
             "Tactic: Collection",
             "Data Source: Network Packet Capture",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: New Terms"
         ],
         "threat": [
             {
@@ -94,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "35ef761a-7136-4cb9-a32d-4e7abddb3bac_1",
+    "id": "35ef761a-7136-4cb9-a32d-4e7abddb3bac_2",
     "type": "security-rule"
 }

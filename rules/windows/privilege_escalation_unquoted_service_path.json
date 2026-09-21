@@ -78,7 +78,12 @@
             "Data Source: Sysmon",
             "Data Source: Windows Security Event Logs",
             "Data Source: Crowdstrike",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -106,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "12de29d4-bbb0-4eef-b687-857e8a163870_211",
+    "id": "12de29d4-bbb0-4eef-b687-857e8a163870_212",
     "type": "security-rule"
 }

@@ -66,7 +66,9 @@
             "Use Case: Threat Detection",
             "Tactic: Collection",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -94,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "d197478e-39f0-4347-a22f-ba654718b148_6",
+    "id": "d197478e-39f0-4347-a22f-ba654718b148_7",
     "type": "security-rule"
 }

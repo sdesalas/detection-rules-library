@@ -91,7 +91,14 @@
             "Data Source: AWS IAM",
             "Use Case: Identity and Access Audit",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS IAM",
+            "Service: AWS EC2"
         ],
         "threat": [
             {
@@ -119,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "f7a1c536-9ac0-11ef-9911-f661ea17fbcd_7",
+    "id": "f7a1c536-9ac0-11ef-9911-f661ea17fbcd_8",
     "type": "security-rule"
 }

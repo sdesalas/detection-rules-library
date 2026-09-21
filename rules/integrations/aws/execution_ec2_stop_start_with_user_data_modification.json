@@ -79,7 +79,12 @@
             "Data Source: AWS CloudTrail",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: AWS",
+            "Service: AWS EC2"
         ],
         "threat": [
             {
@@ -122,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "7e5c0e5a-95a5-404e-a5b0-278d35dc3325_1",
+    "id": "7e5c0e5a-95a5-404e-a5b0-278d35dc3325_2",
     "type": "security-rule"
 }

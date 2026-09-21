@@ -61,7 +61,13 @@
             "Use Case: Threat Detection",
             "Tactic: Impact",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Ransomware",
+            "Rule Type: ES|QL",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -114,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 215
+        "version": 216
     },
-    "id": "1397e1b9-0c90-4d24-8d7b-80598eb9bc9a_215",
+    "id": "1397e1b9-0c90-4d24-8d7b-80598eb9bc9a_216",
     "type": "security-rule"
 }

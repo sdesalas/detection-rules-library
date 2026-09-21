@@ -100,7 +100,16 @@
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
             "Domain: LLM",
-            "Mitre Atlas: T0086"
+            "Mitre Atlas: T0086",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Unauthorized AI Usage",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Domain: GenAI"
         ],
         "threat": [
             {
@@ -163,8 +172,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "c3d4e5f6-a7b8-9012-cdef-123456789abc_3",
+    "id": "c3d4e5f6-a7b8-9012-cdef-123456789abc_4",
     "type": "security-rule"
 }

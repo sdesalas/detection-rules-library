@@ -78,7 +78,9 @@
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
-            "Data Source: Windows Security Event Logs"
+            "Data Source: Windows Security Event Logs",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -121,8 +123,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "808291d3-e918-4a3a-86cd-73052a0c9bdc_108",
+    "id": "808291d3-e918-4a3a-86cd-73052a0c9bdc_109",
     "type": "security-rule"
 }

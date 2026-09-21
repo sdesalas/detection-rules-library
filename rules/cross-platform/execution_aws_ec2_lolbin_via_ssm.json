@@ -50,7 +50,17 @@
             "Data Source: AWS SSM",
             "Data Source: AWS Systems Manager",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Threat: Cloud VM Execution",
+            "Rule Type: ES|QL",
+            "Platform: Linux",
+            "Platform: AWS",
+            "Service: AWS EC2",
+            "Service: AWS SSM"
         ],
         "threat": [
             {
@@ -98,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "a8b3e2f0-8c7d-11ef-b4c6-f661ea17fbcd_4",
+    "id": "a8b3e2f0-8c7d-11ef-b4c6-f661ea17fbcd_5",
     "type": "security-rule"
 }

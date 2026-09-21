@@ -94,7 +94,14 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: Crowdstrike",
             "Data Source: Elastic Endgame",
-            "Data Source: Windows Security Event Logs"
+            "Data Source: Windows Security Event Logs",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Threat: Protocol Tunneling",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -142,8 +149,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "e7f2c4a1-9b3d-5e8f-c6a0-2d1b4e7f8c3a_4",
+    "id": "e7f2c4a1-9b3d-5e8f-c6a0-2d1b4e7f8c3a_5",
     "type": "security-rule"
 }

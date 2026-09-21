@@ -85,7 +85,14 @@
             "Threat: Tycoon2FA",
             "Tactic: Initial Access",
             "Tactic: Credential Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: AiTM Phishing",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Domain: Email"
         ],
         "threat": [
             {
@@ -121,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "275b972d-2fed-44fc-9214-08603b3318e3_1",
+    "id": "275b972d-2fed-44fc-9214-08603b3318e3_2",
     "type": "security-rule"
 }

@@ -85,7 +85,14 @@
             "Data Source: Active Directory",
             "Use Case: Vulnerability",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Vuln: CVE-2021-42278"
         ],
         "threat": [
             {
@@ -148,8 +155,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 216
+        "version": 217
     },
-    "id": "bdcf646b-08d4-492c-870a-6c04e3700034_216",
+    "id": "bdcf646b-08d4-492c-870a-6c04e3700034_217",
     "type": "security-rule"
 }

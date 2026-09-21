@@ -78,12 +78,16 @@
             "Data Source: Microsoft Sentinel",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
-            "Promotion: External Alerts"
+            "Promotion: External Alerts",
+            "Rule Type: Custom Query (KQL)",
+            "Rule Type: Higher-Order",
+            "Data Source: Microsoft Sentinel Forwarded Events",
+            "Domain: Cloud"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "74147312-ba03-4bea-91d1-040d54c1e8c3_1",
+    "id": "74147312-ba03-4bea-91d1-040d54c1e8c3_2",
     "type": "security-rule"
 }

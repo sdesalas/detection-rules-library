@@ -74,7 +74,12 @@
             "Tactic: Command and Control",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Noise: Medium",
+            "Performance: Slow",
+            "Threat: Remote Management Tool Abuse",
+            "Rule Type: ES|QL",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -102,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "e5f6a7b8-c9d0-8e1f-2a3b-4c5d6e7f8a9b_5",
+    "id": "e5f6a7b8-c9d0-8e1f-2a3b-4c5d6e7f8a9b_6",
     "type": "security-rule"
 }

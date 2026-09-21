@@ -62,7 +62,13 @@
             "Resources: Investigation Guide",
             "Domain: Network",
             "Data Source: Fortinet",
-            "Data Source: Fortinet FortiGate"
+            "Data Source: Fortinet FortiGate",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Vuln: CVE-2026-24858"
         ],
         "threat": [
             {
@@ -90,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "896a0a38-eaa0-42e9-be35-dfcc3e3e90ae_2",
+    "id": "896a0a38-eaa0-42e9-be35-dfcc3e3e90ae_3",
     "type": "security-rule"
 }

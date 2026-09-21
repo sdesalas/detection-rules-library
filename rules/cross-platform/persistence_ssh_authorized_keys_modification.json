@@ -58,7 +58,12 @@
             "Tactic: Lateral Movement",
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -120,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 210
+        "version": 211
     },
-    "id": "2215b8bd-1759-4ffa-8ab8-55c8e6b32e7f_210",
+    "id": "2215b8bd-1759-4ffa-8ab8-55c8e6b32e7f_211",
     "type": "security-rule"
 }

@@ -65,12 +65,15 @@
             "Rule Type: Higher-Order Rule",
             "Resources: Investigation Guide",
             "Domain: Network",
-            "Data Source: Fortinet"
+            "Data Source: Fortinet",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: ES|QL"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "2c40dfe2-c13e-48a8-8eff-fb9bfb2a7854_3",
+    "id": "2c40dfe2-c13e-48a8-8eff-fb9bfb2a7854_4",
     "type": "security-rule"
 }

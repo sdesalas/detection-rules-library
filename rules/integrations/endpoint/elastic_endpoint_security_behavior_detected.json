@@ -96,12 +96,14 @@
         ],
         "tags": [
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Rule Type: Custom Query (KQL)",
+            "Domain: Endpoint"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 5
+        "version": 6
     },
-    "id": "0f615fe4-eaa2-11ee-ae33-f661ea17fbce_5",
+    "id": "0f615fe4-eaa2-11ee-ae33-f661ea17fbce_6",
     "type": "security-rule"
 }

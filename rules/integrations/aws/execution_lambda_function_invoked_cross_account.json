@@ -52,7 +52,12 @@
             "Data Source: AWS Lambda",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: ES|QL",
+            "Platform: AWS",
+            "Service: AWS Lambda"
         ],
         "threat": [
             {
@@ -73,8 +78,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "49002bbe-7aea-4146-91eb-b2b683bf5ed5_1",
+    "id": "49002bbe-7aea-4146-91eb-b2b683bf5ed5_2",
     "type": "security-rule"
 }

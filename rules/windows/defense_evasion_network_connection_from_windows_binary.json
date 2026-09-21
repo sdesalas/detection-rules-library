@@ -74,7 +74,14 @@
             "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -155,8 +162,8 @@
             }
         ],
         "type": "eql",
-        "version": 220
+        "version": 221
     },
-    "id": "1fe3b299-fbb5-4657-a937-1d746f2c711a_220",
+    "id": "1fe3b299-fbb5-4657-a937-1d746f2c711a_221",
     "type": "security-rule"
 }

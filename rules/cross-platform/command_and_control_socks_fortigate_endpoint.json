@@ -78,7 +78,15 @@
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
             "Data Source: Fortinet",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Domain: Network"
         ],
         "threat": [
             {
@@ -98,8 +106,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "6926b708-7964-425f-bed8-6e006379df08_3",
+    "id": "6926b708-7964-425f-bed8-6e006379df08_4",
     "type": "security-rule"
 }

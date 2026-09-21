@@ -78,12 +78,16 @@
             "Data Source: Elastic Defend",
             "Domain: Endpoint",
             "Domain: Kubernetes",
-            "Domain: Container",
+            "Domain: Containers",
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -133,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "a698a653-e144-4e40-bade-35135935be45_2",
+    "id": "a698a653-e144-4e40-bade-35135935be45_3",
     "type": "security-rule"
 }

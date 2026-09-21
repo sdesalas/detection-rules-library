@@ -32,7 +32,12 @@
         "tags": [
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: ES|QL",
+            "Domain: Endpoint"
         ],
         "threat": [
             {
@@ -75,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 107
+        "version": 108
     },
-    "id": "493834ca-f861-414c-8602-150d5505b777_107",
+    "id": "493834ca-f861-414c-8602-150d5505b777_108",
     "type": "security-rule"
 }

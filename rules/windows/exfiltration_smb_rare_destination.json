@@ -94,7 +94,11 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -130,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 214
+        "version": 215
     },
-    "id": "f580bf0a-2d23-43bb-b8e1-17548bb947ec_214",
+    "id": "f580bf0a-2d23-43bb-b8e1-17548bb947ec_215",
     "type": "security-rule"
 }

@@ -55,7 +55,12 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Data Source: Jamf Protect",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: macOS",
+            "Data Source: Jamf Protect Event Logs"
         ],
         "threat": [
             {
@@ -95,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "04e65517-16e9-4fc4-b7f1-94dc21ecea0d_6",
+    "id": "04e65517-16e9-4fc4-b7f1-94dc21ecea0d_7",
     "type": "security-rule"
 }

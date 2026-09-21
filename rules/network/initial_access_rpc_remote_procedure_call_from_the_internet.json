@@ -107,7 +107,13 @@
             "Data Source: PAN-OS",
             "Data Source: pfSense",
             "Data Source: Zeek",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Custom Query (KQL)",
+            "Domain: Network",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -133,8 +139,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 113
+        "version": 114
     },
-    "id": "143cb236-0956-4f42-a706-814bcaa0cf5a_113",
+    "id": "143cb236-0956-4f42-a706-814bcaa0cf5a_114",
     "type": "security-rule"
 }

@@ -80,7 +80,11 @@
             "Tactic: Privilege Escalation",
             "Tactic: Lateral Movement",
             "Resources: Investigation Guide",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS STS"
         ],
         "threat": [
             {
@@ -145,8 +149,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 211
+        "version": 212
     },
-    "id": "b45ab1d2-712f-4f01-a751-df3826969807_211",
+    "id": "b45ab1d2-712f-4f01-a751-df3826969807_212",
     "type": "security-rule"
 }

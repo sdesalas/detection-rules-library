@@ -87,7 +87,12 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Data Source: PowerShell Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -147,8 +152,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 119
+        "version": 120
     },
-    "id": "11dd9713-0ec6-4110-9707-32daae1ee68c_119",
+    "id": "11dd9713-0ec6-4110-9707-32daae1ee68c_120",
     "type": "security-rule"
 }

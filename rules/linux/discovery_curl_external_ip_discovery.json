@@ -92,7 +92,12 @@
             "Tactic: Discovery",
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Download Tool Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -113,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "996e2e09-087e-4e99-a3cc-a9225d24ba3d_1",
+    "id": "996e2e09-087e-4e99-a3cc-a9225d24ba3d_2",
     "type": "security-rule"
 }

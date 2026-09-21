@@ -158,7 +158,15 @@
             "Data Source: AWS KMS",
             "Use Case: Threat Detection",
             "Tactic: Impact",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Ransomware",
+            "Rule Type: ES|QL",
+            "Platform: AWS",
+            "Service: AWS S3",
+            "Service: AWS KMS"
         ],
         "threat": [
             {
@@ -179,8 +187,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 12
+        "version": 13
     },
-    "id": "ab8f074c-5565-4bc4-991c-d49770e19fc9_12",
+    "id": "ab8f074c-5565-4bc4-991c-d49770e19fc9_13",
     "type": "security-rule"
 }

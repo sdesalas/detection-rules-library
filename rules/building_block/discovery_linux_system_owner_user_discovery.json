@@ -70,7 +70,9 @@
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -96,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "bf8c007c-7dee-4842-8e9a-ee534c09d205_8",
+    "id": "bf8c007c-7dee-4842-8e9a-ee534c09d205_9",
     "type": "security-rule"
 }

@@ -95,7 +95,14 @@
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
             "Tactic: Lateral Movement",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS STS"
         ],
         "threat": [
             {
@@ -172,8 +179,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "ba5a0b0c-b477-4729-a3dc-0147c2049cf1_6",
+    "id": "ba5a0b0c-b477-4729-a3dc-0147c2049cf1_7",
     "type": "security-rule"
 }

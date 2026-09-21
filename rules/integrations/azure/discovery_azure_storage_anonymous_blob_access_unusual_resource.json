@@ -64,7 +64,8 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Tactic: Collection",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Rule Type: New Terms"
         ],
         "threat": [
             {
@@ -100,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "eabaf807-e710-4f0f-8943-8d1b436d834a_1",
+    "id": "eabaf807-e710-4f0f-8943-8d1b436d834a_2",
     "type": "security-rule"
 }

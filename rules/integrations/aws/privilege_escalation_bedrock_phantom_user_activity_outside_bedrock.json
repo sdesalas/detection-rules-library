@@ -66,10 +66,20 @@
             "Data Source: AWS CloudTrail",
             "Data Source: Amazon Web Services",
             "Data Source: AWS IAM",
+            "Data Source: AWS Bedrock",
             "Data Source: Amazon Bedrock",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Unauthorized AI Usage",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Domain: GenAI",
+            "Service: AWS IAM",
+            "Service: AWS Bedrock"
         ],
         "threat": [
             {
@@ -97,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "56788ae8-794b-4ade-affd-534aa5c9e28d_1",
+    "id": "56788ae8-794b-4ade-affd-534aa5c9e28d_2",
     "type": "security-rule"
 }

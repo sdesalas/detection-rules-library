@@ -67,7 +67,15 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Threat: Container Escape",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Kubernetes",
+            "Domain: Containers",
+            "Domain: Cloud"
         ],
         "threat": [
             {
@@ -103,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 210
+        "version": 211
     },
-    "id": "2abda169-416b-4bb3-9a6b-f8d239fd78ba_210",
+    "id": "2abda169-416b-4bb3-9a6b-f8d239fd78ba_211",
     "type": "security-rule"
 }

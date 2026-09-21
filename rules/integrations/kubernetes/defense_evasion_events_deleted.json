@@ -48,7 +48,13 @@
             "Domain: Kubernetes",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Kubernetes",
+            "Domain: Containers",
+            "Domain: Cloud"
         ],
         "threat": [
             {
@@ -76,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "33c27b4e-8ec6-406f-b8e5-345dc024aa97_3",
+    "id": "33c27b4e-8ec6-406f-b8e5-345dc024aa97_4",
     "type": "security-rule"
 }

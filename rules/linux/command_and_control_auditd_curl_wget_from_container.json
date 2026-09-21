@@ -74,7 +74,13 @@
             "Tactic: Execution",
             "Domain: Containers",
             "Data Source: Auditd Manager",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Download Tool Abuse",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -95,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "e7b2c3d4-5a6b-4e8f-9c0d-1a2b3e4f5a6b_2",
+    "id": "e7b2c3d4-5a6b-4e8f-9c0d-1a2b3e4f5a6b_3",
     "type": "security-rule"
 }

@@ -89,7 +89,14 @@
             "Data Source: Windows Security Event Logs",
             "Data Source: Microsoft Defender XDR",
             "Data Source: Sysmon",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -181,8 +188,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 322
+        "version": 323
     },
-    "id": "cff92c41-2225-4763-b4ce-6f71e5bda5e6_322",
+    "id": "cff92c41-2225-4763-b4ce-6f71e5bda5e6_323",
     "type": "security-rule"
 }

@@ -108,7 +108,14 @@
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Living off the Land",
+            "Threat: Suspicious TLD",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -163,8 +170,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "e516bf56-d51b-43e8-91ec-9e276331f433_5",
+    "id": "e516bf56-d51b-43e8-91ec-9e276331f433_6",
     "type": "security-rule"
 }

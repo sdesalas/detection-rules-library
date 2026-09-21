@@ -105,7 +105,11 @@
             "Use Case: Identity and Access Audit",
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Entra ID"
         ],
         "threat": [
             {
@@ -155,8 +159,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "db97a2aa-3ba5-4fa5-b8b9-bf42284edb5f_3",
+    "id": "db97a2aa-3ba5-4fa5-b8b9-bf42284edb5f_4",
     "type": "security-rule"
 }

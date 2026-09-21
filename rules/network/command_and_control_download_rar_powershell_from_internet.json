@@ -91,7 +91,14 @@
             "Domain: Endpoint",
             "Data Source: Fortinet",
             "Data Source: PAN-OS",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Script-Based Execution",
+            "Rule Type: Custom Query (KQL)",
+            "Domain: Network",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -112,8 +119,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "ff013cb4-274d-434a-96bb-fe15ddd3ae92_109",
+    "id": "ff013cb4-274d-434a-96bb-fe15ddd3ae92_110",
     "type": "security-rule"
 }

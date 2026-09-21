@@ -74,7 +74,13 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Entra ID",
+            "Platform: Azure",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -124,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "fd9d2933-f0f9-4aac-810c-a31f6a4a7890_1",
+    "id": "fd9d2933-f0f9-4aac-810c-a31f6a4a7890_2",
     "type": "security-rule"
 }

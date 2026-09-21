@@ -61,7 +61,9 @@
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -89,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "8e39f54e-910b-4adb-a87e-494fbba5fb65_6",
+    "id": "8e39f54e-910b-4adb-a87e-494fbba5fb65_7",
     "type": "security-rule"
 }

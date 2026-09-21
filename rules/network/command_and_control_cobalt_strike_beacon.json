@@ -86,10 +86,14 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Domain: Endpoint",
-            "Rule Type: ESQL",
+            "Rule Type: ES|QL",
             "Data Source: Fortinet",
             "Data Source: PAN-OS",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Domain: Network",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -129,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 111
+        "version": 112
     },
-    "id": "cf53f532-9cc9-445a-9ae7-fced307ec53c_111",
+    "id": "cf53f532-9cc9-445a-9ae7-fced307ec53c_112",
     "type": "security-rule"
 }

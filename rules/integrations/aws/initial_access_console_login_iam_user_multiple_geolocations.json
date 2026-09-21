@@ -47,7 +47,12 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
             "Tactic: Credential Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: ES|QL",
+            "Platform: AWS",
+            "Service: AWS IAM"
         ],
         "threat": [
             {
@@ -90,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "5301ac83-7a43-4c92-95e7-c372afea807d_1",
+    "id": "5301ac83-7a43-4c92-95e7-c372afea807d_2",
     "type": "security-rule"
 }

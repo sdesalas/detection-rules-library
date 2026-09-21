@@ -60,7 +60,12 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Data Source: Auditd Manager",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -115,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "fcf733d5-7801-4eb0-92ac-8ffacf3658f2_8",
+    "id": "fcf733d5-7801-4eb0-92ac-8ffacf3658f2_9",
     "type": "security-rule"
 }

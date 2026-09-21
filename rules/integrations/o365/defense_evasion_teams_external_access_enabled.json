@@ -67,7 +67,12 @@
             "Data Source: Microsoft 365",
             "Use Case: Configuration Audit",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Domain: SaaS",
+            "Data Source: Microsoft 365 Audit Logs",
+            "Service: Microsoft Teams"
         ],
         "threat": [
             {
@@ -93,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 214
+        "version": 215
     },
-    "id": "27f7c15a-91f8-4c3d-8b9e-1f99cc030a51_214",
+    "id": "27f7c15a-91f8-4c3d-8b9e-1f99cc030a51_215",
     "type": "security-rule"
 }

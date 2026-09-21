@@ -60,7 +60,14 @@
             "Resources: Investigation Guide",
             "Domain: LLM",
             "Mitre Atlas: T0040",
-            "Mitre Atlas: T0044"
+            "Mitre Atlas: T0044",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Domain: GenAI"
         ],
         "threat": [
             {
@@ -86,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "d8f2a1b3-c4e5-6789-abcd-ef0123456789_2",
+    "id": "d8f2a1b3-c4e5-6789-abcd-ef0123456789_3",
     "type": "security-rule"
 }

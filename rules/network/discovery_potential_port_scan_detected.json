@@ -53,7 +53,12 @@
             "Tactic: Reconnaissance",
             "Use Case: Network Security Monitoring",
             "Data Source: PAN-OS",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: ES|QL",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -96,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 16
+        "version": 17
     },
-    "id": "0171f283-ade7-4f87-9521-ac346c68cc9b_16",
+    "id": "0171f283-ade7-4f87-9521-ac346c68cc9b_17",
     "type": "security-rule"
 }

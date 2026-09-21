@@ -46,7 +46,11 @@
             "Tactic: Persistence",
             "Tactic: Initial Access",
             "Data Source: Network Packet Capture",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: Event Correlation (EQL)"
         ],
         "threat": [
             {
@@ -89,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "39ab0f66-efa0-4649-9c9c-8c64682f5fdd_1",
+    "id": "39ab0f66-efa0-4649-9c9c-8c64682f5fdd_2",
     "type": "security-rule"
 }

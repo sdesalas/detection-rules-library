@@ -91,7 +91,14 @@
             "Data Source: Active Directory",
             "Use Case: Vulnerability",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Vuln: CVE-2022-26923"
         ],
         "threat": [
             {
@@ -124,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 215
+        "version": 216
     },
-    "id": "6bed021a-0afb-461c-acbe-ffdb9574d3f3_215",
+    "id": "6bed021a-0afb-461c-acbe-ffdb9574d3f3_216",
     "type": "security-rule"
 }

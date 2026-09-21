@@ -44,7 +44,11 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -87,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 12
+        "version": 13
     },
-    "id": "1fa350e0-0aa2-4055-bf8f-ab8b59233e59_12",
+    "id": "1fa350e0-0aa2-4055-bf8f-ab8b59233e59_13",
     "type": "security-rule"
 }

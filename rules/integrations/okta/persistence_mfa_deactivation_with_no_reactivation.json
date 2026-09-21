@@ -66,7 +66,13 @@
             "Use Case: Identity and Access Audit",
             "Data Source: Okta",
             "Domain: Cloud",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Okta",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -115,8 +121,8 @@
             }
         ],
         "type": "eql",
-        "version": 419
+        "version": 420
     },
-    "id": "cd89602e-9db0-48e3-9391-ae3bf241acd8_419",
+    "id": "cd89602e-9db0-48e3-9391-ae3bf241acd8_420",
     "type": "security-rule"
 }

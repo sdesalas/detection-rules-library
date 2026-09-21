@@ -118,7 +118,12 @@
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Supply Chain",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -191,8 +196,8 @@
             }
         ],
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "ad959eeb-2b7b-4722-ba08-a45f6622f005_111",
+    "id": "ad959eeb-2b7b-4722-ba08-a45f6622f005_112",
     "type": "security-rule"
 }

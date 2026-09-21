@@ -86,7 +86,11 @@
             "Use Case: Asset Visibility",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: Entra ID"
         ],
         "threat": [
             {
@@ -114,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "10b63b69-9f08-4767-b318-12208f97ad41_2",
+    "id": "10b63b69-9f08-4767-b318-12208f97ad41_3",
     "type": "security-rule"
 }

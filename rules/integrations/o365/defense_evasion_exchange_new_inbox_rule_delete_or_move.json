@@ -85,7 +85,14 @@
             "Data Source: Microsoft 365 Audit Logs",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: AiTM Phishing",
+            "Rule Type: New Terms",
+            "Platform: Microsoft 365",
+            "Service: Microsoft Exchange Online"
         ],
         "threat": [
             {
@@ -135,8 +142,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "40fe11c2-376e-11f0-9a82-f661ea17fbcd_6",
+    "id": "40fe11c2-376e-11f0-9a82-f661ea17fbcd_7",
     "type": "security-rule"
 }

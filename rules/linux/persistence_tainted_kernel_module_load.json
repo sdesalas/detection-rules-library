@@ -51,7 +51,11 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -116,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 10
+        "version": 11
     },
-    "id": "05cad2fb-200c-407f-b472-02ea8c9e5e4a_10",
+    "id": "05cad2fb-200c-407f-b472-02ea8c9e5e4a_11",
     "type": "security-rule"
 }

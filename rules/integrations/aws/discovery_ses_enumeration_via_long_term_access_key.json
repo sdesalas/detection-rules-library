@@ -76,6 +76,8 @@
         "severity": "low",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS SES",
@@ -102,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "8d05971b-5858-4b72-b09a-17e3cee0af54_1",
+    "id": "8d05971b-5858-4b72-b09a-17e3cee0af54_2",
     "type": "security-rule"
 }

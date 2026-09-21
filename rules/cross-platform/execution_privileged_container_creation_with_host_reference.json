@@ -70,7 +70,7 @@
         "severity": "high",
         "tags": [
             "Domain: Endpoint",
-            "Domain: Container",
+            "Domain: Containers",
             "OS: Linux",
             "OS: macOS",
             "Use Case: Threat Detection",
@@ -80,7 +80,14 @@
             "Data Source: Auditd Manager",
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Container Escape",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -133,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "d1f310cb-5921-4d37-bbdf-cfdab7a6df9c_2",
+    "id": "d1f310cb-5921-4d37-bbdf-cfdab7a6df9c_3",
     "type": "security-rule"
 }

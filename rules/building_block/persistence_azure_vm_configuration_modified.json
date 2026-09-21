@@ -54,7 +54,9 @@
             "Data Source: Azure Activity Logs",
             "Use Case: Asset Visibility",
             "Tactic: Persistence",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Azure"
         ],
         "threat": [
             {
@@ -90,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "56fa718c-a0de-4492-97ff-bbc444b015b8_1",
+    "id": "56fa718c-a0de-4492-97ff-bbc444b015b8_2",
     "type": "security-rule"
 }

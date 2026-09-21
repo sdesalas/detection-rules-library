@@ -71,7 +71,12 @@
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -143,8 +148,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 215
+        "version": 216
     },
-    "id": "717f82c2-7741-4f9b-85b8-d06aeb853f4f_215",
+    "id": "717f82c2-7741-4f9b-85b8-d06aeb853f4f_216",
     "type": "security-rule"
 }

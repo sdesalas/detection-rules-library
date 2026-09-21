@@ -66,7 +66,10 @@
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
-            "Data Source: Auditd Manager"
+            "Data Source: Auditd Manager",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -92,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "f75f65cf-ed04-48df-a7ff-b02a8bfe636e_7",
+    "id": "f75f65cf-ed04-48df-a7ff-b02a8bfe636e_8",
     "type": "security-rule"
 }

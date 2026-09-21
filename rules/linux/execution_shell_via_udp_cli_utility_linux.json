@@ -97,7 +97,13 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Reverse Shell",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -155,8 +161,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 12
+        "version": 13
     },
-    "id": "a5eb21b7-13cc-4b94-9fe2-29bb2914e037_12",
+    "id": "a5eb21b7-13cc-4b94-9fe2-29bb2914e037_13",
     "type": "security-rule"
 }

@@ -95,7 +95,14 @@
             "Tactic: Execution",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Living off the Land",
+            "Threat: Script-Based Execution",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -135,8 +142,8 @@
             }
         ],
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "7f370d54-c0eb-4270-ac5a-9a6020585dc6_214",
+    "id": "7f370d54-c0eb-4270-ac5a-9a6020585dc6_215",
     "type": "security-rule"
 }

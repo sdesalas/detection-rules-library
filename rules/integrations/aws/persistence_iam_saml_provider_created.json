@@ -78,7 +78,14 @@
             "Data Source: AWS IAM",
             "Use Case: Identity and Access Audit",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS IAM"
         ],
         "threat": [
             {
@@ -140,8 +147,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 4
+        "version": 5
     },
-    "id": "a80ffc40-a256-475a-a86a-74361930cdb1_4",
+    "id": "a80ffc40-a256-475a-a86a-74361930cdb1_5",
     "type": "security-rule"
 }

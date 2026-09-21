@@ -87,7 +87,14 @@
             "Use Case: Threat Detection",
             "Tactic: Collection",
             "Tactic: Exfiltration",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Microsoft 365",
+            "Domain: Email",
+            "Service: Microsoft SharePoint",
+            "Service: Microsoft OneDrive"
         ],
         "threat": [
             {
@@ -151,8 +158,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "491651da-125b-11f1-af7d-f661ea17fbce_5",
+    "id": "491651da-125b-11f1-af7d-f661ea17fbce_6",
     "type": "security-rule"
 }

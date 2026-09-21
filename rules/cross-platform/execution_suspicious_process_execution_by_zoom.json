@@ -87,7 +87,12 @@
             "Tactic: Execution",
             "Data Source: Elastic Defend",
             "Rule Type: Event Correlation (EQL)",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Domain: SaaS",
+            "Data Source: Zoom",
+            "Vuln: CVE-2026-53413"
         ],
         "threat": [
             {
@@ -130,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "84b81b96-58dd-4c0d-9b2e-35023ab5ee88_1",
+    "id": "84b81b96-58dd-4c0d-9b2e-35023ab5ee88_2",
     "type": "security-rule"
 }

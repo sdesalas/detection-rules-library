@@ -69,7 +69,11 @@
             "Tactic: Privilege Escalation",
             "Use Case: Active Directory Monitoring",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -95,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 120
+        "version": 121
     },
-    "id": "670b3b5a-35e5-42db-bd36-6c5b9b4b7313_120",
+    "id": "670b3b5a-35e5-42db-bd36-6c5b9b4b7313_121",
     "type": "security-rule"
 }

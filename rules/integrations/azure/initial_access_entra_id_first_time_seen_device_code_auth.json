@@ -87,7 +87,15 @@
             "Data Source: Microsoft Entra ID Sign-In Logs",
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Device Code Phishing",
+            "Rule Type: New Terms",
+            "Platform: Entra ID",
+            "Platform: Azure",
+            "Data Source: Azure Activity Logs"
         ],
         "threat": [
             {
@@ -149,8 +157,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 10
+        "version": 11
     },
-    "id": "af22d970-7106-45b4-b5e3-460d15333727_10",
+    "id": "af22d970-7106-45b4-b5e3-460d15333727_11",
     "type": "security-rule"
 }

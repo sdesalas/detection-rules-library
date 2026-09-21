@@ -69,7 +69,15 @@
             "Use Case: Log Auditing",
             "Tactic: Impact",
             "Tactic: Discovery",
-            "Tactic: Collection"
+            "Tactic: Collection",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Brute Force",
+            "Rule Type: Threshold",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS S3"
         ],
         "threat": [
             {
@@ -139,8 +147,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 9
+        "version": 10
     },
-    "id": "5f0234fd-7f21-42af-8391-511d5fd11d5c_9",
+    "id": "5f0234fd-7f21-42af-8391-511d5fd11d5c_10",
     "type": "security-rule"
 }

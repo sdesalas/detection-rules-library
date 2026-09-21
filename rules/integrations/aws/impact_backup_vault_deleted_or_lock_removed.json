@@ -86,7 +86,15 @@
             "Use Case: Threat Detection",
             "Tactic: Impact",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Ransomware",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS Backup"
         ],
         "threat": [
             {
@@ -122,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "4ddac6c1-e4be-4e2b-95b5-0654cb8d423c_1",
+    "id": "4ddac6c1-e4be-4e2b-95b5-0654cb8d423c_2",
     "type": "security-rule"
 }

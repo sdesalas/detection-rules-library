@@ -89,7 +89,13 @@
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Azure",
+            "Platform: Kubernetes",
+            "Domain: Containers"
         ],
         "threat": [
             {
@@ -125,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "dd43c618-6a5b-465b-8ae4-ce69e34ddac0_1",
+    "id": "dd43c618-6a5b-465b-8ae4-ce69e34ddac0_2",
     "type": "security-rule"
 }

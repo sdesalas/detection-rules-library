@@ -83,12 +83,17 @@
         "severity": "high",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS IAM",
             "Tactic: Persistence",
             "Rule Type: New Terms",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended"
         ],
         "threat": [
             {
@@ -160,8 +165,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "47403d72-3ee2-4752-a676-19dc8ff2b9d6_5",
+    "id": "47403d72-3ee2-4752-a676-19dc8ff2b9d6_6",
     "type": "security-rule"
 }
