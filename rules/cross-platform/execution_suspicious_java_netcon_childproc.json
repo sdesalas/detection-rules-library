@@ -97,6 +97,13 @@
             "Use Case: Vulnerability",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Platform: macOS",
             "Tactic: Initial Access"
         ],
         "threat": [
@@ -154,8 +161,8 @@
             }
         ],
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "c3f5e1d8-910e-43b4-8d44-d748e498ca86_110",
+    "id": "c3f5e1d8-910e-43b4-8d44-d748e498ca86_111",
     "type": "security-rule"
 }

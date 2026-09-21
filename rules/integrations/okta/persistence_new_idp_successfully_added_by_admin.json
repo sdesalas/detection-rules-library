@@ -55,6 +55,12 @@
             "Tactic: Persistence",
             "Data Source: Okta",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Okta",
+            "Domain: Identity",
             "Tactic: Credential Access",
             "Tactic: Defense Impairment",
             "Tactic: Privilege Escalation"
@@ -163,8 +169,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 211
+        "version": 212
     },
-    "id": "29b53942-7cd4-11ee-b70e-f661ea17fbcd_211",
+    "id": "29b53942-7cd4-11ee-b70e-f661ea17fbcd_212",
     "type": "security-rule"
 }

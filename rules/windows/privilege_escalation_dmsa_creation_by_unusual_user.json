@@ -81,6 +81,10 @@
             "Data Source: Active Directory",
             "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Windows",
             "Tactic: Persistence"
         ],
         "threat": [
@@ -136,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "f0dbff4c-1aa7-4458-9ed5-ada472f64970_6",
+    "id": "f0dbff4c-1aa7-4458-9ed5-ada472f64970_7",
     "type": "security-rule"
 }

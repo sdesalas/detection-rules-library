@@ -78,6 +78,10 @@
             "Tactic: Credential Access",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -152,8 +156,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 12
+        "version": 13
     },
-    "id": "8a024633-c444-45c0-a4fe-78128d8c1ab6_12",
+    "id": "8a024633-c444-45c0-a4fe-78128d8c1ab6_13",
     "type": "security-rule"
 }

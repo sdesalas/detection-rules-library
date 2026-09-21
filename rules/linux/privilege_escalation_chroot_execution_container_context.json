@@ -86,12 +86,16 @@
         "tags": [
             "Data Source: Auditd Manager",
             "Data Source: Elastic Defend",
-            "Domain: Container",
+            "Domain: Containers",
             "Domain: Endpoint",
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -112,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "9056d577-4da5-47bf-8c94-6c0b1bb3f8a5_2",
+    "id": "9056d577-4da5-47bf-8c94-6c0b1bb3f8a5_3",
     "type": "security-rule"
 }

@@ -67,7 +67,7 @@
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
-            "Domain: Container",
+            "Domain: Containers",
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Execution",
@@ -75,6 +75,10 @@
             "Data Source: Elastic Endgame",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux",
             "Tactic: Privilege Escalation"
         ],
         "threat": [
@@ -128,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "a80d96cd-1164-41b3-9852-ef58724be496_8",
+    "id": "a80d96cd-1164-41b3-9852-ef58724be496_9",
     "type": "security-rule"
 }

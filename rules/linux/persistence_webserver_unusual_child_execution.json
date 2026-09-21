@@ -103,6 +103,12 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Web Shell",
+            "Rule Type: New Terms",
+            "Platform: Linux",
             "Tactic: Command and Control",
             "Tactic: Execution",
             "Tactic: Initial Access"
@@ -185,8 +191,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "b2f0ea08-2b60-4a2d-93d7-fe996a30031a_4",
+    "id": "b2f0ea08-2b60-4a2d-93d7-fe996a30031a_5",
     "type": "security-rule"
 }

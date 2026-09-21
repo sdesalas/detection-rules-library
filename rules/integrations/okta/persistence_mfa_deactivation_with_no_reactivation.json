@@ -67,6 +67,12 @@
             "Data Source: Okta",
             "Domain: Cloud",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Okta",
+            "Domain: Identity",
             "Tactic: Credential Access",
             "Tactic: Defense Impairment"
         ],
@@ -139,8 +145,8 @@
             }
         ],
         "type": "eql",
-        "version": 420
+        "version": 421
     },
-    "id": "cd89602e-9db0-48e3-9391-ae3bf241acd8_420",
+    "id": "cd89602e-9db0-48e3-9391-ae3bf241acd8_421",
     "type": "security-rule"
 }

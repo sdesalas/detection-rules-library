@@ -88,6 +88,12 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Resources: Osquery",
             "Tactic: Execution",
             "Tactic: Privilege Escalation"
         ],
@@ -157,8 +163,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 116
+        "version": 117
     },
-    "id": "4ec47004-b34a-42e6-8003-376a123ea447_116",
+    "id": "4ec47004-b34a-42e6-8003-376a123ea447_117",
     "type": "security-rule"
 }

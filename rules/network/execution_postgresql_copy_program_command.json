@@ -50,7 +50,10 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: Network Packet Capture",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: Event Correlation (EQL)"
         ],
         "threat": [
             {
@@ -71,8 +74,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "8ab64631-17ee-46b9-9800-9acacbeee1b3_1",
+    "id": "8ab64631-17ee-46b9-9800-9acacbeee1b3_2",
     "type": "security-rule"
 }

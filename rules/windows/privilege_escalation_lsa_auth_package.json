@@ -60,6 +60,10 @@
             "Data Source: Elastic Defend",
             "Data Source: Microsoft Defender XDR",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Persistence"
         ],
         "threat": [
@@ -110,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "e9abe69b-1deb-4e19-ac4a-5d5ac00f72eb_112",
+    "id": "e9abe69b-1deb-4e19-ac4a-5d5ac00f72eb_113",
     "type": "security-rule"
 }

@@ -89,6 +89,10 @@
             "Data Source: Elastic Defend",
             "Data Source: Auditd Manager",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Command and Control",
             "Tactic: Stealth"
         ],
@@ -153,8 +157,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "32300431-c2d5-432d-8ec8-0e03f9924756_10",
+    "id": "32300431-c2d5-432d-8ec8-0e03f9924756_11",
     "type": "security-rule"
 }

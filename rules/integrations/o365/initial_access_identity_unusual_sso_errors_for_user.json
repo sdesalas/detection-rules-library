@@ -66,6 +66,13 @@
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Microsoft 365",
+            "Domain: SaaS",
+            "Domain: Cloud",
+            "Domain: Email",
             "Tactic: Credential Access"
         ],
         "threat": [
@@ -126,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 216
+        "version": 217
     },
-    "id": "2de10e77-c144-4e69-afb7-344e7127abd0_216",
+    "id": "2de10e77-c144-4e69-afb7-344e7127abd0_217",
     "type": "security-rule"
 }

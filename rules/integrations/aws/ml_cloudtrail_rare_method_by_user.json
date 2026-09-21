@@ -34,6 +34,7 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Resources: Investigation Guide",
+            "Platform: AWS",
             "Tactic: Exfiltration",
             "Tactic: Initial Access",
             "Tactic: Lateral Movement",
@@ -146,8 +147,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 314
+        "version": 315
     },
-    "id": "ac706eae-d5ec-4b14-b4fd-e8ba8086f0e1_314",
+    "id": "ac706eae-d5ec-4b14-b4fd-e8ba8086f0e1_315",
     "type": "security-rule"
 }

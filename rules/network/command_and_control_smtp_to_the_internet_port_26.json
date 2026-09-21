@@ -97,7 +97,13 @@
             "Data Source: Network Traffic",
             "Data Source: pfSense",
             "Data Source: Zeek",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Custom Query (KQL)",
+            "Domain: Network",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -145,8 +151,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 114
+        "version": 115
     },
-    "id": "d7e62693-aab9-4f66-a21a-3d79ecdd603d_114",
+    "id": "d7e62693-aab9-4f66-a21a-3d79ecdd603d_115",
     "type": "security-rule"
 }

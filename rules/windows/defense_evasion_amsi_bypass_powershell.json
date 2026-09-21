@@ -69,6 +69,11 @@
             "Use Case: Threat Detection",
             "Data Source: PowerShell Logs",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment",
             "Tactic: Execution",
             "Tactic: Stealth"
@@ -136,8 +141,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 119
+        "version": 120
     },
-    "id": "1f0a69c0-3392-4adf-b7d5-6012fd292da8_119",
+    "id": "1f0a69c0-3392-4adf-b7d5-6012fd292da8_120",
     "type": "security-rule"
 }

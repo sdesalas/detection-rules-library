@@ -87,6 +87,11 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -157,8 +162,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 316
+        "version": 317
     },
-    "id": "9ccf3ce0-0057-440a-91f5-870c6ad39093_316",
+    "id": "9ccf3ce0-0057-440a-91f5-870c6ad39093_317",
     "type": "security-rule"
 }

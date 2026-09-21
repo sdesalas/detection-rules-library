@@ -34,6 +34,7 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Resources: Investigation Guide",
+            "Platform: AWS",
             "Tactic: Initial Access"
         ],
         "threat": [
@@ -61,8 +62,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 213
+        "version": 214
     },
-    "id": "dca28dee-c999-400f-b640-50a081cc0fd1_213",
+    "id": "dca28dee-c999-400f-b640-50a081cc0fd1_214",
     "type": "security-rule"
 }

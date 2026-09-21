@@ -34,6 +34,7 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Resources: Investigation Guide",
+            "Platform: AWS",
             "Tactic: Collection",
             "Tactic: Discovery",
             "Tactic: Lateral Movement",
@@ -104,8 +105,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 213
+        "version": 214
     },
-    "id": "19de8096-e2b0-4bd8-80c9-34a820813fff_213",
+    "id": "19de8096-e2b0-4bd8-80c9-34a820813fff_214",
     "type": "security-rule"
 }

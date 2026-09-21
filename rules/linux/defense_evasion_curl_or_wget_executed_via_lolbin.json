@@ -108,6 +108,13 @@
             "Tactic: Exfiltration",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Threat: Download Tool Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -178,8 +185,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "d1ee711a-a3ba-4d73-b5ab-84cab5b37fb3_3",
+    "id": "d1ee711a-a3ba-4d73-b5ab-84cab5b37fb3_4",
     "type": "security-rule"
 }

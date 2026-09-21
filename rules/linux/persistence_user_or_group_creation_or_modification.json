@@ -61,6 +61,11 @@
             "Tactic: Persistence",
             "Data Source: Auditd Manager",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Privilege Escalation"
         ],
         "threat": [
@@ -116,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "fcf733d5-7801-4eb0-92ac-8ffacf3658f2_9",
+    "id": "fcf733d5-7801-4eb0-92ac-8ffacf3658f2_10",
     "type": "security-rule"
 }

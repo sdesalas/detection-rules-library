@@ -95,7 +95,13 @@
             "Use Case: Threat Detection",
             "Tactic: Impact",
             "Data Source: Network Packet Capture",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: New Terms",
+            "Vuln: CVE-2026-29093"
         ],
         "threat": [
             {
@@ -123,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "63c3c736-72e1-4d41-8022-27b5c4935e93_1",
+    "id": "63c3c736-72e1-4d41-8022-27b5c4935e93_2",
     "type": "security-rule"
 }

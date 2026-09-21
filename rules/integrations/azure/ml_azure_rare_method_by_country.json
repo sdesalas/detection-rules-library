@@ -34,6 +34,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Resources: Investigation Guide",
+            "Platform: Entra ID",
+            "Domain: Identity",
             "Tactic: Initial Access",
             "Tactic: Stealth"
         ],
@@ -84,8 +86,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 103
+        "version": 104
     },
-    "id": "76de17b9-af25-49a0-9378-02888b6bb3a2_103",
+    "id": "76de17b9-af25-49a0-9378-02888b6bb3a2_104",
     "type": "security-rule"
 }

@@ -76,6 +76,12 @@
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Reverse Shell",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Command and Control"
         ],
         "threat": [
@@ -124,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "259be2d8-3b1a-4c2c-a0eb-0c8e77f35e39_111",
+    "id": "259be2d8-3b1a-4c2c-a0eb-0c8e77f35e39_112",
     "type": "security-rule"
 }

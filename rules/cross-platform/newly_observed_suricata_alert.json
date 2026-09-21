@@ -60,12 +60,16 @@
             "Rule Type: Higher-Order Rule",
             "Resources: Investigation Guide",
             "Domain: Network",
-            "Data Source: Suricata"
+            "Data Source: Suricata",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Rule Type: ES|QL"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "d591d7af-399b-4888-b705-ae612690c48d_3",
+    "id": "d591d7af-399b-4888-b705-ae612690c48d_4",
     "type": "security-rule"
 }

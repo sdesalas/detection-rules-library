@@ -73,6 +73,10 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
             "Tactic: Privilege Escalation"
         ],
         "threat": [
@@ -123,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 216
+        "version": 217
     },
-    "id": "88671231-6626-4e1b-abb7-6e361a171fbb_216",
+    "id": "88671231-6626-4e1b-abb7-6e361a171fbb_217",
     "type": "security-rule"
 }

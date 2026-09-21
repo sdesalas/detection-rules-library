@@ -88,6 +88,12 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -144,8 +150,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "341c6e18-9ef1-437e-bf18-b513f3ae2130_5",
+    "id": "341c6e18-9ef1-437e-bf18-b513f3ae2130_6",
     "type": "security-rule"
 }

@@ -87,7 +87,12 @@
             "Tactic: Lateral Movement",
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -119,8 +124,8 @@
             }
         ],
         "type": "eql",
-        "version": 123
+        "version": 124
     },
-    "id": "ab75c24b-2502-43a0-bf7c-e60e662c811e_123",
+    "id": "ab75c24b-2502-43a0-bf7c-e60e662c811e_124",
     "type": "security-rule"
 }

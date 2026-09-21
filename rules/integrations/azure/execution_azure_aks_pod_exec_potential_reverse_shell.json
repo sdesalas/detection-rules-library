@@ -61,11 +61,12 @@
             "Data Source: Kubernetes",
             "Platform: Azure",
             "Platform: Kubernetes",
-            "Rule Type: ESQL",
+            "Rule Type: ES|QL",
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Domain: Containers"
         ],
         "threat": [
             {
@@ -106,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "eb56a087-c726-4683-8d49-8c0253ea63cf_1",
+    "id": "eb56a087-c726-4683-8d49-8c0253ea63cf_2",
     "type": "security-rule"
 }

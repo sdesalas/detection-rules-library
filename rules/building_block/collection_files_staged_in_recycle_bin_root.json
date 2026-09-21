@@ -61,6 +61,8 @@
             "Rule Type: BBR",
             "Data Source: Elastic Endgame",
             "Data Source: Sysmon",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -111,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "57bccf1d-daf5-4e1a-9049-ff79b5254704_110",
+    "id": "57bccf1d-daf5-4e1a-9049-ff79b5254704_111",
     "type": "security-rule"
 }

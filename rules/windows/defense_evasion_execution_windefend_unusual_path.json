@@ -103,6 +103,11 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: Crowdstrike",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -148,8 +153,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 220
+        "version": 221
     },
-    "id": "053a0387-f3b5-4ba5-8245-8002cca2bd08_220",
+    "id": "053a0387-f3b5-4ba5-8245-8002cca2bd08_221",
     "type": "security-rule"
 }

@@ -54,6 +54,11 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: GCP",
             "Tactic: Persistence",
             "Tactic: Privilege Escalation"
         ],
@@ -125,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 111
+        "version": 112
     },
-    "id": "aa8007f0-d1df-49ef-8520-407857594827_111",
+    "id": "aa8007f0-d1df-49ef-8520-407857594827_112",
     "type": "security-rule"
 }

@@ -69,6 +69,12 @@
             "Data Source: Elastic Endgame",
             "Data Source: Auditd Manager",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Platform: macOS",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -97,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "7bcbb3ac-e533-41ad-a612-d6c3bf666aba_112",
+    "id": "7bcbb3ac-e533-41ad-a612-d6c3bf666aba_113",
     "type": "security-rule"
 }

@@ -122,6 +122,10 @@
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -171,8 +175,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "fcd16fe8-eb29-42b3-8aee-6c9ad777a2f6_6",
+    "id": "fcd16fe8-eb29-42b3-8aee-6c9ad777a2f6_7",
     "type": "security-rule"
 }

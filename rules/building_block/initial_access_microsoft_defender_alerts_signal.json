@@ -55,6 +55,8 @@
             "Tactic: Initial Access",
             "Tactic: Execution",
             "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -85,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 4
+        "version": 5
     },
-    "id": "054853f3-2ce0-41f3-a6eb-4a4867f39cdc_4",
+    "id": "054853f3-2ce0-41f3-a6eb-4a4867f39cdc_5",
     "type": "security-rule"
 }

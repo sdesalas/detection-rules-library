@@ -37,6 +37,11 @@
             "Use Case: Identity and Access Audit",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Microsoft 365",
+            "Domain: SaaS",
             "Tactic: Credential Access",
             "Tactic: Initial Access",
             "Tactic: Lateral Movement"
@@ -116,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 10
+        "version": 11
     },
-    "id": "36188365-f88f-4f70-8c1d-0b9554186b9c_10",
+    "id": "36188365-f88f-4f70-8c1d-0b9554186b9c_11",
     "type": "security-rule"
 }

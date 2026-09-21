@@ -64,7 +64,11 @@
             "Domain: Kubernetes",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: New Terms",
+            "Platform: Kubernetes",
+            "Domain: Containers",
+            "Domain: Cloud"
         ],
         "threat": [
             {
@@ -90,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "93120a05-caf5-47f6-a305-e8abee463fb9_2",
+    "id": "93120a05-caf5-47f6-a305-e8abee463fb9_3",
     "type": "security-rule"
 }

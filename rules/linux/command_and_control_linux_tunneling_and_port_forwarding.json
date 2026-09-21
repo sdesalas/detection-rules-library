@@ -96,7 +96,14 @@
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
             "Data Source: Auditd Manager",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Protocol Tunneling",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -127,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 115
+        "version": 116
     },
-    "id": "6ee947e9-de7e-4281-a55d-09289bdf947e_115",
+    "id": "6ee947e9-de7e-4281-a55d-09289bdf947e_116",
     "type": "security-rule"
 }

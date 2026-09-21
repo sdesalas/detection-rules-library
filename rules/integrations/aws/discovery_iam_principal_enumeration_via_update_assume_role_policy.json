@@ -63,7 +63,13 @@
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
             "Tactic: Discovery",
-            "Tactic: Credential Access"
+            "Tactic: Credential Access",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Threshold",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS IAM"
         ],
         "threat": [
             {
@@ -126,8 +132,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 216
+        "version": 217
     },
-    "id": "ea248a02-bc47-4043-8e94-2885b19b2636_216",
+    "id": "ea248a02-bc47-4043-8e94-2885b19b2636_217",
     "type": "security-rule"
 }

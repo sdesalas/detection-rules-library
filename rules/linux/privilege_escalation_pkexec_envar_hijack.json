@@ -55,6 +55,13 @@
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Vuln: CVE-2021-4034",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -131,8 +138,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "8da41fc9-7735-4b24-9cc6-c78dfc9fc9c9_214",
+    "id": "8da41fc9-7735-4b24-9cc6-c78dfc9fc9c9_215",
     "type": "security-rule"
 }

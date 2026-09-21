@@ -81,7 +81,13 @@
             "Use Case: Threat Detection",
             "Tactic: Impact",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Ransomware",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -101,8 +107,8 @@
             }
         ],
         "type": "eql",
-        "version": 15
+        "version": 16
     },
-    "id": "c8935a8b-634a-4449-98f7-bb24d3b2c0af_15",
+    "id": "c8935a8b-634a-4449-98f7-bb24d3b2c0af_16",
     "type": "security-rule"
 }

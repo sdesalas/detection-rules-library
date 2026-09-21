@@ -94,6 +94,10 @@
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
             "Data Source: Crowdstrike",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux",
             "Tactic: Command and Control",
             "Tactic: Initial Access",
             "Tactic: Lateral Movement"
@@ -186,8 +190,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "4c3c6c47-e38f-4944-be27-5c80be973bd7_8",
+    "id": "4c3c6c47-e38f-4944-be27-5c80be973bd7_9",
     "type": "security-rule"
 }

@@ -122,12 +122,16 @@
             "Domain: Identity",
             "Data Source: Azure",
             "Data Source: Entra ID",
-            "Data Source: Entra ID Sign-in",
+            "Data Source: Entra ID Sign-In",
             "Platform: Entra ID",
             "Use Case: Identity and Access Audit",
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
             "Tactic: Credential Access",
             "Tactic: Lateral Movement"
         ],
@@ -194,8 +198,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 10
+        "version": 11
     },
-    "id": "c766bc56-fdca-11ef-b194-f661ea17fbcd_10",
+    "id": "c766bc56-fdca-11ef-b194-f661ea17fbcd_11",
     "type": "security-rule"
 }

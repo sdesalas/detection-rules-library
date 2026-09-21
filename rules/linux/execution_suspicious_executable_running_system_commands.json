@@ -73,6 +73,10 @@
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux",
             "Tactic: Discovery"
         ],
         "threat": [
@@ -141,8 +145,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 113
+        "version": 114
     },
-    "id": "e9001ee6-2d00-4d2f-849e-b8b1fb05234c_113",
+    "id": "e9001ee6-2d00-4d2f-849e-b8b1fb05234c_114",
     "type": "security-rule"
 }

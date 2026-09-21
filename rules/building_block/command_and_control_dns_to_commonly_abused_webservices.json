@@ -52,7 +52,9 @@
             "Tactic: Command and Control",
             "Tactic: Exfiltration",
             "Data Source: Elastic Defend",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -153,8 +155,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "8248323e-f888-4134-a26f-37a6362f7231_2",
+    "id": "8248323e-f888-4134-a26f-37a6362f7231_3",
     "type": "security-rule"
 }

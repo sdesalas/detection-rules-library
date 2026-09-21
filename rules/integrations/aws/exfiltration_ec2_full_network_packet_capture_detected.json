@@ -80,6 +80,12 @@
             "Tactic: Exfiltration",
             "Tactic: Collection",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS EC2",
             "Tactic: Credential Access",
             "Tactic: Discovery"
         ],
@@ -152,8 +158,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 214
+        "version": 215
     },
-    "id": "c1812764-0788-470f-8e74-eb4a14d47573_214",
+    "id": "c1812764-0788-470f-8e74-eb4a14d47573_215",
     "type": "security-rule"
 }

@@ -84,6 +84,11 @@
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Initial Access"
         ],
         "threat": [
@@ -127,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 14
+        "version": 15
     },
-    "id": "2a692072-d78d-42f3-a48a-775677d79c4e_14",
+    "id": "2a692072-d78d-42f3-a48a-775677d79c4e_15",
     "type": "security-rule"
 }

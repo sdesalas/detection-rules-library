@@ -85,6 +85,10 @@
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -106,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "7b75c162-d439-472d-b39f-2eb0d4d2d318_2",
+    "id": "7b75c162-d439-472d-b39f-2eb0d4d2d318_3",
     "type": "security-rule"
 }

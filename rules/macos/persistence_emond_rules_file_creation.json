@@ -52,6 +52,10 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: macOS",
             "Tactic: Privilege Escalation"
         ],
         "threat": [
@@ -102,8 +106,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 115
+        "version": 116
     },
-    "id": "a6bf4dd4-743e-4da8-8c03-3ebd753a6c90_115",
+    "id": "a6bf4dd4-743e-4da8-8c03-3ebd753a6c90_116",
     "type": "security-rule"
 }

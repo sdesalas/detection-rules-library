@@ -109,6 +109,12 @@
             "Data Source: Crowdstrike",
             "Data Source: Sysmon",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Download Tool Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Exfiltration"
         ],
         "threat": [
@@ -157,8 +163,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "2e0051cb-51f8-492f-9d90-174e16b5e96b_9",
+    "id": "2e0051cb-51f8-492f-9d90-174e16b5e96b_10",
     "type": "security-rule"
 }

@@ -70,8 +70,16 @@
         "tags": [
             "Domain: Cloud",
             "Data Source: Google Workspace",
+            "Data Source: Google Workspace Audit Logs",
             "Use Case: Configuration Audit",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Ransomware",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Google Workspace",
+            "Domain: SaaS",
             "Tactic: Defense Impairment",
             "Tactic: Privilege Escalation"
         ],
@@ -114,8 +122,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 113
+        "version": 114
     },
-    "id": "7caa8e60-2df0-11ed-b814-f661ea17fbce_113",
+    "id": "7caa8e60-2df0-11ed-b814-f661ea17fbce_114",
     "type": "security-rule"
 }

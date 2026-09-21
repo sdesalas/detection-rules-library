@@ -82,6 +82,11 @@
             "Tactic: Exfiltration",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Service: AWS S3",
             "Tactic: Collection"
         ],
         "threat": [
@@ -125,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "73344d2d-9cfb-4daf-b3c5-1d40a8182b86_4",
+    "id": "73344d2d-9cfb-4daf-b3c5-1d40a8182b86_5",
     "type": "security-rule"
 }

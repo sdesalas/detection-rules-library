@@ -60,6 +60,10 @@
             "Data Source: Active Directory",
             "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Privilege Escalation"
         ],
         "threat": [
@@ -96,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "6f024bde-7085-489b-8250-5957efdf1caf_109",
+    "id": "6f024bde-7085-489b-8250-5957efdf1caf_110",
     "type": "security-rule"
 }

@@ -65,7 +65,13 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Cloud VM Execution",
+            "Rule Type: ES|QL",
+            "Platform: Azure"
         ],
         "threat": [
             {
@@ -101,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "d29b0a67-178d-4381-92c5-02e9fd9a6ef6_1",
+    "id": "d29b0a67-178d-4381-92c5-02e9fd9a6ef6_2",
     "type": "security-rule"
 }

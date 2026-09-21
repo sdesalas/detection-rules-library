@@ -70,7 +70,14 @@
             "Tactic: Privilege Escalation",
             "Use Case: Vulnerability",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Vuln: CVE-2023-4911"
         ],
         "threat": [
             {
@@ -102,8 +109,8 @@
             }
         ],
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "6d8685a1-94fa-4ef7-83de-59302e7c4ca8_9",
+    "id": "6d8685a1-94fa-4ef7-83de-59302e7c4ca8_10",
     "type": "security-rule"
 }

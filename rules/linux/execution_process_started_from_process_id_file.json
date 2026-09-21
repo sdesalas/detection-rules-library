@@ -77,6 +77,10 @@
             "Data Source: Auditd Manager",
             "Data Source: Crowdstrike",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -125,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 116
+        "version": 117
     },
-    "id": "3688577a-d196-11ec-90b0-f661ea17fbce_116",
+    "id": "3688577a-d196-11ec-90b0-f661ea17fbce_117",
     "type": "security-rule"
 }

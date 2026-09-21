@@ -49,6 +49,11 @@
             "Use Case: Threat Detection",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Encoding-Based Obfuscation",
+            "Rule Type: ES|QL",
+            "Platform: Linux",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -115,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 13
+        "version": 14
     },
-    "id": "c5637438-e32d-4bb3-bc13-bd7932b3289f_13",
+    "id": "c5637438-e32d-4bb3-bc13-bd7932b3289f_14",
     "type": "security-rule"
 }

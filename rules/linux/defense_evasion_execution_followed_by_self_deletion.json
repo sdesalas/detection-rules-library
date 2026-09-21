@@ -67,6 +67,8 @@
             "Use Case: Threat Detection",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -94,8 +96,8 @@
             }
         ],
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "702a2046-ea74-4bdc-b8ea-b185471f64c8_2",
+    "id": "702a2046-ea74-4bdc-b8ea-b185471f64c8_3",
     "type": "security-rule"
 }

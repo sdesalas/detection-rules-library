@@ -126,6 +126,12 @@
             "Tactic: Persistence",
             "Tactic: Initial Access",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Device Code Phishing",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Entra ID",
             "Tactic: Credential Access",
             "Tactic: Lateral Movement"
         ],
@@ -212,8 +218,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "40e60816-5122-11f0-9caa-f661ea17fbcd_6",
+    "id": "40e60816-5122-11f0-9caa-f661ea17fbcd_7",
     "type": "security-rule"
 }

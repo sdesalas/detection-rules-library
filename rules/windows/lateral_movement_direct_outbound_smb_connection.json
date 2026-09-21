@@ -86,7 +86,14 @@
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -113,8 +120,8 @@
             }
         ],
         "type": "eql",
-        "version": 117
+        "version": 118
     },
-    "id": "c82c7d8f-fb9e-4874-a4bd-fd9e3f9becf1_117",
+    "id": "c82c7d8f-fb9e-4874-a4bd-fd9e3f9becf1_118",
     "type": "security-rule"
 }

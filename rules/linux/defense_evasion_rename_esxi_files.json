@@ -64,6 +64,12 @@
             "Use Case: Threat Detection",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Ransomware",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Impact",
             "Tactic: Stealth"
         ],
@@ -108,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 14
+        "version": 15
     },
-    "id": "97db8b42-69d8-4bf3-9fd4-c69a1d895d68_14",
+    "id": "97db8b42-69d8-4bf3-9fd4-c69a1d895d68_15",
     "type": "security-rule"
 }

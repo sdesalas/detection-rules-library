@@ -39,6 +39,7 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Resources: Investigation Guide",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -59,8 +60,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 212
+        "version": 213
     },
-    "id": "56004189-4e69-4a39-b4a9-195329d226e9_212",
+    "id": "56004189-4e69-4a39-b4a9-195329d226e9_213",
     "type": "security-rule"
 }

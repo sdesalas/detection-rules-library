@@ -69,7 +69,12 @@
             "Tactic: Persistence",
             "Tactic: Execution",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -118,8 +123,8 @@
             }
         ],
         "type": "eql",
-        "version": 114
+        "version": 115
     },
-    "id": "81ff45f8-f8c2-4e28-992e-5a0e8d98e0fe_114",
+    "id": "81ff45f8-f8c2-4e28-992e-5a0e8d98e0fe_115",
     "type": "security-rule"
 }

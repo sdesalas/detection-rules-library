@@ -83,6 +83,12 @@
             "Resources: Investigation Guide",
             "Data Source: Windows Security Event Logs",
             "Data Source: Windows System Event Logs",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Ransomware",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution"
         ],
         "threat": [
@@ -133,8 +139,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 119
+        "version": 120
     },
-    "id": "da87eee1-129c-4661-a7aa-57d0b9645fad_119",
+    "id": "da87eee1-129c-4661-a7aa-57d0b9645fad_120",
     "type": "security-rule"
 }

@@ -48,6 +48,10 @@
             "Tactic: Collection",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: macOS",
             "Tactic: Privilege Escalation"
         ],
         "threat": [
@@ -90,8 +94,8 @@
             }
         ],
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "ffd8b5e9-aa63-42b3-aead-6fdb170da9a3_4",
+    "id": "ffd8b5e9-aa63-42b3-aead-6fdb170da9a3_5",
     "type": "security-rule"
 }

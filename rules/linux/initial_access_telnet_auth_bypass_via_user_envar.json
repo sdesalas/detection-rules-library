@@ -81,6 +81,13 @@
             "Data Source: Elastic Endgame",
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Vuln: CVE-2026-24061",
             "Tactic: Privilege Escalation"
         ],
         "threat": [
@@ -132,8 +139,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "ab7795cc-0e0b-4f9d-a934-1f17a58f869a_4",
+    "id": "ab7795cc-0e0b-4f9d-a934-1f17a58f869a_5",
     "type": "security-rule"
 }

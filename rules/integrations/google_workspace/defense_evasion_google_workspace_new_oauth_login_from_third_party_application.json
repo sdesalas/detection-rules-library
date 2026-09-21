@@ -78,6 +78,11 @@
             "Tactic: Initial Access",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: Google Workspace",
+            "Domain: SaaS",
             "Tactic: Lateral Movement"
         ],
         "threat": [
@@ -150,8 +155,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 13
+        "version": 14
     },
-    "id": "21bafdf0-cf17-11ed-bd57-f661ea17fbcc_13",
+    "id": "21bafdf0-cf17-11ed-bd57-f661ea17fbcc_14",
     "type": "security-rule"
 }

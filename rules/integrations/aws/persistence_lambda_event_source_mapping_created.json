@@ -80,6 +80,11 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Service: AWS Lambda",
             "Tactic: Defense Impairment",
             "Tactic: Execution"
         ],
@@ -139,8 +144,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "5619545b-9738-408c-bdb5-a2807e19133e_2",
+    "id": "5619545b-9738-408c-bdb5-a2807e19133e_3",
     "type": "security-rule"
 }

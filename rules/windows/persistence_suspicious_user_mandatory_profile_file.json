@@ -60,6 +60,10 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -110,8 +114,8 @@
         "timeline_title": "Comprehensive File Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "0e42f920-047d-4568-b961-2a50db6c4713_4",
+    "id": "0e42f920-047d-4568-b961-2a50db6c4713_5",
     "type": "security-rule"
 }

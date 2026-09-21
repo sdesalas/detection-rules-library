@@ -76,6 +76,10 @@
             "Use Case: Threat Detection",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux",
             "Tactic: Defense Impairment",
             "Tactic: Execution",
             "Tactic: Impact",
@@ -159,8 +163,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "f391d3fd-219b-42a3-9ba9-2f66eb0155aa_7",
+    "id": "f391d3fd-219b-42a3-9ba9-2f66eb0155aa_8",
     "type": "security-rule"
 }

@@ -97,6 +97,8 @@
         "tags": [
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Rule Type: Custom Query (KQL)",
+            "Domain: Endpoint",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -123,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 5
+        "version": 6
     },
-    "id": "06f3a26c-ea35-11ee-a417-f661ea17fbce_5",
+    "id": "06f3a26c-ea35-11ee-a417-f661ea17fbce_6",
     "type": "security-rule"
 }

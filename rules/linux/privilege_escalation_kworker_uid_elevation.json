@@ -53,6 +53,10 @@
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -121,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "7dfaaa17-425c-4fe7-bd36-83705fde7c2b_8",
+    "id": "7dfaaa17-425c-4fe7-bd36-83705fde7c2b_9",
     "type": "security-rule"
 }

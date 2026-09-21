@@ -54,6 +54,11 @@
             "Resources: Investigation Guide",
             "Data Source: Windows Security Event Logs",
             "Data Source: Windows System Event Logs",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -82,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 217
+        "version": 218
     },
-    "id": "45ac4800-840f-414c-b221-53dd36a5aaf7_217",
+    "id": "45ac4800-840f-414c-b221-53dd36a5aaf7_218",
     "type": "security-rule"
 }

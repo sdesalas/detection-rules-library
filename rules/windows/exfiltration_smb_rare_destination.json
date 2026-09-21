@@ -95,6 +95,10 @@
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Windows",
             "Tactic: Credential Access"
         ],
         "threat": [
@@ -131,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 215
+        "version": 216
     },
-    "id": "f580bf0a-2d23-43bb-b8e1-17548bb947ec_215",
+    "id": "f580bf0a-2d23-43bb-b8e1-17548bb947ec_216",
     "type": "security-rule"
 }

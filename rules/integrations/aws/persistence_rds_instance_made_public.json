@@ -84,12 +84,16 @@
         "severity": "medium",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS RDS",
             "Tactic: Persistence",
             "Rule Type: Event Correlation (EQL)",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -131,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 11
+        "version": 12
     },
-    "id": "9efb3f79-b77b-466a-9fa0-3645d22d1e7f_11",
+    "id": "9efb3f79-b77b-466a-9fa0-3645d22d1e7f_12",
     "type": "security-rule"
 }

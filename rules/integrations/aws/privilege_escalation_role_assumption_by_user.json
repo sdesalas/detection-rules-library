@@ -92,6 +92,12 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Privilege Escalation",
             "Tactic: Lateral Movement",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS STS",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -169,8 +175,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 10
+        "version": 11
     },
-    "id": "288a198e-9b9b-11ef-a0a8-f661ea17fbcd_10",
+    "id": "288a198e-9b9b-11ef-a0a8-f661ea17fbcd_11",
     "type": "security-rule"
 }

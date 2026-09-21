@@ -83,6 +83,12 @@
             "Data Source: AWS IAM",
             "Use Case: Log Auditing",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS IAM",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -111,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 4
+        "version": 5
     },
-    "id": "9ebd48ac-a0e2-430a-a219-fe072a50146b_4",
+    "id": "9ebd48ac-a0e2-430a-a219-fe072a50146b_5",
     "type": "security-rule"
 }

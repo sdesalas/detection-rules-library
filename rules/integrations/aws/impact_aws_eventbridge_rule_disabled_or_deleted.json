@@ -77,12 +77,16 @@
         "severity": "low",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS EventBridge",
             "Tactic: Impact",
             "Rule Type: Custom Query (KQL)",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -119,8 +123,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 215
+        "version": 216
     },
-    "id": "87594192-4539-4bc4-8543-23bc3d5bd2b4_215",
+    "id": "87594192-4539-4bc4-8543-23bc3d5bd2b4_216",
     "type": "security-rule"
 }

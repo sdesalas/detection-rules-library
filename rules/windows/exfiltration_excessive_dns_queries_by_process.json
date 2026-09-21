@@ -86,6 +86,10 @@
             "Data Source: Elastic Defend",
             "Data Source: Crowdstrike",
             "Data Source: Sysmon",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Windows",
             "Tactic: Command and Control"
         ],
         "threat": [
@@ -129,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "882a39ad-a404-45e3-b5d4-bc11d2b09818_2",
+    "id": "882a39ad-a404-45e3-b5d4-bc11d2b09818_3",
     "type": "security-rule"
 }

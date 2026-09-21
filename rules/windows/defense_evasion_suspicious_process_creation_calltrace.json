@@ -87,6 +87,10 @@
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
             "Data Source: Sysmon",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -114,8 +118,8 @@
             }
         ],
         "type": "eql",
-        "version": 313
+        "version": 314
     },
-    "id": "3ed032b2-45d8-4406-bc79-7ad1eabb2c72_313",
+    "id": "3ed032b2-45d8-4406-bc79-7ad1eabb2c72_314",
     "type": "security-rule"
 }

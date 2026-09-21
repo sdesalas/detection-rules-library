@@ -54,13 +54,20 @@
             "Domain: Cloud",
             "Domain: Identity",
             "Data Source: Google Workspace",
+            "Data Source: Google Workspace User Log Events",
             "Data Source: Google Workspace Audit Logs",
-            "Data Source: Google Workspace User log events",
             "Use Case: Threat Detection",
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
             "Tactic: Credential Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Impossible Travel",
+            "Rule Type: ES|QL",
+            "Platform: Google Workspace",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -108,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "aff74d85-5bfa-4ff1-ace2-4e3995a37cfa_1",
+    "id": "aff74d85-5bfa-4ff1-ace2-4e3995a37cfa_2",
     "type": "security-rule"
 }

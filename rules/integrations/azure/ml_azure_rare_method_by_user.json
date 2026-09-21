@@ -34,6 +34,7 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Resources: Investigation Guide",
+            "Platform: Azure",
             "Tactic: Exfiltration",
             "Tactic: Initial Access",
             "Tactic: Lateral Movement",
@@ -146,8 +147,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 103
+        "version": 104
     },
-    "id": "81892f44-4946-4b27-95d3-1d8929b114a7_103",
+    "id": "81892f44-4946-4b27-95d3-1d8929b114a7_104",
     "type": "security-rule"
 }

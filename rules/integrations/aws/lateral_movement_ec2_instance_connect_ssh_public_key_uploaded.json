@@ -83,6 +83,12 @@
             "Tactic: Privilege Escalation",
             "Tactic: Lateral Movement",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS EC2",
             "Tactic: Persistence"
         ],
         "threat": [
@@ -155,8 +161,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 11
+        "version": 12
     },
-    "id": "873b5452-074e-11ef-852e-f661ea17fbcc_11",
+    "id": "873b5452-074e-11ef-852e-f661ea17fbcc_12",
     "type": "security-rule"
 }

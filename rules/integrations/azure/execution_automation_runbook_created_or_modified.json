@@ -54,6 +54,12 @@
             "Use Case: Configuration Audit",
             "Tactic: Execution",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Azure",
+            "Data Source: Azure Activity Logs",
             "Tactic: Persistence"
         ],
         "threat": [
@@ -90,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "16280f1e-57e6-4242-aa21-bb4d16f13b2f_109",
+    "id": "16280f1e-57e6-4242-aa21-bb4d16f13b2f_110",
     "type": "security-rule"
 }

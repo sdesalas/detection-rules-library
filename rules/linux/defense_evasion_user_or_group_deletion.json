@@ -46,6 +46,10 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Impact",
             "Tactic: Stealth"
         ],
@@ -83,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "8f8004e1-0783-485f-a3da-aca4362f74a7_3",
+    "id": "8f8004e1-0783-485f-a3da-aca4362f74a7_4",
     "type": "security-rule"
 }

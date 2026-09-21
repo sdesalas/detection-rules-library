@@ -80,6 +80,16 @@
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Vuln: CVE-2024-47076",
+            "Vuln: CVE-2024-47175",
+            "Vuln: CVE-2024-47176",
+            "Vuln: CVE-2024-47177",
             "Tactic: Execution",
             "Tactic: Exfiltration",
             "Tactic: Stealth"
@@ -138,8 +148,8 @@
             }
         ],
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "e80ee207-9505-49ab-8ca8-bc57d80e2cab_7",
+    "id": "e80ee207-9505-49ab-8ca8-bc57d80e2cab_8",
     "type": "security-rule"
 }

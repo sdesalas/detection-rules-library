@@ -79,6 +79,13 @@
             "Data Source: Amazon Web Services",
             "Data Source: AWS GuardDuty",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS GuardDuty",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -100,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 4
+        "version": 5
     },
-    "id": "3c59d2e1-8ca1-4f13-b2ac-f4bb99ff69d7_4",
+    "id": "3c59d2e1-8ca1-4f13-b2ac-f4bb99ff69d7_5",
     "type": "security-rule"
 }

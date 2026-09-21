@@ -79,8 +79,14 @@
         "tags": [
             "Domain: Cloud",
             "Data Source: Google Workspace",
+            "Data Source: Google Workspace Audit Logs",
             "Use Case: Configuration Audit",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Google Workspace",
+            "Domain: SaaS",
             "Tactic: Defense Impairment",
             "Tactic: Privilege Escalation"
         ],
@@ -123,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 114
+        "version": 115
     },
-    "id": "a2795334-2499-11ed-9e1a-f661ea17fbce_114",
+    "id": "a2795334-2499-11ed-9e1a-f661ea17fbce_115",
     "type": "security-rule"
 }

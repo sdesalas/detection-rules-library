@@ -62,6 +62,12 @@
             "Tactic: Impact",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Ransomware",
+            "Rule Type: ES|QL",
+            "Platform: Windows",
             "Tactic: Lateral Movement"
         ],
         "threat": [
@@ -115,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 216
+        "version": 217
     },
-    "id": "1397e1b9-0c90-4d24-8d7b-80598eb9bc9a_216",
+    "id": "1397e1b9-0c90-4d24-8d7b-80598eb9bc9a_217",
     "type": "security-rule"
 }

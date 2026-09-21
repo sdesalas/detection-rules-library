@@ -50,7 +50,9 @@
             "Use Case: Automated Response Tracking",
             "Tactic: Initial Access",
             "Tactic: Execution",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365"
         ],
         "threat": [
             {
@@ -86,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "7ab5b02c-0026-4c71-b523-dd1e97e15477_1",
+    "id": "7ab5b02c-0026-4c71-b523-dd1e97e15477_2",
     "type": "security-rule"
 }

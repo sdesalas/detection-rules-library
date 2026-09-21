@@ -76,6 +76,11 @@
             "Data Source: Sysmon",
             "Data Source: Microsoft Defender XDR",
             "Data Source: Crowdstrike",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -116,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 221
+        "version": 222
     },
-    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae4_221",
+    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae4_222",
     "type": "security-rule"
 }

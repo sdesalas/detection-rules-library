@@ -62,12 +62,16 @@
         "severity": "high",
         "tags": [
             "Domain: Endpoint",
-            "Domain: Container",
+            "Domain: Containers",
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
-            "Data Source: Auditd Manager"
+            "Data Source: Auditd Manager",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -88,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "f2a8c4d1-6b3e-4a9f-8c2d-1e5f7a9b0c4d_1",
+    "id": "f2a8c4d1-6b3e-4a9f-8c2d-1e5f7a9b0c4d_2",
     "type": "security-rule"
 }

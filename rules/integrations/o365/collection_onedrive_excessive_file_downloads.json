@@ -60,7 +60,14 @@
             "Use Case: Threat Detection",
             "Tactic: Collection",
             "Tactic: Exfiltration",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Microsoft 365",
+            "Domain: Email",
+            "Service: Microsoft SharePoint",
+            "Service: Microsoft OneDrive"
         ],
         "threat": [
             {
@@ -101,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 10
+        "version": 11
     },
-    "id": "0e524fa6-eed3-11ef-82b4-f661ea17fbce_10",
+    "id": "0e524fa6-eed3-11ef-82b4-f661ea17fbce_11",
     "type": "security-rule"
 }

@@ -79,6 +79,10 @@
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Defense Impairment",
             "Tactic: Impact"
         ],
@@ -116,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 218
+        "version": 219
     },
-    "id": "2f8a1226-5720-437d-9c20-e0029deb6194_218",
+    "id": "2f8a1226-5720-437d-9c20-e0029deb6194_219",
     "type": "security-rule"
 }

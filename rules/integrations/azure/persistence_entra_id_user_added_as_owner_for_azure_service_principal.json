@@ -50,6 +50,12 @@
             "Use Case: Configuration Audit",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID",
+            "Domain: Identity",
+            "Data Source: Entra ID Audit Logs",
             "Tactic: Privilege Escalation"
         ],
         "threat": [
@@ -98,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 111
     },
-    "id": "38e5acdd-5f20-4d99-8fe4-f0a1a592077f_110",
+    "id": "38e5acdd-5f20-4d99-8fe4-f0a1a592077f_111",
     "type": "security-rule"
 }

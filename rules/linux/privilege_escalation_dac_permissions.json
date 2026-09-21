@@ -101,6 +101,10 @@
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux",
             "Tactic: Credential Access"
         ],
         "threat": [
@@ -156,8 +160,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 9
+        "version": 10
     },
-    "id": "f7c70f2e-4616-439c-85ac-5b98415042fe_9",
+    "id": "f7c70f2e-4616-439c-85ac-5b98415042fe_10",
     "type": "security-rule"
 }

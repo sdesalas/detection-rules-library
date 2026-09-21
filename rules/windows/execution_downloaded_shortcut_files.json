@@ -52,6 +52,12 @@
             "Tactic: Execution",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: LNK/Shortcut Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Initial Access"
         ],
         "threat": [
@@ -107,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "39157d52-4035-44a8-9d1a-6f8c5f580a07_8",
+    "id": "39157d52-4035-44a8-9d1a-6f8c5f580a07_9",
     "type": "security-rule"
 }

@@ -84,6 +84,11 @@
             "Data Source: Windows Security Event Logs",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -105,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 221
+        "version": 222
     },
-    "id": "06dceabf-adca-48af-ac79-ffdf4c3b1e9a_221",
+    "id": "06dceabf-adca-48af-ac79-ffdf4c3b1e9a_222",
     "type": "security-rule"
 }

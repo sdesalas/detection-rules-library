@@ -56,7 +56,11 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -77,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d_3",
+    "id": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d_4",
     "type": "security-rule"
 }

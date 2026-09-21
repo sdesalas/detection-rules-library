@@ -61,10 +61,14 @@
             "Domain: Identity",
             "Data Source: Azure",
             "Data Source: Microsoft Entra ID",
-            "Data Source: Microsoft Entra ID Sign-in Logs",
+            "Data Source: Microsoft Entra ID Sign-In Logs",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
-            "Tactic: Initial Access"
+            "Tactic: Initial Access",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID"
         ],
         "threat": [
             {
@@ -92,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 113
+        "version": 114
     },
-    "id": "37994bca-0611-4500-ab67-5588afe73b77_113",
+    "id": "37994bca-0611-4500-ab67-5588afe73b77_114",
     "type": "security-rule"
 }

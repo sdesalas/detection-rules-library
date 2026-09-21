@@ -84,6 +84,8 @@
             "Use Case: Threat Detection",
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -111,8 +113,8 @@
             }
         ],
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "55f07d1b-25bc-4a0f-aa0c-05323c1319d0_6",
+    "id": "55f07d1b-25bc-4a0f-aa0c-05323c1319d0_7",
     "type": "security-rule"
 }

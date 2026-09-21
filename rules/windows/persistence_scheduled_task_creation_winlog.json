@@ -63,7 +63,12 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -91,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 115
+        "version": 116
     },
-    "id": "92a6faf5-78ec-4e25-bea1-73bacc9b59d9_115",
+    "id": "92a6faf5-78ec-4e25-bea1-73bacc9b59d9_116",
     "type": "security-rule"
 }

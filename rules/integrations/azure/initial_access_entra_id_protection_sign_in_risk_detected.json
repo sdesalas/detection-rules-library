@@ -105,6 +105,11 @@
             "Use Case: Risk Detection",
             "Tactic: Initial Access",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID",
+            "Data Source: Entra ID Protection Logs",
             "Tactic: Command and Control",
             "Tactic: Credential Access"
         ],
@@ -176,8 +181,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 6
+        "version": 7
     },
-    "id": "064a2e08-25da-11f0-b1f1-f661ea17fbcd_6",
+    "id": "064a2e08-25da-11f0-b1f1-f661ea17fbcd_7",
     "type": "security-rule"
 }

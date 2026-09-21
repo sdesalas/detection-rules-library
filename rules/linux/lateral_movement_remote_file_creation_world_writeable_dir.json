@@ -68,6 +68,10 @@
             "Tactic: Lateral Movement",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux",
             "Tactic: Command and Control"
         ],
         "threat": [
@@ -116,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "3e528511-7316-4a6e-83da-61b5f1c07fd4_8",
+    "id": "3e528511-7316-4a6e-83da-61b5f1c07fd4_9",
     "type": "security-rule"
 }

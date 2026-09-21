@@ -78,6 +78,10 @@
             "Data Source: Active Directory",
             "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Credential Access"
         ],
         "threat": [
@@ -114,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 215
+        "version": 216
     },
-    "id": "e052c845-48d0-4f46-8a13-7d0aba05df82_215",
+    "id": "e052c845-48d0-4f46-8a13-7d0aba05df82_216",
     "type": "security-rule"
 }

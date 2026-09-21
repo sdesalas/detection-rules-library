@@ -87,7 +87,16 @@
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
             "Tactic: Discovery",
-            "Tactic: Initial Access"
+            "Tactic: Initial Access",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Unauthorized AI Usage",
+            "Threat: LLMjacking",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: AWS",
+            "Domain: GenAI",
+            "Service: AWS Bedrock"
         ],
         "threat": [
             {
@@ -130,8 +139,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "a17f2e5f-de52-49e8-9d86-ccfe91cd54d4_1",
+    "id": "a17f2e5f-de52-49e8-9d86-ccfe91cd54d4_2",
     "type": "security-rule"
 }

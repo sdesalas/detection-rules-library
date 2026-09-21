@@ -57,7 +57,11 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Command and Control",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -97,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 9
+        "version": 10
     },
-    "id": "f3403393-1fd9-4686-8f6e-596c58bc00b4_9",
+    "id": "f3403393-1fd9-4686-8f6e-596c58bc00b4_10",
     "type": "security-rule"
 }

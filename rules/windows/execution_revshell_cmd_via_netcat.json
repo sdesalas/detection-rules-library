@@ -79,6 +79,10 @@
             "Tactic: Execution",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Command and Control"
         ],
         "threat": [
@@ -127,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "9c0f61fa-abf4-4b11-8d9d-5978c09182dd_4",
+    "id": "9c0f61fa-abf4-4b11-8d9d-5978c09182dd_5",
     "type": "security-rule"
 }

@@ -109,7 +109,14 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: ES|QL",
+            "Platform: Kubernetes",
+            "Domain: Containers",
+            "Domain: Cloud"
         ],
         "threat": [
             {
@@ -159,8 +166,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "0fb25791-d8d4-42ab-8fc7-4954642de85f_3",
+    "id": "0fb25791-d8d4-42ab-8fc7-4954642de85f_4",
     "type": "security-rule"
 }

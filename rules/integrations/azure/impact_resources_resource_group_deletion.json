@@ -54,6 +54,13 @@
             "Use Case: Log Auditing",
             "Tactic: Impact",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Ransomware",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Azure",
+            "Data Source: Azure Activity Logs",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -105,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 111
     },
-    "id": "bb4fe8d2-7ae2-475c-8b5d-55b449e4264f_110",
+    "id": "bb4fe8d2-7ae2-475c-8b5d-55b449e4264f_111",
     "type": "security-rule"
 }

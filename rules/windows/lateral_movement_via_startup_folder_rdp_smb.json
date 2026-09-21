@@ -100,6 +100,10 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Persistence"
         ],
         "threat": [
@@ -160,8 +164,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 316
+        "version": 317
     },
-    "id": "25224a80-5a4a-4b8a-991e-6ab390465c4f_316",
+    "id": "25224a80-5a4a-4b8a-991e-6ab390465c4f_317",
     "type": "security-rule"
 }

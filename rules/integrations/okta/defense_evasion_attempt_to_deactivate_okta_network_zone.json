@@ -51,6 +51,11 @@
             "Data Source: Okta",
             "Use Case: Network Security Monitoring",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Okta",
+            "Domain: Identity",
             "Tactic: Defense Impairment",
             "Tactic: Privilege Escalation"
         ],
@@ -114,8 +119,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 416
+        "version": 417
     },
-    "id": "8a5c1e5f-ad63-481e-b53a-ef959230f7f1_416",
+    "id": "8a5c1e5f-ad63-481e-b53a-ef959230f7f1_417",
     "type": "security-rule"
 }

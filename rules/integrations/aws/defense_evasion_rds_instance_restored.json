@@ -79,6 +79,12 @@
             "Data Source: AWS RDS",
             "Use Case: Asset Visibility",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS RDS",
             "Tactic: Collection",
             "Tactic: Defense Impairment"
         ],
@@ -135,8 +141,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 215
+        "version": 216
     },
-    "id": "bf1073bf-ce26-4607-b405-ba1ed8e9e204_215",
+    "id": "bf1073bf-ce26-4607-b405-ba1ed8e9e204_216",
     "type": "security-rule"
 }

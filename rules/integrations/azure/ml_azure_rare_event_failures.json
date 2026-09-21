@@ -34,6 +34,7 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Resources: Investigation Guide",
+            "Platform: Azure",
             "Tactic: Collection",
             "Tactic: Discovery",
             "Tactic: Lateral Movement",
@@ -104,8 +105,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 102
+        "version": 103
     },
-    "id": "c17ffbf9-595a-4c0b-a126-aacedb6dd179_102",
+    "id": "c17ffbf9-595a-4c0b-a126-aacedb6dd179_103",
     "type": "security-rule"
 }

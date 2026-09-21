@@ -54,6 +54,12 @@
             "Use Case: Asset Visibility",
             "Tactic: Discovery",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Azure",
+            "Data Source: Azure Activity Logs",
+            "Service: Azure Storage",
             "Tactic: Defense Impairment",
             "Tactic: Exfiltration"
         ],
@@ -106,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "2636aa6c-88b5-4337-9c31-8d0192a8ef45_109",
+    "id": "2636aa6c-88b5-4337-9c31-8d0192a8ef45_110",
     "type": "security-rule"
 }

@@ -106,6 +106,8 @@
             "Data Source: PowerShell Logs",
             "Rule Type: BBR",
             "Resources: Investigation Guide",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -157,8 +159,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 212
+        "version": 213
     },
-    "id": "3d3aa8f9-12af-441f-9344-9f31053e316d_212",
+    "id": "3d3aa8f9-12af-441f-9344-9f31053e316d_213",
     "type": "security-rule"
 }

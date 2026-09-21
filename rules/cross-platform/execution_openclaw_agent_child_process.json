@@ -66,6 +66,15 @@
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Domain: GenAI",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -173,8 +182,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "a7c3e8f2-4b19-4d6a-9e5c-8f1a2b3c4d5e_5",
+    "id": "a7c3e8f2-4b19-4d6a-9e5c-8f1a2b3c4d5e_6",
     "type": "security-rule"
 }

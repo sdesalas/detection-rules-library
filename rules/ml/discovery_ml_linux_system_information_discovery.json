@@ -39,7 +39,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -59,8 +60,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 208
+        "version": 209
     },
-    "id": "d4af3a06-1e0a-48ec-b96a-faf2309fae46_208",
+    "id": "d4af3a06-1e0a-48ec-b96a-faf2309fae46_209",
     "type": "security-rule"
 }

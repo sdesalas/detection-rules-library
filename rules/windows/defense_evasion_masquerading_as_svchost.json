@@ -14823,6 +14823,12 @@
             "Data Source: Elastic Defend",
             "Data Source: Windows Security Event Logs",
             "Data Source: Sysmon",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Masquerading",
+            "Rule Type: ES|QL",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -14851,8 +14857,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 105
+        "version": 205
     },
-    "id": "32f95776-6498-4f3c-a90c-d4f6083e3901_105",
+    "id": "32f95776-6498-4f3c-a90c-d4f6083e3901_205",
     "type": "security-rule"
 }

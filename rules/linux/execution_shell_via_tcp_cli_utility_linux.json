@@ -91,6 +91,12 @@
             "Tactic: Execution",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Reverse Shell",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Command and Control"
         ],
         "threat": [
@@ -138,8 +144,8 @@
             }
         ],
         "type": "eql",
-        "version": 16
+        "version": 17
     },
-    "id": "48b3d2e3-f4e8-41e6-95e6-9b2091228db3_16",
+    "id": "48b3d2e3-f4e8-41e6-95e6-9b2091228db3_17",
     "type": "security-rule"
 }

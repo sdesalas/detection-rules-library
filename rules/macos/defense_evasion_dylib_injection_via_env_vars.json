@@ -85,6 +85,10 @@
             "Use Case: Threat Detection",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: macOS",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -135,8 +139,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "fb8790fc-d485-45e2-8d6e-2fb813f4af95_3",
+    "id": "fb8790fc-d485-45e2-8d6e-2fb813f4af95_4",
     "type": "security-rule"
 }

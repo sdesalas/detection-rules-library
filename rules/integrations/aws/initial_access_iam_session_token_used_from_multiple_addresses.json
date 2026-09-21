@@ -61,6 +61,12 @@
             "Tactic: Initial Access",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: ES|QL",
+            "Platform: AWS",
+            "Service: AWS IAM",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -111,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 209
+        "version": 309
     },
-    "id": "0d92d30a-5f3e-4b71-bc3d-4a0c4914b7e0_209",
+    "id": "0d92d30a-5f3e-4b71-bc3d-4a0c4914b7e0_309",
     "type": "security-rule"
 }

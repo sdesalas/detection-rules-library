@@ -68,6 +68,11 @@
             "Tactic: Exfiltration",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Windows",
+            "Platform: macOS",
             "Tactic: Lateral Movement"
         ],
         "threat": [
@@ -126,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 103
     },
-    "id": "483832a8-ffdd-4e11-8e96-e0224f7bda9b_3",
+    "id": "483832a8-ffdd-4e11-8e96-e0224f7bda9b_103",
     "type": "security-rule"
 }

@@ -79,6 +79,10 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
             "Tactic: Initial Access"
         ],
         "threat": [
@@ -129,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 5
+        "version": 6
     },
-    "id": "b625c9ad-16e5-4f16-8d38-3e9631952554_5",
+    "id": "b625c9ad-16e5-4f16-8d38-3e9631952554_6",
     "type": "security-rule"
 }

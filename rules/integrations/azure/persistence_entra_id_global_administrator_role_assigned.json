@@ -59,6 +59,10 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID",
             "Tactic: Privilege Escalation"
         ],
         "threat": [
@@ -109,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "04c5a96f-19c5-44fd-9571-a0b033f9086f_109",
+    "id": "04c5a96f-19c5-44fd-9571-a0b033f9086f_110",
     "type": "security-rule"
 }

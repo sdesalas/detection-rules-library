@@ -36,6 +36,8 @@
             "Rule Type: Machine Learning",
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
+            "Platform: Okta",
+            "Domain: Identity",
             "Tactic: Initial Access"
         ],
         "threat": [
@@ -85,8 +87,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 106
+        "version": 107
     },
-    "id": "8c9ae3e2-f0b1-4b2c-9eba-bd87c2db914f_106",
+    "id": "8c9ae3e2-f0b1-4b2c-9eba-bd87c2db914f_107",
     "type": "security-rule"
 }

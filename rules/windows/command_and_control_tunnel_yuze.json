@@ -95,6 +95,13 @@
             "Data Source: Crowdstrike",
             "Data Source: Elastic Endgame",
             "Data Source: Windows Security Event Logs",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Threat: Protocol Tunneling",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -143,8 +150,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "e7f2c4a1-9b3d-5e8f-c6a0-2d1b4e7f8c3a_5",
+    "id": "e7f2c4a1-9b3d-5e8f-c6a0-2d1b4e7f8c3a_6",
     "type": "security-rule"
 }

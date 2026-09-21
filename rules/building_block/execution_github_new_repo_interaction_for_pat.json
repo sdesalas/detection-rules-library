@@ -66,6 +66,9 @@
             "Tactic: Execution",
             "Rule Type: BBR",
             "Data Source: Github",
+            "Rule Type: New Terms",
+            "Platform: GitHub",
+            "Domain: SaaS",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -109,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 209
+        "version": 210
     },
-    "id": "1e9b271c-8caa-4e20-aed8-e91e34de9283_209",
+    "id": "1e9b271c-8caa-4e20-aed8-e91e34de9283_210",
     "type": "security-rule"
 }

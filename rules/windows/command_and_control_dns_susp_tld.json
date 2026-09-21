@@ -109,6 +109,13 @@
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
             "Data Source: Sysmon",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Living off the Land",
+            "Threat: Suspicious TLD",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -164,8 +171,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "e516bf56-d51b-43e8-91ec-9e276331f433_6",
+    "id": "e516bf56-d51b-43e8-91ec-9e276331f433_7",
     "type": "security-rule"
 }

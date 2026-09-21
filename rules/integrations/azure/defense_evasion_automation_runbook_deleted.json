@@ -53,6 +53,11 @@
             "Data Source: Azure",
             "Use Case: Configuration Audit",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Azure",
+            "Data Source: Azure Activity Logs",
             "Tactic: Impact",
             "Tactic: Stealth"
         ],
@@ -83,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "8ddab73b-3d15-4e5d-9413-47f05553c1d7_109",
+    "id": "8ddab73b-3d15-4e5d-9413-47f05553c1d7_110",
     "type": "security-rule"
 }

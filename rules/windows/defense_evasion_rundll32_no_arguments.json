@@ -100,6 +100,12 @@
             "Data Source: Sysmon",
             "Data Source: Crowdstrike",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -127,8 +133,8 @@
             }
         ],
         "type": "eql",
-        "version": 215
+        "version": 216
     },
-    "id": "f036953a-4615-4707-a1ca-dc53bf69dcd5_215",
+    "id": "f036953a-4615-4707-a1ca-dc53bf69dcd5_216",
     "type": "security-rule"
 }

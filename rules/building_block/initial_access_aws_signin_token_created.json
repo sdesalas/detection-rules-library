@@ -77,6 +77,9 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
             "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
             "Tactic: Lateral Movement"
         ],
         "threat": [
@@ -127,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "f754e348-f36f-4510-8087-d7f29874cc12_3",
+    "id": "f754e348-f36f-4510-8087-d7f29874cc12_4",
     "type": "security-rule"
 }

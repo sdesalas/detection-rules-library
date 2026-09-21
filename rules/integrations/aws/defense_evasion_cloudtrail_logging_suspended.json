@@ -73,9 +73,13 @@
             "Domain: Cloud",
             "Data Source: AWS",
             "Data Source: Amazon Web Services",
-            "Data Source: AWS Cloudtrail",
+            "Data Source: AWS CloudTrail",
             "Use Case: Log Auditing",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -104,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 217
+        "version": 218
     },
-    "id": "1aa8fa52-44a7-4dae-b058-f3333b91c8d7_217",
+    "id": "1aa8fa52-44a7-4dae-b058-f3333b91c8d7_218",
     "type": "security-rule"
 }

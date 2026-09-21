@@ -104,6 +104,10 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution"
         ],
         "threat": [
@@ -146,8 +150,8 @@
             }
         ],
         "type": "eql",
-        "version": 216
+        "version": 217
     },
-    "id": "954ee7c8-5437-49ae-b2d6-2960883898e9_216",
+    "id": "954ee7c8-5437-49ae-b2d6-2960883898e9_217",
     "type": "security-rule"
 }

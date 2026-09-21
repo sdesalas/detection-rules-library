@@ -114,7 +114,13 @@
             "Domain: Kubernetes",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Kubernetes",
+            "Domain: Containers",
+            "Domain: Cloud"
         ],
         "threat": [
             {
@@ -142,8 +148,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "c8f4a2e1-9b3d-4c7e-8f2a-1d0e5b6c7a89_1",
+    "id": "c8f4a2e1-9b3d-4c7e-8f2a-1d0e5b6c7a89_2",
     "type": "security-rule"
 }

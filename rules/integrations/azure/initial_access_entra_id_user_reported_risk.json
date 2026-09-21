@@ -62,6 +62,11 @@
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
             "Tactic: Initial Access",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID",
+            "Domain: Identity",
             "Tactic: Credential Access"
         ],
         "threat": [
@@ -105,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 7
+        "version": 8
     },
-    "id": "caaa8b78-367c-11f0-beb8-f661ea17fbcd_7",
+    "id": "caaa8b78-367c-11f0-beb8-f661ea17fbcd_8",
     "type": "security-rule"
 }

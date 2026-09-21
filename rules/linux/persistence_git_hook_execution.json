@@ -94,6 +94,10 @@
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
             "Data Source: Crowdstrike",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -161,8 +165,8 @@
             }
         ],
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "dc61f382-dc0c-4cc0-a845-069f2a071704_109",
+    "id": "dc61f382-dc0c-4cc0-a845-069f2a071704_110",
     "type": "security-rule"
 }

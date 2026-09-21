@@ -78,6 +78,8 @@
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
             "Data Source: Windows Security Event Logs",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -122,8 +124,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "808291d3-e918-4a3a-86cd-73052a0c9bdc_109",
+    "id": "808291d3-e918-4a3a-86cd-73052a0c9bdc_110",
     "type": "security-rule"
 }

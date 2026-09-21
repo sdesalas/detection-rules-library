@@ -55,7 +55,13 @@
             "Use Case: UEBA",
             "Tactic: Execution",
             "Data Source: Github",
+            "Data Source: GitHub Audit Logs",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Threshold",
+            "Platform: GitHub",
+            "Domain: SaaS",
             "Tactic: Collection"
         ],
         "threat": [
@@ -111,8 +117,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 210
+        "version": 211
     },
-    "id": "fb0afac5-bbd6-49b0-b4f8-44e5381e1587_210",
+    "id": "fb0afac5-bbd6-49b0-b4f8-44e5381e1587_211",
     "type": "security-rule"
 }

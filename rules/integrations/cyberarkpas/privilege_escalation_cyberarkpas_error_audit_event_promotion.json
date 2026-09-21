@@ -49,6 +49,10 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Domain: Identity",
             "Tactic: Initial Access"
         ],
         "threat": [
@@ -78,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "3f0e5410-a4bf-4e8c-bcfc-79d67a285c54_107",
+    "id": "3f0e5410-a4bf-4e8c-bcfc-79d67a285c54_108",
     "type": "security-rule"
 }

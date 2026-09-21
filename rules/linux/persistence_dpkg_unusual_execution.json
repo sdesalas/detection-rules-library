@@ -75,6 +75,12 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Supply Chain",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Execution",
             "Tactic: Initial Access",
             "Tactic: Privilege Escalation",
@@ -185,8 +191,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "d6241c90-99f2-44db-b50f-299b6ebd7ee9_9",
+    "id": "d6241c90-99f2-44db-b50f-299b6ebd7ee9_10",
     "type": "security-rule"
 }

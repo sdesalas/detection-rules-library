@@ -76,7 +76,7 @@
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
-            "Domain: Container",
+            "Domain: Containers",
             "Domain: Kubernetes",
             "OS: Linux",
             "OS: macOS",
@@ -87,6 +87,14 @@
             "Data Source: SentinelOne",
             "Data Source: Elastic Defend for Containers",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Masquerading",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Platform: Kubernetes",
             "Tactic: Discovery",
             "Tactic: Execution",
             "Tactic: Stealth"
@@ -164,8 +172,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 105
+        "version": 106
     },
-    "id": "2388c687-cb2c-4b7b-be8f-6864a2385048_105",
+    "id": "2388c687-cb2c-4b7b-be8f-6864a2385048_106",
     "type": "security-rule"
 }

@@ -111,6 +111,12 @@
             "Data Source: Crowdstrike",
             "Data Source: Elastic Endgame",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Script-Based Execution",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Command and Control",
             "Tactic: Stealth"
         ],
@@ -182,8 +188,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 216
+        "version": 217
     },
-    "id": "83bf249e-4348-47ba-9741-1202a09556ad_216",
+    "id": "83bf249e-4348-47ba-9741-1202a09556ad_217",
     "type": "security-rule"
 }

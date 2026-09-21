@@ -36,6 +36,9 @@
             "Rule Type: Machine Learning",
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
+            "Domain: Endpoint",
+            "Platform: Windows",
+            "OS: Windows",
             "Tactic: Persistence"
         ],
         "threat": [
@@ -90,8 +93,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 107
+        "version": 108
     },
-    "id": "751b0329-7295-4682-b9c7-4473b99add69_107",
+    "id": "751b0329-7295-4682-b9c7-4473b99add69_108",
     "type": "security-rule"
 }

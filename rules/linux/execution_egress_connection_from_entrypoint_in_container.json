@@ -82,12 +82,16 @@
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
-            "Domain: Container",
+            "Domain: Containers",
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Command and Control",
             "Tactic: Privilege Escalation"
         ],
@@ -147,8 +151,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "c75d0c86-38d6-4821-98a1-465cff8ff4c8_8",
+    "id": "c75d0c86-38d6-4821-98a1-465cff8ff4c8_9",
     "type": "security-rule"
 }

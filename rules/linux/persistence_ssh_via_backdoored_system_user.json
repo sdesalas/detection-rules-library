@@ -67,6 +67,10 @@
             "Tactic: Persistence",
             "Data Source: System",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux",
             "Tactic: Initial Access",
             "Tactic: Stealth"
         ],
@@ -152,8 +156,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "428e9109-dc13-4ae9-84cb-100464d4c6fa_8",
+    "id": "428e9109-dc13-4ae9-84cb-100464d4c6fa_9",
     "type": "security-rule"
 }

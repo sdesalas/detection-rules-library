@@ -102,6 +102,14 @@
             "Data Source: Crowdstrike",
             "Data Source: Auditd Manager",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Supply Chain",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
             "Tactic: Command and Control"
         ],
         "threat": [
@@ -160,8 +168,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "57e118c1-19eb-4c20-93a6-8a6c30a5b48b_4",
+    "id": "57e118c1-19eb-4c20-93a6-8a6c30a5b48b_5",
     "type": "security-rule"
 }

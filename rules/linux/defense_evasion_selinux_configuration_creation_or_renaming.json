@@ -64,6 +64,10 @@
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -85,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "7b981906-86b7-4544-8033-c30ec6eb45fc_106",
+    "id": "7b981906-86b7-4544-8033-c30ec6eb45fc_107",
     "type": "security-rule"
 }

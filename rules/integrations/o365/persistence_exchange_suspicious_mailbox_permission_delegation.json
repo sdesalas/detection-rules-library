@@ -96,6 +96,12 @@
             "Use Case: Configuration Audit",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Microsoft 365",
+            "Domain: Email",
+            "Service: Microsoft Exchange Online",
             "Tactic: Privilege Escalation"
         ],
         "threat": [
@@ -146,8 +152,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 215
+        "version": 216
     },
-    "id": "0ce6487d-8069-4888-9ddd-61b52490cebc_215",
+    "id": "0ce6487d-8069-4888-9ddd-61b52490cebc_216",
     "type": "security-rule"
 }

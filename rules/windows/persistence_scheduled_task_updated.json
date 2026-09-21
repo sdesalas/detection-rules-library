@@ -72,7 +72,11 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -100,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 118
+        "version": 119
     },
-    "id": "a02cb68e-7c93-48d1-93b2-2c39023308eb_118",
+    "id": "a02cb68e-7c93-48d1-93b2-2c39023308eb_119",
     "type": "security-rule"
 }

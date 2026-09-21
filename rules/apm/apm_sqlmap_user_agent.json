@@ -37,12 +37,15 @@
         "severity": "medium",
         "tags": [
             "Data Source: APM",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "d49cc73f-7a16-4def-89ce-9fc7127d7820_105",
+    "id": "d49cc73f-7a16-4def-89ce-9fc7127d7820_106",
     "type": "security-rule"
 }

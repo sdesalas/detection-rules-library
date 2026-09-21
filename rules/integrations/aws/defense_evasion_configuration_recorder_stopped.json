@@ -75,6 +75,11 @@
             "Data Source: Amazon Web Services",
             "Data Source: AWS Config",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -103,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 213
+        "version": 214
     },
-    "id": "fbd44836-0d69-4004-a0b4-03c20370c435_213",
+    "id": "fbd44836-0d69-4004-a0b4-03c20370c435_214",
     "type": "security-rule"
 }

@@ -45,7 +45,10 @@
             "Use Case: Threat Detection",
             "Tactic: Impact",
             "Data Source: Network Packet Capture",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: ES|QL"
         ],
         "threat": [
             {
@@ -66,8 +69,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "286614ee-8b72-4ea5-a22d-e0d2ae59d0a9_1",
+    "id": "286614ee-8b72-4ea5-a22d-e0d2ae59d0a9_2",
     "type": "security-rule"
 }

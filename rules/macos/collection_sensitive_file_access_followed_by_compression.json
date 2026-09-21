@@ -61,6 +61,10 @@
             "Tactic: Collection",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: macOS",
             "Tactic: Exfiltration"
         ],
         "threat": [
@@ -106,8 +110,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "a0fbd7a9-1923-4e05-92df-b484168f17bc_3",
+    "id": "a0fbd7a9-1923-4e05-92df-b484168f17bc_4",
     "type": "security-rule"
 }

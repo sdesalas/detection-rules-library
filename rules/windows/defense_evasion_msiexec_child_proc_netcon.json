@@ -109,6 +109,13 @@
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Threat: Installer Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -136,8 +143,8 @@
             }
         ],
         "type": "eql",
-        "version": 207
+        "version": 208
     },
-    "id": "65432f4a-e716-4cc1-ab11-931c4966da2d_207",
+    "id": "65432f4a-e716-4cc1-ab11-931c4966da2d_208",
     "type": "security-rule"
 }

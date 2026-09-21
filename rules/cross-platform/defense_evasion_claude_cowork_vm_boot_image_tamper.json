@@ -65,6 +65,10 @@
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
             "Domain: LLM",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: macOS",
+            "Domain: GenAI",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -93,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "a0939500-a817-4ce9-85a9-191133352a9e_2",
+    "id": "a0939500-a817-4ce9-85a9-191133352a9e_3",
     "type": "security-rule"
 }

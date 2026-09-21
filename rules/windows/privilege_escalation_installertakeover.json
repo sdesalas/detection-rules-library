@@ -90,6 +90,13 @@
             "Resources: Investigation Guide",
             "Use Case: Vulnerability",
             "Data Source: Elastic Defend",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Vuln: CVE-2021-41379",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -154,8 +161,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 117
+        "version": 118
     },
-    "id": "58c6d58b-a0d3-412d-b3b8-0981a9400607_117",
+    "id": "58c6d58b-a0d3-412d-b3b8-0981a9400607_118",
     "type": "security-rule"
 }

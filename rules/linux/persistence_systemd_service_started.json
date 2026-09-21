@@ -97,6 +97,11 @@
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux",
+            "Resources: Osquery",
             "Tactic: Execution"
         ],
         "threat": [
@@ -169,8 +174,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 9
+        "version": 10
     },
-    "id": "b605f262-f7dc-41b5-9ebc-06bafe7a83b6_9",
+    "id": "b605f262-f7dc-41b5-9ebc-06bafe7a83b6_10",
     "type": "security-rule"
 }

@@ -56,6 +56,12 @@
             "Domain: LLM",
             "Mitre Atlas: T0010.003",
             "Rule Type: BBR",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Domain: GenAI",
+            "Vuln: CVE-2025-1975",
             "Tactic: Initial Access"
         ],
         "threat": [
@@ -104,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "e9a3b2c1-d4f5-6789-0abc-def123456789_3",
+    "id": "e9a3b2c1-d4f5-6789-0abc-def123456789_4",
     "type": "security-rule"
 }

@@ -82,6 +82,12 @@
             "Tactic: Execution",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Encoding-Based Obfuscation",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -148,8 +154,8 @@
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "03d856c2-7f74-4540-a530-e20af5e39789_4",
+    "id": "03d856c2-7f74-4540-a530-e20af5e39789_5",
     "type": "security-rule"
 }

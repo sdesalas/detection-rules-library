@@ -88,6 +88,14 @@
             "Tactic: Command and Control",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Download Tool Abuse",
+            "Threat: Script-Based Execution",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery",
             "Tactic: Execution"
         ],
         "threat": [
@@ -130,8 +138,8 @@
             }
         ],
         "type": "eql",
-        "version": 118
+        "version": 119
     },
-    "id": "33f306e8-417c-411b-965c-c2812d6d3f4d_118",
+    "id": "33f306e8-417c-411b-965c-c2812d6d3f4d_119",
     "type": "security-rule"
 }

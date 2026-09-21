@@ -72,6 +72,10 @@
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Execution"
         ],
         "threat": [
@@ -126,8 +130,8 @@
             }
         ],
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "a0ddb77b-0318-41f0-91e4-8c1b5528834f_10",
+    "id": "a0ddb77b-0318-41f0-91e4-8c1b5528834f_11",
     "type": "security-rule"
 }

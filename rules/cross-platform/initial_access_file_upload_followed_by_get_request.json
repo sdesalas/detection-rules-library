@@ -83,6 +83,15 @@
             "Data Source: Elastic Defend",
             "Data Source: Network Traffic",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Web Shell",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Data Source: Network Packet Capture",
             "Tactic: Command and Control"
         ],
         "threat": [
@@ -140,8 +149,8 @@
             }
         ],
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "1d306bf0-7bcf-4acd-83fd-042f5711acc9_4",
+    "id": "1d306bf0-7bcf-4acd-83fd-042f5711acc9_5",
     "type": "security-rule"
 }

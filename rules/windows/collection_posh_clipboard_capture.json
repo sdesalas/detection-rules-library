@@ -127,6 +127,12 @@
             "Tactic: Collection",
             "Data Source: PowerShell Logs",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Script-Based Execution",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows",
             "Tactic: Execution"
         ],
         "threat": [
@@ -170,8 +176,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 215
+        "version": 216
     },
-    "id": "92984446-aefb-4d5e-ad12-598042ca80ba_215",
+    "id": "92984446-aefb-4d5e-ad12-598042ca80ba_216",
     "type": "security-rule"
 }

@@ -82,6 +82,10 @@
             "Resources: Investigation Guide",
             "Use Case: Active Directory Monitoring",
             "Data Source: Windows Security Event Logs",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Persistence"
         ],
         "threat": [
@@ -130,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 217
+        "version": 218
     },
-    "id": "16fac1a1-21ee-4ca6-b720-458e3855d046_217",
+    "id": "16fac1a1-21ee-4ca6-b720-458e3855d046_218",
     "type": "security-rule"
 }

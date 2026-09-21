@@ -86,6 +86,12 @@
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -178,8 +184,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 320
+        "version": 321
     },
-    "id": "201200f1-a99b-43fb-88ed-f65a45c4972c_320",
+    "id": "201200f1-a99b-43fb-88ed-f65a45c4972c_321",
     "type": "security-rule"
 }

@@ -60,6 +60,11 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: macOS",
             "Tactic: Defense Impairment",
             "Tactic: Stealth"
         ],
@@ -131,8 +136,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "e3f5a566-df31-40cc-987c-24bc4bb94ba5_2",
+    "id": "e3f5a566-df31-40cc-987c-24bc4bb94ba5_3",
     "type": "security-rule"
 }

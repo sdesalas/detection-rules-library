@@ -66,7 +66,11 @@
             "Data Source: Microsoft Graph Activity Logs",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Entra ID"
         ],
         "threat": [
             {
@@ -92,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "8e66c55f-8db6-4e3e-bf4f-3a3e242bdf66_1",
+    "id": "8e66c55f-8db6-4e3e-bf4f-3a3e242bdf66_2",
     "type": "security-rule"
 }

@@ -64,6 +64,11 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: New Terms",
+            "Platform: Entra ID",
             "Tactic: Persistence"
         ],
         "threat": [
@@ -114,8 +119,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "8d9c4128-372a-11f0-9d8f-f661ea17fbcd_6",
+    "id": "8d9c4128-372a-11f0-9d8f-f661ea17fbcd_7",
     "type": "security-rule"
 }

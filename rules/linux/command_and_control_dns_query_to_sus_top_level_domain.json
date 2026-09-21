@@ -66,8 +66,12 @@
             "Tactic: Command and Control",
             "Tactic: Exfiltration",
             "Data Source: Elastic Defend",
-            "Rule Type: ESQL",
-            "Resources: Investigation Guide"
+            "Rule Type: ES|QL",
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Suspicious TLD"
         ],
         "threat": [
             {
@@ -168,8 +172,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "44a2de72-fe41-4558-b7ec-3e42de5f0432_3",
+    "id": "44a2de72-fe41-4558-b7ec-3e42de5f0432_4",
     "type": "security-rule"
 }

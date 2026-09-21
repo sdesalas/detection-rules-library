@@ -57,7 +57,12 @@
             "Use Case: Network Security Monitoring",
             "Tactic: Impact",
             "Data Source: Network Packet Capture",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Ransomware",
+            "Rule Type: ES|QL"
         ],
         "threat": [
             {
@@ -78,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "8e78b1a5-9674-4a96-8ce7-76ef54566a85_1",
+    "id": "8e78b1a5-9674-4a96-8ce7-76ef54566a85_2",
     "type": "security-rule"
 }

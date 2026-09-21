@@ -68,6 +68,11 @@
             "Use Case: Configuration Audit",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Domain: SaaS",
+            "Data Source: Microsoft 365 Audit Logs",
+            "Service: Microsoft Teams",
             "Tactic: Defense Impairment",
             "Tactic: Privilege Escalation"
         ],
@@ -120,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 215
+        "version": 216
     },
-    "id": "5e552599-ddec-4e14-bad1-28aa42404388_215",
+    "id": "5e552599-ddec-4e14-bad1-28aa42404388_216",
     "type": "security-rule"
 }

@@ -158,6 +158,8 @@
             "Tactic: Persistence",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
+            "Rule Type: ES|QL",
+            "Platform: Windows",
             "Tactic: Defense Impairment",
             "Tactic: Stealth"
         ],
@@ -234,8 +236,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "942c8f59-f01c-4dc0-a05f-2f5bba836ad8_2",
+    "id": "942c8f59-f01c-4dc0-a05f-2f5bba836ad8_3",
     "type": "security-rule"
 }

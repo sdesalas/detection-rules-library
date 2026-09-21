@@ -61,6 +61,9 @@
             "Tactic: Persistence",
             "Rule Type: BBR",
             "Data Source: Github",
+            "Rule Type: New Terms",
+            "Platform: GitHub",
+            "Domain: SaaS",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -111,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 209
+        "version": 210
     },
-    "id": "f94e898e-94f1-4545-8923-03e4b2866211_209",
+    "id": "f94e898e-94f1-4545-8923-03e4b2866211_210",
     "type": "security-rule"
 }

@@ -84,7 +84,11 @@
             "Domain: Network",
             "Domain: Identity",
             "Data Source: Fortinet",
-            "Data Source: Fortinet FortiGate"
+            "Data Source: Fortinet FortiGate",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: Event Correlation (EQL)"
         ],
         "threat": [
             {
@@ -127,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "e3a7b1c2-5d9f-4e8a-b6c3-2f1d4e5a6b7c_3",
+    "id": "e3a7b1c2-5d9f-4e8a-b6c3-2f1d4e5a6b7c_4",
     "type": "security-rule"
 }

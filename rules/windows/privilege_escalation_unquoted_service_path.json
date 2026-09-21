@@ -78,6 +78,11 @@
             "Data Source: Windows Security Event Logs",
             "Data Source: Crowdstrike",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -129,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "12de29d4-bbb0-4eef-b687-857e8a163870_212",
+    "id": "12de29d4-bbb0-4eef-b687-857e8a163870_213",
     "type": "security-rule"
 }

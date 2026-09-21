@@ -67,6 +67,9 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Rule Type: BBR",
+            "Rule Type: New Terms",
+            "Platform: Linux",
+            "Domain: Endpoint",
             "Tactic: Defense Impairment",
             "Tactic: Impact"
         ],
@@ -126,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 113
+        "version": 114
     },
-    "id": "7592c127-89fb-4209-a8f6-f9944dfd7e02_113",
+    "id": "7592c127-89fb-4209-a8f6-f9944dfd7e02_114",
     "type": "security-rule"
 }

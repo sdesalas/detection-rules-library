@@ -43,6 +43,8 @@
             "Rule Type: Machine Learning",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
+            "Platform: Windows",
+            "Resources: Osquery",
             "Tactic: Execution"
         ],
         "threat": [
@@ -92,8 +94,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 318
+        "version": 319
     },
-    "id": "6d448b96-c922-4adb-b51c-b767f1ea5b76_318",
+    "id": "6d448b96-c922-4adb-b51c-b767f1ea5b76_319",
     "type": "security-rule"
 }

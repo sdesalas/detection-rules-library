@@ -91,6 +91,13 @@
             "Tactic: Lateral Movement",
             "Tactic: Exfiltration",
             "Tactic: Impact",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS SNS",
             "Tactic: Command and Control"
         ],
         "threat": [
@@ -164,8 +171,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "2112ecce-cd34-11ef-873f-f661ea17fbcd_8",
+    "id": "2112ecce-cd34-11ef-873f-f661ea17fbcd_9",
     "type": "security-rule"
 }

@@ -58,7 +58,9 @@
             "Tactic: Initial Access",
             "Tactic: Credential Access",
             "Resources: Investigation Guide",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Okta"
         ],
         "threat": [
             {
@@ -101,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "f960e8a4-31c1-4a6e-b172-8f5c8e5c8c2a_2",
+    "id": "f960e8a4-31c1-4a6e-b172-8f5c8e5c8c2a_3",
     "type": "security-rule"
 }

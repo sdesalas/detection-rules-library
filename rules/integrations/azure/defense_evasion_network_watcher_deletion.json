@@ -53,6 +53,11 @@
             "Data Source: Azure",
             "Use Case: Network Security Monitoring",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Azure",
+            "Data Source: Azure Activity Logs",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -81,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 111
     },
-    "id": "323cb487-279d-4218-bcbd-a568efe930c6_110",
+    "id": "323cb487-279d-4218-bcbd-a568efe930c6_111",
     "type": "security-rule"
 }

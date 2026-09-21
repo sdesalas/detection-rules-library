@@ -57,6 +57,13 @@
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Vuln: CVE-2026-3888",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -109,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "44cb1d8a-1922-4fc0-a00f-36c1caf57393_3",
+    "id": "44cb1d8a-1922-4fc0-a00f-36c1caf57393_4",
     "type": "security-rule"
 }

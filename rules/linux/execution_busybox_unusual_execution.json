@@ -84,6 +84,11 @@
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -142,8 +147,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "7ed84571-58ac-46da-a0ab-9c213ef2927b_2",
+    "id": "7ed84571-58ac-46da-a0ab-9c213ef2927b_3",
     "type": "security-rule"
 }

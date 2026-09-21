@@ -48,12 +48,15 @@
         "severity": "critical",
         "tags": [
             "Data Source: Elastic Endgame",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Rule Type: Custom Query (KQL)",
+            "Rule Type: Higher-Order",
+            "Domain: Endpoint"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "8cb4f625-7743-4dfb-ae1b-ad92be9df7bd_105",
+    "id": "8cb4f625-7743-4dfb-ae1b-ad92be9df7bd_106",
     "type": "security-rule"
 }

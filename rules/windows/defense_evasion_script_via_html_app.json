@@ -119,6 +119,12 @@
             "Data Source: Crowdstrike",
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -180,8 +186,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "181f6b23-3799-445e-9589-0018328a9e46_211",
+    "id": "181f6b23-3799-445e-9589-0018328a9e46_212",
     "type": "security-rule"
 }

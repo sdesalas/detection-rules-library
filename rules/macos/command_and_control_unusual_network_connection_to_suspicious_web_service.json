@@ -70,6 +70,12 @@
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Web Service Abuse",
+            "Rule Type: New Terms",
+            "Platform: macOS",
             "Tactic: Exfiltration"
         ],
         "threat": [
@@ -135,8 +141,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "b07f0fba-0a78-11f0-8311-b66272739ecb_8",
+    "id": "b07f0fba-0a78-11f0-8311-b66272739ecb_9",
     "type": "security-rule"
 }

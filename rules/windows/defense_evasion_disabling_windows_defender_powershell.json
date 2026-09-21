@@ -105,6 +105,11 @@
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -148,8 +153,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 320
+        "version": 321
     },
-    "id": "c8cccb06-faf2-4cd5-886e-2c9636cfcb87_320",
+    "id": "c8cccb06-faf2-4cd5-886e-2c9636cfcb87_321",
     "type": "security-rule"
 }

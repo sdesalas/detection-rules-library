@@ -78,7 +78,6 @@
             "Domain: Cloud",
             "Domain: Kubernetes",
             "Platform: AWS",
-            "Platform: Kubernetes",
             "Data Source: AWS CloudTrail",
             "Service: AWS EKS",
             "Rule Type: Event Correlation (EQL)",
@@ -111,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "2b60fb61-d0c7-405e-9f33-a66d8729628d_1",
+    "id": "2b60fb61-d0c7-405e-9f33-a66d8729628d_2",
     "type": "security-rule"
 }

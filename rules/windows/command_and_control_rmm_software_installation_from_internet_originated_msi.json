@@ -167,7 +167,7 @@
             "Domain: Endpoint",
             "OS: Windows",
             "Platform: Windows",
-            "Rule Type: ESQL",
+            "Rule Type: ES|QL",
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
@@ -227,8 +227,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "7dd15e54-0e23-4e99-80e7-6651ef7ce9d5_2",
+    "id": "7dd15e54-0e23-4e99-80e7-6651ef7ce9d5_3",
     "type": "security-rule"
 }

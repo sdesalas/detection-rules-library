@@ -100,6 +100,7 @@
             "Tactic: Execution",
             "Rule Type: New Terms",
             "Threat: Rhysida",
+            "Threat: Ransomware",
             "Use Case: Ransomware",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
@@ -170,8 +171,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "7265f4fa-4839-4399-924c-a91f1e45d76c_1",
+    "id": "7265f4fa-4839-4399-924c-a91f1e45d76c_2",
     "type": "security-rule"
 }

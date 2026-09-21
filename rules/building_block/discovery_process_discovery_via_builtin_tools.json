@@ -80,7 +80,10 @@
             "Tactic: Discovery",
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
-            "Data Source: Elastic Endgame"
+            "Data Source: Elastic Endgame",
+            "Rule Type: New Terms",
+            "Platform: Linux",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -113,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "3f4d7734-2151-4481-b394-09d7c6c91f75_7",
+    "id": "3f4d7734-2151-4481-b394-09d7c6c91f75_8",
     "type": "security-rule"
 }

@@ -57,6 +57,14 @@
             "Data Source: Microsoft 365",
             "Tactic: Initial Access",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Domain: SaaS",
+            "Domain: Email",
+            "Data Source: Microsoft 365 Audit Logs",
+            "Service: Microsoft Exchange Online",
             "Tactic: Defense Impairment",
             "Tactic: Persistence"
         ],
@@ -94,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 214
+        "version": 215
     },
-    "id": "675239ea-c1bc-4467-a6d3-b9e2cc7f676d_214",
+    "id": "675239ea-c1bc-4467-a6d3-b9e2cc7f676d_215",
     "type": "security-rule"
 }

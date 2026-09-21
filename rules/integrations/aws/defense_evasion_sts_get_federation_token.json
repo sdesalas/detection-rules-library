@@ -80,6 +80,12 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS STS",
             "Tactic: Lateral Movement"
         ],
         "threat": [
@@ -130,8 +136,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 9
+        "version": 10
     },
-    "id": "7a5cc9a8-5ea3-11ef-beec-f661ea17fbce_9",
+    "id": "7a5cc9a8-5ea3-11ef-beec-f661ea17fbce_10",
     "type": "security-rule"
 }

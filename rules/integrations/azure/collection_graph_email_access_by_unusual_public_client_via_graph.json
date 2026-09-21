@@ -91,6 +91,12 @@
             "Use Case: Threat Detection",
             "Tactic: Collection",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: Entra ID",
+            "Platform: Azure",
+            "Domain: Identity",
             "Tactic: Lateral Movement"
         ],
         "threat": [
@@ -141,8 +147,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 9
+        "version": 10
     },
-    "id": "e882e934-2aaa-11f0-8272-f661ea17fbcc_9",
+    "id": "e882e934-2aaa-11f0-8272-f661ea17fbcc_10",
     "type": "security-rule"
 }

@@ -80,12 +80,16 @@
         "severity": "low",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS EC2",
             "Tactic: Persistence",
             "Rule Type: Custom Query (KQL)",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -141,8 +145,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 215
+        "version": 216
     },
-    "id": "39144f38-5284-4f8e-a2ae-e3fd628d90b0_215",
+    "id": "39144f38-5284-4f8e-a2ae-e3fd628d90b0_216",
     "type": "security-rule"
 }

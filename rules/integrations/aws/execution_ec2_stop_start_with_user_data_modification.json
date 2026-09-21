@@ -80,6 +80,11 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: AWS",
+            "Service: AWS EC2",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -123,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "7e5c0e5a-95a5-404e-a5b0-278d35dc3325_2",
+    "id": "7e5c0e5a-95a5-404e-a5b0-278d35dc3325_3",
     "type": "security-rule"
 }

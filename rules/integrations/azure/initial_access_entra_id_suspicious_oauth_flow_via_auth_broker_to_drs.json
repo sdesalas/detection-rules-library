@@ -34,11 +34,17 @@
             "Domain: Identity",
             "Data Source: Azure",
             "Data Source: Entra ID",
-            "Data Source: Entra ID Sign-in Logs",
+            "Data Source: Entra ID Sign-In Logs",
             "Use Case: Identity and Access Audit",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
             "Tactic: Initial Access",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Device Code Phishing",
+            "Rule Type: ES|QL",
+            "Platform: Entra ID",
             "Tactic: Credential Access",
             "Tactic: Lateral Movement"
         ],
@@ -117,8 +123,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 10
+        "version": 11
     },
-    "id": "375132c6-25d5-11f0-8745-f661ea17fbcd_10",
+    "id": "375132c6-25d5-11f0-8745-f661ea17fbcd_11",
     "type": "security-rule"
 }

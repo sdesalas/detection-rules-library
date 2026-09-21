@@ -98,6 +98,13 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: ES|QL",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -153,8 +160,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "5a876e0d-d39a-49b9-8ad8-19c9b622203b_5",
+    "id": "5a876e0d-d39a-49b9-8ad8-19c9b622203b_6",
     "type": "security-rule"
 }

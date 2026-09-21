@@ -58,7 +58,10 @@
             "Tactic: Collection",
             "Tactic: Exfiltration",
             "Tactic: Impact",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Service: Microsoft Purview"
         ],
         "threat": [
             {
@@ -104,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "a7e9e2e8-3c5d-4b9a-8e7f-1a2b3c4d5e6f_2",
+    "id": "a7e9e2e8-3c5d-4b9a-8e7f-1a2b3c4d5e6f_3",
     "type": "security-rule"
 }

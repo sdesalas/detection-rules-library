@@ -65,7 +65,13 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Tactic: Collection",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: ES|QL",
+            "Platform: AWS",
+            "Service: AWS S3"
         ],
         "threat": [
             {
@@ -111,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 103
     },
-    "id": "a7577205-88a1-4a08-85d4-7b72a9a2e969_3",
+    "id": "a7577205-88a1-4a08-85d4-7b72a9a2e969_103",
     "type": "security-rule"
 }

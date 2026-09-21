@@ -59,7 +59,13 @@
             "Data Source: Amazon Web Services",
             "Use Case: Threat Detection",
             "Tactic: Impact",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Cryptomining",
+            "Rule Type: ES|QL",
+            "Platform: AWS"
         ],
         "threat": [
             {
@@ -80,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "3ca27e45-b0cd-417a-914c-d086869acd1b_1",
+    "id": "3ca27e45-b0cd-417a-914c-d086869acd1b_2",
     "type": "security-rule"
 }

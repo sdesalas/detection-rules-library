@@ -39,6 +39,13 @@
             "Data Source: Apache Tomcat",
             "Data Source: Traefik",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Web Application Attack",
+            "Rule Type: New Terms",
+            "Service: Nginx",
+            "Service: Apache Tomcat",
+            "Service: Apache HTTP Server",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -65,8 +72,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "9797d2c8-8ec9-48e6-a022-350cdfbf2d5e_3",
+    "id": "9797d2c8-8ec9-48e6-a022-350cdfbf2d5e_4",
     "type": "security-rule"
 }

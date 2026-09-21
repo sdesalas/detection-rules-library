@@ -62,7 +62,14 @@
             "Tactic: Initial Access",
             "Use Case: Identity and Access Audit",
             "Data Source: Okta",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: AiTM Phishing",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Okta",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -90,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 312
+        "version": 313
     },
-    "id": "ee39a9f7-5a79-4b0a-9815-d36b3cf28d3e_312",
+    "id": "ee39a9f7-5a79-4b0a-9815-d36b3cf28d3e_313",
     "type": "security-rule"
 }

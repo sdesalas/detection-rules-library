@@ -64,6 +64,14 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Domain: SaaS",
+            "Domain: Email",
+            "Data Source: Microsoft 365 Audit Logs",
+            "Service: Microsoft Exchange Online",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -114,8 +122,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 215
+        "version": 216
     },
-    "id": "684554fc-0777-47ce-8c9b-3d01f198d7f8_215",
+    "id": "684554fc-0777-47ce-8c9b-3d01f198d7f8_216",
     "type": "security-rule"
 }

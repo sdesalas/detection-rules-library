@@ -113,6 +113,14 @@
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Remote Management Tool Abuse",
+            "Threat: Web Shell",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution",
             "Tactic: Persistence"
         ],
@@ -184,8 +192,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "3d00feab-e203-4acc-a463-c3e15b7e9a73_212",
+    "id": "3d00feab-e203-4acc-a463-c3e15b7e9a73_213",
     "type": "security-rule"
 }

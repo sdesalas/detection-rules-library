@@ -65,7 +65,14 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Supply Chain",
+            "Rule Type: New Terms",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -98,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "55be0398-e72d-4c02-a916-b11d62af0e29_1",
+    "id": "55be0398-e72d-4c02-a916-b11d62af0e29_2",
     "type": "security-rule"
 }

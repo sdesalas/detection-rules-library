@@ -73,6 +73,14 @@
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
             "Domain: LLM",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Unauthorized AI Usage",
+            "Rule Type: New Terms",
+            "Platform: Windows",
+            "Platform: macOS",
+            "Domain: GenAI",
             "Tactic: Credential Access",
             "Tactic: Defense Impairment",
             "Tactic: Stealth"
@@ -151,8 +159,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "590fc62d-7386-4c75-92b0-af4517018da1_8",
+    "id": "590fc62d-7386-4c75-92b0-af4517018da1_9",
     "type": "security-rule"
 }

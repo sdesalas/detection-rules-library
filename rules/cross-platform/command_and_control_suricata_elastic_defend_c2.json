@@ -96,6 +96,13 @@
             "Data Source: Elastic Defend",
             "Data Source: Suricata",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
             "Tactic: Discovery"
         ],
         "threat": [
@@ -136,8 +143,8 @@
             }
         ],
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "9edd000e-cbd1-4d6a-be72-2197b5625a05_6",
+    "id": "9edd000e-cbd1-4d6a-be72-2197b5625a05_7",
     "type": "security-rule"
 }

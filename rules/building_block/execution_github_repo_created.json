@@ -41,6 +41,9 @@
             "Tactic: Execution",
             "Rule Type: BBR",
             "Data Source: Github",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: GitHub",
+            "Domain: SaaS",
             "Tactic: Resource Development"
         ],
         "threat": [
@@ -84,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 208
+        "version": 209
     },
-    "id": "6cea88e4-6ce2-4238-9981-a54c140d6336_208",
+    "id": "6cea88e4-6ce2-4238-9981-a54c140d6336_209",
     "type": "security-rule"
 }

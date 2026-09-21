@@ -88,6 +88,10 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment",
             "Tactic: Execution",
             "Tactic: Stealth"
@@ -182,8 +186,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 319
+        "version": 320
     },
-    "id": "403ef0d3-8259-40c9-a5b6-d48354712e49_319",
+    "id": "403ef0d3-8259-40c9-a5b6-d48354712e49_320",
     "type": "security-rule"
 }

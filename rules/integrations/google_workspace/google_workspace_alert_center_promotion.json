@@ -66,12 +66,17 @@
             "Data Source: Google Workspace",
             "Use Case: Log Auditing",
             "Use Case: Threat Detection",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Google Workspace",
+            "Domain: SaaS"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 8
+        "version": 9
     },
-    "id": "f1a6d0f4-95b8-11ed-9517-f661ea17fbcc_8",
+    "id": "f1a6d0f4-95b8-11ed-9517-f661ea17fbcc_9",
     "type": "security-rule"
 }

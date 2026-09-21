@@ -81,6 +81,10 @@
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -159,8 +163,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 10
+        "version": 11
     },
-    "id": "7787362c-90ff-4b1a-b313-8808b1020e64_10",
+    "id": "7787362c-90ff-4b1a-b313-8808b1020e64_11",
     "type": "security-rule"
 }

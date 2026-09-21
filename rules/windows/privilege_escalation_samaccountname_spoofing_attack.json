@@ -86,6 +86,13 @@
             "Use Case: Vulnerability",
             "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Vuln: CVE-2021-42278",
             "Tactic: Persistence",
             "Tactic: Stealth"
         ],
@@ -150,8 +157,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 217
+        "version": 218
     },
-    "id": "bdcf646b-08d4-492c-870a-6c04e3700034_217",
+    "id": "bdcf646b-08d4-492c-870a-6c04e3700034_218",
     "type": "security-rule"
 }

@@ -89,6 +89,10 @@
             "Tactic: Lateral Movement",
             "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: Azure",
             "Tactic: Initial Access"
         ],
         "threat": [
@@ -139,8 +143,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "97266eb4-b8c3-4e3e-9417-7d0ace6b3dfe_2",
+    "id": "97266eb4-b8c3-4e3e-9417-7d0ace6b3dfe_3",
     "type": "security-rule"
 }

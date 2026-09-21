@@ -88,7 +88,11 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -114,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 215
+        "version": 216
     },
-    "id": "2d8043ed-5bda-4caf-801c-c1feb7410504_215",
+    "id": "2d8043ed-5bda-4caf-801c-c1feb7410504_216",
     "type": "security-rule"
 }

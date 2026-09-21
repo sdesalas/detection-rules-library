@@ -63,6 +63,14 @@
             "Data Source: Microsoft 365",
             "Use Case: Configuration Audit",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Domain: SaaS",
+            "Domain: Email",
+            "Data Source: Microsoft 365 Audit Logs",
+            "Service: Microsoft Exchange Online",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -84,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 213
+        "version": 214
     },
-    "id": "97314185-2568-4561-ae81-f3e480e5e695_213",
+    "id": "97314185-2568-4561-ae81-f3e480e5e695_214",
     "type": "security-rule"
 }

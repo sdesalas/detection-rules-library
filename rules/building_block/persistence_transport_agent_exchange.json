@@ -108,6 +108,8 @@
             "Tactic: Persistence",
             "Data Source: PowerShell Logs",
             "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows",
             "Tactic: Execution"
         ],
         "threat": [
@@ -158,8 +160,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 111
+        "version": 112
     },
-    "id": "846fe13f-6772-4c83-bd39-9d16d4ad1a81_111",
+    "id": "846fe13f-6772-4c83-bd39-9d16d4ad1a81_112",
     "type": "security-rule"
 }

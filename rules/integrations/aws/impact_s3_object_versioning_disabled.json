@@ -87,12 +87,18 @@
         "severity": "medium",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS S3",
             "Tactic: Impact",
             "Rule Type: Event Correlation (EQL)",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Ransomware"
         ],
         "threat": [
             {
@@ -113,8 +119,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "30b5bb96-c7db-492c-80e9-1eab00db580b_9",
+    "id": "30b5bb96-c7db-492c-80e9-1eab00db580b_10",
     "type": "security-rule"
 }

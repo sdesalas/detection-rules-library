@@ -521,6 +521,11 @@
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: ES|QL",
+            "Platform: Entra ID",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -593,8 +598,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 210
+        "version": 310
     },
-    "id": "498e4094-60e7-11f0-8847-f661ea17fbcd_210",
+    "id": "498e4094-60e7-11f0-8847-f661ea17fbcd_310",
     "type": "security-rule"
 }

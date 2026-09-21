@@ -50,7 +50,9 @@
             "Tactic: Privilege Escalation",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
-            "Rule Type: ESQL"
+            "Rule Type: ES|QL",
+            "Noise: Medium",
+            "Performance: Fast"
         ],
         "threat": [
             {
@@ -100,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "3ec2175d-8f34-4be9-b3be-c5821538760e_2",
+    "id": "3ec2175d-8f34-4be9-b3be-c5821538760e_3",
     "type": "security-rule"
 }

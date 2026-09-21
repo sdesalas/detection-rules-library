@@ -60,6 +60,12 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: GCP",
+            "Domain: Containers",
+            "Platform: Kubernetes",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -96,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "4886ce11-fca5-433f-bbb9-e33e410ef9ae_2",
+    "id": "4886ce11-fca5-433f-bbb9-e33e410ef9ae_3",
     "type": "security-rule"
 }

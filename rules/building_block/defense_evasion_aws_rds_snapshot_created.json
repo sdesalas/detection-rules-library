@@ -61,6 +61,7 @@
             "Data Source: AWS CloudTrail",
             "Service: AWS RDS",
             "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -89,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 5
+        "version": 6
     },
-    "id": "68c5c9d1-38e5-48bb-b1b2-8b5951d39738_5",
+    "id": "68c5c9d1-38e5-48bb-b1b2-8b5951d39738_6",
     "type": "security-rule"
 }

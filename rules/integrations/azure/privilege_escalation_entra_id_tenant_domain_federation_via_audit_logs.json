@@ -63,6 +63,10 @@
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID",
             "Tactic: Credential Access",
             "Tactic: Defense Impairment"
         ],
@@ -170,8 +174,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 4
+        "version": 5
     },
-    "id": "1cfb39e1-4b6c-4dc7-85fe-733e4a1a33ca_4",
+    "id": "1cfb39e1-4b6c-4dc7-85fe-733e4a1a33ca_5",
     "type": "security-rule"
 }

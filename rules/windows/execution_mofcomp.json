@@ -77,6 +77,10 @@
             "Data Source: Windows Security Event Logs",
             "Data Source: Crowdstrike",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Persistence"
         ],
         "threat": [
@@ -120,8 +124,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 13
+        "version": 14
     },
-    "id": "210d4430-b371-470e-b879-80b7182aa75e_13",
+    "id": "210d4430-b371-470e-b879-80b7182aa75e_14",
     "type": "security-rule"
 }

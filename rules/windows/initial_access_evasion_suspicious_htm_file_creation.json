@@ -83,6 +83,10 @@
             "Tactic: Initial Access",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -160,8 +164,8 @@
             }
         ],
         "type": "eql",
-        "version": 114
+        "version": 115
     },
-    "id": "f0493cb4-9b15-43a9-9359-68c23a7f2cf3_114",
+    "id": "f0493cb4-9b15-43a9-9359-68c23a7f2cf3_115",
     "type": "security-rule"
 }

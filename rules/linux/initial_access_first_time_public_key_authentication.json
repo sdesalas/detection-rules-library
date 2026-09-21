@@ -64,6 +64,10 @@
             "Tactic: Initial Access",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux",
             "Tactic: Lateral Movement"
         ],
         "threat": [
@@ -112,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "267dace3-a4de-4c94-a7b5-dd6c0f5482e5_7",
+    "id": "267dace3-a4de-4c94-a7b5-dd6c0f5482e5_8",
     "type": "security-rule"
 }

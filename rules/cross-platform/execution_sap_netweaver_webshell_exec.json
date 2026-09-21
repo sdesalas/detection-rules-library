@@ -68,6 +68,14 @@
             "Use Case: Vulnerability",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Web Shell",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
             "Tactic: Initial Access",
             "Tactic: Persistence"
         ],
@@ -159,8 +167,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "23c53c4c-aa8b-4b07-85c0-fe46a9c8acaf_3",
+    "id": "23c53c4c-aa8b-4b07-85c0-fe46a9c8acaf_4",
     "type": "security-rule"
 }

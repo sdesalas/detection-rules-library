@@ -93,6 +93,14 @@
             "Resources: Investigation Guide",
             "Tactic: Initial Access",
             "Tactic: Credential Access",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: OAuth App Consent",
+            "Rule Type: New Terms",
+            "Platform: Microsoft 365",
+            "Domain: SaaS",
+            "Domain: Email",
             "Tactic: Persistence"
         ],
         "threat": [
@@ -151,8 +159,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 10
+        "version": 11
     },
-    "id": "0c3c80de-08c2-11f0-bd11-f661ea17fbcc_10",
+    "id": "0c3c80de-08c2-11f0-bd11-f661ea17fbcc_11",
     "type": "security-rule"
 }

@@ -82,7 +82,9 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Privilege Escalation",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal"
         ],
         "threat": [
             {
@@ -132,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 4
+        "version": 5
     },
-    "id": "1a1046f4-9257-11f0-9a42-f661ea17fbce_4",
+    "id": "1a1046f4-9257-11f0-9a42-f661ea17fbce_5",
     "type": "security-rule"
 }

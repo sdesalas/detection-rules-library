@@ -61,6 +61,9 @@
             "Tactic: Execution",
             "Rule Type: BBR",
             "Data Source: Github",
+            "Rule Type: New Terms",
+            "Platform: GitHub",
+            "Domain: SaaS",
             "Tactic: Lateral Movement",
             "Tactic: Persistence"
         ],
@@ -127,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 209
+        "version": 210
     },
-    "id": "ce08b55a-f67d-4804-92b5-617b0fe5a5b5_209",
+    "id": "ce08b55a-f67d-4804-92b5-617b0fe5a5b5_210",
     "type": "security-rule"
 }

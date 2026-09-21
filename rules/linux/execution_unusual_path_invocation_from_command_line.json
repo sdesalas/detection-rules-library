@@ -89,6 +89,10 @@
             "Tactic: Execution",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -144,8 +148,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "82f842c2-7c36-438c-b562-5afe54ab11f4_8",
+    "id": "82f842c2-7c36-438c-b562-5afe54ab11f4_9",
     "type": "security-rule"
 }

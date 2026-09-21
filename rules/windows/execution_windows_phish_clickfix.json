@@ -104,6 +104,13 @@
             "Data Source: SentinelOne",
             "Data Source: Microsoft Defender XDR",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: ClickFix",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Initial Access",
             "Tactic: Stealth"
         ],
@@ -204,8 +211,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "7dc45430-7407-4790-b89e-c857c3f6bf23_5",
+    "id": "7dc45430-7407-4790-b89e-c857c3f6bf23_6",
     "type": "security-rule"
 }

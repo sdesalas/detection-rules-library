@@ -119,6 +119,10 @@
             "Use Case: Threat Detection",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Privilege Escalation",
             "Tactic: Stealth"
         ],
@@ -169,8 +173,8 @@
             }
         ],
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "c88d4bd0-5649-4c52-87ea-9be59dbfbcf2_112",
+    "id": "c88d4bd0-5649-4c52-87ea-9be59dbfbcf2_113",
     "type": "security-rule"
 }

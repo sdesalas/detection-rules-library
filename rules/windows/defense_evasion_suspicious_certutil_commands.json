@@ -98,6 +98,13 @@
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery",
             "Tactic: Command and Control",
             "Tactic: Credential Access",
             "Tactic: Stealth"
@@ -160,8 +167,8 @@
         "timeline_title": "Comprehensive Process Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 319
+        "version": 320
     },
-    "id": "fd70c98a-c410-42dc-a2e3-761c71848acf_319",
+    "id": "fd70c98a-c410-42dc-a2e3-761c71848acf_320",
     "type": "security-rule"
 }

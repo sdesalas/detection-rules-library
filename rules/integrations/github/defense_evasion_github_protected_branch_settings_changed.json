@@ -43,7 +43,14 @@
             "Domain: Cloud",
             "Use Case: Threat Detection",
             "Data Source: Github",
+            "Data Source: GitHub Audit Logs",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: GitHub",
+            "Domain: SaaS",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -65,8 +72,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "07639887-da3a-4fbf-9532-8ce748ff8c50_211",
+    "id": "07639887-da3a-4fbf-9532-8ce748ff8c50_212",
     "type": "security-rule"
 }

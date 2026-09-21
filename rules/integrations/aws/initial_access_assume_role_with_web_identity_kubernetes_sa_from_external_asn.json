@@ -98,7 +98,13 @@
             "Data Source: AWS CloudTrail",
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Service: AWS STS"
         ],
         "threat": [
             {
@@ -126,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "ae32268b-bfd0-4c35-b002-13461b5830ca_3",
+    "id": "ae32268b-bfd0-4c35-b002-13461b5830ca_4",
     "type": "security-rule"
 }

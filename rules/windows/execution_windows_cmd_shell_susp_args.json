@@ -116,6 +116,12 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: Elastic Endgame",
             "Data Source: Crowdstrike",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Command and Control",
             "Tactic: Stealth"
         ],
@@ -192,8 +198,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 210
+        "version": 211
     },
-    "id": "d9ffc3d6-9de9-4b29-9395-5757d0695ecf_210",
+    "id": "d9ffc3d6-9de9-4b29-9395-5757d0695ecf_211",
     "type": "security-rule"
 }

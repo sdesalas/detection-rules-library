@@ -105,6 +105,13 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: Crowdstrike",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: ClickFix",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Initial Access",
             "Tactic: Stealth"
         ],
@@ -200,8 +207,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "fbad57ec-4442-48db-a34f-5ee907b44a22_5",
+    "id": "fbad57ec-4442-48db-a34f-5ee907b44a22_6",
     "type": "security-rule"
 }

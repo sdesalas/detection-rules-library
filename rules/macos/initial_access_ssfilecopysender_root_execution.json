@@ -100,6 +100,9 @@
             "Tactic: Initial Access",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Rule Type: ES|QL",
+            "Platform: macOS",
+            "Vuln: CVE-2026-65400",
             "Tactic: Privilege Escalation"
         ],
         "threat": [
@@ -136,8 +139,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "e54c3f36-e243-402d-9d44-8f7349eb8c88_2",
+    "id": "e54c3f36-e243-402d-9d44-8f7349eb8c88_3",
     "type": "security-rule"
 }

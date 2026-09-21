@@ -79,6 +79,11 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Data Source: Microsoft Defender XDR",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment",
             "Tactic: Persistence"
         ],
@@ -121,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 220
+        "version": 221
     },
-    "id": "2ffa1f1e-b6db-47fa-994b-1512743847eb_220",
+    "id": "2ffa1f1e-b6db-47fa-994b-1512743847eb_221",
     "type": "security-rule"
 }

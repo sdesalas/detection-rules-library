@@ -51,7 +51,12 @@
             "Data Source: AWS Service Quotas",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: ES|QL",
+            "Platform: AWS"
         ],
         "threat": [
             {
@@ -77,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 10
+        "version": 11
     },
-    "id": "19be0164-63d2-11ef-8e38-f661ea17fbce_10",
+    "id": "19be0164-63d2-11ef-8e38-f661ea17fbce_11",
     "type": "security-rule"
 }

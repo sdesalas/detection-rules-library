@@ -87,6 +87,13 @@
             "Resources: Investigation Guide",
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: Entra ID",
+            "Platform: Azure",
+            "Domain: Identity",
             "Tactic: Credential Access",
             "Tactic: Lateral Movement"
         ],
@@ -153,8 +160,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 9
+        "version": 10
     },
-    "id": "2a3f38a8-204e-11f0-9c1f-f661ea17fbcd_9",
+    "id": "2a3f38a8-204e-11f0-9c1f-f661ea17fbcd_10",
     "type": "security-rule"
 }

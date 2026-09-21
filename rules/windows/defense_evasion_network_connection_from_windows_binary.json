@@ -74,6 +74,13 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -155,8 +162,8 @@
             }
         ],
         "type": "eql",
-        "version": 221
+        "version": 222
     },
-    "id": "1fe3b299-fbb5-4657-a937-1d746f2c711a_221",
+    "id": "1fe3b299-fbb5-4657-a937-1d746f2c711a_222",
     "type": "security-rule"
 }

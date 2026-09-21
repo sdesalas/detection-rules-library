@@ -71,7 +71,9 @@
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
             "Data Source: Auditd Manager",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -99,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "b92d5eae-70bb-4b66-be27-f98ba9d0ccdc_6",
+    "id": "b92d5eae-70bb-4b66-be27-f98ba9d0ccdc_7",
     "type": "security-rule"
 }

@@ -61,6 +61,8 @@
             "Rule Type: BBR",
             "Data Source: Sysmon",
             "Data Source: Windows Security Event Logs",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment",
             "Tactic: Persistence",
             "Tactic: Privilege Escalation"
@@ -133,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "c5677997-f75b-4cda-b830-a75920514096_110",
+    "id": "c5677997-f75b-4cda-b830-a75920514096_111",
     "type": "security-rule"
 }

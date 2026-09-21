@@ -79,6 +79,12 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
+            "Noise: Low",
+            "Performance: Normal",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery",
             "Tactic: Command and Control",
             "Tactic: Stealth"
         ],
@@ -144,8 +150,8 @@
             }
         ],
         "type": "eql",
-        "version": 215
+        "version": 216
     },
-    "id": "b29ee2be-bf99-446c-ab1a-2dc0183394b8_215",
+    "id": "b29ee2be-bf99-446c-ab1a-2dc0183394b8_216",
     "type": "security-rule"
 }

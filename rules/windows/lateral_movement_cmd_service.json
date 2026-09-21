@@ -75,6 +75,10 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution",
             "Tactic: Persistence"
         ],
@@ -147,8 +151,8 @@
             }
         ],
         "type": "eql",
-        "version": 213
+        "version": 214
     },
-    "id": "d61cbcf8-1bc1-4cff-85ba-e7b21c5beedc_213",
+    "id": "d61cbcf8-1bc1-4cff-85ba-e7b21c5beedc_214",
     "type": "security-rule"
 }

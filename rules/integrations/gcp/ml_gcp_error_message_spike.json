@@ -29,11 +29,12 @@
         "tags": [
             "Domain: Cloud",
             "Data Source: GCP",
-            "Data Source: GCP Audit Logs",
             "Data Source: Google Cloud Platform",
+            "Data Source: GCP Audit Logs",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Resources: Investigation Guide",
+            "Platform: GCP",
             "Tactic: Discovery",
             "Tactic: Lateral Movement",
             "Tactic: Privilege Escalation"
@@ -77,8 +78,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 102
+        "version": 103
     },
-    "id": "a4b740e4-be17-4048-9aa4-1e6f42b455b1_102",
+    "id": "a4b740e4-be17-4048-9aa4-1e6f42b455b1_103",
     "type": "security-rule"
 }

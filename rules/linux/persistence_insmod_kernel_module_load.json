@@ -81,6 +81,12 @@
             "Threat: Rootkit",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Resources: Osquery",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -124,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 319
+        "version": 320
     },
-    "id": "2339f03c-f53f-40fa-834b-40c5983fc41f_319",
+    "id": "2339f03c-f53f-40fa-834b-40c5983fc41f_320",
     "type": "security-rule"
 }

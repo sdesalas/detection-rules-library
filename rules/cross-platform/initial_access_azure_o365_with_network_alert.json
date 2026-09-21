@@ -33,14 +33,21 @@
             "Domain: SaaS",
             "Data Source: Azure",
             "Data Source: Entra ID",
-            "Data Source: Entra ID Sign-in Logs",
+            "Data Source: Entra ID Sign-In Logs",
             "Data Source: Microsoft 365",
             "Data Source: Microsoft 365 Audit Logs",
             "Use Case: Identity and Access Audit",
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
             "Resources: Investigation Guide",
-            "Rule Type: Higher-Order Rule"
+            "Rule Type: Higher-Order Rule",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Entra ID",
+            "Domain: Identity",
+            "Platform: Microsoft 365",
+            "Domain: Email"
         ],
         "threat": [
             {
@@ -61,8 +68,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 8
+        "version": 9
     },
-    "id": "f0cc239b-67fa-46fc-89d4-f861753a40f5_8",
+    "id": "f0cc239b-67fa-46fc-89d4-f861753a40f5_9",
     "type": "security-rule"
 }

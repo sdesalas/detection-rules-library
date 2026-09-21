@@ -105,7 +105,9 @@
             "Tactic: Lateral Movement",
             "Tactic: Execution",
             "Data Source: PowerShell Logs",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -160,8 +162,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 213
+        "version": 214
     },
-    "id": "0abf0c5b-62dd-48d2-ac4e-6b43fe3a6e83_213",
+    "id": "0abf0c5b-62dd-48d2-ac4e-6b43fe3a6e83_214",
     "type": "security-rule"
 }

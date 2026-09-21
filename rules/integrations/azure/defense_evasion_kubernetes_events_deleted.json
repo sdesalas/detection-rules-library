@@ -53,6 +53,13 @@
             "Data Source: Azure",
             "Use Case: Log Auditing",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Azure",
+            "Platform: Kubernetes",
+            "Data Source: Azure Activity Logs",
+            "Domain: Containers",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -81,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 111
     },
-    "id": "8b64d36a-1307-4b2e-a77b-a0027e4d27c8_110",
+    "id": "8b64d36a-1307-4b2e-a77b-a0027e4d27c8_111",
     "type": "security-rule"
 }

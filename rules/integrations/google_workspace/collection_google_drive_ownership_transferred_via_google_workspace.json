@@ -69,9 +69,15 @@
         "tags": [
             "Domain: Cloud",
             "Data Source: Google Workspace",
+            "Data Source: Google Workspace Audit Logs",
             "Tactic: Collection",
             "Tactic: Exfiltration",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Google Workspace",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -114,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 112
+        "version": 113
     },
-    "id": "07b5f85a-240f-11ed-b3d9-f661ea17fbce_112",
+    "id": "07b5f85a-240f-11ed-b3d9-f661ea17fbce_113",
     "type": "security-rule"
 }

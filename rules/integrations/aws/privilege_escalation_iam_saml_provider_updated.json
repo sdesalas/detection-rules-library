@@ -88,6 +88,12 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS IAM",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -138,8 +144,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 215
+        "version": 216
     },
-    "id": "979729e7-0c52-4c4c-b71e-88103304a79f_215",
+    "id": "979729e7-0c52-4c4c-b71e-88103304a79f_216",
     "type": "security-rule"
 }

@@ -90,6 +90,10 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Command and Control",
             "Tactic: Lateral Movement"
         ],
@@ -167,8 +171,8 @@
             }
         ],
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "63431796-f813-43af-820b-492ee2efec8e_10",
+    "id": "63431796-f813-43af-820b-492ee2efec8e_11",
     "type": "security-rule"
 }

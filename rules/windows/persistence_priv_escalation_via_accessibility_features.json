@@ -99,6 +99,10 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Data Source: Microsoft Defender XDR",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Privilege Escalation"
         ],
         "threat": [
@@ -149,8 +153,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 219
+        "version": 220
     },
-    "id": "7405ddf1-6c8e-41ce-818f-48bea6bcaed8_219",
+    "id": "7405ddf1-6c8e-41ce-818f-48bea6bcaed8_220",
     "type": "security-rule"
 }

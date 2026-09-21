@@ -102,6 +102,10 @@
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
             "Data Source: Microsoft Defender XDR",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment",
             "Tactic: Execution",
             "Tactic: Stealth"
@@ -182,8 +186,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 217
+        "version": 218
     },
-    "id": "a9b05c3b-b304-4bf9-970d-acdfaef2944c_217",
+    "id": "a9b05c3b-b304-4bf9-970d-acdfaef2944c_218",
     "type": "security-rule"
 }

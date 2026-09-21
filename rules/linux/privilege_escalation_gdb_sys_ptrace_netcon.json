@@ -80,6 +80,10 @@
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -171,8 +175,8 @@
             }
         ],
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "28bc620d-b2f7-4132-b372-f77953881d05_8",
+    "id": "28bc620d-b2f7-4132-b372-f77953881d05_9",
     "type": "security-rule"
 }

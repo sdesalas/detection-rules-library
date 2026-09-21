@@ -53,6 +53,12 @@
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Script-Based Execution",
+            "Rule Type: ES|QL",
+            "Platform: macOS",
             "Tactic: Execution",
             "Tactic: Exfiltration"
         ],
@@ -128,8 +134,8 @@
             }
         ],
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "05f2b649-dc03-4e9a-8c4e-6762469e8249_5",
+    "id": "05f2b649-dc03-4e9a-8c4e-6762469e8249_6",
     "type": "security-rule"
 }

@@ -70,7 +70,14 @@
             "Tactic: Command and Control",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Remote Management Tool Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -96,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 218
+        "version": 219
     },
-    "id": "b25a7df2-120a-4db2-bd3f-3e4b86b24bee_218",
+    "id": "b25a7df2-120a-4db2-bd3f-3e4b86b24bee_219",
     "type": "security-rule"
 }

@@ -55,7 +55,14 @@
             "Tactic: Privilege Escalation",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerable Driver",
+            "Rule Type: New Terms",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -110,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 13
+        "version": 14
     },
-    "id": "df0fd41e-5590-4965-ad5e-cd079ec22fa9_13",
+    "id": "df0fd41e-5590-4965-ad5e-cd079ec22fa9_14",
     "type": "security-rule"
 }

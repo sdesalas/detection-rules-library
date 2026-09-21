@@ -76,7 +76,11 @@
             "Tactic: Credential Access",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -119,8 +123,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 213
+        "version": 214
     },
-    "id": "9a3a3689-8ed1-4cdb-83fb-9506db54c61f_213",
+    "id": "9a3a3689-8ed1-4cdb-83fb-9506db54c61f_214",
     "type": "security-rule"
 }

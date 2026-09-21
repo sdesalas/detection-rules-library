@@ -107,6 +107,12 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution",
             "Tactic: Privilege Escalation",
             "Tactic: Stealth"
@@ -196,8 +202,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 321
+        "version": 322
     },
-    "id": "265db8f5-fc73-4d0d-b434-6483b56372e2_321",
+    "id": "265db8f5-fc73-4d0d-b434-6483b56372e2_322",
     "type": "security-rule"
 }

@@ -65,7 +65,12 @@
             "Threat: Cobalt Strike",
             "Use Case: Threat Detection",
             "Domain: Endpoint",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Domain: Network",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -98,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 111
     },
-    "id": "e7075e8d-a966-458e-a183-85cd331af255_110",
+    "id": "e7075e8d-a966-458e-a183-85cd331af255_111",
     "type": "security-rule"
 }

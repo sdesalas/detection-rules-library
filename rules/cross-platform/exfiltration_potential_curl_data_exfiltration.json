@@ -120,7 +120,15 @@
             "Data Source: SentinelOne",
             "Data Source: Sysmon",
             "Data Source: Auditd Manager",
-            "Data Source: Windows Security Event Logs"
+            "Data Source: Windows Security Event Logs",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Download Tool Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -153,8 +161,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "be70614d-4295-473c-a953-582aef41c865_10",
+    "id": "be70614d-4295-473c-a953-582aef41c865_11",
     "type": "security-rule"
 }

@@ -82,7 +82,12 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Domain: Endpoint",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Domain: Network",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -122,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 108
+        "version": 109
     },
-    "id": "2e580225-2a58-48ef-938b-572933be06fe_108",
+    "id": "2e580225-2a58-48ef-938b-572933be06fe_109",
     "type": "security-rule"
 }

@@ -84,6 +84,11 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Execution"
         ],
         "threat": [
@@ -146,8 +151,8 @@
             }
         ],
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "96f29282-ffcc-4ce7-834b-b17aee905568_5",
+    "id": "96f29282-ffcc-4ce7-834b-b17aee905568_6",
     "type": "security-rule"
 }

@@ -86,6 +86,12 @@
             "Resources: Investigation Guide",
             "Use Case: Identity and Access Audit",
             "Tactic: Privilege Escalation",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS STS",
             "Tactic: Persistence",
             "Tactic: Stealth"
         ],
@@ -171,8 +177,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 10
+        "version": 11
     },
-    "id": "962a71ae-aac9-11ef-9348-f661ea17fbce_10",
+    "id": "962a71ae-aac9-11ef-9348-f661ea17fbce_11",
     "type": "security-rule"
 }

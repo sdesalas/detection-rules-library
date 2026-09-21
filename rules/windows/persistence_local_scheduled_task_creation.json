@@ -107,7 +107,12 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -134,8 +139,8 @@
             }
         ],
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "afcce5ad-65de-4ed2-8516-5e093d3ac99a_214",
+    "id": "afcce5ad-65de-4ed2-8516-5e093d3ac99a_215",
     "type": "security-rule"
 }

@@ -81,7 +81,14 @@
             "Data Source: Auditd Manager",
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Vuln: CVE-2019-14287"
         ],
         "threat": [
             {
@@ -114,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "8af5b42f-8d74-48c8-a8d0-6d14b4197288_110",
+    "id": "8af5b42f-8d74-48c8-a8d0-6d14b4197288_111",
     "type": "security-rule"
 }

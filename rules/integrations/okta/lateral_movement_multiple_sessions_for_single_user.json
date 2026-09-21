@@ -67,7 +67,14 @@
             "Use Case: Identity and Access Audit",
             "Data Source: Okta",
             "Tactic: Lateral Movement",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Threat: AiTM Phishing",
+            "Rule Type: Threshold",
+            "Platform: Okta",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -107,8 +114,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 211
+        "version": 212
     },
-    "id": "621e92b6-7e54-11ee-bdc0-f661ea17fbcd_211",
+    "id": "621e92b6-7e54-11ee-bdc0-f661ea17fbcd_212",
     "type": "security-rule"
 }

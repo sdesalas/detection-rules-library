@@ -34,6 +34,7 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Resources: Investigation Guide",
+            "Platform: Azure",
             "Tactic: Discovery",
             "Tactic: Lateral Movement",
             "Tactic: Privilege Escalation"
@@ -77,8 +78,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 102
+        "version": 103
     },
-    "id": "1eb74889-18c5-4f78-8010-d8aceb7a9ef4_102",
+    "id": "1eb74889-18c5-4f78-8010-d8aceb7a9ef4_103",
     "type": "security-rule"
 }

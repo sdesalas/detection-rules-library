@@ -78,12 +78,15 @@
             "Data Source: IBM QRadar",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
-            "Promotion: External Alerts"
+            "Promotion: External Alerts",
+            "Rule Type: Custom Query (KQL)",
+            "Rule Type: Higher-Order",
+            "Domain: Network"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "d6702168-2be6-4d7d-a549-9bff67733df3_1",
+    "id": "d6702168-2be6-4d7d-a549-9bff67733df3_2",
     "type": "security-rule"
 }

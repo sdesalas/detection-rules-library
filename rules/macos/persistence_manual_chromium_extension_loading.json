@@ -61,6 +61,12 @@
             "Tactic: Credential Access",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Browser Extension Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: macOS",
             "Tactic: Collection"
         ],
         "threat": [
@@ -119,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "f1f3070e-045c-4e03-ae58-d11d43d2ee51_3",
+    "id": "f1f3070e-045c-4e03-ae58-d11d43d2ee51_4",
     "type": "security-rule"
 }

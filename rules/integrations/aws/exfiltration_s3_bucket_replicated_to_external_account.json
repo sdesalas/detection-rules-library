@@ -79,12 +79,16 @@
         "severity": "high",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS S3",
             "Tactic: Exfiltration",
             "Rule Type: Event Correlation (EQL)",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal"
         ],
         "threat": [
             {
@@ -117,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "d488f026-7907-4f56-ad51-742feb3db01c_10",
+    "id": "d488f026-7907-4f56-ad51-742feb3db01c_11",
     "type": "security-rule"
 }

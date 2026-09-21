@@ -46,7 +46,13 @@
             "Domain: Network",
             "Domain: Identity",
             "Data Source: Fortinet",
-            "Data Source: Fortinet FortiGate"
+            "Data Source: Fortinet FortiGate",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: ES|QL",
+            "Vuln: CVE-2026-24858"
         ],
         "threat": [
             {
@@ -101,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "618a219d-a363-4ab1-ba30-870d7c22facd_4",
+    "id": "618a219d-a363-4ab1-ba30-870d7c22facd_5",
     "type": "security-rule"
 }

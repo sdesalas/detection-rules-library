@@ -93,6 +93,15 @@
             "Resources: Investigation Guide",
             "Domain: LLM",
             "Mitre Atlas: T0053",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Unauthorized AI Usage",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Domain: GenAI",
             "Tactic: Resource Development",
             "Tactic: Stealth"
         ],
@@ -144,8 +153,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "b2c3d4e5-f6a7-8901-bcde-f123456789ab_4",
+    "id": "b2c3d4e5-f6a7-8901-bcde-f123456789ab_5",
     "type": "security-rule"
 }

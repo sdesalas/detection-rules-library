@@ -54,13 +54,16 @@
         "tags": [
             "Domain: Endpoint",
             "OS: Linux",
-            "OS: macOS",
             "Use Case: Threat Detection",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
             "Data Source: Auditd Manager",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -89,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 109
+        "version": 110
     },
-    "id": "5124e65f-df97-4471-8dcb-8e3953b3ea97_109",
+    "id": "5124e65f-df97-4471-8dcb-8e3953b3ea97_110",
     "type": "security-rule"
 }

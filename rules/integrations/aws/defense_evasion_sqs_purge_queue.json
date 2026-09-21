@@ -79,6 +79,12 @@
             "Use Case: Threat Detection",
             "Use Case: Log Auditing",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS SQS",
             "Tactic: Defense Impairment",
             "Tactic: Impact"
         ],
@@ -123,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 9
+        "version": 10
     },
-    "id": "bab88bb8-cdd9-11ef-bd9a-f661ea17fbcd_9",
+    "id": "bab88bb8-cdd9-11ef-bd9a-f661ea17fbcd_10",
     "type": "security-rule"
 }

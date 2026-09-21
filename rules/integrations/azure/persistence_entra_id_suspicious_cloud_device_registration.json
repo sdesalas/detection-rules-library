@@ -80,6 +80,10 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Entra ID",
             "Tactic: Privilege Escalation"
         ],
         "threat": [
@@ -130,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "90efea04-5675-11f0-8f80-f661ea17fbcd_6",
+    "id": "90efea04-5675-11f0-8f80-f661ea17fbcd_7",
     "type": "security-rule"
 }

@@ -81,6 +81,11 @@
             "Data Source: SentinelOne",
             "Data Source: Auditd Manager",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: Linux",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -136,8 +141,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "9dc1d59c-fc5f-4a73-8ca6-1473eabdff2a_2",
+    "id": "9dc1d59c-fc5f-4a73-8ca6-1473eabdff2a_3",
     "type": "security-rule"
 }

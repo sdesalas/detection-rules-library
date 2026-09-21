@@ -38,6 +38,7 @@
             "Rule Type: Machine Learning",
             "Tactic: Initial Access",
             "Resources: Investigation Guide",
+            "Platform: Windows",
             "Tactic: Lateral Movement"
         ],
         "threat": [
@@ -80,8 +81,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 312
+        "version": 313
     },
-    "id": "1781d055-5c66-4adf-9e93-fc0fa69550c9_312",
+    "id": "1781d055-5c66-4adf-9e93-fc0fa69550c9_313",
     "type": "security-rule"
 }

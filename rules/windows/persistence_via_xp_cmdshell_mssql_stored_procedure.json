@@ -119,6 +119,11 @@
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: Windows",
             "Tactic: Execution"
         ],
         "threat": [
@@ -169,8 +174,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 320
+        "version": 321
     },
-    "id": "4ed493fc-d637-4a36-80ff-ac84937e5461_320",
+    "id": "4ed493fc-d637-4a36-80ff-ac84937e5461_321",
     "type": "security-rule"
 }

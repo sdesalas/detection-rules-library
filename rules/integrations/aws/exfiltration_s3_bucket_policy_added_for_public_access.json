@@ -85,7 +85,13 @@
             "Use Case: Threat Detection",
             "Tactic: Exfiltration",
             "Tactic: Collection",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS S3"
         ],
         "threat": [
             {
@@ -121,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "618bb351-00f0-467b-8956-8cace8b81f07_3",
+    "id": "618bb351-00f0-467b-8956-8cace8b81f07_4",
     "type": "security-rule"
 }

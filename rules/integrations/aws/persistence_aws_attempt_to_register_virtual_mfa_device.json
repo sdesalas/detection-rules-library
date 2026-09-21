@@ -86,7 +86,12 @@
             "Data Source: AWS IAM",
             "Tactic: Persistence",
             "Use Case: Identity and Access Audit",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: AWS",
+            "Service: AWS IAM"
         ],
         "threat": [
             {
@@ -138,8 +143,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 206
+        "version": 207
     },
-    "id": "e4feea34-3b62-4c83-b77f-018fbef48c00_206",
+    "id": "e4feea34-3b62-4c83-b77f-018fbef48c00_207",
     "type": "security-rule"
 }

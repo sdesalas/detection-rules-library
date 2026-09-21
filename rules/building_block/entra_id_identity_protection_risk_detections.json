@@ -41,12 +41,15 @@
             "Data Source: Microsoft Entra ID Protection Logs",
             "Use Case: Identity and Access Audit",
             "Use Case: Threat Detection",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID",
+            "Domain: Identity"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "da0d4bae-33ee-11f0-a59f-f661ea17fbcd_2",
+    "id": "da0d4bae-33ee-11f0-a59f-f661ea17fbcd_3",
     "type": "security-rule"
 }

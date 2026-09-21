@@ -103,6 +103,8 @@
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -131,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 106
+        "version": 107
     },
-    "id": "708c9d92-22a3-4fe0-b6b9-1f861c55502d_106",
+    "id": "708c9d92-22a3-4fe0-b6b9-1f861c55502d_107",
     "type": "security-rule"
 }

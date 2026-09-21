@@ -58,7 +58,13 @@
             "Data Source: Google Cloud Platform",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: GCP",
+            "Domain: Containers",
+            "Platform: Kubernetes"
         ],
         "threat": [
             {
@@ -91,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "2302fb59-5201-46ec-b433-6044adb37b0b_1",
+    "id": "2302fb59-5201-46ec-b433-6044adb37b0b_2",
     "type": "security-rule"
 }

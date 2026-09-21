@@ -68,6 +68,8 @@
             "Data Source: Sysmon",
             "Data Source: Elastic Endgame",
             "Data Source: Windows Security Event Logs",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -96,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "bd3d058d-5405-4cee-b890-337f09366ba2_110",
+    "id": "bd3d058d-5405-4cee-b890-337f09366ba2_111",
     "type": "security-rule"
 }

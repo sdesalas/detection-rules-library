@@ -47,7 +47,13 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Rule Type: Higher-Order Rule",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Script-Based Execution",
+            "Rule Type: ES|QL",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -75,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 6
+        "version": 7
     },
-    "id": "f770ce79-05fd-4d74-9866-1c5d66c9b34b_6",
+    "id": "f770ce79-05fd-4d74-9866-1c5d66c9b34b_7",
     "type": "security-rule"
 }

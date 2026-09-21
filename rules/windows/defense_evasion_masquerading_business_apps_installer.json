@@ -78,6 +78,11 @@
             "Tactic: Initial Access",
             "Tactic: Execution",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Threat: Masquerading",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -148,8 +153,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 12
+        "version": 13
     },
-    "id": "feafdc51-c575-4ed2-89dd-8e20badc2d6c_12",
+    "id": "feafdc51-c575-4ed2-89dd-8e20badc2d6c_13",
     "type": "security-rule"
 }

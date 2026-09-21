@@ -117,10 +117,10 @@
             "Platform: Entra ID",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
-            "Rule Type: ESQL",
+            "Rule Type: ES|QL",
             "Data Source: Azure",
             "Data Source: Microsoft Entra ID",
-            "Data Source: Microsoft Entra ID Sign-in Logs",
+            "Data Source: Microsoft Entra ID Sign-In Logs",
             "Data Source: Microsoft Entra ID Audit Logs",
             "Resources: Investigation Guide",
             "Tactic: Lateral Movement"
@@ -166,8 +166,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "62848597-595c-4cc3-8d24-6c47a5fee9a9_2",
+    "id": "62848597-595c-4cc3-8d24-6c47a5fee9a9_3",
     "type": "security-rule"
 }

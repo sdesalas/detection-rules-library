@@ -36,6 +36,9 @@
             "Rule Type: Machine Learning",
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
+            "Domain: Endpoint",
+            "Platform: Windows",
+            "OS: Windows",
             "Tactic: Initial Access"
         ],
         "threat": [
@@ -71,8 +74,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 106
+        "version": 107
     },
-    "id": "d2703b82-f92c-4489-a4a7-62aa29a62542_106",
+    "id": "d2703b82-f92c-4489-a4a7-62aa29a62542_107",
     "type": "security-rule"
 }

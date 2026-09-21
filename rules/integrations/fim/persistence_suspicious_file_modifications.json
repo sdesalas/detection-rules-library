@@ -68,6 +68,10 @@
             "Tactic: Privilege Escalation",
             "Data Source: File Integrity Monitoring",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -282,8 +286,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 13
+        "version": 14
     },
-    "id": "192657ba-ab0e-4901-89a2-911d611eee98_13",
+    "id": "192657ba-ab0e-4901-89a2-911d611eee98_14",
     "type": "security-rule"
 }

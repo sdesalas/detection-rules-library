@@ -112,6 +112,15 @@
             "Data Source: Crowdstrike",
             "Data Source: Auditd Manager",
             "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Supply Chain",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -209,8 +218,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "a640ef5b-e1da-4b17-8391-468fdbd1b517_4",
+    "id": "a640ef5b-e1da-4b17-8391-468fdbd1b517_5",
     "type": "security-rule"
 }

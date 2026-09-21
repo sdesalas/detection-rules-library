@@ -81,6 +81,12 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -185,8 +191,8 @@
             }
         ],
         "type": "eql",
-        "version": 213
+        "version": 214
     },
-    "id": "e7125cea-9fe1-42a5-9a05-b0792cf86f5a_213",
+    "id": "e7125cea-9fe1-42a5-9a05-b0792cf86f5a_214",
     "type": "security-rule"
 }

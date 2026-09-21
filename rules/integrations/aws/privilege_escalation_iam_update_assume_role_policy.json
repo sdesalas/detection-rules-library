@@ -88,6 +88,8 @@
             "Tactic: Privilege Escalation",
             "Rule Type: New Terms",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
             "Tactic: Persistence"
         ],
         "threat": [
@@ -150,8 +152,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 418
+        "version": 419
     },
-    "id": "a60326d7-dca7-4fb7-93eb-1ca03a1febbd_418",
+    "id": "a60326d7-dca7-4fb7-93eb-1ca03a1febbd_419",
     "type": "security-rule"
 }

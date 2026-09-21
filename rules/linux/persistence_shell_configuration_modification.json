@@ -79,6 +79,10 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Privilege Escalation"
         ],
         "threat": [
@@ -129,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 12
+        "version": 13
     },
-    "id": "28f6f34b-8e16-487a-b5fd-9d22eb903db8_12",
+    "id": "28f6f34b-8e16-487a-b5fd-9d22eb903db8_13",
     "type": "security-rule"
 }

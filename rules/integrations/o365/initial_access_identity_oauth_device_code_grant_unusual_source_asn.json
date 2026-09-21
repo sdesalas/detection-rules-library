@@ -80,6 +80,13 @@
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
             "Tactic: Initial Access",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Device Code Phishing",
+            "Rule Type: New Terms",
+            "Platform: Microsoft 365",
+            "Domain: Email",
             "Tactic: Lateral Movement"
         ],
         "threat": [
@@ -142,8 +149,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "ed2461e1-d6bf-4550-87b9-c008d6ac15f4_2",
+    "id": "ed2461e1-d6bf-4550-87b9-c008d6ac15f4_3",
     "type": "security-rule"
 }

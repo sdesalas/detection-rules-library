@@ -92,6 +92,12 @@
             "Data Source: SentinelOne",
             "Data Source: Elastic Endgame",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Download Tool Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Collection"
         ],
         "threat": [
@@ -128,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "8d8c0b55-ef27-4c20-959f-fa8dd3ac25e6_4",
+    "id": "8d8c0b55-ef27-4c20-959f-fa8dd3ac25e6_5",
     "type": "security-rule"
 }

@@ -77,6 +77,12 @@
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Download Tool Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: macOS",
             "Tactic: Execution"
         ],
         "threat": [
@@ -141,8 +147,8 @@
             }
         ],
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "afdca1e0-0f8a-4fcf-9e1e-95e09791e3cd_3",
+    "id": "afdca1e0-0f8a-4fcf-9e1e-95e09791e3cd_4",
     "type": "security-rule"
 }

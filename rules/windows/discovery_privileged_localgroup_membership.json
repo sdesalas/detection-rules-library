@@ -109,7 +109,14 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Resources: Investigation Guide",
-            "Data Source: Windows Security Event Logs"
+            "Data Source: Windows Security Event Logs",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Ransomware",
+            "Rule Type: New Terms",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -137,8 +144,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 421
+        "version": 422
     },
-    "id": "291a0de9-937a-4189-94c0-3e847c8b13e4_421",
+    "id": "291a0de9-937a-4189-94c0-3e847c8b13e4_422",
     "type": "security-rule"
 }

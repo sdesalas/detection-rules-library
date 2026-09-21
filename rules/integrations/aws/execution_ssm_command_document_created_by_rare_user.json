@@ -88,7 +88,13 @@
             "Data Source: AWS Systems Manager",
             "Resources: Investigation Guide",
             "Use Case: Threat Detection",
-            "Tactic: Execution"
+            "Tactic: Execution",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS SSM"
         ],
         "threat": [
             {
@@ -109,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "50a2bdea-9876-11ef-89db-f661ea17fbcd_7",
+    "id": "50a2bdea-9876-11ef-89db-f661ea17fbcd_8",
     "type": "security-rule"
 }

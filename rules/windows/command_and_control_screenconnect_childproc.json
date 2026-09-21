@@ -93,6 +93,13 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: Windows Security Event Logs",
             "Data Source: Crowdstrike",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Remote Management Tool Abuse",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution",
             "Tactic: Persistence",
             "Tactic: Stealth"
@@ -224,8 +231,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 317
+        "version": 318
     },
-    "id": "78de1aeb-5225-4067-b8cc-f4a1de8a8546_317",
+    "id": "78de1aeb-5225-4067-b8cc-f4a1de8a8546_318",
     "type": "security-rule"
 }

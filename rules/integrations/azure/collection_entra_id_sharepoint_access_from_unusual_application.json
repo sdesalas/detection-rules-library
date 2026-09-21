@@ -85,9 +85,15 @@
             "Tactic: Initial Access",
             "Data Source: Azure",
             "Data Source: Microsoft Entra ID",
-            "Data Source: Microsoft Entra ID Sign-in Logs",
+            "Data Source: Microsoft Entra ID Sign-In Logs",
             "Resources: Investigation Guide",
             "Rule Type: New Terms",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Platform: Entra ID",
+            "Platform: Azure",
+            "Service: Microsoft SharePoint",
+            "Service: Microsoft OneDrive",
             "Tactic: Persistence"
         ],
         "threat": [
@@ -165,8 +171,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "a3cc60d8-2701-11f0-accf-f661ea17fbcd_8",
+    "id": "a3cc60d8-2701-11f0-accf-f661ea17fbcd_9",
     "type": "security-rule"
 }

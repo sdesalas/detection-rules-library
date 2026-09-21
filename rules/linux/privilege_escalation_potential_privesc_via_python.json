@@ -98,7 +98,12 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -141,8 +146,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "792411c3-361a-4ad6-8a38-7f7f6322ada1_1",
+    "id": "792411c3-361a-4ad6-8a38-7f7f6322ada1_2",
     "type": "security-rule"
 }

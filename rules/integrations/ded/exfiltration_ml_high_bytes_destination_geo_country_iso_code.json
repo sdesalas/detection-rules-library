@@ -41,7 +41,9 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Exfiltration",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Domain: Network",
+            "Domain: Endpoint"
         ],
         "threat": [
             {
@@ -61,8 +63,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 108
+        "version": 109
     },
-    "id": "e1db8899-97c1-4851-8993-3a3265353601_108",
+    "id": "e1db8899-97c1-4851-8993-3a3265353601_109",
     "type": "security-rule"
 }

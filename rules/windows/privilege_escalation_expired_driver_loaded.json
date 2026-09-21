@@ -50,6 +50,12 @@
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerable Driver",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment",
             "Tactic: Stealth"
         ],
@@ -116,8 +122,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 11
+        "version": 12
     },
-    "id": "d12bac54-ab2a-4159-933f-d7bcefa7b61d_11",
+    "id": "d12bac54-ab2a-4159-933f-d7bcefa7b61d_12",
     "type": "security-rule"
 }

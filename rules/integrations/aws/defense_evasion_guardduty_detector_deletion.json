@@ -75,11 +75,15 @@
         "severity": "high",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS GuardDuty",
             "Rule Type: Custom Query (KQL)",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -101,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 214
+        "version": 215
     },
-    "id": "523116c0-d89d-4d7c-82c2-39e6845a78ef_214",
+    "id": "523116c0-d89d-4d7c-82c2-39e6845a78ef_215",
     "type": "security-rule"
 }

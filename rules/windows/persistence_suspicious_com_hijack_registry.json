@@ -81,6 +81,11 @@
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -151,8 +156,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 122
+        "version": 123
     },
-    "id": "16a52c14-7883-47af-8745-9357803f0d4c_122",
+    "id": "16a52c14-7883-47af-8745-9357803f0d4c_123",
     "type": "security-rule"
 }

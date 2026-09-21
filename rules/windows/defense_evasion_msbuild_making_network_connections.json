@@ -80,6 +80,11 @@
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery",
             "Tactic: Command and Control",
             "Tactic: Stealth"
         ],
@@ -123,8 +128,8 @@
             }
         ],
         "type": "eql",
-        "version": 217
+        "version": 218
     },
-    "id": "0e79980b-4250-4a50-a509-69294c14e84b_217",
+    "id": "0e79980b-4250-4a50-a509-69294c14e84b_218",
     "type": "security-rule"
 }

@@ -70,6 +70,13 @@
             "Data Source: Elastic Endgame",
             "Data Source: Sysmon",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Threat: Script-Based Execution",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -114,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 215
+        "version": 216
     },
-    "id": "4ed678a9-3a4f-41fb-9fea-f85a6e0a0dff_215",
+    "id": "4ed678a9-3a4f-41fb-9fea-f85a6e0a0dff_216",
     "type": "security-rule"
 }

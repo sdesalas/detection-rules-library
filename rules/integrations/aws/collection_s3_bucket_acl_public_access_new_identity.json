@@ -93,7 +93,13 @@
             "Data Source: Amazon S3",
             "Use Case: Threat Detection",
             "Tactic: Collection",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS S3"
         ],
         "threat": [
             {
@@ -114,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "3e7c1b84-9f52-4d63-8a17-6b0e4c2f9d31_1",
+    "id": "3e7c1b84-9f52-4d63-8a17-6b0e4c2f9d31_2",
     "type": "security-rule"
 }

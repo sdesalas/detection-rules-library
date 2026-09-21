@@ -79,6 +79,11 @@
             "Resources: Investigation Guide",
             "Tactic: Impact",
             "Tactic: Persistence",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Service: AWS IAM",
             "Tactic: Credential Access",
             "Tactic: Defense Impairment"
         ],
@@ -167,8 +172,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 218
+        "version": 219
     },
-    "id": "d8fc1cca-93ed-43c1-bbb6-c0dd3eff2958_218",
+    "id": "d8fc1cca-93ed-43c1-bbb6-c0dd3eff2958_219",
     "type": "security-rule"
 }

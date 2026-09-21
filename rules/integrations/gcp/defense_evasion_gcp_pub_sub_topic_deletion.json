@@ -53,6 +53,10 @@
             "Data Source: Google Cloud Platform",
             "Use Case: Log Auditing",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: GCP",
             "Tactic: Defense Impairment",
             "Tactic: Impact"
         ],
@@ -90,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 111
     },
-    "id": "3202e172-01b1-4738-a932-d024c514ba72_110",
+    "id": "3202e172-01b1-4738-a932-d024c514ba72_111",
     "type": "security-rule"
 }

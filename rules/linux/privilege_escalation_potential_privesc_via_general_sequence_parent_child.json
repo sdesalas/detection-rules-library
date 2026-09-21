@@ -85,7 +85,12 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -112,8 +117,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "9679c838-ec24-4e3a-bf0b-68a9878828c3_1",
+    "id": "9679c838-ec24-4e3a-bf0b-68a9878828c3_2",
     "type": "security-rule"
 }

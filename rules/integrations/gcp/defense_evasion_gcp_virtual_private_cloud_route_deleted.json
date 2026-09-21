@@ -54,6 +54,10 @@
             "Data Source: Google Cloud Platform",
             "Use Case: Configuration Audit",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: GCP",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -94,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 111
     },
-    "id": "a17bcc91-297b-459b-b5ce-bc7460d8f82a_110",
+    "id": "a17bcc91-297b-459b-b5ce-bc7460d8f82a_111",
     "type": "security-rule"
 }

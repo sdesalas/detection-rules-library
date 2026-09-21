@@ -51,6 +51,11 @@
             "Data Source: Okta",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Okta",
+            "Domain: Identity",
             "Tactic: Privilege Escalation"
         ],
         "threat": [
@@ -94,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 415
+        "version": 416
     },
-    "id": "b8075894-0b62-46e5-977c-31275da34419_415",
+    "id": "b8075894-0b62-46e5-977c-31275da34419_416",
     "type": "security-rule"
 }

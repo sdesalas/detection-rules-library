@@ -92,6 +92,12 @@
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Supply Chain",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment",
             "Tactic: Persistence"
         ],
@@ -156,8 +162,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 318
+        "version": 319
     },
-    "id": "b9960fef-82c6-4816-befa-44745030e917_318",
+    "id": "b9960fef-82c6-4816-befa-44745030e917_319",
     "type": "security-rule"
 }

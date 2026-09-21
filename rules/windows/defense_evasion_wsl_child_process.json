@@ -108,6 +108,11 @@
             "Data Source: Crowdstrike",
             "Resources: Investigation Guide",
             "Data Source: Sysmon",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -152,8 +157,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 218
+        "version": 219
     },
-    "id": "db7dbad5-08d2-4d25-b9b1-d3a1e4a15efd_218",
+    "id": "db7dbad5-08d2-4d25-b9b1-d3a1e4a15efd_219",
     "type": "security-rule"
 }

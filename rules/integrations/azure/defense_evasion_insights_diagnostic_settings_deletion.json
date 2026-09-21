@@ -71,6 +71,10 @@
             "Data Source: Azure Activity Logs",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Azure",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -99,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 110
+        "version": 111
     },
-    "id": "5370d4cd-2bb3-4d71-abf5-1e1d0ff5a2de_110",
+    "id": "5370d4cd-2bb3-4d71-abf5-1e1d0ff5a2de_111",
     "type": "security-rule"
 }

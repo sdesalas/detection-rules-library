@@ -80,6 +80,12 @@
             "Tactic: Persistence",
             "Tactic: Resource Development",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS Route 53",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -138,8 +144,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 214
+        "version": 215
     },
-    "id": "12051077-0124-4394-9522-8f4f4db1d674_214",
+    "id": "12051077-0124-4394-9522-8f4f4db1d674_215",
     "type": "security-rule"
 }

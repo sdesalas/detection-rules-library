@@ -50,7 +50,11 @@
             "Tactic: Exfiltration",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -93,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 12
+        "version": 13
     },
-    "id": "8eeeda11-dca6-4c3e-910f-7089db412d1c_12",
+    "id": "8eeeda11-dca6-4c3e-910f-7089db412d1c_13",
     "type": "security-rule"
 }

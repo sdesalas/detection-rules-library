@@ -93,6 +93,12 @@
             "Tactic: Initial Access",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Living off the Land",
+            "Threat: Installer Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Command and Control",
             "Tactic: Stealth"
         ],
@@ -158,8 +164,8 @@
             }
         ],
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "3e441bdb-596c-44fd-8628-2cfdf4516ada_9",
+    "id": "3e441bdb-596c-44fd-8628-2cfdf4516ada_10",
     "type": "security-rule"
 }

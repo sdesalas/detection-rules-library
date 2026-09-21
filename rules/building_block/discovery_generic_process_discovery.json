@@ -92,7 +92,9 @@
             "Tactic: Discovery",
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
-            "Data Source: Windows Security Event Logs"
+            "Data Source: Windows Security Event Logs",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -113,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "4982ac3e-d0ee-4818-b95d-d9522d689259_111",
+    "id": "4982ac3e-d0ee-4818-b95d-d9522d689259_112",
     "type": "security-rule"
 }

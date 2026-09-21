@@ -40,13 +40,19 @@
         "severity": "medium",
         "tags": [
             "Data Source: Elastic Defend for Containers",
-            "Domain: Container",
-            "Resources: Investigation Guide"
+            "Domain: Containers",
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Custom Query (KQL)",
+            "OS: Linux",
+            "Platform: Linux"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 107
     },
-    "id": "4b4e9c99-27ea-4621-95c8-82341bc6e512_106",
+    "id": "4b4e9c99-27ea-4621-95c8-82341bc6e512_107",
     "type": "security-rule"
 }

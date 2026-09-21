@@ -39,12 +39,19 @@
             "Use Case: Vulnerability",
             "Rule Type: Higher-Order Rule",
             "Resources: Investigation Guide",
-            "Data Source: Wiz"
+            "Data Source: Wiz",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: ES|QL",
+            "Platform: Wiz",
+            "Domain: Cloud"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "6fcb4fe4-ac74-449d-855b-2bbd5c51c476_3",
+    "id": "6fcb4fe4-ac74-449d-855b-2bbd5c51c476_4",
     "type": "security-rule"
 }

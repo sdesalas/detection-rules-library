@@ -63,6 +63,8 @@
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Rule Type: BBR",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment",
             "Tactic: Impact",
             "Tactic: Persistence"
@@ -121,8 +123,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "75dcb176-a575-4e33-a020-4a52aaa1b593_7",
+    "id": "75dcb176-a575-4e33-a020-4a52aaa1b593_8",
     "type": "security-rule"
 }

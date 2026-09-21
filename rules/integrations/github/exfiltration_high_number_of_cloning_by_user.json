@@ -30,7 +30,13 @@
             "Use Case: Threat Detection",
             "Tactic: Exfiltration",
             "Data Source: Github",
+            "Data Source: GitHub Audit Logs",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: ES|QL",
+            "Platform: GitHub",
+            "Domain: SaaS",
             "Tactic: Collection"
         ],
         "threat": [
@@ -86,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "19f3674c-f4a1-43bb-a89c-e4c6212275e0_5",
+    "id": "19f3674c-f4a1-43bb-a89c-e4c6212275e0_6",
     "type": "security-rule"
 }

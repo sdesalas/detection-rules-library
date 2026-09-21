@@ -414,12 +414,20 @@
             "Domain: Identity",
             "Data Source: Azure",
             "Data Source: Entra ID",
+            "Data Source: Entra ID Audit Logs",
             "Data Source: Entra Audit Logs",
             "Use Case: Identity and Access Audit",
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: ES|QL",
+            "Platform: Entra ID",
+            "Vuln: CVE-2025-55241",
             "Tactic: Lateral Movement"
         ],
         "threat": [
@@ -485,8 +493,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 7
+        "version": 8
     },
-    "id": "8e7a4f2c-9b3d-4e5a-a1b6-c2d8f7e9b3a5_7",
+    "id": "8e7a4f2c-9b3d-4e5a-a1b6-c2d8f7e9b3a5_8",
     "type": "security-rule"
 }

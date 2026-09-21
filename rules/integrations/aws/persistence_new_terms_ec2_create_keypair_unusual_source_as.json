@@ -90,7 +90,13 @@
             "Tactic: Persistence",
             "Tactic: Credential Access",
             "Tactic: Lateral Movement",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS EC2"
         ],
         "threat": [
             {
@@ -155,8 +161,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "c8e4f1a2-9b3d-4c5e-a6f7-8b9c0d1e2f3a_2",
+    "id": "c8e4f1a2-9b3d-4c5e-a6f7-8b9c0d1e2f3a_3",
     "type": "security-rule"
 }

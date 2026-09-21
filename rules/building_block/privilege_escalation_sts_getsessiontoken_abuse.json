@@ -81,6 +81,10 @@
             "Tactic: Lateral Movement",
             "Resources: Investigation Guide",
             "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS STS",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -146,8 +150,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 212
+        "version": 213
     },
-    "id": "b45ab1d2-712f-4f01-a751-df3826969807_212",
+    "id": "b45ab1d2-712f-4f01-a751-df3826969807_213",
     "type": "security-rule"
 }

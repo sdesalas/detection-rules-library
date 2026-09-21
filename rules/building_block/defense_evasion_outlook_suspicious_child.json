@@ -66,6 +66,8 @@
             "Tactic: Persistence",
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -135,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "6cf17149-a8e3-44ec-9ec9-fdc8535547a1_6",
+    "id": "6cf17149-a8e3-44ec-9ec9-fdc8535547a1_7",
     "type": "security-rule"
 }

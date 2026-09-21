@@ -145,6 +145,12 @@
             "Tactic: Persistence",
             "Tactic: Credential Access",
             "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: AiTM Phishing",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Entra ID",
             "Tactic: Lateral Movement"
         ],
         "threat": [
@@ -222,8 +228,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "d2c02b2b-bd01-4d4a-a17a-8df8f357b015_2",
+    "id": "d2c02b2b-bd01-4d4a-a17a-8df8f357b015_3",
     "type": "security-rule"
 }

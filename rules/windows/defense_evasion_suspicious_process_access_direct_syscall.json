@@ -81,6 +81,11 @@
             "Tactic: Execution",
             "Resources: Investigation Guide",
             "Data Source: Sysmon",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -117,8 +122,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 317
+        "version": 318
     },
-    "id": "2dd480be-1263-4d9c-8672-172928f6789a_317",
+    "id": "2dd480be-1263-4d9c-8672-172928f6789a_318",
     "type": "security-rule"
 }

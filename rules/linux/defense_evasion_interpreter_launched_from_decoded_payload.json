@@ -98,6 +98,12 @@
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
             "Data Source: Crowdstrike",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Encoding-Based Obfuscation",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -168,8 +174,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "5bdad1d5-5001-4a13-ae99-fa8619500f1a_9",
+    "id": "5bdad1d5-5001-4a13-ae99-fa8619500f1a_10",
     "type": "security-rule"
 }

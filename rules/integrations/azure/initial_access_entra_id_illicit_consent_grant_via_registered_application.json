@@ -52,7 +52,13 @@
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
             "Tactic: Initial Access",
-            "Tactic: Credential Access"
+            "Tactic: Credential Access",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: OAuth App Consent",
+            "Rule Type: ES|QL",
+            "Platform: Entra ID"
         ],
         "threat": [
             {
@@ -99,8 +105,8 @@
             }
         ],
         "type": "esql",
-        "version": 221
+        "version": 222
     },
-    "id": "1c6a8c7a-5cb6-4a82-ba27-d5a5b8a40a38_221",
+    "id": "1c6a8c7a-5cb6-4a82-ba27-d5a5b8a40a38_222",
     "type": "security-rule"
 }

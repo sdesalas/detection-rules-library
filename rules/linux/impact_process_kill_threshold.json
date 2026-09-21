@@ -72,6 +72,11 @@
             "Data Source: Elastic Defend",
             "Data Source: Auditd Manager",
             "Data Source: Crowdstrike",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Threshold",
+            "Platform: Linux",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -116,8 +121,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 119
+        "version": 120
     },
-    "id": "67f8443a-4ff3-4a70-916d-3cfa3ae9f02b_119",
+    "id": "67f8443a-4ff3-4a70-916d-3cfa3ae9f02b_120",
     "type": "security-rule"
 }

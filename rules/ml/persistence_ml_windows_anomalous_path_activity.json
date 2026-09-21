@@ -43,7 +43,8 @@
             "Rule Type: Machine Learning",
             "Tactic: Persistence",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -92,8 +93,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 311
+        "version": 312
     },
-    "id": "445a342e-03fb-42d0-8656-0367eb2dead5_311",
+    "id": "445a342e-03fb-42d0-8656-0367eb2dead5_312",
     "type": "security-rule"
 }

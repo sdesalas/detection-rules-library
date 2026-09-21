@@ -50,7 +50,13 @@
             "Use Case: Identity and Access Audit",
             "Data Source: Okta",
             "Tactic: Impact",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Okta",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -64,8 +70,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 414
+        "version": 415
     },
-    "id": "c74fd275-ab2c-4d49-8890-e2943fa65c09_414",
+    "id": "c74fd275-ab2c-4d49-8890-e2943fa65c09_415",
     "type": "security-rule"
 }

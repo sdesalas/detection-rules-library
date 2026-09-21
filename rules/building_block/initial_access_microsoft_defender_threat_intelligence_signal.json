@@ -57,7 +57,10 @@
             "Tactic: Initial Access",
             "Tactic: Execution",
             "Resources: Investigation Guide",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Domain: Email"
         ],
         "threat": [
             {
@@ -117,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 4
+        "version": 5
     },
-    "id": "60c814fc-7d06-11f0-b326-f661ea17fbcd_4",
+    "id": "60c814fc-7d06-11f0-b326-f661ea17fbcd_5",
     "type": "security-rule"
 }

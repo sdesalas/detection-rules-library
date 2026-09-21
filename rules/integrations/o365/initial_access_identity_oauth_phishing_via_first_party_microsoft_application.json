@@ -73,6 +73,13 @@
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
             "Tactic: Initial Access",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: AiTM Phishing",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Domain: Email",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -135,8 +142,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 7
+        "version": 8
     },
-    "id": "929d0766-204b-11f0-9c1f-f661ea17fbcd_7",
+    "id": "929d0766-204b-11f0-9c1f-f661ea17fbcd_8",
     "type": "security-rule"
 }

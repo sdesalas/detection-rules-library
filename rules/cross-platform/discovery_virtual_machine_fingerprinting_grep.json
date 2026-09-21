@@ -65,6 +65,11 @@
             "Tactic: Discovery",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Platform: macOS",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -108,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "c85eb82c-d2c8-485c-a36f-534f914b7663_110",
+    "id": "c85eb82c-d2c8-485c-a36f-534f914b7663_111",
     "type": "security-rule"
 }

@@ -42,6 +42,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Resources: Investigation Guide",
+            "Platform: Windows",
+            "Domain: Network",
             "Tactic: Command and Control",
             "Tactic: Exfiltration",
             "Tactic: Lateral Movement",
@@ -124,8 +126,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 313
+        "version": 314
     },
-    "id": "ba342eb2-583c-439f-b04d-1fdd7c1417cc_313",
+    "id": "ba342eb2-583c-439f-b04d-1fdd7c1417cc_314",
     "type": "security-rule"
 }

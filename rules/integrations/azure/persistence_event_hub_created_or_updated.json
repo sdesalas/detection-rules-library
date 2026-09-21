@@ -54,6 +54,14 @@
             "Use Case: Log Auditing",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID",
+            "Platform: Azure",
+            "Domain: Identity",
+            "Data Source: Azure Activity Logs",
+            "Service: Azure Event Hubs",
             "Tactic: Credential Access"
         ],
         "threat": [
@@ -104,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 111
     },
-    "id": "b6dce542-2b75-4ffb-b7d6-38787298ba9d_110",
+    "id": "b6dce542-2b75-4ffb-b7d6-38787298ba9d_111",
     "type": "security-rule"
 }

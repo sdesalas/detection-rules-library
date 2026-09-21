@@ -61,6 +61,9 @@
             "Tactic: Initial Access",
             "Rule Type: BBR",
             "Data Source: Github",
+            "Rule Type: New Terms",
+            "Platform: GitHub",
+            "Domain: SaaS",
             "Tactic: Lateral Movement"
         ],
         "threat": [
@@ -111,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 209
+        "version": 210
     },
-    "id": "0e4367a0-a483-439d-ad2e-d90500b925fd_209",
+    "id": "0e4367a0-a483-439d-ad2e-d90500b925fd_210",
     "type": "security-rule"
 }

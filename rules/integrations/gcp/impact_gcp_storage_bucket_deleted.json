@@ -47,7 +47,11 @@
             "Data Source: GCP",
             "Data Source: Google Cloud Platform",
             "Tactic: Impact",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: GCP"
         ],
         "threat": [
             {
@@ -68,8 +72,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 108
+        "version": 109
     },
-    "id": "bc0f2d83-32b8-4ae2-b0e6-6a45772e9331_108",
+    "id": "bc0f2d83-32b8-4ae2-b0e6-6a45772e9331_109",
     "type": "security-rule"
 }

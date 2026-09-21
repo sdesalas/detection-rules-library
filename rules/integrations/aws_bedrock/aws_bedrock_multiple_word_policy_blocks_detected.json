@@ -45,12 +45,20 @@
             "Use Case: Policy Violation",
             "Mitre Atlas: T0051",
             "Mitre Atlas: T0054",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: AWS",
+            "Domain: Cloud",
+            "Domain: GenAI",
+            "Service: AWS S3",
+            "Service: AWS Bedrock"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "3216949c-9300-4c53-b57a-221e364c6457_5",
+    "id": "3216949c-9300-4c53-b57a-221e364c6457_6",
     "type": "security-rule"
 }

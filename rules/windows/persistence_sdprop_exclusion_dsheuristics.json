@@ -87,6 +87,10 @@
             "Resources: Investigation Guide",
             "Use Case: Active Directory Monitoring",
             "Data Source: Windows Security Event Logs",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment",
             "Tactic: Privilege Escalation"
         ],
@@ -151,8 +155,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 220
+        "version": 221
     },
-    "id": "61d29caf-6c15-4d1e-9ccb-7ad12ccc0bc7_220",
+    "id": "61d29caf-6c15-4d1e-9ccb-7ad12ccc0bc7_221",
     "type": "security-rule"
 }

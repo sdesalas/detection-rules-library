@@ -65,7 +65,16 @@
             "Data Source: Sysmon",
             "Resources: Investigation Guide",
             "Domain: LLM",
-            "Mitre Atlas: T0086"
+            "Mitre Atlas: T0086",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Suspicious TLD",
+            "Threat: Unauthorized AI Usage",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: macOS",
+            "Domain: GenAI"
         ],
         "threat": [
             {
@@ -93,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890_1",
+    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890_2",
     "type": "security-rule"
 }

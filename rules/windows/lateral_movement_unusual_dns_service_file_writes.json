@@ -77,6 +77,10 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Windows",
             "Tactic: Initial Access"
         ],
         "threat": [
@@ -113,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 219
+        "version": 220
     },
-    "id": "c7ce36c0-32ff-4f9a-bfc2-dcb242bf99f9_219",
+    "id": "c7ce36c0-32ff-4f9a-bfc2-dcb242bf99f9_220",
     "type": "security-rule"
 }

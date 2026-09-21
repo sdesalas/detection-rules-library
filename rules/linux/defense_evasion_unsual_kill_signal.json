@@ -56,6 +56,10 @@
             "Use Case: Threat Detection",
             "Data Source: Auditd Manager",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -77,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "cf307a5a-d503-44a4-8158-db196d99c9df_3",
+    "id": "cf307a5a-d503-44a4-8158-db196d99c9df_4",
     "type": "security-rule"
 }

@@ -31,7 +31,13 @@
             "Tactic: Impact",
             "Tactic: Exfiltration",
             "Data Source: Github",
-            "Resources: Investigation Guide"
+            "Data Source: GitHub Audit Logs",
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: ES|QL",
+            "Platform: GitHub",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -91,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 104
+        "version": 204
     },
-    "id": "0428c618-27f5-4d94-99e6-b254585aba69_104",
+    "id": "0428c618-27f5-4d94-99e6-b254585aba69_204",
     "type": "security-rule"
 }

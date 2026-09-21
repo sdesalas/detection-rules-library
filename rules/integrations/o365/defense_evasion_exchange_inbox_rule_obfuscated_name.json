@@ -131,6 +131,11 @@
             "Data Source: Microsoft 365 Audit Logs",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Microsoft 365",
+            "Service: Microsoft Exchange Online",
             "Tactic: Persistence",
             "Tactic: Stealth"
         ],
@@ -182,8 +187,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "1c3d9346-4591-4894-935c-dad2824850f2_2",
+    "id": "1c3d9346-4591-4894-935c-dad2824850f2_3",
     "type": "security-rule"
 }

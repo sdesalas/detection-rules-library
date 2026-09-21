@@ -81,6 +81,10 @@
             "Data Source: SentinelOne",
             "Data Source: Elastic Endgame",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -109,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 207
+        "version": 208
     },
-    "id": "ff6cf8b9-b76c-4cc1-ac1b-4935164d1029_207",
+    "id": "ff6cf8b9-b76c-4cc1-ac1b-4935164d1029_208",
     "type": "security-rule"
 }

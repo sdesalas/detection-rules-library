@@ -89,6 +89,11 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: Linux",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -132,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 220
+        "version": 221
     },
-    "id": "cac91072-d165-11ec-a764-f661ea17fbce_220",
+    "id": "cac91072-d165-11ec-a764-f661ea17fbce_221",
     "type": "security-rule"
 }

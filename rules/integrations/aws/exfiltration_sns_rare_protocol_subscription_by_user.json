@@ -84,6 +84,8 @@
         "severity": "low",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS SNS",
@@ -92,6 +94,8 @@
             "Tactic: Impact",
             "Rule Type: New Terms",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
             "Tactic: Command and Control"
         ],
         "threat": [
@@ -172,8 +176,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 12
+        "version": 13
     },
-    "id": "3df49ff6-985d-11ef-88a1-f661ea17fbcd_12",
+    "id": "3df49ff6-985d-11ef-88a1-f661ea17fbcd_13",
     "type": "security-rule"
 }

@@ -64,6 +64,10 @@
             "Use Case: Threat Detection",
             "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -89,8 +93,8 @@
             }
         ],
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "92d3a04e-6487-4b62-892d-70e640a590dc_112",
+    "id": "92d3a04e-6487-4b62-892d-70e640a590dc_113",
     "type": "security-rule"
 }

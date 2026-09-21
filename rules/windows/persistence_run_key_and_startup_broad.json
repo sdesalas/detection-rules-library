@@ -81,6 +81,11 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -131,8 +136,8 @@
         "timeline_title": "Comprehensive Registry Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 121
+        "version": 122
     },
-    "id": "97fc44d3-8dae-4019-ae83-298c3015600f_121",
+    "id": "97fc44d3-8dae-4019-ae83-298c3015600f_122",
     "type": "security-rule"
 }

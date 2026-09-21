@@ -101,6 +101,12 @@
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Service: AWS IAM",
+            "Service: AWS STS",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -144,8 +150,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 209
+        "version": 210
     },
-    "id": "c70d9f0d-8cb6-4cfc-85df-a95c1ccf4eab_209",
+    "id": "c70d9f0d-8cb6-4cfc-85df-a95c1ccf4eab_210",
     "type": "security-rule"
 }

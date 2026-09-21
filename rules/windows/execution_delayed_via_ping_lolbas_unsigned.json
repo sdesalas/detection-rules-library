@@ -102,6 +102,11 @@
             "Tactic: Execution",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -225,8 +230,8 @@
             }
         ],
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "e00b8d49-632f-4dc6-94a5-76153a481915_10",
+    "id": "e00b8d49-632f-4dc6-94a5-76153a481915_11",
     "type": "security-rule"
 }

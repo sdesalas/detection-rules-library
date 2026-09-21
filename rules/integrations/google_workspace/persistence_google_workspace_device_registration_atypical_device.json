@@ -85,7 +85,12 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Persistence",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: Google Workspace",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -135,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "e0916edd-ea8c-49d2-882e-2cf6af161dd7_1",
+    "id": "e0916edd-ea8c-49d2-882e-2cf6af161dd7_2",
     "type": "security-rule"
 }

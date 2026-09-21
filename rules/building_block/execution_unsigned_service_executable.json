@@ -72,6 +72,8 @@
             "Tactic: Execution",
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
+            "Rule Type: New Terms",
+            "Platform: Windows",
             "Tactic: Persistence",
             "Tactic: Stealth"
         ],
@@ -145,8 +147,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 110
+        "version": 111
     },
-    "id": "56fdfcf1-ca7c-4fd9-951d-e215ee26e404_110",
+    "id": "56fdfcf1-ca7c-4fd9-951d-e215ee26e404_111",
     "type": "security-rule"
 }

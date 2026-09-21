@@ -64,6 +64,14 @@
             "Use Case: Configuration Audit",
             "Tactic: Exfiltration",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Domain: SaaS",
+            "Domain: Email",
+            "Data Source: Microsoft 365 Audit Logs",
+            "Service: Microsoft Exchange Online",
             "Tactic: Collection"
         ],
         "threat": [
@@ -107,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 214
+        "version": 215
     },
-    "id": "ff4dd44a-0ac6-44c4-8609-3f81bc820f02_214",
+    "id": "ff4dd44a-0ac6-44c4-8609-3f81bc820f02_215",
     "type": "security-rule"
 }

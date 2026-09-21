@@ -52,6 +52,12 @@
             "Use Case: Vulnerability",
             "Data Source: Windows Security Event Logs",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows",
+            "Vuln: CVE-2020-0601",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -80,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 213
+        "version": 214
     },
-    "id": "56557cde-d923-4b88-adee-c61b3f3b5dc3_213",
+    "id": "56557cde-d923-4b88-adee-c61b3f3b5dc3_214",
     "type": "security-rule"
 }

@@ -65,6 +65,13 @@
             "Tactic: Initial Access",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Supply Chain",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Platform: macOS",
             "Tactic: Defense Impairment",
             "Tactic: Stealth"
         ],
@@ -146,8 +153,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "df0553c8-2296-45ef-b4dc-3b88c4c130a7_3",
+    "id": "df0553c8-2296-45ef-b4dc-3b88c4c130a7_4",
     "type": "security-rule"
 }

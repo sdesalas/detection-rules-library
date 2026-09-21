@@ -89,6 +89,12 @@
             "Resources: Investigation Guide",
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: DLL Side-Load",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -122,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 220
+        "version": 221
     },
-    "id": "1160dcdb-0a0a-4a79-91d8-9b84616edebd_220",
+    "id": "1160dcdb-0a0a-4a79-91d8-9b84616edebd_221",
     "type": "security-rule"
 }

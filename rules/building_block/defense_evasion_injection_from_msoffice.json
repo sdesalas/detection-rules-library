@@ -68,6 +68,8 @@
             "Tactic: Initial Access",
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -126,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "1c5a04ae-d034-41bf-b0d8-96439b5cc774_5",
+    "id": "1c5a04ae-d034-41bf-b0d8-96439b5cc774_6",
     "type": "security-rule"
 }

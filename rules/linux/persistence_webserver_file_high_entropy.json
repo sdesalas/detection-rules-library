@@ -60,7 +60,8 @@
             "Tactic: Lateral Movement",
             "Data Source: Elastic Defend",
             "Rule Type: Event Correlation (EQL)",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -118,8 +119,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "f2738cad-28ab-4c9e-b7f0-66f3b2775e5f_1",
+    "id": "f2738cad-28ab-4c9e-b7f0-66f3b2775e5f_2",
     "type": "security-rule"
 }

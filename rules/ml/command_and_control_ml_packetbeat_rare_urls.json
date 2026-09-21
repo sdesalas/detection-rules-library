@@ -39,6 +39,8 @@
             "Rule Type: Machine Learning",
             "Tactic: Command and Control",
             "Resources: Investigation Guide",
+            "Domain: Network",
+            "Domain: Endpoint",
             "Tactic: Initial Access"
         ],
         "threat": [
@@ -86,8 +88,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 210
+        "version": 211
     },
-    "id": "91f02f01-969f-4167-8f55-07827ac3acc9_210",
+    "id": "91f02f01-969f-4167-8f55-07827ac3acc9_211",
     "type": "security-rule"
 }

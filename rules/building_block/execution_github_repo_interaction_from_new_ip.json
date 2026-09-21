@@ -61,6 +61,9 @@
             "Tactic: Execution",
             "Rule Type: BBR",
             "Data Source: Github",
+            "Rule Type: New Terms",
+            "Platform: GitHub",
+            "Domain: SaaS",
             "Tactic: Collection",
             "Tactic: Initial Access"
         ],
@@ -127,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 209
+        "version": 210
     },
-    "id": "0294f105-d7af-4a02-ae90-35f56763ffa2_209",
+    "id": "0294f105-d7af-4a02-ae90-35f56763ffa2_210",
     "type": "security-rule"
 }

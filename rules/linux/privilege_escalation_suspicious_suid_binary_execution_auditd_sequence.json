@@ -93,7 +93,11 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -126,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "50eba7ec-d3f0-474c-a7f4-0906b68e350f_1",
+    "id": "50eba7ec-d3f0-474c-a7f4-0906b68e350f_2",
     "type": "security-rule"
 }

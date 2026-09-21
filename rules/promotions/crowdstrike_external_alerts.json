@@ -78,12 +78,15 @@
             "Data Source: Crowdstrike",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
-            "Promotion: External Alerts"
+            "Promotion: External Alerts",
+            "Rule Type: Custom Query (KQL)",
+            "Rule Type: Higher-Order",
+            "Domain: Endpoint"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "aeebe561-c338-4118-9924-8cb4e478aa58_2",
+    "id": "aeebe561-c338-4118-9924-8cb4e478aa58_3",
     "type": "security-rule"
 }

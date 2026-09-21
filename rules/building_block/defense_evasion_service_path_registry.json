@@ -60,6 +60,8 @@
             "Data Source: Elastic Defend",
             "Rule Type: BBR",
             "Data Source: Sysmon",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment",
             "Tactic: Persistence",
             "Tactic: Privilege Escalation"
@@ -132,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 108
+        "version": 109
     },
-    "id": "f243fe39-83a4-46f3-a3b6-707557a102df_108",
+    "id": "f243fe39-83a4-46f3-a3b6-707557a102df_109",
     "type": "security-rule"
 }

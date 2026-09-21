@@ -42,6 +42,8 @@
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
             "Rule Type: BBR",
+            "Rule Type: ES|QL",
+            "Platform: Linux",
             "Tactic: Initial Access"
         ],
         "threat": [
@@ -122,8 +124,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 9
+        "version": 10
     },
-    "id": "894b7cc9-040b-427c-aca5-36b40d3667bf_9",
+    "id": "894b7cc9-040b-427c-aca5-36b40d3667bf_10",
     "type": "security-rule"
 }

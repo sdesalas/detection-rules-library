@@ -53,6 +53,12 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerable Driver",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
             "Tactic: Privilege Escalation",
             "Tactic: Stealth"
         ],
@@ -119,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "ba81c182-4287-489d-af4d-8ae834b06040_9",
+    "id": "ba81c182-4287-489d-af4d-8ae834b06040_10",
     "type": "security-rule"
 }

@@ -82,6 +82,12 @@
             "Tactic: Persistence",
             "Tactic: Execution",
             "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Cloud VM Execution",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Azure",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -140,8 +146,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "e842d39d-ead1-48c6-97f1-6b055476c2f3_2",
+    "id": "e842d39d-ead1-48c6-97f1-6b055476c2f3_3",
     "type": "security-rule"
 }

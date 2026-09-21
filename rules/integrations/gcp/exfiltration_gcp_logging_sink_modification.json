@@ -54,6 +54,10 @@
             "Use Case: Log Auditing",
             "Tactic: Exfiltration",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: GCP",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -97,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 111
     },
-    "id": "184dfe52-2999-42d9-b9d1-d1ca54495a61_110",
+    "id": "184dfe52-2999-42d9-b9d1-d1ca54495a61_111",
     "type": "security-rule"
 }

@@ -98,6 +98,12 @@
             "Tactic: Initial Access",
             "Tactic: Credential Access",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: AiTM Phishing",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -163,8 +169,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "c22f89d9-b674-4650-8454-02242c8b35eb_2",
+    "id": "c22f89d9-b674-4650-8454-02242c8b35eb_3",
     "type": "security-rule"
 }

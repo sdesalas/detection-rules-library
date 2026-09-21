@@ -84,7 +84,13 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Tactic: Lateral Movement",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS STS"
         ],
         "threat": [
             {
@@ -134,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "f2a3b4c5-d6e7-4f89-a012-b3c4d5e6f789_1",
+    "id": "f2a3b4c5-d6e7-4f89-a012-b3c4d5e6f789_2",
     "type": "security-rule"
 }

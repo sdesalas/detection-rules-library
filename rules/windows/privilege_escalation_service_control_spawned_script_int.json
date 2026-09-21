@@ -97,6 +97,12 @@
             "Data Source: Windows Security Event Logs",
             "Data Source: Microsoft Defender XDR",
             "Data Source: Crowdstrike",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -206,8 +212,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 221
+        "version": 222
     },
-    "id": "e8571d5f-bea1-46c2-9f56-998de2d3ed95_221",
+    "id": "e8571d5f-bea1-46c2-9f56-998de2d3ed95_222",
     "type": "security-rule"
 }

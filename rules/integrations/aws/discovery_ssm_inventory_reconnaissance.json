@@ -87,12 +87,16 @@
         "severity": "medium",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS SSM",
             "Tactic: Discovery",
             "Rule Type: New Terms",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal"
         ],
         "threat": [
             {
@@ -123,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "1004ad5b-6900-4d28-ab5b-472f02e1fdfb_4",
+    "id": "1004ad5b-6900-4d28-ab5b-472f02e1fdfb_5",
     "type": "security-rule"
 }

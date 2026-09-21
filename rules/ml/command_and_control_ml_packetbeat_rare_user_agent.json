@@ -38,7 +38,9 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Command and Control",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Domain: Network",
+            "Domain: Endpoint"
         ],
         "threat": [
             {
@@ -65,8 +67,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 208
+        "version": 209
     },
-    "id": "91f02f01-969f-4167-8d77-07827ac4cee0_208",
+    "id": "91f02f01-969f-4167-8d77-07827ac4cee0_209",
     "type": "security-rule"
 }

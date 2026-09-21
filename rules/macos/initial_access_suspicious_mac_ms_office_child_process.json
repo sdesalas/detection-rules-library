@@ -75,6 +75,10 @@
             "Tactic: Initial Access",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: macOS",
             "Tactic: Execution"
         ],
         "threat": [
@@ -152,8 +156,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "66da12b1-ac83-40eb-814c-07ed1d82b7b9_214",
+    "id": "66da12b1-ac83-40eb-814c-07ed1d82b7b9_215",
     "type": "security-rule"
 }

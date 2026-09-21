@@ -66,6 +66,11 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Threat: Supply Chain",
+            "Rule Type: New Terms",
+            "Platform: Linux",
             "Tactic: Execution",
             "Tactic: Initial Access",
             "Tactic: Stealth"
@@ -153,8 +158,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "8cc72fa3-70ae-4ea1-bee2-8e6aaf3c1fcf_7",
+    "id": "8cc72fa3-70ae-4ea1-bee2-8e6aaf3c1fcf_8",
     "type": "security-rule"
 }

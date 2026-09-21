@@ -74,6 +74,15 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Device Code Phishing",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID",
+            "Platform: Azure",
+            "Domain: Identity",
+            "Data Source: Azure Activity Logs",
             "Tactic: Lateral Movement",
             "Tactic: Stealth"
         ],
@@ -159,8 +168,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 9
+        "version": 10
     },
-    "id": "a83b3dac-325a-11ef-b3e6-f661ea17fbce_9",
+    "id": "a83b3dac-325a-11ef-b3e6-f661ea17fbce_10",
     "type": "security-rule"
 }

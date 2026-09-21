@@ -51,7 +51,11 @@
             "Use Case: Data Protection",
             "Tactic: Collection",
             "Tactic: Exfiltration",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Domain: Email",
+            "Service: Microsoft Purview"
         ],
         "threat": [
             {
@@ -104,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "b8f54e38-7a1d-4c9b-9e2f-3a4b5c6d7e8f_2",
+    "id": "b8f54e38-7a1d-4c9b-9e2f-3a4b5c6d7e8f_3",
     "type": "security-rule"
 }

@@ -93,6 +93,11 @@
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
             "Data Source: Crowdstrike",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: Linux",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -156,8 +161,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "65613f5e-0d48-4b55-ad61-2fb9567cb1ad_6",
+    "id": "65613f5e-0d48-4b55-ad61-2fb9567cb1ad_7",
     "type": "security-rule"
 }

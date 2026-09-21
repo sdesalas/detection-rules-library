@@ -111,7 +111,12 @@
             "Data Source: Crowdstrike",
             "Data Source: Sysmon",
             "Data Source: Elastic Endgame",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Threat: Protocol Tunneling",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -166,8 +171,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "86817045-ea22-4038-9959-c3437bc4c064_2",
+    "id": "86817045-ea22-4038-9959-c3437bc4c064_3",
     "type": "security-rule"
 }

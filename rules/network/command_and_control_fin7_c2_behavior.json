@@ -85,9 +85,14 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Domain: Endpoint",
-            "Rule Type: ESQL",
+            "Rule Type: ES|QL",
             "Data Source: PAN-OS",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Domain: Network",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -127,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 112
+        "version": 113
     },
-    "id": "4a4e23cf-78a2-449c-bac3-701924c269d3_112",
+    "id": "4a4e23cf-78a2-449c-bac3-701924c269d3_113",
     "type": "security-rule"
 }

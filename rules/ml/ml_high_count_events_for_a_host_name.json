@@ -47,6 +47,9 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Resources: Investigation Guide",
+            "Domain: Endpoint",
+            "Platform: Windows",
+            "OS: Windows",
             "Tactic: Command and Control",
             "Tactic: Discovery",
             "Tactic: Execution",
@@ -157,8 +160,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 107
+        "version": 108
     },
-    "id": "fe8d6507-b543-4bbc-849f-dc0da6db29f6_107",
+    "id": "fe8d6507-b543-4bbc-849f-dc0da6db29f6_108",
     "type": "security-rule"
 }

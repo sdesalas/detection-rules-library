@@ -61,6 +61,11 @@
             "Tactic: Impact",
             "Use Case: Configuration Audit",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: Azure",
+            "Service: Azure Key Vault",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -97,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 110
+        "version": 111
     },
-    "id": "792dd7a6-7e00-4a0a-8a9a-a7c24720b5ec_110",
+    "id": "792dd7a6-7e00-4a0a-8a9a-a7c24720b5ec_111",
     "type": "security-rule"
 }

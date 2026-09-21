@@ -55,7 +55,8 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Rule Type: Event Correlation (EQL)"
         ],
         "threat": [
             {
@@ -76,8 +77,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "a3b47d21-20d6-45b0-8b75-fc27073bdef2_1",
+    "id": "a3b47d21-20d6-45b0-8b75-fc27073bdef2_2",
     "type": "security-rule"
 }

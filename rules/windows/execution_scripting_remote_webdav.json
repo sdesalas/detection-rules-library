@@ -111,6 +111,12 @@
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: WebDAV Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Command and Control",
             "Tactic: Lateral Movement"
         ],
@@ -194,8 +200,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "ee7726cc-babc-4885-988c-f915173ac0c0_5",
+    "id": "ee7726cc-babc-4885-988c-f915173ac0c0_6",
     "type": "security-rule"
 }

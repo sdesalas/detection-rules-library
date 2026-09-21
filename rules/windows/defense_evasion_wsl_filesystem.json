@@ -80,6 +80,10 @@
             "Data Source: Sysmon",
             "Resources: Investigation Guide",
             "Data Source: SentinelOne",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -124,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 116
+        "version": 117
     },
-    "id": "e88d1fe9-b2f4-48d4-bace-a026dc745d4b_116",
+    "id": "e88d1fe9-b2f4-48d4-bace-a026dc745d4b_117",
     "type": "security-rule"
 }

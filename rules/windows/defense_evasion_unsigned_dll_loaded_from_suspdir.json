@@ -79,6 +79,12 @@
             "Use Case: Threat Detection",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: DLL Side-Load",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -119,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 16
+        "version": 17
     },
-    "id": "ca98c7cf-a56e-4057-a4e8-39603f7f0389_16",
+    "id": "ca98c7cf-a56e-4057-a4e8-39603f7f0389_17",
     "type": "security-rule"
 }

@@ -76,6 +76,14 @@
             "Use Case: Threat Detection",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Encoding-Based Obfuscation",
+            "Threat: Script-Based Execution",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: macOS",
             "Tactic: Execution",
             "Tactic: Stealth"
         ],
@@ -131,8 +139,8 @@
             }
         ],
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "5ab49127-b1b3-46e6-8a38-9e8512a2a363_7",
+    "id": "5ab49127-b1b3-46e6-8a38-9e8512a2a363_8",
     "type": "security-rule"
 }

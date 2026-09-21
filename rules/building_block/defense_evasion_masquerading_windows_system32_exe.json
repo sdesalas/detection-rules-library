@@ -71,6 +71,8 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Rule Type: BBR",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment",
             "Tactic: Stealth"
         ],
@@ -142,8 +144,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "79ce2c96-72f7-44f9-88ef-60fa1ac2ce47_10",
+    "id": "79ce2c96-72f7-44f9-88ef-60fa1ac2ce47_11",
     "type": "security-rule"
 }

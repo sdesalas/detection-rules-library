@@ -83,6 +83,8 @@
             "Tactic: Execution",
             "Rule Type: BBR",
             "Data Source: Elastic Defend",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -132,8 +134,8 @@
             }
         ],
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "fec7ccb7-6ed9-4f98-93ab-d6b366b063a0_6",
+    "id": "fec7ccb7-6ed9-4f98-93ab-d6b366b063a0_7",
     "type": "security-rule"
 }

@@ -87,6 +87,11 @@
             "Data Source: Windows Security Event Logs",
             "Data Source: Crowdstrike",
             "Data Source: Sysmon",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -201,8 +206,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 423
+        "version": 424
     },
-    "id": "32f4675e-6c49-4ace-80f9-97c9259dca2e_423",
+    "id": "32f4675e-6c49-4ace-80f9-97c9259dca2e_424",
     "type": "security-rule"
 }

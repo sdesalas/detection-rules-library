@@ -82,6 +82,12 @@
             "Data Source: SentinelOne",
             "Data Source: Microsoft Defender XDR",
             "Data Source: Crowdstrike",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Protocol Tunneling",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
             "Tactic: Defense Impairment",
             "Tactic: Persistence"
         ],
@@ -146,8 +152,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 420
+        "version": 421
     },
-    "id": "3535c8bb-3bd5-40f4-ae32-b7cd589d5372_420",
+    "id": "3535c8bb-3bd5-40f4-ae32-b7cd589d5372_421",
     "type": "security-rule"
 }

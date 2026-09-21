@@ -94,6 +94,14 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Web Shell",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Vuln: CVE-2021-26858",
             "Tactic: Persistence"
         ],
         "threat": [
@@ -152,8 +160,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 315
+        "version": 316
     },
-    "id": "6cd1779c-560f-4b68-a8f1-11009b27fe63_315",
+    "id": "6cd1779c-560f-4b68-a8f1-11009b27fe63_316",
     "type": "security-rule"
 }

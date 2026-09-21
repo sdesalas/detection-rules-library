@@ -89,12 +89,16 @@
             "Data Source: Microsoft Defender XDR",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
-            "Promotion: External Alerts"
+            "Promotion: External Alerts",
+            "Rule Type: Custom Query (KQL)",
+            "Rule Type: Higher-Order",
+            "Domain: Endpoint",
+            "Platform: Windows"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "c2a0e42b-ac3d-468f-82a5-0082066e1b59_1",
+    "id": "c2a0e42b-ac3d-468f-82a5-0082066e1b59_2",
     "type": "security-rule"
 }

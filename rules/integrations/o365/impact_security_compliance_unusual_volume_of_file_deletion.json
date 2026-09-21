@@ -63,7 +63,11 @@
             "Data Source: Microsoft 365",
             "Use Case: Configuration Audit",
             "Tactic: Impact",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Domain: SaaS",
+            "Data Source: Microsoft 365 Audit Logs"
         ],
         "threat": [
             {
@@ -84,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 213
+        "version": 214
     },
-    "id": "b2951150-658f-4a60-832f-a00d1e6c6745_213",
+    "id": "b2951150-658f-4a60-832f-a00d1e6c6745_214",
     "type": "security-rule"
 }

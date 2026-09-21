@@ -51,6 +51,10 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Linux",
             "Tactic: Privilege Escalation",
             "Tactic: Stealth"
         ],
@@ -117,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 11
+        "version": 12
     },
-    "id": "05cad2fb-200c-407f-b472-02ea8c9e5e4a_11",
+    "id": "05cad2fb-200c-407f-b472-02ea8c9e5e4a_12",
     "type": "security-rule"
 }

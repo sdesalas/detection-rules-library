@@ -58,13 +58,18 @@
         "tags": [
             "Domain: Endpoint",
             "Domain: Kubernetes",
-            "Domain: Container",
+            "Domain: Containers",
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Data Source: Elastic Defend for Containers",
             "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Platform: Kubernetes",
             "Tactic: Execution",
             "Tactic: Privilege Escalation"
         ],
@@ -143,8 +148,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "0fe2290a-2664-4c9c-8263-b88904f12f0d_104",
+    "id": "0fe2290a-2664-4c9c-8263-b88904f12f0d_105",
     "type": "security-rule"
 }

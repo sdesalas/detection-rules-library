@@ -98,6 +98,13 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Masquerading",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -125,8 +132,8 @@
             }
         ],
         "type": "eql",
-        "version": 216
+        "version": 217
     },
-    "id": "6ea41894-66c3-4df7-ad6b-2c5074eb3df8_216",
+    "id": "6ea41894-66c3-4df7-ad6b-2c5074eb3df8_217",
     "type": "security-rule"
 }

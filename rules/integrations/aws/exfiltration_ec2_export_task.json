@@ -79,7 +79,13 @@
             "Use Case: Asset Visibility",
             "Tactic: Exfiltration",
             "Tactic: Collection",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS EC2"
         ],
         "threat": [
             {
@@ -137,8 +143,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 4
+        "version": 5
     },
-    "id": "deee5856-25ba-438d-ae53-09d66f41b127_4",
+    "id": "deee5856-25ba-438d-ae53-09d66f41b127_5",
     "type": "security-rule"
 }

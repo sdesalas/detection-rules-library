@@ -83,6 +83,13 @@
             "Resources: Investigation Guide",
             "Use Case: Threat Detection",
             "Tactic: Exfiltration",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS DynamoDB",
+            "Service: AWS S3",
             "Tactic: Collection"
         ],
         "threat": [
@@ -126,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 9
+        "version": 10
     },
-    "id": "e8ea6f58-0040-11f0-a243-f661ea17fbcd_9",
+    "id": "e8ea6f58-0040-11f0-a243-f661ea17fbcd_10",
     "type": "security-rule"
 }

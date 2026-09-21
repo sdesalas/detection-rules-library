@@ -67,6 +67,9 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Rule Type: BBR",
+            "Rule Type: New Terms",
+            "Platform: Linux",
+            "Domain: Endpoint",
             "Tactic: Persistence"
         ],
         "threat": [
@@ -115,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 113
+        "version": 114
     },
-    "id": "40ddbcc8-6561-44d9-afc8-eefdbfe0cccd_113",
+    "id": "40ddbcc8-6561-44d9-afc8-eefdbfe0cccd_114",
     "type": "security-rule"
 }
