@@ -78,7 +78,13 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Script-Based Execution",
+            "Rule Type: New Terms",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -106,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 217
+        "version": 218
     },
-    "id": "852c1f19-68e8-43a6-9dce-340771fe1be3_217",
+    "id": "852c1f19-68e8-43a6-9dce-340771fe1be3_218",
     "type": "security-rule"
 }

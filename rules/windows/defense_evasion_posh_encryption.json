@@ -79,7 +79,13 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: PowerShell Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Ransomware",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -127,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 114
+        "version": 115
     },
-    "id": "1d9aeb0b-9549-46f6-a32d-05e2a001b7fd_114",
+    "id": "1d9aeb0b-9549-46f6-a32d-05e2a001b7fd_115",
     "type": "security-rule"
 }

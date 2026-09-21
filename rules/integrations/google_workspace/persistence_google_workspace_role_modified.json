@@ -80,10 +80,17 @@
         "tags": [
             "Domain: Cloud",
             "Data Source: Google Workspace",
+            "Data Source: Google Workspace Audit Logs",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
             "Tactic: Persistence",
-            "Tactic: Privilege Escalation"
+            "Tactic: Privilege Escalation",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Google Workspace",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -119,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 212
+        "version": 213
     },
-    "id": "6f435062-b7fc-4af9-acea-5b1ead65c5a5_212",
+    "id": "6f435062-b7fc-4af9-acea-5b1ead65c5a5_213",
     "type": "security-rule"
 }

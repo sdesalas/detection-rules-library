@@ -55,7 +55,13 @@
             "Data Source: Elastic Defend",
             "Domain: LLM",
             "Mitre Atlas: T0010.003",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Domain: GenAI",
+            "Vuln: CVE-2025-1975"
         ],
         "threat": [
             {
@@ -103,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "e9a3b2c1-d4f5-6789-0abc-def123456789_2",
+    "id": "e9a3b2c1-d4f5-6789-0abc-def123456789_3",
     "type": "security-rule"
 }

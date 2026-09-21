@@ -60,7 +60,12 @@
             "Data Source: Microsoft Entra ID Audit Logs",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -88,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 111
     },
-    "id": "60b6b72f-0fbc-47e7-9895-9ba7627a8b50_110",
+    "id": "60b6b72f-0fbc-47e7-9895-9ba7627a8b50_111",
     "type": "security-rule"
 }

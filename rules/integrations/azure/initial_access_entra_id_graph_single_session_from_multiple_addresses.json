@@ -48,7 +48,12 @@
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
             "Tactic: Defense Evasion",
-            "Tactic: Initial Access"
+            "Tactic: Initial Access",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: ES|QL",
+            "Platform: Entra ID"
         ],
         "threat": [
             {
@@ -103,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 11
+        "version": 12
     },
-    "id": "0d3d2254-2b4a-11f0-a019-f661ea17fbcc_11",
+    "id": "0d3d2254-2b4a-11f0-a019-f661ea17fbcc_12",
     "type": "security-rule"
 }

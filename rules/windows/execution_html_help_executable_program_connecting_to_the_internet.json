@@ -78,7 +78,13 @@
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Noise: Low",
+            "Performance: Normal",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -142,8 +148,8 @@
             }
         ],
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "b29ee2be-bf99-446c-ab1a-2dc0183394b8_214",
+    "id": "b29ee2be-bf99-446c-ab1a-2dc0183394b8_215",
     "type": "security-rule"
 }

@@ -72,7 +72,8 @@
             "Tactic: Privilege Escalation",
             "Tactic: Persistence",
             "Rule Type: Custom Query (KQL)",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Domain: GenAI"
         ],
         "threat": [
             {
@@ -115,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "2d8f6e1a-4b7c-4f9d-8e3a-1c5d2f8b9a0e_1",
+    "id": "2d8f6e1a-4b7c-4f9d-8e3a-1c5d2f8b9a0e_2",
     "type": "security-rule"
 }

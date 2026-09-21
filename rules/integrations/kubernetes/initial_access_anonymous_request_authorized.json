@@ -65,7 +65,13 @@
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: Kubernetes",
+            "Domain: Containers",
+            "Domain: Cloud"
         ],
         "threat": [
             {
@@ -93,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 13
+        "version": 14
     },
-    "id": "63c057cc-339a-11ed-a261-0242ac120002_13",
+    "id": "63c057cc-339a-11ed-a261-0242ac120002_14",
     "type": "security-rule"
 }

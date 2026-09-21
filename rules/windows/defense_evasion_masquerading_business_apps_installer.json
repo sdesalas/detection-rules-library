@@ -78,7 +78,12 @@
             "Tactic: Defense Evasion",
             "Tactic: Initial Access",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Threat: Masquerading",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -148,8 +153,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 11
+        "version": 12
     },
-    "id": "feafdc51-c575-4ed2-89dd-8e20badc2d6c_11",
+    "id": "feafdc51-c575-4ed2-89dd-8e20badc2d6c_12",
     "type": "security-rule"
 }

@@ -78,7 +78,15 @@
             "Data Source: Elastic Endgame",
             "Use Case: Vulnerability",
             "Data Source: Elastic Defend",
-            "Data Source: Microsoft Defender XDR"
+            "Data Source: Microsoft Defender XDR",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery",
+            "Vuln: CVE-2020-1048",
+            "Vuln: CVE-2020-1337"
         ],
         "threat": [
             {
@@ -99,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 118
+        "version": 119
     },
-    "id": "a7ccae7b-9d2c-44b2-a061-98e5946971fa_118",
+    "id": "a7ccae7b-9d2c-44b2-a061-98e5946971fa_119",
     "type": "security-rule"
 }

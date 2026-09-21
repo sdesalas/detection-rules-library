@@ -55,7 +55,11 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -83,8 +87,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "0ff84c42-873d-41a2-a4ed-08d74d352d01_110",
+    "id": "0ff84c42-873d-41a2-a4ed-08d74d352d01_111",
     "type": "security-rule"
 }

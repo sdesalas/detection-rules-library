@@ -89,7 +89,12 @@
             "Tactic: Privilege Escalation",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -137,8 +142,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 216
+        "version": 217
     },
-    "id": "2856446a-34e6-435b-9fb5-f8f040bfa7ed_216",
+    "id": "2856446a-34e6-435b-9fb5-f8f040bfa7ed_217",
     "type": "security-rule"
 }

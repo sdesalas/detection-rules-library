@@ -78,7 +78,13 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Linux",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -106,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 108
+        "version": 109
     },
-    "id": "e6c1a552-7776-44ad-ae0f-8746cc07773c_108",
+    "id": "e6c1a552-7776-44ad-ae0f-8746cc07773c_109",
     "type": "security-rule"
 }

@@ -57,7 +57,13 @@
             "Use Case: Identity and Access Audit",
             "Use Case: Configuration Audit",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: New Terms",
+            "Platform: Entra ID",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -107,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 111
+        "version": 112
     },
-    "id": "bc48bba7-4a23-4232-b551-eca3ca1e3f20_111",
+    "id": "bc48bba7-4a23-4232-b551-eca3ca1e3f20_112",
     "type": "security-rule"
 }

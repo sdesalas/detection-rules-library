@@ -46,7 +46,12 @@
             "Tactic: Persistence",
             "Tactic: Impact",
             "Data Source: Network Packet Capture",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Cryptomining",
+            "Rule Type: Event Correlation (EQL)"
         ],
         "threat": [
             {
@@ -89,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "29e57265-d358-420a-b1cd-845e8a1fd70d_1",
+    "id": "29e57265-d358-420a-b1cd-845e8a1fd70d_2",
     "type": "security-rule"
 }

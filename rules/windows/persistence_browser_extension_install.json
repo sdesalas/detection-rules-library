@@ -77,7 +77,12 @@
             "Data Source: SentinelOne",
             "Data Source: Sysmon",
             "Data Source: Microsoft Defender XDR",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Threat: Browser Extension Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -105,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 210
+        "version": 211
     },
-    "id": "f97504ac-1053-498f-aeaa-c6d01e76b379_210",
+    "id": "f97504ac-1053-498f-aeaa-c6d01e76b379_211",
     "type": "security-rule"
 }

@@ -81,7 +81,12 @@
             "Data Source: Elastic Endgame",
             "Data Source: SentinelOne",
             "Data Source: Auditd Manager",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -136,8 +141,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "9dc1d59c-fc5f-4a73-8ca6-1473eabdff2a_1",
+    "id": "9dc1d59c-fc5f-4a73-8ca6-1473eabdff2a_2",
     "type": "security-rule"
 }

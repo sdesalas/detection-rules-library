@@ -89,7 +89,15 @@
             "Data Source: AWS S3",
             "Resources: Investigation Guide",
             "Use Case: Threat Detection",
-            "Tactic: Impact"
+            "Tactic: Impact",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Ransomware",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS S3"
         ],
         "threat": [
             {
@@ -132,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 9
+        "version": 10
     },
-    "id": "c1a9ed70-d349-11ef-841c-f661ea17fbcd_9",
+    "id": "c1a9ed70-d349-11ef-841c-f661ea17fbcd_10",
     "type": "security-rule"
 }

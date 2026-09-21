@@ -76,7 +76,13 @@
             "Data Source: AWS Route 53",
             "Use Case: Log Auditing",
             "Resources: Investigation Guide",
-            "Tactic: Defense Evasion"
+            "Tactic: Defense Evasion",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS Route 53"
         ],
         "threat": [
             {
@@ -104,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 8
+        "version": 9
     },
-    "id": "453183fa-f903-11ee-8e88-f661ea17fbce_8",
+    "id": "453183fa-f903-11ee-8e88-f661ea17fbce_9",
     "type": "security-rule"
 }

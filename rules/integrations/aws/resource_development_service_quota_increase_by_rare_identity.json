@@ -80,6 +80,8 @@
         "severity": "medium",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS Service Quotas",
@@ -106,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "7e1b0654-b6c0-4b1b-ab47-75588533083c_1",
+    "id": "7e1b0654-b6c0-4b1b-ab47-75588533083c_2",
     "type": "security-rule"
 }

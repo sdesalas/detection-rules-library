@@ -82,7 +82,12 @@
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -110,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "1f56f548-94ec-4678-b1ed-b1a14cca4e3a_3",
+    "id": "1f56f548-94ec-4678-b1ed-b1a14cca4e3a_4",
     "type": "security-rule"
 }

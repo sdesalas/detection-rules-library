@@ -103,7 +103,13 @@
             "Data Source: AWS IAM",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS IAM"
         ],
         "threat": [
             {
@@ -124,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "0f5d410c-a594-4cdb-8b48-f36a61838d67_1",
+    "id": "0f5d410c-a594-4cdb-8b48-f36a61838d67_2",
     "type": "security-rule"
 }

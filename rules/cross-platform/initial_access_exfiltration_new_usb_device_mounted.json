@@ -67,7 +67,12 @@
             "Tactic: Initial Access",
             "Tactic: Exfiltration",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Windows",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -125,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 102
     },
-    "id": "483832a8-ffdd-4e11-8e96-e0224f7bda9b_2",
+    "id": "483832a8-ffdd-4e11-8e96-e0224f7bda9b_102",
     "type": "security-rule"
 }

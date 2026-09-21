@@ -78,7 +78,12 @@
             "Tactic: Initial Access",
             "Tactic: Reconnaissance",
             "Domain: Endpoint",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Domain: Network",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -114,8 +119,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 109
+        "version": 110
     },
-    "id": "31295df3-277b-4c56-a1fb-84e31b4222a9_109",
+    "id": "31295df3-277b-4c56-a1fb-84e31b4222a9_110",
     "type": "security-rule"
 }

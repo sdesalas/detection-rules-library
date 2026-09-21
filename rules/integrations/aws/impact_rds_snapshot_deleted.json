@@ -92,7 +92,15 @@
             "Data Source: AWS RDS",
             "Use Case: Asset Visibility",
             "Tactic: Impact",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Ransomware",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS RDS"
         ],
         "threat": [
             {
@@ -118,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "b36c99af-b944-4509-a523-7e0fad275be1_9",
+    "id": "b36c99af-b944-4509-a523-7e0fad275be1_10",
     "type": "security-rule"
 }

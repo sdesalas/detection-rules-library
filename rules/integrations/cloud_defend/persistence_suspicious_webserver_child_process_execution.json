@@ -67,13 +67,21 @@
         "severity": "high",
         "tags": [
             "Data Source: Elastic Defend for Containers",
-            "Domain: Container",
+            "Domain: Containers",
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Tactic: Execution",
             "Tactic: Command and Control",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Web Shell",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Platform: Kubernetes"
         ],
         "threat": [
             {
@@ -185,8 +193,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "497a7091-0ebd-44d7-88c4-367ab4d4d852_4",
+    "id": "497a7091-0ebd-44d7-88c4-367ab4d4d852_5",
     "type": "security-rule"
 }

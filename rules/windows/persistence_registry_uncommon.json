@@ -77,7 +77,11 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -154,8 +158,8 @@
         "timeline_title": "Comprehensive Registry Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 217
+        "version": 218
     },
-    "id": "54902e45-3467-49a4-8abc-529f2c8cfb80_217",
+    "id": "54902e45-3467-49a4-8abc-529f2c8cfb80_218",
     "type": "security-rule"
 }

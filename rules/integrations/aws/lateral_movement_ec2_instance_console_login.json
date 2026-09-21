@@ -91,7 +91,14 @@
             "Tactic: Lateral Movement",
             "Tactic: Credential Access",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS EC2",
+            "Service: AWS STS"
         ],
         "threat": [
             {
@@ -231,8 +238,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "d1e5e410-3e34-412e-9b1f-dd500b3b55cd_8",
+    "id": "d1e5e410-3e34-412e-9b1f-dd500b3b55cd_9",
     "type": "security-rule"
 }

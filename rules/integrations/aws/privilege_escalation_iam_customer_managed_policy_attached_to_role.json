@@ -85,12 +85,16 @@
         "severity": "low",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS IAM",
             "Tactic: Privilege Escalation",
             "Rule Type: New Terms",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal"
         ],
         "threat": [
             {
@@ -138,8 +142,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 209
+        "version": 210
     },
-    "id": "f6d07a70-9ad0-11ef-954f-f661ea17fbcd_209",
+    "id": "f6d07a70-9ad0-11ef-954f-f661ea17fbcd_210",
     "type": "security-rule"
 }

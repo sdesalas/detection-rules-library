@@ -47,7 +47,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -74,8 +75,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 208
+        "version": 209
     },
-    "id": "647fc812-7996-4795-8869-9c4ea595fe88_208",
+    "id": "647fc812-7996-4795-8869-9c4ea595fe88_209",
     "type": "security-rule"
 }

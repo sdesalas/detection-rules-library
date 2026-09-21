@@ -78,7 +78,12 @@
             "Data Source: AWS Sign-In",
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail"
         ],
         "threat": [
             {
@@ -106,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 7
+        "version": 8
     },
-    "id": "1f45720e-5ea8-11ef-90d2-f661ea17fbce_7",
+    "id": "1f45720e-5ea8-11ef-90d2-f661ea17fbce_8",
     "type": "security-rule"
 }

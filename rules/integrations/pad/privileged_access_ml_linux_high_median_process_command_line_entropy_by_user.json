@@ -35,12 +35,16 @@
         "severity": "low",
         "tags": [
             "Data Source: Elastic Defend",
+            "Data Source: Sysmon",
             "Data Source: Linux Sysmon Logs",
             "Use Case: Privileged Access Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Domain: Endpoint",
+            "Platform: Linux",
+            "OS: Linux"
         ],
         "threat": [
             {
@@ -75,8 +79,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 105
+        "version": 106
     },
-    "id": "0cbbb5e0-f93a-47fe-ab72-8213366c38f1_105",
+    "id": "0cbbb5e0-f93a-47fe-ab72-8213366c38f1_106",
     "type": "security-rule"
 }

@@ -81,7 +81,11 @@
             "Tactic: Execution",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
-            "Domain: LLM"
+            "Domain: LLM",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -114,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "92a36c98-b24a-4bf7-aac7-1eac71fa39cf_2",
+    "id": "92a36c98-b24a-4bf7-aac7-1eac71fa39cf_3",
     "type": "security-rule"
 }

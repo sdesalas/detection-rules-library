@@ -97,7 +97,14 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Threat: Script-Based Execution",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -179,8 +186,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 307
+        "version": 407
     },
-    "id": "79543b00-28a5-4461-81ac-644c4dc4012f_307",
+    "id": "79543b00-28a5-4461-81ac-644c4dc4012f_407",
     "type": "security-rule"
 }

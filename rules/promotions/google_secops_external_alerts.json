@@ -78,12 +78,16 @@
             "Data Source: Google SecOps",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
-            "Promotion: External Alerts"
+            "Promotion: External Alerts",
+            "Rule Type: Custom Query (KQL)",
+            "Rule Type: Higher-Order",
+            "Data Source: Google SecOps Forwarded Events",
+            "Domain: Network"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "70558fd5-6448-4c65-804a-8567ce02c3a2_1",
+    "id": "70558fd5-6448-4c65-804a-8567ce02c3a2_2",
     "type": "security-rule"
 }

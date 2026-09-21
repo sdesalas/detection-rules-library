@@ -69,7 +69,11 @@
             "Use Case: Threat Detection",
             "Tactic: Collection",
             "Data Source: PowerShell Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -112,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 111
     },
-    "id": "eb44611f-62a8-4036-a5ef-587098be6c43_110",
+    "id": "eb44611f-62a8-4036-a5ef-587098be6c43_111",
     "type": "security-rule"
 }

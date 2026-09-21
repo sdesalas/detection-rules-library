@@ -79,7 +79,13 @@
             "Use Case: Network Security Monitoring",
             "Tactic: Exfiltration",
             "Tactic: Collection",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS EC2"
         ],
         "threat": [
             {
@@ -150,8 +156,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 213
+        "version": 214
     },
-    "id": "c1812764-0788-470f-8e74-eb4a14d47573_213",
+    "id": "c1812764-0788-470f-8e74-eb4a14d47573_214",
     "type": "security-rule"
 }

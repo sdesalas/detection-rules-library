@@ -56,7 +56,14 @@
             "Use Case: Vulnerability",
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Vuln: CVE-2026-3888"
         ],
         "threat": [
             {
@@ -82,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "44cb1d8a-1922-4fc0-a00f-36c1caf57393_2",
+    "id": "44cb1d8a-1922-4fc0-a00f-36c1caf57393_3",
     "type": "security-rule"
 }

@@ -43,7 +43,10 @@
             "Domain: Network",
             "Domain: Identity",
             "Data Source: Fortinet",
-            "Data Source: Fortinet FortiGate"
+            "Data Source: Fortinet FortiGate",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: ES|QL"
         ],
         "threat": [
             {
@@ -64,8 +67,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "8a556117-3f05-430e-b2eb-7df0100b4e3b_3",
+    "id": "8a556117-3f05-430e-b2eb-7df0100b4e3b_4",
     "type": "security-rule"
 }

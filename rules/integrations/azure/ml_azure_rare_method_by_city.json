@@ -33,7 +33,9 @@
             "Data Source: Azure Activity Logs",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: Entra ID",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -104,8 +106,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 102
+        "version": 103
     },
-    "id": "ce08cdb8-e6cb-46bb-a7cc-16d17547323f_102",
+    "id": "ce08cdb8-e6cb-46bb-a7cc-16d17547323f_103",
     "type": "security-rule"
 }

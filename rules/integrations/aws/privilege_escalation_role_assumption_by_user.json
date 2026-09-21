@@ -91,7 +91,13 @@
             "Resources: Investigation Guide",
             "Use Case: Identity and Access Audit",
             "Tactic: Privilege Escalation",
-            "Tactic: Lateral Movement"
+            "Tactic: Lateral Movement",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS STS"
         ],
         "threat": [
             {
@@ -168,8 +174,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 9
+        "version": 10
     },
-    "id": "288a198e-9b9b-11ef-a0a8-f661ea17fbcd_9",
+    "id": "288a198e-9b9b-11ef-a0a8-f661ea17fbcd_10",
     "type": "security-rule"
 }

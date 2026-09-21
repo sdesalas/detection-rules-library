@@ -33,7 +33,8 @@
             "Data Source: Amazon Web Services",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: AWS"
         ],
         "threat": [
             {
@@ -141,8 +142,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 313
+        "version": 314
     },
-    "id": "ac706eae-d5ec-4b14-b4fd-e8ba8086f0e1_313",
+    "id": "ac706eae-d5ec-4b14-b4fd-e8ba8086f0e1_314",
     "type": "security-rule"
 }

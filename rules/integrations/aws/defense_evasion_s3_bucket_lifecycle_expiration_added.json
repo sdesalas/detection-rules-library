@@ -78,12 +78,17 @@
         "severity": "low",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS S3",
             "Tactic: Defense Evasion",
             "Rule Type: Event Correlation (EQL)",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive"
         ],
         "threat": [
             {
@@ -138,8 +143,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 10
     },
-    "id": "ff320c56-f8fa-11ee-8c44-f661ea17fbce_9",
+    "id": "ff320c56-f8fa-11ee-8c44-f661ea17fbce_10",
     "type": "security-rule"
 }

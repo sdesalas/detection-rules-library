@@ -66,12 +66,15 @@
             "Data Source: SentinelOne",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
-            "Promotion: External Alerts"
+            "Promotion: External Alerts",
+            "Rule Type: Custom Query (KQL)",
+            "Rule Type: Higher-Order",
+            "Domain: Endpoint"
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "e43b7578-f3cc-4682-a8cf-f9d8a5fb07f1_1",
+    "id": "e43b7578-f3cc-4682-a8cf-f9d8a5fb07f1_2",
     "type": "security-rule"
 }

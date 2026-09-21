@@ -46,7 +46,10 @@
             "Tactic: Discovery",
             "Tactic: Reconnaissance",
             "Data Source: Network Packet Capture",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: ES|QL"
         ],
         "threat": [
             {
@@ -82,8 +85,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "e7bf9314-f346-45b5-a6ed-044dc3b839c8_1",
+    "id": "e7bf9314-f346-45b5-a6ed-044dc3b839c8_2",
     "type": "security-rule"
 }

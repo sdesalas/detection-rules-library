@@ -84,7 +84,12 @@
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
             "Use Case: Threat Detection",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Service: AWS IAM"
         ],
         "threat": [
             {
@@ -151,8 +156,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 4
+        "version": 5
     },
-    "id": "41554afd-d839-4cc2-b185-170ac01cbefc_4",
+    "id": "41554afd-d839-4cc2-b185-170ac01cbefc_5",
     "type": "security-rule"
 }

@@ -2460,7 +2460,16 @@
             "Tactic: Defense Evasion",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Encoding-Based Obfuscation",
+            "Threat: Script-Based Execution",
+            "Rule Type: ES|QL",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -2518,8 +2527,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "74d31cb7-4a2c-44fe-9d1d-f375b9f3cb61_1",
+    "id": "74d31cb7-4a2c-44fe-9d1d-f375b9f3cb61_2",
     "type": "security-rule"
 }

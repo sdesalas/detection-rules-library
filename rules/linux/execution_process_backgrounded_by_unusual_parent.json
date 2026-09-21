@@ -85,7 +85,11 @@
             "Data Source: Elastic Defend",
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -140,8 +144,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "63153282-12da-415f-bad8-c60c9b36cbe3_5",
+    "id": "63153282-12da-415f-bad8-c60c9b36cbe3_6",
     "type": "security-rule"
 }

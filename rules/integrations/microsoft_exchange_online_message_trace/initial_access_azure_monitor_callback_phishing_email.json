@@ -404,7 +404,14 @@
             "Data Source: Microsoft Exchange Online Message Trace",
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Microsoft 365",
+            "Domain: SaaS",
+            "Service: Microsoft Exchange Online",
+            "Data Source: Microsoft Exchange Online Logs"
         ],
         "threat": [
             {
@@ -432,8 +439,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "a6129187-c47b-48ab-a412-67a44836d918_2",
+    "id": "a6129187-c47b-48ab-a412-67a44836d918_3",
     "type": "security-rule"
 }

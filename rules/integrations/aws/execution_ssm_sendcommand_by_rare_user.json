@@ -89,7 +89,15 @@
             "Use Case: Log Auditing",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Cloud VM Execution",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS SSM"
         ],
         "threat": [
             {
@@ -110,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 216
+        "version": 217
     },
-    "id": "37b211e8-4e2f-440f-86d8-06cc8f158cfa_216",
+    "id": "37b211e8-4e2f-440f-86d8-06cc8f158cfa_217",
     "type": "security-rule"
 }

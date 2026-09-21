@@ -110,7 +110,13 @@
             "Tactic: Lateral Movement",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -181,8 +187,8 @@
             }
         ],
         "type": "eql",
-        "version": 213
+        "version": 214
     },
-    "id": "51ce96fb-9e52-4dad-b0ba-99b54440fc9a_213",
+    "id": "51ce96fb-9e52-4dad-b0ba-99b54440fc9a_214",
     "type": "security-rule"
 }

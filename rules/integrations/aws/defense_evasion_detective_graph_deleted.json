@@ -68,6 +68,8 @@
         "severity": "low",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS Detective",
@@ -101,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "fa0177e5-b065-444a-a94e-872cbb28ffee_1",
+    "id": "fa0177e5-b065-444a-a94e-872cbb28ffee_2",
     "type": "security-rule"
 }

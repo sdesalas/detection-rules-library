@@ -70,7 +70,16 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
-            "Domain: LLM"
+            "Domain: LLM",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Unauthorized AI Usage",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Domain: GenAI"
         ],
         "threat": [
             {
@@ -98,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "c1326e45-6d3c-4a2d-9882-606a0c310299_1",
+    "id": "c1326e45-6d3c-4a2d-9882-606a0c310299_2",
     "type": "security-rule"
 }

@@ -104,7 +104,17 @@
             "Data Source: Network Traffic",
             "Data Source: Zeek",
             "Data Source: Suricata",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Azure",
+            "Domain: Cloud",
+            "Platform: GCP",
+            "Domain: Endpoint",
+            "Vuln: CVE-2026-20253"
         ],
         "threat": [
             {
@@ -125,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "2a7823db-0bc2-48f6-aa2f-e6aef233c6dc_1",
+    "id": "2a7823db-0bc2-48f6-aa2f-e6aef233c6dc_2",
     "type": "security-rule"
 }

@@ -87,7 +87,9 @@
             "Service: AWS IAM",
             "Tactic: Privilege Escalation",
             "Rule Type: New Terms",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal"
         ],
         "threat": [
             {
@@ -149,8 +151,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 417
+        "version": 418
     },
-    "id": "a60326d7-dca7-4fb7-93eb-1ca03a1febbd_417",
+    "id": "a60326d7-dca7-4fb7-93eb-1ca03a1febbd_418",
     "type": "security-rule"
 }

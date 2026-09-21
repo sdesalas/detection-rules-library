@@ -76,7 +76,13 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Download Tool Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -109,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "734239fe-eda8-48c0-bca8-9e3dafd81a88_7",
+    "id": "734239fe-eda8-48c0-bca8-9e3dafd81a88_8",
     "type": "security-rule"
 }

@@ -87,7 +87,17 @@
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
             "Data Source: Elastic Endgame",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Vuln: CVE-2024-47076",
+            "Vuln: CVE-2024-47175",
+            "Vuln: CVE-2024-47176",
+            "Vuln: CVE-2024-47177"
         ],
         "threat": [
             {
@@ -120,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "476267ff-e44f-476e-99c1-04c78cb3769d_107",
+    "id": "476267ff-e44f-476e-99c1-04c78cb3769d_108",
     "type": "security-rule"
 }

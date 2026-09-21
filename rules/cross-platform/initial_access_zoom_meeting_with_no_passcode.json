@@ -51,7 +51,11 @@
             "Data Source: Zoom",
             "Use Case: Configuration Audit",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -77,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 106
+        "version": 107
     },
-    "id": "58ac2aa5-6718-427c-a845-5f3ac5af00ba_106",
+    "id": "58ac2aa5-6718-427c-a845-5f3ac5af00ba_107",
     "type": "security-rule"
 }

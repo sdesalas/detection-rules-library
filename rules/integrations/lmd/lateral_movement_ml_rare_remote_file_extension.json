@@ -37,7 +37,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Lateral Movement",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Domain: Endpoint"
         ],
         "threat": [
             {
@@ -62,8 +63,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 110
+        "version": 111
     },
-    "id": "814d96c7-2068-42aa-ba8e-fe0ddd565e2e_110",
+    "id": "814d96c7-2068-42aa-ba8e-fe0ddd565e2e_111",
     "type": "security-rule"
 }

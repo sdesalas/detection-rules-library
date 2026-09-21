@@ -57,12 +57,17 @@
             "Data Source: Elastic Defend",
             "Data Source: Fortinet",
             "Data Source: PAN-OS",
-            "Data Source: Suricata"
+            "Data Source: Suricata",
+            "Noise: Medium",
+            "Performance: Slow",
+            "Rule Type: ES|QL",
+            "Domain: Network",
+            "Domain: Endpoint"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 8
+        "version": 9
     },
-    "id": "0bca7e73-e1b5-4fb2-801b-9b5f5be20dfe_8",
+    "id": "0bca7e73-e1b5-4fb2-801b-9b5f5be20dfe_9",
     "type": "security-rule"
 }

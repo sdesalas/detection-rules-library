@@ -48,7 +48,13 @@
             "Tactic: Initial Access",
             "Tactic: Execution",
             "Data Source: Network Packet Capture",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Vuln: CVE-2025-49844"
         ],
         "threat": [
             {
@@ -91,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "9a1ba0ac-aa6f-4c0d-8c80-b7f6ea2efa36_1",
+    "id": "9a1ba0ac-aa6f-4c0d-8c80-b7f6ea2efa36_2",
     "type": "security-rule"
 }

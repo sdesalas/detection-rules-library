@@ -84,7 +84,13 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Script-Based Execution",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -133,8 +139,8 @@
             }
         ],
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "1955e925-6679-4535-9c1b-28ebf369f35f_2",
+    "id": "1955e925-6679-4535-9c1b-28ebf369f35f_3",
     "type": "security-rule"
 }

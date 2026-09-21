@@ -45,7 +45,11 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -107,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "8154d01d-04d1-4695-bcbb-95a1bb606355_2",
+    "id": "8154d01d-04d1-4695-bcbb-95a1bb606355_3",
     "type": "security-rule"
 }

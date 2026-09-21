@@ -75,12 +75,13 @@
             "Rule Type: BBR",
             "Data Source: NetFlow",
             "Data Source: GoFlow2",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Rule Type: ES|QL"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "dfe3f626-4224-417e-aff1-8ef9a72c3191_1",
+    "id": "dfe3f626-4224-417e-aff1-8ef9a72c3191_2",
     "type": "security-rule"
 }

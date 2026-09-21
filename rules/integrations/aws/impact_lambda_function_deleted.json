@@ -78,12 +78,16 @@
         "severity": "low",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS Lambda",
             "Tactic: Impact",
             "Rule Type: Custom Query (KQL)",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast"
         ],
         "threat": [
             {
@@ -109,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "bb3ac0e3-2c9c-4069-a26d-75ca6a6e547b_2",
+    "id": "bb3ac0e3-2c9c-4069-a26d-75ca6a6e547b_3",
     "type": "security-rule"
 }

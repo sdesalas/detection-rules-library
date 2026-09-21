@@ -50,7 +50,10 @@
             "Data Source: Elastic Endgame",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Rule Type: Custom Query (KQL)",
+            "Rule Type: Higher-Order",
+            "Domain: Endpoint"
         ],
         "threat": [
             {
@@ -71,8 +74,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 105
+        "version": 106
     },
-    "id": "c0be5f31-e180-48ed-aa08-96b36899d48f_105",
+    "id": "c0be5f31-e180-48ed-aa08-96b36899d48f_106",
     "type": "security-rule"
 }

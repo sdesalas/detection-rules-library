@@ -78,7 +78,12 @@
             "Tactic: Defense Evasion",
             "Tactic: Initial Access",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: Google Workspace",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -150,8 +155,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 12
+        "version": 13
     },
-    "id": "21bafdf0-cf17-11ed-bd57-f661ea17fbcc_12",
+    "id": "21bafdf0-cf17-11ed-bd57-f661ea17fbcc_13",
     "type": "security-rule"
 }

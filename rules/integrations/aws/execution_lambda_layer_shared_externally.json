@@ -79,7 +79,13 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS Lambda"
         ],
         "threat": [
             {
@@ -122,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "e00c7862-43f1-48fd-aa30-950db838eded_1",
+    "id": "e00c7862-43f1-48fd-aa30-950db838eded_2",
     "type": "security-rule"
 }

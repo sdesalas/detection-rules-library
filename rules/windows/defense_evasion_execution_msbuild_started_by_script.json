@@ -81,7 +81,13 @@
             "Tactic: Execution",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: New Terms",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -158,8 +164,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 318
+        "version": 319
     },
-    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae2_318",
+    "id": "9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae2_319",
     "type": "security-rule"
 }

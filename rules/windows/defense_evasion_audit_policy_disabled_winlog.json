@@ -3216,7 +3216,12 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
-            "Data Source: Windows Security Event Logs"
+            "Data Source: Windows Security Event Logs",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: ES|QL",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -3261,8 +3266,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 107
+        "version": 108
     },
-    "id": "0ef5d3eb-67ef-43ab-93b7-305cfa5a21f6_107",
+    "id": "0ef5d3eb-67ef-43ab-93b7-305cfa5a21f6_108",
     "type": "security-rule"
 }

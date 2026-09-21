@@ -80,7 +80,11 @@
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
-            "Data Source: Windows Security Event Logs"
+            "Data Source: Windows Security Event Logs",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Threshold",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -129,8 +133,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 218
+        "version": 219
     },
-    "id": "035889c4-2686-4583-a7df-67f89c292f2c_218",
+    "id": "035889c4-2686-4583-a7df-67f89c292f2c_219",
     "type": "security-rule"
 }

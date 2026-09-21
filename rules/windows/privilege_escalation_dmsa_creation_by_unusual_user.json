@@ -80,7 +80,11 @@
             "Use Case: Active Directory Monitoring",
             "Data Source: Active Directory",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -135,8 +139,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 5
+        "version": 6
     },
-    "id": "f0dbff4c-1aa7-4458-9ed5-ada472f64970_5",
+    "id": "f0dbff4c-1aa7-4458-9ed5-ada472f64970_6",
     "type": "security-rule"
 }

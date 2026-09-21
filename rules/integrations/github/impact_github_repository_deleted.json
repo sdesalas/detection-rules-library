@@ -45,7 +45,13 @@
             "Use Case: UEBA",
             "Tactic: Impact",
             "Data Source: Github",
-            "Resources: Investigation Guide"
+            "Data Source: GitHub Audit Logs",
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: GitHub",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -66,8 +72,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 207
+        "version": 208
     },
-    "id": "345889c4-23a8-4bc0-b7ca-756bd17ce83b_207",
+    "id": "345889c4-23a8-4bc0-b7ca-756bd17ce83b_208",
     "type": "security-rule"
 }

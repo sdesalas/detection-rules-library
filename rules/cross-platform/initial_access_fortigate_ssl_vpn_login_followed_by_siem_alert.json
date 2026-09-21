@@ -74,7 +74,11 @@
             "Rule Type: Higher-Order Rule",
             "Tactic: Initial Access",
             "Data Source: Fortinet",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Domain: Network"
         ],
         "threat": [
             {
@@ -95,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "a7f2c1b4-5d8e-4f3a-9b0c-2e1d4a6b8f3e_3",
+    "id": "a7f2c1b4-5d8e-4f3a-9b0c-2e1d4a6b8f3e_4",
     "type": "security-rule"
 }

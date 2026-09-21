@@ -65,7 +65,12 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Threat: Supply Chain",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -125,8 +130,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "8cc72fa3-70ae-4ea1-bee2-8e6aaf3c1fcf_6",
+    "id": "8cc72fa3-70ae-4ea1-bee2-8e6aaf3c1fcf_7",
     "type": "security-rule"
 }

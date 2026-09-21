@@ -49,7 +49,12 @@
             "Use Case: Identity and Access Audit",
             "Data Source: Okta",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Okta",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -87,8 +92,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 415
+        "version": 416
     },
-    "id": "6731fbf2-8f28-49ed-9ab9-9a918ceb5a45_415",
+    "id": "6731fbf2-8f28-49ed-9ab9-9a918ceb5a45_416",
     "type": "security-rule"
 }

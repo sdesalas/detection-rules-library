@@ -78,13 +78,19 @@
         "severity": "medium",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Domain: GenAI",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS Bedrock",
             "Tactic: Defense Evasion",
             "Rule Type: Custom Query (KQL)",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Unauthorized AI Usage"
         ],
         "threat": [
             {
@@ -112,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "cdf7b922-909c-440c-8df0-0efe72aa7bea_2",
+    "id": "cdf7b922-909c-440c-8df0-0efe72aa7bea_3",
     "type": "security-rule"
 }

@@ -58,7 +58,12 @@
             "Data Source: Azure",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
-            "Tactic: Initial Access"
+            "Tactic: Initial Access",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -108,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 111
     },
-    "id": "a605c51a-73ad-406d-bf3a-f24cc41d5c97_110",
+    "id": "a605c51a-73ad-406d-bf3a-f24cc41d5c97_111",
     "type": "security-rule"
 }

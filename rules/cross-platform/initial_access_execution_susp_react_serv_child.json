@@ -99,7 +99,18 @@
             "Data Source: Auditd Manager",
             "Data Source: SentinelOne",
             "Data Source: Sysmon",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Vuln: CVE-2025-55182",
+            "Vuln: CVE-2025-66478",
+            "Threat: React2Shell"
         ],
         "threat": [
             {
@@ -202,8 +213,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "ae3e9625-89ad-4fc3-a7bf-fced5e64f01b_3",
+    "id": "ae3e9625-89ad-4fc3-a7bf-fced5e64f01b_4",
     "type": "security-rule"
 }

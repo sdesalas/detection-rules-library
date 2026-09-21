@@ -85,7 +85,13 @@
             "Data Source: AWS STS",
             "Resources: Investigation Guide",
             "Use Case: Identity and Access Audit",
-            "Tactic: Privilege Escalation"
+            "Tactic: Privilege Escalation",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS STS"
         ],
         "threat": [
             {
@@ -169,8 +175,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 9
+        "version": 10
     },
-    "id": "962a71ae-aac9-11ef-9348-f661ea17fbce_9",
+    "id": "962a71ae-aac9-11ef-9348-f661ea17fbce_10",
     "type": "security-rule"
 }

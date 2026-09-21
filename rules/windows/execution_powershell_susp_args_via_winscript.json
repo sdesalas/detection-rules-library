@@ -123,7 +123,13 @@
             "Data Source: SentinelOne",
             "Data Source: Microsoft Defender XDR",
             "Data Source: Elastic Endgame",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -188,8 +194,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "2d62889e-e758-4c5e-b57e-c735914ee32a_211",
+    "id": "2d62889e-e758-4c5e-b57e-c735914ee32a_212",
     "type": "security-rule"
 }

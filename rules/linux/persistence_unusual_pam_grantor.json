@@ -62,7 +62,11 @@
             "Tactic: Credential Access",
             "Tactic: Persistence",
             "Data Source: Auditd Manager",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -117,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "a8aaa49d-9834-462d-bf8f-b1255cebc004_6",
+    "id": "a8aaa49d-9834-462d-bf8f-b1255cebc004_7",
     "type": "security-rule"
 }

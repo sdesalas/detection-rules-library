@@ -61,7 +61,8 @@
             "Data Source: AWS CloudTrail",
             "Service: AWS RDS",
             "Tactic: Defense Evasion",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)"
         ],
         "threat": [
             {
@@ -89,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 4
+        "version": 5
     },
-    "id": "68c5c9d1-38e5-48bb-b1b2-8b5951d39738_4",
+    "id": "68c5c9d1-38e5-48bb-b1b2-8b5951d39738_5",
     "type": "security-rule"
 }

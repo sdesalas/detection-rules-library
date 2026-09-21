@@ -96,7 +96,12 @@
             "Tactic: Exfiltration",
             "Data Source: Auditd Manager",
             "Resources: Investigation Guide",
-            "Resources: LLM"
+            "Resources: LLM",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Linux",
+            "Domain: GenAI"
         ],
         "threat": [
             {
@@ -147,8 +152,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "c3da1952-bae4-4672-aa57-2be7e6805381_3",
+    "id": "c3da1952-bae4-4672-aa57-2be7e6805381_4",
     "type": "security-rule"
 }

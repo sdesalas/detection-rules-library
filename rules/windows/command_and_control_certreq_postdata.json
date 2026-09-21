@@ -95,7 +95,14 @@
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -158,8 +165,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 217
+        "version": 218
     },
-    "id": "79f0a1f7-ed6b-471c-8eb1-23abd6470b1c_217",
+    "id": "79f0a1f7-ed6b-471c-8eb1-23abd6470b1c_218",
     "type": "security-rule"
 }

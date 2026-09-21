@@ -74,12 +74,21 @@
             "Tactic: Exfiltration",
             "Mitre Atlas: T0024",
             "Mitre Atlas: T0024.000",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Unauthorized AI Usage",
+            "Threat: LLMjacking",
+            "Rule Type: ES|QL",
+            "Platform: AWS",
+            "Domain: GenAI",
+            "Service: AWS Bedrock"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "56312ef5-656c-4bf7-ad9a-affed052b102_2",
+    "id": "56312ef5-656c-4bf7-ad9a-affed052b102_3",
     "type": "security-rule"
 }

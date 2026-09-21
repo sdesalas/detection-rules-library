@@ -91,7 +91,14 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: PowerShell Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Ransomware",
+            "Threat: Script-Based Execution",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -320,8 +327,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 221
+        "version": 222
     },
-    "id": "cde1bafa-9f01-4f43-a872-605b678968b0_221",
+    "id": "cde1bafa-9f01-4f43-a872-605b678968b0_222",
     "type": "security-rule"
 }

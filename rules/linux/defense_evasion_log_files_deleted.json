@@ -74,7 +74,11 @@
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -107,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 218
+        "version": 219
     },
-    "id": "aa895aea-b69c-4411-b110-8d7599634b30_218",
+    "id": "aa895aea-b69c-4411-b110-8d7599634b30_219",
     "type": "security-rule"
 }

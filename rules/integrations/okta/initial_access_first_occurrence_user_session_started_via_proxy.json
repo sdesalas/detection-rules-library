@@ -65,7 +65,11 @@
             "Use Case: Identity and Access Audit",
             "Data Source: Okta",
             "Data Source: Okta System Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: Okta"
         ],
         "threat": [
             {
@@ -98,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 212
+        "version": 213
     },
-    "id": "6f1bb4b2-7dc8-11ee-92b2-f661ea17fbcd_212",
+    "id": "6f1bb4b2-7dc8-11ee-92b2-f661ea17fbcd_213",
     "type": "security-rule"
 }

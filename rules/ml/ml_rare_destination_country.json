@@ -37,7 +37,9 @@
             "Use Case: Threat Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Domain: Network",
+            "Domain: Endpoint"
         ],
         "threat": [
             {
@@ -145,8 +147,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 110
+        "version": 111
     },
-    "id": "35f86980-1fb1-4dff-b311-3be941549c8d_110",
+    "id": "35f86980-1fb1-4dff-b311-3be941549c8d_111",
     "type": "security-rule"
 }

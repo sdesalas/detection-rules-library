@@ -67,7 +67,13 @@
             "Tactic: Command and Control",
             "Tactic: Execution",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Script-Based Execution",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -114,8 +120,8 @@
             }
         ],
         "type": "eql",
-        "version": 113
+        "version": 114
     },
-    "id": "47f76567-d58a-4fed-b32b-21f571e28910_113",
+    "id": "47f76567-d58a-4fed-b32b-21f571e28910_114",
     "type": "security-rule"
 }

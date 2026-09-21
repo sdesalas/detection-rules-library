@@ -66,7 +66,8 @@
             "Data Source: AWS CloudTrail",
             "Service: AWS Lambda",
             "Tactic: Execution",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)"
         ],
         "threat": [
             {
@@ -87,8 +88,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 5
+        "version": 6
     },
-    "id": "1251b98a-ff45-11ee-89a1-f661ea17fbce_5",
+    "id": "1251b98a-ff45-11ee-89a1-f661ea17fbce_6",
     "type": "security-rule"
 }

@@ -64,7 +64,12 @@
             "Data Source: Windows Security Event Logs",
             "Data Source: Active Directory",
             "Data Source: Windows",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -109,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 110
+        "version": 111
     },
-    "id": "68ad737b-f90a-4fe5-bda6-a68fa460044e_110",
+    "id": "68ad737b-f90a-4fe5-bda6-a68fa460044e_111",
     "type": "security-rule"
 }

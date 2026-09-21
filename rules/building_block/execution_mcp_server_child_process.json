@@ -83,7 +83,12 @@
             "Data Source: SentinelOne",
             "Rule Type: BBR",
             "Domain: LLM",
-            "Mitre Atlas: T0053"
+            "Mitre Atlas: T0053",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Domain: GenAI"
         ],
         "threat": [
             {
@@ -104,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "b2c3d4e5-f6a7-8901-bcde-f23456789012_4",
+    "id": "b2c3d4e5-f6a7-8901-bcde-f23456789012_5",
     "type": "security-rule"
 }

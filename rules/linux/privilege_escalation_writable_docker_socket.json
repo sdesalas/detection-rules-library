@@ -73,10 +73,16 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Domain: Container",
+            "Domain: Containers",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Container Escape",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -112,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 11
+        "version": 12
     },
-    "id": "7acb2de3-8465-472a-8d9c-ccd7b73d0ed8_11",
+    "id": "7acb2de3-8465-472a-8d9c-ccd7b73d0ed8_12",
     "type": "security-rule"
 }

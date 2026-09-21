@@ -81,7 +81,13 @@
             "Tactic: Execution",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Threat: Living off the Land",
+            "Threat: Cloud VM Execution",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -134,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "b4d4f0fb-908e-4cd1-ac8f-795c0433db0a_1",
+    "id": "b4d4f0fb-908e-4cd1-ac8f-795c0433db0a_2",
     "type": "security-rule"
 }

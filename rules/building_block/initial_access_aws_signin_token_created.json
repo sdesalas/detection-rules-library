@@ -76,7 +76,10 @@
             "Data Source: AWS Sign-In",
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail"
         ],
         "threat": [
             {
@@ -126,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "f754e348-f36f-4510-8087-d7f29874cc12_2",
+    "id": "f754e348-f36f-4510-8087-d7f29874cc12_3",
     "type": "security-rule"
 }

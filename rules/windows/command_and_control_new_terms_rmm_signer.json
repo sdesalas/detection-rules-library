@@ -82,7 +82,13 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Remote Management Tool Abuse",
+            "Rule Type: New Terms",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -110,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "bb8dac47-0271-4000-b4e3-1bfc75eec5c4_1",
+    "id": "bb8dac47-0271-4000-b4e3-1bfc75eec5c4_2",
     "type": "security-rule"
 }

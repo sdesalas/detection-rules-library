@@ -57,7 +57,7 @@
             "Domain: Network",
             "Use Case: Threat Detection",
             "Use Case: Network Security Monitoring",
-            "Rule Type: ESQL",
+            "Rule Type: ES|QL",
             "Tactic: Command and Control",
             "Tactic: Exfiltration",
             "Data Source: Network Packet Capture",
@@ -119,8 +119,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "89ed957d-609b-4b00-b8c6-a5cbd187632c_1",
+    "id": "89ed957d-609b-4b00-b8c6-a5cbd187632c_2",
     "type": "security-rule"
 }

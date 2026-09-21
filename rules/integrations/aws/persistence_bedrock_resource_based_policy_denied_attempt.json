@@ -82,10 +82,18 @@
             "Data Source: AWS",
             "Data Source: AWS CloudTrail",
             "Data Source: Amazon Web Services",
+            "Data Source: AWS Bedrock",
             "Data Source: Amazon Bedrock",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Threat: Unauthorized AI Usage",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Domain: GenAI",
+            "Service: AWS Bedrock"
         ],
         "threat": [
             {
@@ -106,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "2e99477f-6099-48a9-ae0e-68801d97079c_1",
+    "id": "2e99477f-6099-48a9-ae0e-68801d97079c_2",
     "type": "security-rule"
 }

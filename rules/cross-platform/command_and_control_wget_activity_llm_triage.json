@@ -103,7 +103,14 @@
             "Tactic: Exfiltration",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
-            "Resources: LLM"
+            "Resources: LLM",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Domain: GenAI"
         ],
         "threat": [
             {
@@ -154,8 +161,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "2fc14da3-03d1-4d8e-b42b-942566bf69b4_3",
+    "id": "2fc14da3-03d1-4d8e-b42b-942566bf69b4_4",
     "type": "security-rule"
 }

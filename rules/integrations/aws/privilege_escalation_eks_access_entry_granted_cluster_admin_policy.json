@@ -83,7 +83,13 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Domain: Containers",
+            "Service: AWS EKS"
         ],
         "threat": [
             {
@@ -133,8 +139,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "9550ec87-e73c-4baa-ad44-e448a33fbc3d_1",
+    "id": "9550ec87-e73c-4baa-ad44-e448a33fbc3d_2",
     "type": "security-rule"
 }

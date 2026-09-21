@@ -65,7 +65,14 @@
             "Use Case: Identity and Access Audit",
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Microsoft 365",
+            "Domain: SaaS",
+            "Domain: Cloud",
+            "Domain: Email"
         ],
         "threat": [
             {
@@ -125,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 215
+        "version": 216
     },
-    "id": "2de10e77-c144-4e69-afb7-344e7127abd0_215",
+    "id": "2de10e77-c144-4e69-afb7-344e7127abd0_216",
     "type": "security-rule"
 }

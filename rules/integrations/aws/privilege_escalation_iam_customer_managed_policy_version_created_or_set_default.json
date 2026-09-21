@@ -100,13 +100,17 @@
         "severity": "medium",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Domain: Identity",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS IAM",
             "Tactic: Privilege Escalation",
             "Rule Type: Custom Query (KQL)",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast"
         ],
         "threat": [
             {
@@ -139,8 +143,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "d4e8f0a1-2b3c-4d5e-a6f7-8b9c0d1e2f3a_2",
+    "id": "d4e8f0a1-2b3c-4d5e-a6f7-8b9c0d1e2f3a_3",
     "type": "security-rule"
 }

@@ -69,7 +69,13 @@
             "Data Source: Elastic Endgame",
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -140,8 +146,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 111
+        "version": 112
     },
-    "id": "e0cc3807-e108-483c-bf66-5a4fbe0d7e89_111",
+    "id": "e0cc3807-e108-483c-bf66-5a4fbe0d7e89_112",
     "type": "security-rule"
 }

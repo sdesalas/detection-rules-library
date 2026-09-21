@@ -67,7 +67,11 @@
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Data Source: Microsoft Defender XDR",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -127,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 113
+        "version": 114
     },
-    "id": "8f3e91c7-d791-4704-80a1-42c160d7aa27_113",
+    "id": "8f3e91c7-d791-4704-80a1-42c160d7aa27_114",
     "type": "security-rule"
 }

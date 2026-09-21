@@ -63,7 +63,15 @@
             "Data Source: Microsoft 365",
             "Use Case: Identity and Access Audit",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Domain: SaaS",
+            "Domain: Email",
+            "Data Source: Microsoft 365 Audit Logs",
+            "Service: Microsoft Exchange Online"
         ],
         "threat": [
             {
@@ -96,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 213
+        "version": 214
     },
-    "id": "a989fa1b-9a11-4dd8-a3e9-f0de9c6eb5f2_213",
+    "id": "a989fa1b-9a11-4dd8-a3e9-f0de9c6eb5f2_214",
     "type": "security-rule"
 }

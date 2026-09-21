@@ -68,7 +68,9 @@
             "Tactic: Privilege Escalation",
             "Tactic: Initial Access",
             "Rule Type: BBR",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -126,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "1c5a04ae-d034-41bf-b0d8-96439b5cc774_4",
+    "id": "1c5a04ae-d034-41bf-b0d8-96439b5cc774_5",
     "type": "security-rule"
 }

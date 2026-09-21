@@ -59,7 +59,14 @@
             "Tactic: Initial Access",
             "Tactic: Execution",
             "Data Source: Network Packet Capture",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Vuln: CVE-2025-55182",
+            "Threat: React2Shell"
         ],
         "threat": [
             {
@@ -102,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "a8f7e9d4-3b2c-4d5e-8f1a-6c9b0e2d4a7f_1",
+    "id": "a8f7e9d4-3b2c-4d5e-8f1a-6c9b0e2d4a7f_2",
     "type": "security-rule"
 }

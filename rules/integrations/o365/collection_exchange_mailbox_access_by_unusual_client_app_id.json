@@ -91,7 +91,13 @@
             "Data Source: Microsoft 365 Audit Logs",
             "Use Case: Threat Detection",
             "Tactic: Collection",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Microsoft 365",
+            "Domain: SaaS",
+            "Service: Microsoft Exchange Online"
         ],
         "threat": [
             {
@@ -119,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 113
+        "version": 114
     },
-    "id": "48819484-9826-4083-9eba-1da74cd0eaf2_113",
+    "id": "48819484-9826-4083-9eba-1da74cd0eaf2_114",
     "type": "security-rule"
 }

@@ -42,7 +42,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -74,8 +75,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 311
+        "version": 312
     },
-    "id": "1781d055-5c66-4adf-9c59-fc0fa58336a5_311",
+    "id": "1781d055-5c66-4adf-9c59-fc0fa58336a5_312",
     "type": "security-rule"
 }

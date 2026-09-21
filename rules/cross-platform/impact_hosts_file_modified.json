@@ -93,7 +93,14 @@
             "Use Case: Threat Detection",
             "Tactic: Impact",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -123,8 +130,8 @@
         "timeline_title": "Comprehensive File Timeline",
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 214
+        "version": 215
     },
-    "id": "9c260313-c811-4ec8-ab89-8f6530e0246c_214",
+    "id": "9c260313-c811-4ec8-ab89-8f6530e0246c_215",
     "type": "security-rule"
 }

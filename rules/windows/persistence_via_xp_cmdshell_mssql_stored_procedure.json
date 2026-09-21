@@ -118,7 +118,12 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -168,8 +173,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 319
+        "version": 320
     },
-    "id": "4ed493fc-d637-4a36-80ff-ac84937e5461_319",
+    "id": "4ed493fc-d637-4a36-80ff-ac84937e5461_320",
     "type": "security-rule"
 }

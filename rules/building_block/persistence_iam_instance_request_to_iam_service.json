@@ -88,7 +88,8 @@
             "Service: AWS IAM",
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Event Correlation (EQL)"
         ],
         "threat": [
             {
@@ -142,8 +143,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "a44bcb58-5109-4870-a7c6-11f5fe7dd4b1_5",
+    "id": "a44bcb58-5109-4870-a7c6-11f5fe7dd4b1_6",
     "type": "security-rule"
 }

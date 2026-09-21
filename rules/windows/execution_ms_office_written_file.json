@@ -88,7 +88,12 @@
             "Tactic: Execution",
             "Resources: Investigation Guide",
             "Data Source: Elastic Endgame",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -147,8 +152,8 @@
             }
         ],
         "type": "eql",
-        "version": 115
+        "version": 116
     },
-    "id": "0d8ad79f-9025-45d8-80c1-4f0cd3c5e8e5_115",
+    "id": "0d8ad79f-9025-45d8-80c1-4f0cd3c5e8e5_116",
     "type": "security-rule"
 }

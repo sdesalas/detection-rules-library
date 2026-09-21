@@ -88,7 +88,13 @@
             "Data Source: AWS EC2",
             "Use Case: Network Security Monitoring",
             "Resources: Investigation Guide",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS EC2"
         ],
         "threat": [
             {
@@ -125,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 213
+        "version": 214
     },
-    "id": "e7cd5982-17c8-4959-874c-633acde7d426_213",
+    "id": "e7cd5982-17c8-4959-874c-633acde7d426_214",
     "type": "security-rule"
 }

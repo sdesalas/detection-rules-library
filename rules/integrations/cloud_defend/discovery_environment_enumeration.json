@@ -60,11 +60,16 @@
         "severity": "low",
         "tags": [
             "Data Source: Elastic Defend for Containers",
-            "Domain: Container",
+            "Domain: Containers",
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Threat: Supply Chain",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -90,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "f66a6869-d4c7-4d20-ab13-beefd03b63b4_3",
+    "id": "f66a6869-d4c7-4d20-ab13-beefd03b63b4_4",
     "type": "security-rule"
 }

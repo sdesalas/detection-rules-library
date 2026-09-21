@@ -104,7 +104,15 @@
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
             "Data Source: Auditd Manager",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Cloud VM Execution",
+            "Rule Type: New Terms",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -142,8 +150,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "c371e9fc-6a10-11ef-a0ac-f661ea17fbcc_7",
+    "id": "c371e9fc-6a10-11ef-a0ac-f661ea17fbcc_8",
     "type": "security-rule"
 }

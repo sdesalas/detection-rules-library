@@ -39,7 +39,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Domain: Endpoint"
         ],
         "threat": [
             {
@@ -59,8 +60,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 208
+        "version": 209
     },
-    "id": "745b0119-0560-43ba-860a-7235dd8cee8d_208",
+    "id": "745b0119-0560-43ba-860a-7235dd8cee8d_209",
     "type": "security-rule"
 }

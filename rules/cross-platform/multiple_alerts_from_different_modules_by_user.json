@@ -24,12 +24,16 @@
         "tags": [
             "Use Case: Threat Detection",
             "Rule Type: Higher-Order Rule",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Domain: Endpoint"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "1dd99dbf-b98d-4956-876b-f13bc0ce017f_3",
+    "id": "1dd99dbf-b98d-4956-876b-f13bc0ce017f_4",
     "type": "security-rule"
 }

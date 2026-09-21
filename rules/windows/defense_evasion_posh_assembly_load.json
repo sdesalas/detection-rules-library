@@ -98,7 +98,13 @@
             "Tactic: Defense Evasion",
             "Tactic: Execution",
             "Resources: Investigation Guide",
-            "Data Source: PowerShell Logs"
+            "Data Source: PowerShell Logs",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Script-Based Execution",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -163,8 +169,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 322
+        "version": 323
     },
-    "id": "e26f042e-c590-4e82-8e05-41e81bd822ad_322",
+    "id": "e26f042e-c590-4e82-8e05-41e81bd822ad_323",
     "type": "security-rule"
 }

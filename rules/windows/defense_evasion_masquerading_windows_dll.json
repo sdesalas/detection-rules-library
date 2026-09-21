@@ -81,7 +81,13 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Masquerading",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -153,8 +159,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "fb01d790-9f74-4e76-97dd-b4b0f7bf6435_112",
+    "id": "fb01d790-9f74-4e76-97dd-b4b0f7bf6435_113",
     "type": "security-rule"
 }

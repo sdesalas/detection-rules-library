@@ -78,7 +78,10 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Rule Type: BBR",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Rule Type: New Terms",
+            "Platform: Linux",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -128,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "f638a66d-3bbf-46b1-a52c-ef6f39fb6caf_7",
+    "id": "f638a66d-3bbf-46b1-a52c-ef6f39fb6caf_8",
     "type": "security-rule"
 }

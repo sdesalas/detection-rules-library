@@ -73,7 +73,15 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
-            "Domain: LLM"
+            "Domain: LLM",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Unauthorized AI Usage",
+            "Rule Type: New Terms",
+            "Platform: Windows",
+            "Platform: macOS",
+            "Domain: GenAI"
         ],
         "threat": [
             {
@@ -119,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "590fc62d-7386-4c75-92b0-af4517018da1_7",
+    "id": "590fc62d-7386-4c75-92b0-af4517018da1_8",
     "type": "security-rule"
 }

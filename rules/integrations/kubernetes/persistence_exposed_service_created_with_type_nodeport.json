@@ -61,7 +61,13 @@
             "Data Source: Kubernetes",
             "Tactic: Execution",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Kubernetes",
+            "Domain: Containers",
+            "Domain: Cloud"
         ],
         "threat": [
             {
@@ -97,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 209
+        "version": 210
     },
-    "id": "65f9bccd-510b-40df-8263-334f03174fed_209",
+    "id": "65f9bccd-510b-40df-8263-334f03174fed_210",
     "type": "security-rule"
 }

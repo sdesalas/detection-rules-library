@@ -75,12 +75,15 @@
             "Rule Type: Higher-Order Rule",
             "Resources: Investigation Guide",
             "Domain: Network",
-            "Data Source: PAN-OS"
+            "Data Source: PAN-OS",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: ES|QL"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "283683eb-f2ce-40a5-be16-fa931cb5f504_4",
+    "id": "283683eb-f2ce-40a5-be16-fa931cb5f504_5",
     "type": "security-rule"
 }

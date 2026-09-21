@@ -66,13 +66,19 @@
         "tags": [
             "Data Source: Auditd Manager",
             "Domain: Endpoint",
-            "Domain: Container",
+            "Domain: Containers",
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Tactic: Privilege Escalation",
             "Tactic: Lateral Movement",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Container Escape",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -123,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "d70c966f-c5ef-4228-9548-346593cd422d_1",
+    "id": "d70c966f-c5ef-4228-9548-346593cd422d_2",
     "type": "security-rule"
 }

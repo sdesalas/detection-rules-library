@@ -62,12 +62,22 @@
             "Resources: Investigation Guide",
             "Use Case: Policy Violation",
             "Mitre Atlas: T0015",
-            "Mitre Atlas: T0034"
+            "Mitre Atlas: T0034",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Unauthorized AI Usage",
+            "Rule Type: ES|QL",
+            "Platform: AWS",
+            "Domain: Cloud",
+            "Domain: GenAI",
+            "Service: AWS S3",
+            "Service: AWS Bedrock"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 7
+        "version": 8
     },
-    "id": "17261da3-a6d0-463c-aac8-ea1718afcd20_7",
+    "id": "17261da3-a6d0-463c-aac8-ea1718afcd20_8",
     "type": "security-rule"
 }

@@ -52,7 +52,13 @@
             "Tactic: Privilege Escalation",
             "Tactic: Lateral Movement",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Kubernetes",
+            "Domain: Containers",
+            "Domain: Cloud"
         ],
         "threat": [
             {
@@ -110,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "332ecb5b-08b6-47e9-885b-3cee1de74bac_1",
+    "id": "332ecb5b-08b6-47e9-885b-3cee1de74bac_2",
     "type": "security-rule"
 }

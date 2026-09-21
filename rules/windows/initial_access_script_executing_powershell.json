@@ -81,7 +81,12 @@
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
             "Data Source: Microsoft Defender XDR",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -141,8 +146,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 317
+        "version": 318
     },
-    "id": "f545ff26-3c94-4fd0-bd33-3c7f95a3a0fc_317",
+    "id": "f545ff26-3c94-4fd0-bd33-3c7f95a3a0fc_318",
     "type": "security-rule"
 }

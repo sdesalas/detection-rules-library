@@ -101,7 +101,7 @@
             "Rule Type: New Terms",
             "Data Source: Azure",
             "Data Source: Microsoft Entra ID",
-            "Data Source: Microsoft Entra ID Sign-in Logs",
+            "Data Source: Microsoft Entra ID Sign-In Logs",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -145,8 +145,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "763b0a74-2961-4396-bb4b-8cd850e1ebe4_1",
+    "id": "763b0a74-2961-4396-bb4b-8cd850e1ebe4_2",
     "type": "security-rule"
 }

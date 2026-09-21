@@ -103,7 +103,14 @@
             "Data Source: Sysmon",
             "Data Source: SentinelOne",
             "Data Source: Microsoft Defender XDR",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: ClickFix",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -202,8 +209,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "7dc45430-7407-4790-b89e-c857c3f6bf23_4",
+    "id": "7dc45430-7407-4790-b89e-c857c3f6bf23_5",
     "type": "security-rule"
 }

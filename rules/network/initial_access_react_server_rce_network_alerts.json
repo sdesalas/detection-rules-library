@@ -82,7 +82,14 @@
             "Data Source: Fortinet",
             "Data Source: Suricata",
             "Data Source: Cisco FTD",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Custom Query (KQL)",
+            "Vuln: CVE-2025-55182",
+            "Threat: React2Shell"
         ],
         "threat": [
             {
@@ -125,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "1aefed68-eecd-47cc-9044-4a394b60061d_2",
+    "id": "1aefed68-eecd-47cc-9044-4a394b60061d_3",
     "type": "security-rule"
 }

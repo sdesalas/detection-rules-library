@@ -98,7 +98,14 @@
             "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: Sysmon"
+            "Data Source: Sysmon",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Masquerading",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -125,8 +132,8 @@
             }
         ],
         "type": "eql",
-        "version": 215
+        "version": 216
     },
-    "id": "6ea41894-66c3-4df7-ad6b-2c5074eb3df8_215",
+    "id": "6ea41894-66c3-4df7-ad6b-2c5074eb3df8_216",
     "type": "security-rule"
 }

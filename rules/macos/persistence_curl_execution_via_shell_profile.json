@@ -76,7 +76,13 @@
             "Tactic: Persistence",
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Download Tool Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -140,8 +146,8 @@
             }
         ],
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "afdca1e0-0f8a-4fcf-9e1e-95e09791e3cd_2",
+    "id": "afdca1e0-0f8a-4fcf-9e1e-95e09791e3cd_3",
     "type": "security-rule"
 }

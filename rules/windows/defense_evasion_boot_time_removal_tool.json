@@ -158,7 +158,9 @@
             "Tactic: Defense Evasion",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Rule Type: ES|QL",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -225,8 +227,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "942c8f59-f01c-4dc0-a05f-2f5bba836ad8_1",
+    "id": "942c8f59-f01c-4dc0-a05f-2f5bba836ad8_2",
     "type": "security-rule"
 }

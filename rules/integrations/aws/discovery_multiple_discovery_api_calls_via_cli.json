@@ -57,7 +57,7 @@
             "Data Source: AWS EC2",
             "Data Source: AWS IAM",
             "Data Source: AWS S3",
-            "Data Source: AWS Cloudtrail",
+            "Data Source: AWS CloudTrail",
             "Data Source: AWS RDS",
             "Data Source: AWS Lambda",
             "Data Source: AWS STS",
@@ -69,7 +69,20 @@
             "Data Source: AWS Organizations",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: AWS",
+            "Service: AWS IAM",
+            "Service: AWS S3",
+            "Service: AWS EC2",
+            "Service: AWS Lambda",
+            "Service: AWS RDS",
+            "Service: AWS KMS",
+            "Service: AWS STS",
+            "Service: AWS SES",
+            "Service: AWS DynamoDB"
         ],
         "threat": [
             {
@@ -107,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 109
+        "version": 209
     },
-    "id": "74f45152-9aee-11ef-b0a5-f661ea17fbcd_109",
+    "id": "74f45152-9aee-11ef-b0a5-f661ea17fbcd_209",
     "type": "security-rule"
 }

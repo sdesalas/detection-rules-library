@@ -520,7 +520,12 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: ES|QL",
+            "Platform: Entra ID"
         ],
         "threat": [
             {
@@ -592,8 +597,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 209
+        "version": 309
     },
-    "id": "498e4094-60e7-11f0-8847-f661ea17fbcd_209",
+    "id": "498e4094-60e7-11f0-8847-f661ea17fbcd_309",
     "type": "security-rule"
 }

@@ -89,7 +89,11 @@
             "Tactic: Command and Control",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -140,8 +144,8 @@
             }
         ],
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "5dc3519c-1f56-42fc-9a70-7e6b705c2781_2",
+    "id": "5dc3519c-1f56-42fc-9a70-7e6b705c2781_3",
     "type": "security-rule"
 }

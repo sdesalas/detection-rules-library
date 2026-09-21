@@ -50,7 +50,9 @@
             "Data Source: Okta",
             "Resources: Investigation Guide",
             "Rule Type: BBR",
-            "Domain: Identity"
+            "Domain: Identity",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Okta"
         ],
         "threat": [
             {
@@ -78,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 211
+        "version": 212
     },
-    "id": "260486ee-7d98-11ee-9599-f661ea17fbcd_211",
+    "id": "260486ee-7d98-11ee-9599-f661ea17fbcd_212",
     "type": "security-rule"
 }

@@ -64,12 +64,19 @@
         "tags": [
             "Domain: Cloud",
             "Data Source: Google Workspace",
+            "Data Source: Google Workspace Audit Logs",
             "Use Case: Configuration Audit",
             "Tactic: Impact",
             "Tactic: Credential Access",
             "Tactic: Defense Evasion",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Google Workspace",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -156,8 +163,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 214
+        "version": 215
     },
-    "id": "cad4500a-abd7-4ef3-b5d3-95524de7cfe1_214",
+    "id": "cad4500a-abd7-4ef3-b5d3-95524de7cfe1_215",
     "type": "security-rule"
 }

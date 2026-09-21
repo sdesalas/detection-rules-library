@@ -84,7 +84,13 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Privilege Escalation",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS IAM"
         ],
         "threat": [
             {
@@ -134,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 11
+        "version": 12
     },
-    "id": "9aa4be8d-5828-417d-9f54-7cd304571b24_11",
+    "id": "9aa4be8d-5828-417d-9f54-7cd304571b24_12",
     "type": "security-rule"
 }

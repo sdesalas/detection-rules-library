@@ -114,7 +114,11 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
             "Data Source: Crowdstrike",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Vuln: CVE-2026-81578",
+            "Vuln: CVE-2026-82078"
         ],
         "threat": [
             {
@@ -162,8 +166,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "1d0cf8ae-ed2c-4c74-bc01-462cfd928b64_1",
+    "id": "1d0cf8ae-ed2c-4c74-bc01-462cfd928b64_2",
     "type": "security-rule"
 }

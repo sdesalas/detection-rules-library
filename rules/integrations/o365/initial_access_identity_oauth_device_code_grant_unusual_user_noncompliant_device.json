@@ -68,7 +68,14 @@
             "Use Case: Identity and Access Audit",
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
-            "Tactic: Initial Access"
+            "Tactic: Initial Access",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Device Code Phishing",
+            "Rule Type: New Terms",
+            "Platform: Microsoft 365",
+            "Domain: Email"
         ],
         "threat": [
             {
@@ -130,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "7e2abdb3-c7b0-4e11-ba2f-6657602800a1_1",
+    "id": "7e2abdb3-c7b0-4e11-ba2f-6657602800a1_2",
     "type": "security-rule"
 }

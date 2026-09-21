@@ -103,7 +103,11 @@
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
             "Data Source: Windows Application Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -124,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "e5d219fd-8362-4b67-a0b8-e3dd4331acdd_1",
+    "id": "e5d219fd-8362-4b67-a0b8-e3dd4331acdd_2",
     "type": "security-rule"
 }

@@ -41,7 +41,9 @@
             "Use Case: Threat Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: Linux",
+            "Domain: Network"
         ],
         "threat": [
             {
@@ -103,8 +105,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 210
+        "version": 211
     },
-    "id": "3c7e32e6-6104-46d9-a06e-da0f8b5795a0_210",
+    "id": "3c7e32e6-6104-46d9-a06e-da0f8b5795a0_211",
     "type": "security-rule"
 }

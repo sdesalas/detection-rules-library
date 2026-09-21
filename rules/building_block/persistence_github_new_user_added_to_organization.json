@@ -40,7 +40,10 @@
             "Use Case: UEBA",
             "Tactic: Persistence",
             "Rule Type: BBR",
-            "Data Source: Github"
+            "Data Source: Github",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: GitHub",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -73,8 +76,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 207
+        "version": 208
     },
-    "id": "61336fe6-c043-4743-ab6e-41292f439603_207",
+    "id": "61336fe6-c043-4743-ab6e-41292f439603_208",
     "type": "security-rule"
 }

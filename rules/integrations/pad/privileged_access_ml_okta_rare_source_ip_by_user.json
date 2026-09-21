@@ -35,7 +35,9 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: Okta",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -77,8 +79,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 105
+        "version": 106
     },
-    "id": "fbb10f1e-77cb-42f9-994e-5da17fc3fc15_105",
+    "id": "fbb10f1e-77cb-42f9-994e-5da17fc3fc15_106",
     "type": "security-rule"
 }

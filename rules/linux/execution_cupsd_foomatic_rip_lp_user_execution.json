@@ -92,7 +92,17 @@
             "Data Source: Elastic Defend",
             "Data Source: Elastic Endgame",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Vuln: CVE-2024-47076",
+            "Vuln: CVE-2024-47175",
+            "Vuln: CVE-2024-47176",
+            "Vuln: CVE-2024-47177"
         ],
         "threat": [
             {
@@ -125,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 10
+        "version": 11
     },
-    "id": "f86cd31c-5c7e-4481-99d7-6875a3e31309_10",
+    "id": "f86cd31c-5c7e-4481-99d7-6875a3e31309_11",
     "type": "security-rule"
 }

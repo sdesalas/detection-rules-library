@@ -81,7 +81,13 @@
             "Data Source: AWS CloudTrail",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Domain: Containers",
+            "Service: AWS EKS"
         ],
         "threat": [
             {
@@ -109,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "0f189343-dac7-4c1b-aca7-be8baa6bd02b_2",
+    "id": "0f189343-dac7-4c1b-aca7-be8baa6bd02b_3",
     "type": "security-rule"
 }

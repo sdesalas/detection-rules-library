@@ -96,7 +96,13 @@
             "Data Source: Kubernetes",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: Threshold",
+            "Platform: Azure",
+            "Platform: Kubernetes",
+            "Domain: Containers"
         ],
         "threat": [
             {
@@ -130,8 +136,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 1
+        "version": 2
     },
-    "id": "13a3cc0e-1f69-4cc9-8f2f-892d7c7032dc_1",
+    "id": "13a3cc0e-1f69-4cc9-8f2f-892d7c7032dc_2",
     "type": "security-rule"
 }

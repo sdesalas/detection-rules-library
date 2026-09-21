@@ -52,7 +52,12 @@
             "Data Source: Microsoft Entra ID Protection Logs",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
-            "Tactic: Initial Access"
+            "Tactic: Initial Access",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Entra ID",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -124,8 +129,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "bcf0e362-0a2f-4f5e-9dd8-0d34f901781f_5",
+    "id": "bcf0e362-0a2f-4f5e-9dd8-0d34f901781f_6",
     "type": "security-rule"
 }

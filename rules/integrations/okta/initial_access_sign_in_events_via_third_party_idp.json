@@ -67,7 +67,12 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Initial Access",
             "Data Source: Okta",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: Okta"
         ],
         "threat": [
             {
@@ -110,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 213
+        "version": 214
     },
-    "id": "1ceb05c4-7d25-11ee-9562-f661ea17fbcd_213",
+    "id": "1ceb05c4-7d25-11ee-9562-f661ea17fbcd_214",
     "type": "security-rule"
 }

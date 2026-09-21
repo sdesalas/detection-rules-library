@@ -45,7 +45,13 @@
             "Use Case: UEBA",
             "Tactic: Persistence",
             "Data Source: Github",
-            "Resources: Investigation Guide"
+            "Data Source: GitHub Audit Logs",
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: GitHub",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -95,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 211
+        "version": 212
     },
-    "id": "9b343b62-d173-4cfd-bd8b-e6379f964ca4_211",
+    "id": "9b343b62-d173-4cfd-bd8b-e6379f964ca4_212",
     "type": "security-rule"
 }

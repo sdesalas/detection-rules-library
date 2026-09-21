@@ -137,7 +137,11 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: PowerShell Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -192,8 +196,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 11
+        "version": 12
     },
-    "id": "b0c98cfb-0745-4513-b6f9-08dddb033490_11",
+    "id": "b0c98cfb-0745-4513-b6f9-08dddb033490_12",
     "type": "security-rule"
 }

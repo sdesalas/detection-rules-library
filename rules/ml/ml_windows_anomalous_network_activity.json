@@ -41,7 +41,9 @@
             "Use Case: Threat Detection",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: Windows",
+            "Domain: Network"
         ],
         "threat": [
             {
@@ -120,8 +122,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 312
+        "version": 313
     },
-    "id": "ba342eb2-583c-439f-b04d-1fdd7c1417cc_312",
+    "id": "ba342eb2-583c-439f-b04d-1fdd7c1417cc_313",
     "type": "security-rule"
 }

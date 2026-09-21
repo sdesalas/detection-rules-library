@@ -106,7 +106,11 @@
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -160,8 +164,8 @@
             }
         ],
         "type": "eql",
-        "version": 113
+        "version": 114
     },
-    "id": "8c81e506-6e82-4884-9b9a-75d3d252f967_113",
+    "id": "8c81e506-6e82-4884-9b9a-75d3d252f967_114",
     "type": "security-rule"
 }

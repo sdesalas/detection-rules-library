@@ -60,7 +60,13 @@
             "Data Source: AWS CloudTrail",
             "Tactic: Initial Access",
             "Use Case: Identity and Access Audit",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: ES|QL",
+            "Platform: AWS",
+            "Service: AWS IAM"
         ],
         "threat": [
             {
@@ -110,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 208
+        "version": 308
     },
-    "id": "0d92d30a-5f3e-4b71-bc3d-4a0c4914b7e0_208",
+    "id": "0d92d30a-5f3e-4b71-bc3d-4a0c4914b7e0_308",
     "type": "security-rule"
 }

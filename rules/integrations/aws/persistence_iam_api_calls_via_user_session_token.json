@@ -100,7 +100,13 @@
             "Data Source: AWS STS",
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Service: AWS IAM",
+            "Service: AWS STS"
         ],
         "threat": [
             {
@@ -143,8 +149,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 208
+        "version": 209
     },
-    "id": "c70d9f0d-8cb6-4cfc-85df-a95c1ccf4eab_208",
+    "id": "c70d9f0d-8cb6-4cfc-85df-a95c1ccf4eab_209",
     "type": "security-rule"
 }

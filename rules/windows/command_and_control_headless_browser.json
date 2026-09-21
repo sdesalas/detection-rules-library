@@ -119,7 +119,11 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
             "Data Source: Sysmon",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -140,8 +144,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 209
+        "version": 210
     },
-    "id": "5f2f463e-6997-478c-8405-fb41cc283281_209",
+    "id": "5f2f463e-6997-478c-8405-fb41cc283281_210",
     "type": "security-rule"
 }

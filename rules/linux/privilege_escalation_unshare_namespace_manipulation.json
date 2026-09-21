@@ -90,7 +90,11 @@
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
             "Data Source: Auditd Manager",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -116,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 117
+        "version": 118
     },
-    "id": "d00f33e7-b57d-4023-9952-2db91b1767c4_117",
+    "id": "d00f33e7-b57d-4023-9952-2db91b1767c4_118",
     "type": "security-rule"
 }

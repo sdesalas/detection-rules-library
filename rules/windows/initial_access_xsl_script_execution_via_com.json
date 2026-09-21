@@ -73,7 +73,11 @@
             "Tactic: Initial Access",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -154,8 +158,8 @@
             }
         ],
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "48f657ee-de4f-477c-aa99-ed88ee7af97a_8",
+    "id": "48f657ee-de4f-477c-aa99-ed88ee7af97a_9",
     "type": "security-rule"
 }

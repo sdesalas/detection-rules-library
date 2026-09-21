@@ -75,7 +75,13 @@
             "Tactic: Execution",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Vuln: CVE-2026-81578",
+            "Vuln: CVE-2026-82078"
         ],
         "threat": [
             {
@@ -126,8 +132,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "a2d4508e-e9c2-41f6-9466-0c3aed8cc2c9_1",
+    "id": "a2d4508e-e9c2-41f6-9466-0c3aed8cc2c9_2",
     "type": "security-rule"
 }

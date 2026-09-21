@@ -75,6 +75,8 @@
         "severity": "low",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS Backup",
@@ -101,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "e71ae602-bf44-4834-a4ea-b5c87047d426_1",
+    "id": "e71ae602-bf44-4834-a4ea-b5c87047d426_2",
     "type": "security-rule"
 }

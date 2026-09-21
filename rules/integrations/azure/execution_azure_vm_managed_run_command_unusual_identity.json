@@ -84,7 +84,13 @@
             "Data Source: Azure Activity Logs",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Cloud VM Execution",
+            "Rule Type: New Terms",
+            "Platform: Azure"
         ],
         "threat": [
             {
@@ -105,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "b4a80990-e028-4792-83eb-09e59959059f_1",
+    "id": "b4a80990-e028-4792-83eb-09e59959059f_2",
     "type": "security-rule"
 }

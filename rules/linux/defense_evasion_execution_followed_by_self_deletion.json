@@ -67,7 +67,9 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -94,8 +96,8 @@
             }
         ],
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "702a2046-ea74-4bdc-b8ea-b185471f64c8_1",
+    "id": "702a2046-ea74-4bdc-b8ea-b185471f64c8_2",
     "type": "security-rule"
 }

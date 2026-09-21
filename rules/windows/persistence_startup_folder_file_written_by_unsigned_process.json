@@ -73,7 +73,12 @@
             "Tactic: Persistence",
             "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -122,8 +127,8 @@
             }
         ],
         "type": "eql",
-        "version": 113
+        "version": 114
     },
-    "id": "2fba96c0-ade5-4bce-b92f-a5df2509da3f_113",
+    "id": "2fba96c0-ade5-4bce-b92f-a5df2509da3f_114",
     "type": "security-rule"
 }

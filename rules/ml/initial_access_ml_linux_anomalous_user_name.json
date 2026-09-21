@@ -42,7 +42,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Initial Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -62,8 +63,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 208
+        "version": 209
     },
-    "id": "b347b919-665f-4aac-b9e8-68369bf2340c_208",
+    "id": "b347b919-665f-4aac-b9e8-68369bf2340c_209",
     "type": "security-rule"
 }

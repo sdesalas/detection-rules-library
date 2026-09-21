@@ -70,11 +70,15 @@
         "severity": "high",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Tactic: Initial Access",
             "Rule Type: Event Correlation (EQL)",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast"
         ],
         "threat": [
             {
@@ -124,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "f80ea920-f6f5-4c8a-9761-84ac97ec0cb2_7",
+    "id": "f80ea920-f6f5-4c8a-9761-84ac97ec0cb2_8",
     "type": "security-rule"
 }

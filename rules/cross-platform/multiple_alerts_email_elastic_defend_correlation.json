@@ -31,12 +31,17 @@
             "Data Source: Elastic Defend",
             "Data Source: Check Point Harmony Email & Collaboration",
             "Domain: Email",
-            "Domain: Endpoint"
+            "Domain: Endpoint",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: ES|QL",
+            "Data Source: Check Point Harmony Email Logs"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "c562a800-cf97-464e-9d6f-84db91e86e10_4",
+    "id": "c562a800-cf97-464e-9d6f-84db91e86e10_5",
     "type": "security-rule"
 }

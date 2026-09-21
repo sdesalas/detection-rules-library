@@ -53,7 +53,13 @@
             "Data Source: Azure Activity Logs",
             "Use Case: Threat Detection",
             "Tactic: Impact",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: Threshold",
+            "Platform: Azure",
+            "Service: Azure Storage"
         ],
         "threat": [
             {
@@ -91,8 +97,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 2
+        "version": 3
     },
-    "id": "b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e_2",
+    "id": "b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e_3",
     "type": "security-rule"
 }

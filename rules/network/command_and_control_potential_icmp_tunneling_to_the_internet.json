@@ -76,7 +76,13 @@
             "Use Case: Threat Detection",
             "Use Case: Network Security Monitoring",
             "Data Source: Network Traffic",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Protocol Tunneling",
+            "Rule Type: New Terms",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -102,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "96dd08d8-8f3d-4f55-ada8-7dc1e05dbd47_1",
+    "id": "96dd08d8-8f3d-4f55-ada8-7dc1e05dbd47_2",
     "type": "security-rule"
 }

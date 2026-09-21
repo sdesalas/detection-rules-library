@@ -95,7 +95,11 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -116,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "6fa0f15b-1926-419b-8de2-fce1429797ba_3",
+    "id": "6fa0f15b-1926-419b-8de2-fce1429797ba_4",
     "type": "security-rule"
 }

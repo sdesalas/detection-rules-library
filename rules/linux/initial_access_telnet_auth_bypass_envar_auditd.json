@@ -77,7 +77,14 @@
             "Tactic: Lateral Movement",
             "Resources: Investigation Guide",
             "Use Case: Vulnerability",
-            "Data Source: Auditd Manager"
+            "Data Source: Auditd Manager",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Vuln: CVE-2026-24061"
         ],
         "threat": [
             {
@@ -128,8 +135,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "eb3150eb-e9fb-4a64-a0fc-aa66cdd35632_3",
+    "id": "eb3150eb-e9fb-4a64-a0fc-aa66cdd35632_4",
     "type": "security-rule"
 }

@@ -98,7 +98,12 @@
             "Tactic: Persistence",
             "Tactic: Lateral Movement",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -190,8 +195,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 11
+        "version": 12
     },
-    "id": "7afc6cc9-8800-4c7f-be6b-b688d2dea248_11",
+    "id": "7afc6cc9-8800-4c7f-be6b-b688d2dea248_12",
     "type": "security-rule"
 }

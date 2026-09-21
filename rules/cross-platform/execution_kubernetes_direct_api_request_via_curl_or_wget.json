@@ -81,7 +81,7 @@
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
-            "Domain: Container",
+            "Domain: Containers",
             "Domain: Kubernetes",
             "OS: Linux",
             "OS: macOS",
@@ -97,7 +97,16 @@
             "Data Source: Crowdstrike",
             "Data Source: SentinelOne",
             "Data Source: Elastic Defend for Containers",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Download Tool Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Platform: Kubernetes"
         ],
         "threat": [
             {
@@ -167,8 +176,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "b53f1d73-150d-484d-8f02-222abeb5d5fa_104",
+    "id": "b53f1d73-150d-484d-8f02-222abeb5d5fa_105",
     "type": "security-rule"
 }

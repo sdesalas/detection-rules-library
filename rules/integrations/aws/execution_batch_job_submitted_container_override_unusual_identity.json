@@ -82,7 +82,12 @@
             "Data Source: AWS Batch",
             "Use Case: Threat Detection",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail"
         ],
         "threat": [
             {
@@ -103,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "2b7d9e61-4c83-4f1a-9e52-0b8a3d7c6f29_1",
+    "id": "2b7d9e61-4c83-4f1a-9e52-0b8a3d7c6f29_2",
     "type": "security-rule"
 }

@@ -100,7 +100,14 @@
             "Data Source: Sysmon",
             "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Threat: Web Shell",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -192,8 +199,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "1ac027c2-8c60-4715-af73-927b9c219e20_4",
+    "id": "1ac027c2-8c60-4715-af73-927b9c219e20_5",
     "type": "security-rule"
 }

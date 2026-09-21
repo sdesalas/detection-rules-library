@@ -82,7 +82,11 @@
             "Tactic: Execution",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -137,8 +141,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "656739a8-2786-402b-8ee1-22e0762b63ba_4",
+    "id": "656739a8-2786-402b-8ee1-22e0762b63ba_5",
     "type": "security-rule"
 }

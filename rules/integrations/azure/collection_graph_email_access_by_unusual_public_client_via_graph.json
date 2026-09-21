@@ -90,7 +90,13 @@
             "Data Source: Microsoft Graph Activity Logs",
             "Use Case: Threat Detection",
             "Tactic: Collection",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: Entra ID",
+            "Platform: Azure",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -140,8 +146,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "e882e934-2aaa-11f0-8272-f661ea17fbcc_8",
+    "id": "e882e934-2aaa-11f0-8272-f661ea17fbcc_9",
     "type": "security-rule"
 }

@@ -78,7 +78,12 @@
             "Data Source: AWS IAM",
             "Resources: Investigation Guide",
             "Tactic: Impact",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Service: AWS IAM"
         ],
         "threat": [
             {
@@ -143,8 +148,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 217
+        "version": 218
     },
-    "id": "d8fc1cca-93ed-43c1-bbb6-c0dd3eff2958_217",
+    "id": "d8fc1cca-93ed-43c1-bbb6-c0dd3eff2958_218",
     "type": "security-rule"
 }

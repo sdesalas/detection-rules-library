@@ -90,7 +90,14 @@
             "Resources: Investigation Guide",
             "Tactic: Lateral Movement",
             "Tactic: Exfiltration",
-            "Tactic: Impact"
+            "Tactic: Impact",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS SNS"
         ],
         "threat": [
             {
@@ -163,8 +170,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "2112ecce-cd34-11ef-873f-f661ea17fbcd_7",
+    "id": "2112ecce-cd34-11ef-873f-f661ea17fbcd_8",
     "type": "security-rule"
 }

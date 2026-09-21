@@ -82,7 +82,14 @@
             "Tactic: Command and Control",
             "Resources: Investigation Guide",
             "Data Source: Elastic Defend",
-            "Data Source: SentinelOne"
+            "Data Source: SentinelOne",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Web Service Abuse",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -183,8 +190,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 132
+        "version": 133
     },
-    "id": "66883649-f908-4a5b-a1e0-54090a1d3a32_132",
+    "id": "66883649-f908-4a5b-a1e0-54090a1d3a32_133",
     "type": "security-rule"
 }

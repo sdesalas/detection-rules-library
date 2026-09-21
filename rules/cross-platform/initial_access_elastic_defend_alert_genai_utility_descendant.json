@@ -6537,7 +6537,14 @@
             "Tactic: Initial Access",
             "Rule Type: Higher-Order Rule",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Supply Chain",
+            "Threat: Unauthorized AI Usage",
+            "Rule Type: ES|QL",
+            "Domain: GenAI"
         ],
         "threat": [
             {
@@ -6565,8 +6572,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "d4e5f6a7-b8c9-7d0e-1f2a-3b4c5d6e7f8a_2",
+    "id": "d4e5f6a7-b8c9-7d0e-1f2a-3b4c5d6e7f8a_3",
     "type": "security-rule"
 }

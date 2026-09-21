@@ -66,7 +66,7 @@
             "Use Case: Threat Detection",
             "Use Case: Network Security Monitoring",
             "Tactic: Initial Access",
-            "Rule Type: ESQL",
+            "Rule Type: ES|QL",
             "Data Source: Network Packet Capture",
             "Data Source: Network Traffic",
             "Data Source: Zeek",
@@ -91,8 +91,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "c485ceb7-b0e3-4540-9e8c-e9c655406e68_1",
+    "id": "c485ceb7-b0e3-4540-9e8c-e9c655406e68_2",
     "type": "security-rule"
 }

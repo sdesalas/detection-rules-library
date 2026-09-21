@@ -62,7 +62,10 @@
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Threshold",
+            "Platform: Linux",
+            "Domain: Endpoint"
         ],
         "threat": [
             {
@@ -102,8 +105,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 9
+        "version": 10
     },
-    "id": "0787daa6-f8c5-453b-a4ec-048037f6c1cd_9",
+    "id": "0787daa6-f8c5-453b-a4ec-048037f6c1cd_10",
     "type": "security-rule"
 }

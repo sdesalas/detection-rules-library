@@ -48,7 +48,8 @@
         "severity": "high",
         "tags": [
             "Rule Type: Threat Match",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Domain: Email"
         ],
         "threat_filters": [
             {
@@ -158,8 +159,8 @@
         "timeline_title": "Generic Threat Match Timeline",
         "timestamp_override": "event.ingested",
         "type": "threat_match",
-        "version": 2
+        "version": 3
     },
-    "id": "fcf18de8-ad7d-4d01-b3f7-a11d5b3883af_2",
+    "id": "fcf18de8-ad7d-4d01-b3f7-a11d5b3883af_3",
     "type": "security-rule"
 }

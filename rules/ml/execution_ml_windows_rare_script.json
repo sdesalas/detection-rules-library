@@ -38,7 +38,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Execution",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -65,8 +66,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 2
+        "version": 3
     },
-    "id": "4577d441-0c05-4bfb-9068-39a0cb855269_2",
+    "id": "4577d441-0c05-4bfb-9068-39a0cb855269_3",
     "type": "security-rule"
 }

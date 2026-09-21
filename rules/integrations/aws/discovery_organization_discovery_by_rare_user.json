@@ -95,6 +95,8 @@
         "severity": "low",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Domain: Identity",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
@@ -102,7 +104,9 @@
             "Service: AWS Organizations",
             "Tactic: Discovery",
             "Rule Type: New Terms",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal"
         ],
         "threat": [
             {
@@ -135,8 +139,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 102
+        "version": 103
     },
-    "id": "444c8fad-874f-4f59-b0ea-cf26cea478bd_102",
+    "id": "444c8fad-874f-4f59-b0ea-cf26cea478bd_103",
     "type": "security-rule"
 }

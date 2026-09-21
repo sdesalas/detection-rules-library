@@ -80,7 +80,13 @@
             "Data Source: Elastic Endgame",
             "Data Source: Elastic Defend",
             "Data Source: Sysmon",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Living off the Land",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -183,8 +189,8 @@
             }
         ],
         "type": "eql",
-        "version": 212
+        "version": 213
     },
-    "id": "e7125cea-9fe1-42a5-9a05-b0792cf86f5a_212",
+    "id": "e7125cea-9fe1-42a5-9a05-b0792cf86f5a_213",
     "type": "security-rule"
 }

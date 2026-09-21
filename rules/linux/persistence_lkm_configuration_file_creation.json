@@ -71,7 +71,11 @@
             "Tactic: Persistence",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -114,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "6e2355cc-c60a-4d92-a80c-e54a45ad2400_6",
+    "id": "6e2355cc-c60a-4d92-a80c-e54a45ad2400_7",
     "type": "security-rule"
 }

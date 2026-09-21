@@ -87,7 +87,8 @@
             "Rule Type: New Terms",
             "Tactic: Persistence",
             "Tactic: Resource Development",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Data Source: AWS CloudTrail"
         ],
         "threat": [
             {
@@ -130,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "d2e3f4a5-b6c7-8901-bcde-f23456789012_1",
+    "id": "d2e3f4a5-b6c7-8901-bcde-f23456789012_2",
     "type": "security-rule"
 }

@@ -44,12 +44,20 @@
             "Use Case: Potential Overload",
             "Use Case: Resource Exhaustion",
             "Mitre Atlas: LLM04",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: AWS",
+            "Domain: Cloud",
+            "Domain: GenAI",
+            "Service: AWS S3",
+            "Service: AWS Bedrock"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 7
+        "version": 8
     },
-    "id": "b1773d05-f349-45fb-9850-287b8f92f02d_7",
+    "id": "b1773d05-f349-45fb-9850-287b8f92f02d_8",
     "type": "security-rule"
 }

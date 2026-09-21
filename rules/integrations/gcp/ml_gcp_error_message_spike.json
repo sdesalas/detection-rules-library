@@ -29,11 +29,12 @@
         "tags": [
             "Domain: Cloud",
             "Data Source: GCP",
-            "Data Source: GCP Audit Logs",
             "Data Source: Google Cloud Platform",
+            "Data Source: GCP Audit Logs",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: GCP"
         ],
         "threat": [
             {
@@ -76,8 +77,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 101
+        "version": 102
     },
-    "id": "a4b740e4-be17-4048-9aa4-1e6f42b455b1_101",
+    "id": "a4b740e4-be17-4048-9aa4-1e6f42b455b1_102",
     "type": "security-rule"
 }

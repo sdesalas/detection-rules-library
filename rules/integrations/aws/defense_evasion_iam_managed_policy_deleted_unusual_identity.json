@@ -93,7 +93,14 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Defense Evasion",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Very Slow",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS IAM"
         ],
         "threat": [
             {
@@ -129,8 +136,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "f4a82031-9c8e-4b23-a7d5-6e1094b2c539_1",
+    "id": "f4a82031-9c8e-4b23-a7d5-6e1094b2c539_2",
     "type": "security-rule"
 }

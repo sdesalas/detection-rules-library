@@ -49,12 +49,19 @@
         "severity": "low",
         "tags": [
             "Domain: Endpoint",
-            "Domain: Container",
+            "Domain: Containers",
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Vuln: CVE-2022-0492"
         ],
         "threat": [
             {
@@ -95,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "4d4cda2b-9aad-4702-a0a2-75952bd6a77c_4",
+    "id": "4d4cda2b-9aad-4702-a0a2-75952bd6a77c_5",
     "type": "security-rule"
 }

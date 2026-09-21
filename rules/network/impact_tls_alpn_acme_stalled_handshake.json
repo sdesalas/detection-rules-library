@@ -49,7 +49,12 @@
             "Use Case: Vulnerability",
             "Data Source: Network Traffic",
             "Tactic: Impact",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: ES|QL",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -77,8 +82,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "581bd9b4-ee08-415a-97d7-756e6c53c264_1",
+    "id": "581bd9b4-ee08-415a-97d7-756e6c53c264_2",
     "type": "security-rule"
 }

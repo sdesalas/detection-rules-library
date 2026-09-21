@@ -81,7 +81,12 @@
             "Threat: Tycoon2FA",
             "Threat: Kali365",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Threat: AiTM Phishing",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID"
         ],
         "threat": [
             {
@@ -109,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "82629eed-5516-446e-ad73-03b8c4f4d571_1",
+    "id": "82629eed-5516-446e-ad73-03b8c4f4d571_2",
     "type": "security-rule"
 }

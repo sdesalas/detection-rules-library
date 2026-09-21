@@ -48,7 +48,14 @@
             "Data Source: Google Cloud Platform",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: ES|QL",
+            "Platform: GCP",
+            "Domain: Containers",
+            "Platform: Kubernetes"
         ],
         "threat": [
             {
@@ -69,8 +76,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "65985cd5-e654-40fe-8bc7-de26cb95309f_1",
+    "id": "65985cd5-e654-40fe-8bc7-de26cb95309f_2",
     "type": "security-rule"
 }

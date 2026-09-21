@@ -57,7 +57,12 @@
             "Rule Type: Higher-Order Rule",
             "Resources: Investigation Guide",
             "Domain: Endpoint",
-            "Tactic: Impact"
+            "Tactic: Impact",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Cryptomining",
+            "Rule Type: ES|QL"
         ],
         "threat": [
             {
@@ -72,8 +77,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "b7f77c3c-1bcb-4afc-9ace-49357007947b_3",
+    "id": "b7f77c3c-1bcb-4afc-9ace-49357007947b_4",
     "type": "security-rule"
 }

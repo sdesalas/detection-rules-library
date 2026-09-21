@@ -174,7 +174,13 @@
             "Data Source: Windows Security Event Logs",
             "Data Source: Microsoft Defender XDR",
             "Data Source: Sysmon",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Threat: Web Shell",
+            "Rule Type: New Terms",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -259,8 +265,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 424
+        "version": 425
     },
-    "id": "2917d495-59bd-4250-b395-c29409b76086_424",
+    "id": "2917d495-59bd-4250-b395-c29409b76086_425",
     "type": "security-rule"
 }

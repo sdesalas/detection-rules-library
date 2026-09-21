@@ -86,11 +86,21 @@
             "Data Source: AWS",
             "Data Source: AWS CloudTrail",
             "Data Source: Amazon Web Services",
+            "Data Source: AWS Bedrock",
             "Data Source: Amazon Bedrock",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Tactic: Credential Access",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Unauthorized AI Usage",
+            "Threat: LLMjacking",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Domain: GenAI",
+            "Service: AWS Bedrock"
         ],
         "threat": [
             {
@@ -140,8 +150,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "ee066db8-4f2f-42d3-8ebd-ea25cd9bdc73_1",
+    "id": "ee066db8-4f2f-42d3-8ebd-ea25cd9bdc73_2",
     "type": "security-rule"
 }

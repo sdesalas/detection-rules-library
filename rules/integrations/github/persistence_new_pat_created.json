@@ -55,7 +55,13 @@
             "Tactic: Persistence",
             "Tactic: Credential Access",
             "Data Source: Github",
-            "Resources: Investigation Guide"
+            "Data Source: GitHub Audit Logs",
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: GitHub",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -110,8 +116,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "214d4e03-90b0-4813-9ab6-672b47158590_3",
+    "id": "214d4e03-90b0-4813-9ab6-672b47158590_4",
     "type": "security-rule"
 }

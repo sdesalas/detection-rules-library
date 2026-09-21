@@ -84,7 +84,7 @@
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
-            "Domain: Container",
+            "Domain: Containers",
             "Domain: Kubernetes",
             "OS: Linux",
             "OS: macOS",
@@ -96,7 +96,14 @@
             "Data Source: Auditd Manager",
             "Data Source: SentinelOne",
             "Data Source: Elastic Defend for Containers",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Platform: macOS",
+            "Platform: Kubernetes"
         ],
         "threat": [
             {
@@ -164,8 +171,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 104
+        "version": 105
     },
-    "id": "3c6685eb-9eaa-43a4-be1b-a7f9f1f5e63d_104",
+    "id": "3c6685eb-9eaa-43a4-be1b-a7f9f1f5e63d_105",
     "type": "security-rule"
 }

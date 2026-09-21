@@ -77,7 +77,14 @@
             "Data Source: Elastic Endgame",
             "Data Source: Auditd Manager",
             "Use Case: Vulnerability",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Vuln: CVE-2025-32463"
         ],
         "threat": [
             {
@@ -110,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "163a8f2f-c8a0-4b7e-9c4a-1184310eb7f3_4",
+    "id": "163a8f2f-c8a0-4b7e-9c4a-1184310eb7f3_5",
     "type": "security-rule"
 }

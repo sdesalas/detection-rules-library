@@ -103,7 +103,11 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -165,8 +169,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "9c5b2382-19d2-4b5d-8f14-9e1631a3acdb_6",
+    "id": "9c5b2382-19d2-4b5d-8f14-9e1631a3acdb_7",
     "type": "security-rule"
 }

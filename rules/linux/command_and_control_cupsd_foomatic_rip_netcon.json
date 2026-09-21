@@ -79,7 +79,17 @@
             "Use Case: Vulnerability",
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Vuln: CVE-2024-47076",
+            "Vuln: CVE-2024-47175",
+            "Vuln: CVE-2024-47176",
+            "Vuln: CVE-2024-47177"
         ],
         "threat": [
             {
@@ -138,8 +148,8 @@
             }
         ],
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "e80ee207-9505-49ab-8ca8-bc57d80e2cab_6",
+    "id": "e80ee207-9505-49ab-8ca8-bc57d80e2cab_7",
     "type": "security-rule"
 }

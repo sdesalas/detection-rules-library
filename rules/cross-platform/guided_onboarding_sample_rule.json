@@ -37,7 +37,9 @@
         "severity": "low",
         "tags": [
             "Use Case: Guided Onboarding",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Rule Type: Threshold",
+            "Domain: Endpoint"
         ],
         "threshold": {
             "field": [
@@ -47,8 +49,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 5
+        "version": 6
     },
-    "id": "a198fbbd-9413-45ec-a269-47ae4ccf59ce_5",
+    "id": "a198fbbd-9413-45ec-a269-47ae4ccf59ce_6",
     "type": "security-rule"
 }

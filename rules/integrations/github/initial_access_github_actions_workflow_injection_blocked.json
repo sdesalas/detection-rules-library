@@ -795,7 +795,16 @@
             "Tactic: Persistence",
             "Tactic: Execution",
             "Data Source: Github",
-            "Resources: Investigation Guide"
+            "Data Source: GitHub Audit Logs",
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Threat: Supply Chain",
+            "Rule Type: ES|QL",
+            "Platform: GitHub",
+            "Domain: SaaS",
+            "Service: GitHub Actions"
         ],
         "threat": [
             {
@@ -858,8 +867,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 6
+        "version": 7
     },
-    "id": "e8b37f18-4804-4819-8602-4aba1169c9f4_6",
+    "id": "e8b37f18-4804-4819-8602-4aba1169c9f4_7",
     "type": "security-rule"
 }

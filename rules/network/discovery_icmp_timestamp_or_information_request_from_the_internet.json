@@ -62,7 +62,11 @@
             "Use Case: Network Security Monitoring",
             "Use Case: Threat Detection",
             "Data Source: Network Traffic",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -105,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "81139742-4d3a-49f3-a6dd-e0fb9834f959_1",
+    "id": "81139742-4d3a-49f3-a6dd-e0fb9834f959_2",
     "type": "security-rule"
 }

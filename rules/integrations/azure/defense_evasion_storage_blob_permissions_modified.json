@@ -53,7 +53,13 @@
             "Data Source: Azure",
             "Use Case: Identity and Access Audit",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Azure",
+            "Data Source: Azure Activity Logs",
+            "Service: Azure Storage"
         ],
         "threat": [
             {
@@ -74,8 +80,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 111
     },
-    "id": "d79c4b2a-6134-4edd-86e6-564a92a933f9_110",
+    "id": "d79c4b2a-6134-4edd-86e6-564a92a933f9_111",
     "type": "security-rule"
 }

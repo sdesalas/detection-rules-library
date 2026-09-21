@@ -84,7 +84,14 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: Low",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerable Driver",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -112,8 +119,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 15
+        "version": 16
     },
-    "id": "d8ab1ec1-feeb-48b9-89e7-c12e189448aa_15",
+    "id": "d8ab1ec1-feeb-48b9-89e7-c12e189448aa_16",
     "type": "security-rule"
 }

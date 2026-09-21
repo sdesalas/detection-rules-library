@@ -57,7 +57,11 @@
             "Use Case: Threat Detection",
             "Tactic: Lateral Movement",
             "Data Source: Windows Security Event Logs",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -100,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 115
+        "version": 116
     },
-    "id": "9c865691-5599-447a-bac9-b3f2df5f9a9d_115",
+    "id": "9c865691-5599-447a-bac9-b3f2df5f9a9d_116",
     "type": "security-rule"
 }

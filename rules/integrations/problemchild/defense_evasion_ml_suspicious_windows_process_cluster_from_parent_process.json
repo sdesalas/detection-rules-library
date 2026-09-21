@@ -39,7 +39,8 @@
             "Rule Type: ML",
             "Rule Type: Machine Learning",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -64,8 +65,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 212
+        "version": 213
     },
-    "id": "f5d9d36d-7c30-4cdb-a856-9f653c13d4e0_212",
+    "id": "f5d9d36d-7c30-4cdb-a856-9f653c13d4e0_213",
     "type": "security-rule"
 }

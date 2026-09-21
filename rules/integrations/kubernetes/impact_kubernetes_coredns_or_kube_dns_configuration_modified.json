@@ -72,7 +72,13 @@
             "Domain: Kubernetes",
             "Use Case: Threat Detection",
             "Tactic: Impact",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Kubernetes",
+            "Domain: Containers",
+            "Domain: Cloud"
         ],
         "threat": [
             {
@@ -100,8 +106,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "a643e6b8-ba2a-45f1-8d71-d265bfe2ae43_1",
+    "id": "a643e6b8-ba2a-45f1-8d71-d265bfe2ae43_2",
     "type": "security-rule"
 }

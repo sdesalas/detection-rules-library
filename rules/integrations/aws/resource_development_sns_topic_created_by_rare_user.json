@@ -84,7 +84,13 @@
             "Resources: Investigation Guide",
             "Use Case: Threat Detection",
             "Tactic: Resource Development",
-            "Tactic: Impact"
+            "Tactic: Impact",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS SNS"
         ],
         "threat": [
             {
@@ -127,8 +133,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 6
+        "version": 7
     },
-    "id": "3c3f65b8-e8b4-11ef-9511-f661ea17fbce_6",
+    "id": "3c3f65b8-e8b4-11ef-9511-f661ea17fbce_7",
     "type": "security-rule"
 }

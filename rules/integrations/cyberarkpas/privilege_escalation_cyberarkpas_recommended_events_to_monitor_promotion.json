@@ -53,7 +53,12 @@
             "Use Case: Log Auditing",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: Custom Query (KQL)",
+            "Domain: Identity"
         ],
         "threat": [
             {
@@ -113,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 107
+        "version": 108
     },
-    "id": "c5f81243-56e0-47f9-b5bb-55a5ed89ba57_107",
+    "id": "c5f81243-56e0-47f9-b5bb-55a5ed89ba57_108",
     "type": "security-rule"
 }

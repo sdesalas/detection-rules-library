@@ -142,7 +142,12 @@
             "Data Source: Microsoft 365 Audit Logs",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Service: Microsoft SharePoint"
         ],
         "threat": [
             {
@@ -175,8 +180,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 4
+        "version": 5
     },
-    "id": "632906c6-ba8f-44c0-8386-ec0bbc8518bf_4",
+    "id": "632906c6-ba8f-44c0-8386-ec0bbc8518bf_5",
     "type": "security-rule"
 }

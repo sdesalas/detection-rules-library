@@ -33,7 +33,8 @@
             "Data Source: Azure Activity Logs",
             "Rule Type: ML",
             "Rule Type: Machine Learning",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Platform: Azure"
         ],
         "threat": [
             {
@@ -76,8 +77,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 101
+        "version": 102
     },
-    "id": "1eb74889-18c5-4f78-8010-d8aceb7a9ef4_101",
+    "id": "1eb74889-18c5-4f78-8010-d8aceb7a9ef4_102",
     "type": "security-rule"
 }

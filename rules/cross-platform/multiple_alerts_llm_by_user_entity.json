@@ -27,12 +27,16 @@
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
             "Resources: LLM",
-            "Rule Type: Higher-Order Rule"
+            "Rule Type: Higher-Order Rule",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Domain: GenAI"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 104
+        "version": 105
     },
-    "id": "1bb329a5-2168-4da5-b7b9-d42a51deb6dd_104",
+    "id": "1bb329a5-2168-4da5-b7b9-d42a51deb6dd_105",
     "type": "security-rule"
 }

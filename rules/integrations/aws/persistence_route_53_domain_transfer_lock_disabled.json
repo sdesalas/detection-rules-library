@@ -79,7 +79,13 @@
             "Use Case: Asset Visibility",
             "Tactic: Persistence",
             "Tactic: Resource Development",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS Route 53"
         ],
         "threat": [
             {
@@ -137,8 +143,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 213
+        "version": 214
     },
-    "id": "12051077-0124-4394-9522-8f4f4db1d674_213",
+    "id": "12051077-0124-4394-9522-8f4f4db1d674_214",
     "type": "security-rule"
 }

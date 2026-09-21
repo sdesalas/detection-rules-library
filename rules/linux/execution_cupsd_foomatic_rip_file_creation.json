@@ -90,7 +90,17 @@
             "Tactic: Execution",
             "Data Source: Elastic Defend",
             "Data Source: SentinelOne",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Vulnerability Exploit",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Vuln: CVE-2024-47076",
+            "Vuln: CVE-2024-47175",
+            "Vuln: CVE-2024-47176",
+            "Vuln: CVE-2024-47177"
         ],
         "threat": [
             {
@@ -122,8 +132,8 @@
             }
         ],
         "type": "eql",
-        "version": 107
+        "version": 108
     },
-    "id": "b9b14be7-b7f4-4367-9934-81f07d2f63c4_107",
+    "id": "b9b14be7-b7f4-4367-9934-81f07d2f63c4_108",
     "type": "security-rule"
 }

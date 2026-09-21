@@ -68,6 +68,8 @@
         "severity": "medium",
         "tags": [
             "Domain: Cloud",
+            "Data Source: AWS",
+            "Data Source: Amazon Web Services",
             "Platform: AWS",
             "Data Source: AWS CloudTrail",
             "Service: AWS Security Hub",
@@ -101,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "c8a2d4f6-1b3e-4a7c-9d5f-8e0b2c6a4d1e_1",
+    "id": "c8a2d4f6-1b3e-4a7c-9d5f-8e0b2c6a4d1e_2",
     "type": "security-rule"
 }

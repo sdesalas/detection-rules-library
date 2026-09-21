@@ -86,7 +86,12 @@
             "Data Source: Fortinet",
             "Data Source: PAN-OS",
             "Data Source: pfSense",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Domain: Network",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -129,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 113
+        "version": 114
     },
-    "id": "3ad49c61-7adc-42c1-b788-732eda2f5abf_113",
+    "id": "3ad49c61-7adc-42c1-b788-732eda2f5abf_114",
     "type": "security-rule"
 }

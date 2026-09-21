@@ -171,8 +171,10 @@
             "Service: AWS IAM",
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
-            "Rule Type: ESQL",
-            "Resources: Investigation Guide"
+            "Rule Type: ES|QL",
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal"
         ],
         "threat": [
             {
@@ -222,8 +224,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 15
+        "version": 16
     },
-    "id": "696015ef-718e-40ff-ac4a-cc2ba88dbeeb_15",
+    "id": "696015ef-718e-40ff-ac4a-cc2ba88dbeeb_16",
     "type": "security-rule"
 }

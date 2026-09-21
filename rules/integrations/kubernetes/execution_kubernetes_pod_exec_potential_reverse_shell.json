@@ -309,6 +309,11 @@
             },
             {
                 "ecs": false,
+                "name": "kubernetes.audit.requestObject.rules.verbs",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
                 "name": "kubernetes.audit.requestObject.spec.containers.command",
                 "type": "text"
             },
@@ -454,6 +459,16 @@
             },
             {
                 "ecs": false,
+                "name": "kubernetes.audit.responseObject.rules.resources",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "kubernetes.audit.responseObject.rules.verbs",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
                 "name": "kubernetes.audit.responseObject.spec.containers.securityContext.allowPrivilegeEscalation",
                 "type": "boolean"
             },
@@ -589,7 +604,14 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Tactic: Command and Control",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Profile: Recommended",
+            "Threat: Reverse Shell",
+            "Rule Type: ES|QL",
+            "Domain: Containers",
+            "Domain: Cloud"
         ],
         "threat": [
             {
@@ -615,8 +637,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "f1a2b3c4-d5e6-4789-a012-3456789abc01_2",
+    "id": "f1a2b3c4-d5e6-4789-a012-3456789abc01_3",
     "type": "security-rule"
 }

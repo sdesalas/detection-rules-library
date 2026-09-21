@@ -92,7 +92,11 @@
             "Data Source: Elastic Defend",
             "Data Source: Windows Security Event Logs",
             "Data Source: Microsoft Defender XDR",
-            "Data Source: Crowdstrike"
+            "Data Source: Crowdstrike",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -142,8 +146,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 220
+        "version": 221
     },
-    "id": "871ea072-1b71-4def-b016-6278b505138d_220",
+    "id": "871ea072-1b71-4def-b016-6278b505138d_221",
     "type": "security-rule"
 }

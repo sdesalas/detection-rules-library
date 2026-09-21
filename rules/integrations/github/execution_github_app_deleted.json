@@ -44,7 +44,14 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: Github",
-            "Resources: Investigation Guide"
+            "Data Source: GitHub Audit Logs",
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: GitHub",
+            "Domain: SaaS"
         ],
         "threat": [
             {
@@ -87,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 209
+        "version": 210
     },
-    "id": "fd01b949-81be-46d5-bcf8-284395d5f56d_209",
+    "id": "fd01b949-81be-46d5-bcf8-284395d5f56d_210",
     "type": "security-rule"
 }

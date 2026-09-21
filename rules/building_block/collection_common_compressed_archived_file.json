@@ -58,7 +58,10 @@
             "OS: macOS",
             "OS: Windows",
             "Tactic: Collection",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows",
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -142,8 +145,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "79124edf-30a8-4d48-95c4-11522cad94b1_7",
+    "id": "79124edf-30a8-4d48-95c4-11522cad94b1_8",
     "type": "security-rule"
 }

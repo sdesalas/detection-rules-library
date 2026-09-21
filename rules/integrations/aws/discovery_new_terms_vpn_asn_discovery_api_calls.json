@@ -96,7 +96,12 @@
             "Data Source: AWS CloudTrail",
             "Use Case: Threat Detection",
             "Tactic: Discovery",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Fast",
+            "Profile: Recommended",
+            "Rule Type: New Terms",
+            "Platform: AWS"
         ],
         "threat": [
             {
@@ -122,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "e3c7a891-4b2d-4e8c-a1f0-9d8e7c6b5a4d_2",
+    "id": "e3c7a891-4b2d-4e8c-a1f0-9d8e7c6b5a4d_3",
     "type": "security-rule"
 }

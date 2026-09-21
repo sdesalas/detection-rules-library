@@ -98,7 +98,11 @@
             "Data Source: Network Traffic",
             "Data Source: pfSense",
             "Data Source: Zeek",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Data Source: Network Packet Capture"
         ],
         "threat": [
             {
@@ -124,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "0ffc3d78-44ce-4a55-b2be-98219e0eed05_2",
+    "id": "0ffc3d78-44ce-4a55-b2be-98219e0eed05_3",
     "type": "security-rule"
 }

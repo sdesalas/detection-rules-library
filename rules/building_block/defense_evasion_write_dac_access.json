@@ -63,7 +63,9 @@
             "Data Source: Active Directory",
             "Use Case: Active Directory Monitoring",
             "Rule Type: BBR",
-            "Data Source: Windows Security Event Logs"
+            "Data Source: Windows Security Event Logs",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -106,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 111
+        "version": 112
     },
-    "id": "f5861570-e39a-4b8a-9259-abd39f84cb97_111",
+    "id": "f5861570-e39a-4b8a-9259-abd39f84cb97_112",
     "type": "security-rule"
 }

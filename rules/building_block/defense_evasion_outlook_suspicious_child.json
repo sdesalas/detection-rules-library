@@ -66,7 +66,9 @@
             "Tactic: Defense Evasion",
             "Tactic: Persistence",
             "Rule Type: BBR",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -134,8 +136,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "6cf17149-a8e3-44ec-9ec9-fdc8535547a1_5",
+    "id": "6cf17149-a8e3-44ec-9ec9-fdc8535547a1_6",
     "type": "security-rule"
 }

@@ -81,7 +81,12 @@
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
             "Data Source: Sysmon",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: High",
+            "Performance: Fast",
+            "Profile: Aggressive",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Windows"
         ],
         "threat": [
             {
@@ -109,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 112
+        "version": 113
     },
-    "id": "166727ab-6768-4e26-b80c-948b228ffc06_112",
+    "id": "166727ab-6768-4e26-b80c-948b228ffc06_113",
     "type": "security-rule"
 }

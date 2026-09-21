@@ -50,7 +50,10 @@
             "Use Case: Threat Detection",
             "Use Case: Blocked Threat Tracking",
             "Tactic: Initial Access",
-            "Rule Type: BBR"
+            "Rule Type: BBR",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Microsoft 365",
+            "Domain: Email"
         ],
         "threat": [
             {
@@ -83,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "4bae6c34-57be-403a-a556-e48f9ecef0b7_2",
+    "id": "4bae6c34-57be-403a-a556-e48f9ecef0b7_3",
     "type": "security-rule"
 }

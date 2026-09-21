@@ -142,12 +142,18 @@
             "Domain: Cloud",
             "Domain: Kubernetes",
             "Data Source: GCP",
-            "Data Source: GCP Audit Logs",
             "Data Source: Google Cloud Platform",
+            "Data Source: GCP Audit Logs",
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Tactic: Privilege Escalation",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Normal",
+            "Rule Type: ES|QL",
+            "Platform: GCP",
+            "Domain: Containers",
+            "Platform: Kubernetes"
         ],
         "threat": [
             {
@@ -197,8 +203,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "4159bec9-76ad-4cdc-a797-4a8572073bbe_1",
+    "id": "4159bec9-76ad-4cdc-a797-4a8572073bbe_2",
     "type": "security-rule"
 }

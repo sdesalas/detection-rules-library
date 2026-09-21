@@ -94,7 +94,13 @@
             "Data Source: Kubernetes",
             "Use Case: Threat Detection",
             "Tactic: Defense Evasion",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Unknown",
+            "Performance: Fast",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Azure",
+            "Platform: Kubernetes",
+            "Domain: Containers"
         ],
         "threat": [
             {
@@ -115,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "9bc14983-fabc-4a3e-896d-3632a902f17c_1",
+    "id": "9bc14983-fabc-4a3e-896d-3632a902f17c_2",
     "type": "security-rule"
 }

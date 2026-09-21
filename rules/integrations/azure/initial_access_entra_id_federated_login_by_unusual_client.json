@@ -97,7 +97,11 @@
             "Tactic: Initial Access",
             "Tactic: Defense Evasion",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Fast",
+            "Rule Type: New Terms",
+            "Platform: Entra ID"
         ],
         "threat": [
             {
@@ -169,8 +173,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 4
+        "version": 5
     },
-    "id": "616b8d00-05f8-11f1-8f33-f661ea17fbce_4",
+    "id": "616b8d00-05f8-11f1-8f33-f661ea17fbce_5",
     "type": "security-rule"
 }

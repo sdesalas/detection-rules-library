@@ -95,7 +95,13 @@
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Tactic: Persistence",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: New Terms",
+            "Platform: GCP",
+            "Domain: Containers",
+            "Platform: Kubernetes"
         ],
         "threat": [
             {
@@ -145,8 +151,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "8d97dfa3-3c51-45fb-8621-bde800c47b22_1",
+    "id": "8d97dfa3-3c51-45fb-8621-bde800c47b22_2",
     "type": "security-rule"
 }

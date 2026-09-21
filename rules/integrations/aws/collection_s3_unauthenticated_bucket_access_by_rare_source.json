@@ -88,7 +88,14 @@
             "Data Source: Amazon S3",
             "Use Case: Asset Visibility",
             "Resources: Investigation Guide",
-            "Tactic: Collection"
+            "Tactic: Collection",
+            "Noise: High",
+            "Performance: Normal",
+            "Profile: Aggressive",
+            "Rule Type: New Terms",
+            "Platform: AWS",
+            "Data Source: AWS CloudTrail",
+            "Service: AWS S3"
         ],
         "threat": [
             {
@@ -151,8 +158,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 9
+        "version": 10
     },
-    "id": "59bf26c2-bcbe-11ef-a215-f661ea17fbce_9",
+    "id": "59bf26c2-bcbe-11ef-a215-f661ea17fbce_10",
     "type": "security-rule"
 }

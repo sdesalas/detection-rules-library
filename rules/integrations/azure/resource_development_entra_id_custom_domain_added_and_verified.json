@@ -62,7 +62,11 @@
             "Use Case: Identity and Access Audit",
             "Tactic: Discovery",
             "Tactic: Resource Development",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Low",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Entra ID"
         ],
         "threat": [
             {
@@ -90,8 +94,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "7dc921db-4cd3-48ef-88bf-2bfa91f29f5c_2",
+    "id": "7dc921db-4cd3-48ef-88bf-2bfa91f29f5c_3",
     "type": "security-rule"
 }

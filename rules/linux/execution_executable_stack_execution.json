@@ -51,7 +51,11 @@
             "Use Case: Threat Detection",
             "Tactic: Execution",
             "Data Source: System",
-            "Resources: Investigation Guide"
+            "Resources: Investigation Guide",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Custom Query (KQL)",
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -94,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 6
+        "version": 7
     },
-    "id": "fc5105ce-2584-48b6-a0cf-9ace7eeffd3c_6",
+    "id": "fc5105ce-2584-48b6-a0cf-9ace7eeffd3c_7",
     "type": "security-rule"
 }

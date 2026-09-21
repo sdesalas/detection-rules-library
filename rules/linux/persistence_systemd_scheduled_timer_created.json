@@ -76,7 +76,12 @@
             "Use Case: Threat Detection",
             "Tactic: Persistence",
             "Resources: Investigation Guide",
-            "Data Source: Elastic Defend"
+            "Data Source: Elastic Defend",
+            "Noise: Medium",
+            "Performance: Normal",
+            "Rule Type: Event Correlation (EQL)",
+            "Platform: Linux",
+            "Resources: Osquery"
         ],
         "threat": [
             {
@@ -126,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 20
+        "version": 21
     },
-    "id": "7fb500fa-8e24-4bd1-9480-2a819352602c_20",
+    "id": "7fb500fa-8e24-4bd1-9480-2a819352602c_21",
     "type": "security-rule"
 }
