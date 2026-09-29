@@ -34,6 +34,16 @@
             },
             {
                 "ecs": false,
+                "name": "gen_ai.policy.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "gen_ai.policy.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
                 "name": "gen_ai.request.model.id",
                 "type": "keyword"
             },
@@ -67,8 +77,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 8
+        "version": 9
     },
-    "id": "f4c2515a-18bb-47ce-a768-1dc4e7b0fe6c_8",
+    "id": "f4c2515a-18bb-47ce-a768-1dc4e7b0fe6c_9",
     "type": "security-rule"
 }

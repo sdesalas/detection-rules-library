@@ -48,8 +48,43 @@
         "required_fields": [
             {
                 "ecs": true,
+                "name": "@timestamp",
+                "type": "date"
+            },
+            {
+                "ecs": true,
                 "name": "destination.ip",
                 "type": "ip"
+            },
+            {
+                "ecs": true,
+                "name": "destination.port",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "host.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "network.community_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "network.protocol",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "network.transport",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "observer.name",
+                "type": "keyword"
             },
             {
                 "ecs": true,
@@ -58,8 +93,48 @@
             },
             {
                 "ecs": true,
+                "name": "tls.client.server_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "tls.established",
+                "type": "boolean"
+            },
+            {
+                "ecs": true,
+                "name": "tls.server.hash.sha1",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "tls.server.hash.sha256",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "tls.server.x509.issuer.distinguished_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "tls.server.x509.not_after",
+                "type": "date"
+            },
+            {
+                "ecs": true,
                 "name": "tls.server.x509.not_before",
                 "type": "date"
+            },
+            {
+                "ecs": true,
+                "name": "tls.server.x509.serial_number",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "tls.server.x509.subject.common_name",
+                "type": "keyword"
             },
             {
                 "ecs": true,
@@ -112,8 +187,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "869fe008-5dd4-4f07-9c2e-aa90c3926fd9_2",
+    "id": "869fe008-5dd4-4f07-9c2e-aa90c3926fd9_3",
     "type": "security-rule"
 }

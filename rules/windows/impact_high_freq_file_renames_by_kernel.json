@@ -22,7 +22,32 @@
         "required_fields": [
             {
                 "ecs": true,
+                "name": "@timestamp",
+                "type": "date"
+            },
+            {
+                "ecs": true,
+                "name": "event.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.category",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "file.extension",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "file.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "file.path",
                 "type": "keyword"
             },
             {
@@ -32,13 +57,28 @@
             },
             {
                 "ecs": true,
+                "name": "host.ip",
+                "type": "ip"
+            },
+            {
+                "ecs": true,
                 "name": "host.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "host.os.type",
                 "type": "keyword"
             },
             {
                 "ecs": true,
                 "name": "process.entity_id",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.pid",
+                "type": "long"
             },
             {
                 "ecs": true,
@@ -120,8 +160,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 216
+        "version": 217
     },
-    "id": "1397e1b9-0c90-4d24-8d7b-80598eb9bc9a_216",
+    "id": "1397e1b9-0c90-4d24-8d7b-80598eb9bc9a_217",
     "type": "security-rule"
 }

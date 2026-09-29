@@ -24,6 +24,21 @@
                 "ecs": true,
                 "name": "agent.id",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.agent_id_status",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "host.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "user.id",
+                "type": "keyword"
             }
         ],
         "risk_score": 73,
@@ -80,8 +95,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 108
+        "version": 109
     },
-    "id": "493834ca-f861-414c-8602-150d5505b777_108",
+    "id": "493834ca-f861-414c-8602-150d5505b777_109",
     "type": "security-rule"
 }

@@ -41,23 +41,8 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "@timestamp",
-                "type": "date"
-            },
-            {
-                "ecs": false,
-                "name": "_id",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_index",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_version",
-                "type": "long"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
@@ -65,58 +50,18 @@
                 "type": "keyword"
             },
             {
-                "ecs": false,
-                "name": "o365.audit.ApplicationId",
+                "ecs": true,
+                "name": "event.outcome",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.provider",
                 "type": "keyword"
             },
             {
                 "ecs": false,
                 "name": "o365.audit.ObjectId",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "o365.audit.Parameters.ForwardAsAttachmentTo",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "o365.audit.Parameters.ForwardTo",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "o365.audit.Parameters.RedirectTo",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "o365.audit.UserId",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "source.as.number",
-                "type": "long"
-            },
-            {
-                "ecs": true,
-                "name": "source.as.organization.name",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "source.ip",
-                "type": "ip"
-            },
-            {
-                "ecs": true,
-                "name": "user.domain",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "user.name",
                 "type": "keyword"
             }
         ],
@@ -186,8 +131,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "1c3d9346-4591-4894-935c-dad2824850f2_2",
+    "id": "1c3d9346-4591-4894-935c-dad2824850f2_3",
     "type": "security-rule"
 }

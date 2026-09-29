@@ -26,8 +26,38 @@
         "required_fields": [
             {
                 "ecs": true,
+                "name": "@timestamp",
+                "type": "date"
+            },
+            {
+                "ecs": true,
                 "name": "client.ip",
                 "type": "ip"
+            },
+            {
+                "ecs": true,
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": false,
+                "name": "network_traffic.amqp.method",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "network_traffic.amqp.no-wait",
+                "type": "boolean"
+            },
+            {
+                "ecs": false,
+                "name": "network_traffic.amqp.queue",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "network_traffic.status",
+                "type": "keyword"
             },
             {
                 "ecs": true,
@@ -69,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "286614ee-8b72-4ea5-a22d-e0d2ae59d0a9_2",
+    "id": "286614ee-8b72-4ea5-a22d-e0d2ae59d0a9_3",
     "type": "security-rule"
 }

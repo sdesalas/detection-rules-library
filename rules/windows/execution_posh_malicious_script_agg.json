@@ -28,6 +28,11 @@
                 "type": "keyword"
             },
             {
+                "ecs": false,
+                "name": "kibana.alert.rule.name",
+                "type": "keyword"
+            },
+            {
                 "ecs": true,
                 "name": "process.pid",
                 "type": "long"
@@ -81,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 7
+        "version": 8
     },
-    "id": "f770ce79-05fd-4d74-9866-1c5d66c9b34b_7",
+    "id": "f770ce79-05fd-4d74-9866-1c5d66c9b34b_8",
     "type": "security-rule"
 }

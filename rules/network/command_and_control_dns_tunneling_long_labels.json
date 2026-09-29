@@ -49,6 +49,58 @@
                 "version": "^5.0.0"
             }
         ],
+        "required_fields": [
+            {
+                "ecs": true,
+                "name": "@timestamp",
+                "type": "date"
+            },
+            {
+                "ecs": true,
+                "name": "client.ip",
+                "type": "ip"
+            },
+            {
+                "ecs": true,
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
+                "name": "destination.ip",
+                "type": "ip"
+            },
+            {
+                "ecs": true,
+                "name": "dns.question.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "dns.question.registered_domain",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "dns.question.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.dataset",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "observer.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.ip",
+                "type": "ip"
+            }
+        ],
         "risk_score": 47,
         "rule_id": "89ed957d-609b-4b00-b8c6-a5cbd187632c",
         "setup": "## Setup\n\nThis rule requires DNS transaction events from one of the following sources:\n\n- Elastic Network Packet Capture (`network_traffic.dns`) in `logs-network_traffic.dns-*`\n- Fortinet FortiGate DNS logs (`fortinet_fortigate.log`) in `logs-fortinet_fortigate.log-*`\n- Elastic Zeek (`zeek.dns`) in `logs-zeek.dns-*`\n- Legacy Packetbeat DNS events in `packetbeat-*` with `event.dataset` set to `dns`\n\nPlace the sensor where it observes endpoint-to-resolver DNS traffic. If the sensor is upstream of a recursive resolver,\nor if the captured client is a localhost listener such as `127.0.0.1`, `Esql.client_ip` may identify shared DNS\ninfrastructure instead of the originating endpoint.\n\nDNS-over-HTTPS (DoH), DNS-over-TLS (DoT), and other encrypted DNS traffic are not visible to packet capture unless the\nsensor receives decrypted DNS telemetry or equivalent resolver logs mapped to ECS.\n",
@@ -119,8 +171,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 4
     },
-    "id": "89ed957d-609b-4b00-b8c6-a5cbd187632c_2",
+    "id": "89ed957d-609b-4b00-b8c6-a5cbd187632c_4",
     "type": "security-rule"
 }

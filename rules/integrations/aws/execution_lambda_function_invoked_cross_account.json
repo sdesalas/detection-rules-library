@@ -37,8 +37,43 @@
         "required_fields": [
             {
                 "ecs": false,
+                "name": "aws.cloudtrail.request_parameters",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "aws.cloudtrail.resources.arn",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
                 "name": "aws.cloudtrail.user_identity.arn",
                 "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "aws.cloudtrail.user_identity.invoked_by",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.outcome",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.provider",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.ip",
+                "type": "ip"
             }
         ],
         "risk_score": 47,
@@ -78,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "49002bbe-7aea-4146-91eb-b2b683bf5ed5_2",
+    "id": "49002bbe-7aea-4146-91eb-b2b683bf5ed5_3",
     "type": "security-rule"
 }

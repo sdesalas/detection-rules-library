@@ -37,6 +37,26 @@
                 "ecs": false,
                 "name": "aws.cloudtrail.user_identity.arn",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.outcome",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.provider",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.ip",
+                "type": "ip"
             }
         ],
         "risk_score": 47,
@@ -78,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "55260656-76d6-427b-bd02-7acdde131b64_2",
+    "id": "55260656-76d6-427b-bd02-7acdde131b64_3",
     "type": "security-rule"
 }

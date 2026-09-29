@@ -52,72 +52,12 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "@timestamp",
-                "type": "date"
-            },
-            {
-                "ecs": false,
-                "name": "_id",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_index",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_version",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "aws.cloudtrail.request_parameters",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "aws.cloudtrail.resources.arn",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "aws.cloudtrail.resources.type",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "aws.cloudtrail.response_elements",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "aws.cloudtrail.user_identity.access_key_id",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "aws.cloudtrail.user_identity.arn",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "aws.cloudtrail.user_identity.type",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
                 "name": "cloud.account.id",
                 "type": "keyword"
             },
             {
                 "ecs": true,
-                "name": "cloud.region",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "data_stream.namespace",
+                "name": "data_stream.dataset",
                 "type": "constant_keyword"
             },
             {
@@ -132,17 +72,7 @@
             },
             {
                 "ecs": true,
-                "name": "source.ip",
-                "type": "ip"
-            },
-            {
-                "ecs": true,
-                "name": "user.name",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "user_agent.original",
+                "name": "event.provider",
                 "type": "keyword"
             }
         ],
@@ -187,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 13
+        "version": 14
     },
-    "id": "ab8f074c-5565-4bc4-991c-d49770e19fc9_13",
+    "id": "ab8f074c-5565-4bc4-991c-d49770e19fc9_14",
     "type": "security-rule"
 }

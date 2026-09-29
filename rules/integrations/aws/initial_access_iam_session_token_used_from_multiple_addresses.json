@@ -49,6 +49,73 @@
                 "version": "^4.0.0"
             }
         ],
+        "required_fields": [
+            {
+                "ecs": true,
+                "name": "@timestamp",
+                "type": "date"
+            },
+            {
+                "ecs": false,
+                "name": "aws.cloudtrail.event_category",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "aws.cloudtrail.user_identity.access_key_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "aws.cloudtrail.user_identity.arn",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "aws.cloudtrail.user_identity.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
+                "name": "data_stream.namespace",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.provider",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.as.organization.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.geo.city_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.ip",
+                "type": "ip"
+            },
+            {
+                "ecs": true,
+                "name": "user_agent.original",
+                "type": "keyword"
+            }
+        ],
         "risk_score": 47,
         "rule_id": "0d92d30a-5f3e-4b71-bc3d-4a0c4914b7e0",
         "severity": "medium",
@@ -88,8 +155,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 107
+        "version": 108
     },
-    "id": "0d92d30a-5f3e-4b71-bc3d-4a0c4914b7e0_107",
+    "id": "0d92d30a-5f3e-4b71-bc3d-4a0c4914b7e0_108",
     "type": "security-rule"
 }

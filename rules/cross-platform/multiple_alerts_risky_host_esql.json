@@ -23,12 +23,77 @@
         "required_fields": [
             {
                 "ecs": true,
+                "name": "event.dataset",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.module",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "host.id",
                 "type": "keyword"
             },
             {
                 "ecs": true,
                 "name": "host.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "kibana.alert.risk_score",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "kibana.alert.rule.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "kibana.alert.rule.rule_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "kibana.alert.rule.tags",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "kibana.alert.rule.threat.tactic.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "kibana.alert.rule.threat.tactic.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "kibana.alert.rule.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.command_line",
+                "type": "wildcard"
+            },
+            {
+                "ecs": true,
+                "name": "process.entity_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.executable",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.parent.executable",
                 "type": "keyword"
             }
         ],
@@ -46,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 7
+        "version": 8
     },
-    "id": "29531d20-0e80-41d4-9ec6-d6b58e4a475c_7",
+    "id": "29531d20-0e80-41d4-9ec6-d6b58e4a475c_8",
     "type": "security-rule"
 }
