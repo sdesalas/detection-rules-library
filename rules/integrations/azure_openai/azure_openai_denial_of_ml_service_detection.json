@@ -27,6 +27,21 @@
         ],
         "required_fields": [
             {
+                "ecs": true,
+                "name": "@timestamp",
+                "type": "date"
+            },
+            {
+                "ecs": false,
+                "name": "azure.open_ai.operation_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.open_ai.properties.request_length",
+                "type": "float"
+            },
+            {
                 "ecs": false,
                 "name": "azure.resource.name",
                 "type": "keyword"
@@ -56,8 +71,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 6
+        "version": 7
     },
-    "id": "b0450411-46e5-46d2-9b35-8b5dd9ba763e_6",
+    "id": "b0450411-46e5-46d2-9b35-8b5dd9ba763e_7",
     "type": "security-rule"
 }

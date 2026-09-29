@@ -41,8 +41,38 @@
             },
             {
                 "ecs": true,
+                "name": "agent.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
+                "name": "data_stream.namespace",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
+                "name": "http.response.status_code",
+                "type": "long"
+            },
+            {
+                "ecs": true,
                 "name": "source.ip",
                 "type": "ip"
+            },
+            {
+                "ecs": true,
+                "name": "url.original",
+                "type": "wildcard"
+            },
+            {
+                "ecs": true,
+                "name": "user_agent.original",
+                "type": "keyword"
             }
         ],
         "risk_score": 21,
@@ -241,8 +271,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 7
+        "version": 8
     },
-    "id": "f3ac6734-7e52-4a0d-90b7-6847bf4308f2_7",
+    "id": "f3ac6734-7e52-4a0d-90b7-6847bf4308f2_8",
     "type": "security-rule"
 }

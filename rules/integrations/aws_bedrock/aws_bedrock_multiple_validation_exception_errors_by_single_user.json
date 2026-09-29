@@ -37,7 +37,17 @@
         "required_fields": [
             {
                 "ecs": true,
+                "name": "@timestamp",
+                "type": "date"
+            },
+            {
+                "ecs": true,
                 "name": "cloud.account.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "gen_ai.response.error_code",
                 "type": "keyword"
             },
             {
@@ -73,8 +83,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 8
+        "version": 9
     },
-    "id": "725a048a-88c5-4fc7-8677-a44fc0031822_8",
+    "id": "725a048a-88c5-4fc7-8677-a44fc0031822_9",
     "type": "security-rule"
 }

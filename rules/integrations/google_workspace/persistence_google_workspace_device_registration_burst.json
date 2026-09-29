@@ -36,6 +36,81 @@
         "required_fields": [
             {
                 "ecs": true,
+                "name": "@timestamp",
+                "type": "date"
+            },
+            {
+                "ecs": true,
+                "name": "event.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.dataset",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.provider",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "google_workspace.actor.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "google_workspace.device.account_state",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "google_workspace.device.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "google_workspace.device.model",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "google_workspace.device.resource.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "google_workspace.device.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "google_workspace.event.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "host.os.version",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "organization.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "user.domain",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "user.email",
                 "type": "keyword"
             },
@@ -133,8 +208,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "bea0589d-c7a4-4dc6-a931-9fecaa8689fb_2",
+    "id": "bea0589d-c7a4-4dc6-a931-9fecaa8689fb_3",
     "type": "security-rule"
 }

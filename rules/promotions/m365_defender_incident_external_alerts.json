@@ -6,8 +6,8 @@
                 "value": 24
             },
             "group_by": [
-                "m365_defender.incident.id",
-                "m365_defender.incident.tenant_id"
+                "event.id",
+                "cloud.account.id"
             ],
             "missing_fields_strategy": "doNotSuppress"
         },
@@ -97,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "3c99579e-6491-4562-87f4-4d10f0a822b4_2",
+    "id": "3c99579e-6491-4562-87f4-4d10f0a822b4_3",
     "type": "security-rule"
 }

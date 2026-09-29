@@ -25,7 +25,37 @@
             },
             {
                 "ecs": true,
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
+                "name": "data_stream.namespace",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
+                "name": "destination.ip",
+                "type": "ip"
+            },
+            {
+                "ecs": true,
+                "name": "event.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "host.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "host.os.type",
                 "type": "keyword"
             },
             {
@@ -74,8 +104,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 13
+        "version": 14
     },
-    "id": "860f2a03-a1cf-48d6-a674-c6d62ae608a1_13",
+    "id": "860f2a03-a1cf-48d6-a674-c6d62ae608a1_14",
     "type": "security-rule"
 }

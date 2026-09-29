@@ -27,42 +27,12 @@
         "required_fields": [
             {
                 "ecs": false,
-                "name": "_id",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_index",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_version",
-                "type": "long"
-            },
-            {
-                "ecs": true,
-                "name": "data_stream.namespace",
-                "type": "constant_keyword"
-            },
-            {
-                "ecs": true,
-                "name": "event.action",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "event.original",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
                 "name": "kubernetes.audit.annotations.authorization_k8s_io/decision",
                 "type": "keyword"
             },
             {
                 "ecs": false,
-                "name": "kubernetes.audit.objectRef.name",
+                "name": "kubernetes.audit.level",
                 "type": "keyword"
             },
             {
@@ -72,37 +42,27 @@
             },
             {
                 "ecs": false,
-                "name": "kubernetes.audit.requestURI",
+                "name": "kubernetes.audit.responseObject.rules.resources",
                 "type": "keyword"
             },
             {
                 "ecs": false,
-                "name": "kubernetes.audit.user.groups",
+                "name": "kubernetes.audit.responseObject.rules.verbs",
                 "type": "keyword"
             },
             {
                 "ecs": false,
-                "name": "kubernetes.audit.user.username",
+                "name": "kubernetes.audit.sourceIPs",
+                "type": "text"
+            },
+            {
+                "ecs": false,
+                "name": "kubernetes.audit.stage",
                 "type": "keyword"
             },
             {
                 "ecs": false,
                 "name": "kubernetes.audit.verb",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "source.ip",
-                "type": "ip"
-            },
-            {
-                "ecs": true,
-                "name": "user.name",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "user_agent.original",
                 "type": "keyword"
             }
         ],
@@ -148,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "c8f4a2e1-9b3d-4c7e-8f2a-1d0e5b6c7a89_2",
+    "id": "c8f4a2e1-9b3d-4c7e-8f2a-1d0e5b6c7a89_3",
     "type": "security-rule"
 }

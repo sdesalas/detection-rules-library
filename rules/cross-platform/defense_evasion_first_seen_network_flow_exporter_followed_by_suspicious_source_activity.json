@@ -46,8 +46,53 @@
         "required_fields": [
             {
                 "ecs": true,
+                "name": "@timestamp",
+                "type": "date"
+            },
+            {
+                "ecs": true,
                 "name": "data_stream.namespace",
                 "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.kind",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "kibana.alert.building_block_type",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "kibana.alert.risk_score",
+                "type": "long"
+            },
+            {
+                "ecs": false,
+                "name": "kibana.alert.rule.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "kibana.alert.rule.rule_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "kibana.alert.rule.tags",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "kibana.alert.rule.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "kibana.alert.severity",
+                "type": "keyword"
             },
             {
                 "ecs": true,
@@ -95,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "882c8edc-1e39-4a60-80b2-485491b6c91c_2",
+    "id": "882c8edc-1e39-4a60-80b2-485491b6c91c_3",
     "type": "security-rule"
 }

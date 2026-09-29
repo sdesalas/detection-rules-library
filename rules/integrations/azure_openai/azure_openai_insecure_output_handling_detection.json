@@ -26,6 +26,21 @@
         "required_fields": [
             {
                 "ecs": false,
+                "name": "azure.open_ai.operation_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.open_ai.properties.response_length",
+                "type": "float"
+            },
+            {
+                "ecs": false,
+                "name": "azure.open_ai.result_signature",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
                 "name": "azure.resource.name",
                 "type": "keyword"
             }
@@ -53,8 +68,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 6
+        "version": 7
     },
-    "id": "fb16f9ef-cb03-4234-adc2-44641f3b71ee_6",
+    "id": "fb16f9ef-cb03-4234-adc2-44641f3b71ee_7",
     "type": "security-rule"
 }

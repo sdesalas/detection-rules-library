@@ -55,6 +55,16 @@
         "required_fields": [
             {
                 "ecs": true,
+                "name": "@timestamp",
+                "type": "date"
+            },
+            {
+                "ecs": true,
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
                 "name": "data_stream.namespace",
                 "type": "constant_keyword"
             },
@@ -80,8 +90,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "dfe3f626-4224-417e-aff1-8ef9a72c3191_2",
+    "id": "dfe3f626-4224-417e-aff1-8ef9a72c3191_3",
     "type": "security-rule"
 }

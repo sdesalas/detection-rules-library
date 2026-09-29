@@ -37,6 +37,21 @@
             },
             {
                 "ecs": true,
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
+                "name": "data_stream.namespace",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
+                "name": "host.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "source.ip",
                 "type": "ip"
             }
@@ -93,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "6631a759-4559-4c33-a392-13f146c8bcc4_5",
+    "id": "6631a759-4559-4c33-a392-13f146c8bcc4_6",
     "type": "security-rule"
 }

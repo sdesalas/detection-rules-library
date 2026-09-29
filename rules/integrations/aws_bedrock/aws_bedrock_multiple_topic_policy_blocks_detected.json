@@ -29,6 +29,21 @@
         ],
         "required_fields": [
             {
+                "ecs": false,
+                "name": "gen_ai.compliance.violation_detected",
+                "type": "boolean"
+            },
+            {
+                "ecs": false,
+                "name": "gen_ai.policy.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "gen_ai.policy.name",
+                "type": "keyword"
+            },
+            {
                 "ecs": true,
                 "name": "user.id",
                 "type": "keyword"
@@ -57,8 +72,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 6
+        "version": 7
     },
-    "id": "266bbea8-fcf9-4b0e-ba7b-fc00f6b1dc73_6",
+    "id": "266bbea8-fcf9-4b0e-ba7b-fc00f6b1dc73_7",
     "type": "security-rule"
 }
