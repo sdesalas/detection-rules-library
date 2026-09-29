@@ -26,33 +26,8 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "@timestamp",
-                "type": "date"
-            },
-            {
-                "ecs": false,
-                "name": "_id",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_index",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_version",
-                "type": "long"
-            },
-            {
-                "ecs": true,
                 "name": "data_stream.dataset",
                 "type": "constant_keyword"
-            },
-            {
-                "ecs": true,
-                "name": "destination.ip",
-                "type": "ip"
             },
             {
                 "ecs": true,
@@ -61,13 +36,18 @@
             },
             {
                 "ecs": true,
+                "name": "event.category",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "network.protocol",
                 "type": "keyword"
             },
             {
                 "ecs": true,
-                "name": "source.ip",
-                "type": "ip"
+                "name": "network.transport",
+                "type": "keyword"
             },
             {
                 "ecs": true,
@@ -127,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 109
+        "version": 110
     },
-    "id": "2e580225-2a58-48ef-938b-572933be06fe_109",
+    "id": "2e580225-2a58-48ef-938b-572933be06fe_110",
     "type": "security-rule"
 }

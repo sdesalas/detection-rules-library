@@ -24,36 +24,6 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "@timestamp",
-                "type": "date"
-            },
-            {
-                "ecs": false,
-                "name": "_id",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_index",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_version",
-                "type": "long"
-            },
-            {
-                "ecs": true,
-                "name": "data_stream.namespace",
-                "type": "constant_keyword"
-            },
-            {
-                "ecs": true,
-                "name": "event.action",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
                 "name": "event.type",
                 "type": "keyword"
             },
@@ -69,27 +39,12 @@
             },
             {
                 "ecs": true,
-                "name": "host.id",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "host.name",
+                "name": "host.os.type",
                 "type": "keyword"
             },
             {
                 "ecs": true,
                 "name": "process.name",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "user.id",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "user.name",
                 "type": "keyword"
             }
         ],
@@ -164,8 +119,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "5773cef4-11a5-4d51-a40b-0e0a79d68432_2",
+    "id": "5773cef4-11a5-4d51-a40b-0e0a79d68432_3",
     "type": "security-rule"
 }

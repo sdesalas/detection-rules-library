@@ -39,49 +39,9 @@
                 "type": "date"
             },
             {
-                "ecs": false,
-                "name": "_id",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_index",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_version",
-                "type": "long"
-            },
-            {
-                "ecs": true,
-                "name": "data_stream.dataset",
-                "type": "constant_keyword"
-            },
-            {
-                "ecs": true,
-                "name": "data_stream.namespace",
-                "type": "constant_keyword"
-            },
-            {
                 "ecs": true,
                 "name": "event.action",
                 "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "event.category",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "event.created",
-                "type": "date"
-            },
-            {
-                "ecs": true,
-                "name": "event.ingested",
-                "type": "date"
             },
             {
                 "ecs": true,
@@ -95,18 +55,13 @@
             },
             {
                 "ecs": true,
-                "name": "file.hash.sha256",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
                 "name": "file.name",
                 "type": "keyword"
             },
             {
-                "ecs": true,
-                "name": "file.origin_referrer_url",
-                "type": "keyword"
+                "ecs": false,
+                "name": "file.name.caseless",
+                "type": "unknown"
             },
             {
                 "ecs": true,
@@ -120,47 +75,27 @@
             },
             {
                 "ecs": true,
-                "name": "file.size",
-                "type": "long"
-            },
-            {
-                "ecs": true,
                 "name": "host.id",
                 "type": "keyword"
             },
             {
                 "ecs": true,
-                "name": "host.name",
+                "name": "host.os.type",
                 "type": "keyword"
             },
             {
                 "ecs": true,
-                "name": "process.command_line",
-                "type": "wildcard"
-            },
-            {
-                "ecs": true,
-                "name": "process.entity_id",
+                "name": "process.args",
                 "type": "keyword"
             },
             {
-                "ecs": true,
-                "name": "process.executable",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "process.name",
+                "ecs": false,
+                "name": "process.name.caseless",
                 "type": "keyword"
             },
             {
                 "ecs": true,
                 "name": "user.id",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "user.name",
                 "type": "keyword"
             }
         ],
@@ -232,8 +167,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "ed626330-f3ac-4568-b4e4-cbc296748320_3",
+    "id": "ed626330-f3ac-4568-b4e4-cbc296748320_4",
     "type": "security-rule"
 }

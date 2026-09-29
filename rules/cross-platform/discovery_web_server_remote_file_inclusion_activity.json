@@ -36,8 +36,43 @@
         "required_fields": [
             {
                 "ecs": true,
+                "name": "agent.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "agent.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
+                "name": "data_stream.namespace",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
+                "name": "http.request.method",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "http.response.status_code",
+                "type": "long"
+            },
+            {
+                "ecs": true,
                 "name": "source.ip",
                 "type": "ip"
+            },
+            {
+                "ecs": true,
+                "name": "url.original",
+                "type": "wildcard"
             }
         ],
         "risk_score": 21,
@@ -107,8 +142,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 106
+        "version": 107
     },
-    "id": "45d099b4-a12e-4913-951c-0129f73efb41_106",
+    "id": "45d099b4-a12e-4913-951c-0129f73efb41_107",
     "type": "security-rule"
 }

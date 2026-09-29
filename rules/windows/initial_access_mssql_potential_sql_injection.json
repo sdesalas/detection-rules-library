@@ -39,47 +39,12 @@
         "required_fields": [
             {
                 "ecs": true,
-                "name": "@timestamp",
-                "type": "date"
-            },
-            {
-                "ecs": false,
-                "name": "_id",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_index",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_version",
-                "type": "long"
-            },
-            {
-                "ecs": true,
-                "name": "data_stream.namespace",
-                "type": "constant_keyword"
-            },
-            {
-                "ecs": true,
-                "name": "event.outcome",
+                "name": "event.code",
                 "type": "keyword"
             },
             {
                 "ecs": true,
-                "name": "host.id",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "host.ip",
-                "type": "ip"
-            },
-            {
-                "ecs": true,
-                "name": "host.name",
+                "name": "host.os.type",
                 "type": "keyword"
             },
             {
@@ -89,7 +54,12 @@
             },
             {
                 "ecs": false,
-                "name": "winlog.computer_name",
+                "name": "message_upper",
+                "type": "unknown"
+            },
+            {
+                "ecs": false,
+                "name": "winlog.provider_name",
                 "type": "keyword"
             }
         ],
@@ -128,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "e5d219fd-8362-4b67-a0b8-e3dd4331acdd_2",
+    "id": "e5d219fd-8362-4b67-a0b8-e3dd4331acdd_3",
     "type": "security-rule"
 }

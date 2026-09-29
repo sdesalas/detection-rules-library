@@ -28,6 +28,26 @@
         ],
         "required_fields": [
             {
+                "ecs": true,
+                "name": "client.geo.country_name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.outcome",
+                "type": "keyword"
+            },
+            {
                 "ecs": false,
                 "name": "okta.actor.alternate_id",
                 "type": "keyword"
@@ -36,6 +56,11 @@
                 "ecs": false,
                 "name": "okta.actor.id",
                 "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "okta.security_context.is_proxy",
+                "type": "boolean"
             }
         ],
         "risk_score": 47,
@@ -80,8 +105,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 312
+        "version": 313
     },
-    "id": "2e56e1bc-867a-11ee-b13e-f661ea17fbcd_312",
+    "id": "2e56e1bc-867a-11ee-b13e-f661ea17fbcd_313",
     "type": "security-rule"
 }

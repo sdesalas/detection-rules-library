@@ -34,8 +34,38 @@
             },
             {
                 "ecs": true,
+                "name": "destination.port",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "network.community_id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "source.ip",
                 "type": "ip"
+            },
+            {
+                "ecs": false,
+                "name": "tls.detailed.alert_types",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "tls.detailed.client_hello.extensions._unparsed_",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "tls.detailed.client_hello.extensions.application_layer_protocol_negotiation",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "tls.established",
+                "type": "boolean"
             }
         ],
         "risk_score": 21,
@@ -82,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "581bd9b4-ee08-415a-97d7-756e6c53c264_2",
+    "id": "581bd9b4-ee08-415a-97d7-756e6c53c264_3",
     "type": "security-rule"
 }

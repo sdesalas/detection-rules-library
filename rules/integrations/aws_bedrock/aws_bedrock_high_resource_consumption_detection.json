@@ -27,6 +27,16 @@
         ],
         "required_fields": [
             {
+                "ecs": false,
+                "name": "gen_ai.usage.completion_tokens",
+                "type": "integer"
+            },
+            {
+                "ecs": false,
+                "name": "gen_ai.usage.prompt_tokens",
+                "type": "integer"
+            },
+            {
                 "ecs": true,
                 "name": "user.id",
                 "type": "keyword"
@@ -56,8 +66,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 8
+        "version": 9
     },
-    "id": "b1773d05-f349-45fb-9850-287b8f92f02d_8",
+    "id": "b1773d05-f349-45fb-9850-287b8f92f02d_9",
     "type": "security-rule"
 }

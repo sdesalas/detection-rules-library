@@ -46,6 +46,11 @@
                 "type": "keyword"
             },
             {
+                "ecs": false,
+                "name": "gen_ai.response.error_code",
+                "type": "keyword"
+            },
+            {
                 "ecs": true,
                 "name": "user.id",
                 "type": "keyword"
@@ -76,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 8
+        "version": 9
     },
-    "id": "17261da3-a6d0-463c-aac8-ea1718afcd20_8",
+    "id": "17261da3-a6d0-463c-aac8-ea1718afcd20_9",
     "type": "security-rule"
 }

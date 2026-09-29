@@ -33,28 +33,23 @@
             },
             {
                 "ecs": false,
-                "name": "_id",
+                "name": "azure.auditlogs.operation_name",
                 "type": "keyword"
             },
             {
                 "ecs": false,
-                "name": "_index",
+                "name": "azure.auditlogs.properties.initiated_by.user.id",
                 "type": "keyword"
             },
             {
                 "ecs": false,
-                "name": "_version",
-                "type": "long"
-            },
-            {
-                "ecs": false,
-                "name": "azure.signinlogs.properties.app_display_name",
+                "name": "azure.auditlogs.properties.target_resources.0.display_name",
                 "type": "keyword"
             },
             {
                 "ecs": false,
-                "name": "azure.signinlogs.properties.app_id",
-                "type": "keyword"
+                "name": "azure.signinlogs.properties.authentication_details",
+                "type": "flattened"
             },
             {
                 "ecs": false,
@@ -68,42 +63,27 @@
             },
             {
                 "ecs": false,
-                "name": "azure.signinlogs.properties.device_detail.is_managed",
-                "type": "boolean"
-            },
-            {
-                "ecs": false,
-                "name": "azure.signinlogs.properties.incoming_token_type",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "azure.signinlogs.properties.resource_display_name",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
                 "name": "azure.signinlogs.properties.user_id",
                 "type": "keyword"
             },
             {
                 "ecs": false,
-                "name": "azure.signinlogs.properties.user_principal_name",
+                "name": "azure.signinlogs.properties.user_type",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "azure.signinlogs.result_signature",
                 "type": "keyword"
             },
             {
                 "ecs": true,
-                "name": "source.address",
-                "type": "keyword"
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
             },
             {
                 "ecs": true,
-                "name": "source.geo.country_name",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "user_agent.original",
+                "name": "event.outcome",
                 "type": "keyword"
             }
         ],
@@ -166,8 +146,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "62848597-595c-4cc3-8d24-6c47a5fee9a9_3",
+    "id": "62848597-595c-4cc3-8d24-6c47a5fee9a9_4",
     "type": "security-rule"
 }

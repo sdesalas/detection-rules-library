@@ -21,6 +21,78 @@
                 "version": ">=9.0.0"
             }
         ],
+        "required_fields": [
+            {
+                "ecs": true,
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
+                "name": "destination.user.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "elastic_defend_alert_user_name",
+                "type": "unknown"
+            },
+            {
+                "ecs": false,
+                "name": "email_alert_target_user_name",
+                "type": "unknown"
+            },
+            {
+                "ecs": true,
+                "name": "event.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.category",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.kind",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.module",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "host.id",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "message",
+                "type": "match_only_text"
+            },
+            {
+                "ecs": true,
+                "name": "process.executable",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "rule.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.user.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "user.name",
+                "type": "keyword"
+            }
+        ],
         "risk_score": 73,
         "rule_id": "c562a800-cf97-464e-9d6f-84db91e86e10",
         "severity": "high",
@@ -40,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 6
     },
-    "id": "c562a800-cf97-464e-9d6f-84db91e86e10_5",
+    "id": "c562a800-cf97-464e-9d6f-84db91e86e10_6",
     "type": "security-rule"
 }

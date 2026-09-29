@@ -42,49 +42,29 @@
         ],
         "required_fields": [
             {
-                "ecs": false,
-                "name": "_id",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_index",
-                "type": "keyword"
-            },
-            {
-                "ecs": false,
-                "name": "_version",
-                "type": "long"
-            },
-            {
                 "ecs": true,
-                "name": "host.id",
+                "name": "event.action",
                 "type": "keyword"
             },
             {
                 "ecs": true,
-                "name": "host.name",
+                "name": "event.category",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": false,
+                "name": "multi_spaces",
+                "type": "unknown"
             },
             {
                 "ecs": true,
                 "name": "process.command_line",
                 "type": "wildcard"
-            },
-            {
-                "ecs": true,
-                "name": "process.executable",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "process.parent.executable",
-                "type": "keyword"
-            },
-            {
-                "ecs": true,
-                "name": "user.name",
-                "type": "keyword"
             }
         ],
         "risk_score": 47,
@@ -160,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 6
+        "version": 7
     },
-    "id": "5a876e0d-d39a-49b9-8ad8-19c9b622203b_6",
+    "id": "5a876e0d-d39a-49b9-8ad8-19c9b622203b_7",
     "type": "security-rule"
 }

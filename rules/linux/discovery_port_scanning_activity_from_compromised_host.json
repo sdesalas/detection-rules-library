@@ -25,8 +25,33 @@
             },
             {
                 "ecs": true,
+                "name": "data_stream.dataset",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
+                "name": "data_stream.namespace",
+                "type": "constant_keyword"
+            },
+            {
+                "ecs": true,
                 "name": "destination.ip",
                 "type": "ip"
+            },
+            {
+                "ecs": true,
+                "name": "destination.port",
+                "type": "long"
+            },
+            {
+                "ecs": true,
+                "name": "event.action",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "event.type",
+                "type": "keyword"
             },
             {
                 "ecs": true,
@@ -35,8 +60,28 @@
             },
             {
                 "ecs": true,
+                "name": "host.os.type",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "network.direction",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
                 "name": "process.executable",
                 "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "process.name",
+                "type": "keyword"
+            },
+            {
+                "ecs": true,
+                "name": "source.ip",
+                "type": "ip"
             }
         ],
         "risk_score": 21,
@@ -75,8 +120,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 13
+        "version": 14
     },
-    "id": "6b341d03-1d63-41ac-841a-2009c86959ca_13",
+    "id": "6b341d03-1d63-41ac-841a-2009c86959ca_14",
     "type": "security-rule"
 }
