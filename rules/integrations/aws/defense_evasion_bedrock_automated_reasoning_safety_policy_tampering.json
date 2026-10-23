@@ -42,7 +42,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": ">=6.0.0"
+                "version": ">=7.0.0"
             }
         ],
         "required_fields": [
@@ -72,7 +72,7 @@
         "severity": "medium",
         "tags": [
             "Domain: Cloud",
-            "Domain: LLM",
+            "Domain: GenAI",
             "Data Source: AWS",
             "Data Source: AWS CloudTrail",
             "Data Source: Amazon Web Services",
@@ -86,7 +86,6 @@
             "Threat: Unauthorized AI Usage",
             "Rule Type: Custom Query (KQL)",
             "Platform: AWS",
-            "Domain: GenAI",
             "Service: AWS Bedrock",
             "Tactic: Defense Impairment"
         ],
@@ -109,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 5
     },
-    "id": "2d7822a5-418c-4cde-a96e-e337d77b67e7_3",
+    "id": "2d7822a5-418c-4cde-a96e-e337d77b67e7_5",
     "type": "security-rule"
 }

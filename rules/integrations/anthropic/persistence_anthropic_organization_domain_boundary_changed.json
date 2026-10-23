@@ -58,6 +58,7 @@
         "severity": "high",
         "tags": [
             "Domain: GenAI",
+            "Domain: Identity",
             "Platform: Anthropic",
             "Data Source: Anthropic Audit Logs",
             "Use Case: Identity and Access Audit",
@@ -85,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "fb3b43e2-0358-4bd0-b8b6-569d7c2baed1_1",
+    "id": "fb3b43e2-0358-4bd0-b8b6-569d7c2baed1_2",
     "type": "security-rule"
 }

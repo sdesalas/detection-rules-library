@@ -72,7 +72,7 @@
         "severity": "critical",
         "tags": [
             "Domain: Endpoint",
-            "Domain: LLM",
+            "Domain: GenAI",
             "Use Case: Threat Detection",
             "Tactic: Initial Access",
             "Rule Type: Higher-Order Rule",
@@ -84,7 +84,8 @@
             "Threat: Supply Chain",
             "Threat: Unauthorized AI Usage",
             "Rule Type: ES|QL",
-            "Domain: GenAI"
+            "Mitre Atlas: AML.T0053",
+            "Mitre Atlas: AML.T0011"
         ],
         "threat": [
             {
@@ -112,8 +113,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "d4e5f6a7-b8c9-7d0e-1f2a-3b4c5d6e7f8a_3",
+    "id": "d4e5f6a7-b8c9-7d0e-1f2a-3b4c5d6e7f8a_4",
     "type": "security-rule"
 }

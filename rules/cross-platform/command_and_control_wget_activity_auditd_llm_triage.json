@@ -103,7 +103,6 @@
         ],
         "tags": [
             "Domain: Endpoint",
-            "Domain: LLM",
             "OS: Linux",
             "Use Case: Threat Detection",
             "Tactic: Collection",
@@ -115,8 +114,7 @@
             "Noise: Low",
             "Performance: Normal",
             "Rule Type: ES|QL",
-            "Platform: Linux",
-            "Domain: GenAI"
+            "Platform: Linux"
         ],
         "threat": [
             {
@@ -167,8 +165,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "504e398f-5ad6-42c7-acd2-b2f4ddcdb0cf_4",
+    "id": "504e398f-5ad6-42c7-acd2-b2f4ddcdb0cf_5",
     "type": "security-rule"
 }

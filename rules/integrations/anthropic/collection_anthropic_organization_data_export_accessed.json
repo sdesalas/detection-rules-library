@@ -63,7 +63,9 @@
             "Resources: Investigation Guide",
             "Rule Type: ES|QL",
             "Tactic: Collection",
-            "Tactic: Exfiltration"
+            "Tactic: Exfiltration",
+            "Mitre Atlas: AML.T0085",
+            "Mitre Atlas: AML.T0025"
         ],
         "threat": [
             {
@@ -99,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "00955b87-ed85-4977-8ab1-9140f85b9d6c_1",
+    "id": "00955b87-ed85-4977-8ab1-9140f85b9d6c_2",
     "type": "security-rule"
 }

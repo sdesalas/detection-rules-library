@@ -33,7 +33,7 @@
         "related_integrations": [
             {
                 "package": "aws",
-                "version": ">=6.0.0"
+                "version": ">=7.0.0"
             }
         ],
         "required_fields": [
@@ -163,8 +163,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "7e5c0e5a-95a5-404e-a5b0-278d35dc3325_3",
+    "id": "7e5c0e5a-95a5-404e-a5b0-278d35dc3325_4",
     "type": "security-rule"
 }

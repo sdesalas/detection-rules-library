@@ -64,7 +64,8 @@
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
             "Rule Type: ES|QL",
-            "Tactic: Collection"
+            "Tactic: Collection",
+            "Mitre Atlas: AML.T0085"
         ],
         "threat": [
             {
@@ -85,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "754f378f-5828-4ab7-ba3c-01ad4365b474_1",
+    "id": "754f378f-5828-4ab7-ba3c-01ad4365b474_2",
     "type": "security-rule"
 }

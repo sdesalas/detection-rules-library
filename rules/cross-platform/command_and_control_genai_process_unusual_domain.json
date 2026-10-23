@@ -66,15 +66,14 @@
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
-            "Domain: LLM",
-            "Mitre Atlas: T0086",
             "Noise: Medium",
             "Performance: Normal",
             "Profile: Recommended",
             "Threat: Unauthorized AI Usage",
             "Rule Type: New Terms",
             "Platform: macOS",
-            "Domain: GenAI"
+            "Domain: GenAI",
+            "Mitre Atlas: AML.T0072"
         ],
         "threat": [
             {
@@ -102,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 7
+        "version": 8
     },
-    "id": "9050506c-df6d-4bdf-bc82-fcad0ef1e8c1_7",
+    "id": "9050506c-df6d-4bdf-bc82-fcad0ef1e8c1_8",
     "type": "security-rule"
 }

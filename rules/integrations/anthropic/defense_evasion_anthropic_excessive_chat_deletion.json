@@ -123,6 +123,7 @@
             "Use Case: UEBA",
             "Resources: Investigation Guide",
             "Rule Type: ES|QL",
+            "Mitre Atlas: AML.T0092",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -144,8 +145,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 4
     },
-    "id": "2944223e-3c25-4ce4-bd69-64f2914da187_2",
+    "id": "2944223e-3c25-4ce4-bd69-64f2914da187_4",
     "type": "security-rule"
 }

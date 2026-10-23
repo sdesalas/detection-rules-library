@@ -118,7 +118,6 @@
         ],
         "tags": [
             "Domain: Endpoint",
-            "Domain: LLM",
             "OS: Linux",
             "OS: macOS",
             "OS: Windows",
@@ -134,8 +133,7 @@
             "Rule Type: ES|QL",
             "Platform: Windows",
             "Platform: Linux",
-            "Platform: macOS",
-            "Domain: GenAI"
+            "Platform: macOS"
         ],
         "threat": [
             {
@@ -186,8 +184,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "2fc14da3-03d1-4d8e-b42b-942566bf69b4_4",
+    "id": "2fc14da3-03d1-4d8e-b42b-942566bf69b4_5",
     "type": "security-rule"
 }

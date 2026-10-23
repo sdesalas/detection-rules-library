@@ -20,7 +20,7 @@
         "related_integrations": [
             {
                 "package": "aws",
-                "version": ">=6.0.0"
+                "version": ">=7.0.0"
             }
         ],
         "risk_score": 21,
@@ -78,8 +78,8 @@
             }
         ],
         "type": "machine_learning",
-        "version": 214
+        "version": 215
     },
-    "id": "78d3d8d9-b476-451d-a9e0-7a5addd70670_214",
+    "id": "78d3d8d9-b476-451d-a9e0-7a5addd70670_215",
     "type": "security-rule"
 }

@@ -21,7 +21,7 @@
         "related_integrations": [
             {
                 "package": "aws",
-                "version": ">=6.0.0"
+                "version": ">=7.0.0"
             }
         ],
         "required_fields": [
@@ -63,6 +63,7 @@
             "Platform: AWS",
             "Domain: GenAI",
             "Service: AWS Bedrock",
+            "Mitre Atlas: AML.T0012",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -99,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 5
     },
-    "id": "89b68231-5134-4499-8eca-20e5d9c90cce_3",
+    "id": "89b68231-5134-4499-8eca-20e5d9c90cce_5",
     "type": "security-rule"
 }

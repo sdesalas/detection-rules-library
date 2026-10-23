@@ -124,7 +124,6 @@
         "severity": "critical",
         "tags": [
             "Domain: Identity",
-            "Domain: LLM",
             "Use Case: Threat Detection",
             "Use Case: Identity and Access Audit",
             "Resources: Investigation Guide",
@@ -132,13 +131,12 @@
             "Rule Type: Higher-Order Rule",
             "Noise: Medium",
             "Performance: Normal",
-            "Rule Type: ES|QL",
-            "Domain: GenAI"
+            "Rule Type: ES|QL"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 9
+        "version": 10
     },
-    "id": "3dc4e312-346b-4a10-b05f-450e1eeab91c_9",
+    "id": "3dc4e312-346b-4a10-b05f-450e1eeab91c_10",
     "type": "security-rule"
 }

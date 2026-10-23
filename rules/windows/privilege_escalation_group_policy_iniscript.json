@@ -20,7 +20,7 @@
         "references": [
             "https://github.com/atc-project/atc-data/blob/master/docs/Logging_Policies/LP_0025_windows_audit_directory_service_changes.md",
             "https://github.com/atc-project/atc-data/blob/f2bbb51ecf68e2c9f488e3c70dcdd3df51d2a46b/docs/Logging_Policies/LP_0029_windows_audit_detailed_file_share.md",
-            "https://labs.f-secure.com/tools/sharpgpoabuse"
+            "https://github.com/ReversecLabs/SharpGPOAbuse"
         ],
         "related_integrations": [
             {
@@ -134,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 218
+        "version": 220
     },
-    "id": "16fac1a1-21ee-4ca6-b720-458e3855d046_218",
+    "id": "16fac1a1-21ee-4ca6-b720-458e3855d046_220",
     "type": "security-rule"
 }

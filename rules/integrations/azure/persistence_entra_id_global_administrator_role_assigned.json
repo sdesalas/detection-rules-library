@@ -17,7 +17,8 @@
         "references": [
             "https://securitylabs.datadoghq.com/articles/i-spy-escalating-to-entra-id-global-admin/",
             "https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator",
-            "https://www.microsoft.com/en-us/security/blog/2025/08/27/storm-0501s-evolving-techniques-lead-to-cloud-based-ransomware/"
+            "https://www.microsoft.com/en-us/security/blog/2025/08/27/storm-0501s-evolving-techniques-lead-to-cloud-based-ransomware/",
+            "https://www.huntress.com/blog/vendor-credential-enables-unauthorized-access"
         ],
         "related_integrations": [
             {
@@ -113,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 110
+        "version": 112
     },
-    "id": "04c5a96f-19c5-44fd-9571-a0b033f9086f_110",
+    "id": "04c5a96f-19c5-44fd-9571-a0b033f9086f_112",
     "type": "security-rule"
 }

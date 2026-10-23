@@ -15,9 +15,9 @@
         "query": "network where data_stream.dataset == \"network_traffic.redis\" and\n  network_traffic.redis.query like~ \"*EVAL*\" and\n  network_traffic.redis.query like~ \"*string.rep*\" and\n  network_traffic.redis.query like~ \"*collectgarbage*\"\n",
         "references": [
             "https://nvd.nist.gov/vuln/detail/CVE-2025-49844",
-            "https://redis.io/blog/redis-security-advisory-cve-2025-49844",
+            "https://redis.io/blog/security-advisory-cve-2025-49844",
             "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
-            "https://www.wiz.io/blog/pwn2own-berlin-2025-redis-cve-2025-49844"
+            "https://www.wiz.io/blog/wiz-research-redis-rce-cve-2025-49844"
         ],
         "related_integrations": [
             {
@@ -97,8 +97,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "9a1ba0ac-aa6f-4c0d-8c80-b7f6ea2efa36_2",
+    "id": "9a1ba0ac-aa6f-4c0d-8c80-b7f6ea2efa36_3",
     "type": "security-rule"
 }

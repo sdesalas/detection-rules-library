@@ -86,7 +86,8 @@
             "Resources: Investigation Guide",
             "Rule Type: New Terms",
             "Tactic: Persistence",
-            "Tactic: Privilege Escalation"
+            "Tactic: Privilege Escalation",
+            "Mitre Atlas: AML.T0012"
         ],
         "threat": [
             {
@@ -136,8 +137,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "28a17de8-c18e-4672-8953-2c2716a3f7b4_1",
+    "id": "28a17de8-c18e-4672-8953-2c2716a3f7b4_2",
     "type": "security-rule"
 }

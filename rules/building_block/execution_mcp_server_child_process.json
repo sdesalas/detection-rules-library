@@ -82,13 +82,12 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
             "Rule Type: BBR",
-            "Domain: LLM",
-            "Mitre Atlas: T0053",
             "Rule Type: Event Correlation (EQL)",
             "Platform: Windows",
             "Platform: Linux",
             "Platform: macOS",
-            "Domain: GenAI"
+            "Domain: GenAI",
+            "Mitre Atlas: AML.T0053"
         ],
         "threat": [
             {
@@ -109,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "b2c3d4e5-f6a7-8901-bcde-f23456789012_5",
+    "id": "b2c3d4e5-f6a7-8901-bcde-f23456789012_6",
     "type": "security-rule"
 }

@@ -121,7 +121,8 @@
             "Use Case: UEBA",
             "Resources: Investigation Guide",
             "Rule Type: ES|QL",
-            "Tactic: Impact"
+            "Tactic: Impact",
+            "Mitre Atlas: AML.T0034"
         ],
         "threat": [
             {
@@ -142,8 +143,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "854d9932-93c3-42d4-bab0-7723a91df397_1",
+    "id": "854d9932-93c3-42d4-bab0-7723a91df397_2",
     "type": "security-rule"
 }

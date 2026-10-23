@@ -27,7 +27,7 @@
         "license": "Elastic License v2",
         "name": "Anthropic Primary Owner Transferred",
         "note": "## Triage and analysis\n\n### Investigating Anthropic Primary Owner Transferred\n\nPrimary ownership is the highest Anthropic org authority (billing, membership, org-wide settings). Transfers should\nbe rare and ticketed. Actor fields identify who initiated the transfer \u2014 not the new owner\n(`anthropic.audit.previous_owner_id` / `new_owner_id`).\n\nUnauthorized = no HR/IT offboarding or ownership-change ticket naming both parties, or the new owner was recently\ninvited / granted admin and immediately received ownership, especially with follow-on SSO/key/export changes.\n\n#### Possible investigation steps\n\n- Map `anthropic.audit.previous_owner_id` \u2192 `new_owner_id` and resolve initiator (`actor.type`; for `user_actor`\n  check email/IP/UA).\n- Before the transfer: look for `claude_user_role_updated` with `anthropic.audit.current_role: admin`, invite accept,\n  or admin API key creation for the new owner path.\n- After the transfer: look for SSO changes, exports, compliance logging disablement, or IP restriction deletes by the\n  new owner.\n- Contact previous and new owners only after ticket/timeline triage; escalate when ticket is missing or the new owner\n  chain looks staged.\n\n### False positive analysis\n\n- Reorgs and admin departures are valid \u2014 require matching change management / HR records.\n\n### Response and remediation\n\n- On unauthorized transfer: engage Anthropic support and internal IT to recover ownership, revoke the new owner's\n  sessions/keys, and review every admin change made under the new owner account.\n",
-        "query": "from logs-anthropic.audit-* metadata _id, _version, _index\n| where\n    data_stream.dataset == \"anthropic.audit\" and\n    mv_contains(event.category, \"iam\") and\n    event.action == \"primary_owner_transferred\" and\n    event.outcome == \"success\"\n| keep _id, _version, _index, @timestamp, event.*, organization.*, user.*, source.*, user_agent.*, anthropic.audit.*, data_stream.*\n",
+        "query": "from logs-anthropic.audit-* metadata _id, _version, _index\n| where\n    data_stream.dataset == \"anthropic.audit\" and\n    mv_contains(event.category, \"configuration\") and\n    event.action == \"primary_owner_transferred\" and\n    event.outcome == \"success\"\n| keep _id, _version, _index, @timestamp, event.*, organization.*, user.*, source.*, user_agent.*, anthropic.audit.*, data_stream.*\n",
         "references": [
             "https://platform.claude.com/docs/en/api/compliance/activities/list"
         ],
@@ -70,7 +70,8 @@
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
             "Rule Type: ES|QL",
-            "Tactic: Privilege Escalation"
+            "Tactic: Privilege Escalation",
+            "Mitre Atlas: AML.T0012"
         ],
         "threat": [
             {
@@ -98,8 +99,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "b39aa7b1-b77a-4bd0-84fc-b638ccb29224_1",
+    "id": "b39aa7b1-b77a-4bd0-84fc-b638ccb29224_2",
     "type": "security-rule"
 }

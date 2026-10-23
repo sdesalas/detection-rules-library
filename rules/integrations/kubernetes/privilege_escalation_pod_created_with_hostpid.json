@@ -17,7 +17,7 @@
         "query": "data_stream.dataset : \"kubernetes.audit_logs\" and kubernetes.audit.annotations.authorization_k8s_io/decision:\"allow\" and\nkubernetes.audit.objectRef.resource:\"pods\" and kubernetes.audit.verb:(\"create\" or \"update\" or \"patch\") and\nkubernetes.audit.requestObject.spec.hostPID:true and\nnot kubernetes.audit.requestObject.spec.containers.image: (\n  ghcr.io/aquasecurity/node-collector* or rancher/system-agent* or ghcr.io/kubereboot/kured* or \n  *elastic/elastic-agent* or registry.k8s.io/sig-storage/csi-node-driver-registrar* or quay.io/prometheus/node-exporter* or\n  docker.elastic.co/beats/elastic-agent* or quay.io/cephcsi/cephcsi* or registry.crowdstrike.com/falcon-sensor* or */sysdig/* or\n  rancher/mirrored-longhornio-longhorn-manager* or gcr.io/datadoghq/agent* or mcr.microsoft.com/oss/*/kubernetes-csi*\n)\n",
         "references": [
             "https://research.nccgroup.com/2021/11/10/detection-engineering-for-kubernetes-clusters/#part3-kubernetes-detections",
-            "https://kubernetes.io/docs/concepts/security/pod-security-policy/#host-namespaces",
+            "https://kubernetes.io/docs/concepts/security/pod-security-admission/",
             "https://bishopfox.com/blog/kubernetes-pod-privilege-escalation"
         ],
         "related_integrations": [
@@ -112,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 211
+        "version": 212
     },
-    "id": "df7fda76-c92b-4943-bc68-04460a5ea5ba_211",
+    "id": "df7fda76-c92b-4943-bc68-04460a5ea5ba_212",
     "type": "security-rule"
 }

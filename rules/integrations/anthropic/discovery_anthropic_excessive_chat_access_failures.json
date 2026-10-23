@@ -125,7 +125,8 @@
             "Use Case: UEBA",
             "Resources: Investigation Guide",
             "Rule Type: ES|QL",
-            "Tactic: Discovery"
+            "Tactic: Discovery",
+            "Mitre Atlas: AML.T0075"
         ],
         "threat": [
             {
@@ -146,8 +147,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "a304c107-e0f0-4042-aa6c-5332ce6ca967_1",
+    "id": "a304c107-e0f0-4042-aa6c-5332ce6ca967_2",
     "type": "security-rule"
 }

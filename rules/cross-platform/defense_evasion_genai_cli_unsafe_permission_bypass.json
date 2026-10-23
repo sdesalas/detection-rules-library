@@ -69,7 +69,6 @@
             "Use Case: Threat Detection",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
-            "Domain: LLM",
             "Noise: High",
             "Performance: Normal",
             "Profile: Aggressive",
@@ -79,6 +78,8 @@
             "Platform: Linux",
             "Platform: macOS",
             "Domain: GenAI",
+            "Mitre Atlas: AML.T0081",
+            "Mitre Atlas: AML.T0053",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -100,8 +101,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 5
     },
-    "id": "c1326e45-6d3c-4a2d-9882-606a0c310299_3",
+    "id": "c1326e45-6d3c-4a2d-9882-606a0c310299_5",
     "type": "security-rule"
 }

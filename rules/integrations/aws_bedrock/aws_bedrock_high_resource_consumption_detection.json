@@ -47,27 +47,27 @@
         "setup": "## Setup\n\nThis rule requires that guardrails are configured in AWS Bedrock. For more information, see the AWS Bedrock documentation:\n\nhttps://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-create.html\n",
         "severity": "medium",
         "tags": [
-            "Domain: LLM",
+            "Domain: GenAI",
             "Data Source: AWS Bedrock",
             "Data Source: Amazon Web Services",
             "Data Source: AWS S3",
             "Use Case: Potential Overload",
             "Use Case: Resource Exhaustion",
-            "Mitre Atlas: LLM04",
             "Resources: Investigation Guide",
             "Noise: Low",
             "Performance: Normal",
             "Rule Type: ES|QL",
             "Platform: AWS",
             "Domain: Cloud",
-            "Domain: GenAI",
             "Service: AWS S3",
-            "Service: AWS Bedrock"
+            "Service: AWS Bedrock",
+            "Mitre Atlas: AML.T0029",
+            "Mitre Atlas: AML.T0034"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 9
+        "version": 10
     },
-    "id": "b1773d05-f349-45fb-9850-287b8f92f02d_9",
+    "id": "b1773d05-f349-45fb-9850-287b8f92f02d_10",
     "type": "security-rule"
 }

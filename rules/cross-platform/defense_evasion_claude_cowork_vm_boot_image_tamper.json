@@ -64,11 +64,12 @@
             "Use Case: Threat Detection",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
-            "Domain: LLM",
             "Rule Type: Event Correlation (EQL)",
             "Platform: Windows",
             "Platform: macOS",
             "Domain: GenAI",
+            "Mitre Atlas: AML.T0097",
+            "Mitre Atlas: AML.T0105",
             "Tactic: Stealth"
         ],
         "threat": [
@@ -97,8 +98,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 5
     },
-    "id": "a0939500-a817-4ce9-85a9-191133352a9e_3",
+    "id": "a0939500-a817-4ce9-85a9-191133352a9e_5",
     "type": "security-rule"
 }
