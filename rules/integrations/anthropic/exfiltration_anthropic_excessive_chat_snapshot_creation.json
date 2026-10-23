@@ -132,7 +132,9 @@
             "Use Case: UEBA",
             "Resources: Investigation Guide",
             "Rule Type: ES|QL",
-            "Tactic: Exfiltration"
+            "Tactic: Exfiltration",
+            "Mitre Atlas: AML.T0085",
+            "Mitre Atlas: AML.T0025"
         ],
         "threat": [
             {
@@ -153,8 +155,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "0cd6c462-28eb-482a-b445-9ced6a034b49_1",
+    "id": "0cd6c462-28eb-482a-b445-9ced6a034b49_2",
     "type": "security-rule"
 }

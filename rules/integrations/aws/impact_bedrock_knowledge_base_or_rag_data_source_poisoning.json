@@ -45,7 +45,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": "^7.0.0"
             }
         ],
         "required_fields": [
@@ -76,7 +76,7 @@
         "severity": "medium",
         "tags": [
             "Domain: Cloud",
-            "Domain: LLM",
+            "Domain: GenAI",
             "Data Source: AWS",
             "Data Source: AWS CloudTrail",
             "Data Source: Amazon Web Services",
@@ -91,8 +91,9 @@
             "Threat: Unauthorized AI Usage",
             "Rule Type: New Terms",
             "Platform: AWS",
-            "Domain: GenAI",
-            "Service: AWS Bedrock"
+            "Service: AWS Bedrock",
+            "Mitre Atlas: AML.T0070",
+            "Mitre Atlas: AML.T0059"
         ],
         "threat": [
             {
@@ -120,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 2
+        "version": 3
     },
-    "id": "7811b5f7-9e07-4999-87aa-a950365cd327_2",
+    "id": "7811b5f7-9e07-4999-87aa-a950365cd327_3",
     "type": "security-rule"
 }

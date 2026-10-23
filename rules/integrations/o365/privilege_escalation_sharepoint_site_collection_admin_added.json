@@ -22,7 +22,7 @@
         "query": "data_stream.dataset:o365.audit\n    and event.provider:(SharePoint or OneDrive)\n    and event.category:web\n    and event.action:SiteCollectionAdminAdded\n    and event.outcome:success\n",
         "references": [
             "https://learn.microsoft.com/en-us/purview/audit-log-activities#site-permissions-activities",
-            "https://www.obsidiansecurity.com/blog/saas-ransomware-observed-sharepoint-microsoft-365/"
+            "https://web.archive.org/web/20230608061141/https://www.obsidiansecurity.com/blog/saas-ransomware-observed-sharepoint-microsoft-365/"
         ],
         "related_integrations": [
             {
@@ -124,8 +124,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "98ebd6a1-77db-4fe1-b4fd-1bd3c737b780_3",
+    "id": "98ebd6a1-77db-4fe1-b4fd-1bd3c737b780_4",
     "type": "security-rule"
 }

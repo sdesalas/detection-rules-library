@@ -19,7 +19,7 @@
             "https://research.eye.security/sharepoint-under-siege/",
             "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-53771",
             "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-53770",
-            "https://msrc.microsoft.com/blog/2025/07/customer-guidance-for-sharepoint-vulnerability-cve-2025-53770/"
+            "https://www.microsoft.com/en-us/msrc/blog/2025/07/customer-guidance-for-sharepoint-vulnerability-cve-2025-53770"
         ],
         "related_integrations": [
             {
@@ -100,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "99c9af5a-67cf-11f0-b69e-f661ea17fbcd_2",
+    "id": "99c9af5a-67cf-11f0-b69e-f661ea17fbcd_3",
     "type": "security-rule"
 }

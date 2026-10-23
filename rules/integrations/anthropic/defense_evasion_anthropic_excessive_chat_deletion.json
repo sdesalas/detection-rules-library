@@ -123,7 +123,8 @@
             "Use Case: UEBA",
             "Resources: Investigation Guide",
             "Rule Type: ES|QL",
-            "Tactic: Defense Evasion"
+            "Tactic: Defense Evasion",
+            "Mitre Atlas: AML.T0092"
         ],
         "threat": [
             {
@@ -144,8 +145,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 3
     },
-    "id": "2944223e-3c25-4ce4-bd69-64f2914da187_1",
+    "id": "2944223e-3c25-4ce4-bd69-64f2914da187_3",
     "type": "security-rule"
 }

@@ -57,7 +57,7 @@
         "severity": "medium",
         "tags": [
             "Domain: Endpoint",
-            "Domain: LLM",
+            "Domain: GenAI",
             "OS: Linux",
             "OS: macOS",
             "OS: Windows",
@@ -74,7 +74,8 @@
             "Platform: Windows",
             "Platform: Linux",
             "Platform: macOS",
-            "Domain: GenAI"
+            "Mitre Atlas: AML.T0053",
+            "Mitre Atlas: AML.T0108"
         ],
         "threat": [
             {
@@ -181,8 +182,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 7
     },
-    "id": "a7c3e8f2-4b19-4d6a-9e5c-8f1a2b3c4d5e_5",
+    "id": "a7c3e8f2-4b19-4d6a-9e5c-8f1a2b3c4d5e_7",
     "type": "security-rule"
 }

@@ -34,7 +34,7 @@
         ],
         "risk_score": 47,
         "rule_id": "fdff275f-83c2-4857-bedf-aee88f3442ed",
-        "setup": "## Setup\n\nThis rule requires data from the macOS Security Events integration.\nIntegration setup instructions: [macOS Security Events](https://www.elastic.co/docs/reference/security/prebuilt-rules/integration/macos/macos_security_events)\n",
+        "setup": "## Setup\n\nThis rule requires data from the macOS Security Events integration.\nIntegration setup instructions: [macOS Security Events Integration for Elastic](https://www.elastic.co/docs/reference/integrations/macos)\n",
         "severity": "medium",
         "tags": [
             "OS: macOS",
@@ -112,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 3
     },
-    "id": "fdff275f-83c2-4857-bedf-aee88f3442ed_1",
+    "id": "fdff275f-83c2-4857-bedf-aee88f3442ed_3",
     "type": "security-rule"
 }

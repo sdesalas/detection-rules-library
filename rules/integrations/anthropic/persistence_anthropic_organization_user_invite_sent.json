@@ -74,7 +74,8 @@
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
             "Rule Type: ES|QL",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Mitre Atlas: AML.T0125"
         ],
         "threat": [
             {
@@ -102,8 +103,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "5fd313e8-c61c-4737-88f7-b452a2f25a3b_1",
+    "id": "5fd313e8-c61c-4737-88f7-b452a2f25a3b_2",
     "type": "security-rule"
 }

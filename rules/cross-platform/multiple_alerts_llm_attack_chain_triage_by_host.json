@@ -144,7 +144,6 @@
         "severity": "critical",
         "tags": [
             "Domain: Endpoint",
-            "Domain: LLM",
             "Use Case: Threat Detection",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
@@ -152,13 +151,12 @@
             "Rule Type: Higher-Order Rule",
             "Noise: Medium",
             "Performance: Normal",
-            "Rule Type: ES|QL",
-            "Domain: GenAI"
+            "Rule Type: ES|QL"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 7
+        "version": 8
     },
-    "id": "f236cca1-e887-4d14-9ba9-bb8dd3e16cf1_7",
+    "id": "f236cca1-e887-4d14-9ba9-bb8dd3e16cf1_8",
     "type": "security-rule"
 }

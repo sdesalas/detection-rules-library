@@ -23,7 +23,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": "^6.0.0"
+                "version": "^7.0.0"
             }
         ],
         "required_fields": [
@@ -73,7 +73,9 @@
             "Tactic: Persistence",
             "Rule Type: Custom Query (KQL)",
             "Resources: Investigation Guide",
-            "Domain: GenAI"
+            "Domain: GenAI",
+            "Mitre Atlas: AML.T0012",
+            "Mitre Atlas: AML.T0103"
         ],
         "threat": [
             {
@@ -116,8 +118,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "2d8f6e1a-4b7c-4f9d-8e3a-1c5d2f8b9a0e_2",
+    "id": "2d8f6e1a-4b7c-4f9d-8e3a-1c5d2f8b9a0e_3",
     "type": "security-rule"
 }
