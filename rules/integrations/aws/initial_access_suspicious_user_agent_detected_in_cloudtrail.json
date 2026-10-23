@@ -38,7 +38,7 @@
         "references": [
             "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html",
             "https://www.sygnia.co/blog/sygnia-investigation-bybit-hack/",
-            "https://trufflesecurity.com/blog/trufflehog-in-your-logs",
+            "https://trufflesecurity.com/blog/trufflehog-in-your-log",
             "https://kudelskisecurity.com/research/investigating-two-variants-of-the-trivy-supply-chain-compromise"
         ],
         "related_integrations": [
@@ -128,8 +128,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 10
     },
-    "id": "f80ea920-f6f5-4c8a-9761-84ac97ec0cb2_8",
+    "id": "f80ea920-f6f5-4c8a-9761-84ac97ec0cb2_10",
     "type": "security-rule"
 }

@@ -78,7 +78,8 @@
             "Use Case: UEBA",
             "Resources: Investigation Guide",
             "Rule Type: New Terms",
-            "Tactic: Persistence"
+            "Tactic: Persistence",
+            "Mitre Atlas: AML.T0081"
         ],
         "threat": [
             {
@@ -99,8 +100,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "e3acc6d4-cd6e-4748-baeb-1c57a0f37635_1",
+    "id": "e3acc6d4-cd6e-4748-baeb-1c57a0f37635_2",
     "type": "security-rule"
 }

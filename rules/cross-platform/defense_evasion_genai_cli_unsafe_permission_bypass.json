@@ -70,7 +70,6 @@
             "Tactic: Defense Evasion",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
-            "Domain: LLM",
             "Noise: High",
             "Performance: Normal",
             "Profile: Aggressive",
@@ -79,7 +78,9 @@
             "Platform: Windows",
             "Platform: Linux",
             "Platform: macOS",
-            "Domain: GenAI"
+            "Domain: GenAI",
+            "Mitre Atlas: AML.T0081",
+            "Mitre Atlas: AML.T0053"
         ],
         "threat": [
             {
@@ -107,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 4
     },
-    "id": "c1326e45-6d3c-4a2d-9882-606a0c310299_2",
+    "id": "c1326e45-6d3c-4a2d-9882-606a0c310299_4",
     "type": "security-rule"
 }

@@ -92,8 +92,6 @@
             "Data Source: Microsoft Defender XDR",
             "Data Source: SentinelOne",
             "Resources: Investigation Guide",
-            "Domain: LLM",
-            "Mitre Atlas: T0053",
             "Noise: Medium",
             "Performance: Normal",
             "Profile: Recommended",
@@ -102,7 +100,8 @@
             "Platform: Windows",
             "Platform: Linux",
             "Platform: macOS",
-            "Domain: GenAI"
+            "Domain: GenAI",
+            "Mitre Atlas: AML.T0053"
         ],
         "threat": [
             {
@@ -152,8 +151,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 6
     },
-    "id": "b2c3d4e5-f6a7-8901-bcde-f123456789ab_4",
+    "id": "b2c3d4e5-f6a7-8901-bcde-f123456789ab_6",
     "type": "security-rule"
 }

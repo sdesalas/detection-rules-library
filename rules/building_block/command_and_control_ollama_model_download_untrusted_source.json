@@ -53,15 +53,15 @@
             "Use Case: Threat Detection",
             "Tactic: Command and Control",
             "Data Source: Elastic Defend",
-            "Domain: LLM",
-            "Mitre Atlas: T0010.003",
+            "Domain: GenAI",
             "Rule Type: BBR",
             "Rule Type: Event Correlation (EQL)",
             "Platform: Windows",
             "Platform: Linux",
             "Platform: macOS",
-            "Domain: GenAI",
-            "Vuln: CVE-2025-1975"
+            "Vuln: CVE-2025-1975",
+            "Mitre Atlas: AML.T0010.003",
+            "Mitre Atlas: AML.T0072"
         ],
         "threat": [
             {
@@ -109,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 5
     },
-    "id": "e9a3b2c1-d4f5-6789-0abc-def123456789_3",
+    "id": "e9a3b2c1-d4f5-6789-0abc-def123456789_5",
     "type": "security-rule"
 }

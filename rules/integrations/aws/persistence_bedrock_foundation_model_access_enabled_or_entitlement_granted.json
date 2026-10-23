@@ -32,7 +32,6 @@
         "note": "## Triage and analysis\n\n> **Disclaimer**:\n> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.\n\n### Investigating AWS Bedrock Foundation Model Access Enabled or Entitlement Granted\n\nAmazon Bedrock exposes account-level \"model access\" controls that determine which foundation models a principal is allowed to invoke. Granting an entitlement (`PutFoundationModelEntitlement`), submitting a use case for model access (`PutUseCaseForModelAccess`), or creating a foundation-model agreement (`CreateFoundationModelAgreement`, which accepts the model EULA) all unlock a model for subsequent `InvokeModel`/`InvokeModelWithResponseStream` calls.\n\nAdversaries who gain access to a privileged principal may enable model access to abuse high-cost models (LLMjacking), to maintain a durable capability to invoke models, or to circumvent organizational guardrails on which models are usable.\n\nThis rule detects successful Bedrock control-plane API calls that enable model access at the account level. It is distinct from changes to a resource-based model invocation policy.\n\n### Possible investigation steps\n\n- Identify the principal by reviewing `aws.cloudtrail.user_identity.arn` and `aws.cloudtrail.user_identity.access_key_id`, and determine whether the identity is a human user, role, or service account that is expected to manage Bedrock model access.\n- Review `event.action` to determine which model-access action was taken, and examine `aws.cloudtrail.request_parameters` to identify the specific foundation model, model ID, or use case involved.\n- Verify the `source.ip` and `user_agent.original` of the request. Console-driven onboarding differs from programmatic SDK/CLI calls; an unexpected IP, geolocation, or automation user agent is suspicious.\n- Confirm the `cloud.account.id` and `cloud.region` are expected for Bedrock usage in your environment, and whether model access is normally enabled in that region.\n- Correlate with recent activity from the same principal, such as new access key creation, IAM permission changes, or other Bedrock control-plane calls, to determine whether this is part of a broader compromise.\n- Check for subsequent `InvokeModel`/`InvokeModelWithResponseStream` activity from the same principal or account, especially high-volume invocations that could indicate model abuse (LLMjacking).\n- Contact the resource owner to confirm whether enabling this model access was planned and authorized.\n\n### False positive analysis\n\n- Legitimate administrators and ML teams enable model access and accept EULAs during account onboarding or when adopting new foundation models. Validate the change against change-management records and known provisioning workflows.\n- Infrastructure-as-code or automation pipelines may enable model access programmatically; confirm the automation identity and source are expected.\n\n### Response and remediation\n\n- If the activity is unauthorized, revoke the model entitlement/agreement and remove model access for the affected model.\n- Disable or rotate the credentials (`aws.cloudtrail.user_identity.access_key_id`) associated with the principal that performed the action.\n- Review and constrain IAM permissions so that only approved principals can call Bedrock model-access APIs.\n- Investigate for any model invocations that occurred after access was granted and assess potential cost impact and data exposure.\n- Implement preventative guardrails (SCPs, IAM conditions) to limit which principals and models can be enabled, and add monitoring for Bedrock control-plane changes.\n",
         "query": "data_stream.dataset: \"aws.cloudtrail\"\n    and event.provider: \"bedrock.amazonaws.com\"\n    and event.action: (\n        \"PutFoundationModelEntitlement\" or\n        \"PutUseCaseForModelAccess\" or\n        \"CreateFoundationModelAgreement\"\n    )\n    and event.outcome: \"success\"\n",
         "references": [
-            "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_PutFoundationModelEntitlement.html",
             "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_PutUseCaseForModelAccess.html",
             "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_CreateFoundationModelAgreement.html"
         ],
@@ -70,7 +69,7 @@
         "severity": "medium",
         "tags": [
             "Domain: Cloud",
-            "Domain: LLM",
+            "Domain: GenAI",
             "Data Source: AWS",
             "Data Source: AWS CloudTrail",
             "Data Source: Amazon Web Services",
@@ -85,8 +84,9 @@
             "Threat: Unauthorized AI Usage",
             "Rule Type: Custom Query (KQL)",
             "Platform: AWS",
-            "Domain: GenAI",
-            "Service: AWS Bedrock"
+            "Service: AWS Bedrock",
+            "Mitre Atlas: AML.T0012",
+            "Mitre Atlas: AML.T0040"
         ],
         "threat": [
             {
@@ -107,8 +107,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "aed4b9d5-f853-40cf-8489-4fdcff03e272_2",
+    "id": "aed4b9d5-f853-40cf-8489-4fdcff03e272_3",
     "type": "security-rule"
 }

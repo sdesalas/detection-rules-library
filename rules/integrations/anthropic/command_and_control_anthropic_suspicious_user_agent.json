@@ -92,7 +92,8 @@
             "Use Case: Threat Detection",
             "Resources: Investigation Guide",
             "Rule Type: ES|QL",
-            "Tactic: Command and Control"
+            "Tactic: Command and Control",
+            "Mitre Atlas: AML.T0012"
         ],
         "threat": [
             {
@@ -120,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "d370aacb-a344-4578-a69c-beca88e063a1_1",
+    "id": "d370aacb-a344-4578-a69c-beca88e063a1_2",
     "type": "security-rule"
 }

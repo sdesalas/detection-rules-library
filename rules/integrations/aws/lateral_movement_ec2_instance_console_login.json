@@ -36,7 +36,7 @@
         "query": "info where data_stream.dataset == \"aws.cloudtrail\"\n   and event.provider == \"signin.amazonaws.com\"\n   and event.action in (\"ConsoleLogin\", \"GetSigninToken\")\n   and event.outcome == \"success\"\n   and aws.cloudtrail.user_identity.type == \"AssumedRole\"\n   and stringContains (user.id, \":i-\")\n",
         "references": [
             "https://redcanary.com/blog/aws-sts/",
-            "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-custom-url.html/"
+            "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-custom-url.html"
         ],
         "related_integrations": [
             {
@@ -238,8 +238,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 9
+        "version": 11
     },
-    "id": "d1e5e410-3e34-412e-9b1f-dd500b3b55cd_9",
+    "id": "d1e5e410-3e34-412e-9b1f-dd500b3b55cd_11",
     "type": "security-rule"
 }

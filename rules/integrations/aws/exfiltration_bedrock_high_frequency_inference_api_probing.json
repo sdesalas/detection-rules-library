@@ -151,14 +151,12 @@
         "severity": "medium",
         "tags": [
             "Domain: Cloud",
-            "Domain: LLM",
+            "Domain: GenAI",
             "Data Source: AWS",
             "Data Source: Amazon Web Services",
             "Data Source: AWS CloudTrail",
             "Use Case: Threat Detection",
             "Tactic: Exfiltration",
-            "Mitre Atlas: T0024",
-            "Mitre Atlas: T0024.000",
             "Resources: Investigation Guide",
             "Noise: Medium",
             "Performance: Fast",
@@ -167,13 +165,14 @@
             "Threat: LLMjacking",
             "Rule Type: ES|QL",
             "Platform: AWS",
-            "Domain: GenAI",
-            "Service: AWS Bedrock"
+            "Service: AWS Bedrock",
+            "Mitre Atlas: AML.T0024",
+            "Mitre Atlas: AML.T0024.000"
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 4
     },
-    "id": "56312ef5-656c-4bf7-ad9a-affed052b102_3",
+    "id": "56312ef5-656c-4bf7-ad9a-affed052b102_4",
     "type": "security-rule"
 }

@@ -39,7 +39,7 @@
         "query": "sequence by aws.cloudtrail.user_identity.access_key_id with maxspan=15m\n  [any where data_stream.dataset == \"aws.cloudtrail\"\n    and event.provider == \"bedrock.amazonaws.com\"\n    and event.action == \"ListFoundationModels\"\n    and event.outcome == \"success\"\n    and aws.cloudtrail.user_identity.access_key_id like \"AKIA*\"]\n  [any where data_stream.dataset == \"aws.cloudtrail\"\n    and event.provider == \"bedrock.amazonaws.com\"\n    and event.action : (\"InvokeModel\", \"InvokeModelWithResponseStream\", \"Converse\", \"ConverseStream\")\n    and event.outcome == \"success\"]\n",
         "references": [
             "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_ListFoundationModels.html",
-            "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_InvokeModel.html"
+            "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_InvokeModel.html"
         ],
         "related_integrations": [
             {
@@ -80,7 +80,7 @@
         "severity": "high",
         "tags": [
             "Domain: Cloud",
-            "Domain: LLM",
+            "Domain: GenAI",
             "Data Source: Amazon Web Services",
             "Data Source: AWS",
             "Data Source: AWS CloudTrail",
@@ -95,8 +95,9 @@
             "Threat: LLMjacking",
             "Rule Type: Event Correlation (EQL)",
             "Platform: AWS",
-            "Domain: GenAI",
-            "Service: AWS Bedrock"
+            "Service: AWS Bedrock",
+            "Mitre Atlas: AML.T0007",
+            "Mitre Atlas: AML.T0040"
         ],
         "threat": [
             {
@@ -139,8 +140,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 3
     },
-    "id": "a17f2e5f-de52-49e8-9d86-ccfe91cd54d4_2",
+    "id": "a17f2e5f-de52-49e8-9d86-ccfe91cd54d4_3",
     "type": "security-rule"
 }

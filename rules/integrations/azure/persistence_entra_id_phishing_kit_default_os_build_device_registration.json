@@ -67,9 +67,9 @@
                 "type": "keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "82629eed-5516-446e-ad73-03b8c4f4d571",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Cloud",
             "Domain: Identity",
@@ -114,8 +114,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "82629eed-5516-446e-ad73-03b8c4f4d571_2",
+    "id": "82629eed-5516-446e-ad73-03b8c4f4d571_3",
     "type": "security-rule"
 }

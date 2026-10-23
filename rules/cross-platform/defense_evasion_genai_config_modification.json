@@ -19,7 +19,6 @@
         "query": "event.category : \"file\" and event.action : (\"modification\" or \"overwrite\") and\nfile.path : (\n    */.cursor/mcp.json or */.cursor/settings.json or */AppData/Roaming/Cursor/*mcp* or\n    */.claude/* or */claude_desktop_config.json or */AppData/Roaming/Claude/* or\n    */.config/github-copilot/* or */AppData/Local/GitHub?Copilot/* or\n    */.ollama/config* or */AppData/Local/Ollama/* or\n    */.codex/* or */AppData/Roaming/Codex/* or\n    */.gemini/* or */AppData/Roaming/gemini-cli/* or\n    */.grok/* or */AppData/Roaming/Grok/* or\n    */.windsurf/* or */AppData/Roaming/Windsurf/* or\n    */.vscode/extensions/*mcp* or\n    */.openclaw/* or */AppData/Roaming/OpenClaw/* or\n    */.moltbot/* or */AppData/Roaming/Moltbot/* or\n    */.config/openclaw/*\n) and not (\n  file.extension : (lck or lock or log or png or marker or shm or wal or sqlite or sqlite-shm or sqlite-wal or jsonl or journal or xcuserstate) or\n  file.name : (\n    .DS_Store or .last-cleanup or mcp-needs-auth-cache.json or policy-limits.json or\n    .claude.json.backup* or\n    *.tmp*\n  ) or\n  file.path : (\n    */.claude/cache/* or\n    */.claude/statsig/* or\n    */.claude/sessions/* or\n    */.claude/shell-snapshots/* or\n    */.claude/plugins/* or\n    */.claude/worktrees/* or\n    */.gemini/antigravity-browser-profile/* or\n    */.gemini/tmp/* or\n    */.codex/.tmp/* or\n    */.codex/tmp/* or\n    */.codex/log/* or\n    */.codex/sessions/* or\n    */.cursor/extensions/* or\n    */.vscode/extensions/* or\n    */.vscode-oss/extensions/* or\n    */opt/homebrew/.claude/* or\n    */opt/homebrew/.cursor/* or\n    */opt/homebrew/.codex/* or\n    */node_modules/* or\n    */cargo/registry/* or\n    */go/pkg/mod/*\n  ) or\n  (\n    file.path : (*/.codex/* or */.claude/* or */.gemini/*) and\n    file.extension : sqlite\n  ) or\n  (\n    file.path : */.config/github-copilot/* and\n    file.name : (apps.json or versions.json or copilot*nitrite.db)\n  ) or\n  process.name : build-script-build or\n  (\n    file.path : (*/.codex/.tmp/* or */.claude/plugins/* or */.claude/worktrees/* or */node_modules/* or */cargo/registry/* or */go/pkg/mod/*) and\n    file.extension : (h or out or part or rs or toml)\n  )\n)\n",
         "references": [
             "https://modelcontextprotocol.io/",
-            "https://www.cybereason.com/blog/security-research/weaponized-ai-how-cybercriminals-exploit-mcp-for-account-takeover",
             "https://glama.ai/blog/2025-11-11-the-lethal-trifecta-securing-model-context-protocol-against-data-flow-attacks",
             "https://www.elastic.co/security-labs/elastic-advances-llm-security"
         ],
@@ -73,7 +72,6 @@
             "Tactic: Persistence",
             "Data Source: Elastic Defend",
             "Resources: Investigation Guide",
-            "Domain: LLM",
             "Noise: Medium",
             "Performance: Normal",
             "Profile: Recommended",
@@ -81,7 +79,8 @@
             "Rule Type: New Terms",
             "Platform: Windows",
             "Platform: macOS",
-            "Domain: GenAI"
+            "Domain: GenAI",
+            "Mitre Atlas: AML.T0081"
         ],
         "threat": [
             {
@@ -127,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 10
     },
-    "id": "590fc62d-7386-4c75-92b0-af4517018da1_8",
+    "id": "590fc62d-7386-4c75-92b0-af4517018da1_10",
     "type": "security-rule"
 }

@@ -50,10 +50,10 @@
                 "type": "constant_keyword"
             }
         ],
-        "risk_score": 47,
+        "risk_score": 73,
         "rule_id": "afaece21-6631-440b-87d3-1d0a2013576e",
         "setup": "## Setup\n\nThis rule requires the Elastic Citrix ADC integration with the `citrix_adc.log` data stream enabled. Configure NetScaler\nto forward native syslog records to an Elastic Agent by TCP or UDP, or collect the corresponding log files. RFC 5424\nsyslog is recommended where supported. Include system/PPE and AAA/AAAD or authentication-related records so analysts\ncan recover the poisoned failure text and surrounding request context.\n\nThe integration stores the parsed inner Citrix record in `citrix.detail` and unmatched Pitboss message content in\n`citrix_adc.log.message`; the rule checks both because poisoned text can appear inside another Citrix event or as a\nPitboss-class record. Enable **Preserve original event** for investigation, forward logs to a remote collector, and\nretain rotated records for at least 48 hours because local evidence can be altered after root compromise and\nsome log consumers process records asynchronously. CVE-2026-88771 command execution can be delayed by up to 24 hours.\n\nThis rule analyzes appliance logs rather than encrypted request payloads. It can detect the poisoned record without TLS\ndecryption after the attacker-controlled value is logged, but it cannot prove that the vulnerable script executed the\ninjected command.\n",
-        "severity": "medium",
+        "severity": "high",
         "tags": [
             "Domain: Network",
             "Platform: Citrix",
@@ -109,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 1
+        "version": 2
     },
-    "id": "afaece21-6631-440b-87d3-1d0a2013576e_1",
+    "id": "afaece21-6631-440b-87d3-1d0a2013576e_2",
     "type": "security-rule"
 }
