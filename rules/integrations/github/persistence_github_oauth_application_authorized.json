@@ -38,7 +38,7 @@
         "related_integrations": [
             {
                 "package": "github",
-                "version": "^2.4.0"
+                "version": "^3.0.0"
             }
         ],
         "required_fields": [
@@ -73,7 +73,7 @@
             "Threat: OAuth App Consent",
             "Data Source: Github",
             "Data Source: GitHub Audit Logs",
-            "Rule Type: ESQL",
+            "Rule Type: ES|QL",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -117,8 +117,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "3e8ae55e-5b66-40dc-b747-c314cf9fcef8_1",
+    "id": "3e8ae55e-5b66-40dc-b747-c314cf9fcef8_2",
     "type": "security-rule"
 }
