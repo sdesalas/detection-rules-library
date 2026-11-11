@@ -16,6 +16,12 @@
         "query": "data_stream.dataset:azure.auditlogs and azure.auditlogs.operation_name:\"Add owner to application\" and event.outcome:(Success or success)\n",
         "related_integrations": [
             {
+                "integration": "adlogs",
+                "package": "azure",
+                "version": ">=1.22.0"
+            },
+            {
+                "integration": "events",
                 "package": "azure",
                 "version": ">=1.22.0"
             }
@@ -105,8 +111,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 111
+        "version": 112
     },
-    "id": "774f5e28-7b75-4a58-b94e-41bf060fdd86_111",
+    "id": "774f5e28-7b75-4a58-b94e-41bf060fdd86_112",
     "type": "security-rule"
 }

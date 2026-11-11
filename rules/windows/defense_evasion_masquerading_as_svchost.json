@@ -36,12 +36,12 @@
                 "version": ">=9.0.0"
             },
             {
-                "package": "windows",
-                "version": ">=3.0.0"
-            },
-            {
                 "package": "system",
                 "version": ">=2.0.0"
+            },
+            {
+                "package": "windows",
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -112,8 +112,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 205
+        "version": 206
     },
-    "id": "32f95776-6498-4f3c-a90c-d4f6083e3901_205",
+    "id": "32f95776-6498-4f3c-a90c-d4f6083e3901_206",
     "type": "security-rule"
 }

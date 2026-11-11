@@ -22,6 +22,12 @@
         ],
         "related_integrations": [
             {
+                "integration": "adlogs",
+                "package": "azure",
+                "version": ">=1.22.0"
+            },
+            {
+                "integration": "events",
                 "package": "azure",
                 "version": ">=1.22.0"
             }
@@ -159,8 +165,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 10
+        "version": 11
     },
-    "id": "14fa0285-fe78-4843-ac8e-f4b481f49da9_10",
+    "id": "14fa0285-fe78-4843-ac8e-f4b481f49da9_11",
     "type": "security-rule"
 }

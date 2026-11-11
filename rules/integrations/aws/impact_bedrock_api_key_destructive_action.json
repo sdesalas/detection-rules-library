@@ -20,8 +20,9 @@
         ],
         "related_integrations": [
             {
+                "integration": "cloudtrail",
                 "package": "aws",
-                "version": ">=7.0.0"
+                "version": ">=8.0.0"
             }
         ],
         "required_fields": [
@@ -96,12 +97,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1685/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0012",
+                    "name": "Privilege Escalation",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0012/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0012",
+                        "name": "Valid Accounts",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0012/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 5
+        "version": 7
     },
-    "id": "89b68231-5134-4499-8eca-20e5d9c90cce_5",
+    "id": "89b68231-5134-4499-8eca-20e5d9c90cce_7",
     "type": "security-rule"
 }

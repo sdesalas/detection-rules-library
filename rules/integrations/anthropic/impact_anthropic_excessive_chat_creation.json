@@ -139,12 +139,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1496/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0011",
+                    "name": "Impact",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0034",
+                        "name": "Cost Harvesting",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0034/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "854d9932-93c3-42d4-bab0-7723a91df397_2",
+    "id": "854d9932-93c3-42d4-bab0-7723a91df397_3",
     "type": "security-rule"
 }

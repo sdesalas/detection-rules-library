@@ -69,10 +69,20 @@
             "Resources: Investigation Guide",
             "Rule Type: ES|QL"
         ],
+        "threat": [
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0007",
+                    "name": "Defense Evasion",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0007/"
+                }
+            }
+        ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "59ebf5b6-942a-441e-9d18-9ba71d134c63_1",
+    "id": "59ebf5b6-942a-441e-9d18-9ba71d134c63_2",
     "type": "security-rule"
 }

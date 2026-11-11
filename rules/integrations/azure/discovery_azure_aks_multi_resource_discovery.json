@@ -33,6 +33,11 @@
                 "integration": "platformlogs",
                 "package": "azure",
                 "version": ">=1.22.0"
+            },
+            {
+                "integration": "events",
+                "package": "azure",
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -80,7 +85,7 @@
             "Use Case: Threat Detection",
             "Tactic: Discovery",
             "Resources: Investigation Guide",
-            "Rule Type: ESQL",
+            "Rule Type: ES|QL",
             "Platform: Azure",
             "Platform: Kubernetes"
         ],
@@ -103,8 +108,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "86bdaa43-9268-436f-b944-d9c64a68def3_1",
+    "id": "86bdaa43-9268-436f-b944-d9c64a68def3_2",
     "type": "security-rule"
 }

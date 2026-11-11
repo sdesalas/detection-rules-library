@@ -71,6 +71,21 @@
                         "reference": "https://attack.mitre.org/techniques/T1190/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0005",
+                    "name": "Execution",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0053",
+                        "name": "AI Agent Tool Invocation",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0053/"
+                    }
+                ]
             }
         ],
         "threshold": {
@@ -87,8 +102,8 @@
         },
         "timestamp_override": "event.ingested",
         "type": "threshold",
-        "version": 1
+        "version": 2
     },
-    "id": "61458f1a-a6d3-4303-aa14-496c3a96971b_1",
+    "id": "61458f1a-a6d3-4303-aa14-496c3a96971b_2",
     "type": "security-rule"
 }

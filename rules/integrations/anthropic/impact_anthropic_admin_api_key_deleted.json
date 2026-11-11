@@ -83,12 +83,20 @@
                         "reference": "https://attack.mitre.org/techniques/T1531/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0011",
+                    "name": "Impact",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0011/"
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "590b6961-e9d5-4ca9-ade0-978c1755a944_2",
+    "id": "590b6961-e9d5-4ca9-ade0-978c1755a944_3",
     "type": "security-rule"
 }

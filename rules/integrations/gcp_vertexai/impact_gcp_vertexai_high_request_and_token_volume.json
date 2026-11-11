@@ -120,12 +120,42 @@
                         "reference": "https://attack.mitre.org/techniques/T1496/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0011",
+                    "name": "Impact",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0029",
+                        "name": "Denial of AI Service",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0029/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0011",
+                    "name": "Impact",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0034",
+                        "name": "Cost Harvesting",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0034/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "9bd7c550-5d7f-43ed-969a-76eb50f9e553_1",
+    "id": "9bd7c550-5d7f-43ed-969a-76eb50f9e553_2",
     "type": "security-rule"
 }

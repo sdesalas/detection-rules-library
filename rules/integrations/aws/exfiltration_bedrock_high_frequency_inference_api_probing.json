@@ -44,8 +44,9 @@
         ],
         "related_integrations": [
             {
+                "integration": "cloudtrail",
                 "package": "aws",
-                "version": ">=7.0.0"
+                "version": ">=8.0.0"
             }
         ],
         "required_fields": [
@@ -169,10 +170,34 @@
             "Mitre Atlas: AML.T0024",
             "Mitre Atlas: AML.T0024.000"
         ],
+        "threat": [
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0010",
+                    "name": "Exfiltration",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0010/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0024",
+                        "name": "Exfiltration via AI Inference API",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0024/",
+                        "subtechnique": [
+                            {
+                                "id": "AML.T0024.000",
+                                "name": "Infer Training Data Membership",
+                                "reference": "https://atlas.mitre.org/techniques/AML.T0024.000/"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "56312ef5-656c-4bf7-ad9a-affed052b102_4",
+    "id": "56312ef5-656c-4bf7-ad9a-affed052b102_5",
     "type": "security-rule"
 }

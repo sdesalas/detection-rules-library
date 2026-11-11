@@ -75,12 +75,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1176/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0006",
+                    "name": "Persistence",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0081",
+                        "name": "Modify AI Agent Configuration",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0081/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "c73d406c-4399-40f2-a255-4a42f8ead9e0_1",
+    "id": "c73d406c-4399-40f2-a255-4a42f8ead9e0_2",
     "type": "security-rule"
 }

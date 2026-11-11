@@ -97,12 +97,42 @@
                         "reference": "https://attack.mitre.org/techniques/T1567/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0009",
+                    "name": "Collection",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0009/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0085",
+                        "name": "Data from AI Services",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0085/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0010",
+                    "name": "Exfiltration",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0010/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0025",
+                        "name": "Exfiltration via Cyber Means",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0025/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "00955b87-ed85-4977-8ab1-9140f85b9d6c_2",
+    "id": "00955b87-ed85-4977-8ab1-9140f85b9d6c_3",
     "type": "security-rule"
 }

@@ -122,12 +122,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0012",
+                    "name": "Privilege Escalation",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0012/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0012",
+                        "name": "Valid Accounts",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0012/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "f280afaf-332a-40c9-9213-8e2e717ed320_2",
+    "id": "f280afaf-332a-40c9-9213-8e2e717ed320_3",
     "type": "security-rule"
 }

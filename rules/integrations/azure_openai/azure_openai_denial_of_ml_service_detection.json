@@ -68,10 +68,27 @@
             "Service: Azure Event Hubs",
             "Mitre Atlas: AML.T0029"
         ],
+        "threat": [
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0011",
+                    "name": "Impact",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0029",
+                        "name": "Denial of AI Service",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0029/"
+                    }
+                ]
+            }
+        ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 8
+        "version": 9
     },
-    "id": "b0450411-46e5-46d2-9b35-8b5dd9ba763e_8",
+    "id": "b0450411-46e5-46d2-9b35-8b5dd9ba763e_9",
     "type": "security-rule"
 }

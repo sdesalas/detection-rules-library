@@ -179,12 +179,42 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0005",
+                    "name": "Execution",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0053",
+                        "name": "AI Agent Tool Invocation",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0053/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0014",
+                    "name": "Command and Control",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0014/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0108",
+                        "name": "AI Agent",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0108/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "a7c3e8f2-4b19-4d6a-9e5c-8f1a2b3c4d5e_8",
+    "id": "a7c3e8f2-4b19-4d6a-9e5c-8f1a2b3c4d5e_9",
     "type": "security-rule"
 }

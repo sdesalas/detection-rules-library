@@ -67,10 +67,42 @@
             "Mitre Atlas: AML.T0051",
             "Mitre Atlas: AML.T0057"
         ],
+        "threat": [
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0005",
+                    "name": "Execution",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0051",
+                        "name": "LLM Prompt Injection",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0051/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0010",
+                    "name": "Exfiltration",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0010/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0057",
+                        "name": "LLM Data Leakage",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0057/"
+                    }
+                ]
+            }
+        ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 8
+        "version": 9
     },
-    "id": "fb16f9ef-cb03-4234-adc2-44641f3b71ee_8",
+    "id": "fb16f9ef-cb03-4234-adc2-44641f3b71ee_9",
     "type": "security-rule"
 }

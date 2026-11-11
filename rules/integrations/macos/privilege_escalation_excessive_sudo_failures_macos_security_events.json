@@ -83,7 +83,7 @@
             "Tactic: Privilege Escalation",
             "Tactic: Credential Access",
             "Data Source: macOS Security Events",
-            "Rule Type: ESQL",
+            "Rule Type: ES|QL",
             "Resources: Investigation Guide"
         ],
         "threat": [
@@ -134,8 +134,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "4862d004-3f5f-4ce3-9c83-36cdd5dce8c6_2",
+    "id": "4862d004-3f5f-4ce3-9c83-36cdd5dce8c6_3",
     "type": "security-rule"
 }

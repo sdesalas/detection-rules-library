@@ -42,7 +42,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": ">=7.0.0"
+                "version": ">=8.0.0"
             }
         ],
         "required_fields": [
@@ -105,12 +105,34 @@
                         "reference": "https://attack.mitre.org/techniques/T1525/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0004",
+                    "name": "Initial Access",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0010",
+                        "name": "AI Supply Chain Compromise",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0010/",
+                        "subtechnique": [
+                            {
+                                "id": "AML.T0010.003",
+                                "name": "Model",
+                                "reference": "https://atlas.mitre.org/techniques/AML.T0010.003/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "c435defe-8438-4d5a-b4d0-86ab0faf9a49_3",
+    "id": "c435defe-8438-4d5a-b4d0-86ab0faf9a49_4",
     "type": "security-rule"
 }

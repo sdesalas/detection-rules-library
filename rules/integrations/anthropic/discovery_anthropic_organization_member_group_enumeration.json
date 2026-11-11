@@ -150,12 +150,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0008",
+                    "name": "Discovery",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0008/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0075",
+                        "name": "Enterprise Resource Discovery",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0075/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "3fe56f6b-75c6-4ba1-88ff-e879145e0e1d_2",
+    "id": "3fe56f6b-75c6-4ba1-88ff-e879145e0e1d_3",
     "type": "security-rule"
 }

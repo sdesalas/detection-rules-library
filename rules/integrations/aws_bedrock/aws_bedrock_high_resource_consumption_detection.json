@@ -64,10 +64,32 @@
             "Mitre Atlas: AML.T0029",
             "Mitre Atlas: AML.T0034"
         ],
+        "threat": [
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0011",
+                    "name": "Impact",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0029",
+                        "name": "Denial of AI Service",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0029/"
+                    },
+                    {
+                        "id": "AML.T0034",
+                        "name": "Cost Harvesting",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0034/"
+                    }
+                ]
+            }
+        ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 10
+        "version": 11
     },
-    "id": "b1773d05-f349-45fb-9850-287b8f92f02d_10",
+    "id": "b1773d05-f349-45fb-9850-287b8f92f02d_11",
     "type": "security-rule"
 }

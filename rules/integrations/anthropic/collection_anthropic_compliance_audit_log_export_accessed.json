@@ -82,12 +82,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1530/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0009",
+                    "name": "Collection",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0009/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0085",
+                        "name": "Data from AI Services",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0085/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "754f378f-5828-4ab7-ba3c-01ad4365b474_2",
+    "id": "754f378f-5828-4ab7-ba3c-01ad4365b474_3",
     "type": "security-rule"
 }

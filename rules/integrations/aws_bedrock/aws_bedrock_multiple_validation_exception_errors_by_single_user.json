@@ -80,10 +80,47 @@
             "Mitre Atlas: AML.T0034",
             "Mitre Atlas: AML.T0046"
         ],
+        "threat": [
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0007",
+                    "name": "Defense Evasion",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0007/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0015",
+                        "name": "Evade AI Model",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0015/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0011",
+                    "name": "Impact",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0034",
+                        "name": "Cost Harvesting",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0034/"
+                    },
+                    {
+                        "id": "AML.T0046",
+                        "name": "Spamming AI System with Chaff Data",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0046/"
+                    }
+                ]
+            }
+        ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 10
+        "version": 11
     },
-    "id": "725a048a-88c5-4fc7-8677-a44fc0031822_10",
+    "id": "725a048a-88c5-4fc7-8677-a44fc0031822_11",
     "type": "security-rule"
 }

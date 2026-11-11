@@ -154,12 +154,42 @@
                         "reference": "https://attack.mitre.org/techniques/T1574/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0006",
+                    "name": "Persistence",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0081",
+                        "name": "Modify AI Agent Configuration",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0081/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0007",
+                    "name": "Defense Evasion",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0007/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0081",
+                        "name": "Modify AI Agent Configuration",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0081/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 11
+        "version": 12
     },
-    "id": "590fc62d-7386-4c75-92b0-af4517018da1_11",
+    "id": "590fc62d-7386-4c75-92b0-af4517018da1_12",
     "type": "security-rule"
 }

@@ -141,12 +141,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1070/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0007",
+                    "name": "Defense Evasion",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0007/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0092",
+                        "name": "Manipulate User LLM Chat History",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0092/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "2944223e-3c25-4ce4-bd69-64f2914da187_4",
+    "id": "2944223e-3c25-4ce4-bd69-64f2914da187_5",
     "type": "security-rule"
 }

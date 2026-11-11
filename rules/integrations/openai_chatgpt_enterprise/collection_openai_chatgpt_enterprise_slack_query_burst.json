@@ -133,12 +133,42 @@
                         "reference": "https://attack.mitre.org/techniques/T1083/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0005",
+                    "name": "Execution",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0053",
+                        "name": "AI Agent Tool Invocation",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0053/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0009",
+                    "name": "Collection",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0009/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0085",
+                        "name": "Data from AI Services",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0085/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "b3785d4f-ce8a-4c36-bdd6-5e652d26a8ca_1",
+    "id": "b3785d4f-ce8a-4c36-bdd6-5e652d26a8ca_2",
     "type": "security-rule"
 }

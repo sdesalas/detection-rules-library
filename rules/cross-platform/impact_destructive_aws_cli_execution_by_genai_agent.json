@@ -101,7 +101,8 @@
             "Data Source: Elastic Defend",
             "Rule Type: Custom Query (KQL)",
             "Resources: Investigation Guide",
-            "Mitre Atlas: T0051",
+            "Mitre Atlas: AML.T0053",
+            "Mitre Atlas: AML.T0101",
             "Tactic: Defense Impairment"
         ],
         "threat": [
@@ -146,12 +147,42 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0005",
+                    "name": "Execution",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0053",
+                        "name": "AI Agent Tool Invocation",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0053/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0011",
+                    "name": "Impact",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0101",
+                        "name": "Data Destruction via AI Agent Tool Invocation",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0101/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 5
     },
-    "id": "2635d2ba-51e7-404a-9b17-db413a1351d5_2",
+    "id": "2635d2ba-51e7-404a-9b17-db413a1351d5_5",
     "type": "security-rule"
 }

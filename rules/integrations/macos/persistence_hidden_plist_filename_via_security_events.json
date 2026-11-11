@@ -42,7 +42,7 @@
             "Tactic: Persistence",
             "Data Source: macOS Security Events",
             "Resources: Investigation Guide",
-            "Rule Type: ESQL",
+            "Rule Type: ES|QL",
             "Platform: macOS",
             "Domain: Endpoint",
             "Tactic: Defense Impairment",
@@ -121,8 +121,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 6
     },
-    "id": "fdff275f-83c2-4857-bedf-aee88f3442ed_4",
+    "id": "fdff275f-83c2-4857-bedf-aee88f3442ed_6",
     "type": "security-rule"
 }

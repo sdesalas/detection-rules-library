@@ -140,12 +140,20 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0007",
+                    "name": "Defense Evasion",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0007/"
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "58ad16ae-4c96-424e-9cd2-c151ac79e8ea_2",
+    "id": "58ad16ae-4c96-424e-9cd2-c151ac79e8ea_3",
     "type": "security-rule"
 }

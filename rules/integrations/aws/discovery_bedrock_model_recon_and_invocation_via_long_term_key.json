@@ -45,7 +45,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": ">=7.0.0"
+                "version": ">=8.0.0"
             }
         ],
         "required_fields": [
@@ -136,12 +136,42 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0000",
+                    "name": "AI Model Access",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0000/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0040",
+                        "name": "AI Model Inference API Access",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0040/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0008",
+                    "name": "Discovery",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0008/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0007",
+                        "name": "Discover AI Artifacts",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0007/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "a17f2e5f-de52-49e8-9d86-ccfe91cd54d4_3",
+    "id": "a17f2e5f-de52-49e8-9d86-ccfe91cd54d4_4",
     "type": "security-rule"
 }

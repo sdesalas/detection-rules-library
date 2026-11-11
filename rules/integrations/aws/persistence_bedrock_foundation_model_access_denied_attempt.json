@@ -40,7 +40,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": ">=7.0.0"
+                "version": ">=8.0.0"
             }
         ],
         "required_fields": [
@@ -109,12 +109,42 @@
                         "reference": "https://attack.mitre.org/techniques/T1098/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0000",
+                    "name": "AI Model Access",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0000/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0040",
+                        "name": "AI Model Inference API Access",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0040/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0004",
+                    "name": "Initial Access",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0012",
+                        "name": "Valid Accounts",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0012/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "3d2e8c90-5be7-4a57-9de4-58be75af933f_3",
+    "id": "3d2e8c90-5be7-4a57-9de4-58be75af933f_4",
     "type": "security-rule"
 }

@@ -118,12 +118,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1567/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0010",
+                    "name": "Exfiltration",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0010/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0025",
+                        "name": "Exfiltration via Cyber Means",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0025/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "a2977fac-7211-43a5-ba22-71c2f589bf86_1",
+    "id": "a2977fac-7211-43a5-ba22-71c2f589bf86_2",
     "type": "security-rule"
 }

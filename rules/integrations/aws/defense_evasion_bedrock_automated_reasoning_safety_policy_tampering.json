@@ -42,7 +42,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": ">=7.0.0"
+                "version": ">=8.0.0"
             }
         ],
         "required_fields": [
@@ -104,12 +104,20 @@
                         "reference": "https://attack.mitre.org/techniques/T1685/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0007",
+                    "name": "Defense Evasion",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0007/"
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 5
+        "version": 6
     },
-    "id": "2d7822a5-418c-4cde-a96e-e337d77b67e7_5",
+    "id": "2d7822a5-418c-4cde-a96e-e337d77b67e7_6",
     "type": "security-rule"
 }

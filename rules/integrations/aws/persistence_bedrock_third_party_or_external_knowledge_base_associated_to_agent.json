@@ -46,7 +46,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": ">=7.0.0"
+                "version": ">=8.0.0"
             }
         ],
         "required_fields": [
@@ -108,12 +108,42 @@
                         "reference": "https://attack.mitre.org/techniques/T1505/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0004",
+                    "name": "Initial Access",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0010",
+                        "name": "AI Supply Chain Compromise",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0010/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0006",
+                    "name": "Persistence",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0070",
+                        "name": "RAG Poisoning",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0070/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 3
+        "version": 4
     },
-    "id": "168b5538-4d54-4269-b4f5-786fa49dd850_3",
+    "id": "168b5538-4d54-4269-b4f5-786fa49dd850_4",
     "type": "security-rule"
 }

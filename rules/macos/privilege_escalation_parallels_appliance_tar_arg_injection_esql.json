@@ -59,7 +59,7 @@
             "Domain: Endpoint",
             "Platform: macOS",
             "OS: macOS",
-            "Rule Type: ESQL",
+            "Rule Type: ES|QL",
             "Use Case: Threat Detection",
             "Tactic: Privilege Escalation",
             "Data Source: Elastic Defend",
@@ -102,8 +102,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 4
     },
-    "id": "448dbe05-07b1-46bb-b3e3-ac9790387948_2",
+    "id": "448dbe05-07b1-46bb-b3e3-ac9790387948_4",
     "type": "security-rule"
 }

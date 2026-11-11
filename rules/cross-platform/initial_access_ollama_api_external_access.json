@@ -89,12 +89,47 @@
                         "reference": "https://attack.mitre.org/techniques/T1190/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0000",
+                    "name": "AI Model Access",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0000/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0040",
+                        "name": "AI Model Inference API Access",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0040/"
+                    },
+                    {
+                        "id": "AML.T0044",
+                        "name": "Full AI Model Access",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0044/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0004",
+                    "name": "Initial Access",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0049",
+                        "name": "Exploit Public-Facing Application",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0049/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 4
+        "version": 5
     },
-    "id": "d8f2a1b3-c4e5-6789-abcd-ef0123456789_4",
+    "id": "d8f2a1b3-c4e5-6789-abcd-ef0123456789_5",
     "type": "security-rule"
 }

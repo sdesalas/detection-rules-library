@@ -117,12 +117,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0014",
+                    "name": "Command and Control",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0014/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0096",
+                        "name": "AI Service API",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0096/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 8
+        "version": 9
     },
-    "id": "4ae94fc1-f08f-419f-b692-053d28219380_8",
+    "id": "4ae94fc1-f08f-419f-b692-053d28219380_9",
     "type": "security-rule"
 }

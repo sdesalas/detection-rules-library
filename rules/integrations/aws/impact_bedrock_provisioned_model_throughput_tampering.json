@@ -44,7 +44,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": ">=7.0.0"
+                "version": ">=8.0.0"
             }
         ],
         "required_fields": [
@@ -115,12 +115,32 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0011",
+                    "name": "Impact",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0029",
+                        "name": "Denial of AI Service",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0029/"
+                    },
+                    {
+                        "id": "AML.T0034",
+                        "name": "Cost Harvesting",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0034/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "42b5e06d-b297-4286-a004-ae0da92c5b81_3",
+    "id": "42b5e06d-b297-4286-a004-ae0da92c5b81_4",
     "type": "security-rule"
 }

@@ -75,12 +75,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1098/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0013",
+                    "name": "Credential Access",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0013/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0083",
+                        "name": "Credentials from AI Agent Configuration",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0083/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "0280b13a-65a8-4475-8f43-c8304b7e3467_1",
+    "id": "0280b13a-65a8-4475-8f43-c8304b7e3467_2",
     "type": "security-rule"
 }

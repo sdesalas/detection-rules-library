@@ -75,12 +75,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1685/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0007",
+                    "name": "Defense Evasion",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0007/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0081",
+                        "name": "Modify AI Agent Configuration",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0081/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "6c634405-3880-4354-8fea-925ec7eadd9b_2",
+    "id": "6c634405-3880-4354-8fea-925ec7eadd9b_3",
     "type": "security-rule"
 }

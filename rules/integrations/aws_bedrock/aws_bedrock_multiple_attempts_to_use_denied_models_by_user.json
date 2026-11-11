@@ -78,10 +78,42 @@
             "Mitre Atlas: AML.T0015",
             "Mitre Atlas: AML.T0034"
         ],
+        "threat": [
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0007",
+                    "name": "Defense Evasion",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0007/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0015",
+                        "name": "Evade AI Model",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0015/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0011",
+                    "name": "Impact",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0034",
+                        "name": "Cost Harvesting",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0034/"
+                    }
+                ]
+            }
+        ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 10
+        "version": 11
     },
-    "id": "17261da3-a6d0-463c-aac8-ea1718afcd20_10",
+    "id": "17261da3-a6d0-463c-aac8-ea1718afcd20_11",
     "type": "security-rule"
 }

@@ -122,12 +122,49 @@
                         "reference": "https://attack.mitre.org/techniques/T1530/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0011",
+                    "name": "Impact",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0029",
+                        "name": "Denial of AI Service",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0029/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0010",
+                    "name": "Exfiltration",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0010/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0024",
+                        "name": "Exfiltration via AI Inference API",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0024/",
+                        "subtechnique": [
+                            {
+                                "id": "AML.T0024.002",
+                                "name": "Extract AI Model",
+                                "reference": "https://atlas.mitre.org/techniques/AML.T0024.002/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "a9f28b66-a69e-4d5b-be8d-94e5eda6c736_1",
+    "id": "a9f28b66-a69e-4d5b-be8d-94e5eda6c736_2",
     "type": "security-rule"
 }

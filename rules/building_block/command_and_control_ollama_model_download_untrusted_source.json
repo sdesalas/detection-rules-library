@@ -106,12 +106,49 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0004",
+                    "name": "Initial Access",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0004/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0010",
+                        "name": "AI Supply Chain Compromise",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0010/",
+                        "subtechnique": [
+                            {
+                                "id": "AML.T0010.003",
+                                "name": "Model",
+                                "reference": "https://atlas.mitre.org/techniques/AML.T0010.003/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0014",
+                    "name": "Command and Control",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0014/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0072",
+                        "name": "Cyber Communication Channel",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0072/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "e9a3b2c1-d4f5-6789-0abc-def123456789_6",
+    "id": "e9a3b2c1-d4f5-6789-0abc-def123456789_7",
     "type": "security-rule"
 }

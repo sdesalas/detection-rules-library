@@ -124,12 +124,49 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0005",
+                    "name": "Execution",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0053",
+                        "name": "AI Agent Tool Invocation",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0053/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0006",
+                    "name": "Persistence",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0110",
+                        "name": "AI Agent Tool Poisoning",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0110/",
+                        "subtechnique": [
+                            {
+                                "id": "AML.T0110.002",
+                                "name": "Runtime Response",
+                                "reference": "https://atlas.mitre.org/techniques/AML.T0110.002/"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 1
+        "version": 2
     },
-    "id": "0280de77-4296-42e0-b986-60da7e7ba15d_1",
+    "id": "0280de77-4296-42e0-b986-60da7e7ba15d_2",
     "type": "security-rule"
 }

@@ -124,12 +124,20 @@
                         "reference": "https://attack.mitre.org/techniques/T1556/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0007",
+                    "name": "Defense Evasion",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0007/"
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "b0b81938-a2d3-4222-977b-56f9c81afcf7_2",
+    "id": "b0b81938-a2d3-4222-977b-56f9c81afcf7_3",
     "type": "security-rule"
 }

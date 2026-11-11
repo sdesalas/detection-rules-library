@@ -109,12 +109,32 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0005",
+                    "name": "Execution",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0011",
+                        "name": "User Execution",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0011/"
+                    },
+                    {
+                        "id": "AML.T0053",
+                        "name": "AI Agent Tool Invocation",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0053/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 4
+        "version": 5
     },
-    "id": "d4e5f6a7-b8c9-7d0e-1f2a-3b4c5d6e7f8a_4",
+    "id": "d4e5f6a7-b8c9-7d0e-1f2a-3b4c5d6e7f8a_5",
     "type": "security-rule"
 }

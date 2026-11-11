@@ -140,12 +140,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1496/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0011",
+                    "name": "Impact",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0011/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0029",
+                        "name": "Denial of AI Service",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0029/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "bb2bc0e2-bc6f-4f6b-a6cc-7deb99fe2588_1",
+    "id": "bb2bc0e2-bc6f-4f6b-a6cc-7deb99fe2588_2",
     "type": "security-rule"
 }

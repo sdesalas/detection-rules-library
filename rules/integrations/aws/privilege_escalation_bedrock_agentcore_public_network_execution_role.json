@@ -45,7 +45,7 @@
             {
                 "integration": "cloudtrail",
                 "package": "aws",
-                "version": ">=7.0.0"
+                "version": ">=8.0.0"
             }
         ],
         "required_fields": [
@@ -137,12 +137,42 @@
                         "reference": "https://attack.mitre.org/techniques/T1098/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0005",
+                    "name": "Execution",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0103",
+                        "name": "Deploy AI Agent",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0103/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0012",
+                    "name": "Privilege Escalation",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0012/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0012",
+                        "name": "Valid Accounts",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0012/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "86be0b1b-3984-4b26-bde6-46d33fe7bab1_1",
+    "id": "86be0b1b-3984-4b26-bde6-46d33fe7bab1_2",
     "type": "security-rule"
 }

@@ -143,12 +143,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1526/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0008",
+                    "name": "Discovery",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0008/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0075",
+                        "name": "Enterprise Resource Discovery",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0075/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "a304c107-e0f0-4042-aa6c-5332ce6ca967_2",
+    "id": "a304c107-e0f0-4042-aa6c-5332ce6ca967_3",
     "type": "security-rule"
 }

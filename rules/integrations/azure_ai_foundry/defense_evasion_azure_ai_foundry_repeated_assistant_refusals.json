@@ -188,12 +188,42 @@
                         "reference": "https://attack.mitre.org/techniques/T1685/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0005",
+                    "name": "Execution",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0051",
+                        "name": "LLM Prompt Injection",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0051/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0007",
+                    "name": "Defense Evasion",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0007/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0054",
+                        "name": "LLM Jailbreak",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0054/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "3c694712-7bd9-43b5-ac6b-1db841abc8de_2",
+    "id": "3c694712-7bd9-43b5-ac6b-1db841abc8de_3",
     "type": "security-rule"
 }

@@ -168,12 +168,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1030/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0010",
+                    "name": "Exfiltration",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0010/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0086",
+                        "name": "Exfiltration via AI Agent Tool Invocation",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0086/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 7
+        "version": 8
     },
-    "id": "c3d4e5f6-a7b8-9012-cdef-123456789abc_7",
+    "id": "c3d4e5f6-a7b8-9012-cdef-123456789abc_8",
     "type": "security-rule"
 }

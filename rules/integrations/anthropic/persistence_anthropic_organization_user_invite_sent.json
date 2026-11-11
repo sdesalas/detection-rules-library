@@ -99,12 +99,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0006",
+                    "name": "Persistence",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0006/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0125",
+                        "name": "Create Account",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0125/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 2
+        "version": 3
     },
-    "id": "5fd313e8-c61c-4737-88f7-b452a2f25a3b_2",
+    "id": "5fd313e8-c61c-4737-88f7-b452a2f25a3b_3",
     "type": "security-rule"
 }

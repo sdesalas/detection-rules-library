@@ -97,12 +97,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0014",
+                    "name": "Command and Control",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0014/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0072",
+                        "name": "Cyber Communication Channel",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0072/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 3
+        "version": 4
     },
-    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890_3",
+    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890_4",
     "type": "security-rule"
 }

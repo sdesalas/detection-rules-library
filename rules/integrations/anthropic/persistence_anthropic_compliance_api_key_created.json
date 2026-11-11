@@ -95,12 +95,20 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0006",
+                    "name": "Persistence",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0006/"
+                }
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 1
+        "version": 2
     },
-    "id": "b8c429a1-67f3-448c-a960-951807dd2cd8_1",
+    "id": "b8c429a1-67f3-448c-a960-951807dd2cd8_2",
     "type": "security-rule"
 }

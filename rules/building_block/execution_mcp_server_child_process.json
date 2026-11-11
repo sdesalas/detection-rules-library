@@ -104,12 +104,27 @@
                         "reference": "https://attack.mitre.org/techniques/T1059/"
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0005",
+                    "name": "Execution",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0005/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0053",
+                        "name": "AI Agent Tool Invocation",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0053/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 6
+        "version": 7
     },
-    "id": "b2c3d4e5-f6a7-8901-bcde-f23456789012_6",
+    "id": "b2c3d4e5-f6a7-8901-bcde-f23456789012_7",
     "type": "security-rule"
 }

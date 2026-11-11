@@ -75,10 +75,49 @@
             "Mitre Atlas: AML.T0044",
             "Mitre Atlas: AML.T0024.002"
         ],
+        "threat": [
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0000",
+                    "name": "AI Model Access",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0000/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0044",
+                        "name": "Full AI Model Access",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0044/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0010",
+                    "name": "Exfiltration",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0010/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0024",
+                        "name": "Exfiltration via AI Inference API",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0024/",
+                        "subtechnique": [
+                            {
+                                "id": "AML.T0024.002",
+                                "name": "Extract AI Model",
+                                "reference": "https://atlas.mitre.org/techniques/AML.T0024.002/"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 8
+        "version": 9
     },
-    "id": "4021e78d-5293-48d3-adee-a70fa4c18fab_8",
+    "id": "4021e78d-5293-48d3-adee-a70fa4c18fab_9",
     "type": "security-rule"
 }

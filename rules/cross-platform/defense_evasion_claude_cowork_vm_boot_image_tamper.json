@@ -94,12 +94,42 @@
                         ]
                     }
                 ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0007",
+                    "name": "Defense Evasion",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0007/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0097",
+                        "name": "Virtualization/Sandbox Evasion",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0097/"
+                    }
+                ]
+            },
+            {
+                "framework": "MITRE ATLAS",
+                "tactic": {
+                    "id": "AML.TA0012",
+                    "name": "Privilege Escalation",
+                    "reference": "https://atlas.mitre.org/tactics/AML.TA0012/"
+                },
+                "technique": [
+                    {
+                        "id": "AML.T0105",
+                        "name": "Escape to Host",
+                        "reference": "https://atlas.mitre.org/techniques/AML.T0105/"
+                    }
+                ]
             }
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "a0939500-a817-4ce9-85a9-191133352a9e_5",
+    "id": "a0939500-a817-4ce9-85a9-191133352a9e_6",
     "type": "security-rule"
 }
