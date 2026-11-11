@@ -79,14 +79,7 @@
                     {
                         "id": "T1547",
                         "name": "Boot or Logon Autostart Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1547/",
-                        "subtechnique": [
-                            {
-                                "id": "T1547.011",
-                                "name": "Plist Modification",
-                                "reference": "https://attack.mitre.org/techniques/T1547/011/"
-                            }
-                        ]
+                        "reference": "https://attack.mitre.org/techniques/T1547/"
                     },
                     {
                         "id": "T1543",
@@ -111,6 +104,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1647",
+                        "name": "Plist File Modification",
+                        "reference": "https://attack.mitre.org/techniques/T1647/"
+                    },
+                    {
                         "id": "T1564",
                         "name": "Hide Artifacts",
                         "reference": "https://attack.mitre.org/techniques/T1564/",
@@ -127,8 +125,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 2
+        "version": 4
     },
-    "id": "e3f5a566-df31-40cc-987c-24bc4bb94ba5_2",
+    "id": "e3f5a566-df31-40cc-987c-24bc4bb94ba5_4",
     "type": "security-rule"
 }

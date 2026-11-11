@@ -43,7 +43,7 @@
             "Tactic: Defense Evasion",
             "Data Source: macOS Security Events",
             "Resources: Investigation Guide",
-            "Rule Type: ESQL",
+            "Rule Type: ES|QL",
             "Platform: macOS",
             "Domain: Endpoint"
         ],
@@ -59,14 +59,7 @@
                     {
                         "id": "T1547",
                         "name": "Boot or Logon Autostart Execution",
-                        "reference": "https://attack.mitre.org/techniques/T1547/",
-                        "subtechnique": [
-                            {
-                                "id": "T1547.011",
-                                "name": "Plist Modification",
-                                "reference": "https://attack.mitre.org/techniques/T1547/011/"
-                            }
-                        ]
+                        "reference": "https://attack.mitre.org/techniques/T1547/"
                     },
                     {
                         "id": "T1543",
@@ -96,6 +89,11 @@
                 },
                 "technique": [
                     {
+                        "id": "T1647",
+                        "name": "Plist File Modification",
+                        "reference": "https://attack.mitre.org/techniques/T1647/"
+                    },
+                    {
                         "id": "T1564",
                         "name": "Hide Artifacts",
                         "reference": "https://attack.mitre.org/techniques/T1564/",
@@ -112,8 +110,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 3
+        "version": 5
     },
-    "id": "fdff275f-83c2-4857-bedf-aee88f3442ed_3",
+    "id": "fdff275f-83c2-4857-bedf-aee88f3442ed_5",
     "type": "security-rule"
 }

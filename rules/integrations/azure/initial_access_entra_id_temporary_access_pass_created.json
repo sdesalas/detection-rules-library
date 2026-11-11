@@ -24,6 +24,7 @@
         ],
         "related_integrations": [
             {
+                "integration": "adlogs",
                 "package": "azure",
                 "version": "^1.0.0"
             }
@@ -42,7 +43,7 @@
             {
                 "ecs": false,
                 "name": "azure.auditlogs.properties.target_resources.*.modified_properties.*.display_name",
-                "type": "keyword"
+                "type": "unknown"
             },
             {
                 "ecs": true,
@@ -114,8 +115,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "d0088204-675b-4175-bf07-1665da2d4810_2",
+    "id": "d0088204-675b-4175-bf07-1665da2d4810_3",
     "type": "security-rule"
 }

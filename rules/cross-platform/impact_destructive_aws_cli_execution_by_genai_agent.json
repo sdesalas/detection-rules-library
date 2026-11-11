@@ -102,7 +102,8 @@
             "Data Source: Elastic Defend",
             "Rule Type: Custom Query (KQL)",
             "Resources: Investigation Guide",
-            "Mitre Atlas: T0051"
+            "Mitre Atlas: AML.T0053",
+            "Mitre Atlas: AML.T0101"
         ],
         "threat": [
             {
@@ -150,8 +151,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 3
     },
-    "id": "2635d2ba-51e7-404a-9b17-db413a1351d5_1",
+    "id": "2635d2ba-51e7-404a-9b17-db413a1351d5_3",
     "type": "security-rule"
 }

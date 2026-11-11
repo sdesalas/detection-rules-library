@@ -24,7 +24,7 @@
         "license": "Elastic License v2",
         "name": "ESXi Virtual Disk Files Enumerated",
         "note": "## Triage and analysis\n\n### Investigating ESXi Virtual Disk Files Enumerated\n\nThe datastore path and the vmdk family of extensions are how ESXi ransomware chooses what to encrypt. The search itself does not change files.\n\n#### Possible investigation steps\n\n- Read the exact find arguments in message, including any -name filter.\n- Correlate with later vm process kill, power.off, or snapshot.removeall from the same session.\n- If the command stands alone during a known support window, it is often benign.\n\n### False positive analysis\n\nSupport bundles and storage reports list virtual disks. Escalation is for a search followed by VM shutdown or snapshot deletion.\n\n### Response and remediation\n\n- If the same session starts killing VMs or deleting snapshots, isolate the host.\n- Otherwise record the account and command for hunting across other ESXi hosts.\n",
-        "query": "data_stream.dataset:vsphere.log and message:(\"/vmfs/volumes\" and find and (vmdk or vmsd or vmsn))\n",
+        "query": "data_stream.dataset:vsphere.log and message:(/vmfs/volumes and find and (vmdk or vmsd or vmsn) and not (\"Could not find the file\" or \"Failed to open\" or \"No such file\" or \"failed to open\"))\n",
         "references": [
             "https://lolesxi-project.github.io/LOLESXi/#",
             "https://blogs.vmware.com/security/2022/10/esxi-targeting-ransomware-tactics-and-techniques-part-2.html",
@@ -81,8 +81,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "60f469cf-9adb-59c1-814d-39b78bc702ad_1",
+    "id": "60f469cf-9adb-59c1-814d-39b78bc702ad_2",
     "type": "security-rule"
 }

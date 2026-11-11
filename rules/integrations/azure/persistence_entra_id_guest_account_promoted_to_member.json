@@ -23,6 +23,7 @@
         ],
         "related_integrations": [
             {
+                "integration": "adlogs",
                 "package": "azure",
                 "version": "^1.0.0"
             }
@@ -36,17 +37,17 @@
             {
                 "ecs": false,
                 "name": "azure.auditlogs.properties.target_resources.*.modified_properties.*.display_name",
-                "type": "keyword"
+                "type": "unknown"
             },
             {
                 "ecs": false,
                 "name": "azure.auditlogs.properties.target_resources.*.modified_properties.*.new_value",
-                "type": "keyword"
+                "type": "unknown"
             },
             {
                 "ecs": false,
                 "name": "azure.auditlogs.properties.target_resources.*.modified_properties.*.old_value",
-                "type": "keyword"
+                "type": "unknown"
             },
             {
                 "ecs": true,
@@ -95,8 +96,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 2
+        "version": 3
     },
-    "id": "30090d40-cdfd-4750-a281-0125fdf22045_2",
+    "id": "30090d40-cdfd-4750-a281-0125fdf22045_3",
     "type": "security-rule"
 }
