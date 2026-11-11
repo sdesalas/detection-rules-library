@@ -18,6 +18,7 @@
         "query": "data_stream.dataset:\"kubernetes.audit_logs\" and\nkubernetes.audit.stage:\"ResponseComplete\" and\nkubernetes.audit.annotations.authorization_k8s_io/decision:\"forbid\" and\nuser_agent.original:(* and not (*kubernetes/$Format))\n",
         "related_integrations": [
             {
+                "integration": "audit-logs",
                 "package": "kubernetes",
                 "version": ">=1.80.0"
             }
@@ -88,8 +89,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 8
+        "version": 9
     },
-    "id": "4b77d382-b78e-4aae-85a0-8841b80e4fc4_8",
+    "id": "4b77d382-b78e-4aae-85a0-8841b80e4fc4_9",
     "type": "security-rule"
 }

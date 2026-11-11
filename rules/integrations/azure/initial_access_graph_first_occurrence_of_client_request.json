@@ -32,6 +32,11 @@
                 "integration": "graphactivitylogs",
                 "package": "azure",
                 "version": ">=1.22.0"
+            },
+            {
+                "integration": "events",
+                "package": "azure",
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -160,8 +165,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "new_terms",
-        "version": 10
+        "version": 11
     },
-    "id": "2a3f38a8-204e-11f0-9c1f-f661ea17fbcd_10",
+    "id": "2a3f38a8-204e-11f0-9c1f-f661ea17fbcd_11",
     "type": "security-rule"
 }

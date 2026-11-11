@@ -24,12 +24,18 @@
         ],
         "related_integrations": [
             {
+                "integration": "adlogs",
                 "package": "azure",
                 "version": ">=1.22.0"
             },
             {
                 "package": "o365",
                 "version": ">=3.0.0"
+            },
+            {
+                "integration": "events",
+                "package": "azure",
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -148,8 +154,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "4b11dbab-ce37-49c4-bdf1-cdf64b405d96_3",
+    "id": "4b11dbab-ce37-49c4-bdf1-cdf64b405d96_4",
     "type": "security-rule"
 }

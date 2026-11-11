@@ -21,6 +21,7 @@
         ],
         "related_integrations": [
             {
+                "integration": "audit-logs",
                 "package": "kubernetes",
                 "version": ">=1.80.0"
             }
@@ -108,8 +109,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "abb7bc31-b865-4318-80a9-b9ee4edd57b6_3",
+    "id": "abb7bc31-b865-4318-80a9-b9ee4edd57b6_4",
     "type": "security-rule"
 }

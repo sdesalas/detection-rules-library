@@ -25,6 +25,11 @@
                 "integration": "activitylogs",
                 "package": "azure",
                 "version": ">=1.22.0"
+            },
+            {
+                "integration": "events",
+                "package": "azure",
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -88,8 +93,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 111
+        "version": 112
     },
-    "id": "8b64d36a-1307-4b2e-a77b-a0027e4d27c8_111",
+    "id": "8b64d36a-1307-4b2e-a77b-a0027e4d27c8_112",
     "type": "security-rule"
 }

@@ -24,7 +24,7 @@
         "license": "Elastic License v2",
         "name": "ESXi Curl or Wget Activity",
         "note": "## Triage and analysis\n\n### Investigating ESXi Curl or Wget Activity\n\ncurl and wget download a file or check a URL from the ESXi shell. The shell log records the command even when the binary is missing or the host has no route to the destination.\n\n#### Possible investigation steps\n\n- Read the URL and output path in message.\n- Check the same session for a file under /tmp, chmod, or execution of the downloaded file.\n- Confirm the URL with the virtualization owner.\n\n### False positive analysis\n\nA documented download of a vendor package is commonly benign. A download of an unknown file into /tmp, followed by chmod, deserves review.\n\n### Response and remediation\n\n- If the download was not approved, remove the file and end the shell session.\n- Preserve shell.log and review commands issued after the download.\n",
-        "query": "data_stream.dataset: \"vsphere.log\" and event.module: \"vsphere\" and message: (\"curl\" or \"wget\")\n",
+        "query": "data_stream.dataset:vsphere.log and event.module:vsphere and message:((curl or wget) and not (\"cURL Error\" or \"curl failed\" or localhost or vmware.com))\n",
         "references": [
             "https://lolesxi-project.github.io/LOLESXi/#",
             "https://blogs.vmware.com/security/2022/10/esxi-targeting-ransomware-tactics-and-techniques-part-2.html",
@@ -86,8 +86,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 1
+        "version": 2
     },
-    "id": "8b01751e-702d-5a27-b754-e2c6e020167f_1",
+    "id": "8b01751e-702d-5a27-b754-e2c6e020167f_2",
     "type": "security-rule"
 }

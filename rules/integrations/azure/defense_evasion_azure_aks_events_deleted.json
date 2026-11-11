@@ -43,6 +43,11 @@
                 "integration": "platformlogs",
                 "package": "azure",
                 "version": ">=1.22.0"
+            },
+            {
+                "integration": "events",
+                "package": "azure",
+                "version": ">=1.22.0"
             }
         ],
         "required_fields": [
@@ -121,8 +126,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "query",
-        "version": 3
+        "version": 4
     },
-    "id": "9bc14983-fabc-4a3e-896d-3632a902f17c_3",
+    "id": "9bc14983-fabc-4a3e-896d-3632a902f17c_4",
     "type": "security-rule"
 }

@@ -14,6 +14,7 @@
         "query": "any where data_stream.dataset == \"kubernetes.audit_logs\" and kubernetes.audit.verb == \"create\" and\nkubernetes.audit.stage == \"ResponseComplete\" and `kubernetes.audit.annotations.authorization_k8s_io/decision` == \"forbid\"\n",
         "related_integrations": [
             {
+                "integration": "audit-logs",
                 "package": "kubernetes",
                 "version": ">=1.80.0"
             }
@@ -69,8 +70,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "eql",
-        "version": 5
+        "version": 6
     },
-    "id": "ec81962e-4bc8-48e6-bfb0-545fc97d8f6a_5",
+    "id": "ec81962e-4bc8-48e6-bfb0-545fc97d8f6a_6",
     "type": "security-rule"
 }

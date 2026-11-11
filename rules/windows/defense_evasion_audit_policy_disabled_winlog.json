@@ -16,12 +16,12 @@
         ],
         "related_integrations": [
             {
-                "package": "windows",
-                "version": ">=3.0.0"
-            },
-            {
                 "package": "system",
                 "version": ">=2.0.0"
+            },
+            {
+                "package": "windows",
+                "version": ">=3.0.0"
             }
         ],
         "required_fields": [
@@ -127,8 +127,8 @@
         ],
         "timestamp_override": "event.ingested",
         "type": "esql",
-        "version": 111
+        "version": 112
     },
-    "id": "0ef5d3eb-67ef-43ab-93b7-305cfa5a21f6_111",
+    "id": "0ef5d3eb-67ef-43ab-93b7-305cfa5a21f6_112",
     "type": "security-rule"
 }
